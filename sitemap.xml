@@ -13,7 +13,7 @@
   
     
       <url>
-        <loc>http://localhost:4000/blog/</loc>
+        <loc>https://stalk-calvin.github.io/blog/</loc>
         
           
           
@@ -26,7 +26,7 @@
   
     
       <url>
-        <loc>http://localhost:4000/</loc>
+        <loc>https://stalk-calvin.github.io/</loc>
         
           
           
@@ -39,7 +39,7 @@
   
     
       <url>
-        <loc>http://localhost:4000/search/</loc>
+        <loc>https://stalk-calvin.github.io/search/</loc>
         
        </url>
     
@@ -52,7 +52,7 @@
   
     
       <url>
-        <loc>http://localhost:4000/search.json</loc>
+        <loc>https://stalk-calvin.github.io/search.json</loc>
         
        </url>
     
@@ -69,7 +69,7 @@
   
   
     <url>
-      <loc>http://localhost:4000/blog/2016/06/24/music.html</loc>
+      <loc>https://stalk-calvin.github.io/blog/2016/06/24/music.html</loc>
       
         <lastmod>2016-06-24T00:00:00-07:00</lastmod>
       
@@ -78,7 +78,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/blog/2016/06/21/fruits-sugar-health.html</loc>
+      <loc>https://stalk-calvin.github.io/blog/2016/06/21/fruits-sugar-health.html</loc>
       
         <lastmod>2016-06-21T00:00:00-07:00</lastmod>
       
