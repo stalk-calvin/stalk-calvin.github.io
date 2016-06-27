@@ -80,8 +80,6 @@
 
 
 
-</head>
-
 <!-- HEAD End -->
 
 
@@ -127,6 +125,10 @@
             </li>
           
             <li>
+              <a class="page-scroll" href="#search"> Search </a>
+            </li>
+          
+            <li>
               <a class="page-scroll" href="#contact"> Contact </a>
             </li>
           
@@ -168,6 +170,8 @@ If you want to have a static message in your intro layout, disable the dynamic-t
 
 
     
+      
+        
       
         
       
@@ -276,7 +280,17 @@ Computer Science (Software Engineering)</p>
       
         
       
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
       
         
       
@@ -338,7 +352,19 @@ Computer Science (Software Engineering)</p>
       
         
       
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -486,6 +512,63 @@ Computer Science (Software Engineering)</p>
         
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<!-- Search Start -->
+
+<section id="search" class="container content-section text-center">
+<h2 style="color: #F4A460" id="search">Search</h2>
+
+<!-- Search form -->
+<form method="get" action="/search/" data-search-form class="simple-search">
+  <p style="display: inline">Search Calvin&lsquo;s blog:</p>
+  <input type="search" class="textbox" name="q" id="q" placeholder="Search..." data-search-input id="goog-wm-qt" autofocus />
+  <input type="submit" class="searchbox" value="Search" id="goog-wm-sb" />
+</form>
+</section>
+
+<!-- Search End -->
+
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
           
 <!-- Contact Start -->
 
@@ -523,6 +606,12 @@ Computer Science (Software Engineering)</p>
 
 <!-- Contact End -->
 
+        
+      
+        
+      
+        
+      
         
       
         
@@ -685,7 +774,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 <script>
 function addTohistory() {
   if (!window.location.host.startsWith("127.0.0.1")) {
-    history.pushState({}, '', 'https://stalk-calvin.github.io/');
+    history.pushState({}, '', 'http://localhost:4000/');
   }
 }
 </script>

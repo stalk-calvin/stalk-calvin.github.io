@@ -32,6 +32,6 @@
       "type": "image/png"
     }
   ],
-  "start_url": "https://stalk-calvin.github.io",
+  "start_url": "http://localhost:4000",
   "display": "standalone"
 }

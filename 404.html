@@ -80,8 +80,6 @@
 
 
 
-</head>
-
 <!-- HEAD End -->
 
 
@@ -130,6 +128,12 @@
             <li>
             
                 <a href="/#timeline"> Timeline </a>
+            
+            </li>
+          
+            <li>
+            
+                <a href="/#search"> Search </a>
             
             </li>
           
@@ -237,7 +241,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 <script>
 function addTohistory() {
   if (!window.location.host.startsWith("127.0.0.1")) {
-    history.pushState({}, '404', 'https://stalk-calvin.github.io/404.html');
+    history.pushState({}, '404', 'http://localhost:4000/404.html');
   }
 }
 </script>
