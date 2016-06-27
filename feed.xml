@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>{ Calvin Lee }</title>
+		<description>Life stories about Calvin: Beer, Fitness, Diet, Computer Science and Programming.</description>
+		<link>https://stalk-calvin.github.io</link>
+		<atom:link href="https://stalk-calvin.github.io/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Jang Bum Joon (장범준)</title>
+				
+				
+					<description>Songs I listen to these days</description>
+				
+				<pubDate>Fri, 24 Jun 2016 00:00:00 -0700</pubDate>
+				<link>https://stalk-calvin.github.io/blog/2016/06/24/music.html</link>
+				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/06/24/music.html</guid>
+			</item>
+		
+			<item>
+				<title>Effective Java</title>
+				
+				
+					<description>By Joshua Bloch</description>
+				
+				<pubDate>Thu, 23 Jun 2016 00:00:00 -0700</pubDate>
+				<link>https://stalk-calvin.github.io/blog/2016/06/23/effective-java.html</link>
+				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/06/23/effective-java.html</guid>
+			</item>
+		
+			<item>
+				<title>Sugar in Fruits</title>
+				
+				
+					<description>Facts about natural sugar vs added sugar</description>
+				
+				<pubDate>Tue, 21 Jun 2016 00:00:00 -0700</pubDate>
+				<link>https://stalk-calvin.github.io/blog/2016/06/21/fruits-sugar-health.html</link>
+				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/06/21/fruits-sugar-health.html</guid>
+			</item>
+		
+	</channel>
+</rss>
