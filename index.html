@@ -18,7 +18,7 @@
   <meta name="author" content="Calvin Lee">
   <meta name="keywords" content="calvin, lee, personal, beer, fitness, diet, computer, science, programming">
   <link rel="canonical" href="/">
-  <title>Life Stories about Calvin Lee</title>
+  <title>Stories about Calvin</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -80,6 +80,11 @@
 
 
 
+  
+  <!-- MathJax -->
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 </head>
 <!-- HEAD End -->
 
@@ -102,7 +107,7 @@
             
               <img src="/img/black-lab-glass.ico" alt="favicon">
             
-            <h4 style="display:inline">Life Stories about Calvin Lee</h4>
+            <h4 style="display:inline">Stories about Calvin</h4>
           </div>
         </a>
     </div>
@@ -315,17 +320,18 @@ Computer Science (Software Engineering)</p>
 
 
         
-        <h4> <strong> 24 Jun 2016 </strong>
+        <h4> <strong> 28 Jun 2016 </strong>
           <small>.
             <a class="category" href="/categories/.html">
               
             </a>
           .</small>
-          <strong> <a href="/blog/2016/06/24/music.html">Jang Bum Joon (장범준) </a> </strong>
-          <small> <a href="/blog/2016/06/24/music.html#disqus_thread">Comments</a></small>
+          <strong> <a href="/blog/2016/06/28/sorting.html">Sorting </a> </strong>
+           <span class="excerpt">Various ways of sorting methods</span>
+          <small> <a href="/blog/2016/06/28/sorting.html#disqus_thread">Comments</a></small>
         </h4>
 
-        <p>I have been listening to Korean musics these days. My point of view in Korean musics were basically can be grouped into 2: pop or old pop.</p> <p>One day, I came across Busker Busker’s Jang Bum Joon (장범준). He has good ability make his own music from both pop + old pop. He is not old at all but he can remake some of the old pops turn into his modern style. He has a special vocal sound which defines who he is. Also, most of his songs are relaxed and easy-to-listen.</p> <p>Sometimes you would find...
+        <p>So today I felt like to talk about some of the sorting algorithms we have currently. There are many sorting algorithms, from brute force to divide and conquer. Let’s take a look from the worst time coplexity ones to better ones. For simplicity of description below, let’s assume we are sorting ascending order of integer.</p> <p>Bubble Sort</p> <p>This sorting method takes each values adjacent to each other and compares and swap if one is less than the other. Worst and Average time of this sorting method is O(). However, if the list is already sorted, the...
 
         <h4><a href="/blog/">View more posts</a></h4>
 
@@ -728,6 +734,8 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
     myQuotes.push("Wake up and be fucking awesome.");
   
     myQuotes.push("True love isn't found. It's built.");
+  
+    myQuotes.push("Rolling stones gathers no moss!");
   
 
   function shuffle(array) {
