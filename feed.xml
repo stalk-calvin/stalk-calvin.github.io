@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 	<channel>
-		<title>Life Stories about Calvin Lee</title>
+		<title>Stories about Calvin</title>
 		<description>Stories of Calvin: Beer, Fitness, Diet, Computer Science and Programming.</description>
 		<link>https://stalk-calvin.github.io</link>
 		<atom:link href="https://stalk-calvin.github.io/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Sorting</title>
+				
+				
+					<description>Various ways of sorting methods</description>
+				
+				<pubDate>Tue, 28 Jun 2016 00:00:00 -0700</pubDate>
+				<link>https://stalk-calvin.github.io/blog/2016/06/28/sorting.html</link>
+				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/06/28/sorting.html</guid>
+			</item>
 		
 			<item>
 				<title>Jang Bum Joon (장범준)</title>
