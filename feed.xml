@@ -7,6 +7,17 @@
 		<atom:link href="https://stalk-calvin.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Web Security</title>
+				
+				
+					<description>Security of web- sites, applications and services</description>
+				
+				<pubDate>Sat, 02 Jul 2016 00:00:00 -0700</pubDate>
+				<link>https://stalk-calvin.github.io/blog/2016/07/02/web-security.html</link>
+				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/07/02/web-security.html</guid>
+			</item>
+		
+			<item>
 				<title>Sorting</title>
 				
 				
