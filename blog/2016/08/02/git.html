@@ -216,7 +216,7 @@
 
 <h3 id="commit">Commit</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">1. add the files you would like to commit. Using <span class="s2">"git add -u"</span> to commit only staged
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">1. add the files you would like to commit.
 2. git commit -m <span class="s2">"message"</span>
 3. git log <span class="o">(</span>check your commit<span class="o">)</span>
 4. git push origin &lt;branch name&gt;</code></pre></figure>
@@ -261,8 +261,8 @@
 3. <span class="nb">alias </span><span class="nv">gittbp</span><span class="o">=</span><span class="s1">'git show --pretty="format:" --name-only'</span>
 4. <span class="nb">alias </span><span class="nv">gitshoworigin</span><span class="o">=</span><span class="s1">'git remote show origin'</span>;
 5. <span class="nb">alias </span><span class="nv">githead</span><span class="o">=</span><span class="s1">'cat .git/HEAD'</span>;
-6. git log --graph --pretty<span class="o">=</span>format:<span class="s1">'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset'</span> --abbrev-commit
-7. <span class="nb">source</span> ~/.git-prompt.sh; <span class="nv">PS1</span><span class="o">=</span><span class="s2">"[</span><span class="se">\[\0</span><span class="s2">33[32m</span><span class="se">\]\w\[\0</span><span class="s2">33[0m</span><span class="se">\]</span><span class="s2">]</span><span class="se">\$</span><span class="s2">(__git_ps1) </span><span class="se">\[\0</span><span class="s2">33[32m</span><span class="se">\]</span><span class="nv">$ </span><span class="se">\[\\</span><span class="s2">033[0m</span><span class="se">\]</span><span class="s2">"</span></code></pre></figure>
+6. <span class="nb">alias </span><span class="nv">gl</span><span class="o">=</span><span class="s2">"git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit"</span>
+7. <span class="nb">source</span> ~/.git-prompt.sh; <span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="s1">'`if [ $? = 0 ]; then echo "\[\033[01;32m\]✔"; else echo "\[\033[01;31m\]✘"; fi` \w\[\033[35m\] ($(__git_ps1 " %s") )\e[m $ '</span></code></pre></figure>
 
 
 
