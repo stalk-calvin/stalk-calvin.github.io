@@ -67,6 +67,28 @@
   
     
   
+    
+      <url>
+        <loc>https://stalk-calvin.github.io/blog/page2/</loc>
+        
+          
+          
+          
+          <priority>1.0</priority>
+          
+        
+       </url>
+    
+  
+  
+    <url>
+      <loc>https://stalk-calvin.github.io/blog/2016/08/02/git.html</loc>
+      
+        <lastmod>2016-08-02T00:00:00-07:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
   
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/07/12/workout-split.html</loc>
