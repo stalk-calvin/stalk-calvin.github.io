@@ -317,14 +317,28 @@ Computer Science (Software Engineering)</p>
               
             </a>
           .</small>
-          <strong> <a href="/blog/2016/08/02/git.html">GIT INFO </a> </strong>
-           <span class="excerpt">FREQUENT GIT COMMANDS I USE ON DAILY BASIS</span>
-          <small> <a href="/blog/2016/08/02/git.html#disqus_thread">Comments</a></small>
+          <strong> <a href="/blog/2016/08/02/junit.html">unit testing using junit+annotation </a> </strong>
+           <span class="excerpt">junit + annotation = powerful way of unit testing</span>
+          <small> <a href="/blog/2016/08/02/junit.html#disqus_thread">Comments</a></small>
         </h4>
 
-        <p>GIT Info</p> <p>First, here are two links that came handy for me to visualize:</p> <p>Everything One Page Basic Guide</p> <p>Please note below commands are for the reference for me to use, so not everything will make sense. The commands are what I use often on daily basis.</p> <p>Config</p> <ol> <li>git config –global user.name “First Last”</li> <li>git config –global user.email “Email address”</li> <li>git config –global push.default simple</li> </ol> <p>Merge</p> <ol> <li>git checkout master</li> <li>git pull</li> <li>git checkout branch-name</li> <li>git merge master</li> </ol> <p>Clone</p> <ol> <li>git clone &lt;url&gt;</li> </ol> <p>Create a branch</p> <ol> <li>git branch &lt;name&gt;</li> <li>git checkout...
+        <p>Here are some annotation and their usages that I have came across when I am testing using junit</p> <p>@BeforeClass – Run once before any of the test methods in the class, public static void @AfterClass – Run once after all the tests in the class have been run, public static void @Before – Run before @Test, public void @After – Run after @Test, public void @Test – This is the test method to run, public void</p> <p>package test.testCase;</p> <p>import org.junit.*;</p> <p>public class BasicAnnotationTest {</p> <div class="highlighter-rouge"><pre class="highlight"><code>// Run once, e.g. Database connection, connection pool @BeforeClass public...
 
         <div>
+          
+              <h4 align="left">
+                <strong>02 Aug 2016</strong>
+                <small>.
+                  <a class="category" href="/categories/.html">
+                    
+                  </a>
+                .</small>
+                <br class="visible-xs-block">
+                <a href="/blog/2016/08/02/git.html">
+                  <strong>GIT INFO</strong>
+                </a>
+                <br class="visible-xs-block">
+              </h4>
           
               <h4 align="left">
                 <strong>12 Jul 2016</strong>
@@ -350,20 +364,6 @@ Computer Science (Software Engineering)</p>
                 <br class="visible-xs-block">
                 <a href="/blog/2016/07/02/web-security.html">
                   <strong>Web Security</strong>
-                </a>
-                <br class="visible-xs-block">
-              </h4>
-          
-              <h4 align="left">
-                <strong>28 Jun 2016</strong>
-                <small>.
-                  <a class="category" href="/categories/.html">
-                    
-                  </a>
-                .</small>
-                <br class="visible-xs-block">
-                <a href="/blog/2016/06/28/sorting.html">
-                  <strong>Sorting</strong>
                 </a>
                 <br class="visible-xs-block">
               </h4>
