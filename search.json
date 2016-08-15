@@ -2,6 +2,14 @@
 
   
     {
+      "title"			: "unit testing using junit+annotation",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/08/02/junit.html",
+      "excerpt"		: "junit + annotation = powerful way of unit testing"
+    }
+  
+
+  
+    ,{
       "title"			: "GIT INFO",
       "link"			: "https://stalk-calvin.github.io/blog/2016/08/02/git.html",
       "excerpt"		: "FREQUENT GIT COMMANDS I USE ON DAILY BASIS"
