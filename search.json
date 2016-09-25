@@ -2,6 +2,14 @@
 
   
     {
+      "title"			: "NEW TEAM NEW LIFE",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/09/25/new-team-new-life.html",
+      "excerpt"		: "SO FAR SO GOOD!"
+    }
+  
+
+  
+    ,{
       "title"			: "unit testing using junit+annotation",
       "link"			: "https://stalk-calvin.github.io/blog/2016/08/02/junit.html",
       "excerpt"		: "junit + annotation = powerful way of unit testing"
