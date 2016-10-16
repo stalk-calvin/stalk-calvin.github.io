@@ -7,6 +7,17 @@
 		<atom:link href="https://stalk-calvin.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Builder Pattern vs Factory Method Pattern</title>
+				
+				
+					<description></description>
+				
+				<pubDate>Sat, 15 Oct 2016 00:00:00 -0700</pubDate>
+				<link>https://stalk-calvin.github.io/blog/2016/10/15/builder-pattern.html</link>
+				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/10/15/builder-pattern.html</guid>
+			</item>
+		
+			<item>
 				<title>NEW TEAM NEW LIFE</title>
 				
 				
