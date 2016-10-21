@@ -191,79 +191,104 @@
   <li><a href="http://res.cloudinary.com/hy4kyit2a/image/upload/SF_git_cheatsheet.pdf">Basic Guide</a></li>
 </ul>
 
-<p>Please note below commands are for the reference for me to use, so not everything will make sense. The commands are what I use often on daily basis.</p>
+<p>Please note below commands are really meant for the reference for me, not everything may make sense. The commands are what I use often on daily basis..</p>
 
 <h3 id="config">Config</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">1. git config --global user.name <span class="s2">"First Last"</span>
-2. git config --global user.email <span class="s2">"Email address"</span>
+<figure class="highlight"><pre><code class="language-git" data-lang="git">1. git config --global user.name "First Last"
+2. git config --global user.email "Email address"
 3. git config --global push.default simple</code></pre></figure>
 
 <h3 id="merge">Merge</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">1. git checkout master
+<figure class="highlight"><pre><code class="language-git" data-lang="git">1. git checkout master
 2. git pull
 3. git checkout branch-name
-4. git merge master</code></pre></figure>
+4. git pull
+5. git merge master</code></pre></figure>
+
+<p style="margin-bottom:5px;">Similarly for the other way,</p>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">1. git checkout branch-name
+2. git pull
+3. git checkout master
+4. git pull
+5. git merge branch-name</code></pre></figure>
 
 <h3 id="clone">Clone</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">1. git clone &lt;url&gt;</code></pre></figure>
+<figure class="highlight"><pre><code class="language-git" data-lang="git">1. git clone &lt;url&gt;</code></pre></figure>
 
 <h3 id="create-a-branch">Create a branch</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">1. git branch &lt;name&gt;
+<figure class="highlight"><pre><code class="language-git" data-lang="git">1. git branch &lt;name&gt;
 2. git checkout -b &lt;name&gt;</code></pre></figure>
+
+<h3 style="margin-bottom:5px;" id="rebase---interactive-mode">Rebase - interactive mode</h3>
+<p style="margin-bottom:30px;"><a href="https://help.github.com/articles/about-git-rebase/">More info on rebase interactive mode</a></p>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">1. git rebase -i HEAD~#
+2. option to squash, fixup, pick, reword</code></pre></figure>
+
+<p style="margin-bottom:5px;">To move the entire feature branch to begin on the tip of the master branch,</p>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">1. git checkout feature
+2. git rebase master</code></pre></figure>
 
 <h3 id="commit">Commit</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">1. add the files you would like to commit.
-2. git commit -m <span class="s2">"message"</span>
-3. git log <span class="o">(</span>check your commit<span class="o">)</span>
+<figure class="highlight"><pre><code class="language-git" data-lang="git">1. add the files you would like to commit.
+2. git commit -m "message"
+3. git log (check your commit)
 4. git push origin &lt;branch name&gt;</code></pre></figure>
+
+<h3 id="show">Show</h3>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">1. git show &lt;commit-id&gt;
+2. git show will just show the last commit</code></pre></figure>
 
 <h3 id="pull">Pull</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">1. git pull rebase - this does the fetch step, as well as updating your working tree by running rebase. Without rebase, it performs a merge instead.</code></pre></figure>
+<figure class="highlight"><pre><code class="language-git" data-lang="git">1. git pull rebase - this does the fetch step, as well as updating your working tree by running rebase. Without rebase, it performs a merge instead.</code></pre></figure>
 
 <p>Git pull is basically of fetch + merge/rebase. Fetch won’t update your working tree, but merge/rebase do.</p>
 
 <h3 id="cherry-pick">Cherry-Pick</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">1. git cherry-pick -x -s aefc21dsafcdwascx5729</code></pre></figure>
+<figure class="highlight"><pre><code class="language-git" data-lang="git">1. git cherry-pick -x -s aefc21dsafcdwascx5729</code></pre></figure>
 
 <p>Which will include “Signed-off-by: <name>" in commit message</name></p>
 
 <h3 id="patch">Patch</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">1. git diff &lt;base branch&gt;..&lt;current branch with changes&gt; &gt; out.patch
-2. git diff &lt;base branch&gt;..&lt;current branch with changes&gt; --binary &gt; out.patch <span class="o">(</span>with binary files
+<figure class="highlight"><pre><code class="language-git" data-lang="git">1. git diff &lt;base branch&gt;..&lt;current branch with changes&gt; &gt; out.patch
+2. git diff &lt;base branch&gt;..&lt;current branch with changes&gt; --binary &gt; out.patch (with binary files
 3. On a base branch, run: git pull
 4. git checkout -b &lt;branch name&gt;
 5. git apply out.patch</code></pre></figure>
 
 <h3 id="aliases">Aliases</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">1. git config --global alias.s <span class="s1">'git status'</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-git" data-lang="git">1. git config --global alias.s 'git status'</code></pre></figure>
 
 <h3 id="rebase">Rebase</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">1. git rebase master
+<figure class="highlight"><pre><code class="language-git" data-lang="git">1. git rebase master
 2. git checkout master
 3. git merge &lt;branch&gt;
-4. git rebase -i HEAD~5 <span class="o">(</span>combining<span class="o">)</span></code></pre></figure>
+4. git rebase -i HEAD~5 (combining)</code></pre></figure>
 
 <p>Combining the commits, or merging the branch into master</p>
 
 <h3 id="bash-aliases">Bash Aliases</h3>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">1. <span class="nb">alias </span><span class="nv">gitclean</span><span class="o">=</span><span class="s2">"git clean -df &amp; git checkout -- ."</span>
-2. <span class="nb">alias </span><span class="nv">gittbc</span><span class="o">=</span><span class="s2">"git diff HEAD --name-only"</span>
-3. <span class="nb">alias </span><span class="nv">gittbp</span><span class="o">=</span><span class="s1">'git show --pretty="format:" --name-only'</span>
-4. <span class="nb">alias </span><span class="nv">gitshoworigin</span><span class="o">=</span><span class="s1">'git remote show origin'</span>;
-5. <span class="nb">alias </span><span class="nv">githead</span><span class="o">=</span><span class="s1">'cat .git/HEAD'</span>;
-6. <span class="nb">alias </span><span class="nv">gl</span><span class="o">=</span><span class="s2">"git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit"</span>
-7. <span class="nb">source</span> ~/.git-prompt.sh; <span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="s1">'`if [ $? = 0 ]; then echo "\[\033[01;32m\]✔"; else echo "\[\033[01;31m\]✘"; fi` \w\[\033[35m\] ($(__git_ps1 " %s") )\e[m $ '</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-git" data-lang="git">1. alias gitclean="git clean -df &amp; git checkout -- ."
+2. alias gittbc="git diff HEAD --name-only"
+3. alias gittbp='git show --pretty="format:" --name-only'
+4. alias gitshoworigin='git remote show origin';
+5. alias githead='cat .git/HEAD';
+6. alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit"
+7. source ~/.git-prompt.sh; export PS1='`if [ $? = 0 ]; then echo "\[\033[01;32m\]✔"; else echo "\[\033[01;31m\]✘"; fi` \w\[\033[35m\] ($(__git_ps1 " %s") )\e[m $ '</code></pre></figure>
 
 
 
