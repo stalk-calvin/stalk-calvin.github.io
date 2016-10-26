@@ -16,7 +16,6 @@
 .featureList li.check:before {
   content: "\2713";
   color: darkgreen;
-  text-decoration: line-through;
 }
 .featureList li.cross:before {
   content: "\2717";
