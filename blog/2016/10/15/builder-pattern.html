@@ -201,7 +201,7 @@
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">MazeGame</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kd">final</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Room</span><span class="o">&gt;</span> <span class="n">rooms</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
 
-    <span class="kd">public</span> <span class="n">MazeGame</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nf">MazeGame</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">Room</span> <span class="n">room1</span> <span class="o">=</span> <span class="n">makeRoom</span><span class="o">();</span>
         <span class="n">Room</span> <span class="n">room2</span> <span class="o">=</span> <span class="n">makeRoom</span><span class="o">();</span>
         <span class="n">room1</span><span class="o">.</span><span class="na">connect</span><span class="o">(</span><span class="n">room2</span><span class="o">);</span>
@@ -209,20 +209,20 @@
         <span class="n">rooms</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">room2</span><span class="o">);</span>
     <span class="o">}</span>
 
-    <span class="kd">abstract</span> <span class="kd">protected</span> <span class="n">Room</span> <span class="n">makeRoom</span><span class="o">();</span>
+    <span class="kd">abstract</span> <span class="kd">protected</span> <span class="n">Room</span> <span class="nf">makeRoom</span><span class="o">();</span>
 <span class="o">}</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MagicMazeGame</span> <span class="kd">extends</span> <span class="n">MazeGame</span> <span class="o">{</span>
     <span class="nd">@Override</span>
-    <span class="kd">protected</span> <span class="n">Room</span> <span class="n">makeRoom</span><span class="o">()</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="n">MagicRoom</span><span class="o">();</span> 
+    <span class="kd">protected</span> <span class="n">Room</span> <span class="nf">makeRoom</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">MagicRoom</span><span class="o">();</span> 
     <span class="o">}</span>
 <span class="o">}</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">OrdinaryMazeGame</span> <span class="kd">extends</span> <span class="n">MazeGame</span> <span class="o">{</span>
     <span class="nd">@Override</span>
-    <span class="kd">protected</span> <span class="n">Room</span> <span class="n">makeRoom</span><span class="o">()</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="n">OrdinaryRoom</span><span class="o">();</span> 
+    <span class="kd">protected</span> <span class="n">Room</span> <span class="nf">makeRoom</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">OrdinaryRoom</span><span class="o">();</span> 
     <span class="o">}</span>
 <span class="o">}</span>
 
@@ -257,37 +257,37 @@
         <span class="kd">private</span> <span class="kt">int</span> <span class="n">carbohydrate</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
         <span class="kd">private</span> <span class="kt">int</span> <span class="n">sodium</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
         
-        <span class="kd">public</span> <span class="n">Builder</span><span class="o">(</span><span class="kt">int</span> <span class="n">servingSize</span><span class="o">,</span> <span class="kt">int</span> <span class="n">servings</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="nf">Builder</span><span class="o">(</span><span class="kt">int</span> <span class="n">servingSize</span><span class="o">,</span> <span class="kt">int</span> <span class="n">servings</span><span class="o">)</span> <span class="o">{</span>
         	<span class="k">this</span><span class="o">.</span><span class="na">servingSize</span> <span class="o">=</span> <span class="n">servingSize</span><span class="o">;</span>
         	<span class="k">this</span><span class="o">.</span><span class="na">servings</span> <span class="o">=</span> <span class="n">servings</span><span class="o">;</span>
         <span class="o">}</span>
         
-        <span class="kd">public</span> <span class="n">Builder</span> <span class="n">calories</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="n">Builder</span> <span class="nf">calories</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
         	<span class="n">calories</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
         	<span class="k">return</span> <span class="k">this</span><span class="o">;</span>
         <span class="o">}</span>
         
-        <span class="kd">public</span> <span class="n">Builder</span> <span class="n">fat</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="n">Builder</span> <span class="nf">fat</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
         	<span class="n">fat</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
         	<span class="k">return</span> <span class="k">this</span><span class="o">;</span>
         <span class="o">}</span>
         
-        <span class="kd">public</span> <span class="n">Builder</span> <span class="n">carbohydrate</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="n">Builder</span> <span class="nf">carbohydrate</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
         	<span class="n">carbohydrate</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
         	<span class="k">return</span> <span class="k">this</span><span class="o">;</span>
         <span class="o">}</span>
         
-        <span class="kd">public</span> <span class="n">Builder</span> <span class="n">sodium</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="n">Builder</span> <span class="nf">sodium</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
         	<span class="n">sodium</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
         	<span class="k">return</span> <span class="k">this</span><span class="o">;</span>
         <span class="o">}</span>
         
-        <span class="kd">public</span> <span class="n">NutritionFacts</span> <span class="n">build</span><span class="o">()</span> <span class="o">{</span>
-        	<span class="k">return</span> <span class="k">new</span> <span class="n">NutritionFacts</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="kd">public</span> <span class="n">NutritionFacts</span> <span class="nf">build</span><span class="o">()</span> <span class="o">{</span>
+        	<span class="k">return</span> <span class="k">new</span> <span class="nf">NutritionFacts</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
         <span class="o">}</span>
     <span class="o">}</span>
     
-    <span class="kd">private</span> <span class="n">NutritionFacts</span><span class="o">(</span><span class="n">Builder</span> <span class="n">builder</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nf">NutritionFacts</span><span class="o">(</span><span class="n">Builder</span> <span class="n">builder</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">servingSize</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">servingSize</span><span class="o">;</span>
         <span class="n">servings</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">servings</span><span class="o">;</span>
         <span class="n">calories</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">calories</span><span class="o">;</span>
@@ -296,7 +296,7 @@
         <span class="n">carbohydrate</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">carbohydrate</span><span class="o">;</span>
     <span class="o">}</span>
     
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">NutritionFacts</span> <span class="n">cocaCola</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NutritionFacts</span><span class="o">.</span><span class="na">Builder</span><span class="o">(</span><span class="mi">240</span><span class="o">,</span> <span class="mi">8</span><span class="o">)</span>
         		<span class="o">.</span><span class="na">calories</span><span class="o">(</span><span class="mi">100</span><span class="o">).</span><span class="na">sodium</span><span class="o">(</span><span class="mi">35</span><span class="o">).</span><span class="na">carbohydrate</span><span class="o">(</span><span class="mi">27</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
     <span class="o">}</span>
@@ -306,24 +306,24 @@
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Teacher</span> <span class="kd">extends</span> <span class="n">Employee</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
-    <span class="kd">public</span> <span class="n">Employee</span><span class="o">(</span><span class="n">Builder</span> <span class="n">builder</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nf">Employee</span><span class="o">(</span><span class="n">Builder</span> <span class="n">builder</span><span class="o">)</span> <span class="o">{</span>
         <span class="kd">super</span><span class="o">(</span><span class="n">builder</span><span class="o">)</span>
         <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
     <span class="o">}</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Builder</span> <span class="o">{</span>
         <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
-        <span class="kd">public</span> <span class="n">Builder</span> <span class="n">name</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="n">Builder</span> <span class="nf">name</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
             <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
             <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
         <span class="o">}</span>
 
-        <span class="kd">public</span> <span class="n">Employee</span> <span class="n">build</span><span class="o">()</span> <span class="o">{</span>
-            <span class="k">return</span> <span class="k">new</span> <span class="n">Employee</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="kd">public</span> <span class="n">Employee</span> <span class="nf">build</span><span class="o">()</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nf">Employee</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
         <span class="o">}</span>
 
         <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="n">String</span> <span class="n">toString</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
             <span class="k">return</span> <span class="s">"Employee.Builder = "</span> <span class="o">+</span> <span class="s">"Employee name: "</span> <span class="o">+</span> <span class="n">name</span><span class="o">;</span>
         <span class="o">}</span>
     <span class="o">}</span>
@@ -332,7 +332,7 @@
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MathTeacher</span> <span class="kd">extends</span> <span class="n">Teacher</span> <span class="o">{</span>
      <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">type</span><span class="o">;</span>
      
-     <span class="kd">public</span> <span class="n">Teacher</span><span class="o">(</span><span class="n">Builder</span> <span class="n">builder</span><span class="o">)</span> <span class="o">{</span>
+     <span class="kd">public</span> <span class="nf">Teacher</span><span class="o">(</span><span class="n">Builder</span> <span class="n">builder</span><span class="o">)</span> <span class="o">{</span>
          <span class="kd">super</span><span class="o">(</span><span class="n">builder</span><span class="o">);</span>
          <span class="k">this</span><span class="o">.</span><span class="na">type</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">type</span><span class="o">;</span>
      <span class="o">}</span>
@@ -340,11 +340,11 @@
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Builder</span> <span class="kd">extends</span> <span class="n">Employee</span><span class="o">.</span><span class="na">Builder</span> <span class="o">{</span>
         <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">type</span><span class="o">;</span>
 
-        <span class="kd">public</span> <span class="n">Builder</span><span class="o">(</span><span class="n">String</span> <span class="n">type</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="nf">Builder</span><span class="o">(</span><span class="n">String</span> <span class="n">type</span><span class="o">)</span> <span class="o">{</span>
             <span class="k">this</span><span class="o">.</span><span class="na">type</span> <span class="o">=</span> <span class="n">type</span><span class="o">;</span>
         <span class="o">}</span>
 
-        <span class="kd">public</span> <span class="n">Builder</span> <span class="n">name</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="n">Builder</span> <span class="nf">name</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
             <span class="kd">super</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
             <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
         <span class="o">}</span>
