@@ -1,3 +1,24 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
 .w3-progress-container{width:50%;height:1.5em;position:relative;background-color:#f1f1f1;margin-left:25%;margin-bottom:2%}
 .w3-progressbar{background-color:#757575;height:100%;position:absolute;line-height:inherit}
 .w3-green,.w3-hover-green:hover{color:#fff!important;background-color:#4CAF50!important}
+/* List styling */
+.featureList, .featureList ul {
+  margin-top: 0;
+  padding-left: 3em;
+  list-style-type: none;
+}
+.featureList li:before {
+  position: absolute;
+  margin-left: -1.3em;
+  font-weight: bold;
+}
+.featureList li.check:before {
+  content: "\2713";
+  color: darkgreen;
+  text-decoration: line-through;
+}
+.featureList li.cross:before {
+  content: "\2717";
+  color: crimson;
+}

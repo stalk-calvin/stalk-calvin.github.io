@@ -200,36 +200,36 @@
 
     <span class="c1">// Run once, e.g. Database connection, connection pool</span>
     <span class="nd">@BeforeClass</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">runOnceBeforeClass</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">runOnceBeforeClass</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@BeforeClass - runOnceBeforeClass"</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="c1">// Run once, e.g close connection, cleanup</span>
     <span class="nd">@AfterClass</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">runOnceAfterClass</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">runOnceAfterClass</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@AfterClass - runOnceAfterClass"</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="c1">// Should rename to @BeforeTestMethod</span>
     <span class="c1">// e.g. Creating an similar object and share for all @Test</span>
     <span class="nd">@Before</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="n">runBeforeTestMethod</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">runBeforeTestMethod</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@Before - runBeforeTestMethod"</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="c1">// Should rename to @AfterTestMethod</span>
     <span class="nd">@After</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="n">runAfterTestMethod</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">runAfterTestMethod</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@After - runAfterTestMethod"</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="nd">@Test</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="n">test_method_1</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">test_method_1</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@Test - test_method_1"</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="nd">@Test</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="n">test_method_2</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">test_method_2</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"@Test - test_method_2"</span><span class="o">);</span>
     <span class="o">}</span>
 
@@ -260,7 +260,7 @@
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">valueTwo</span><span class="o">;</span>
 
     <span class="nd">@Parameterized</span><span class="o">.</span><span class="na">Parameters</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Collection</span> <span class="n">getTestParameters</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Collection</span> <span class="nf">getTestParameters</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="k">new</span> <span class="n">Integer</span><span class="o">[][]</span> <span class="o">{</span>
                 <span class="o">{</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span> <span class="o">},</span>
                 <span class="o">{</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">1</span> <span class="o">},</span>
@@ -268,18 +268,18 @@
         <span class="o">});</span>
     <span class="o">}</span>
 
-    <span class="kd">public</span> <span class="n">ParameterizedTest</span><span class="o">(</span><span class="kt">int</span> <span class="n">expected</span><span class="o">,</span> <span class="kt">int</span> <span class="n">valueOne</span><span class="o">,</span> <span class="kt">int</span> <span class="n">valueTwo</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nf">ParameterizedTest</span><span class="o">(</span><span class="kt">int</span> <span class="n">expected</span><span class="o">,</span> <span class="kt">int</span> <span class="n">valueOne</span><span class="o">,</span> <span class="kt">int</span> <span class="n">valueTwo</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">this</span><span class="o">.</span><span class="na">expected</span> <span class="o">=</span> <span class="n">expected</span><span class="o">;</span>
         <span class="k">this</span><span class="o">.</span><span class="na">valueOne</span> <span class="o">=</span> <span class="n">valueOne</span><span class="o">;</span>
         <span class="k">this</span><span class="o">.</span><span class="na">valueTwo</span> <span class="o">=</span> <span class="n">valueTwo</span><span class="o">;</span>
     <span class="o">}</span>
 
     <span class="nd">@Test</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="n">testAdd</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testAdd</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">assertEquals</span><span class="o">(</span><span class="n">expected</span><span class="o">,</span> <span class="n">add</span><span class="o">(</span><span class="n">valueOne</span><span class="o">,</span> <span class="n">valueTwo</span><span class="o">));</span>
     <span class="o">}</span>
 
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">add</span> <span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="nf">add</span> <span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">if</span> <span class="o">(</span><span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="k">return</span> <span class="n">b</span><span class="o">;</span>
         <span class="k">while</span> <span class="o">(</span><span class="n">b</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
             <span class="kt">int</span> <span class="n">carry</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span><span class="o">;</span>
@@ -316,7 +316,7 @@
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">...</span>
     <span class="nd">@Ignore</span>
     <span class="nd">@Test</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="n">something</span><span class="o">()</span> <span class="o">{</span> <span class="o">...</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">something</span><span class="o">()</span> <span class="o">{</span> <span class="o">...</span>
 <span class="o">...</span></code></pre></figure>
 
 <p>If you require to ignore the entire class, you can</p>
@@ -324,8 +324,8 @@
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">...</span>
     <span class="nd">@Ignore</span>
     <span class="kd">public</span> <span class="kd">class</span> <span class="nc">IgnoreMe</span> <span class="o">{</span>
-        <span class="nd">@Test</span> <span class="kd">public</span> <span class="kt">void</span> <span class="n">test1</span><span class="o">()</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
-        <span class="nd">@Test</span> <span class="kd">public</span> <span class="kt">void</span> <span class="n">test2</span><span class="o">()</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+        <span class="nd">@Test</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">test1</span><span class="o">()</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+        <span class="nd">@Test</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">test2</span><span class="o">()</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
     <span class="o">}</span>
 <span class="o">...</span></code></pre></figure>
 
@@ -352,7 +352,7 @@
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Theory</span>
 <span class="o">...</span>
-   <span class="kd">public</span> <span class="kt">void</span> <span class="n">multiplyIsInverseOfDivideWithInlineDataPoints</span><span class="o">(</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">multiplyIsInverseOfDivideWithInlineDataPoints</span><span class="o">(</span>
         <span class="nd">@TestedOn</span><span class="o">(</span><span class="n">ints</span> <span class="o">=</span> <span class="o">{</span><span class="mi">0</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">10</span><span class="o">})</span> <span class="kt">int</span> <span class="n">amount</span><span class="o">,</span>
         <span class="nd">@TestedOn</span><span class="o">(</span><span class="n">ints</span> <span class="o">=</span> <span class="o">{</span><span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">})</span> <span class="kt">int</span> <span class="n">m</span>
    <span class="o">)</span> <span class="o">{</span>
