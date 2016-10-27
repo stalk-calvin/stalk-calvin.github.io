@@ -250,6 +250,39 @@
 
 <p>I have put this here because our company recently patched a protection around this. An example of CSRF can be when an attacker sends a link that contains something like changing a password of the “user” or modifying someone’s status, if I had enough privilege and I have already logged into the website. By clicking the link, I would automatically update the password of the “user” attacker intends to change the password.To fix this, we ended up implementing a md5 hash string tied to a session so if an attacker sends a link and it does not have the same session as I logged in, it would give a warning page to indicate me to make sure I know what I am doing.</p>
 
+<h4 id="xxe---billion-laughshttpsenwikipediaorgwikixmlexternalentityattack"><a href="https://en.wikipedia.org/wiki/XML_external_entity_attack">XXE - Billion Laughs</a></h4>
+
+<p>This interesting topic was thoroughly discussed at my team when we had someone attack us with LOL Billion Laughs attack. Here is a sample xml that triggers an infinite entity mappings which causes denial-of-service attack that targets XML parsers. It is also known as XML bomb.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="cp">&lt;!DOCTYPE lolz [
+&lt;!ENTITY lol "lol"&gt;</span>
+<span class="cp">&lt;!ENTITY lol2 "&amp;lol;&amp;lol;&amp;lol;&amp;lol;&amp;lol;&amp;lol;&amp;lol;&amp;lol;&amp;lol;&amp;lol;"&gt;</span>
+<span class="cp">&lt;!ENTITY lol3 "&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;"&gt;</span>
+<span class="cp">&lt;!ENTITY lol4 "&amp;lol3;&amp;lol3;&amp;lol3;&amp;lol3;&amp;lol3;&amp;lol3;&amp;lol3;&amp;lol3;&amp;lol3;&amp;lol3;"&gt;</span>
+<span class="cp">&lt;!ENTITY lol5 "&amp;lol4;&amp;lol4;&amp;lol4;&amp;lol4;&amp;lol4;&amp;lol4;&amp;lol4;&amp;lol4;&amp;lol4;&amp;lol4;"&gt;</span>
+<span class="cp">&lt;!ENTITY lol6 "&amp;lol5;&amp;lol5;&amp;lol5;&amp;lol5;&amp;lol5;&amp;lol5;&amp;lol5;&amp;lol5;&amp;lol5;&amp;lol5;"&gt;</span>
+<span class="cp">&lt;!ENTITY lol7 "&amp;lol6;&amp;lol6;&amp;lol6;&amp;lol6;&amp;lol6;&amp;lol6;&amp;lol6;&amp;lol6;&amp;lol6;&amp;lol6;"&gt;</span>
+<span class="cp">&lt;!ENTITY lol8 "&amp;lol7;&amp;lol7;&amp;lol7;&amp;lol7;&amp;lol7;&amp;lol7;&amp;lol7;&amp;lol7;&amp;lol7;&amp;lol7;"&gt;</span>
+<span class="cp">&lt;!ENTITY lol9 "&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;"&gt;</span>
+]&gt;
+<span class="nt">&lt;lolz&gt;</span><span class="ni">&amp;lol9;</span><span class="nt">&lt;/lolz&gt;</span></code></pre></figure>
+
+<p>Basically as you see from this example, there are 10 different entities, <code class="highlighter-rouge">lol</code> to <code class="highlighter-rouge">lol9</code>. The first lol = String <code class="highlighter-rouge">"lol"</code>, then each of other entities becomes chains of other entities. So when you expand all of this, there are 100,000,000 instances of string of <code class="highlighter-rouge">"lol"</code></p>
+
+<p>Below is an example of XXE:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</span>
+ <span class="cp">&lt;!DOCTYPE foo [  
+  &lt;!ELEMENT foo ANY &gt;</span>
+  <span class="cp">&lt;!ENTITY xxe SYSTEM "file:///dev/random" &gt;</span>]&gt;<span class="nt">&lt;foo&gt;</span><span class="ni">&amp;xxe;</span><span class="nt">&lt;/foo&gt;</span></code></pre></figure>
+
+<p>Similarly, this test could crash the web server (on a UNIX system), if the XML parser attempts to substitute the entity with the contents of the /dev/random file.</p>
+
+<h4 id="transport-layer-securityhttpsenwikipediaorgwikitransportlayersecurity"><a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">Transport Layer Security</a></h4>
+
+<p>Well, obviously everyone knows what https (ssl) is. It is basically providing a layer for privacy and data integrity between two communicating applications. SSLs (v1, v2 and v3) have been found vulnerable (<a href="https://en.wikipedia.org/wiki/POODLE">Read Here</a> if interested) and it is recommended to use anything greater than TLS1.1. Modern browsers support at least TLS 1.0 as TLS1.0 is still widely used as the ‘best’ protocol by a lot of browsers that are not patched to the latest version. It suffers from <a href="http://www.yassl.com/yaSSL/Blog/Entries/2010/10/7_Differences_between_SSL_and_TLS_Protocol_Versions.html">CBC Chaining attacks and Padding Oracle attacks</a>. PCI DSS 3.1 prohibits use of TLS 1.0 after June 30, 2016. What’s important here is to not use SSLv2, SSLv3. SSLv1 was never publicly made available.</p>
+
 
           
 <!-- Share Buttons Start -->
