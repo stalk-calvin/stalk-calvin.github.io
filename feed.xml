@@ -7,6 +7,17 @@
 		<atom:link href="https://stalk-calvin.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Lombok: Simplify your development of Java code</title>
+				
+				
+					<description></description>
+				
+				<pubDate>Sat, 29 Oct 2016 00:00:00 -0700</pubDate>
+				<link>https://stalk-calvin.github.io/blog/2016/10/29/lombok.html</link>
+				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/10/29/lombok.html</guid>
+			</item>
+		
+			<item>
 				<title>DI: Comparing Spring vs. Google Guice: By Example</title>
 				
 				
@@ -103,17 +114,6 @@
 				<pubDate>Fri, 24 Jun 2016 00:00:00 -0700</pubDate>
 				<link>https://stalk-calvin.github.io/blog/2016/06/24/music.html</link>
 				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/06/24/music.html</guid>
-			</item>
-		
-			<item>
-				<title>Sugar in Fruits</title>
-				
-				
-					<description>Facts about natural sugar vs added sugar</description>
-				
-				<pubDate>Tue, 21 Jun 2016 00:00:00 -0700</pubDate>
-				<link>https://stalk-calvin.github.io/blog/2016/06/21/fruits-sugar-health.html</link>
-				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/06/21/fruits-sugar-health.html</guid>
 			</item>
 		
 	</channel>
