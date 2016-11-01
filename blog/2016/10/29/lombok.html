@@ -194,7 +194,48 @@
 
 <p style="margin-bottom:1em;">Plain Vanilla Java:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">GetterSetterExample</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42</pre></td><td class="code"><pre> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">GetterSetterExample</span> <span class="o">{</span>
    <span class="cm">/**
     * Age of the person. Water is wet.
     */</span> 
@@ -235,11 +276,37 @@
    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
      <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
    <span class="o">}</span>  
- <span class="o">}</span></code></pre></figure>
+ <span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p style="margin-bottom:1em;">With Lombok:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"> <span class="kn">import</span> <span class="nn">lombok.AccessLevel</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></td><td class="code"><pre> <span class="kn">import</span> <span class="nn">lombok.AccessLevel</span><span class="o">;</span>
  <span class="kn">import</span> <span class="nn">lombok.Getter</span><span class="o">;</span>
  <span class="kn">import</span> <span class="nn">lombok.Setter</span><span class="o">;</span>
  
@@ -264,7 +331,8 @@
    <span class="nd">@Override</span> <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
      <span class="k">return</span> <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s (age: %d)"</span><span class="o">,</span> <span class="n">name</span><span class="o">,</span> <span class="n">age</span><span class="o">);</span>
    <span class="o">}</span>  
- <span class="o">}</span></code></pre></figure>
+ <span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p><strong>Result</strong>: 42 lines vs 26 lines</p>
 
@@ -276,7 +344,36 @@
 
 <p style="margin-bottom:1em;">Plain Vanilla Java:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"> <span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre></td><td class="code"><pre> <span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
  
  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ToStringExample</span> <span class="o">{</span>
    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">STATIC_VAR</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
@@ -305,11 +402,35 @@
    <span class="nd">@Override</span> <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
      <span class="k">return</span> <span class="s">"ToStringExample("</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">shape</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">deepToString</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">tags</span><span class="o">)</span> <span class="o">+</span> <span class="s">")"</span><span class="o">;</span>
    <span class="o">}</span>  
- <span class="o">}</span></code></pre></figure>
+ <span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p style="margin-bottom:1em;">With Lombok:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"> <span class="kn">import</span> <span class="nn">lombok.ToString</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></td><td class="code"><pre> <span class="kn">import</span> <span class="nn">lombok.ToString</span><span class="o">;</span>
  
  <span class="nd">@ToString</span><span class="o">(</span><span class="n">exclude</span><span class="o">=</span><span class="s">"id"</span><span class="o">)</span>
  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ToStringExample</span> <span class="o">{</span>
@@ -332,7 +453,8 @@
        <span class="k">this</span><span class="o">.</span><span class="na">height</span> <span class="o">=</span> <span class="n">height</span><span class="o">;</span>
      <span class="o">}</span>
    <span class="o">}</span>
- <span class="o">}</span></code></pre></figure>
+ <span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p><strong>Result</strong>: 30 lines vs 24 lines</p>
 
@@ -344,7 +466,78 @@
 
 <p style="margin-bottom:1em;">Plain Vanilla Java:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">EqualsAndHashCodeExample</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">transient</span> <span class="kt">int</span> <span class="n">transientVar</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
@@ -415,11 +608,36 @@
       <span class="k">return</span> <span class="n">other</span> <span class="k">instanceof</span> <span class="n">Square</span><span class="o">;</span>
     <span class="o">}</span>
   <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p style="margin-bottom:1em;">With Lombok:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">lombok.EqualsAndHashCode</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">lombok.EqualsAndHashCode</span><span class="o">;</span>
 
 <span class="nd">@EqualsAndHashCode</span><span class="o">(</span><span class="n">exclude</span><span class="o">={</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"shape"</span><span class="o">})</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">EqualsAndHashCodeExample</span> <span class="o">{</span>
@@ -443,7 +661,8 @@
       <span class="k">this</span><span class="o">.</span><span class="na">height</span> <span class="o">=</span> <span class="n">height</span><span class="o">;</span>
     <span class="o">}</span>
   <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p><strong>Result</strong>: 72 lines vs 25 lines</p>
 
@@ -455,7 +674,26 @@
 
 <p style="margin-bottom:1em;">Plain Vanilla Java:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">NoArgsExample</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">NoArgsExample</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">field</span><span class="o">;</span>
 
     <span class="kd">public</span> <span class="nf">NoArgsExample</span><span class="o">()</span> <span class="o">{</span>
@@ -474,11 +712,27 @@
         <span class="n">example</span><span class="o">.</span><span class="na">setField</span><span class="o">(</span><span class="s">"test"</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">example</span><span class="o">.</span><span class="na">field</span><span class="o">);</span>
     <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p style="margin-bottom:1em;">With Lombok:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">lombok.Getter</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">lombok.Getter</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">lombok.Setter</span><span class="o">;</span>
 
@@ -493,7 +747,8 @@
         <span class="n">example</span><span class="o">.</span><span class="na">setField</span><span class="o">(</span><span class="s">"test"</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">example</span><span class="o">.</span><span class="na">field</span><span class="o">);</span>
     <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p><strong>Result:</strong> 20 lines vs 16 lines</p>
 
@@ -501,7 +756,58 @@
 
 <p style="margin-bottom:1em;">Plain Vanilla Java:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">lombok.NonNull</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">lombok.NonNull</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ConstructorExample</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">;</span>
@@ -552,11 +858,49 @@
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">allArgsExample</span><span class="o">.</span><span class="na">y</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">allArgsExample</span><span class="o">.</span><span class="na">description</span><span class="o">);</span>
     <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p style="margin-bottom:1em;">With Lombok:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">lombok.NonNull</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">lombok.RequiredArgsConstructor</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">lombok.ToString</span><span class="o">;</span>
@@ -593,7 +937,8 @@
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">allArgsExample</span><span class="o">.</span><span class="na">y</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">allArgsExample</span><span class="o">.</span><span class="na">description</span><span class="o">);</span>
     <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p><strong>Result:</strong> 52 lines vs 38 lines</p>
 
@@ -605,7 +950,22 @@
 
 <p style="margin-bottom:1em;">Remember we had an example above in Lombok:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">lombok.Getter</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">lombok.Getter</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">lombok.Setter</span><span class="o">;</span>
 
@@ -620,11 +980,22 @@
         <span class="n">example</span><span class="o">.</span><span class="na">setField</span><span class="o">(</span><span class="s">"test"</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">example</span><span class="o">.</span><span class="na">field</span><span class="o">);</span>
     <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p style="margin-bottom:1em;">Now if we used, <code class="highlighter-rouge">@Data</code> instead,</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">lombok.Data</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">lombok.Data</span><span class="o">;</span>
 
 <span class="nd">@Data</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">NoArgsExample</span> <span class="o">{</span>
     <span class="n">String</span> <span class="n">field</span><span class="o">;</span>
@@ -634,7 +1005,8 @@
         <span class="n">example</span><span class="o">.</span><span class="na">setField</span><span class="o">(</span><span class="s">"test"</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">example</span><span class="o">.</span><span class="na">getField</span><span class="o">());</span>
     <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p><strong>Result:</strong> 16 lines further reduced to 11 lines of code</p>
 
