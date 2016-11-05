@@ -7,6 +7,17 @@
 		<atom:link href="https://stalk-calvin.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Algorithms: My Programming Playground</title>
+				
+				
+					<description></description>
+				
+				<pubDate>Sat, 05 Nov 2016 00:00:00 -0700</pubDate>
+				<link>https://stalk-calvin.github.io/blog/2016/11/05/Algorithms.html</link>
+				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/11/05/Algorithms.html</guid>
+			</item>
+		
+			<item>
 				<title>Lombok: Simplify your development of Java code</title>
 				
 				
@@ -103,17 +114,6 @@
 				<pubDate>Tue, 28 Jun 2016 00:00:00 -0700</pubDate>
 				<link>https://stalk-calvin.github.io/blog/2016/06/28/sorting.html</link>
 				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/06/28/sorting.html</guid>
-			</item>
-		
-			<item>
-				<title>Jang Bum Joon (장범준)</title>
-				
-				
-					<description>Songs I listen to these days</description>
-				
-				<pubDate>Fri, 24 Jun 2016 00:00:00 -0700</pubDate>
-				<link>https://stalk-calvin.github.io/blog/2016/06/24/music.html</link>
-				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/06/24/music.html</guid>
 			</item>
 		
 	</channel>

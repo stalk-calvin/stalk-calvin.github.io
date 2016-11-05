@@ -97,6 +97,15 @@
   
   
     <url>
+      <loc>https://stalk-calvin.github.io/blog/2016/11/05/Algorithms.html</loc>
+      
+        <lastmod>2016-11-05T00:00:00-07:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
       <loc>https://stalk-calvin.github.io/blog/2016/10/29/lombok.html</loc>
       
         <lastmod>2016-10-29T00:00:00-07:00</lastmod>
