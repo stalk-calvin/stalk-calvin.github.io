@@ -180,32 +180,32 @@
 
           <h3 id="new-project-algorithmshttpsgithubcomstalk-calvinalgorithms">New Project: <a href="https://github.com/stalk-calvin/Algorithms">Algorithms</a></h3>
 
-<p>In the past weeks, I have spent whenever I can writing algorithms and I created a repository (<a href="https://github.com/stalk-calvin/Algorithms">HERE</a>) which has all the simple/medium/complex algorithms I have been dealing with in the past. It used to be just a simple set of problems in text files. However, I have mavenized this as a project meaning I can build/test using Maven and thhe project solved my dependancy problems easily as well as I love the structures it has. I have also added unit tests for all the algorithms I wrote in a similar fashions. The best way to run the test is through debug run and step through what is happening behind the scene since many of algorithms happen in the back.</p>
+<p>For the past weeks, I have been spending time writing algorithms and I created a repository (<a href="https://github.com/stalk-calvin/Algorithms">HERE</a>) which has mixture of simple/medium/complex algorithms I have been dealing with in the past. It used to be just a simple set of problems in text files. Then, I decided to mavenize this as a project meaning I can build/test using Maven which solved my dependancy mess as well as I love how it has defined structures. I have also added unit tests for those algorithms. The best way to run the test is through debug-run and step through what is happening behind the scene since many of algorithms happen in the back.</p>
 
 <h3 id="why-did-i-do-this">Why did I do this?</h3>
 
-<p>For a quite of time, I always wanted a place like <a href="https://github.com/stalk-calvin/Algorithms">this</a> repository where I can code and play around with set of problems. Now I have a good base structure where I will be adding more algorithms in the future. Most of the problems currently are simple because I wanted to start from the basics. Basics are really important as it nourishes me to go one step further.</p>
+<p>For a quite some time, I wanted a place like <a href="https://github.com/stalk-calvin/Algorithms">this</a>, a place where I can code, play and have fun! Now I finally have a place where I can continue adding more algorithms in the future and expand. Majority of the problems here are simple because I wanted to start from basics. I find basics are really important as it nourishes me to go a step further.</p>
 
 <h3 id="why-maven">Why Maven?</h3>
 
 <ol>
-  <li>Maven can resolve dependencie: I do not needed to manually download required libraries.</li>
-  <li>Maven keeps the definite structure: src/main, src/test and resources. It follows strict directory structures which keeps the project clean.</li>
+  <li>Maven can resolve dependencies: I do not needed to manually download required libraries and install.</li>
+  <li>Maven requires you to keep the defined structure: src/main, src/test and resources. It follows strict directory structures which keeps the project clean and easy to follow.</li>
 </ol>
 
-<p>Maven is much more powerful than how I am using it here. It can handle packaging/releases and define much more through pom file. The best website to start learning about Maven would be the actual <a href="http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html">Maven Website</a>. I wouldn’t recommend reading an entire book, reading up on specific references on Google can take you where you need to be imo.</p>
+<p>Maven is much more powerful than how I am using it here. It can handle packaging/releases and define much more through pom file. The best website to start learning about Maven would be the actual <a href="http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html">Maven Website</a>. I wouldn’t recommend reading an entire book; reading up on specific references on Google should be enough for what you would like to achieve out of it.</p>
 
 <h3 id="unit-tests">Unit tests</h3>
 
-<p>Unit tests are done in JUnit 4. I have tried to use Mockito, but the problems are most too simple and independant for Mocking an object. I focused on test coverage as well as correct test cases for each problems.</p>
+<p>Unit tests are done in JUnit 4. I tried to use “<a href="http://www.vogella.com/tutorials/Mockito/article.html">Mockito</a>”, but like I said, majority of the problems are too simple and independant to Mock an object. I focused on test coverage as well as correct test cases for each problems.</p>
 
 <h3 id="how-to-install">How to install</h3>
 
 <p>Requirement: Java 8, Lombok, JUnit 4, slf4j</p>
 
 <ol>
-  <li><a href="https://github.com/stalk-calvin/Algorithms.git">Clone</a> and Load as Maven project with pom.xml selected.</li>
-  <li>Need to enable annotiations / necessary plugins for Lombok</li>
+  <li>Clone <code class="highlighter-rouge">https://github.com/stalk-calvin/Algorithms.git</code> and Load pom.xml as a Maven project.</li>
+  <li>You will need to enable annotiations / necessary plugins for Lombok</li>
 </ol>
 
 <p>You can also do maven command to do a full testing, mvn clean test.</p>
