@@ -28,3 +28,9 @@
   margin-top: -5em; /*same height as header*/
   visibility: hidden;
 }
+
+.pagination {
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+}
