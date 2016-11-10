@@ -278,6 +278,31 @@
 
 <p>Combining the commits, or merging the branch into master</p>
 
+<h3 id="stash">Stash</h3>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git stash</code></pre></figure>
+
+<p>will save your work into local disk somewhere to be pulled out later. It is most useful when you would like to save your work to work on something else.</p>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git stash pop</code></pre></figure>
+
+<p>this will pull out the most recent work you saved using git stash. It is important to match the branch name same as the time you stashed. Otherwise, there would be bunch of conflicts as in most of time, your code will be very different.</p>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git stash list</code></pre></figure>
+
+<p>It will list what has been stashed so far. Like the example below:</p>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">stash@{0}: WIP on &lt;stashed_branch_name&gt; d70f7fa &lt;GIT Comment&gt;
+stash@{1}: WIP on &lt;stashed_branch_name&gt; a058e86 &lt;GIT Comment&gt;
+stash@{2}: WIP on &lt;stashed_branch_name&gt; cc286cf &lt;GIT Comment&gt;
+stash@{3}: WIP on &lt;stashed_branch_name&gt; a058e86 &lt;GIT Comment&gt;
+stash@{4}: WIP on &lt;stashed_branch_name&gt; c3610ef &lt;GIT Comment&gt;
+stash@{5}: WIP on &lt;stashed_branch_name&gt; cef3e19 &lt;GIT Comment&gt;</code></pre></figure>
+
+<p>Now above first location such as “stash@{3}” indicates the id of stash reference you can pull out. For example: you can run a command such as <code class="highlighter-rouge">git stash pop stash@{3}</code> which will pop out the 3rd commits out of the list into your current branch. Make sure you change your branch to what branch it used to stash.</p>
+
+<p>You can also specify a name to a stashed object rather than “stash@{3}” or there are other commands you can do with stash. Please refer to <a href="https://git-scm.com/docs/git-stash">this website</a> for detail.</p>
+
 <h3 id="bash-aliases">Bash Aliases</h3>
 
 <figure class="highlight"><pre><code class="language-git" data-lang="git">1. alias gitclean="git clean -df &amp; git checkout -- ."
