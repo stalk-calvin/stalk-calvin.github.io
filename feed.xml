@@ -7,6 +7,17 @@
 		<atom:link href="https://stalk-calvin.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>5 best computer books</title>
+				
+				
+					<description>for me</description>
+				
+				<pubDate>Sat, 12 Nov 2016 00:00:00 -0800</pubDate>
+				<link>https://stalk-calvin.github.io/blog/2016/11/12/Favourite-Books.html</link>
+				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/11/12/Favourite-Books.html</guid>
+			</item>
+		
+			<item>
 				<title>Algorithms: My Programming Playground</title>
 				
 				
@@ -103,17 +114,6 @@
 				<pubDate>Sat, 02 Jul 2016 00:00:00 -0700</pubDate>
 				<link>https://stalk-calvin.github.io/blog/2016/07/02/web-security.html</link>
 				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/07/02/web-security.html</guid>
-			</item>
-		
-			<item>
-				<title>Sorting</title>
-				
-				
-					<description>Various ways of sorting methods</description>
-				
-				<pubDate>Tue, 28 Jun 2016 00:00:00 -0700</pubDate>
-				<link>https://stalk-calvin.github.io/blog/2016/06/28/sorting.html</link>
-				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/06/28/sorting.html</guid>
 			</item>
 		
 	</channel>
