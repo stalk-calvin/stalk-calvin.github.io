@@ -1,120 +1,445 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
-	<channel>
-		<title>Stories about Calvin</title>
-		<description>Stories of Calvin: Beer, Fitness, Diet, Computer Science and Programming.</description>
-		<link>https://stalk-calvin.github.io</link>
-		<atom:link href="https://stalk-calvin.github.io/feed.xml" rel="self" type="application/rss+xml" />
-		
-			<item>
-				<title>5 best computer books</title>
-				
-				
-					<description>for me</description>
-				
-				<pubDate>Sat, 12 Nov 2016 00:00:00 -0800</pubDate>
-				<link>https://stalk-calvin.github.io/blog/2016/11/12/Favourite-Books.html</link>
-				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/11/12/Favourite-Books.html</guid>
-			</item>
-		
-			<item>
-				<title>Algorithms: My Programming Playground</title>
-				
-				
-					<description></description>
-				
-				<pubDate>Sat, 05 Nov 2016 00:00:00 -0700</pubDate>
-				<link>https://stalk-calvin.github.io/blog/2016/11/05/Algorithms.html</link>
-				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/11/05/Algorithms.html</guid>
-			</item>
-		
-			<item>
-				<title>Lombok: Simplify your development of Java code</title>
-				
-				
-					<description></description>
-				
-				<pubDate>Sat, 29 Oct 2016 00:00:00 -0700</pubDate>
-				<link>https://stalk-calvin.github.io/blog/2016/10/29/lombok.html</link>
-				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/10/29/lombok.html</guid>
-			</item>
-		
-			<item>
-				<title>DI: Comparing Spring vs. Google Guice: By Example</title>
-				
-				
-					<description></description>
-				
-				<pubDate>Sat, 22 Oct 2016 00:00:00 -0700</pubDate>
-				<link>https://stalk-calvin.github.io/blog/2016/10/22/dependency-injection.html</link>
-				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/10/22/dependency-injection.html</guid>
-			</item>
-		
-			<item>
-				<title>Builder Pattern vs Factory Method Pattern</title>
-				
-				
-					<description></description>
-				
-				<pubDate>Sat, 15 Oct 2016 00:00:00 -0700</pubDate>
-				<link>https://stalk-calvin.github.io/blog/2016/10/15/builder-pattern.html</link>
-				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/10/15/builder-pattern.html</guid>
-			</item>
-		
-			<item>
-				<title>NEW TEAM NEW LIFE</title>
-				
-				
-					<description>SO FAR SO GOOD!</description>
-				
-				<pubDate>Sun, 25 Sep 2016 00:00:00 -0700</pubDate>
-				<link>https://stalk-calvin.github.io/blog/2016/09/25/new-team-new-life.html</link>
-				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/09/25/new-team-new-life.html</guid>
-			</item>
-		
-			<item>
-				<title>unit testing using junit+annotation</title>
-				
-				
-					<description>junit + annotation = powerful way of unit testing</description>
-				
-				<pubDate>Tue, 02 Aug 2016 00:00:00 -0700</pubDate>
-				<link>https://stalk-calvin.github.io/blog/2016/08/02/junit.html</link>
-				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/08/02/junit.html</guid>
-			</item>
-		
-			<item>
-				<title>GIT INFO</title>
-				
-				
-					<description>FREQUENT GIT COMMANDS I USE ON DAILY BASIS</description>
-				
-				<pubDate>Tue, 02 Aug 2016 00:00:00 -0700</pubDate>
-				<link>https://stalk-calvin.github.io/blog/2016/08/02/git.html</link>
-				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/08/02/git.html</guid>
-			</item>
-		
-			<item>
-				<title>Workout Split</title>
-				
-				
-					<description>4 way workout split I do everyday</description>
-				
-				<pubDate>Tue, 12 Jul 2016 00:00:00 -0700</pubDate>
-				<link>https://stalk-calvin.github.io/blog/2016/07/12/workout-split.html</link>
-				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/07/12/workout-split.html</guid>
-			</item>
-		
-			<item>
-				<title>Web Security</title>
-				
-				
-					<description>Security of web- sites, applications and services</description>
-				
-				<pubDate>Sat, 02 Jul 2016 00:00:00 -0700</pubDate>
-				<link>https://stalk-calvin.github.io/blog/2016/07/02/web-security.html</link>
-				<guid isPermaLink="true">https://stalk-calvin.github.io/blog/2016/07/02/web-security.html</guid>
-			</item>
-		
-	</channel>
-</rss>
+<feed version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    
+      <title type="html">Stories about Calvin</title>
+    
+
+    
+      <subtitle>Stories of Calvin: Beer, Fitness, Diet, Computer Science and Programming.</subtitle>
+    
+
+    
+      <author>
+          <name>Calvin Lee</name>
+        
+          <email>stalk.calvin@gmail.com</email>
+        
+        
+      </author>
+    
+	<link>https://stalk-calvin.github.io</link>
+    <updated>Sun, 13 Nov 2016 17:34:34 -0800</updated>
+	<atom:link href="https://stalk-calvin.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <link href="/" rel="alternate" type="text/html" hreflang="en" />
+	
+		<post xml:lang="en">
+            <id>/blog/2016/11/12/Favourite-Books</id>
+			<title>5 best computer books :closed_book:</title>
+			
+				<description>for me</description>
+			
+            
+                <tag term="computer" />
+            
+                <tag term="books" />
+            
+			<pubDate>Sat, 12 Nov 2016 00:00:00 -0800</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2016/11/12/Favourite-Books.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
+	
+		<post xml:lang="en">
+            <id>/blog/2016/11/05/Algorithms</id>
+			<title>Algorithms: My Programming Playground</title>
+			
+				<description></description>
+			
+            
+                <tag term="algorithm" />
+            
+                <tag term="programming" />
+            
+                <tag term="computer" />
+            
+			<pubDate>Sat, 05 Nov 2016 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2016/11/05/Algorithms.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
+	
+		<post xml:lang="en">
+            <id>/blog/2016/10/29/lombok</id>
+			<title>Lombok: Simplify your development of Java code</title>
+			
+				<description></description>
+			
+            
+                <tag term="lombok" />
+            
+                <tag term="java" />
+            
+                <tag term="computer" />
+            
+			<pubDate>Sat, 29 Oct 2016 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2016/10/29/lombok.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
+	
+		<post xml:lang="en">
+            <id>/blog/2016/10/22/dependency-injection</id>
+			<title>DI: Comparing Spring vs. Google Guice: By Example</title>
+			
+				<description></description>
+			
+            
+                <tag term="dependency" />
+            
+                <tag term="injection" />
+            
+                <tag term="di" />
+            
+                <tag term="spring" />
+            
+                <tag term="guice" />
+            
+                <tag term="java" />
+            
+                <tag term="computer" />
+            
+			<pubDate>Sat, 22 Oct 2016 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2016/10/22/dependency-injection.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
+	
+		<post xml:lang="en">
+            <id>/blog/2016/10/15/builder-pattern</id>
+			<title>Builder Pattern vs Factory Method Pattern</title>
+			
+				<description></description>
+			
+            
+                <tag term="builder" />
+            
+                <tag term="factory" />
+            
+                <tag term="pattern" />
+            
+			<pubDate>Sat, 15 Oct 2016 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2016/10/15/builder-pattern.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
+	
+		<post xml:lang="en">
+            <id>/blog/2016/09/25/new-team-new-life</id>
+			<title>NEW TEAM NEW LIFE</title>
+			
+				<description>SO FAR SO GOOD!</description>
+			
+            
+                <tag term="newteam" />
+            
+                <tag term="java" />
+            
+                <tag term="developer" />
+            
+			<pubDate>Sun, 25 Sep 2016 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2016/09/25/new-team-new-life.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
+	
+		<post xml:lang="en">
+            <id>/blog/2016/08/02/junit</id>
+			<title>unit testing using junit+annotation</title>
+			
+				<description>junit + annotation = powerful way of unit testing</description>
+			
+            
+                <tag term="unit" />
+            
+                <tag term="testing" />
+            
+                <tag term="junit" />
+            
+                <tag term="computer" />
+            
+                <tag term="java" />
+            
+			<pubDate>Tue, 02 Aug 2016 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2016/08/02/junit.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
+	
+		<post xml:lang="en">
+            <id>/blog/2016/08/02/git</id>
+			<title>GIT INFO</title>
+			
+				<description>FREQUENT GIT COMMANDS I USE ON DAILY BASIS</description>
+			
+            
+                <tag term="repository" />
+            
+                <tag term="git" />
+            
+                <tag term="computer" />
+            
+			<pubDate>Tue, 02 Aug 2016 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2016/08/02/git.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
+	
+		<post xml:lang="en">
+            <id>/blog/2016/07/12/workout-split</id>
+			<title>Workout Split</title>
+			
+				<description>4 way workout split I do everyday</description>
+			
+            
+                <tag term="fitness" />
+            
+                <tag term="workout" />
+            
+                <tag term="gym" />
+            
+			<pubDate>Tue, 12 Jul 2016 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2016/07/12/workout-split.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
+	
+		<post xml:lang="en">
+            <id>/blog/2016/07/02/web-security</id>
+			<title>Web Security</title>
+			
+				<description>Security of web- sites, applications and services</description>
+			
+            
+                <tag term="websecurity" />
+            
+                <tag term="computer" />
+            
+			<pubDate>Sat, 02 Jul 2016 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2016/07/02/web-security.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
+	
+		<post xml:lang="en">
+            <id>/blog/2016/06/28/sorting</id>
+			<title>Sorting</title>
+			
+				<description>Various ways of sorting methods</description>
+			
+            
+                <tag term="algorithm" />
+            
+                <tag term="sort" />
+            
+                <tag term="computer" />
+            
+			<pubDate>Tue, 28 Jun 2016 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2016/06/28/sorting.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
+	
+		<post xml:lang="kr">
+            <id>/blog/2016/06/24/music</id>
+			<title>Jang Bum Joon (장범준)</title>
+			
+				<description>Songs I listen to these days</description>
+			
+            
+                <tag term="music" />
+            
+                <tag term="장범준" />
+            
+			<pubDate>Fri, 24 Jun 2016 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2016/06/24/music.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
+	
+		<post xml:lang="en">
+            <id>/blog/2016/06/21/fruits-sugar-health</id>
+			<title>Sugar in Fruits :watermelon: :strawberry: :apple:</title>
+			
+				<description>Facts about natural sugar vs added sugar :+1:</description>
+			
+            
+                <tag term="diet" />
+            
+                <tag term="health" />
+            
+			<pubDate>Tue, 21 Jun 2016 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2016/06/21/fruits-sugar-health.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
+	
+</feed>

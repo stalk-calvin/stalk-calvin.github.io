@@ -140,6 +140,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-tagging
+  jemoji
 
 BUNDLED WITH
    1.12.5
