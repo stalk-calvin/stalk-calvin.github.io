@@ -235,11 +235,24 @@
 
 <p>A secure cookie can only be transmitted over an encrypted connection (i.e. HTTPS over SSL). Wont be transmitted over non-encrypted connections. This means if cookie got stolen, they wont be able to easily decrypt the content. Another security measure we can impose on HTTP header is a “HttpOnly” cookie. These HTTP defined headered cookies cannot be accessed by client-side APIs, such as JavaScript. This limits ability for hackers to various XSS activity against you. However, they are still vulnerable to XST or CSRF.</p>
 
+<h4 id="i-classfa-fa-folder-o-aria-hiddentruei-http-strict-transport-securityhttpsenwikipediaorgwikihttpstricttransportsecurity"><i class="fa fa-folder-o" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HTTP Strict Transport Security</a></h4>
+
+<p>This is a HTTP Response Header that will prevent such as cookie hijacking. This response header is notifying the browsers or handlers to prevent any communications from being sent over HTTP to the specified domain and will instead send all communications over HTTPS. It also prevents HTTPS click through prompts on browsers. Here is how you would use it typically:<br /></p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">Strict-Transport-Security: max-age=31536000</code></pre></figure>
+
+<p>which is a basic setting where it would set the securify for 1 year of time. It’s not safe as its missing <i>includeSubDomains</i>
+Here is more secure than above version:<br /></p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">Strict-Transport-Security: max-age=31536000; includeSubDomains</code></pre></figure>
+
+<p>started the support on major browsers from 2013-ish</p>
+
 <h4 id="i-classfa-fa-lightbulb-o-aria-hiddentruei-insecure-direct-object-referencehttpswwwowasporgindexphptop102013-a4-insecuredirectobjectreferences"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> <a href="https://www.owasp.org/index.php/Top_10_2013-A4-Insecure_Direct_Object_References">Insecure Direct Object Reference</a></h4>
 
 <p style="margin-bottom:0.5em;">This is one of those items where you are not careful with handling of such object, others might get an easy access to it. So say in a environment, you can get an information using simple GET request like this:</p>
 
-<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="nv">http:</span><span class="sr">//</span><span class="nv">example</span><span class="o">.</span><span class="nv">com</span><span class="sr">/app/g</span><span class="nv">etAccount</span><span class="p">?</span><span class="nv">accountID</span><span class="o">=</span><span class="sr">&lt;notyouraccountid&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">http://example.com/app/getAccount?accountID=&lt;notyouraccountid&gt;</code></pre></figure>
 
 <p>As you can see, without a proper check of session or other security measure, you are exposing access to another person’s account. The protection around this quite simple: surround webpage with proper sessions OR make sure you have some sort of keys when you are accessing the objects.</p>
 
