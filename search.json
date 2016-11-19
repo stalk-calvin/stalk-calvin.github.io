@@ -2,17 +2,17 @@
 
   
     {
-      "title"			: "Useful Java Code (From my experience :smile:)",
-      "link"			: "https://stalk-calvin.github.io/blog/2016/11/16/useful-code-in-java.html",
-      "excerpt"		: "patterns, convinient functions, etc"
+      "title"			: "Useful Java Code",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/11/19/useful-code-in-java.html",
+      "excerpt"		: "From my experience :smile:"
     }
   
 
   
     ,{
-      "title"			: "5 best computer books :closed_book:",
+      "title"			: "5 best computer books",
       "link"			: "https://stalk-calvin.github.io/blog/2016/11/12/Favourite-Books.html",
-      "excerpt"		: "for me"
+      "excerpt"		: "for me :closed_book:"
     }
   
 
@@ -20,7 +20,7 @@
     ,{
       "title"			: "Algorithms: My Programming Playground",
       "link"			: "https://stalk-calvin.github.io/blog/2016/11/05/Algorithms.html",
-      "excerpt"		: ""
+      "excerpt"		: "Place for practicing my coding skills"
     }
   
 
