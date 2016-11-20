@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
     
-      <title type="html">About Calvin</title>
+      <title type="html">I am Calvin</title>
     
 
     
@@ -16,7 +16,7 @@
       </author>
     
 	<link>https://stalk-calvin.github.io</link>
-    <updated>Sat, 19 Nov 2016 15:54:21 -0800</updated>
+    <updated>Sat, 19 Nov 2016 23:07:29 -0800</updated>
 	<atom:link href="https://stalk-calvin.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <link href="/" rel="alternate" type="text/html" hreflang="en" />
 	
