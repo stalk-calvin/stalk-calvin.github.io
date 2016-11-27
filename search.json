@@ -2,6 +2,14 @@
 
   
     {
+      "title"			: "Google Guava",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/11/26/google-guava.html",
+      "excerpt"		: "a library you should incorporate on any project"
+    }
+  
+
+  
+    ,{
       "title"			: "Useful Java Code",
       "link"			: "https://stalk-calvin.github.io/blog/2016/11/19/useful-code-in-java.html",
       "excerpt"		: "From my experience :smile:"

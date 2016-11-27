@@ -1,0 +1,23 @@
+_site
+.sass-cache/
+.jekyll-metadata
+Gemfile.lock
+
+*.prefs
+
+# Eclipse
+*.classpath
+*.project
+*.settings
+
+# Maven
+log/
+/target
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+*.DS_Store
