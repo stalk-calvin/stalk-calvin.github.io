@@ -2,6 +2,14 @@
 
   
     {
+      "title"			: "Java Interfaces",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/11/28/ables-java.html",
+      "excerpt"		: "-ables in Java"
+    }
+  
+
+  
+    ,{
       "title"			: "Google Guava",
       "link"			: "https://stalk-calvin.github.io/blog/2016/11/26/google-guava.html",
       "excerpt"		: "a library you should incorporate on any project"
