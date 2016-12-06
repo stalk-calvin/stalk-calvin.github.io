@@ -15,9 +15,9 @@
         
       </author>
     
-	<link>http://localhost:4000</link>
-    <updated>Mon, 05 Dec 2016 19:15:18 -0800</updated>
-	<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+	<link>https://stalk-calvin.github.io</link>
+    <updated>Mon, 05 Dec 2016 19:22:27 -0800</updated>
+	<atom:link href="https://stalk-calvin.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <link href="/" rel="alternate" type="text/html" hreflang="en" />
 	
 		<post xml:lang="en">
@@ -44,7 +44,7 @@
                 <tag term="comparable" />
             
 			<pubDate>Mon, 28 Nov 2016 00:00:00 -0800</pubDate>
-			<link>http://localhost:4000/blog/2016/11/28/ables-java.html</link>
+			<link>https://stalk-calvin.github.io/blog/2016/11/28/ables-java.html</link>
             
             
             
@@ -78,7 +78,7 @@
                 <tag term="guava" />
             
 			<pubDate>Sat, 26 Nov 2016 00:00:00 -0800</pubDate>
-			<link>http://localhost:4000/blog/2016/11/26/google-guava.html</link>
+			<link>https://stalk-calvin.github.io/blog/2016/11/26/google-guava.html</link>
             
             
             
@@ -110,7 +110,7 @@
                 <tag term="books" />
             
 			<pubDate>Sat, 19 Nov 2016 00:00:00 -0800</pubDate>
-			<link>http://localhost:4000/blog/2016/11/19/useful-code-in-java.html</link>
+			<link>https://stalk-calvin.github.io/blog/2016/11/19/useful-code-in-java.html</link>
             
             
             
@@ -140,7 +140,7 @@
                 <tag term="books" />
             
 			<pubDate>Sat, 12 Nov 2016 00:00:00 -0800</pubDate>
-			<link>http://localhost:4000/blog/2016/11/12/Favourite-Books.html</link>
+			<link>https://stalk-calvin.github.io/blog/2016/11/12/Favourite-Books.html</link>
             
             
             
@@ -172,7 +172,7 @@
                 <tag term="computer" />
             
 			<pubDate>Sat, 05 Nov 2016 00:00:00 -0700</pubDate>
-			<link>http://localhost:4000/blog/2016/11/05/Algorithms.html</link>
+			<link>https://stalk-calvin.github.io/blog/2016/11/05/Algorithms.html</link>
             
             
             
@@ -204,7 +204,7 @@
                 <tag term="computer" />
             
 			<pubDate>Sat, 29 Oct 2016 00:00:00 -0700</pubDate>
-			<link>http://localhost:4000/blog/2016/10/29/lombok.html</link>
+			<link>https://stalk-calvin.github.io/blog/2016/10/29/lombok.html</link>
             
             
             
@@ -244,7 +244,7 @@
                 <tag term="computer" />
             
 			<pubDate>Sat, 22 Oct 2016 00:00:00 -0700</pubDate>
-			<link>http://localhost:4000/blog/2016/10/22/dependency-injection.html</link>
+			<link>https://stalk-calvin.github.io/blog/2016/10/22/dependency-injection.html</link>
             
             
             
@@ -276,7 +276,7 @@
                 <tag term="pattern" />
             
 			<pubDate>Sat, 15 Oct 2016 00:00:00 -0700</pubDate>
-			<link>http://localhost:4000/blog/2016/10/15/builder-pattern.html</link>
+			<link>https://stalk-calvin.github.io/blog/2016/10/15/builder-pattern.html</link>
             
             
             
@@ -308,7 +308,7 @@
                 <tag term="developer" />
             
 			<pubDate>Sun, 25 Sep 2016 00:00:00 -0700</pubDate>
-			<link>http://localhost:4000/blog/2016/09/25/new-team-new-life.html</link>
+			<link>https://stalk-calvin.github.io/blog/2016/09/25/new-team-new-life.html</link>
             
             
             
@@ -344,7 +344,7 @@
                 <tag term="java" />
             
 			<pubDate>Tue, 02 Aug 2016 00:00:00 -0700</pubDate>
-			<link>http://localhost:4000/blog/2016/08/02/junit.html</link>
+			<link>https://stalk-calvin.github.io/blog/2016/08/02/junit.html</link>
             
             
             
@@ -376,7 +376,7 @@
                 <tag term="computer" />
             
 			<pubDate>Tue, 02 Aug 2016 00:00:00 -0700</pubDate>
-			<link>http://localhost:4000/blog/2016/08/02/git.html</link>
+			<link>https://stalk-calvin.github.io/blog/2016/08/02/git.html</link>
             
             
             
@@ -408,7 +408,7 @@
                 <tag term="gym" />
             
 			<pubDate>Tue, 12 Jul 2016 00:00:00 -0700</pubDate>
-			<link>http://localhost:4000/blog/2016/07/12/workout-split.html</link>
+			<link>https://stalk-calvin.github.io/blog/2016/07/12/workout-split.html</link>
             
             
             
@@ -438,7 +438,7 @@
                 <tag term="computer" />
             
 			<pubDate>Sat, 02 Jul 2016 00:00:00 -0700</pubDate>
-			<link>http://localhost:4000/blog/2016/07/02/web-security.html</link>
+			<link>https://stalk-calvin.github.io/blog/2016/07/02/web-security.html</link>
             
             
             
@@ -470,7 +470,7 @@
                 <tag term="computer" />
             
 			<pubDate>Tue, 28 Jun 2016 00:00:00 -0700</pubDate>
-			<link>http://localhost:4000/blog/2016/06/28/sorting.html</link>
+			<link>https://stalk-calvin.github.io/blog/2016/06/28/sorting.html</link>
             
             
             
@@ -500,7 +500,7 @@
                 <tag term="장범준" />
             
 			<pubDate>Fri, 24 Jun 2016 00:00:00 -0700</pubDate>
-			<link>http://localhost:4000/blog/2016/06/24/music.html</link>
+			<link>https://stalk-calvin.github.io/blog/2016/06/24/music.html</link>
             
             
             
@@ -530,7 +530,7 @@
                 <tag term="health" />
             
 			<pubDate>Tue, 21 Jun 2016 00:00:00 -0700</pubDate>
-			<link>http://localhost:4000/blog/2016/06/21/fruits-sugar-health.html</link>
+			<link>https://stalk-calvin.github.io/blog/2016/06/21/fruits-sugar-health.html</link>
             
             
             

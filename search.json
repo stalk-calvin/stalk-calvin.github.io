@@ -3,7 +3,7 @@
   
     {
       "title"			: "Java Interfaces",
-      "link"			: "http://localhost:4000/blog/2016/11/28/ables-java.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/11/28/ables-java.html",
       "excerpt"		: "-ables in Java",
       "tags"        : ["java","computer","interface","serializable","cloneable","iterable","callable","comparable"]
     }
@@ -12,7 +12,7 @@
   
     ,{
       "title"			: "Google Guava",
-      "link"			: "http://localhost:4000/blog/2016/11/26/google-guava.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/11/26/google-guava.html",
       "excerpt"		: "a library you should incorporate on any project",
       "tags"        : ["java","computer","google","guava"]
     }
@@ -21,7 +21,7 @@
   
     ,{
       "title"			: "Useful Java Code",
-      "link"			: "http://localhost:4000/blog/2016/11/19/useful-code-in-java.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/11/19/useful-code-in-java.html",
       "excerpt"		: "From my experience :smile:",
       "tags"        : ["java","computer","books"]
     }
@@ -30,7 +30,7 @@
   
     ,{
       "title"			: "5 best computer books",
-      "link"			: "http://localhost:4000/blog/2016/11/12/Favourite-Books.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/11/12/Favourite-Books.html",
       "excerpt"		: "for me :closed_book:",
       "tags"        : ["computer","books"]
     }
@@ -39,7 +39,7 @@
   
     ,{
       "title"			: "Algorithms: My Programming Playground",
-      "link"			: "http://localhost:4000/blog/2016/11/05/Algorithms.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/11/05/Algorithms.html",
       "excerpt"		: "Place for practicing my coding skills",
       "tags"        : ["algorithm","programming","computer"]
     }
@@ -48,7 +48,7 @@
   
     ,{
       "title"			: "Lombok: Simplify your development of Java code",
-      "link"			: "http://localhost:4000/blog/2016/10/29/lombok.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/10/29/lombok.html",
       "excerpt"		: "",
       "tags"        : ["lombok","java","computer"]
     }
@@ -57,7 +57,7 @@
   
     ,{
       "title"			: "DI: Comparing Spring vs. Google Guice: By Example",
-      "link"			: "http://localhost:4000/blog/2016/10/22/dependency-injection.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/10/22/dependency-injection.html",
       "excerpt"		: "",
       "tags"        : ["dependency","injection","di","spring","guice","java","computer"]
     }
@@ -66,7 +66,7 @@
   
     ,{
       "title"			: "Builder Pattern vs Factory Method Pattern",
-      "link"			: "http://localhost:4000/blog/2016/10/15/builder-pattern.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/10/15/builder-pattern.html",
       "excerpt"		: "",
       "tags"        : ["builder","factory","pattern"]
     }
@@ -75,7 +75,7 @@
   
     ,{
       "title"			: "NEW TEAM NEW LIFE",
-      "link"			: "http://localhost:4000/blog/2016/09/25/new-team-new-life.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/09/25/new-team-new-life.html",
       "excerpt"		: "SO FAR SO GOOD!",
       "tags"        : ["newteam","java","developer"]
     }
@@ -84,7 +84,7 @@
   
     ,{
       "title"			: "unit testing using junit+annotation",
-      "link"			: "http://localhost:4000/blog/2016/08/02/junit.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/08/02/junit.html",
       "excerpt"		: "junit + annotation = powerful way of unit testing",
       "tags"        : ["unit","testing","junit","computer","java"]
     }
@@ -93,7 +93,7 @@
   
     ,{
       "title"			: "GIT INFO",
-      "link"			: "http://localhost:4000/blog/2016/08/02/git.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/08/02/git.html",
       "excerpt"		: "FREQUENT GIT COMMANDS I USE ON DAILY BASIS",
       "tags"        : ["repository","git","computer"]
     }
@@ -102,7 +102,7 @@
   
     ,{
       "title"			: "Workout Split",
-      "link"			: "http://localhost:4000/blog/2016/07/12/workout-split.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/07/12/workout-split.html",
       "excerpt"		: "4 way workout split I do everyday",
       "tags"        : ["fitness","workout","gym"]
     }
@@ -111,7 +111,7 @@
   
     ,{
       "title"			: "Web Security",
-      "link"			: "http://localhost:4000/blog/2016/07/02/web-security.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/07/02/web-security.html",
       "excerpt"		: "Security of web- sites, applications and services",
       "tags"        : ["websecurity","computer"]
     }
@@ -120,7 +120,7 @@
   
     ,{
       "title"			: "Sorting",
-      "link"			: "http://localhost:4000/blog/2016/06/28/sorting.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/06/28/sorting.html",
       "excerpt"		: "Various ways of sorting methods",
       "tags"        : ["algorithm","sort","computer"]
     }
@@ -129,7 +129,7 @@
   
     ,{
       "title"			: "Jang Bum Joon (장범준)",
-      "link"			: "http://localhost:4000/blog/2016/06/24/music.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/06/24/music.html",
       "excerpt"		: "Songs I listen to these days",
       "tags"        : ["music","장범준"]
     }
@@ -138,7 +138,7 @@
   
     ,{
       "title"			: "Sugar in Fruits",
-      "link"			: "http://localhost:4000/blog/2016/06/21/fruits-sugar-health.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/06/21/fruits-sugar-health.html",
       "excerpt"		: "Facts about natural sugar vs added sugar :watermelon: :strawberry: :apple: :+1:",
       "tags"        : ["diet","health"]
     }
