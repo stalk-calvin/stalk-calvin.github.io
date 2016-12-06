@@ -13,7 +13,7 @@
   
     
       <url>
-        <loc>http://localhost:4000/blog/</loc>
+        <loc>https://stalk-calvin.github.io/blog/</loc>
         
           
           
@@ -26,7 +26,7 @@
   
     
       <url>
-        <loc>http://localhost:4000/</loc>
+        <loc>https://stalk-calvin.github.io/</loc>
         
           
           
@@ -39,7 +39,7 @@
   
     
       <url>
-        <loc>http://localhost:4000/search/</loc>
+        <loc>https://stalk-calvin.github.io/search/</loc>
         
        </url>
     
@@ -52,7 +52,7 @@
   
     
       <url>
-        <loc>http://localhost:4000/search.json</loc>
+        <loc>https://stalk-calvin.github.io/search.json</loc>
         
        </url>
     
@@ -71,7 +71,7 @@
   
     
       <url>
-        <loc>http://localhost:4000/blog/page2/</loc>
+        <loc>https://stalk-calvin.github.io/blog/page2/</loc>
         
           
           
@@ -84,7 +84,7 @@
   
     
       <url>
-        <loc>http://localhost:4000/blog/page3/</loc>
+        <loc>https://stalk-calvin.github.io/blog/page3/</loc>
         
           
           
@@ -97,7 +97,7 @@
   
     
       <url>
-        <loc>http://localhost:4000/blog/page4/</loc>
+        <loc>https://stalk-calvin.github.io/blog/page4/</loc>
         
           
           
@@ -110,7 +110,7 @@
   
   
     <url>
-      <loc>http://localhost:4000/blog/2016/11/28/ables-java.html</loc>
+      <loc>https://stalk-calvin.github.io/blog/2016/11/28/ables-java.html</loc>
       
         <lastmod>2016-11-28T00:00:00-08:00</lastmod>
       
@@ -119,7 +119,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/blog/2016/11/26/google-guava.html</loc>
+      <loc>https://stalk-calvin.github.io/blog/2016/11/26/google-guava.html</loc>
       
         <lastmod>2016-11-26T00:00:00-08:00</lastmod>
       
@@ -128,7 +128,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/blog/2016/11/19/useful-code-in-java.html</loc>
+      <loc>https://stalk-calvin.github.io/blog/2016/11/19/useful-code-in-java.html</loc>
       
         <lastmod>2016-11-19T00:00:00-08:00</lastmod>
       
@@ -137,7 +137,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/blog/2016/11/12/Favourite-Books.html</loc>
+      <loc>https://stalk-calvin.github.io/blog/2016/11/12/Favourite-Books.html</loc>
       
         <lastmod>2016-11-12T00:00:00-08:00</lastmod>
       
@@ -146,7 +146,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/blog/2016/11/05/Algorithms.html</loc>
+      <loc>https://stalk-calvin.github.io/blog/2016/11/05/Algorithms.html</loc>
       
         <lastmod>2016-11-05T00:00:00-07:00</lastmod>
       
@@ -155,7 +155,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/blog/2016/10/29/lombok.html</loc>
+      <loc>https://stalk-calvin.github.io/blog/2016/10/29/lombok.html</loc>
       
         <lastmod>2016-10-29T00:00:00-07:00</lastmod>
       
@@ -164,7 +164,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/blog/2016/10/22/dependency-injection.html</loc>
+      <loc>https://stalk-calvin.github.io/blog/2016/10/22/dependency-injection.html</loc>
       
         <lastmod>2016-10-22T00:00:00-07:00</lastmod>
       
@@ -173,7 +173,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/blog/2016/10/15/builder-pattern.html</loc>
+      <loc>https://stalk-calvin.github.io/blog/2016/10/15/builder-pattern.html</loc>
       
         <lastmod>2016-10-15T00:00:00-07:00</lastmod>
       
@@ -182,7 +182,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/blog/2016/09/25/new-team-new-life.html</loc>
+      <loc>https://stalk-calvin.github.io/blog/2016/09/25/new-team-new-life.html</loc>
       
         <lastmod>2016-09-25T00:00:00-07:00</lastmod>
       
@@ -191,7 +191,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/blog/2016/08/02/junit.html</loc>
+      <loc>https://stalk-calvin.github.io/blog/2016/08/02/junit.html</loc>
       
         <lastmod>2016-08-02T00:00:00-07:00</lastmod>
       
@@ -200,7 +200,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/blog/2016/08/02/git.html</loc>
+      <loc>https://stalk-calvin.github.io/blog/2016/08/02/git.html</loc>
       
         <lastmod>2016-08-02T00:00:00-07:00</lastmod>
       
@@ -209,7 +209,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/blog/2016/07/12/workout-split.html</loc>
+      <loc>https://stalk-calvin.github.io/blog/2016/07/12/workout-split.html</loc>
       
         <lastmod>2016-07-12T00:00:00-07:00</lastmod>
       
@@ -218,7 +218,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/blog/2016/07/02/web-security.html</loc>
+      <loc>https://stalk-calvin.github.io/blog/2016/07/02/web-security.html</loc>
       
         <lastmod>2016-07-02T00:00:00-07:00</lastmod>
       
@@ -227,7 +227,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/blog/2016/06/28/sorting.html</loc>
+      <loc>https://stalk-calvin.github.io/blog/2016/06/28/sorting.html</loc>
       
         <lastmod>2016-06-28T00:00:00-07:00</lastmod>
       
@@ -236,7 +236,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/blog/2016/06/24/music.html</loc>
+      <loc>https://stalk-calvin.github.io/blog/2016/06/24/music.html</loc>
       
         <lastmod>2016-06-24T00:00:00-07:00</lastmod>
       
@@ -245,7 +245,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/blog/2016/06/21/fruits-sugar-health.html</loc>
+      <loc>https://stalk-calvin.github.io/blog/2016/06/21/fruits-sugar-health.html</loc>
       
         <lastmod>2016-06-21T00:00:00-07:00</lastmod>
       
