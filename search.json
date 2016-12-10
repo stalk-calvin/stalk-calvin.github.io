@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Big O Notations",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/12/10/big-o.html",
+      "excerpt"		: "the way I understand algorithm complexity",
+      "tags"        : ["computer","science","complexity","big"]
+    }
+  
+
+  
+    ,{
       "title"			: "Java Interfaces",
       "link"			: "https://stalk-calvin.github.io/blog/2016/11/28/ables-java.html",
       "excerpt"		: "-ables in Java",
