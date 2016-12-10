@@ -16,9 +16,43 @@
       </author>
     
 	<link>https://stalk-calvin.github.io</link>
-    <updated>Mon, 05 Dec 2016 19:22:27 -0800</updated>
+    <updated>Sat, 10 Dec 2016 13:46:39 -0800</updated>
 	<atom:link href="https://stalk-calvin.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <link href="/" rel="alternate" type="text/html" hreflang="en" />
+	
+		<post xml:lang="en">
+            <id>/blog/2016/12/10/big-o</id>
+			<title>Big O Notations</title>
+			
+				<description>the way I understand algorithm complexity</description>
+			
+            
+                <tag term="computer" />
+            
+                <tag term="science" />
+            
+                <tag term="complexity" />
+            
+                <tag term="big" />
+            
+			<pubDate>Sat, 10 Dec 2016 00:00:00 -0800</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2016/12/10/big-o.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
 	
 		<post xml:lang="en">
             <id>/blog/2016/11/28/ables-java</id>
