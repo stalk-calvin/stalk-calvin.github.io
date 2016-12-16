@@ -14,6 +14,6 @@ Calvin Lee @stalk.calvin
 
 ## Modified Theme from
 
-https://github.com/djcaesar9114/personal-jekyll-theme
+Fork of [Timeline](https://github.com/kirbyt/timeline-jekyll-theme) (mashup of [Grayscale by Start Bootstrap](https://github.com/IronSummitMedia/startbootstrap-grayscale) and [Agency Jekyll Theme](https://github.com/y7kim/agency-jekyll-theme))
 
 Added features include: Search, Icon Changes, Blog layout/pagination, Footers, Tags, etc. 
