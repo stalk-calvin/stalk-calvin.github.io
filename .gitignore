@@ -21,3 +21,10 @@ log/
 
 # Mac
 *.DS_Store
+
+# No needed html
+about.html
+search.html
+timeline.html
+contact.html
+latest-post.html
