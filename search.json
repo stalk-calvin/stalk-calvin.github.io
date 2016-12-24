@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "what's next?",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/12/17/future-of-computer-science.html",
+      "excerpt"		: "The Future of Computer Science",
+      "tags"        : ["computer","science","future","ai","machine","learning","iot","industrial","revolution"]
+    }
+  
+
+  
+    ,{
       "title"			: "Keybase.io",
       "link"			: "https://stalk-calvin.github.io/blog/2016/12/17/keybase-io.html",
       "excerpt"		: "easily encrypt, decrypt and share messages",
