@@ -16,9 +16,53 @@
       </author>
     
 	<link>https://stalk-calvin.github.io</link>
-    <updated>Sat, 17 Dec 2016 11:15:27 -0800</updated>
+    <updated>Sat, 24 Dec 2016 12:05:51 -0800</updated>
 	<atom:link href="https://stalk-calvin.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <link href="/" rel="alternate" type="text/html" hreflang="en" />
+	
+		<post xml:lang="en">
+            <id>/blog/2016/12/17/future-of-computer-science</id>
+			<title>what's next?</title>
+			
+				<description>The Future of Computer Science</description>
+			
+            
+                <tag term="computer" />
+            
+                <tag term="science" />
+            
+                <tag term="future" />
+            
+                <tag term="ai" />
+            
+                <tag term="machine" />
+            
+                <tag term="learning" />
+            
+                <tag term="iot" />
+            
+                <tag term="industrial" />
+            
+                <tag term="revolution" />
+            
+			<pubDate>Sat, 17 Dec 2016 00:00:00 -0800</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2016/12/17/future-of-computer-science.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
 	
 		<post xml:lang="en">
             <id>/blog/2016/12/17/keybase-io</id>
