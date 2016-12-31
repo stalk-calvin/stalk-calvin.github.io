@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Fibonacci Numbers",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/12/28/fibonacci.html",
+      "excerpt"		: "",
+      "tags"        : ["computer","dynamic","programming","algorithm","recursion","fibonacci","sequence"]
+    }
+  
+
+  
+    ,{
       "title"			: "what's next?",
       "link"			: "https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html",
       "excerpt"		: "The Future of Computer Science",
