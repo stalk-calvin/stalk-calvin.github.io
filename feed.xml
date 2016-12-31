@@ -16,9 +16,49 @@
       </author>
     
 	<link>https://stalk-calvin.github.io</link>
-    <updated>Tue, 27 Dec 2016 12:02:17 -0800</updated>
+    <updated>Sat, 31 Dec 2016 12:56:59 -0800</updated>
 	<atom:link href="https://stalk-calvin.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <link href="/" rel="alternate" type="text/html" hreflang="en" />
+	
+		<post xml:lang="en">
+            <id>/blog/2016/12/28/fibonacci</id>
+			<title>Fibonacci Numbers</title>
+			
+				<description></description>
+			
+            
+                <tag term="computer" />
+            
+                <tag term="dynamic" />
+            
+                <tag term="programming" />
+            
+                <tag term="algorithm" />
+            
+                <tag term="recursion" />
+            
+                <tag term="fibonacci" />
+            
+                <tag term="sequence" />
+            
+			<pubDate>Wed, 28 Dec 2016 00:00:00 -0800</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2016/12/28/fibonacci.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
 	
 		<post xml:lang="en">
             <id>/blog/2016/12/24/future-of-computer-science</id>
