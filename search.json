@@ -11,7 +11,7 @@
 
   
     ,{
-      "title"			: "what's next?",
+      "title"			: "What's Next?",
       "link"			: "https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html",
       "excerpt"		: "The Future of Computer Science",
       "tags"        : ["computer","science","future","ai","machine","learning","iot","industrial","revolution"]
@@ -65,7 +65,7 @@
 
   
     ,{
-      "title"			: "5 best computer books",
+      "title"			: "5 Best Computer Books",
       "link"			: "https://stalk-calvin.github.io/blog/2016/11/12/Favourite-Books.html",
       "excerpt"		: "for me :closed_book:",
       "tags"        : ["computer","books"]
@@ -85,16 +85,16 @@
     ,{
       "title"			: "Lombok: Simplify your development of Java code",
       "link"			: "https://stalk-calvin.github.io/blog/2016/10/29/lombok.html",
-      "excerpt"		: "",
+      "excerpt"		: "Annotations Made Java Coding Simpler",
       "tags"        : ["lombok","java","computer"]
     }
   
 
   
     ,{
-      "title"			: "DI: Comparing Spring vs. Google Guice: By Example",
+      "title"			: "DI: Comparing Spring vs Guice",
       "link"			: "https://stalk-calvin.github.io/blog/2016/10/22/dependency-injection.html",
-      "excerpt"		: "",
+      "excerpt"		: "With Examples",
       "tags"        : ["dependency","injection","di","spring","guice","java","computer"]
     }
   
@@ -103,34 +103,34 @@
     ,{
       "title"			: "Builder Pattern vs Factory Method Pattern",
       "link"			: "https://stalk-calvin.github.io/blog/2016/10/15/builder-pattern.html",
-      "excerpt"		: "",
+      "excerpt"		: "Big 2 of Creational Design Pattern",
       "tags"        : ["builder","factory","pattern"]
     }
   
 
   
     ,{
-      "title"			: "NEW TEAM NEW LIFE",
+      "title"			: "New Team New Life",
       "link"			: "https://stalk-calvin.github.io/blog/2016/09/25/new-team-new-life.html",
-      "excerpt"		: "SO FAR SO GOOD!",
+      "excerpt"		: "So Far So Good!",
       "tags"        : ["newteam","java","developer"]
     }
   
 
   
     ,{
-      "title"			: "unit testing using junit+annotation",
+      "title"			: "Unit Testing Using Junit+Annotation",
       "link"			: "https://stalk-calvin.github.io/blog/2016/08/02/junit.html",
-      "excerpt"		: "junit + annotation = powerful way of unit testing",
+      "excerpt"		: "Junit + Annotation = Powerful Way of Unit Testing",
       "tags"        : ["unit","testing","junit","computer","java"]
     }
   
 
   
     ,{
-      "title"			: "GIT INFO",
+      "title"			: "Git Info",
       "link"			: "https://stalk-calvin.github.io/blog/2016/08/02/git.html",
-      "excerpt"		: "FREQUENT GIT COMMANDS I USE ON DAILY BASIS",
+      "excerpt"		: "Frequent Git Commands I Use On Daily Basis",
       "tags"        : ["repository","git","computer"]
     }
   

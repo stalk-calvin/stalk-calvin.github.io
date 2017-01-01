@@ -16,7 +16,7 @@
       </author>
     
 	<link>https://stalk-calvin.github.io</link>
-    <updated>Sat, 31 Dec 2016 12:56:59 -0800</updated>
+    <updated>Sun, 01 Jan 2017 02:04:18 -0800</updated>
 	<atom:link href="https://stalk-calvin.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <link href="/" rel="alternate" type="text/html" hreflang="en" />
 	
@@ -62,7 +62,7 @@
 	
 		<post xml:lang="en">
             <id>/blog/2016/12/24/future-of-computer-science</id>
-			<title>what's next?</title>
+			<title>What's Next?</title>
 			
 				<description>The Future of Computer Science</description>
 			
@@ -282,7 +282,7 @@
 	
 		<post xml:lang="en">
             <id>/blog/2016/11/12/Favourite-Books</id>
-			<title>5 best computer books</title>
+			<title>5 Best Computer Books</title>
 			
 				<description>for me :closed_book:</description>
 			
@@ -346,7 +346,7 @@
             <id>/blog/2016/10/29/lombok</id>
 			<title>Lombok: Simplify your development of Java code</title>
 			
-				<description></description>
+				<description>Annotations Made Java Coding Simpler</description>
 			
             
                 <tag term="lombok" />
@@ -376,9 +376,9 @@
 	
 		<post xml:lang="en">
             <id>/blog/2016/10/22/dependency-injection</id>
-			<title>DI: Comparing Spring vs. Google Guice: By Example</title>
+			<title>DI: Comparing Spring vs Guice</title>
 			
-				<description></description>
+				<description>With Examples</description>
 			
             
                 <tag term="dependency" />
@@ -418,7 +418,7 @@
             <id>/blog/2016/10/15/builder-pattern</id>
 			<title>Builder Pattern vs Factory Method Pattern</title>
 			
-				<description></description>
+				<description>Big 2 of Creational Design Pattern</description>
 			
             
                 <tag term="builder" />
@@ -448,9 +448,9 @@
 	
 		<post xml:lang="en">
             <id>/blog/2016/09/25/new-team-new-life</id>
-			<title>NEW TEAM NEW LIFE</title>
+			<title>New Team New Life</title>
 			
-				<description>SO FAR SO GOOD!</description>
+				<description>So Far So Good!</description>
 			
             
                 <tag term="newteam" />
@@ -480,9 +480,9 @@
 	
 		<post xml:lang="en">
             <id>/blog/2016/08/02/junit</id>
-			<title>unit testing using junit+annotation</title>
+			<title>Unit Testing Using Junit+Annotation</title>
 			
-				<description>junit + annotation = powerful way of unit testing</description>
+				<description>Junit + Annotation = Powerful Way of Unit Testing</description>
 			
             
                 <tag term="unit" />
@@ -516,9 +516,9 @@
 	
 		<post xml:lang="en">
             <id>/blog/2016/08/02/git</id>
-			<title>GIT INFO</title>
+			<title>Git Info</title>
 			
-				<description>FREQUENT GIT COMMANDS I USE ON DAILY BASIS</description>
+				<description>Frequent Git Commands I Use On Daily Basis</description>
 			
             
                 <tag term="repository" />
