@@ -34,3 +34,26 @@
     margin: 10px auto;
     text-align: center;
 }
+
+.sidebyside{
+	margin:0;
+}
+.sidebyside_left{
+	float:left;
+	width:75%;
+	overflow:hidden;
+}
+.sidebyside_right{
+	letter-spacing: 0px;
+	float:left;
+	width:25%;
+	overflow:hidden;
+}
+.zippy {
+    color: #EBF4FA;
+    font-size:125%;
+    cursor: pointer;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+}
