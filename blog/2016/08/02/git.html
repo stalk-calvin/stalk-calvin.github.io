@@ -505,6 +505,25 @@ $(document).on('click',function(){
 $('.collapse').collapse('hide');
 })
 </script> 
+<script type="text/javascript">
+$(document).ready(function() {
+  $(document).on("click","#archive_year_2016",function() {
+      $(this).parent().children("li").toggle();
+      togglePointer($(this));
+  });
+  $(document).on("click",".archive_month_2016",function() {
+      $(this).parent().children("li").toggle();
+      togglePointer($(this));
+  });
+  function togglePointer(elem) {
+     if (elem.text().indexOf('►') != -1) {
+        elem.text(elem.text().replace('►','▼'));
+     } else {
+        elem.text(elem.text().replace('▼','►'));
+     }
+  }
+});
+</script>
 <script>
 function toggleNavCollapse(){50<$(".navbar").offset().top?$(".navbar-fixed-top").addClass("top-nav-collapse"):$(".navbar-fixed-top").removeClass("top-nav-collapse");}
 $(document).ready(toggleNavCollapse);
