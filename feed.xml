@@ -16,9 +16,41 @@
       </author>
     
 	<link>https://stalk-calvin.github.io</link>
-    <updated>Tue, 03 Jan 2017 01:16:52 -0800</updated>
+    <updated>Sat, 07 Jan 2017 09:17:40 -0800</updated>
 	<atom:link href="https://stalk-calvin.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <link href="/" rel="alternate" type="text/html" hreflang="en" />
+	
+		<post xml:lang="en">
+            <id>/blog/2017/01/07/new-year-resolution</id>
+			<title>New Year's Resolution</title>
+			
+				<description> Making 2017 My Best Year Ever</description>
+			
+            
+                <tag term="newyear" />
+            
+                <tag term="resolution" />
+            
+                <tag term="year2017" />
+            
+			<pubDate>Sat, 07 Jan 2017 00:00:00 -0800</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/01/07/new-year-resolution.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
 	
 		<post xml:lang="en">
             <id>/blog/2016/12/28/fibonacci</id>

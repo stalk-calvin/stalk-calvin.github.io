@@ -57,3 +57,9 @@
     font-weight: bold;
     text-transform: uppercase;
 }
+
+.custom {
+    display: table-caption;
+    color: #DCDCDC;
+    text-align: center;
+}

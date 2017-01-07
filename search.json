@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "New Year's Resolution",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/01/07/new-year-resolution.html",
+      "excerpt"		: "Making 2017 My Best Year Ever",
+      "tags"        : ["newyear","resolution","year2017"]
+    }
+  
+
+  
+    ,{
       "title"			: "Fibonacci Numbers",
       "link"			: "https://stalk-calvin.github.io/blog/2016/12/28/fibonacci.html",
       "excerpt"		: "",
