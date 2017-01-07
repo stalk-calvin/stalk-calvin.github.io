@@ -226,7 +226,7 @@
 
 <h3 style="clear:left;" id="onlogn">O(nlogn)</h3>
 
-<p style="float: left!important;margin-right: 1em;margin-bottom: 0"><img src="https://i.stack.imgur.com/BkOXF.jpg" alt="nlogn"></p>
+<p style="float: left!important;margin-right: 1em;margin-bottom: 0"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS4YHC2WKtyUr3wHHNz2OVr9rFvHcTrmYnAcWifi4xWhQbTvhIt" alt="nlogn"></p>
 
 <p>nlogn is basically O(n * logn). Typically, sorting takes O(nlogn). For divide and conquer, it is O(logn), but to merge to come up with sorted elements, you need to go through every items which takes O(n). Therefore, O(nlogn) all together. 2 of the most famous sorting method that pro`duces time complexity of O(nlogn) are <a href="https://en.wikipedia.org/wiki/Heapsort">heapsort</a> and <a href="https://en.wikipedia.org/wiki/Merge_sort">merge sort</a>. Although O(nlogn) does not have significant differences between O(n). There are certainly differences in terms of the performance. See the graph left which compares between O(n) vs O(nlogn). I would like you to see the code representation below which is O(nlogn). I think its a very simple code example that gives you a good picture of what is O(nlogn):</p>
 
@@ -451,6 +451,14 @@ $('.collapse').collapse('hide');
 </script> 
 <script type="text/javascript">
 $(document).ready(function() {
+    $(document).on("click","#archive_year_2017",function() {
+      $(this).parent().children("li").toggle();
+      togglePointer($(this));
+  });
+  $(document).on("click",".archive_month_2017",function() {
+      $(this).parent().children("li").toggle();
+      togglePointer($(this));
+  });
   $(document).on("click","#archive_year_2016",function() {
       $(this).parent().children("li").toggle();
       togglePointer($(this));

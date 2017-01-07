@@ -193,6 +193,8 @@
 
           <nav class="pagination" role="navigation">
             
+              <a href="https://stalk-calvin.github.io/blog/2017/01/07/new-year-resolution.html" class="btn" title="New Year's Resolution">&laquo; New Year's Resolution</a>
+            
             
               <a href="https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html" class="btn" title="What's Next?">What's Next? &raquo;</a>
             
@@ -349,6 +351,8 @@
 
           <nav class="pagination" role="navigation">
             
+              <a href="https://stalk-calvin.github.io/blog/2017/01/07/new-year-resolution.html" class="btn" title="New Year's Resolution">&laquo; New Year's Resolution</a>
+            
             
               <a href="https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html" class="btn" title="What's Next?">What's Next? &raquo;</a>
             
@@ -433,6 +437,14 @@ $('.collapse').collapse('hide');
 </script> 
 <script type="text/javascript">
 $(document).ready(function() {
+    $(document).on("click","#archive_year_2017",function() {
+      $(this).parent().children("li").toggle();
+      togglePointer($(this));
+  });
+  $(document).on("click",".archive_month_2017",function() {
+      $(this).parent().children("li").toggle();
+      togglePointer($(this));
+  });
   $(document).on("click","#archive_year_2016",function() {
       $(this).parent().children("li").toggle();
       togglePointer($(this));

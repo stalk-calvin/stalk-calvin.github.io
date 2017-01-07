@@ -383,6 +383,14 @@ $('.collapse').collapse('hide');
 </script> 
 <script type="text/javascript">
 $(document).ready(function() {
+    $(document).on("click","#archive_year_2017",function() {
+      $(this).parent().children("li").toggle();
+      togglePointer($(this));
+  });
+  $(document).on("click",".archive_month_2017",function() {
+      $(this).parent().children("li").toggle();
+      togglePointer($(this));
+  });
   $(document).on("click","#archive_year_2016",function() {
       $(this).parent().children("li").toggle();
       togglePointer($(this));
