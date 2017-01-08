@@ -165,7 +165,7 @@
       <div class="row">
         <h5>&nbsp;</h5>
         <div class="col-md-10 col-md-offset-1 sidebyside">
-          <div class="page_title sidebyside_left">
+          <div id="index_leftbar" class="page_title sidebyside_left">
             <h2 style="color: #F3F70E" id="index">Latest Blog Post</h2>
             
             <h4> <strong> 07 Jan 2017 </strong>
@@ -259,7 +259,7 @@
 
             </div>
           </div>
-          <div class="page_title sidebyside_right">
+          <div id="index_rightbar" class="page_title sidebyside_right">
             
             
             <h2 style="color: #F3F70E">Archives</h2>
@@ -1081,6 +1081,10 @@ $(document).ready(function() {
      } else {
         elem.text(elem.text().replace('▼','►'));
      }
+  }
+  if ($(window).width() < 960) {
+     $('#index_leftbar').css("width", "100%");
+     $('#index_rightbar').hide();
   }
 });
 </script>

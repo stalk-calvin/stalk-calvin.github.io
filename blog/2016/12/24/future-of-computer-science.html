@@ -426,6 +426,10 @@ $(document).ready(function() {
         elem.text(elem.text().replace('▼','►'));
      }
   }
+  if ($(window).width() < 960) {
+     $('#index_leftbar').css("width", "100%");
+     $('#index_rightbar').hide();
+  }
 });
 </script>
 <script>
