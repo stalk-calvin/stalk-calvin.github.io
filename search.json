@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Java Generics",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html",
+      "excerpt"		: "Evolution of Java",
+      "tags"        : ["java","generics","programming","computer"]
+    }
+  
+
+  
+    ,{
       "title"			: "New Year's Resolution",
       "link"			: "https://stalk-calvin.github.io/blog/2017/01/07/new-year-resolution.html",
       "excerpt"		: "Making 2017 My Best Year Ever",

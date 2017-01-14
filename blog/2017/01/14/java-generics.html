@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<!-- Post Layout Start --><html lang="en">
+
+  
+<!-- HEAD Start -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Stories about Calvin: Beer, Fitness, Diet, Computer Science and Programming.">
+  <meta name="author" content="Calvin Lee">
+  <meta name="keywords" content="calvin, lee, personal, blog, beer, fitness, diet, computer, science, programming, software, engineer">
+  <link rel="canonical" href="/blog/2017/01/14/java-generics.html">
+  <title>I am Calvin | Java Generics</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link href="/css/grayscale.css" rel="stylesheet">
+  
+
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/rrssb.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+  
+
+  
+
+  
+
+
+  <!-- iOS Web App mode -->
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" sizes="36x36" href="/img/web-app/icon-36p.png">
+  <link rel="apple-touch-icon" sizes="48x48" href="/img/web-app/icon-48p.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/web-app/icon-72p.png">
+  <link rel="apple-touch-icon" sizes="96x96" href="/img/web-app/icon-96p.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/web-app/icon-144p.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="/img/web-app/icon-192p.png">
+
+  <!-- Android Web App mode -->
+
+  <link rel="manifest" href="/manifest.json">
+
+
+
+
+  
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#000000">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#000000">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+  
+
+
+    
+  
+  <!-- MathJax -->
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  <!-- Google Analytics -->
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-88428523-1', 'auto');
+      ga('send', 'pageview');
+      
+  </script>
+
+  
+</head>
+<!-- HEAD End -->
+
+
+  <body>
+
+    
+<!-- Navigation Start -->
+
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+        <i class="fa fa-bars"></i>
+      </button>
+      
+        <a class="navbar-brand" href="/">
+      
+          <div>
+            
+              <img src="/img/black-lab-glass.ico" alt="favicon">
+            
+            <h4 style="display:inline">I am Calvin</h4>
+          </div>
+        </a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul class="nav navbar-nav">
+        
+          <!-- Blog, Post, Tag and Error pages -->
+          
+            <li>
+            
+                <a href="/#about"> About </a>
+            
+            </li>
+          
+            <li>
+            
+                <a href="/#timeline"> Timeline </a>
+            
+            </li>
+          
+            <li>
+            
+                <a href="/#search"> Search </a>
+            
+            </li>
+          
+            <li>
+            
+                <a href="/#contact"> Contact </a>
+            
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Navigation End -->
+
+
+    <section id="post" class="container content-section ">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h1 style="display:inline; color: #F4A460;"><strong>Java Generics</strong></h1>
+          <h4 style="display:inline; color: #F4A460;"><strong>Evolution of Java</strong></h4>
+<br>
+          <h4>
+            <strong>14 Jan 2017</strong>
+            <small>
+              <a href="/blog/2017/01/14/java-generics.html#disqus_thread">Comments</a>
+              <br>
+              
+                <a class="tag" href="/tags/#java">#java</a>
+              
+                <a class="tag" href="/tags/#generics">#generics</a>
+              
+                <a class="tag" href="/tags/#programming">#programming</a>
+              
+                <a class="tag" href="/tags/#computer">#computer</a>
+              
+            </small>
+          </h4>
+
+          <nav class="pagination" role="navigation">
+            
+            
+              <a href="https://stalk-calvin.github.io/blog/2017/01/07/new-year-resolution.html" class="btn" title="New Year's Resolution">New Year's Resolution »</a>
+            
+          </nav><!-- /.pagination -->
+
+          
+<table class="image" align="center">
+<caption class="custom" align="bottom">Generics</caption>
+<tr><td><img src="https://stalk-calvin.github.io/img/calvin/generics.jpg" alt="Generics"></td></tr>
+</table>
+
+<h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-introduction">
+<i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Introduction</h2>
+
+<p><a href="http://docs.oracle.com/javase/tutorial/extra/generics/">Generics</a> in Java were introduced as one of features in JDK 5. It was one of the major changes in Java.</p>
+
+<p>In Java 4, we had raw types only:</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>List newArray = new ArrayList();
+</code></pre>
+</div>
+
+<p>Java 5 introduced generics:</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>List&lt;Integer&gt; newArray = new ArrayList&lt;Integer&gt;();
+</code></pre>
+</div>
+
+<p>As you can see, the generics would imply the type of the List. In Java, Generic types or methods differ from raw types in the sense that they have type parameters such as above example. You may pass in the Type or wildcard instead of “Integer” in the above example. According to the JLS (4.8 Raw Types):</p>
+
+<blockquote>
+  <p>“The use of raw types is allowed only as a concession to compatibility of legacy code. The use of raw types in code written after the introduction of genericity into the Java programming language is strongly discouraged. It is possible that future versions of the Java programming language will disallow the use of raw types.”</p>
+</blockquote>
+
+<h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-history">
+<i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> History</h2>
+
+<p>Sun decided to start Java development in 1990 leaded by <a href="https://en.wikipedia.org/wiki/James_Gosling">James Gosling</a>. Since then, there had been numerous changes to get to Generics which was introduced in J2SE 5.0 in 2004. J2SE 5.0 consists of bunch of other <a href="https://en.wikipedia.org/wiki/Java_version_history#J2SE_5.0"><strong>Evolutionary</strong> Changes</a>. There had been couple of other changes after J2SE 5.0 was introduced. However, J2SE 5.0 is probably the most notable change in the Java history to be mentioned.</p>
+
+<h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-why-generics">
+<i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Why Generics?</h2>
+
+<p>Wikipedia says, <a href="https://en.wikipedia.org/wiki/Generics_in_Java">Generics</a> provides compile-time (static) type safety for collections and eliminates the need for most <a href="https://en.wikipedia.org/wiki/Type_conversion">typecasts (type conversion)</a> (specified by <a href="https://www.jcp.org/en/jsr/detail?id=14">JSR 14</a>). You might be thinking so what? Let’s take a look at the benefits.</p>
+
+<p>Code that uses generics has many benefits over non-generic code. Here are 3 points to address this:</p>
+
+<ol style="padding-left: 1.5em; list-style: decimal;">
+  <li>Stronger type checks at compile time: Probably the most important point of all. Avoiding runtime cast exception!</li>
+  <li>Elimination of casts: Before Java 5, we had to cast Objects in order for it to be an explicit type. Such as <code class="highlighter-rouge">(String) list.get(0)</code>. Now we can replace that by enforcing the list to be String, <code class="highlighter-rouge">List&lt;String&gt; list = new ArrayList&lt;String&gt;();</code>
+</li>
+  <li>Enabling programmers to implement generic algorithms: You can have a generic type instead of one-specific (i.e. String) type.</li>
+</ol>
+
+<p>Basically the most important point above is probably type checking of parameters in your code at the <strong><em>compile</em></strong> time, automatically! This is very important as Casting was a big <em>burn</em> as most of errors were bypassing the compiling until runtime exception rises in the production. Generics basically added stability to your code by making more of your bugs detectable at the compile time (Checked exception).</p>
+
+<h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-how-generics-works-in-java">
+<i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> How Generics works in Java</h2>
+
+<p>There are 2 important terms to discuss about the works of Generics in Java:</p>
+
+<p><img class="emoji" title=":one:" alt=":one:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png" height="20" width="20" align="absmiddle"> <a href="https://en.wikipedia.org/wiki/Type_safety">Type Safety</a></p>
+
+<p>This is basically saying as long as types are all passed compiler with Generics, ClassCastException should not occur in runtime. This is guaranteeing cast error-prone at the runtime as I discuseed as the most important point in “Why Generics”.</p>
+
+<p>Example of Type Safety:</p>
+
+<div class="language-java highlighter-rouge">
+<pre class="highlight"><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
+ 
+<span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">1000</span><span class="o">);</span> <span class="c1">//works and add 1000 to the list</span>
+ 
+<span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"testing"</span><span class="o">);</span> <span class="c1">//compile time error; Error: java: no suitable method found for add(java.lang.String)</span>
+</code></pre>
+</div>
+
+<p><img class="emoji" title=":two:" alt=":two:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png" height="20" width="20" align="absmiddle"> <a href="https://en.wikipedia.org/wiki/Type_erasure">Type Erasure</a></p>
+
+<p>This is basically saying that any of these type information added using Generics in the code will be removed in compiled bytecode. This is required to support old Java as Java itself is always backward compatible. Byte level code is basically kept using old Java syntax which wouldn’t use the Generics.</p>
+
+<p>Here is an example of Type Erasure. Basically above Generics Type Safety example is converted like this:</p>
+
+<div class="language-java highlighter-rouge">
+<pre class="highlight"><code><span class="n">List</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">();</span>
+ 
+<span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">1000</span><span class="o">);</span>    
+</code></pre>
+</div>
+
+<p>It is worth to note that the String insertion will not be in the bytecode level as that code block will never bypass Compiler (cast checked exception)</p>
+
+<p>Also, Type Erasure introduces a problem like following:</p>
+
+<div class="language-java highlighter-rouge">
+<pre class="highlight"><code><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">li</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Float</span><span class="o">&gt;</span> <span class="n">lf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Float</span><span class="o">&gt;();</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">li</span><span class="o">.</span><span class="na">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="n">lf</span><span class="o">.</span><span class="na">getClass</span><span class="o">())</span> <span class="o">{</span> <span class="c1">// evaluates to true</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Equal"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p>What this compares at the end of day is ArrayList, because Types would have been Erasede. There are other limitations to Generics. <a href="#generics_limitation">See end of this page</a>, you will find examples of them.</p>
+
+<h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-type-parameter-naming-conventions">
+<i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Type Parameter Naming Conventions</h2>
+
+<p>There are conventions Java developers like to follow when it comes to using Generics. By convention, type parameter names are single, uppercase letters. This follows <a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html#naming">Java Naming Convention</a> that most of Java developers would know about. Naming conventions makes the code clean when everyone is following the same convention.</p>
+
+<p>Commonly used type parameter names are follows:</p>
+
+<ul>
+  <li>E - Element (used extensively by the Java Collections Framework)</li>
+  <li>K - Key</li>
+  <li>N - Number</li>
+  <li>T - Type</li>
+  <li>V - Value</li>
+  <li>S,U,V etc. - 2nd, 3rd, 4th types</li>
+</ul>
+
+<p>You’ll see these names used throughout the Java SE API.</p>
+
+<h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-generics-with-wildcards">
+<i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Generics with Wildcards</h2>
+
+<p>The question mark (<em>?</em>) is used as the wildcard in Generics, which represents an unknown type. A wildcard parameterized type is an instantiation of a generic type where at least one type argument is a wildcard.</p>
+
+<p>Having an wildcard can mean different things in different context:</p>
+
+<ol style="padding-left: 1.5em; list-style: decimal;">
+  <li>Collection&lt;?&gt; denotes all instantiations of the Collection interface regardless of the type argument.</li>
+  <li>List&lt;? extends Number&gt; denotes all list types where the element type is a subtype of Number.</li>
+  <li>Comparator&lt;? super String&gt; denotes all instantiations of the Comparator interface for type argument types that are supertypes of String.</li>
+</ol>
+
+<p>Examples of <code class="highlighter-rouge">correct</code> usage of wildcard:</p>
+
+<div class="language-java highlighter-rouge">
+<pre class="highlight"><code><span class="n">Collection</span><span class="o">&lt;?&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span> 
+<span class="c1">//OR</span>
+<span class="n">List</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">Number</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">&gt;();</span> 
+<span class="c1">//OR</span>
+<span class="n">Pair</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,?&gt;</span> <span class="n">pair</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Pair</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="n">Integer</span><span class="o">&gt;();</span>
+</code></pre>
+</div>
+
+<p>Examples of <code class="highlighter-rouge">incorrect</code> usage of wildcard:</p>
+
+<div class="language-java highlighter-rouge">
+<pre class="highlight"><code><span class="n">List</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">Number</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>  <span class="c1">//String iscannot be a subclass of Number; error</span>
+<span class="c1">//OR</span>
+<span class="n">Comparator</span><span class="o">&lt;?</span> <span class="kd">super</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">cmp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RuleBasedCollator</span><span class="o">(</span><span class="k">new</span> <span class="n">Integer</span><span class="o">(</span><span class="mi">100</span><span class="o">));</span> <span class="c1">//Integer is not superclass of String</span>
+</code></pre>
+</div>
+
+<p>If you look closely to the usage of generics in the diamond brackets, object is being defined using <code class="highlighter-rouge">extends</code> or <code class="highlighter-rouge">super</code>. There is a rule to define how and when to use <code class="highlighter-rouge">extends</code> vs <code class="highlighter-rouge">super</code>.</p>
+
+<p>PECS stands for Producer-Extends, Consumer-Super. Let’s take an example of how they are used:</p>
+
+<ol style="padding-left: 1.5em; list-style: decimal;">
+  <li>
+    <p>You want to go through the collection and do things with each item.
+Then the list is a producer, so you should use a Collection&lt;? extends Thing&gt;. The reasoning is that a Collection&lt;? extends Thing&gt; could hold any subtype of Thing, and thus each element will behave as a Thing when you perform your operation. (You actually cannot add anything to a Collection&lt;? extends Thing&gt;, because you cannot know at runtime which specific subtype of Thing the collection holds. To genericfy this, you would do Collection&lt;? extends T&gt;</p>
+  </li>
+  <li>
+    <p>You want to add things to the collection.
+Then the list is a consumer, so you should use a Collection&lt;? super Thing&gt;. The reasoning here is that unlike Collection&lt;? extends Thing&gt;, Collection&lt;? super Thing&gt; can always hold a Thing no matter what the actual parameterized type is. Here you don’t care what is already in the list as long as it will allow a Thing to be added; this is what ? super Thing guarantees.</p>
+  </li>
+</ol>
+
+<p><a name="generics_limitation"></a>
+Also, to note, wildcard should not be used as a return type.</p>
+
+<h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-limitations-to-generics">
+<i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Limitations to Generics</h2>
+
+<p><img class="emoji" title=":one:" alt=":one:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png" height="20" width="20" align="absmiddle"> <span style="color: #F4A460;"><strong>Primitives are not allowed as part of Type.</strong></span></p>
+
+<div class="language-java highlighter-rouge">
+<pre class="highlight"><code><span class="kd">class</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span> <span class="n">V</span><span class="o">&gt;</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="n">K</span> <span class="n">key</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">V</span> <span class="n">value</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">Pair</span><span class="o">(</span><span class="n">K</span> <span class="n">key</span><span class="o">,</span> <span class="n">V</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="c1">// ...</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p>Above code example cannot be used like this:</p>
+
+<div class="language-java highlighter-rouge">
+<pre class="highlight"><code><span class="n">Pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">,</span> <span class="kt">char</span><span class="o">&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Pair</span><span class="o">&lt;&gt;(</span><span class="mi">8</span><span class="o">,</span> <span class="sc">'a'</span><span class="o">);</span>  <span class="c1">// compile-time error</span>
+</code></pre>
+</div>
+
+<p>It is to be used like this with values being autoboxed:</p>
+
+<div class="language-java highlighter-rouge">
+<pre class="highlight"><code><span class="n">Pair</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">Character</span><span class="o">&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Pair</span><span class="o">&lt;&gt;(</span><span class="mi">8</span><span class="o">,</span> <span class="sc">'a'</span><span class="o">);</span>
+</code></pre>
+</div>
+
+<p><img class="emoji" title=":two:" alt=":two:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png" height="20" width="20" align="absmiddle"> <span style="color: #F4A460;"><strong>Static fields are not allowed</strong></span></p>
+
+<div class="language-java highlighter-rouge">
+<pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericsExample</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;;</span>
+<span class="o">{</span>
+   <span class="kd">private</span> <span class="kd">static</span> <span class="n">T</span> <span class="n">member</span><span class="o">;</span> <span class="c1">//This is not allowed</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p><img class="emoji" title=":three:" alt=":three:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png" height="20" width="20" align="absmiddle"> <span style="color: #F4A460;"><strong>Creating an instance of Type is not allowed</strong></span></p>
+
+<div class="language-java highlighter-rouge">
+<pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericsExample</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span>
+<span class="o">{</span>
+   <span class="kd">public</span> <span class="nf">GenericsExample</span><span class="o">(){</span>
+      <span class="k">new</span> <span class="nf">T</span><span class="o">();</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p><img class="emoji" title=":four:" alt=":four:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png" height="20" width="20" align="absmiddle"> <span style="color: #F4A460;"><strong>Exceptions cannot be generic-fied</strong></span></p>
+
+<div class="language-java highlighter-rouge">
+<pre class="highlight"><code><span class="c1">// causes compiler error</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericException</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="n">Exception</span> <span class="o">{}</span>
+</code></pre>
+</div>
+
+<p>This is because Runtime exception type has no generics information . For more detail , look into <a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-11.html">JLS 11</a>. It has the note, “subclass of Throwable must not be generic (<a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.1.2">§8.1.2</a>.”</p>
+
+<p><img class="emoji" title=":five:" alt=":five:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0035-20e3.png" height="20" width="20" align="absmiddle"> <span style="color: #F4A460;"><strong>Cannot be used as Casts or <code class="highlighter-rouge">instanceof</code> parameter</strong></span></p>
+
+<div class="language-java highlighter-rouge">
+<pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="n">test</span> <span class="nf">rtti</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">list</span> <span class="k">instanceof</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;)</span> <span class="o">{</span>  <span class="c1">// compile-time error</span>
+        <span class="c1">// ...</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">list</span> <span class="k">instanceof</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;)</span> <span class="o">{</span>  <span class="c1">// ERROR</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"LinkedList"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p>Above can be used with wildcard like so:</p>
+
+<div class="language-java highlighter-rouge">
+<pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">test</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;?&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">list</span> <span class="k">instanceof</span> <span class="n">ArrayList</span><span class="o">&lt;?&gt;)</span> <span class="o">{</span>  <span class="c1">// OK; instanceof requires a reifiable type</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"ArrayList"</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">list</span> <span class="k">instanceof</span> <span class="n">LinkedList</span><span class="o">&lt;?&gt;)</span> <span class="o">{</span>  <span class="c1">// OK; instanceof requires a reifiable type</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"LinkedList"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p><img class="emoji" title=":six:" alt=":six:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0036-20e3.png" height="20" width="20" align="absmiddle"> <span style="color: #F4A460;"><strong>You cannot create an array of parameterized types</strong></span></p>
+
+<div class="language-java highlighter-rouge">
+<pre class="highlight"><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;[]</span> <span class="n">arrayOfLists</span> <span class="o">=</span> <span class="k">new</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;[</span><span class="mi">2</span><span class="o">];</span>  <span class="c1">// compile-time error</span>
+</code></pre>
+</div>
+
+<p><img class="emoji" title=":seven:" alt=":seven:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0037-20e3.png" height="20" width="20" align="absmiddle"> <span style="color: #F4A460;"><strong>You cannot have the same method signature of erasure form</strong></span></p>
+
+<div class="language-java highlighter-rouge">
+<pre class="highlight"><code><span class="kd">class</span> <span class="nc">GenericsExample</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">strSet</span><span class="o">)</span> <span class="o">{</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">intSet</span><span class="o">)</span> <span class="o">{</span> <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p>Both result in Same strSet in the bytecode which results in a compile error, java: name clash: print(java.util.Set<java.lang.integer>) and print(java.util.Set<java.lang.string>) have the same erasure</java.lang.string></java.lang.integer></p>
+
+<h2 id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-conclusion">
+<i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Conclusion</h2>
+
+<p>Generics enable the use of stronger type-checking, the elimination of casts, and the ability to develop generic algorithms. Without generics, many of the features that we use in Java today would not be possible.</p>
+
+<p>Do not use Raw types. Use <a href="http://docs.oracle.com/javase/tutorial/java/generics/index.html">Generics</a>. Also use Generics (types or methods) when you can. It is preferred way in modern Java. Also, upon using Generics, there cases where it is inevitable to avoid unchecked warning. In that case, use @SuppressWarnings(“unchecked”) annotation and explain why it is safe to ignore this error.</p>
+
+
+
+          
+<!-- Share Buttons Start -->
+<div>
+  <h5 style="margin-bottom:1em;margin-left:.5em;">
+<i class="fa fa-quote-left" aria-hidden="true"></i> Share this post <i class="fa fa-quote-right" aria-hidden="true"></i>
+</h5>
+  <ul class="rrssb-buttons clearfix">
+    
+      <li class="rrssb-email">
+        <a href="mailto:?subject=Java%20Generics&amp;body=https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html" data-proofer-ignore>
+          <span class="rrssb-icon">
+            <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28">
+              <path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"></path>
+            </svg>
+          </span>
+        </a>
+      </li>
+    
+    
+      <li class="rrssb-facebook">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html&amp;title=Java%20Generics" class="popup">
+          <span class="rrssb-icon">
+            <svg xmlns="https://www.w3.org/2000/svg" preserveaspectratio="xMidYMid" width="29" height="29" viewbox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z" class="cls-2" fill-rule="evenodd"></path></svg>
+          </span>
+        </a>
+      </li>
+    
+    
+      <li class="rrssb-twitter">
+        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html&amp;text=Java%20Generics" class="popup">
+          <span class="rrssb-icon"><svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28"><path d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62c-3.122.162-6.22-.646-8.86-2.32 2.702.18 5.375-.648 7.507-2.32-2.072-.248-3.818-1.662-4.49-3.64.802.13 1.62.077 2.4-.154-2.482-.466-4.312-2.586-4.412-5.11.688.276 1.426.408 2.168.387-2.135-1.65-2.73-4.62-1.394-6.965C5.574 7.816 9.54 9.84 13.802 10.07c-.842-2.738.694-5.64 3.434-6.48 2.018-.624 4.212.043 5.546 1.682 1.186-.213 2.318-.662 3.33-1.317-.386 1.256-1.248 2.312-2.4 2.942 1.048-.106 2.07-.394 3.02-.85-.458 1.182-1.343 2.15-2.48 2.71z"></path></svg></span>
+        </a>
+      </li>
+    
+    
+      <li class="rrssb-linkedin">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html" class="popup">
+        <span class="rrssb-icon">
+          <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28">
+            <path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"></path>
+          </svg>
+        </span>
+      </a>
+      </li>
+    
+    
+    
+      <li class="rrssb-googleplus">
+        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html" class="popup">
+          <span class="rrssb-icon">
+            <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"><path d="M21 8.29h-1.95v2.6h-2.6v1.82h2.6v2.6H21v-2.6h2.6v-1.885H21V8.29zM7.614 10.306v2.925h3.9c-.26 1.69-1.755 2.925-3.9 2.925-2.34 0-4.29-2.016-4.29-4.354s1.885-4.353 4.29-4.353c1.104 0 2.014.326 2.794 1.105l2.08-2.08c-1.3-1.17-2.924-1.883-4.874-1.883C3.65 4.586.4 7.835.4 11.8s3.25 7.212 7.214 7.212c4.224 0 6.953-2.988 6.953-7.082 0-.52-.065-1.104-.13-1.624H7.614z"></path></svg>
+          </span>
+        </a>
+      </li>
+    
+    
+  </ul>
+</div>
+
+<!-- Share Buttons End -->
+
+
+          
+            <div id="disqus_thread"></div>
+<!-- /#disqus_thread -->
+            <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'stalkcalvin'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          
+
+          <nav class="pagination" role="navigation">
+            
+            
+              <a href="https://stalk-calvin.github.io/blog/2017/01/07/new-year-resolution.html" class="btn" title="New Year's Resolution">New Year's Resolution »</a>
+            
+          </nav><!-- /.pagination -->
+
+          <hr>
+
+          
+          <div class="author row">
+            <img class="col-xs-4 col-sm-3 col-md-2" src="/img/author.jpg" alt="Me">
+            <p class="col-xs-8 col-sm-9 col-md-10">
+              Calvin Lee is a passionate software developer working in Gastown, Vancouver. <br>If you would like to connect with him, choose one from below options :) You can also just send me an email at <a href="mailto:stalk.calvin@gmail.com?subject=Mail%20from%20Calvin&amp;lrquo;s%20Blog">stalk.calvin@gmail.com</a>
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    
+ <!-- Footer Start -->
+
+<footer>
+
+    
+<!-- Social Buttons Start -->
+
+<ul class="list-inline social-buttons">
+  
+    <li><a href="https://keybase.io/stalkcalvin" target="_blank"><i class="fa fa-key fa-fw"></i></a></li>
+  
+    <li><a href="https://instagram.com/stalk.calvin" target="_blank"><i class="fa fa-instagram fa-fw"></i></a></li>
+  
+    <li><a href="https://linkedin.com/in/stalkme" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i></a></li>
+  
+    <li><a href="https://github.com/stalk-calvin" target="_blank"><i class="fa fa-github-alt fa-fw"></i></a></li>
+  
+    <li><a href="https://leetcode.com/stalkcalvin/" target="_blank"><i class="fa fa-code fa-fw"></i></a></li>
+  
+    <li><a href="https://www.hackerrank.com/stalk_calvin" target="_blank"><i class="fa fa-header fa-fw"></i></a></li>
+  
+    <li><a href="https://untappd.com/user/stalk-calvin" target="_blank"><i class="fa fa-beer fa-fw"></i></a></li>
+  
+    <li><a href="/feed.xml" target="_blank"><i class="fa fa-rss fa-fw"></i></a></li>
+  
+</ul>
+
+<!-- Social Buttons End -->
+
+
+    <p><br></p>
+
+    <div class="container text-center">
+      <p>Copyright © Calvin Lee</p>
+      <p>2016 - 2017</p>
+    </div>
+    <p><br><br><br></p>
+</footer>
+
+<!-- Footer End -->
+
+
+    
+<!-- Javascript Start -->
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<!--* Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+* Code licensed under the Apache License v2.0.
+* For details, see http://www.apache.org/licenses/LICENSE-2.0.-->
+<script>
+$(document).on('click',function(){
+$('.collapse').collapse('hide');
+})
+</script> 
+<script type="text/javascript">
+$(document).ready(function() {
+    $(document).on("click","#archive_year_2017",function() {
+      $(this).parent().children("li").toggle();
+      togglePointer($(this));
+  });
+  $(document).on("click",".archive_month_2017",function() {
+      $(this).parent().children("li").toggle();
+      togglePointer($(this));
+  });
+  $(document).on("click","#archive_year_2016",function() {
+      $(this).parent().children("li").toggle();
+      togglePointer($(this));
+  });
+  $(document).on("click",".archive_month_2016",function() {
+      $(this).parent().children("li").toggle();
+      togglePointer($(this));
+  });
+  function togglePointer(elem) {
+     if (elem.text().indexOf('►') != -1) {
+        elem.text(elem.text().replace('►','▼'));
+     } else {
+        elem.text(elem.text().replace('▼','►'));
+     }
+  }
+  if ($(window).width() < 768) {
+     $('#index_leftbar').css("width", "100%");
+     $('#index_rightbar').hide();
+  }
+});
+</script>
+<script>
+function toggleNavCollapse(){50<$(".navbar").offset().top?$(".navbar-fixed-top").addClass("top-nav-collapse"):$(".navbar-fixed-top").removeClass("top-nav-collapse");}
+$(document).ready(toggleNavCollapse);
+$(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click",function(b){var a=$(this);$("html, body").stop().animate({scrollTop:$(a.attr("href")).offset().top-50},1500,"easeInOutExpo",function(){a.blur()});b.preventDefault()})});$(".navbar-collapse ul li a").click(function(){$(".navbar-toggle:visible").click()});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function addTohistory() {
+  if (!window.location.host.startsWith("127.0.0.1")) {
+    history.pushState({}, 'Java Generics', 'https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html');
+  }
+}
+</script>
+
+<!-- Gesture Navigation / Swipe Instruction Start -->
+
+
+  
+
+  
+
+  
+
+  
+
+<!-- Gesture Navigation / Swipe Instruction End -->
+
+
+
+<!-- Javascript End -->
+
+
+  </body>
+</html><!-- Post Layout End -->
