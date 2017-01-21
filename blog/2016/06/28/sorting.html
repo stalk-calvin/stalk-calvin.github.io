@@ -197,6 +197,10 @@
 <img class="emoji" title=":one:" alt=":one:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png" height="20" width="20" align="absmiddle"> Merge Sort</h4>
 <p style="float: left!important;margin-right: 1em;"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif" alt="merge_sort"></p>
 
+<ul>
+  <li><a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/MergeSortArray.java">Code Example</a></li>
+</ul>
+
 <p>The fundamental of divide and conquer sorting algorithm using comparison-based sorting method. The algorithm is stable meaning the order of sorted elements are preserved. Merge sort divides elements recursively into a smaller pieces and slowly sort them as they merges together. The algorithm has Best/Average/Worst case performance of all O(nlogn). Pitfall of merge sort is the space complexity which is O(n). This is not the best algorithm for places where space is limited.</p>
 
 <h4 style="clear:left;" id="two-quick-sort">
@@ -215,12 +219,20 @@
   </tbody>
 </table>
 
+<ul>
+  <li><a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/QuickSortArray.java">Code Example</a></li>
+</ul>
+
 <p>Another recursive algorithm which probably is most famous of all sort. Many people have misconception that this is the fastest algorithm out there. However, in worst case scenario, the algorithm can produce time complexity of O(<script type="math/tex">n^2</script>) when pivot is chosen as the last element and array is already sorted or all elements in array is identical. Algorithm partitions array so element on left side has less than the element or right side has greater than equail to the element. Then algorithm recursives calls this until all element found the right position where it needs to be.</p>
 
 <h4 style="clear:left;" id="three-bubble-sort">
 <img class="emoji" title=":three:" alt=":three:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png" height="20" width="20" align="absmiddle"> Bubble Sort</h4>
 
 <p style="float: left!important;margin-right: 1em;"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" alt="bubble_sort"></p>
+
+<ul>
+  <li><a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/BubbleSort.java">Code Example</a></li>
+</ul>
 
 <p>This sorting method takes each values adjacent to each other and compares and swap if one is less than the other. Worst and Average time of this sorting method is O(<script type="math/tex">n^2</script>). However, if the list is already sorted, the best time of this sort would be done in one pass which is O(n).</p>
 
@@ -229,12 +241,20 @@
 
 <p style="float: left!important;margin-right: 1em;"><img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif" alt="selection_sort"></p>
 
-<p>Selection sort selects the lowest in the array and places in front. Worst and Average time of this sorting method is kind of obvious, O(<script type="math/tex">n^2</script>). In order to run this sorting method, you need to run one pass, one pass -1, one pass -2, …etc. Also note, regardless of array already sorted, it needs take an effort to ensure the lowest item is in front. There are multiple variation of this method to improve the performance. For variants and further analysis, see: https://en.wikipedia.org/wiki/Selection_sort</p>
+<ul>
+  <li><a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/SelectionSort.java">Code Example</a></li>
+</ul>
+
+<p>Selection sort selects the lowest in the array and places in front. Worst and Average time of this sorting method is kind of obvious, O(<script type="math/tex">n^2</script>). In order to run this sorting method, you need to run one pass, one pass -1, one pass -2, …etc. Also note, regardless of array already sorted, it needs take an effort to ensure the lowest item is in front. There are multiple variation of this method to improve the performance. For variants and further analysis, see: https://en.wikipedia.org/wiki/Selection_sort.</p>
 
 <h4 style="clear:left;" id="five-insertion-sort">
 <img class="emoji" title=":five:" alt=":five:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0035-20e3.png" height="20" width="20" align="absmiddle"> Insertion Sort</h4>
 
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif" alt="insertion_sort" style="float: left!important;margin-right: 1em;"></p>
+
+<ul>
+  <li><a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/InsertionSort.java">Code Example</a></li>
+</ul>
 
 <p>The most popular simplest sort of all. Insertion sort goes through the array look for the position of an item that is being looked at. For example, let’s say you have 4,2,3,1. Then insertion sort will first compare 4,2 and they need to swap. List becomes 2,4,3,1. Then 4,3 will be looked at and list becomes 2,3,4,1. Then 4,1 will be looked at and 2,3,1,4 but 1 is still less then 3, so it swaps 3,1 -&gt; 2,1,3,4 -&gt; then eventually 1,2,3,4. The worst/average case of this method is O(<script type="math/tex">n^2</script>). However, the best case obviously will be O(n), simply when array is already sorted it has all the items at the position it needs to be. There are variations to this sort as well. Such as shell sort, binary insertion sort, etc. This works great when array is mostly sorted which means # of swaps it does will be significant smaller.</p>
 
@@ -245,6 +265,10 @@
 
 <h4 style="clear:left;" id="seven-counting-sort">
 <img class="emoji" title=":seven:" alt=":seven:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0037-20e3.png" height="20" width="20" align="absmiddle"> Counting Sort</h4>
+
+<ul>
+  <li><a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/CountingSort.java">Code Example</a></li>
+</ul>
 
 <p>Non-comparative sorting algorithm, so can sort better than O(nlogn) since no comparison. Downside of this sort is that we need to know # of occurrences on all numbers in an array before hand. You sort by the number of occurrence for such # in an array.</p>
 
@@ -295,6 +319,10 @@
 <h4 style="clear:left;" id="fastforward-heap-sort">
 <img class="emoji" title=":fast_forward:" alt=":fast_forward:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/23e9.png" height="20" width="20" align="absmiddle"> Heap Sort</h4>
 <p style="float: left!important;margin-right: 1em;"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Heapsort-example.gif" alt="heap_sort"></p>
+
+<ul>
+  <li><a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/HeapSort.java">Code Example</a></li>
+</ul>
 
 <p>This comparison-based unstable sorting algorithm takes an advantage of the tree being max/min heap. Taking root element and places in a sorted array. The sorting can happen in 4 stages. 1. buildMaxHeap() in O(n). 2. Swap first (root) with last child. 3. siftDown() to keep heap property in O(logn). 4. Keep repeat of 2 and 3 until all element is gone and all sorted in sorted array. Performance is O(n+n*log(n)) which is O(nlogn) for a big number of n.</p>
 
