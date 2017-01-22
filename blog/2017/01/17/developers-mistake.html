@@ -1,11 +1,13 @@
+
+<!-- Post Layout Start -->
+
 <!DOCTYPE html>
-<!-- Post Layout Start --><html lang="en">
+<html lang="en">
 
   
 <!-- HEAD Start -->
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
 
 
@@ -31,8 +33,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/rrssb.css">
-  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/rrssb.css" />
+  <link rel="stylesheet" href="/css/custom.css" />
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -165,13 +167,12 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <h1 style="display:inline; color: #F4A460;"><strong>Top 10 Java Programming Mistakes</strong></h1>
-          <h4 style="display:inline; color: #F4A460;"><strong>people make</strong></h4>
-<br>
+          <h4 style="display:inline; color: #F4A460;"><strong>people make</strong></h4><br />
           <h4>
             <strong>17 Jan 2017</strong>
             <small>
               <a href="/blog/2017/01/17/developers-mistake.html#disqus_thread">Comments</a>
-              <br>
+              <br />
               
                 <a class="tag" href="/tags/#mistake">#mistake</a>
               
@@ -187,56 +188,52 @@
           <nav class="pagination" role="navigation">
             
             
-              <a href="https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html" class="btn" title="Java Generics">Java Generics »</a>
+              <a href="https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html" class="btn" title="Java Generics">Java Generics &raquo;</a>
             
           </nav><!-- /.pagination -->
 
-          <h3 id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-convert-array-to-arraylist">
-<i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Convert Array to ArrayList</h3>
+          <p>There are couple of items I would like to go over to understand fully on some of the areas we developers make mistakes. I have personally made couple of mistakes introduced here and I thought I would write a post about them. If you are interested in coding in Java, <strong>I would at least skim through the list</strong>. Let’s start!</p>
+
+<h3 id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-convert-array-to-arraylist"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Convert Array to ArrayList</h3>
 
 <p>I have seen many people do this which is ok unless you are manipulating the size of the array.</p>
 
-<div class="language-java highlighter-rouge">
-<pre class="highlight"><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">arr</span><span class="o">);</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">arr</span><span class="o">);</span>
 </code></pre>
 </div>
 
-<p>This will create java.util.Arrays.ArrayList, instead of java.util.ArrayList. This is fine if you are using operations such as contains, get, set, etc. However, if you are manipulating the size of the list by doing <code class="highlighter-rouge">add</code> or <code class="highlighter-rouge">remove</code> operation, you would want to do the following:</p>
+<p>This will create java.util.Arrays.ArrayList, instead of java.util.ArrayList. This is fine when you are using operations like contains, get, set, etc. However, if you are manipulating the size of the list by doing <code class="highlighter-rouge">add</code> or <code class="highlighter-rouge">remove</code> operation, the operations are not available.</p>
 
-<div class="language-java highlighter-rouge">
-<pre class="highlight"><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">arrayList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(</span><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">arr</span><span class="o">));</span>
+<p>You would want to do the following instead:</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">arrayList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(</span><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">arr</span><span class="o">));</span>
 </code></pre>
 </div>
 
-<p>However, there is rarely a useful case where you would modify a List thats been converted from <code class="highlighter-rouge">Arrays.asList</code></p>
+<p>From my experiences, there wasa’t many cases where you had to modify a List size for <code class="highlighter-rouge">Arrays.asList</code>. However, this is certainly a good to know.</p>
 
-<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-contains-usage-from-the-list">
-<i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Contains usage from the list</h3>
+<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-contains-usage-from-the-list"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Contains usage from the list</h3>
 
 <p>I have seen people doing this in order to run <code class="highlighter-rouge">contains</code> operation within a List:</p>
 
-<div class="language-java highlighter-rouge">
-<pre class="highlight"><code><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">set</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(</span><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">arr</span><span class="o">));</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">set</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(</span><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">arr</span><span class="o">));</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">set</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">targetValue</span><span class="o">));</span>
 </code></pre>
 </div>
 
-<p>You might as well just loop the list and find a matching data which would be O(n) operation. You can do this easier with the same complexity:</p>
+<p>At this point, you might as well just loop the list and find a matching data which would be O(n) operation. You can do this easier with the same time complexity:</p>
 
-<div class="language-java highlighter-rouge">
-<pre class="highlight"><code><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">arr</span><span class="o">).</span><span class="na">contains</span><span class="o">(</span><span class="n">targetValue</span><span class="o">);</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">arr</span><span class="o">).</span><span class="na">contains</span><span class="o">(</span><span class="n">targetValue</span><span class="o">);</span>
 </code></pre>
 </div>
 
-<p>This is essentially same operation as going through a loop and searching which is also O(n) but its simpler and no need to run extra <code class="highlighter-rouge">set.contains</code> operation plus there is a slight gain on the space complexity.</p>
+<p>This is pretty much the same thing as using the loop. Searching is also O(n), but its simpler and there is definitely a gain on the space complexit since we do not need to make an extra set.</p>
 
-<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-removing-an-element-from-arraylist">
-<i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Removing an element from ArrayList</h3>
+<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-removing-an-element-from-arraylist"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Removing an element from ArrayList</h3>
 
-<p>Common tries that people to do remove elements from a List:</p>
+<p>Common tries that people to do remove elements from a List to delete all items by iterating through the List:</p>
 
-<div class="language-java highlighter-rouge">
-<pre class="highlight"><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(</span><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"a"</span><span class="o">,</span> <span class="s">"b"</span><span class="o">,</span> <span class="s">"c"</span><span class="o">,</span> <span class="s">"d"</span><span class="o">));</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(</span><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"a"</span><span class="o">,</span> <span class="s">"b"</span><span class="o">,</span> <span class="s">"c"</span><span class="o">,</span> <span class="s">"d"</span><span class="o">));</span>
 <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">list</span><span class="o">.</span><span class="na">size</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
     <span class="c1">// ... operations ... //</span>
 	<span class="n">list</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
@@ -245,12 +242,13 @@
 </code></pre>
 </div>
 
-<p>Above will show <code class="highlighter-rouge">[b, d]</code> as a result, which is not entirely correct because my intention was to remove all the elements in the array.</p>
+<p>Above will show <code class="highlighter-rouge">[b, d]</code> as a result, which is not entirely correct because my intention was to remove <strong>all</strong> the elements in the array.</p>
 
-<p>This is because as the list item is being removed, index is also changing at the same time. So remove(0) would restructure array for items with index 1-3 would now become index 0-3 and size is reduced to 3 and it continues and removes every other elements. If a user used a foreach loop instead like this:</p>
+<p>This is because as the list item is being removed, index is also changing at the same time. <code class="highlighter-rouge">remove(0)</code> would have restructured array for items in between index 1-3 which would become index 0-3 after <code class="highlighter-rouge">remove(0)</code> and size = 3 from 4 and it continues which would eventually remove every other elements.</p>
 
-<div class="language-java highlighter-rouge">
-<pre class="highlight"><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(</span><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"a"</span><span class="o">,</span> <span class="s">"b"</span><span class="o">,</span> <span class="s">"c"</span><span class="o">,</span> <span class="s">"d"</span><span class="o">));</span>
+<p>If a user used a foreach loop (introduced in JDK 1.5) instead like this:</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(</span><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"a"</span><span class="o">,</span> <span class="s">"b"</span><span class="o">,</span> <span class="s">"c"</span><span class="o">,</span> <span class="s">"d"</span><span class="o">));</span>
 <span class="k">for</span> <span class="o">(</span><span class="n">String</span> <span class="n">c</span> <span class="o">:</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
     <span class="c1">// ... operations ... //</span>
 	<span class="n">list</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">c</span><span class="o">);</span>  <span class="c1">// remove using String vs index in the previous example</span>
@@ -259,10 +257,11 @@
 </code></pre>
 </div>
 
-<p>Above will fail at the compiling stage, with ConcurrentModificationException. There is still another way to modify the elements and yet deleting the entire items in the List:</p>
+<p>Above will fail at the compiling stage, with ConcurrentModificationException because one is trying to modify a data structure which is being used to loop. Hmm.. How should we iterate the List?</p>
 
-<div class="language-java highlighter-rouge">
-<pre class="highlight"><code><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(</span><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"a"</span><span class="o">,</span> <span class="s">"b"</span><span class="o">,</span> <span class="s">"c"</span><span class="o">,</span> <span class="s">"d"</span><span class="o">));</span>
+<p>There is still another way to modify the elements and yet deleting the entire items in the List:</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(</span><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"a"</span><span class="o">,</span> <span class="s">"b"</span><span class="o">,</span> <span class="s">"c"</span><span class="o">,</span> <span class="s">"d"</span><span class="o">));</span>
 <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">iter</span> <span class="o">=</span> <span class="n">list</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
 <span class="k">while</span> <span class="o">(</span><span class="n">iter</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
     <span class="n">String</span> <span class="n">x</span> <span class="o">=</span> <span class="n">iter</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
@@ -273,15 +272,15 @@
 </code></pre>
 </div>
 
-<p>Now above code block will delete all elements in array and output, <code class="highlighter-rouge">[]</code>. It is basically only using the boolean check against the data by using <code class="highlighter-rouge">hasNext()</code> instead of using <code class="highlighter-rouge">size()</code> or <code class="highlighter-rouge">indexOf</code> operations.</p>
+<p>Now above code block will iterate and delete every elements in the list and show, <code class="highlighter-rouge">[]</code>. It is basically only using <code class="highlighter-rouge">hasNext()</code> instead of using its <code class="highlighter-rouge">size()</code> or <code class="highlighter-rouge">indexOf</code> operations.</p>
 
-<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-raw-type-collection">
-<i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Raw type collection</h3>
+<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-raw-type-collection"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Raw type collection</h3>
 
-<p>In the previous Blog Post, I had covered on <a href="/blog/2017/01/14/java-generics.html">Generics</a> in Java. Like I mentioned in the blog post, generics was introduced in J2SE 5.0. Ever since then, it is not recommended to write type Raw in programming Java. See below example:</p>
+<p>In the previous Blog Post, I had covered on <a href="/blog/2017/01/14/java-generics.html">Java Generics</a>. Like I mentioned in previous post, generics were introduced in JDK 1.5.0. Ever since then, it is <strong><em>not recommended</em></strong> to write Raw typed object in programming Java, especially when you are dealing with any <a href="https://docs.oracle.com/javase/1.5.0/docs/api/java/util/Collections.html">Java Collections</a>.</p>
 
-<div class="language-java highlighter-rouge">
-<pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="n">List</span> <span class="n">list</span><span class="o">,</span> <span class="n">Object</span> <span class="n">o</span><span class="o">){</span>
+<p>Let’s take a look at a example of Raw Type:</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="n">List</span> <span class="n">list</span><span class="o">,</span> <span class="n">Object</span> <span class="n">o</span><span class="o">){</span>
 	<span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">o</span><span class="o">);</span>
 <span class="o">}</span>
 <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
@@ -292,22 +291,30 @@
 </code></pre>
 </div>
 
-<p>As you can see clearly, there is no type enforced in the List parameter in <code class="highlighter-rouge">add</code> funcion although type is given in the input in the main method. Your modern IDE might give you a suggestion to Generify this for reasons. As you will have a runtime exception called “ClassCastException” because 10 is not a String. If you switched your main function to …</p>
+<p>As you can see clearly, there is no type enforced in the List parameter in <code class="highlighter-rouge">add</code> funcion although type is given in the input in the main method.</p>
 
-<div class="language-java highlighter-rouge">
-<pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[])</span> <span class="o">{</span>
+<p>Your modern IDE might give you a suggestion to Generify this for reasons. When you execute the above code, you will face a runtime exception called “ClassCastException” because 10 is not a String.</p>
+
+<p>Let’s make a little tweak to the code:</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[])</span> <span class="o">{</span>
     <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
-    <span class="n">add</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">"10"</span><span class="o">);</span>
+    <span class="n">add</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">"10"</span><span class="o">);</span>  <span class="c1">// Change from int 10 to String "10"</span>
     <span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">list</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
 <span class="o">}</span>
 </code></pre>
 </div>
 
-<p>It will work fine and output 10. This is okay as you used correct Data type. Note that there was not a compile error. The error happened during a run. We can genericfy this and make changes to the function parameter. This will give us a huge benefit. Now, instead of runtime exceptions (unchecked exception, “ClassCastException”). You will face checked exceptions,</p>
+<p>It will work fine and output 10 on screen. This is okay as you used a correct Data type. Java will run this without any runtime exception.</p>
 
-<div class="language-java highlighter-rouge">
-<pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">,</span> <span class="n">Object</span> <span class="n">o</span><span class="o">){</span>
+<p>Note compile exception (checked) vs runtime exception (unchecked, ClassCastException). We can genericfy this and make changes to the function parameter which would make that unchecked exception to a checked one.</p>
+
+<p>This will give us a huge benefit. Now, instead of finding out about an error at the runtime in production, you can catch at the compile stage.</p>
+
+<p>Here is where Generics will help for the Raw type object:</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">,</span> <span class="n">Object</span> <span class="n">o</span><span class="o">){</span>
     <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">o</span><span class="o">);</span>
 <span class="o">}</span>
 <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
@@ -318,15 +325,13 @@
 </code></pre>
 </div>
 
-<p>Just changing the <code class="highlighter-rouge">List list</code> to <code class="highlighter-rouge">List&lt;String&gt; list</code>, you won’t be able to compile this code anymore <img class="emoji" title=":smile:" alt=":smile:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f604.png" height="20" width="20" align="absmiddle"></p>
+<p>Just changing the <code class="highlighter-rouge">List list</code> to <code class="highlighter-rouge">List&lt;String&gt; list</code>, you won’t be able to compile this code anymore which then you will fix this error and then deliver your code with confidence!</p>
 
-<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei--vs-new-string">
-<i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> “” vs new String(…)</h3>
+<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei--vs-new-string"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> “” vs new String(…)</h3>
 
-<p>Here is another area people often misunderstand their usage. Note using “abcd” and “abcd”, we still can do == operation.</p>
+<p>This is another area people often misunderstand their usage. Let’s look at what I mean below, should be self descriptive:</p>
 
-<div class="language-java highlighter-rouge">
-<pre class="highlight"><code><span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="s">"abcd"</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="s">"abcd"</span><span class="o">;</span>
 <span class="n">String</span> <span class="n">b</span> <span class="o">=</span> <span class="s">"abcd"</span><span class="o">;</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="o">);</span>  <span class="c1">// True</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">a</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">b</span><span class="o">));</span> <span class="c1">// True</span>
@@ -338,58 +343,63 @@
 </code></pre>
 </div>
 
-<p>Modern IDE will generate a warning and suggest to use equals. My recommended way is to always use <code class="highlighter-rouge">equals</code> even when comparing Strings. Basically differences between == vs <code class="highlighter-rouge">equals</code> is that one is comparing the reference vs the other an actual value. I can only assume what happened inside Java. It probably has the exact same hashcode first and second “abcd” which means it treats them both equally.</p>
+<p>Modern IDE will generate a warning and suggest to use equals. My recommendation on this is to always use <code class="highlighter-rouge">equals</code> even when comparing Strings. Basically differences between == vs <code class="highlighter-rouge">equals</code> is that former is comparing the reference vs the latter compares actual value. I can only assume what happened inside Java. It probably has the exact same hashcode first and second “abcd” which means it treats them both equally.</p>
 
 <p>Just keep in mind. When Object is being compared, <code class="highlighter-rouge">==</code> refers to references comparison. If you wanted to values to be compared via hashCode. You use <code class="highlighter-rouge">equals</code> instead. Remember to override <code class="highlighter-rouge">hashCode</code> if you override <code class="highlighter-rouge">equals</code> so as not to “break the contract”.</p>
 
-<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-operators">
-<i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Operators</h3>
+<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-operators"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Operators</h3>
 
-<p>People often is confused with operations in Java. Here are list of operators used in Java.</p>
+<p>Developers are sometimes even confused on basics, operators in Java. Here are list of operators used in Java.</p>
 
 <table class="image" align="center">
 <caption class="custom" align="bottom">Arithmetic operators</caption>
-<tr><td><img src="http://jacqkrol.x10.mx/assets/images/java08.png" alt="Arithmetic operators"></td></tr>
+<tr><td><img src="http://jacqkrol.x10.mx/assets/images/java08.png" alt="Arithmetic operators" /></td></tr>
 </table>
 
 <table class="image" align="center" style="margin-top:2em">
 <caption class="custom" align="bottom">Bitwise operators</caption>
-<tr><td><img src="http://jacqkrol.x10.mx/assets/images/java09.png" alt="Bitwise operators"></td></tr>
+<tr><td><img src="http://jacqkrol.x10.mx/assets/images/java09.png" alt="Bitwise operators" /></td></tr>
 </table>
 
 <table class="image" align="center" style="margin-top:2em">
 <caption class="custom" align="bottom">Relational operators</caption>
-<tr><td><img src="http://jacqkrol.x10.mx/assets/images/java10.png" alt="Relational operators"></td></tr>
+<tr><td><img src="http://jacqkrol.x10.mx/assets/images/java10.png" alt="Relational operators" /></td></tr>
 </table>
 
 <table class="image" align="center" style="margin-top:2em">
 <caption class="custom" align="bottom">Boolean operators</caption>
-<tr><td><img src="http://jacqkrol.x10.mx/assets/images/java11.png" alt="Boolean operators"></td></tr>
+<tr><td><img src="http://jacqkrol.x10.mx/assets/images/java11.png" alt="Boolean operators" /></td></tr>
 </table>
 
 <table class="image" align="center" style="margin-top:2em">
 <caption class="custom" align="bottom">Assigment operators</caption>
-<tr><td><img src="http://jacqkrol.x10.mx/assets/images/java12.png" alt="Assigment operators"></td></tr>
+<tr><td><img src="http://jacqkrol.x10.mx/assets/images/java12.png" alt="Assigment operators" /></td></tr>
 </table>
 
 <table class="image" align="center" style="margin-top:2em">
 <caption class="custom" align="bottom">Java order of operations</caption>
-<tr><td><img src="https://www.safaribooksonline.com/library/view/javatm-how-to/9780133813036/graphics/app_a01.jpg" alt="Java order of operations"></td></tr>
+<tr><td><img src="https://www.safaribooksonline.com/library/view/javatm-how-to/9780133813036/graphics/app_a01.jpg" alt="Java order of operations" /></td></tr>
 </table>
 
-<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-x-vs-x">
-<i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> ++x vs x++</h3>
+<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-x-vs-x"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> ++x vs x++</h3>
 
-<p>Another common mistakes people make. This is really a question of logic.</p>
+<p>Another common mistakes Java developers make. This is really a question of logic.</p>
 
-<p><code class="highlighter-rouge">++x</code> increments the value of variable x before processing the current statement.</p>
+<p><code class="highlighter-rouge">++x</code> increments the value of variable x <strong><em>before</em></strong> processing the current statement.</p>
 
-<p><code class="highlighter-rouge">x++</code> increments the value of variable x after processing the current statement.</p>
+<p><code class="highlighter-rouge">x++</code> increments the value of variable x <strong><em>after</em></strong> processing the current statement.</p>
 
 <p>Code Example:</p>
 
-<div class="language-java highlighter-rouge">
-<pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
     <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
     <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="o">++</span><span class="n">x</span><span class="o">;</span>
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">" "</span><span class="o">);</span>
@@ -397,14 +407,12 @@
     <span class="n">i</span> <span class="o">=</span> <span class="n">x</span><span class="o">++;</span>
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">" "</span><span class="o">);</span>
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">x</span> <span class="o">+</span> <span class="s">" "</span><span class="o">);</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p><code class="highlighter-rouge">2 2 3 3</code> would be a wrong answer, instead <code class="highlighter-rouge">2 2 2 3</code> because x is assigned to i before it incremented.</p>
+<p>output of <code class="highlighter-rouge">2 2 3 3</code> would be incorrect, instead <code class="highlighter-rouge">2 2 2 3</code> is the correct one because if you look at line #3, with ++x example, x is assigned to i before x is incremented.</p>
 
-<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-code-comments">
-<i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Code comments</h3>
+<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-code-comments"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Code comments</h3>
 
 <p>Oh, where should I begin this topic …</p>
 
@@ -412,10 +420,9 @@
 
 <p>What happened here? He could have written a reference to why he did it in such a way.</p>
 
-<p>Here is my rule of thumbs against comments. They are for <code class="highlighter-rouge">whys</code> not for <code class="highlighter-rouge">whats</code>.</p>
+<p>Rule of thumbs on comments: Comments are for <code class="highlighter-rouge">whys</code> not for <code class="highlighter-rouge">whats</code>.</p>
 
-<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-confusion-over-passing-by-value-and-passing-by-reference">
-<i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Confusion over passing by value, and passing by reference</h3>
+<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-confusion-over-passing-by-value-and-passing-by-reference"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Confusion over passing by value, and passing by reference</h3>
 
 <p>One of the developers was wondering if Java is pass-by-value or pass-by-reference?</p>
 
@@ -423,8 +430,7 @@
 
 <p>Using pass-by-value in Perl:</p>
 
-<div class="language-perl highlighter-rouge">
-<pre class="highlight"><code><span class="k">my</span> <span class="nv">$scalar</span> <span class="o">=</span> <span class="s">"this is a scalar"</span><span class="p">;</span>
+<div class="language-perl highlighter-rouge"><pre class="highlight"><code><span class="k">my</span> <span class="nv">$scalar</span> <span class="o">=</span> <span class="s">"this is a scalar"</span><span class="p">;</span>
 <span class="k">my</span> <span class="nv">@array</span> <span class="o">=</span> <span class="sx">qw( this is my array )</span><span class="p">;</span>
 <span class="k">my</span> <span class="nv">%hash</span> <span class="o">=</span> <span class="p">(</span>
     <span class="s">'this'</span> <span class="o">=&gt;</span> <span class="s">'my'</span><span class="p">,</span>
@@ -438,8 +444,7 @@
 
 <p>Using pass-by-reference in Perl:</p>
 
-<div class="language-perl highlighter-rouge">
-<pre class="highlight"><code><span class="k">my</span> <span class="nv">$scalar</span> <span class="o">=</span> <span class="s">"this is a scalar"</span><span class="p">;</span>
+<div class="language-perl highlighter-rouge"><pre class="highlight"><code><span class="k">my</span> <span class="nv">$scalar</span> <span class="o">=</span> <span class="s">"this is a scalar"</span><span class="p">;</span>
 <span class="k">my</span> <span class="nv">@array</span> <span class="o">=</span> <span class="sx">qw( this is my array )</span><span class="p">;</span>
 <span class="k">my</span> <span class="nv">%hash</span> <span class="o">=</span> <span class="p">(</span>
     <span class="s">'this'</span> <span class="o">=&gt;</span> <span class="s">'my'</span><span class="p">,</span>
@@ -449,12 +454,13 @@
 </code></pre>
 </div>
 
-<p>In Java, we do not have an option to create anything with reference. Java is <strong>always pass-by-value</strong>. It can be confusing as we decided to call good old <strong>pointers</strong> <strong>references</strong>.</p>
+<p>And this is perfectly normal in Perl world. In Java, we do not have an option to create such reference.</p>
 
-<p>Here is an example that illustrates why it is <strong>pass-by-value</strong>:</p>
+<p>Basically Java is <strong>always pass-by-value</strong>. Terminology can be confusing as we decided to call good old <strong>pointers</strong> <strong>references</strong>.</p>
 
-<div class="language-java highlighter-rouge">
-<pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span> <span class="n">String</span><span class="o">[]</span> <span class="n">args</span> <span class="o">){</span>
+<p>Here is an example that illustrates why Java is <strong>pass-by-value</strong>:</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span> <span class="n">String</span><span class="o">[]</span> <span class="n">args</span> <span class="o">){</span>
     <span class="n">String</span> <span class="n">aString</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">"name"</span><span class="o">);</span> <span class="c1">// creating an explicit string object, just for the presentation.</span>
     <span class="n">say</span><span class="o">(</span><span class="n">aString</span><span class="o">);</span>
 
@@ -477,12 +483,11 @@
 </code></pre>
 </div>
 
-<p>Above example would obviously show <code class="highlighter-rouge">Java passes by value</code>. Simply Java is passing a copy of the reference as a value to the method.</p>
+<p>Above example would obviously output <code class="highlighter-rouge">Java passes by value</code>. Simply Java is passing a copy of the reference as a value to the method.</p>
 
 <p>We can twist this a bit further. Let’s consider this example:</p>
 
-<div class="language-java highlighter-rouge">
-<pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span> <span class="n">String</span><span class="o">[]</span> <span class="n">args</span> <span class="o">){</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span> <span class="n">String</span><span class="o">[]</span> <span class="n">args</span> <span class="o">){</span>
     <span class="n">AtomicBoolean</span> <span class="n">aBoolean</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicBoolean</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
     <span class="n">say</span><span class="o">(</span><span class="n">aBoolean</span><span class="o">);</span>
 
@@ -508,16 +513,15 @@
 
 <ol>
   <li>method <code class="highlighter-rouge">say</code> is called and copied <code class="highlighter-rouge">aBoolean</code>’s value of a reference to where that object is.</li>
-  <li>method <code class="highlighter-rouge">say</code> receives and now there is a local copy of <code class="highlighter-rouge">aBoolean</code> called <code class="highlighter-rouge">iAmBoolean</code>.</li>
-  <li>Remember reference to the object is still the same reference point. So changing</li>
+  <li>method <code class="highlighter-rouge">say</code> received the parameter hence there is a local copy of <code class="highlighter-rouge">aBoolean</code> called <code class="highlighter-rouge">iAmBoolean</code>.</li>
+  <li>Remember reference to the object is still the same reference point. So by setting the variable inside an object did not change its memory location, but just the value within the location.</li>
 </ol>
 
-<p>Let me illustrate this with an example:</p>
+<p>Let me show you further changes to above example below:</p>
 
-<div class="language-java highlighter-rouge">
-<pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span> <span class="n">String</span><span class="o">[]</span> <span class="n">args</span> <span class="o">){</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span> <span class="n">String</span><span class="o">[]</span> <span class="n">args</span> <span class="o">){</span>
     <span class="n">AtomicBoolean</span> <span class="n">aBoolean</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicBoolean</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">identityHashCode</span><span class="o">(</span><span class="n">aBoolean</span><span class="o">));</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">identityHashCode</span><span class="o">(</span><span class="n">aBoolean</span><span class="o">));</span> <span class="c1">// line added to see whereabout</span>
     <span class="n">say</span><span class="o">(</span><span class="n">aBoolean</span><span class="o">);</span>
 
     <span class="k">if</span> <span class="o">(!</span><span class="n">aBoolean</span><span class="o">.</span><span class="na">get</span><span class="o">())</span> <span class="o">{</span> <span class="c1">// if false</span>
@@ -530,7 +534,7 @@
 <span class="o">}</span>
 
 <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">say</span><span class="o">(</span><span class="n">AtomicBoolean</span> <span class="n">iAmBoolean</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">identityHashCode</span><span class="o">(</span><span class="n">iAmBoolean</span><span class="o">));</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">identityHashCode</span><span class="o">(</span><span class="n">iAmBoolean</span><span class="o">));</span> <span class="c1">// line added to see whereabout</span>
     <span class="n">Validate</span><span class="o">.</span><span class="na">isTrue</span><span class="o">(!</span><span class="n">iAmBoolean</span><span class="o">.</span><span class="na">get</span><span class="o">());</span> <span class="c1">// true</span>
 
     <span class="n">iAmBoolean</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
@@ -539,40 +543,11 @@
 </code></pre>
 </div>
 
-<p>I basically tweaked the example from above and added identityHashCode which will give numerical representation of the address. You will find that they are both identical. Lets use the first example I showed and add identity to it:</p>
+<p>I basically tweaked the example from above and added identityHashCode which will give numerical representation of the heap pointer address. You will find that they are both identical.</p>
 
-<div class="language-java highlighter-rouge">
-<pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span> <span class="n">String</span><span class="o">[]</span> <span class="n">args</span> <span class="o">){</span>
-    <span class="n">String</span> <span class="n">aString</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">"name"</span><span class="o">);</span> <span class="c1">// creating an explicit string object, just for the presentation.</span>
-    <span class="n">say</span><span class="o">(</span><span class="n">aString</span><span class="o">);</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">identityHashCode</span><span class="o">(</span><span class="n">aString</span><span class="o">));</span>
+<p>Lets use the first example I showed earlier and add some identityHashCode to it:</p>
 
-    <span class="k">if</span> <span class="o">(</span><span class="n">aString</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"name"</span><span class="o">))</span> <span class="o">{</span> <span class="c1">//true</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Java passes by value."</span> <span class="o">);</span>
-
-    <span class="o">}</span>
-
-    <span class="k">if</span> <span class="o">(</span><span class="n">aString</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"changename"</span><span class="o">))</span> <span class="o">{</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Java passes by reference."</span> <span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">say</span><span class="o">(</span><span class="n">String</span> <span class="n">d</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">identityHashCode</span><span class="o">(</span><span class="n">d</span><span class="o">));</span>
-    <span class="n">Validate</span><span class="o">.</span><span class="na">isTrue</span><span class="o">(</span><span class="n">d</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"name"</span><span class="o">));</span> <span class="c1">// true</span>
-
-    <span class="n">d</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">"changename"</span><span class="o">);</span>
-    <span class="n">Validate</span><span class="o">.</span><span class="na">isTrue</span><span class="o">(</span><span class="n">d</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"changename"</span><span class="o">));</span> <span class="c1">// true</span>
-<span class="o">}</span>
-</code></pre>
-</div>
-
-<p>You would also note that the values are the same which proves my point of copying the value of the reference. String by default is an <code class="highlighter-rouge">immutable</code> hence I cannot do something like <code class="highlighter-rouge">d.setName("changename")</code>. However, if this is allowed, it would be similar to the example I showed above.</p>
-
-<p>The important point I am bringing to the table is that Java passes a copied reference to the variable. They are essentially dealing with the same thing. With String example, you are resetting a String into a totally a new thing. Here is a what’s really going on:</p>
-
-<div class="language-java highlighter-rouge">
-<pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span> <span class="n">String</span><span class="o">[]</span> <span class="n">args</span> <span class="o">){</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span> <span class="n">String</span><span class="o">[]</span> <span class="n">args</span> <span class="o">){</span>
     <span class="n">String</span> <span class="n">aString</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">"name"</span><span class="o">);</span> <span class="c1">// creating an explicit string object, just for the presentation.</span>
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Original Before: \t"</span> <span class="o">+</span> <span class="n">System</span><span class="o">.</span><span class="na">identityHashCode</span><span class="o">(</span><span class="n">aString</span><span class="o">));</span>
     <span class="n">say</span><span class="o">(</span><span class="n">aString</span><span class="o">);</span>
@@ -580,7 +555,6 @@
 
     <span class="k">if</span> <span class="o">(</span><span class="n">aString</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"name"</span><span class="o">))</span> <span class="o">{</span> <span class="c1">//true</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">"Java passes by value."</span> <span class="o">);</span>
-
     <span class="o">}</span>
 
     <span class="k">if</span> <span class="o">(</span><span class="n">aString</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"changename"</span><span class="o">))</span> <span class="o">{</span>
@@ -601,8 +575,7 @@
 
 <p>Output:</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>Original Before: 	596512129
+<div class="highlighter-rouge"><pre class="highlight"><code>Original Before: 	596512129
 Passed In Before: 	596512129
 Passed In After: 	87285178
 Original After: 	596512129
@@ -610,22 +583,21 @@ Java passes by value.
 </code></pre>
 </div>
 
-<p>Note <code class="highlighter-rouge">Passed In After</code> has a different identityHashCode since entirely new set of string had been created.</p>
+<p>String by default is an <code class="highlighter-rouge">immutable</code> hence I cannot do something like <code class="highlighter-rouge">d.setName("changename")</code>. However, if this is allowed, it would be similar to the example I showed above. The important point I am bringing to the table is that Java passes a copied reference to the variable. They are essentially dealing with the same thing. The example shows this nicely with # showing as values based upon heap pointer address. In above example, you are basically resetting a String into totally another String which would change the memory location.</p>
 
 
           
 <!-- Share Buttons Start -->
 <div>
-  <h5 style="margin-bottom:1em;margin-left:.5em;">
-<i class="fa fa-quote-left" aria-hidden="true"></i> Share this post <i class="fa fa-quote-right" aria-hidden="true"></i>
-</h5>
+  <h5 style="margin-bottom:1em;margin-left:.5em;"><i class="fa fa-quote-left" aria-hidden="true"></i> Share this post <i class="fa fa-quote-right" aria-hidden="true"></i></h5>
   <ul class="rrssb-buttons clearfix">
     
       <li class="rrssb-email">
-        <a href="mailto:?subject=Top%2010%20Java%20Programming%20Mistakes&amp;body=https://stalk-calvin.github.io/blog/2017/01/17/developers-mistake.html" data-proofer-ignore>
+        <a href="mailto:?subject=Top 10 Java Programming Mistakes&body=https://stalk-calvin.github.io/blog/2017/01/17/developers-mistake.html" data-proofer-ignore>
           <span class="rrssb-icon">
-            <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28">
-              <path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"></path>
+            <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+              <path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"
+              />
             </svg>
           </span>
         </a>
@@ -633,17 +605,19 @@ Java passes by value.
     
     
       <li class="rrssb-facebook">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2017/01/17/developers-mistake.html&amp;title=Top%2010%20Java%20Programming%20Mistakes" class="popup">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2017/01/17/developers-mistake.html&title=Top 10 Java Programming Mistakes" class="popup">
           <span class="rrssb-icon">
-            <svg xmlns="https://www.w3.org/2000/svg" preserveaspectratio="xMidYMid" width="29" height="29" viewbox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z" class="cls-2" fill-rule="evenodd"></path></svg>
+            <svg xmlns="https://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="29" height="29" viewBox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z"
+              class="cls-2" fill-rule="evenodd"/></svg>
           </span>
         </a>
       </li>
     
     
       <li class="rrssb-twitter">
-        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2017/01/17/developers-mistake.html&amp;text=Top%2010%20Java%20Programming%20Mistakes" class="popup">
-          <span class="rrssb-icon"><svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28"><path d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62c-3.122.162-6.22-.646-8.86-2.32 2.702.18 5.375-.648 7.507-2.32-2.072-.248-3.818-1.662-4.49-3.64.802.13 1.62.077 2.4-.154-2.482-.466-4.312-2.586-4.412-5.11.688.276 1.426.408 2.168.387-2.135-1.65-2.73-4.62-1.394-6.965C5.574 7.816 9.54 9.84 13.802 10.07c-.842-2.738.694-5.64 3.434-6.48 2.018-.624 4.212.043 5.546 1.682 1.186-.213 2.318-.662 3.33-1.317-.386 1.256-1.248 2.312-2.4 2.942 1.048-.106 2.07-.394 3.02-.85-.458 1.182-1.343 2.15-2.48 2.71z"></path></svg></span>
+        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2017/01/17/developers-mistake.html&text=Top 10 Java Programming Mistakes"
+        class="popup">
+          <span class="rrssb-icon"><svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><path d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62c-3.122.162-6.22-.646-8.86-2.32 2.702.18 5.375-.648 7.507-2.32-2.072-.248-3.818-1.662-4.49-3.64.802.13 1.62.077 2.4-.154-2.482-.466-4.312-2.586-4.412-5.11.688.276 1.426.408 2.168.387-2.135-1.65-2.73-4.62-1.394-6.965C5.574 7.816 9.54 9.84 13.802 10.07c-.842-2.738.694-5.64 3.434-6.48 2.018-.624 4.212.043 5.546 1.682 1.186-.213 2.318-.662 3.33-1.317-.386 1.256-1.248 2.312-2.4 2.942 1.048-.106 2.07-.394 3.02-.85-.458 1.182-1.343 2.15-2.48 2.71z"/></svg></span>
         </a>
       </li>
     
@@ -651,8 +625,9 @@ Java passes by value.
       <li class="rrssb-linkedin">
       <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2017/01/17/developers-mistake.html" class="popup">
         <span class="rrssb-icon">
-          <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28">
-            <path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"></path>
+          <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+            <path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"
+            />
           </svg>
         </span>
       </a>
@@ -663,7 +638,7 @@ Java passes by value.
       <li class="rrssb-googleplus">
         <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2017/01/17/developers-mistake.html" class="popup">
           <span class="rrssb-icon">
-            <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"><path d="M21 8.29h-1.95v2.6h-2.6v1.82h2.6v2.6H21v-2.6h2.6v-1.885H21V8.29zM7.614 10.306v2.925h3.9c-.26 1.69-1.755 2.925-3.9 2.925-2.34 0-4.29-2.016-4.29-4.354s1.885-4.353 4.29-4.353c1.104 0 2.014.326 2.794 1.105l2.08-2.08c-1.3-1.17-2.924-1.883-4.874-1.883C3.65 4.586.4 7.835.4 11.8s3.25 7.212 7.214 7.212c4.224 0 6.953-2.988 6.953-7.082 0-.52-.065-1.104-.13-1.624H7.614z"></path></svg>
+            <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 8.29h-1.95v2.6h-2.6v1.82h2.6v2.6H21v-2.6h2.6v-1.885H21V8.29zM7.614 10.306v2.925h3.9c-.26 1.69-1.755 2.925-3.9 2.925-2.34 0-4.29-2.016-4.29-4.354s1.885-4.353 4.29-4.353c1.104 0 2.014.326 2.794 1.105l2.08-2.08c-1.3-1.17-2.924-1.883-4.874-1.883C3.65 4.586.4 7.835.4 11.8s3.25 7.212 7.214 7.212c4.224 0 6.953-2.988 6.953-7.082 0-.52-.065-1.104-.13-1.624H7.614z"/></svg>
           </span>
         </a>
       </li>
@@ -676,8 +651,7 @@ Java passes by value.
 
 
           
-            <div id="disqus_thread"></div>
-<!-- /#disqus_thread -->
+            <div id="disqus_thread"></div><!-- /#disqus_thread -->
             <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'stalkcalvin'; // required: replace example with your forum shortname
@@ -697,8 +671,7 @@ Java passes by value.
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
           
@@ -706,17 +679,17 @@ Java passes by value.
           <nav class="pagination" role="navigation">
             
             
-              <a href="https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html" class="btn" title="Java Generics">Java Generics »</a>
+              <a href="https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html" class="btn" title="Java Generics">Java Generics &raquo;</a>
             
           </nav><!-- /.pagination -->
 
-          <hr>
+          <hr />
 
           
           <div class="author row">
-            <img class="col-xs-4 col-sm-3 col-md-2" src="/img/author.jpg" alt="Me">
+            <img class="col-xs-4 col-sm-3 col-md-2" src="/img/author.jpg" alt="Me" />
             <p class="col-xs-8 col-sm-9 col-md-10">
-              Calvin Lee is a passionate software developer working in Gastown, Vancouver. <br>If you would like to connect with him, choose one from below options :) You can also just send me an email at <a href="mailto:stalk.calvin@gmail.com?subject=Mail%20from%20Calvin&amp;lrquo;s%20Blog">stalk.calvin@gmail.com</a>
+              Calvin Lee is a passionate software developer working in Gastown, Vancouver. <br/>If you would like to connect with him, choose one from below options :) </br>You can also just send me an email at <a href="mailto:stalk.calvin@gmail.com?subject=Mail from Calvin&lrquo;s Blog">stalk.calvin@gmail.com</a>
             </p>
           </div>
           
@@ -758,7 +731,7 @@ Java passes by value.
     <p><br></p>
 
     <div class="container text-center">
-      <p>Copyright © Calvin Lee</p>
+      <p>Copyright &copy; Calvin Lee</p>
       <p>2016 - 2017</p>
     </div>
     <p><br><br><br></p>
@@ -864,4 +837,6 @@ function addTohistory() {
 
 
   </body>
-</html><!-- Post Layout End -->
+</html>
+
+<!-- Post Layout End -->
