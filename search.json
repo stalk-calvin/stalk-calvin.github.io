@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Programming Languages",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/01/21/programming-languages.html",
+      "excerpt"		: "I picked for 2017",
+      "tags"        : ["language","programming","computer"]
+    }
+  
+
+  
+    ,{
       "title"			: "Java Programming Mistakes",
       "link"			: "https://stalk-calvin.github.io/blog/2017/01/21/developers-mistake.html",
       "excerpt"		: "people make",
