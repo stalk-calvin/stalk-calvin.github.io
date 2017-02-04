@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Online Judges",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/01/28/online-judges.html",
+      "excerpt"		: "Practice your coding skills",
+      "tags"        : ["online","judges","programming","coding"]
+    }
+  
+
+  
+    ,{
       "title"			: "Programming Languages",
       "link"			: "https://stalk-calvin.github.io/blog/2017/01/28/programming-languages.html",
       "excerpt"		: "I picked for 2017",
