@@ -16,9 +16,49 @@
       </author>
     
 	<link>https://stalk-calvin.github.io</link>
-    <updated>Sat, 04 Feb 2017 13:50:28 -0800</updated>
+    <updated>Sat, 11 Feb 2017 08:29:14 -0800</updated>
 	<atom:link href="https://stalk-calvin.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <link href="/" rel="alternate" type="text/html" hreflang="en" />
+	
+		<post xml:lang="en">
+            <id>/blog/2017/02/11/oauth</id>
+			<title>OAuth</title>
+			
+				<description>How Authorization Works over the internet</description>
+			
+            
+                <tag term="oauth" />
+            
+                <tag term="programming" />
+            
+                <tag term="coding" />
+            
+                <tag term="API" />
+            
+                <tag term="authorization" />
+            
+                <tag term="SaaS" />
+            
+                <tag term="cloud" />
+            
+			<pubDate>Sat, 11 Feb 2017 00:00:00 -0800</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/02/11/oauth.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
 	
 		<post xml:lang="en">
             <id>/blog/2017/02/04/online-judges</id>

@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "OAuth",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/02/11/oauth.html",
+      "excerpt"		: "How Authorization Works over the internet",
+      "tags"        : ["oauth","programming","coding","API","authorization","SaaS","cloud"]
+    }
+  
+
+  
+    ,{
       "title"			: "Online Judge",
       "link"			: "https://stalk-calvin.github.io/blog/2017/02/04/online-judges.html",
       "excerpt"		: "Practice your coding skills",
