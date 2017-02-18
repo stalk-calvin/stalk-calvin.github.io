@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "SAML",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/02/18/saml.html",
+      "excerpt"		: "exchange authentication and authorization data",
+      "tags"        : ["saml","markup","security","authentication","authorization","SSO"]
+    }
+  
+
+  
+    ,{
       "title"			: "OAuth",
       "link"			: "https://stalk-calvin.github.io/blog/2017/02/11/oauth.html",
       "excerpt"		: "How Authorization Works over the internet",
