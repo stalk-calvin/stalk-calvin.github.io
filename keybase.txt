@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/stalkcalvin
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://stalk-calvin.github.io
+  * I am stalkcalvin (https://keybase.io/stalkcalvin) on keybase.
+  * I have a public key with fingerprint AF69 B1A6 4E4C 8BA1 FEE3  426B 0644 5E6F AA14 5820
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01018e3cd47193235c7bebe27250959a2782252721cb82cba1950cf2390c2c4656a20a",
+            "fingerprint": "af69b1a64e4c8ba1fee3426b06445e6faa145820",
+            "host": "keybase.io",
+            "key_id": "06445e6faa145820",
+            "kid": "01018e3cd47193235c7bebe27250959a2782252721cb82cba1950cf2390c2c4656a20a",
+            "uid": "8f876b267bb4da7dc7c931ca22c54119",
+            "username": "stalkcalvin"
+        },
+        "service": {
+            "hostname": "stalk-calvin.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1487642421,
+    "expire_in": 157680000,
+    "prev": "9a68e7643fc6b051f4d3880c5f14464edb5cc03e31f094a3fdcbaf2440549136",
+    "seqno": 29,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.62
+Comment: https://keybase.io/crypto
+
+yMItAnicrZJbSBVBHMaPpWanBI2MKKNaiIzMdmZn9nKQDImwGxJFWAmnmdlZ3Tzn
+7OnsekpLsl7KpHsEJlTYDTIsIqgoMc2ikPTBKJII6qHQ6EIEBYY1qwVBr83LMDO/
+75vv/5/pzhwfCKa8r7l+e3PqzD0pPZ0XqgNlrWfwTok6Zo0U2ilV8dGJR0zueuEq
+25RCkgxkoHOFmUgDhgIVzDTKKYcaxLKBDQI1HUIsloBRHTJKgIFlZkHFkBlkSMUq
+gTKR8iXLjlXwRDxhxzxhSyzVoICoiCOmC5HFuYKgSmUVIcxVixCAsA5lIax0XF8h
+wlHi8gLbEXtiER6L9y//n3NXj9rplq6pFKoapcgkmsk0ZiiAEQgZRgAYPujyRIxE
+uaBdj0SqGIkk7ZhUly+Jg6TNuN9bv5i/oUVjVEGF7VVW07Hi4gnHc5gTEUyl58Xd
+kO/h1cR90XZOw7/twtSOmaKpQpHkCdd2YlIICJJ5tu8PkEiMIIIgX+I74naCh22f
+wJqqy2L49/CksDSIqnOBKhYT/cfAQqai6zLDFkBIPJBJMWOywhVgyQYiimWKblkQ
+IRkjAyiq5Be4LeZIIWiInKTCr82uiBGvOsGluq575amBlGAgPW2c/9sCwYlZf/7g
+WW3CSGFj5oeSTUWt2ZMedOdlDxwdMTA+ef9N1qwp35o+bXsW3ct6Wgvl5bWvZ5SW
+JuNP7zzM/oLbPz8vbNm+a2i47/taN3Cx9tCbog3feo+UTGluH5i9+tx+7ebGjBNd
+2o7i6Jo1DwbKj20datji3ujYFy3vfHG5f2r93M7DWdHer/lDak6w7WNP2bwl87+/
+yzmefjRSciatq+OKrh2YcPdH3umGpvONp+G0lm604NaspQef7DncuK9jXdPuzysS
+zQenh/KupfW1nahfnwpfnbJX0dezHy/OjS9Ymbs3B9JrCwdL+ounD76sezv4PDh/
++Jn7/vGy0hUXm5L9j34e6LuaMYdMjt90Lq36BQpEQ0g=
+=jqQ0
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/stalkcalvin
+
+==================================================================
