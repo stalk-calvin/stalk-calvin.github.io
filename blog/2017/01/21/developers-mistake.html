@@ -203,7 +203,7 @@
             
           </nav><!-- /.pagination -->
 
-          <p>There are couple of items I would like to go over to understand fully on some of the areas we developers make mistakes. I have personally made couple of mistakes introduced here and I thought I would write a post about them. If you are interested in coding in Java, <strong>I would at least skim through the list</strong>. Let’s start!</p>
+          <p>There are a couple of items I would like to go over to understand fully on some of the areas we developers make mistakes. I have personally made a couple of mistakes introduced here and I thought I would write a post about them. If you are interested in coding in Java, <strong>I would at least skim through the list</strong>. Let’s start!</p>
 
 <h3 id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-convert-array-to-arraylist"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Convert Array to ArrayList</h3>
 
@@ -213,7 +213,7 @@
 </code></pre>
 </div>
 
-<p>This will create java.util.Arrays.ArrayList, instead of java.util.ArrayList. They are slightly different. java.util.Arrays.ArrayList is fine to use when you are using operations like contains, get, set, etc.</p>
+<p>This will create the java.util.Arrays.ArrayList, instead of java.util.ArrayList. They are slightly different. java.util.Arrays.ArrayList is fine to use when you are using operations like contains, get, set, etc.</p>
 
 <p>However, if you are manipulating the size of the list, such operation as <code class="highlighter-rouge">add</code> or <code class="highlighter-rouge">remove</code> operation, the operations would not be available.</p>
 
@@ -240,7 +240,7 @@
 </code></pre>
 </div>
 
-<p>This is pretty much the same thing as using the loop. Searching here would also be O(n), but its simpler and there is definitely a gain on the space complexity since we do not need to make an extra set do handle this.</p>
+<p>This is pretty much the same thing as using the loop. Searching here would also be O(n), but it’s simpler and there is definitely a gain on the space complexity since we do not need to make an extra set do handle this.</p>
 
 <h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-removing-an-element-from-arraylist"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Removing an element from ArrayList</h3>
 
@@ -249,7 +249,7 @@
 <div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(</span><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"a"</span><span class="o">,</span> <span class="s">"b"</span><span class="o">,</span> <span class="s">"c"</span><span class="o">,</span> <span class="s">"d"</span><span class="o">));</span>
 <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">list</span><span class="o">.</span><span class="na">size</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
     <span class="c1">// ... operations ... //</span>
-	<span class="n">list</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
 <span class="o">}</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
 </code></pre>
@@ -257,20 +257,20 @@
 
 <p>Above will show <code class="highlighter-rouge">[b, d]</code> as a result, which is not entirely correct because my intention was to remove <strong>all</strong> the elements in the array.</p>
 
-<p>This is because when list items are being removed, index of those items also change at the same time. <code class="highlighter-rouge">remove(0)</code> would have restructured array for items in between index 1-3 which would become index 0-3 now and size decrement to 3 from 4 and it continues which would eventually remove every other elements and for loop ends when <code class="highlighter-rouge">i &lt; list.size()</code>.</p>
+<p>This is because when list items are being removed, index of those items also changes at the same time. <code class="highlighter-rouge">remove(0)</code> would have restructured array for items in between index 1-3 which would become index 0-3 now and size decrement to 3 from 4 and it continues which would eventually remove every other element and for loop ends when <code class="highlighter-rouge">i &lt; list.size()</code>.</p>
 
 <p>If a user used a foreach loop (introduced in JDK 1.5) instead like this:</p>
 
 <div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(</span><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"a"</span><span class="o">,</span> <span class="s">"b"</span><span class="o">,</span> <span class="s">"c"</span><span class="o">,</span> <span class="s">"d"</span><span class="o">));</span>
 <span class="k">for</span> <span class="o">(</span><span class="n">String</span> <span class="n">c</span> <span class="o">:</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
     <span class="c1">// ... operations ... //</span>
-	<span class="n">list</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">c</span><span class="o">);</span>  <span class="c1">// remove using String vs index in the previous example</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">c</span><span class="o">);</span>  <span class="c1">// remove using String vs index in the previous example</span>
 <span class="o">}</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
 </code></pre>
 </div>
 
-<p>Above will fail at the compiling stage with a checked exception, ConcurrentModificationException, because one is trying to modify the size of data structure which is being used to loop. Hmm.. then how should we iterate the List and remove all items?</p>
+<p>Above will fail at the compiling stage with a checked exception, ConcurrentModificationException, because one is trying to modify the size of a data structure which is being used to loop. Hmm.. then how should we iterate the List and remove all items?</p>
 
 <p>There is still another way to modify the elements and yet deleting the entire items in the List, using the iterator:</p>
 
@@ -285,26 +285,26 @@
 </code></pre>
 </div>
 
-<p>Now above code block will iterate and delete every elements in the list and show, <code class="highlighter-rouge">[]</code>. It is basically only using <code class="highlighter-rouge">hasNext()</code> instead of using its <code class="highlighter-rouge">size()</code> or <code class="highlighter-rouge">indexOf</code> operations.</p>
+<p>Now above code block will iterate and delete every element in the list and show, <code class="highlighter-rouge">[]</code>. It is basically only using <code class="highlighter-rouge">hasNext()</code> instead of using its <code class="highlighter-rouge">size()</code> or <code class="highlighter-rouge">indexOf</code> operations.</p>
 
 <h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-raw-type-collection"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Raw type collection</h3>
 
-<p>In the previous Blog Post, I had covered on <a href="/blog/2017/01/14/java-generics.html">Java Generics</a>. Like I mentioned in previous post, generics were introduced in JDK 1.5.0. Ever since then, it is <strong><em>not recommended</em></strong> to write Raw typed object in programming Java, especially when you are dealing with any <a href="https://docs.oracle.com/javase/1.5.0/docs/api/java/util/Collections.html">Java Collections</a>.</p>
+<p>In the previous Blog Post, I had covered on <a href="/blog/2017/01/14/java-generics.html">Java Generics</a>. Like I mentioned in the previous post, generics were introduced in JDK 1.5.0. Ever since then, it is <strong><em>not recommended</em></strong> to write a Raw typed object in programming Java, especially when you are dealing with any <a href="https://docs.oracle.com/javase/1.5.0/docs/api/java/util/Collections.html">Java Collections</a>.</p>
 
-<p>Let’s take a look at a example of Raw Type:</p>
+<p>Let’s take a look at an example of Raw Type:</p>
 
 <div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="n">List</span> <span class="n">list</span><span class="o">,</span> <span class="n">Object</span> <span class="n">o</span><span class="o">){</span>
-	<span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">o</span><span class="o">);</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">o</span><span class="o">);</span>
 <span class="o">}</span>
 <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
-	<span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
-	<span class="n">add</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="mi">10</span><span class="o">);</span>
-	<span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">list</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
+    <span class="n">add</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="mi">10</span><span class="o">);</span>
+    <span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">list</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
 <span class="o">}</span>
 </code></pre>
 </div>
 
-<p>As you can see clearly, there is no type enforced in the List parameter in <code class="highlighter-rouge">add</code> funcion although type is given in the input in the main method.</p>
+<p>As you can see clearly, there is no type enforced in the List parameter in <code class="highlighter-rouge">add</code> function although the type is given in the input in the main method.</p>
 
 <p>Your Modern IDE (with JDK 1.5.0 or higher) might give you a suggestion to Generify this for reasons. When you execute the above code, you will face a runtime exception called “ClassCastException” because 10 is not a String.</p>
 
@@ -356,13 +356,13 @@
 </code></pre>
 </div>
 
-<p>Modern IDE (with JDK 1.5.0 or higher) will probably generate a warning and suggest to use equals instead. My recommendation on this is to always use <code class="highlighter-rouge">equals</code> even when comparing Strings. Basically differences between == vs <code class="highlighter-rouge">equals</code> is that former is comparing the reference vs the latter compares the actual value. I can only assume what happened inside Java. Its got the exact same hashcode first and second “abcd” which means that they are pointing to the same thing inside memory and treating them both equally.</p>
+<p>Modern IDE (with JDK 1.5.0 or higher) will probably generate a warning and suggest to use equals instead. My recommendation on this is to always use <code class="highlighter-rouge">equals</code> even when comparing Strings. Basically differences between == vs <code class="highlighter-rouge">equals</code> is that former is comparing the reference vs the latter compares the actual value. I can only assume what happened inside Java. It’s got the exact same hashcode first and second “abcd” which means that they are pointing to the same thing inside memory and treating them both equally.</p>
 
 <p>Just keep in mind, when Object is being compared, <code class="highlighter-rouge">==</code> refers to references comparison. If you wanted to values to be compared via hashCode. You use <code class="highlighter-rouge">equals</code> instead. Remember to override <code class="highlighter-rouge">hashCode</code> if you override <code class="highlighter-rouge">equals</code> so as not to “break the contract”.</p>
 
 <h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-operatorshttpsdocsoraclecomjavasetutorialjavanutsandboltsopsummaryhtml"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html">Operators</a></h3>
 
-<p>Developers are often confused on basics, operators in Java. Here are list of operators supported in Java.</p>
+<p>Developers are often confused on basics, operators in Java. Here is list of operators supported in Java.</p>
 
 <table class="image" align="center">
 <caption class="custom" align="bottom">Arithmetic operators</caption>
@@ -384,11 +384,11 @@
 <tr><td><img src="https://www.safaribooksonline.com/library/view/javatm-how-to/9780133813036/graphics/app_a01.jpg" alt="Java order of operations" /></td></tr>
 </table>
 
-<p style="margin-top:2em">Above <code class="highlighter-rouge">Java order of operations</code> have the top, being the most highest precedence to the bottom, being the most lowest precedence. Ternary operators have same precedence as Unary ones.</p>
+<p style="margin-top:2em">Above <code class="highlighter-rouge">Java order of operations</code> have the top, being the highest precedence to the bottom, being the most lowest precedence. Ternary operators have the same precedence as Unary ones.</p>
 
 <h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-x-vs-x"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> ++x vs x++</h3>
 
-<p>Another common mistakes Java developers make. This is really a question of logic.</p>
+<p>Another common mistake Java developers make. This is really a question of logic.</p>
 
 <p><code class="highlighter-rouge">++x</code> increments the value of variable x <strong><em>before</em></strong> processing the current statement.</p>
 
@@ -415,13 +415,13 @@
 <span class="o">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p>output of <code class="highlighter-rouge">2 2 3 3</code> would be incorrect, instead <code class="highlighter-rouge">2 2 2 3</code> is the correct one because if you look at line #6, with x++ example, x is assigned to i before x is incremented.</p>
+<p>the output of <code class="highlighter-rouge">2 2 3 3</code> would be incorrect, instead <code class="highlighter-rouge">2 2 2 3</code> is the correct one because if you look at line #6, with x++ example, x is assigned to i before x is incremented.</p>
 
 <h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-code-comments"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Code comments</h3>
 
 <p>Oh, where should I begin this topic …</p>
 
-<p>Let me start with a story. There was a guy on my team a while ago. He one day asked around what a piece of code is doing. And when I went to my desk I immediately ran a <code class="highlighter-rouge">git blame</code> and traced version history. Guess what? It was himself who wrote it. It wasn’t something like he just made a minor space change to a line that caused him to show. It was him from the beginning. The next day at the standup, he would explain what had happened that the piece of codes were indeed his and explained to the people around why he had it written the way it is.</p>
+<p>Let me start with a story. There was a guy on my team a while ago. He one day asked what a piece of code is doing. And when I went to my desk I immediately ran a <code class="highlighter-rouge">git blame</code> and traced version history. Guess what? It was himself who wrote it. It wasn’t something like he just made a minor space change to a line that caused him to show. It was him from the beginning. The next day at the standup, he would explain what had happened that the piece of codes was indeed his and explained to the people around why he had it written the way it is.</p>
 
 <p>What happened here? He could have written a reference to <code class="highlighter-rouge">why</code> he did it in such a way.</p>
 
@@ -431,7 +431,7 @@
 
 <p>One of the developers was wondering if Java is pass-by-value or pass-by-reference. I told him Java is always <strong>pass-by-value</strong></p>
 
-<p>Well, you probably heard this before, “primitives are passed by value, objects are passed by reference”. This is a non-sense. Maybe it could be true in a Programming Language like C. I have never heard/used of a language working in this way though.</p>
+<p>Well, you probably heard this before, “primitives are passed by value, objects are passed by reference”. This is a non-sense. Maybe it could be true in a Programming Language like C. I have never heard/used a language working in this way, though.</p>
 
 <p>In a language like Perl, you can make anything a reference.</p>
 
@@ -449,9 +449,9 @@
 </code></pre>
 </div>
 
-<p>Above example will treat %hash to a plain array (listed with key/value). This is not ideal because in order to make it into a hash from the receiving side, there will be an ugly operations to support it.</p>
+<p>Above example will treat %hash to a plain array (listed with key/value). This is not ideal because, in order to make it into a hash from the receiving side, there will be ugly operations to support it.</p>
 
-<p>So it is important to use a reference to show exactly what it is like below which imo will clear things up:</p>
+<p>So it is important to use a reference to show exactly what it is like below which IMO will clear things up:</p>
 
 <p>Using <strong>pass-by-reference</strong> in Perl:</p>
 
@@ -467,7 +467,7 @@
 
 <p>And this is perfectly normal in Perl world. In above example, I referenced even primitive to show you that it is possible. Chances are there isn’t a good reason to reference primitives unless you really wish to manipulate with referenced variable.</p>
 
-<p>In Java, we do not have an option to create such reference. Basically Java is <strong>always pass-by-value</strong>.</p>
+<p>In Java, we do not have an option to create such reference. Basically, Java is <strong>always pass-by-value</strong>.</p>
 
 <p>Here is an example that illustrates why Java is <strong>pass-by-value</strong>:</p>
 
@@ -556,7 +556,7 @@
 
 <p>I basically added <code class="highlighter-rouge">identityHashCode </code>which will provide a numerical representation of the heap pointer address of the object. You will find that they are both identical.</p>
 
-<p>Output on my machine:</p>
+<p>The output on my machine:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>824318946
 824318946
@@ -564,7 +564,7 @@ Java passes by reference.
 </code></pre>
 </div>
 
-<p>Lets use the first example I showed earlier with the String and add some identityHashCode around it:</p>
+<p>Let’s use the first example I showed earlier with the String and add some identityHashCode around it:</p>
 
 <div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span> <span class="n">String</span><span class="o">[]</span> <span class="n">args</span> <span class="o">){</span>
     <span class="n">String</span> <span class="n">aString</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">"name"</span><span class="o">);</span> <span class="c1">// creating an explicit string object, just for the presentation.</span>
@@ -592,12 +592,12 @@ Java passes by reference.
 </code></pre>
 </div>
 
-<p>Output on my machine:</p>
+<p>The output on my machine:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Original Before: 	596512129
-Passed In Before: 	596512129
-Passed In After: 	87285178
-Original After: 	596512129
+<div class="highlighter-rouge"><pre class="highlight"><code>Original Before:    596512129
+Passed In Before:   596512129
+Passed In After:    87285178
+Original After:     596512129
 Java passes by value.
 </code></pre>
 </div>

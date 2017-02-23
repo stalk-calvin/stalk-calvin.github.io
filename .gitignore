@@ -2,13 +2,14 @@ _site
 .sass-cache/
 .jekyll-metadata
 Gemfile.lock
+Gemfile
 
-*.prefs
+.prefs
 
 # Eclipse
-*.classpath
-*.project
-*.settings
+.classpath
+.project
+.settings
 
 # Maven
 log/
@@ -16,11 +17,11 @@ log/
 
 # Intellij
 .idea/
-*.iml
-*.iws
+.iml
+.iws
 
 # Mac
-*.DS_Store
+.DS_Store
 
 # No needed html
 about.html

@@ -322,7 +322,7 @@ between the provider and consumer. It has been found vulnerable to <a href="http
 
 <h3 id="oauth-20">OAuth 2.0</h3>
 
-<p>Unlike OAuth 1.0, OAuth 2.0 is only a <a href="http://tools.ietf.org/html/draft-ietf-oauth-v2-28">working draft</a> and not an official standard. In many ways it is much simpler than its predecessor. It is often referred to as 2-Legged OAuth because it removes the need for the request token step.</p>
+<p>Unlike OAuth 1.0, OAuth 2.0 is only a <a href="http://tools.ietf.org/html/draft-ietf-oauth-v2-28">working draft</a> and not an official standard. In many ways, it is much simpler than its predecessor. It is often referred to as 2-Legged OAuth because it removes the need for the request token step.</p>
 
 <p>To enable an OAuth provider, you should add a <code class="highlighter-rouge">Provider</code> record with the necessary <code class="highlighter-rouge">authorization_url</code> and <code class="highlighter-rouge">access_token_url</code> as defined by the protocol. The provider’s API documentation should detail these for you. You
 will also need to define a <code class="highlighter-rouge">profile_url</code> which is the API endpoint for requesting the currently authenticated user’s profile information. You will also need to register for a key/secret pair from the provider.</p>
