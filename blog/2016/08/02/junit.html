@@ -187,7 +187,7 @@
               
                 <a class="tag" href="/tags/#testing">#testing</a>
               
-                <a class="tag" href="/tags/#junit">#junit</a>
+                <a class="tag" href="/tags/#JUnit">#JUnit</a>
               
                 <a class="tag" href="/tags/#computer">#computer</a>
               
@@ -205,7 +205,7 @@
             
           </nav><!-- /.pagination -->
 
-          <h3 id="here-are-some-annotation-and-their-usages-that-i-have-came-across-when-i-am-testing-using-junit">Here are some annotation and their usages that I have came across when I am testing using junit</h3>
+          <h3 id="here-are-some-annotation-and-their-usages-that-i-have-come-across-when-i-am-testing-using-junit">Here are some annotation and their usages that I have come across when I am testing using JUnit</h3>
 
 <ul>
   <li><code class="highlighter-rouge">@BeforeClass</code> – Run once before any of the test methods in the class, <code class="highlighter-rouge">public static void</code></li>
@@ -259,7 +259,7 @@
 <span class="o">}</span></code></pre></figure>
 
 <ul>
-  <li><code class="highlighter-rouge">@RunWith</code> – You can also assign a runwith annotation to indicate what class junit to be handled with. Below is example usage of Parameterized.class.</li>
+  <li><code class="highlighter-rouge">@RunWith</code> – You can also assign a @RunWith annotation to indicate what class JUnit to be handled with. Below is example usage of Parameterized.class.</li>
 </ul>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">test</span><span class="o">.</span><span class="na">testCase</span><span class="o">;</span>
@@ -353,25 +353,25 @@
 <span class="o">...</span></code></pre></figure>
 
 <ul>
-  <li><code class="highlighter-rouge">Mockito</code> - You will require to include dependancy library and add into your classpath called mokito-all. The test do not necessarily require any special annotation but I thought it worthwhile to mention here. Basic idea of Mocking an object is to create an accessible object for unit test to work. For more information: <a href="http://www.vogella.com/tutorials/Mockito/article.html#creating-and-configuring-mock-objects-with-mockito">Mockito</a></li>
+<li>
+<code class="highlighter-rouge">Mockito</code> - You will require to include dependancy library and add into your classpath called mokito-all. The test do not necessarily require any special annotation but I thought it worthwhile to mention here. Basic idea of Mocking an object is to create an accessible object for unit test to work. For more information: [Mockito](http://www.vogella.com/tutorials/Mockito/article.html#creating-and-configuring-mock-objects-with-mockito)
+</li>
+<li>
+<code class="highlighter-rouge">@Rule</code> – <a href="https://github.com/junit-team/junit/wiki/Rules">Rules</a> allow very flexible addition or redefinition of the behavior of each test method.
+</li>
 </ul>
 
 <h4 id="note-i-have-never-used-below-annotations-in-the-practice-however-they-seem-interesting-after-reading-about-them">NOTE: I have never used below annotations in the practice, however, they seem interesting after reading about them.</h4>
 
 <ul>
-  <li>
-    <p><code class="highlighter-rouge">@Category, @IncludeCategory, @ExcludeCategory</code> – You can group tests into <a href="https://github.com/junit-team/junit/wiki/Categories">Categories</a>.</p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">@Rule</code> – <a href="https://github.com/junit-team/junit/wiki/Rules">Rules</a> allow very flexible addition or redefinition of the behavior of each test method.</p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">@DataPoint, @DataPoints, @FromDataPoints, @ParametersSuppliedBy</code> – Annotating an field or method with <code class="highlighter-rouge">@DataPoint</code> will cause the field value or the value returned by the method to be used as a potential parameter for theories in that class. Annotating a parameter of a <code class="highlighter-rouge">@Theory</code> method with <code class="highlighter-rouge">@FromDataPoints</code> will limit the datapoints considered as potential values for that parameter to just the <code class="highlighter-rouge">@DataPoints</code> with the given name. Annotating a <code class="highlighter-rouge">@Theory</code> method parameter with <code class="highlighter-rouge">@ParametersSuppliedBy</code> causes it to be supplied with values from the named ParameterSupplier when run as a theory.</p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">@TestedOn</code> – The <code class="highlighter-rouge">@TestedOn</code> annotation takes an array of values to be used as data points for the annotated parameter.</p>
-  </li>
-</ul>
+<li>
+<code class="highlighter-rouge">@Category, @IncludeCategory, @ExcludeCategory</code>: You can group tests into <a href="https://github.com/junit-team/junit/wiki/Categories">Categories</a>.
+</li>
+<li>
+<code class="highlighter-rouge">@DataPoint, @DataPoints, @FromDataPoints, @ParametersSuppliedBy</code>: Annotating an field or method with <code class="highlighter-rouge">@DataPoint</code> will cause the field value or the value returned by the method to be used as a potential parameter for theories in that class. Annotating a parameter of a <code class="highlighter-rouge">@Theory</code> method with <code class="highlighter-rouge">@FromDataPoints</code> will limit the datapoints considered as potential values for that parameter to just the <code class="highlighter-rouge">@DataPoints</code> with the given name. Annotating a <code class="highlighter-rouge">@Theory</code> method parameter with <code class="highlighter-rouge">@ParametersSuppliedBy</code> causes it to be supplied with values from the named ParameterSupplier when run as a theory.
+</li>
+<li>
+<code class="highlighter-rouge">@TestedOn</code>: The <code class="highlighter-rouge">@TestedOn</code> annotation takes an array of values to be used as data points for the annotated parameter.
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Theory</span>
 <span class="o">...</span>
@@ -384,6 +384,8 @@
    <span class="o">}</span>
 <span class="o">...</span></code></pre></figure>
 
+</li>
+</ul>
 
 
           

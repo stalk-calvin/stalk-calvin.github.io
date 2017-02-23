@@ -211,7 +211,7 @@
 <h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-introduction">
 <i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Introduction</h2>
 
-<p><a href="http://docs.oracle.com/javase/tutorial/extra/generics/">Generics</a> in Java were introduced as one of features in JDK 5. It was one of the major changes in Java.</p>
+<p><a href="http://docs.oracle.com/javase/tutorial/extra/generics/">Generics</a> in Java were introduced as one of the features in JDK 5. It was one of the major changes in Java.</p>
 
 <p>In Java 4, we had raw types only:</p>
 
@@ -236,14 +236,14 @@
 <h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-history">
 <i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> History</h2>
 
-<p>Sun decided to start Java development in 1990 leaded by <a href="https://en.wikipedia.org/wiki/James_Gosling">James Gosling</a>. Since then, there had been numerous changes to get to Generics which was introduced in J2SE 5.0 in 2004. J2SE 5.0 consists of bunch of other <a href="https://en.wikipedia.org/wiki/Java_version_history#J2SE_5.0"><strong>Evolutionary</strong> Changes</a>. There had been couple of other changes after J2SE 5.0 was introduced. However, J2SE 5.0 is probably the most notable change in the Java history to be mentioned.</p>
+<p>Sun decided to start Java development in 1990 led by <a href="https://en.wikipedia.org/wiki/James_Gosling">James Gosling</a>. Since then, there had been numerous changes to get to Generics which was introduced in J2SE 5.0 in 2004. J2SE 5.0 consists of a bunch of other <a href="https://en.wikipedia.org/wiki/Java_version_history#J2SE_5.0"><strong>Evolutionary</strong> Changes</a>. There had been a couple of other changes after J2SE 5.0 was introduced. However, J2SE 5.0 is probably the most notable change in the Java history to be mentioned.</p>
 
 <h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-why-generics">
 <i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Why Generics?</h2>
 
 <p>Wikipedia says, <a href="https://en.wikipedia.org/wiki/Generics_in_Java">Generics</a> provides compile-time (static) type safety for collections and eliminates the need for most <a href="https://en.wikipedia.org/wiki/Type_conversion">typecasts (type conversion)</a> (specified by <a href="https://www.jcp.org/en/jsr/detail?id=14">JSR 14</a>). You might be thinking so what? Let’s take a look at the benefits.</p>
 
-<p>Code that uses generics has many benefits over non-generic code. Here are 3 points to address this:</p>
+<p>Code that uses generics has many benefits over the non-generic code. Here are 3 points to address this:</p>
 
 <ol style="padding-left: 1.5em; list-style: decimal;">
   <li>Stronger type checks at compile time: Probably the most important point of all. Avoiding runtime cast exception!</li>
@@ -252,16 +252,16 @@
   <li>Enabling programmers to implement generic algorithms: You can have a generic type instead of one-specific (i.e. String) type.</li>
 </ol>
 
-<p>Basically the most important point above is probably type checking of parameters in your code at the <strong><em>compile</em></strong> time, automatically! This is very important as Casting was a big <em>burn</em> as most of errors were bypassing the compiling until runtime exception rises in the production. Generics basically added stability to your code by making more of your bugs detectable at the compile time (Checked exception).</p>
+<p>Basically, the most important point above is probably type checking of parameters in your code at the <strong><em>compile</em></strong> time, automatically! This is very important as Casting was a big <em>burn</em> as most of the errors were bypassing the compiling until runtime exception rises in the production. Generics basically added stability to your code by making more of your bugs detectable at the compile time (Checked exception).</p>
 
 <h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-how-generics-works-in-java">
 <i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> How Generics works in Java</h2>
 
-<p>There are 2 important terms to discuss about the works of Generics in Java:</p>
+<p>There are 2 important terms to discuss the works of Generics in Java:</p>
 
 <p><img class="emoji" title=":one:" alt=":one:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png" height="20" width="20" align="absmiddle"> <a href="https://en.wikipedia.org/wiki/Type_safety">Type Safety</a></p>
 
-<p>This is basically saying as long as types are all passed compiler with Generics, ClassCastException should not occur in runtime. This is guaranteeing cast error-prone at the runtime as I discuseed as the most important point in “Why Generics”.</p>
+<p>This is basically saying as long as types are all passed compiler with Generics, ClassCastException should not occur at runtime. This is guaranteeing cast error-prone at the runtime as I discussed as the most important point in “Why Generics”.</p>
 
 <p>Example of Type Safety:</p>
 
@@ -276,7 +276,7 @@
 
 <p><img class="emoji" title=":two:" alt=":two:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png" height="20" width="20" align="absmiddle"> <a href="https://en.wikipedia.org/wiki/Type_erasure">Type Erasure</a></p>
 
-<p>This is basically saying that any of these type information added using Generics in the code will be removed in compiled bytecode. This is required to support old Java as Java itself is always backward compatible. Byte level code is basically kept using old Java syntax which wouldn’t use the Generics.</p>
+<p>This is basically saying that any of these type information added using Generics in the code will be removed in compiled bytecode. This is required to support old Java as Java itself is always backward compatible. Byte-level code is basically kept using old Java syntax which wouldn’t use the Generics.</p>
 
 <p>Here is an example of Type Erasure. Basically above Generics Type Safety example is converted like this:</p>
 
@@ -287,7 +287,7 @@
 </code></pre>
 </div>
 
-<p>It is worth to note that the String insertion will not be in the bytecode level as that code block will never bypass Compiler (cast checked exception)</p>
+<p>It is worth to note that the String insertion will not be at the bytecode level as that code block will never bypass Compiler (cast checked exception)</p>
 
 <p>Also, Type Erasure introduces a problem like following:</p>
 
@@ -300,14 +300,14 @@
 </code></pre>
 </div>
 
-<p>What this compares at the end of day is ArrayList, because Types would have been Erasede. There are other limitations to Generics. <a href="#generics_limitation">See end of this page</a>, you will find examples of them.</p>
+<p>What this compares at the end of a day is ArrayList, because Types would have been Erased. There are other limitations to Generics. <a href="#generics_limitation">See end of this page</a>, you will find examples of them.</p>
 
 <h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-type-parameter-naming-conventions">
 <i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Type Parameter Naming Conventions</h2>
 
-<p>There are conventions Java developers like to follow when it comes to using Generics. By convention, type parameter names are single, uppercase letters. This follows <a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html#naming">Java Naming Convention</a> that most of Java developers would know about. Naming conventions makes the code clean when everyone is following the same convention.</p>
+<p>There are conventions Java developers like to follow when it comes to using Generics. By convention, type parameter names are single, uppercase letters. This follows <a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html#naming">Java Naming Convention</a> that most of Java developers would know about. Naming conventions make the code clean when everyone is following the same convention.</p>
 
-<p>Commonly used type parameter names are follows:</p>
+<p>Commonly used type parameter names follow:</p>
 
 <ul>
   <li>E - Element (used extensively by the Java Collections Framework)</li>
@@ -325,7 +325,7 @@
 
 <p>The question mark (<em>?</em>) is used as the wildcard in Generics, which represents an unknown type. A wildcard parameterized type is an instantiation of a generic type where at least one type argument is a wildcard.</p>
 
-<p>Having an wildcard can mean different things in different context:</p>
+<p>Having a wildcard can mean different things in different context:</p>
 
 <ol style="padding-left: 1.5em; list-style: decimal;">
   <li>Collection&lt;?&gt; denotes all instantiations of the Collection interface regardless of the type argument.</li>
@@ -353,7 +353,7 @@
 </code></pre>
 </div>
 
-<p>If you look closely to the usage of generics in the diamond brackets, object is being defined using <code class="highlighter-rouge">extends</code> or <code class="highlighter-rouge">super</code>. There is a rule to define how and when to use <code class="highlighter-rouge">extends</code> vs <code class="highlighter-rouge">super</code>.</p>
+<p>If you look closely to the usage of generics in the diamond brackets, the object is being defined using <code class="highlighter-rouge">extends</code> or <code class="highlighter-rouge">super</code>. There is a rule to define how and when to use <code class="highlighter-rouge">extends</code> vs <code class="highlighter-rouge">super</code>.</p>
 
 <p>PECS stands for Producer-Extends, Consumer-Super. Let’s take an example of how they are used:</p>
 
@@ -364,7 +364,7 @@ Then the list is a producer, so you should use a Collection&lt;? extends Thing&g
   </li>
   <li>
     <p>You want to add things to the collection.
-Then the list is a consumer, so you should use a Collection&lt;? super Thing&gt;. The reasoning here is that unlike Collection&lt;? extends Thing&gt;, Collection&lt;? super Thing&gt; can always hold a Thing no matter what the actual parameterized type is. Here you don’t care what is already in the list as long as it will allow a Thing to be added; this is what ? super Thing guarantees.</p>
+Then the list is a consumer, so you should use a Collection&lt;? super Thing&gt;. The reasoning here is that unlike Collection&lt;? extends Thing&gt;, Collection&lt;? super Thing&gt; can always hold a Thing no matter what the actual parameterized type is. Here you don’t care what is already on the list as long as it will allow a Thing to be added; this is what? super Thing guarantees.</p>
   </li>
 </ol>
 
@@ -436,7 +436,7 @@ Also, to note, wildcard should not be used as a return type.</p>
 </code></pre>
 </div>
 
-<p>This is because Runtime exception type has no generics information . For more detail , look into <a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-11.html">JLS 11</a>. It has the note, “subclass of Throwable must not be generic (<a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.1.2">§8.1.2</a>.”</p>
+<p>This is because Runtime exception type has no generics information. For more detail, look into <a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-11.html">JLS 11</a>. It has the note, “subclass of Throwable must not be generic (<a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.1.2">§8.1.2</a>.”</p>
 
 <p><img class="emoji" title=":five:" alt=":five:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0035-20e3.png" height="20" width="20" align="absmiddle"> <span style="color: #F4A460;"><strong>Cannot be used as Casts or <code class="highlighter-rouge">instanceof</code> parameter</strong></span></p>
 
@@ -451,7 +451,7 @@ Also, to note, wildcard should not be used as a return type.</p>
 </code></pre>
 </div>
 
-<p>Above can be used with wildcard like so:</p>
+<p>Above can be used with a wildcard like so:</p>
 
 <div class="language-java highlighter-rouge">
 <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">test</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;?&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
@@ -488,8 +488,7 @@ Also, to note, wildcard should not be used as a return type.</p>
 
 <p>Generics enable the use of stronger type-checking, the elimination of casts, and the ability to develop generic algorithms. Without generics, many of the features that we use in Java today would not be possible.</p>
 
-<p>Do not use Raw types. Use <a href="http://docs.oracle.com/javase/tutorial/java/generics/index.html">Generics</a>. Also use Generics (types or methods) when you can. It is preferred way in modern Java. Also, upon using Generics, there cases where it is inevitable to avoid unchecked warning. In that case, use @SuppressWarnings(“unchecked”) annotation and explain why it is safe to ignore this error.</p>
-
+<p>Do not use Raw types. Use <a href="http://docs.oracle.com/javase/tutorial/java/generics/index.html">Generics</a>. Also, use Generics (types or methods) when you can. It is preferred way in modern Java. Also, upon using Generics, there cases where it is inevitable to avoid the unchecked warning. In that case, use @SuppressWarnings(“unchecked”) annotation and explain why it is safe to ignore this error.</p>
 
 
           

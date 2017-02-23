@@ -187,7 +187,7 @@
               
                 <a class="tag" href="/tags/#injection">#injection</a>
               
-                <a class="tag" href="/tags/#di">#di</a>
+                <a class="tag" href="/tags/#DI">#DI</a>
               
                 <a class="tag" href="/tags/#spring">#spring</a>
               
@@ -211,7 +211,7 @@
 
           <h3 style="clear:left;" id="what-is-a-dependancy-injection-why-do-we-need-it">What is a Dependancy Injection? Why do we need it?</h3>
 
-<p>Last time I wrote about design patterns on how we can create objects in different ways. Here is another way of creating an object, which is called Dependecy Injection. Simply, dependency is being injected from outside (container). There are 2 of the most popular ways to inject objects. One is to use Spring Framework, the other would be Guice created by Google. Let’s talk about these 2 and how they compare to traditional object creation.</p>
+<p>Last time I wrote about design patterns on how we can create objects in different ways. Here is another way of creating an object, which is called Dependency Injection. Simply, dependency is being injected from outside (container). There are 2 of the most popular ways to inject objects. One is to use Spring Framework, the other would be Guice created by Google. Let’s talk about these 2 and how they compare to traditional object creation.</p>
 
 <ol>
   <li>Spring Framework (aka Spring MVC)</li>
@@ -223,7 +223,7 @@
   <li>Interface Injection</li>
 </ul>
 
-<p>I will not go through all of them above. I will explain the Injection via Constructor method. First you need to load maven dependencies, you may not need the all of these dependencies but they are here more for reference purpose:</p>
+<p>I will not go through all of them above. I will explain the Injection via Constructor method. First, you need to load maven dependencies, you may not need the all of these dependencies but they are here more for reference purpose:</p>
 
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml">   <span class="nt">&lt;dependency&gt;</span>
        <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
@@ -305,7 +305,7 @@
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
-<p>Now you will be able to get to fileManager and get the directory via Spring DI. As you can see, A Spring bean is basically an object managed by Spring. More specifically, it is an object that is instantiated, configured and otherwise managed by a Spring Framework container. Spring is a POJO-driven although it doesn’t necessarily have to be. That means its using traditional style to create objects. No strings attached to complicate things.</p>
+<p>Now you will be able to get to fileManager and get the directory via Spring DI. As you can see, A Spring bean is basically an object managed by Spring. More specifically, it is an object that is instantiated, configured and otherwise managed by a Spring Framework container. Spring is a POJO-driven although it doesn’t necessarily have to be. That means it is using traditional style to create objects. No strings attached to complicate things.</p>
 
 <ol>
   <li>Google Guice (pronounced as Juice)</li>
@@ -326,9 +326,9 @@
 <p>First just like Spring, you need the libs/api provided by Google..</p>
 
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
-	<span class="nt">&lt;groupId&gt;</span>com.google.inject<span class="nt">&lt;/groupId&gt;</span>
-	<span class="nt">&lt;artifactId&gt;</span>guice<span class="nt">&lt;/artifactId&gt;</span>
-	<span class="nt">&lt;version&gt;</span>3.0<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.google.inject<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>guice<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>3.0<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
 
 <p>Sample Code:</p>
@@ -415,7 +415,6 @@ Print SomeThing</code></p>
 <code class="highlighter-rouge">Print SomeThing</code></p>
 
 <p>As you can see, you can be flexible as you wish to create your object.</p>
-
 
 
           

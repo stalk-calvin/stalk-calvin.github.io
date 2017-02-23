@@ -15,7 +15,7 @@
         
       </author>
     
-    <updated>Tue, 21 Feb 2017 21:49:43 -0800</updated>
+    <updated>Wed, 22 Feb 2017 21:35:39 -0800</updated>
     <link href="/" rel="alternate" type="text/html" hreflang="en" />
     <posts>
 	
@@ -280,7 +280,7 @@
             
                 <tag term="recursion" />
             
-                <tag term="fibonacci" />
+                <tag term="Fibonacci" />
             
                 <tag term="sequence" />
             
@@ -322,7 +322,7 @@
             
                 <tag term="learning" />
             
-                <tag term="iot" />
+                <tag term="IOT" />
             
                 <tag term="industrial" />
             
@@ -628,7 +628,7 @@
             
                 <tag term="injection" />
             
-                <tag term="di" />
+                <tag term="DI" />
             
                 <tag term="spring" />
             
@@ -732,7 +732,7 @@
             
                 <tag term="testing" />
             
-                <tag term="junit" />
+                <tag term="JUnit" />
             
                 <tag term="computer" />
             
@@ -793,7 +793,7 @@
             <id>/blog/2016/07/12/workout-split</id>
 			<title>Workout Split</title>
 			
-				<description>4 way workout split I do everyday</description>
+				<description>4-way workout split I do every day</description>
 			
             
                 <tag term="fitness" />

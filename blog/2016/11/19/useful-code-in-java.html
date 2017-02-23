@@ -204,13 +204,13 @@
 <i class="fa fa-quote-left" aria-hidden="true"></i> Some useful code blocks I find useful in Java <i class="fa fa-quote-right" aria-hidden="true"></i>
 </h3>
 
-<p>I am not sure about you guys, but at least for Java, there are certainly block of codes I like to keep around for later use. I have came across some useful ones (with concept) which I will cover here mainly for reference.</p>
+<p>I am not sure about you guys, but at least for Java, there are certainly block of codes I like to keep around for later use. I have come across some useful ones (with the concept) which I will cover here mainly for reference.</p>
 
 <h3 id="dao---data-access-object">1. DAO - Data Access Object</h3>
 
 <p>DAO is an abstraction where it provides an interface to data objects such as SQL/NoSQL Database, CSV, Spreadsheet, etc. It could literally be anything to store values. If you have typical structures to store some item. That could also be a DAO.</p>
 
-<p>Simple codes that shows how it could handle various DAO Object in maybe a dao factory which constructs and provide you objects needed, Example of using Factory pattern:</p>
+<p>Simple codes that show how it could handle various DAO Object in maybe a day factory which constructs and provide you objects needed, Example of using Factory pattern:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DAOFactory</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="n">DatabaseAccessObject</span> <span class="nf">getInstance</span><span class="o">(</span><span class="n">String</span> <span class="n">type</span><span class="o">,</span> <span class="n">Config</span> <span class="n">config</span><span class="o">)</span> <span class="o">{</span>
@@ -228,15 +228,15 @@
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
-<p>I would make the dao implements DatabaseAccessObject interface which provides basic operations such as OpenConnection, CloseConnection, getRows, writeRows, getColumns, writeColumns, ping, etc. That would be coomon in each DAO object.</p>
+<p>I would make the DAO implements DatabaseAccessObject interface which provides basic operations such as OpenConnection, CloseConnection, getRows, writeRows, getColumns, writeColumns, ping, etc. That would be common in each DAO object.</p>
 
 <h3 id="pojo---plain-old-java-object">2. POJO - Plain Old Java Object</h3>
 
-<p>There are many ways to create a Java Object from different set of documents. You can read/write from/to XML and JSON are the 2 great examples. However, you use the term for making anything into Java Objects such as Databases-POJO (Hibernate). I will just cover the 2 representations, XML and JSON here.</p>
+<p>There are many ways to create a Java Object from the different set of documents. You can read/write from/to XML and JSON are the 2 great examples. However, you use the term for making anything into Java Objects such as Databases-POJO (Hibernate). I will just cover the 2 representations, XML, and JSON here.</p>
 
 <p><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"> XML<br></p>
 
-<p>There are many different ways to make a POJO out of XML. Using @XStream is one of the ways. Here is a very simple usage. Say your xml look like,</p>
+<p>There are many different ways to make a POJO out of XML. Using @XStream is one of the ways. Here is a very simple usage. Say your XML look like,</p>
 
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;person&gt;</span>
    <span class="nt">&lt;birth_day&gt;</span>1980-01-01 00:00:01<span class="nt">&lt;birth_day&gt;</span>
@@ -382,7 +382,7 @@
 
 <h3 id="new-list-using-static-factories">5. New list using static factories</h3>
 
-<p>Unless you are using a Guava libraries, I suggest you make your own static factory that handles these data structures with name like below example:</p>
+<p>Unless you are using a Guava libraries, I suggest you make your own static factory that handles these data structures with a name like below example:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">K</span><span class="o">,</span> <span class="n">V</span><span class="o">&gt;</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;</span> <span class="nf">newHashMap</span><span class="o">()</span>
 <span class="o">{</span>
@@ -435,11 +435,11 @@
    <span class="o">}</span>
 <span class="o">};</span></code></pre></figure>
 
-<p>Or since you are defining statically, you can simply use static block to initialize.</p>
+<p>Or since you are defining statically, you can simply use the static block to initialize.</p>
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>There are so many useful convenient functions out there such as using annotations, interfaces, or Mockito. However, those items deserve a separate blog on their own as there are many details to talk about those. Above items are really just reference to me and people who might also find them useful. They often times come handy as they did for me. There are so many other useful <a href="https://github.com/stalk-calvin/Algorithms/tree/master/src/main/java/org/calvin/DesignPatterns">design patterns</a> I included as part of Algorithms Playground Project. Go to the linked URL and you will see bunch of design patterns on all categorized with its own unit tests to show you a better understanding on each. Please step through the examples to understand how each of them work step by step and see differences from another.</p>
+<p>There are so many useful convenient functions out there such as using annotations, interfaces, or Mockito. However, those items deserve a separate blog on their own as there are many details to talk about those. Above items are really just referenced to me and people who might also find them useful. They often times come handy as they did for me. There are so many other useful <a href="https://github.com/stalk-calvin/Algorithms/tree/master/src/main/java/org/calvin/DesignPatterns">design patterns</a> I included as part of Algorithms Playground Project. Go to the linked URL and you will see a bunch of design patterns on all categorized with its own unit tests to show you a better understanding on each. Please step through the examples to understand how each of them works step by step and sees differences from another.</p>
 
 
           
