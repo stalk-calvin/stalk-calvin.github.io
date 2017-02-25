@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "HTTP Response Codes",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/02/25/http-response-code.html",
+      "excerpt"		: "3-digit server status acknowledgment",
+      "tags"        : ["http","response","code","status","acknowledgment"]
+    }
+  
+
+  
+    ,{
       "title"			: "SAML",
       "link"			: "https://stalk-calvin.github.io/blog/2017/02/18/saml.html",
       "excerpt"		: "exchange authentication and authorization data",
