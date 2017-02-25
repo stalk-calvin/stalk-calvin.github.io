@@ -27,8 +27,8 @@
   <meta name="description" content="Stories about Calvin: Beer, Fitness, Diet, Computer Science and Programming.">
   <meta name="author" content="Calvin Lee">
   <meta name="keywords" content="calvin, lee, personal, blog, beer, fitness, diet, computer, science, programming, software, engineer">
-  <link rel="canonical" href="/blog/2017/02/18/saml.html">
-  <title>I am Calvin | SAML</title>
+  <link rel="canonical" href="/blog/2017/02/25/http-response-code.html">
+  <title>I am Calvin | HTTP Response Codes</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -175,187 +175,138 @@
     <section id="post" class="container content-section ">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <h1 style="display:inline; color: #F4A460;"><strong>SAML</strong></h1>
-          <h4 style="display:inline; color: #F4A460;"><strong>exchange authentication and authorization data</strong></h4><br />
+          <h1 style="display:inline; color: #F4A460;"><strong>HTTP Response Codes</strong></h1>
+          <h4 style="display:inline; color: #F4A460;"><strong>3-digit server status acknowledgment</strong></h4><br />
           <h4>
-            <strong>18 Feb 2017</strong>
+            <strong>25 Feb 2017</strong>
             <small>
-              <a href="/blog/2017/02/18/saml.html#disqus_thread">Comments</a>
+              <a href="/blog/2017/02/25/http-response-code.html#disqus_thread">Comments</a>
               <br />
               
-                <a class="tag" href="/tags/#saml">#saml</a>
+                <a class="tag" href="/tags/#http">#http</a>
               
-                <a class="tag" href="/tags/#markup">#markup</a>
+                <a class="tag" href="/tags/#response">#response</a>
               
-                <a class="tag" href="/tags/#security">#security</a>
+                <a class="tag" href="/tags/#code">#code</a>
               
-                <a class="tag" href="/tags/#authentication">#authentication</a>
+                <a class="tag" href="/tags/#status">#status</a>
               
-                <a class="tag" href="/tags/#authorization">#authorization</a>
-              
-                <a class="tag" href="/tags/#SSO">#SSO</a>
+                <a class="tag" href="/tags/#acknowledgment">#acknowledgment</a>
               
             </small>
           </h4>
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2017/02/25/http-response-code.html" class="btn" title="HTTP Response Codes">&laquo; HTTP Response Codes</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2017/02/11/oauth.html" class="btn" title="OAuth">OAuth &raquo;</a>
+              <a href="https://stalk-calvin.github.io/blog/2017/02/18/saml.html" class="btn" title="SAML">SAML &raquo;</a>
             
           </nav><!-- /.pagination -->
 
-          <p>We talked about OAuth last time, SAML has often discussed along with OAuth. They are kind of related yet have the different purposes. SAML’s focus is on the Authentication whereas OAuth has its focus on Authorization. SAML tries to provide the service with one ID (identity-as-a-service). Security Assertion Markup Language (SAML) is an open standard for exchanging authorization and authentication information between domains using standardized XML. SAML is brought to us by OASIS’s security service technical committee for handling SSO issues. SAML Profile with Redirect/POST bindings is one of the most common SSO (Single Sign On) implementation. SSO did not have many problems within the intranet. However, it required an SSO standard that works over the full internet. Keep in mind both OAuth and SAML is a concept/framework.</p>
-
-<h3 id="unified-id">Unified ID</h3>
-
-<p>We had days when the network wasn’t even setup/connected and we authenticated through the actual device or system which had the id and key information stored to validate. Then we were introduced to the network/the internet. Things were still the same, we would punch in username and password to the system that we are trying to gain access. However, there were many cons for doing this. For example, we had to keep username/password for each system. Also, it was fairly responsible for the system administrators spent countless hours trying to update/delete the username/password when someone leaves the company. Things were even uglier when there was a severe security measure. With an introduction to the SSO, we only had to manage username/password in one place.</p>
-
-<h3 id="single-sign-on-sso">Single Sign On (SSO)</h3>
-
-<p>In the beginning of World Wide Web, websites were very simple and static. And SSO (Single Sign On) used to be treated as a redundant extra idea then. However, as the internet evolved along with WWW, things became much more complex. It is common for an identity to host multiple websites. It’d be much hassle to login for each website just because they are in different locations. SAML is a very important standard for this to happen. I would say this is the key concept of the “authentication”.</p>
-
-<h3 id="design">Design</h3>
-
-<p>SAML is built upon a number of existing standards:</p>
-
-<ul style="padding-left: 1.0em; list-style: decimal;">
-  <li><strong><em>Extensible Markup Language (XML)</em></strong><br />
-<span style="margin-left: 1em;margin-right: 0;display: inline-block;">Most SAML exchanges are expressed in a standardized dialect of XML, which is the root for the name SAML (Security Assertion Markup Language).</span></li>
-  <li><strong><em>XML Schema (XSD)</em></strong><br />
-<span style="margin-left: 1em;margin-right: 0;display: inline-block;">SAML assertions and protocols are specified (in part) using XML Schema.</span></li>
-  <li><strong><em>XML Signature</em></strong><br />
-<span style="margin-left: 1em;margin-right: 0;display: inline-block;">Both SAML 1.1 and SAML 2.0 use digital signatures (based on the XML Signature standard) for authentication and message integrity.</span></li>
-  <li><strong><em>XML Encryption</em></strong><br />
-<span style="margin-left: 1em;margin-right: 0;display: inline-block;">Using XML Encryption, SAML 2.0 provides elements for encrypted name identifiers, encrypted attributes, and encrypted assertions (SAML 1.1 does not have encryption capabilities). XML Encryption is reported to have severe security concerns.</span></li>
-  <li><strong><em>Hypertext Transfer Protocol (HTTP)</em></strong><br />
-<span style="margin-left: 1em;margin-right: 0;display: inline-block;">SAML relies heavily on HTTP as its communications protocol.</span></li>
-  <li><strong><em>SOAP</em></strong><br />
-<span style="margin-left: 1em;margin-right: 0;display: inline-block;">SAML specifies the use of SOAP, specifically SOAP 1.1.</span></li>
-</ul>
-
-<h3 id="use-case">Use case</h3>
-
-<p>The primary SAML use case is called Web Browser Single Sign-On (SSO). A user wielding a user agent (usually a web browser) requests a web resource protected by a SAML service provider. The service provider, wishing to know the identity of the requesting user, issues an authentication request to a SAML identity provider through the user agent. The resulting protocol flow is depicted in the following diagram:</p>
-
-<table class="image" align="center">
-<caption class="custom" align="bottom">Single sign-on using SAML in a Web browser</caption>
-<tr><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Saml2-browser-sso-redirect-post.png/600px-Saml2-browser-sso-redirect-post.png" alt="Single sign-on using SAML in a Web browser" style="background: white;" /></td></tr>
-</table>
-
-<ol style="padding-left: 1.0em;list-style: decimal;">
-  <li><strong><em>Request the target resource at the Service Provider (SAML 2.0 only)</em></strong><br />
-<span style="margin-left: 1em;margin-right: 0;display: inline-block;">The principal (via an HTTP user agent) requests a target resource at the service provider: https://sp.example.com/myresource. The service provider performs a security check on behalf of the target resource. If a valid security context at the service provider already exists, skip steps 2–7.</span></li>
-  <li><strong><em>Redirect to the SSO Service at the IdP (SAML 2.0 only)</em></strong><br />
-<span style="margin-left: 1em;margin-right: 0;display: inline-block;">The service provider determines the user’s preferred identity provider (by unspecified means) and redirects the user agent to the SSO Service at the identity provider: https://idp.example.org/SAML2/SSO/Redirect?SAMLRequest=request. The value of the SAMLRequest parameter is the Base64 encoding of a deflated <samlp:authnrequest> element.</samlp:authnrequest></span></li>
-  <li><strong><em>Request the SSO Service at the IdP (SAML 2.0 only)</em></strong><br />
-<span style="margin-left: 1em;margin-right: 0;display: inline-block;">The user agent issues a GET request to the SSO service at the identity provider where the value of the SAMLRequest parameter is taken from the URL query string at step 2. The SSO service processes the AuthnRequest and performs a security check. If the user does not have a valid security context, the identity provider identifies the user (details omitted).</span></li>
-  <li><strong><em>Respond with an XHTML form</em></strong><br />
-<span style="margin-left: 1em;margin-right: 0;display: inline-block;">The SSO service validates the request and responds with a document containing an XHTML form:
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">"post"</span> <span class="na">action=</span><span class="s">"https://sp.example.com/SAML2/SSO/POST"</span> <span class="err">...</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"hidden"</span> <span class="na">name=</span><span class="s">"SAMLResponse"</span> <span class="na">value=</span><span class="s">"response"</span> <span class="nt">/&gt;</span>
-    ...
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Submit"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-The value of the SAMLResponse parameter is the base64 encoding of a &lt;samlp:Response&gt; element.
-</span></li>
-<li><strong><em>Request the Assertion Consumer Service at the SP</em></strong><br />
-<span style="margin-left: 1em;margin-right: 0;display: inline-block;">The user agent issues a POST request to the assertion consumer service at the service provider. The value of the SAMLResponse parameter is taken from the XHTML form at step 4. </span></li>
-<li><strong><em>Redirect to the target resource</em></strong><br />
-<span style="margin-left: 1em;margin-right: 0;display: inline-block;">The assertion consumer service processes the response, creates a security context at the service provider and redirects the user agent to the target resource.</span></li>
-<li><strong><em>Request the target resource at the SP again</em></strong><br />
-<span style="margin-left: 1em;margin-right: 0;display: inline-block;">The user agent requests the target resource at the service provider (again): https://sp.example.com/myresource</span></li>
-<li><strong><em>Respond with requested resource</em></strong><br />
-<span style="margin-left: 1em;margin-right: 0;display: inline-block;">Since a security context exists, the service provider returns the resource to the user agent.</span></li>
-</ol>
-
-<h3 id="table-of-comparison-between-oauth-and-saml">Table of comparison between OAuth and SAML</h3>
+          <p>When a client makes the request via HTTP, HTTP Response Code is the 3-digit status return code from the server. The first digit out of three represents the type/class of the response. The rest 2 digits are the identity numbers of the class. 5 classes of the HTTP Response codes are described in below table:</p>
 
 <table class="mbtablestyle">
   <thead>
     <tr>
-      <th style="text-align: left"> </th>
-      <th style="text-align: left">OAuth2</th>
-      <th style="text-align: left">SAML</th>
+      <th style="text-align: left">Response Class Code</th>
+      <th style="text-align: left">Response Class Code Group</th>
+      <th style="text-align: left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">Token (or assertion) format</td>
-      <td style="text-align: left">JSON or SAML2</td>
-      <td style="text-align: left">XML</td>
+      <td style="text-align: left">1</td>
+      <td style="text-align: left">Informational</td>
+      <td style="text-align: left">Received Request, processing</td>
     </tr>
     <tr>
-      <td style="text-align: left">Authorization?</td>
-      <td style="text-align: left">Yes</td>
-      <td style="text-align: left">Yes</td>
+      <td style="text-align: left">2</td>
+      <td style="text-align: left">Success</td>
+      <td style="text-align: left">Received Request, successfully</td>
     </tr>
     <tr>
-      <td style="text-align: left">Authentication?</td>
-      <td style="text-align: left">Pseudo-authentication</td>
-      <td style="text-align: left">Yes</td>
+      <td style="text-align: left">3</td>
+      <td style="text-align: left">Redirection</td>
+      <td style="text-align: left">Received Request, extra action</td>
     </tr>
     <tr>
-      <td style="text-align: left">Year created</td>
-      <td style="text-align: left">2005</td>
-      <td style="text-align: left">2001</td>
+      <td style="text-align: left">4</td>
+      <td style="text-align: left">Client Error</td>
+      <td style="text-align: left">Received Request, client request error</td>
     </tr>
     <tr>
-      <td style="text-align: left">Current version</td>
-      <td style="text-align: left">OAuth2</td>
-      <td style="text-align: left">SAML 2.0</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Security Risks</td>
-      <td style="text-align: left">Phishing</td>
-      <td style="text-align: left">HTTP Redirect (GET) binding</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left">OAuth 2.0 does not support signature</td>
-      <td style="text-align: left">SAML SOAP binding</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left">encryption</td>
-      <td style="text-align: left">HTTP POST binding</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left">channel binding</td>
-      <td style="text-align: left">XML Signature Wrapping to</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left">channel binding</td>
-      <td style="text-align: left">impersonate any user</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left">client verification.</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left">It relies completely on TLS for confidentiality.</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Transport</td>
-      <td style="text-align: left">HTTP</td>
-      <td style="text-align: left">HTTP</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Best suited for</td>
-      <td style="text-align: left">API authorization</td>
-      <td style="text-align: left">Single Sign On</td>
+      <td style="text-align: left">5</td>
+      <td style="text-align: left">Server Error</td>
+      <td style="text-align: left">Received Request, server error</td>
     </tr>
   </tbody>
 </table>
+
+<p>Let me emphasize on some of the important class codes. Note below are not the “full” list. Please check <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">wikipedia</a> for the full list.</p>
+
+<h3 id="xx-informational">1xx Informational</h3>
+
+<p>It is purely used for information transfers. You could think of this act as the “ping”.  It means the server received your request and currently working on it. 1xx has not be tuned further after HTTP/1.0. It is very rarely used as this isn’t a very useful class code.</p>
+
+<ul>
+  <li><strong><em>101 Switching Protocols</em></strong>: Sometimes used in WebSocket communication</li>
+</ul>
+
+<h3 id="xx-success">2xx Success</h3>
+
+<p>This class of status codes indicates the request from the client was successfully received, understood, and accepted.</p>
+
+<ul>
+  <li><strong><em>200 OK</em></strong>: This response represents a general success. Most common HTTP Response code.
+    <ul>
+      <li>GET an entity corresponding to the requested resource is sent in the response;</li>
+      <li>HEAD the entity-header fields corresponding to the requested resource are sent in the response without any message-body;</li>
+      <li>POST an entity describing or containing the result of the action;</li>
+      <li>TRACE an entity containing the request message as received by the end server.</li>
+    </ul>
+  </li>
+  <li><strong><em>201 Created</em></strong>: This is another success response code to indicate the resource had been successfully created.</li>
+  <li><strong><em>202 Accepted</em></strong>: Received the request but have not finished processing.</li>
+  <li><strong><em>204 No Content</em></strong>: Successfully processed yet no content is provided.</li>
+  <li><strong><em>206 Partial Content</em></strong>: Response has partial content. Usually, this means the client requested to set a boundary which server do as commanded.</li>
+</ul>
+
+<h3 id="xx-redirection">3xx Redirection</h3>
+
+<p>This response code means to be able to complete the task for this response code, redirection must happen. This is common in URL Shortener service. They use either 301 or  302. They would write destination URL in location header.</p>
+
+<ul>
+  <li><strong><em>301 Moved Permanently</em></strong>: Use when content is permanently moved. This and all future requests should be directed to the given URL.</li>
+  <li><strong><em>302 Found</em></strong>: This action would still redirect but temporarily. Things can change in the future. Although many people use this response code as a standard for such action, this status code is probably improper usage of 303.</li>
+  <li><strong><em>303 See Other</em></strong>: When the client requests using GET method for another location, the server can respond with this code. It redirects everything except requested using HEAD.</li>
+  <li><strong><em>304 Not Modified</em></strong>: Another common response code beside 200. It is an indication of the last content has not been modified. The requester would make a request with the header, If-Modified-Since HTTP header with the date. The server is responsible for providing a correct response code. See <a href="https://tools.ietf.org/html/rfc7232">RFC 7232</a> for details.</li>
+  <li><strong><em>307 Temporary Redirect</em></strong>: In this case, the request should be repeated with another URI; however, future requests should still use the original URI. In contrast to how 302 was historically implemented, the request method is not allowed to be changed when reissuing the original request. For example, a POST request should be repeated using another POST request.</li>
+  <li><strong><em>308 Permanent Redirect</em></strong>: The request and all future requests should be repeated using another URI. 307 and 308 parallel the behaviors of 302 and 301 but do not allow the HTTP method to change. So, for example, submitting a form to a permanently redirected resource may continue smoothly.
+Note: 307 and 308 are still in the early stage of being a standard which makes the modern browsers to understand correctly.</li>
+</ul>
+
+<h3 id="xx-client-error">4xx Client Error</h3>
+
+<p>The 4xx class of status code is intended for cases in which the client seems to have errors. Except when responding to a HEAD request, technically the server should include an entity containing an explanation of the error situation, and whether it is a temporary or permanent condition. These status codes are applicable to any request method.</p>
+
+<ul>
+  <li><strong><em>400 Bad Request</em></strong>: There is something wrong with the client request. Browsers treat this the same as 200 OK.</li>
+  <li><strong><em>401 Unauthorized</em></strong>: Restricted Access. The server requires HTTP Authentication information.</li>
+  <li><strong><em>403 Forbidden</em></strong>: Restricted access. Server denied displaying the content either through permissions or restricted IPs.</li>
+  <li><strong><em>404 Not Found</em></strong>: There is no resource in the requested item.</li>
+  <li><strong><em>405 Method Not Allowed</em></strong>: Client is using unauthorized HTTP Method.</li>
+</ul>
+
+<h3 id="xx-server-error">5xx Server Error</h3>
+
+<p>The 5xx class of status code intended for cases in which the server is aware that it has errors or is incapable of performing the request. Except when responding to a HEAD request, the server should include an entity containing an explanation of the error situation, and whether it is a temporary or permanent condition. User agents should display any included entity to the user. These response codes are applicable to any request method.</p>
+
+<ul>
+  <li><strong><em>500 Internal Server Error</em></strong>: Server replied back to the client saying something is wrong processing request.</li>
+  <li><strong><em>503 Service Unavailable</em></strong>: Server cannot process requests temporarily. This usually happens when there are too many concurrent users to serve.</li>
+  <li><strong><em>504 Gateway Timeout</em></strong>: There was a problem path to the Gateway, timed out.</li>
+  <li><strong><em>505 HTTP Version Not Supported</em></strong>: Client is using the HTTP version that is unsupported</li>
+</ul>
 
 
           
@@ -365,7 +316,7 @@ The value of the SAMLResponse parameter is the base64 encoding of a &lt;samlp:Re
   <ul class="rrssb-buttons clearfix">
     
       <li class="rrssb-email">
-        <a href="mailto:?subject=SAML&body=https://stalk-calvin.github.io/blog/2017/02/18/saml.html" data-proofer-ignore>
+        <a href="mailto:?subject=HTTP Response Codes&body=https://stalk-calvin.github.io/blog/2017/02/25/http-response-code.html" data-proofer-ignore>
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
               <path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"
@@ -377,7 +328,7 @@ The value of the SAMLResponse parameter is the base64 encoding of a &lt;samlp:Re
     
     
       <li class="rrssb-facebook">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2017/02/18/saml.html&title=SAML" class="popup">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2017/02/25/http-response-code.html&title=HTTP Response Codes" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="29" height="29" viewBox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z"
               class="cls-2" fill-rule="evenodd"/></svg>
@@ -387,7 +338,7 @@ The value of the SAMLResponse parameter is the base64 encoding of a &lt;samlp:Re
     
     
       <li class="rrssb-twitter">
-        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2017/02/18/saml.html&text=SAML"
+        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2017/02/25/http-response-code.html&text=HTTP Response Codes"
         class="popup">
           <span class="rrssb-icon"><svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><path d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62c-3.122.162-6.22-.646-8.86-2.32 2.702.18 5.375-.648 7.507-2.32-2.072-.248-3.818-1.662-4.49-3.64.802.13 1.62.077 2.4-.154-2.482-.466-4.312-2.586-4.412-5.11.688.276 1.426.408 2.168.387-2.135-1.65-2.73-4.62-1.394-6.965C5.574 7.816 9.54 9.84 13.802 10.07c-.842-2.738.694-5.64 3.434-6.48 2.018-.624 4.212.043 5.546 1.682 1.186-.213 2.318-.662 3.33-1.317-.386 1.256-1.248 2.312-2.4 2.942 1.048-.106 2.07-.394 3.02-.85-.458 1.182-1.343 2.15-2.48 2.71z"/></svg></span>
         </a>
@@ -395,7 +346,7 @@ The value of the SAMLResponse parameter is the base64 encoding of a &lt;samlp:Re
     
     
       <li class="rrssb-linkedin">
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2017/02/18/saml.html" class="popup">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2017/02/25/http-response-code.html" class="popup">
         <span class="rrssb-icon">
           <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
             <path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"
@@ -408,7 +359,7 @@ The value of the SAMLResponse parameter is the base64 encoding of a &lt;samlp:Re
     
     
       <li class="rrssb-googleplus">
-        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2017/02/18/saml.html" class="popup">
+        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2017/02/25/http-response-code.html" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 8.29h-1.95v2.6h-2.6v1.82h2.6v2.6H21v-2.6h2.6v-1.885H21V8.29zM7.614 10.306v2.925h3.9c-.26 1.69-1.755 2.925-3.9 2.925-2.34 0-4.29-2.016-4.29-4.354s1.885-4.353 4.29-4.353c1.104 0 2.014.326 2.794 1.105l2.08-2.08c-1.3-1.17-2.924-1.883-4.874-1.883C3.65 4.586.4 7.835.4 11.8s3.25 7.212 7.214 7.212c4.224 0 6.953-2.988 6.953-7.082 0-.52-.065-1.104-.13-1.624H7.614z"/></svg>
           </span>
@@ -450,10 +401,8 @@ The value of the SAMLResponse parameter is the base64 encoding of a &lt;samlp:Re
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2017/02/25/http-response-code.html" class="btn" title="HTTP Response Codes">&laquo; HTTP Response Codes</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2017/02/11/oauth.html" class="btn" title="OAuth">OAuth &raquo;</a>
+              <a href="https://stalk-calvin.github.io/blog/2017/02/18/saml.html" class="btn" title="SAML">SAML &raquo;</a>
             
           </nav><!-- /.pagination -->
 
@@ -587,7 +536,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 <script>
 function addTohistory() {
   if (!window.location.host.startsWith("127.0.0.1")) {
-    history.pushState({}, 'SAML', 'https://stalk-calvin.github.io/blog/2017/02/18/saml.html');
+    history.pushState({}, 'HTTP Response Codes', 'https://stalk-calvin.github.io/blog/2017/02/25/http-response-code.html');
   }
 }
 </script>
