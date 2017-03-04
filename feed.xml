@@ -15,9 +15,47 @@
         
       </author>
     
-    <updated>Sat, 25 Feb 2017 10:23:49 -0800</updated>
+    <updated>Sat, 04 Mar 2017 12:33:00 -0800</updated>
     <link href="/" rel="alternate" type="text/html" hreflang="en" />
     <posts>
+	
+		<post xml:lang="en">
+            <id>/blog/2017/03/04/farewell</id>
+			<title>Farewell @ Global Relay</title>
+			
+				<description>after almost 5 years of service</description>
+			
+            
+                <tag term="farewell" />
+            
+                <tag term="globalrelay" />
+            
+                <tag term="new" />
+            
+                <tag term="career" />
+            
+                <tag term="sony" />
+            
+                <tag term="spi" />
+            
+			<pubDate>Sat, 04 Mar 2017 00:00:00 -0800</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/03/04/farewell.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
 	
 		<post xml:lang="en">
             <id>/blog/2017/02/25/http-response-code</id>
