@@ -15,9 +15,45 @@
         
       </author>
     
-    <updated>Mon, 06 Mar 2017 17:30:14 -0800</updated>
+    <updated>Sat, 18 Mar 2017 08:42:48 -0700</updated>
     <link href="/" rel="alternate" type="text/html" hreflang="en" />
     <posts>
+	
+		<post xml:lang="en">
+            <id>/blog/2017/03/18/rocky-mountain</id>
+			<title>Trip to Rocky Mountain</title>
+			
+				<description>4-day travel log</description>
+			
+            
+                <tag term="travel" />
+            
+                <tag term="trip" />
+            
+                <tag term="rocky" />
+            
+                <tag term="mountains" />
+            
+                <tag term="banff" />
+            
+			<pubDate>Sat, 18 Mar 2017 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/03/18/rocky-mountain.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
 	
 		<post xml:lang="en">
             <id>/blog/2017/03/04/farewell</id>
@@ -569,7 +605,7 @@
             <id>/blog/2016/11/19/useful-code-in-java</id>
 			<title>Useful Java Code</title>
 			
-				<description>From my experience :smile:</description>
+				<description>From my experience</description>
 			
             
                 <tag term="java" />
@@ -577,6 +613,18 @@
                 <tag term="computer" />
             
                 <tag term="books" />
+            
+                <tag term="dao" />
+            
+                <tag term="pojo" />
+            
+                <tag term="gson" />
+            
+                <tag term="exception" />
+            
+                <tag term="xml" />
+            
+                <tag term="xstream" />
             
 			<pubDate>Sat, 19 Nov 2016 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/11/19/useful-code-in-java.html</link>

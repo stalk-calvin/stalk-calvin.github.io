@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Trip to Rocky Mountain",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/03/18/rocky-mountain.html",
+      "excerpt"		: "4-day travel log",
+      "tags"        : ["travel","trip","rocky","mountains","banff"]
+    }
+  
+
+  
+    ,{
       "title"			: "Farewell @ Global Relay",
       "link"			: "https://stalk-calvin.github.io/blog/2017/03/04/farewell.html",
       "excerpt"		: "after almost 5 years of service",
@@ -139,8 +148,8 @@
     ,{
       "title"			: "Useful Java Code",
       "link"			: "https://stalk-calvin.github.io/blog/2016/11/19/useful-code-in-java.html",
-      "excerpt"		: "From my experience :smile:",
-      "tags"        : ["java","computer","books"]
+      "excerpt"		: "From my experience",
+      "tags"        : ["java","computer","books","dao","pojo","gson","exception","xml","xstream"]
     }
   
 
