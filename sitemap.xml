@@ -91,6 +91,28 @@
        </url>
     
   
+    
+      <url>
+        <loc>https://stalk-calvin.github.io/blog/page4/</loc>
+        
+          
+          
+          
+          <priority>1.0</priority>
+          
+        
+       </url>
+    
+  
+  
+    <url>
+      <loc>https://stalk-calvin.github.io/blog/2017/03/25/software-facts-fallacies.html</loc>
+      
+        <lastmod>2017-03-25T00:00:00-07:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
   
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/03/18/rocky-mountain.html</loc>

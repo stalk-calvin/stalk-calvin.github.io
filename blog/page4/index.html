@@ -4,15 +4,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  
-<!-- HEAD Start -->
-
+   <!--
+ ============================================
+ ╔═╗┌┬┐┌─┐┬  ┬┌─     _____     __     _
+ ╚═╗ │ ├─┤│  ├┴┐    / ___/__ _/ /  __(_)__
+ ╚═╝ ┴ ┴ ┴┴─┘┴ ┴   / /__/ _ `/ / |/ / / _ \
+                   \___/\_,_/_/|___/_/_//_/        
+ ============================================
+ Author: Calvin Lee
+ Email: stalk.calvin@gmail.com
+ Profile: https://keybase.io/stalkcalvin
+ ============================================
+ -->
 <head>
   
 
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Stories about Calvin: Beer, Fitness, Diet, Computer Science and Programming.">
   <meta name="author" content="Calvin Lee">
@@ -79,7 +89,7 @@
   
 
 
-
+    
   
   <!-- MathJax -->
   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -95,6 +105,8 @@
       ga('send', 'pageview');
       
   </script>
+
+  
 </head>
 <!-- HEAD End -->
 
@@ -115,7 +127,7 @@
       
           <div>
             
-              <img src="/img/black-lab-glass.ico" alt="favicon">
+              <img src="/img/favicon.ico" alt="favicon">
             
             <h4 style="display:inline">I am Calvin</h4>
           </div>
@@ -135,21 +147,13 @@
           
             <li>
             
-              
-                <a href="/blog/"> Blog </a>
-              
+                <a href="/#search"> Search </a>
             
             </li>
           
             <li>
             
                 <a href="/#timeline"> Timeline </a>
-            
-            </li>
-          
-            <li>
-            
-                <a href="/#search"> Search </a>
             
             </li>
           
@@ -177,72 +181,6 @@
 
 
         <div>
-          
-            
-<!-- Post List Start -->
-
-<h4 align="left">
-  <strong>28 Jun 2016</strong>
-  <small>.
-    <a class="category" href="/categories/.html">
-      
-    </a>
-  .</small>
-  <br class="visible-xs-block">
-  <a href="/blog/2016/06/28/sorting.html">
-    <strong>Sorting</strong>
-  </a>
-  <br class="visible-xs-block">
-  <small><a href="/blog/2016/06/28/sorting.html#disqus_thread">Comments</a></small>
-</h4>
-
- <script type="text/javascript">
-     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-     var disqus_shortname = 'stalkcalvin'; // required: replace example with your forum shortname
- 
-     /* * * DON'T EDIT BELOW THIS LINE * * */
-     (function () {
-         var s = document.createElement('script'); s.async = true;
-         s.type = 'text/javascript';
-         s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
-         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-     }());
- </script>
-<!-- Post List End -->
-
-          
-            
-<!-- Post List Start -->
-
-<h4 align="left">
-  <strong>24 Jun 2016</strong>
-  <small>.
-    <a class="category" href="/categories/.html">
-      
-    </a>
-  .</small>
-  <br class="visible-xs-block">
-  <a href="/blog/2016/06/24/music.html">
-    <strong>Jang Bum Joon (장범준)</strong>
-  </a>
-  <br class="visible-xs-block">
-  <small><a href="/blog/2016/06/24/music.html#disqus_thread">Comments</a></small>
-</h4>
-
- <script type="text/javascript">
-     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-     var disqus_shortname = 'stalkcalvin'; // required: replace example with your forum shortname
- 
-     /* * * DON'T EDIT BELOW THIS LINE * * */
-     (function () {
-         var s = document.createElement('script'); s.async = true;
-         s.type = 'text/javascript';
-         s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
-         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-     }());
- </script>
-<!-- Post List End -->
-
           
             
 <!-- Post List Start -->
@@ -336,14 +274,14 @@
 <!-- Social Buttons End -->
 
 
-    <p><br><br></p>
+    <p><br></p>
 
     <div class="container text-center">
-      <p>Copyright &copy; Calvin Lee 2016</p>
+      <p>Copyright &copy; Calvin Lee</p>
+      <p>2016 - 2017</p>
     </div>
+    <p><br><br><br></p>
 </footer>
-
-<p><br><br><br><br><br><br></p>
 
 <!-- Footer End -->
 
@@ -369,6 +307,37 @@ $(document).on('click',function(){
 $('.collapse').collapse('hide');
 })
 </script> 
+<script type="text/javascript">
+$(document).ready(function() {
+    $(document).on("click","#archive_year_2017",function() {
+      $(this).parent().children("li").toggle();
+      togglePointer($(this));
+  });
+  $(document).on("click",".archive_month_2017",function() {
+      $(this).parent().children("li").toggle();
+      togglePointer($(this));
+  });
+  $(document).on("click","#archive_year_2016",function() {
+      $(this).parent().children("li").toggle();
+      togglePointer($(this));
+  });
+  $(document).on("click",".archive_month_2016",function() {
+      $(this).parent().children("li").toggle();
+      togglePointer($(this));
+  });
+  function togglePointer(elem) {
+     if (elem.text().indexOf('►') != -1) {
+        elem.text(elem.text().replace('►','▼'));
+     } else {
+        elem.text(elem.text().replace('▼','►'));
+     }
+  }
+  if ($(window).width() < 768) {
+     $('#index_leftbar').css("width", "100%");
+     $('#index_rightbar').hide();
+  }
+});
+</script>
 <script>
 function toggleNavCollapse(){50<$(".navbar").offset().top?$(".navbar-fixed-top").addClass("top-nav-collapse"):$(".navbar-fixed-top").removeClass("top-nav-collapse");}
 $(document).ready(toggleNavCollapse);
