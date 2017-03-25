@@ -15,9 +15,43 @@
         
       </author>
     
-    <updated>Sat, 18 Mar 2017 08:42:48 -0700</updated>
+    <updated>Sat, 25 Mar 2017 11:04:06 -0700</updated>
     <link href="/" rel="alternate" type="text/html" hreflang="en" />
     <posts>
+	
+		<post xml:lang="en">
+            <id>/blog/2017/03/25/software-facts-fallacies</id>
+			<title>Facts and Fallacies of Software Engineering</title>
+			
+				<description>My thoughts</description>
+			
+            
+                <tag term="programming" />
+            
+                <tag term="facts" />
+            
+                <tag term="fallacies" />
+            
+                <tag term="bookreview" />
+            
+			<pubDate>Sat, 25 Mar 2017 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/03/25/software-facts-fallacies.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
 	
 		<post xml:lang="en">
             <id>/blog/2017/03/18/rocky-mountain</id>

@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Facts and Fallacies of Software Engineering",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/03/25/software-facts-fallacies.html",
+      "excerpt"		: "My thoughts",
+      "tags"        : ["programming","facts","fallacies","bookreview"]
+    }
+  
+
+  
+    ,{
       "title"			: "Trip to Rocky Mountain",
       "link"			: "https://stalk-calvin.github.io/blog/2017/03/18/rocky-mountain.html",
       "excerpt"		: "4-day travel log",
