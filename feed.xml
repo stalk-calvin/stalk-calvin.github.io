@@ -15,9 +15,41 @@
         
       </author>
     
-    <updated>Sat, 25 Mar 2017 13:11:48 -0700</updated>
+    <updated>Sat, 01 Apr 2017 07:57:04 -0700</updated>
     <link href="/" rel="alternate" type="text/html" hreflang="en" />
     <posts>
+	
+		<post xml:lang="en">
+            <id>/blog/2017/04/01/beer-list</id>
+			<title>Beer Pick</title>
+			
+				<description>my favourite craft beers</description>
+			
+            
+                <tag term="craftbeer" />
+            
+                <tag term="beer" />
+            
+                <tag term="microbrewery" />
+            
+			<pubDate>Sat, 01 Apr 2017 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/04/01/beer-list.html</link>
+            
+            
+            
+            
+            
+
+            
+              <author>
+                  <name>Calvin Lee</name>
+                
+                  <email>stalk.calvin@gmail.com</email>
+                
+                
+              </author>
+            
+		</post>
 	
 		<post xml:lang="en">
             <id>/blog/2017/03/25/software-facts-fallacies</id>

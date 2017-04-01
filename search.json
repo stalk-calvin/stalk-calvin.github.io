@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Beer Pick",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/04/01/beer-list.html",
+      "excerpt"		: "my favourite craft beers",
+      "tags"        : ["craftbeer","beer","microbrewery"]
+    }
+  
+
+  
+    ,{
       "title"			: "Facts and Fallacies of Software Engineering",
       "link"			: "https://stalk-calvin.github.io/blog/2017/03/25/software-facts-fallacies.html",
       "excerpt"		: "My thoughts",
