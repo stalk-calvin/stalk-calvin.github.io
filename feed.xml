@@ -1,1135 +1,844 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+<channel>
     
-      <title type="html">I am Calvin</title>
+      <title>I am Calvin</title>
+    
+    <atom:link href="https://stalk-calvin.github.io/feed.xml" rel="self" type="application/rss+xml" />
+  	<link>https://stalk-calvin.github.io</link>
+
+    
+      <description>Stories about Calvin: Beer, Fitness, Diet, Computer Science and Programming.</description>
     
 
     
-      <subtitle>Stories about Calvin: Beer, Fitness, Diet, Computer Science and Programming.</subtitle>
+      <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
     
-
-    
-      <author>
-          <name>Calvin Lee</name>
-        
-        
-      </author>
-    
-    <updated>Sat, 01 Apr 2017 07:57:04 -0700</updated>
-    <link href="/" rel="alternate" type="text/html" hreflang="en" />
-    <posts>
+    <lastBuildDate>Sat, 01 Apr 2017 23:35:30 -0700</lastBuildDate>
 	
-		<post xml:lang="en">
-            <id>/blog/2017/04/01/beer-list</id>
+		<item>
 			<title>Beer Pick</title>
 			
 				<description>my favourite craft beers</description>
 			
-            
-                <tag term="craftbeer" />
-            
-                <tag term="beer" />
-            
-                <tag term="microbrewery" />
-            
+        
+          <category><![CDATA[craftbeer]]></category>
+        
+          <category><![CDATA[beer]]></category>
+        
+          <category><![CDATA[microbrewery]]></category>
+        
 			<pubDate>Sat, 01 Apr 2017 00:00:00 -0700</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/04/01/beer-list.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/04/01/beer-list</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2017/03/25/software-facts-fallacies</id>
+		<item>
 			<title>Facts and Fallacies of Software Engineering</title>
 			
 				<description>My thoughts</description>
 			
-            
-                <tag term="programming" />
-            
-                <tag term="facts" />
-            
-                <tag term="fallacies" />
-            
-                <tag term="bookreview" />
-            
+        
+          <category><![CDATA[programming]]></category>
+        
+          <category><![CDATA[facts]]></category>
+        
+          <category><![CDATA[fallacies]]></category>
+        
+          <category><![CDATA[bookreview]]></category>
+        
 			<pubDate>Sat, 25 Mar 2017 00:00:00 -0700</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/03/25/software-facts-fallacies.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/03/25/software-facts-fallacies</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2017/03/18/rocky-mountain</id>
+		<item>
 			<title>Trip to Rocky Mountain</title>
 			
 				<description>4-day travel log</description>
 			
-            
-                <tag term="travel" />
-            
-                <tag term="trip" />
-            
-                <tag term="rocky" />
-            
-                <tag term="mountains" />
-            
-                <tag term="banff" />
-            
+        
+          <category><![CDATA[travel]]></category>
+        
+          <category><![CDATA[trip]]></category>
+        
+          <category><![CDATA[rocky]]></category>
+        
+          <category><![CDATA[mountains]]></category>
+        
+          <category><![CDATA[banff]]></category>
+        
 			<pubDate>Sat, 18 Mar 2017 00:00:00 -0700</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/03/18/rocky-mountain.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/03/18/rocky-mountain</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2017/03/04/farewell</id>
+		<item>
 			<title>Farewell @ Global Relay</title>
 			
 				<description>after almost 5 years of service</description>
 			
-            
-                <tag term="farewell" />
-            
-                <tag term="globalrelay" />
-            
-                <tag term="new" />
-            
-                <tag term="career" />
-            
-                <tag term="sony" />
-            
-                <tag term="spi" />
-            
+        
+          <category><![CDATA[farewell]]></category>
+        
+          <category><![CDATA[globalrelay]]></category>
+        
+          <category><![CDATA[new]]></category>
+        
+          <category><![CDATA[career]]></category>
+        
+          <category><![CDATA[sony]]></category>
+        
+          <category><![CDATA[spi]]></category>
+        
 			<pubDate>Sat, 04 Mar 2017 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/03/04/farewell.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/03/04/farewell</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2017/02/25/http-response-code</id>
+		<item>
 			<title>HTTP Response Codes</title>
 			
 				<description>3-digit server status acknowledgment</description>
 			
-            
-                <tag term="http" />
-            
-                <tag term="response" />
-            
-                <tag term="code" />
-            
-                <tag term="status" />
-            
-                <tag term="acknowledgment" />
-            
+        
+          <category><![CDATA[http]]></category>
+        
+          <category><![CDATA[response]]></category>
+        
+          <category><![CDATA[code]]></category>
+        
+          <category><![CDATA[status]]></category>
+        
+          <category><![CDATA[acknowledgment]]></category>
+        
 			<pubDate>Sat, 25 Feb 2017 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/02/25/http-response-code.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/02/25/http-response-code</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2017/02/18/saml</id>
+		<item>
 			<title>SAML</title>
 			
 				<description>exchange authentication and authorization data</description>
 			
-            
-                <tag term="saml" />
-            
-                <tag term="markup" />
-            
-                <tag term="security" />
-            
-                <tag term="authentication" />
-            
-                <tag term="authorization" />
-            
-                <tag term="SSO" />
-            
+        
+          <category><![CDATA[saml]]></category>
+        
+          <category><![CDATA[markup]]></category>
+        
+          <category><![CDATA[security]]></category>
+        
+          <category><![CDATA[authentication]]></category>
+        
+          <category><![CDATA[authorization]]></category>
+        
+          <category><![CDATA[SSO]]></category>
+        
 			<pubDate>Sat, 18 Feb 2017 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/02/18/saml.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/02/18/saml</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2017/02/11/oauth</id>
+		<item>
 			<title>OAuth</title>
 			
 				<description>How Authorization Works over the internet</description>
 			
-            
-                <tag term="oauth" />
-            
-                <tag term="programming" />
-            
-                <tag term="coding" />
-            
-                <tag term="API" />
-            
-                <tag term="authorization" />
-            
-                <tag term="SaaS" />
-            
-                <tag term="cloud" />
-            
+        
+          <category><![CDATA[oauth]]></category>
+        
+          <category><![CDATA[programming]]></category>
+        
+          <category><![CDATA[coding]]></category>
+        
+          <category><![CDATA[API]]></category>
+        
+          <category><![CDATA[authorization]]></category>
+        
+          <category><![CDATA[SaaS]]></category>
+        
+          <category><![CDATA[cloud]]></category>
+        
 			<pubDate>Sat, 11 Feb 2017 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/02/11/oauth.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/02/11/oauth</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2017/02/04/online-judges</id>
+		<item>
 			<title>Online Judge</title>
 			
 				<description>Practice your coding skills</description>
 			
-            
-                <tag term="online" />
-            
-                <tag term="judges" />
-            
-                <tag term="programming" />
-            
-                <tag term="coding" />
-            
+        
+          <category><![CDATA[online]]></category>
+        
+          <category><![CDATA[judges]]></category>
+        
+          <category><![CDATA[programming]]></category>
+        
+          <category><![CDATA[coding]]></category>
+        
 			<pubDate>Sat, 04 Feb 2017 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/02/04/online-judges.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/02/04/online-judges</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2017/01/28/programming-languages</id>
+		<item>
 			<title>Programming Languages</title>
 			
 				<description>I picked for 2017</description>
 			
-            
-                <tag term="language" />
-            
-                <tag term="programming" />
-            
-                <tag term="computer" />
-            
+        
+          <category><![CDATA[language]]></category>
+        
+          <category><![CDATA[programming]]></category>
+        
+          <category><![CDATA[computer]]></category>
+        
 			<pubDate>Sat, 28 Jan 2017 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/01/28/programming-languages.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/01/28/programming-languages</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2017/01/21/developers-mistake</id>
+		<item>
 			<title>Java Programming Mistakes</title>
 			
 				<description>people make</description>
 			
-            
-                <tag term="mistake" />
-            
-                <tag term="programming" />
-            
-                <tag term="computer" />
-            
-                <tag term="Java" />
-            
+        
+          <category><![CDATA[mistake]]></category>
+        
+          <category><![CDATA[programming]]></category>
+        
+          <category><![CDATA[computer]]></category>
+        
+          <category><![CDATA[Java]]></category>
+        
 			<pubDate>Sat, 21 Jan 2017 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/01/21/developers-mistake.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/01/21/developers-mistake</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2017/01/14/java-generics</id>
+		<item>
 			<title>Java Generics</title>
 			
 				<description>Evolution of Java</description>
 			
-            
-                <tag term="java" />
-            
-                <tag term="generics" />
-            
-                <tag term="programming" />
-            
-                <tag term="computer" />
-            
+        
+          <category><![CDATA[java]]></category>
+        
+          <category><![CDATA[generics]]></category>
+        
+          <category><![CDATA[programming]]></category>
+        
+          <category><![CDATA[computer]]></category>
+        
 			<pubDate>Sat, 14 Jan 2017 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/01/14/java-generics</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2017/01/07/new-year-resolution</id>
+		<item>
 			<title>New Year's Resolution</title>
 			
 				<description> Making 2017 My Best Year Ever</description>
 			
-            
-                <tag term="newyear" />
-            
-                <tag term="resolution" />
-            
-                <tag term="year2017" />
-            
+        
+          <category><![CDATA[newyear]]></category>
+        
+          <category><![CDATA[resolution]]></category>
+        
+          <category><![CDATA[year2017]]></category>
+        
 			<pubDate>Sat, 07 Jan 2017 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/01/07/new-year-resolution.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/01/07/new-year-resolution</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/12/28/fibonacci</id>
+		<item>
 			<title>Fibonacci Numbers</title>
 			
 				<description></description>
 			
-            
-                <tag term="computer" />
-            
-                <tag term="dynamic" />
-            
-                <tag term="programming" />
-            
-                <tag term="algorithm" />
-            
-                <tag term="recursion" />
-            
-                <tag term="Fibonacci" />
-            
-                <tag term="sequence" />
-            
+        
+          <category><![CDATA[computer]]></category>
+        
+          <category><![CDATA[dynamic]]></category>
+        
+          <category><![CDATA[programming]]></category>
+        
+          <category><![CDATA[algorithm]]></category>
+        
+          <category><![CDATA[recursion]]></category>
+        
+          <category><![CDATA[Fibonacci]]></category>
+        
+          <category><![CDATA[sequence]]></category>
+        
 			<pubDate>Wed, 28 Dec 2016 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/12/28/fibonacci.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/12/28/fibonacci</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/12/24/future-of-computer-science</id>
+		<item>
 			<title>What's Next?</title>
 			
 				<description>The Future of Computer Science</description>
 			
-            
-                <tag term="computer" />
-            
-                <tag term="science" />
-            
-                <tag term="future" />
-            
-                <tag term="ai" />
-            
-                <tag term="machine" />
-            
-                <tag term="learning" />
-            
-                <tag term="IOT" />
-            
-                <tag term="industrial" />
-            
-                <tag term="revolution" />
-            
+        
+          <category><![CDATA[computer]]></category>
+        
+          <category><![CDATA[science]]></category>
+        
+          <category><![CDATA[future]]></category>
+        
+          <category><![CDATA[ai]]></category>
+        
+          <category><![CDATA[machine]]></category>
+        
+          <category><![CDATA[learning]]></category>
+        
+          <category><![CDATA[IOT]]></category>
+        
+          <category><![CDATA[industrial]]></category>
+        
+          <category><![CDATA[revolution]]></category>
+        
 			<pubDate>Sat, 24 Dec 2016 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/12/24/future-of-computer-science</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/12/17/keybase-io</id>
+		<item>
 			<title>Keybase.io</title>
 			
 				<description>easily encrypt, decrypt and share messages</description>
 			
-            
-                <tag term="computer" />
-            
-                <tag term="keybase" />
-            
-                <tag term="encryption" />
-            
-                <tag term="messaging" />
-            
+        
+          <category><![CDATA[computer]]></category>
+        
+          <category><![CDATA[keybase]]></category>
+        
+          <category><![CDATA[encryption]]></category>
+        
+          <category><![CDATA[messaging]]></category>
+        
 			<pubDate>Sat, 17 Dec 2016 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/12/17/keybase-io.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/12/17/keybase-io</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/12/10/big-o</id>
+		<item>
 			<title>Big O Notations</title>
 			
 				<description>the way I understand algorithm complexity</description>
 			
-            
-                <tag term="computer" />
-            
-                <tag term="science" />
-            
-                <tag term="complexity" />
-            
-                <tag term="big" />
-            
+        
+          <category><![CDATA[computer]]></category>
+        
+          <category><![CDATA[science]]></category>
+        
+          <category><![CDATA[complexity]]></category>
+        
+          <category><![CDATA[big]]></category>
+        
 			<pubDate>Sat, 10 Dec 2016 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/12/10/big-o.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/12/10/big-o</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/11/28/ables-java</id>
+		<item>
 			<title>Java Interfaces</title>
 			
 				<description>-ables in Java</description>
 			
-            
-                <tag term="java" />
-            
-                <tag term="computer" />
-            
-                <tag term="interface" />
-            
-                <tag term="serializable" />
-            
-                <tag term="cloneable" />
-            
-                <tag term="iterable" />
-            
-                <tag term="callable" />
-            
-                <tag term="comparable" />
-            
+        
+          <category><![CDATA[java]]></category>
+        
+          <category><![CDATA[computer]]></category>
+        
+          <category><![CDATA[interface]]></category>
+        
+          <category><![CDATA[serializable]]></category>
+        
+          <category><![CDATA[cloneable]]></category>
+        
+          <category><![CDATA[iterable]]></category>
+        
+          <category><![CDATA[callable]]></category>
+        
+          <category><![CDATA[comparable]]></category>
+        
 			<pubDate>Mon, 28 Nov 2016 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/11/28/ables-java.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/11/28/ables-java</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/11/26/google-guava</id>
+		<item>
 			<title>Google Guava</title>
 			
 				<description>a library you should incorporate on any project</description>
 			
-            
-                <tag term="java" />
-            
-                <tag term="computer" />
-            
-                <tag term="google" />
-            
-                <tag term="guava" />
-            
+        
+          <category><![CDATA[java]]></category>
+        
+          <category><![CDATA[computer]]></category>
+        
+          <category><![CDATA[google]]></category>
+        
+          <category><![CDATA[guava]]></category>
+        
 			<pubDate>Sat, 26 Nov 2016 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/11/26/google-guava.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/11/26/google-guava</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/11/19/useful-code-in-java</id>
+		<item>
 			<title>Useful Java Code</title>
 			
 				<description>From my experience</description>
 			
-            
-                <tag term="java" />
-            
-                <tag term="computer" />
-            
-                <tag term="books" />
-            
-                <tag term="dao" />
-            
-                <tag term="pojo" />
-            
-                <tag term="gson" />
-            
-                <tag term="exception" />
-            
-                <tag term="xml" />
-            
-                <tag term="xstream" />
-            
+        
+          <category><![CDATA[java]]></category>
+        
+          <category><![CDATA[computer]]></category>
+        
+          <category><![CDATA[books]]></category>
+        
+          <category><![CDATA[dao]]></category>
+        
+          <category><![CDATA[pojo]]></category>
+        
+          <category><![CDATA[gson]]></category>
+        
+          <category><![CDATA[exception]]></category>
+        
+          <category><![CDATA[xml]]></category>
+        
+          <category><![CDATA[xstream]]></category>
+        
 			<pubDate>Sat, 19 Nov 2016 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/11/19/useful-code-in-java.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/11/19/useful-code-in-java</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/11/12/Favourite-Books</id>
+		<item>
 			<title>5 Best Computer Books</title>
 			
 				<description>for me :closed_book:</description>
 			
-            
-                <tag term="computer" />
-            
-                <tag term="books" />
-            
+        
+          <category><![CDATA[computer]]></category>
+        
+          <category><![CDATA[books]]></category>
+        
 			<pubDate>Sat, 12 Nov 2016 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/11/12/Favourite-Books.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/11/12/Favourite-Books</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/11/05/Algorithms</id>
+		<item>
 			<title>Algorithms: My Programming Playground</title>
 			
 				<description>Place for practicing my coding skills</description>
 			
-            
-                <tag term="algorithm" />
-            
-                <tag term="programming" />
-            
-                <tag term="computer" />
-            
+        
+          <category><![CDATA[algorithm]]></category>
+        
+          <category><![CDATA[programming]]></category>
+        
+          <category><![CDATA[computer]]></category>
+        
 			<pubDate>Sat, 05 Nov 2016 00:00:00 -0700</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/11/05/Algorithms.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/11/05/Algorithms</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/10/29/lombok</id>
+		<item>
 			<title>Lombok: Simplify your development of Java code</title>
 			
 				<description>Annotations Made Java Coding Simpler</description>
 			
-            
-                <tag term="lombok" />
-            
-                <tag term="java" />
-            
-                <tag term="computer" />
-            
+        
+          <category><![CDATA[lombok]]></category>
+        
+          <category><![CDATA[java]]></category>
+        
+          <category><![CDATA[computer]]></category>
+        
 			<pubDate>Sat, 29 Oct 2016 00:00:00 -0700</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/10/29/lombok.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/10/29/lombok</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/10/22/dependency-injection</id>
+		<item>
 			<title>DI: Comparing Spring vs Guice</title>
 			
 				<description>With Examples</description>
 			
-            
-                <tag term="dependency" />
-            
-                <tag term="injection" />
-            
-                <tag term="DI" />
-            
-                <tag term="spring" />
-            
-                <tag term="guice" />
-            
-                <tag term="java" />
-            
-                <tag term="computer" />
-            
+        
+          <category><![CDATA[dependency]]></category>
+        
+          <category><![CDATA[injection]]></category>
+        
+          <category><![CDATA[DI]]></category>
+        
+          <category><![CDATA[spring]]></category>
+        
+          <category><![CDATA[guice]]></category>
+        
+          <category><![CDATA[java]]></category>
+        
+          <category><![CDATA[computer]]></category>
+        
 			<pubDate>Sat, 22 Oct 2016 00:00:00 -0700</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/10/22/dependency-injection.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/10/22/dependency-injection</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/10/15/builder-pattern</id>
+		<item>
 			<title>Builder Pattern vs Factory Method Pattern</title>
 			
 				<description>Big 2 of Creational Design Pattern</description>
 			
-            
-                <tag term="builder" />
-            
-                <tag term="factory" />
-            
-                <tag term="pattern" />
-            
+        
+          <category><![CDATA[builder]]></category>
+        
+          <category><![CDATA[factory]]></category>
+        
+          <category><![CDATA[pattern]]></category>
+        
 			<pubDate>Sat, 15 Oct 2016 00:00:00 -0700</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/10/15/builder-pattern.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/10/15/builder-pattern</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/09/25/new-team-new-life</id>
+		<item>
 			<title>New Team New Life</title>
 			
 				<description>So Far So Good!</description>
 			
-            
-                <tag term="newteam" />
-            
-                <tag term="java" />
-            
-                <tag term="developer" />
-            
+        
+          <category><![CDATA[newteam]]></category>
+        
+          <category><![CDATA[java]]></category>
+        
+          <category><![CDATA[developer]]></category>
+        
 			<pubDate>Sun, 25 Sep 2016 00:00:00 -0700</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/09/25/new-team-new-life.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/09/25/new-team-new-life</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/08/02/junit</id>
+		<item>
 			<title>Unit Testing Using Junit+Annotation</title>
 			
 				<description>Junit + Annotation = Powerful Way of Unit Testing</description>
 			
-            
-                <tag term="unit" />
-            
-                <tag term="testing" />
-            
-                <tag term="JUnit" />
-            
-                <tag term="computer" />
-            
-                <tag term="java" />
-            
+        
+          <category><![CDATA[unit]]></category>
+        
+          <category><![CDATA[testing]]></category>
+        
+          <category><![CDATA[JUnit]]></category>
+        
+          <category><![CDATA[computer]]></category>
+        
+          <category><![CDATA[java]]></category>
+        
 			<pubDate>Tue, 02 Aug 2016 00:00:00 -0700</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/08/02/junit.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/08/02/junit</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/08/02/git</id>
+		<item>
 			<title>Git Info</title>
 			
 				<description>Frequent Git Commands I Use On Daily Basis</description>
 			
-            
-                <tag term="repository" />
-            
-                <tag term="git" />
-            
-                <tag term="computer" />
-            
+        
+          <category><![CDATA[repository]]></category>
+        
+          <category><![CDATA[git]]></category>
+        
+          <category><![CDATA[computer]]></category>
+        
 			<pubDate>Tue, 02 Aug 2016 00:00:00 -0700</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/08/02/git.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/08/02/git</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/07/12/workout-split</id>
+		<item>
 			<title>Workout Split</title>
 			
 				<description>4-way workout split I do every day</description>
 			
-            
-                <tag term="fitness" />
-            
-                <tag term="workout" />
-            
-                <tag term="gym" />
-            
+        
+          <category><![CDATA[fitness]]></category>
+        
+          <category><![CDATA[workout]]></category>
+        
+          <category><![CDATA[gym]]></category>
+        
 			<pubDate>Tue, 12 Jul 2016 00:00:00 -0700</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/07/12/workout-split.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/07/12/workout-split</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/07/02/web-security</id>
+		<item>
 			<title>Web Security</title>
 			
 				<description>Security of web- sites, applications and services</description>
 			
-            
-                <tag term="websecurity" />
-            
-                <tag term="computer" />
-            
+        
+          <category><![CDATA[websecurity]]></category>
+        
+          <category><![CDATA[computer]]></category>
+        
 			<pubDate>Sat, 02 Jul 2016 00:00:00 -0700</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/07/02/web-security.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/07/02/web-security</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/06/28/sorting</id>
+		<item>
 			<title>Sorting</title>
 			
 				<description>Various ways of sorting methods</description>
 			
-            
-                <tag term="algorithm" />
-            
-                <tag term="sort" />
-            
-                <tag term="computer" />
-            
+        
+          <category><![CDATA[algorithm]]></category>
+        
+          <category><![CDATA[sort]]></category>
+        
+          <category><![CDATA[computer]]></category>
+        
 			<pubDate>Tue, 28 Jun 2016 00:00:00 -0700</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/06/28/sorting.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/06/28/sorting</guid>
+		</item>
 	
-		<post xml:lang="kr">
-            <id>/blog/2016/06/24/music</id>
+		<item>
 			<title>Jang Bum Joon (장범준)</title>
 			
 				<description>Songs I listen to these days</description>
 			
-            
-                <tag term="music" />
-            
-                <tag term="장범준" />
-            
+        
+          <category><![CDATA[music]]></category>
+        
+          <category><![CDATA[장범준]]></category>
+        
 			<pubDate>Fri, 24 Jun 2016 00:00:00 -0700</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/06/24/music.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/06/24/music</guid>
+		</item>
 	
-		<post xml:lang="en">
-            <id>/blog/2016/06/21/fruits-sugar-health</id>
+		<item>
 			<title>Sugar in Fruits</title>
 			
 				<description>Facts about natural sugar vs added sugar :watermelon: :strawberry: :apple: :+1:</description>
 			
-            
-                <tag term="diet" />
-            
-                <tag term="health" />
-            
+        
+          <category><![CDATA[diet]]></category>
+        
+          <category><![CDATA[health]]></category>
+        
 			<pubDate>Tue, 21 Jun 2016 00:00:00 -0700</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/06/21/fruits-sugar-health.html</link>
-            
-            
-            
-            
-            
-
-            
-              <author>
-                  <name>Calvin Lee</name>
-                
-                  <email>stalk.calvin@gmail.com</email>
-                
-                
-              </author>
-            
-		</post>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2016/06/21/fruits-sugar-health</guid>
+		</item>
 	
-    </posts>
+</channel>
 </rss>
