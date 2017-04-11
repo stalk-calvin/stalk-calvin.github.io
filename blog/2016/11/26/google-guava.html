@@ -684,10 +684,12 @@ $(document).ready(function() {
   }
   if ($(window).width() < 768) {
      $('#index_leftbar').css("width", "100%");
-     $('#index_rightbar').hide();
+     $('#index_right_t_bar').hide();
+     $('#index_right_b_bar').hide();
   }
 });
 </script>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <script>
 function toggleNavCollapse(){50<$(".navbar").offset().top?$(".navbar-fixed-top").addClass("top-nav-collapse"):$(".navbar-fixed-top").removeClass("top-nav-collapse");}
 $(document).ready(toggleNavCollapse);

@@ -268,7 +268,7 @@
 
             </div>
           </div>
-          <div id="index_rightbar" class="page_title sidebyside_right">
+          <div id="index_right_t_bar" class="page_title sidebyside_right">
             
             
             <h2 style="color: #F3F70E">Archives</h2>
@@ -789,6 +789,36 @@
               <div style="letter-spacing: 1px;">Total 111 tags so far..</div>
             </div>
           </div>
+          <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+          <style type="text/css">
+            #mce-EMAIL{color:#000}
+            #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+            #mc-embedded-subscribe { 
+                color: #F3F70E;
+                background-color: #000 !important;
+                margin: 1em 0 0 25%;
+                border-radius: 2em;
+                border: 2px solid;
+                padding: .5em 1em;
+            }
+            #mc-embedded-subscribe:hover { background-color: #800000 !important; color: #FFF}
+          </style>
+          <div id="index_right_b_bar" class="page_title sidebyside_right">
+            <form action="//github.us15.list-manage.com/subscribe/post?u=0a2317c6b3ec949b664df1bd4&amp;id=7f438e9e41" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <h2 style="color: #F3F70E">Subscribe</h2>
+              <div class="mc-field-group">
+                 <label for="mce-EMAIL">Email Address: </label>
+                 <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+              </div>
+              <div id="mce-responses" class="clear">
+                 <div class="response" id="mce-error-response" style="display:none"></div>
+                 <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0a2317c6b3ec949b664df1bd4_7f438e9e41" tabindex="-1" value=""></div>
+              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -1306,10 +1336,12 @@ $(document).ready(function() {
   }
   if ($(window).width() < 768) {
      $('#index_leftbar').css("width", "100%");
-     $('#index_rightbar').hide();
+     $('#index_right_t_bar').hide();
+     $('#index_right_b_bar').hide();
   }
 });
 </script>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <script>
 function toggleNavCollapse(){50<$(".navbar").offset().top?$(".navbar-fixed-top").addClass("top-nav-collapse"):$(".navbar-fixed-top").removeClass("top-nav-collapse");}
 $(document).ready(toggleNavCollapse);
