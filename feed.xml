@@ -14,7 +14,34 @@
     
       <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
     
-    <lastBuildDate>Wed, 12 Apr 2017 19:49:27 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 15 Apr 2017 23:06:07 -0700</lastBuildDate>
+	
+		<item>
+			<title>Vagrant vs Docker</title>
+			
+				<description>Independent Environmental Virtual Machines</description>
+			
+        
+          <category><![CDATA[vagrant]]></category>
+        
+          <category><![CDATA[docker]]></category>
+        
+          <category><![CDATA[virtualization]]></category>
+        
+          <category><![CDATA[virtual]]></category>
+        
+          <category><![CDATA[machines]]></category>
+        
+			<pubDate>Sat, 15 Apr 2017 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/04/15/vagrant-docker.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/04/15/vagrant-docker</guid>
+		</item>
 	
 		<item>
 			<title>Success - happy life</title>
@@ -32,7 +59,9 @@
         
           <category><![CDATA[consistency]]></category>
         
-          <category><![CDATA[regretminimization]]></category>
+          <category><![CDATA[regret]]></category>
+        
+          <category><![CDATA[minimization]]></category>
         
           <category><![CDATA[money]]></category>
         

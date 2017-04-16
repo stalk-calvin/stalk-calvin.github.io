@@ -27,8 +27,8 @@
   <meta name="description" content="Stories about Calvin: Beer, Fitness, Diet, Computer Science and Programming.">
   <meta name="author" content="Calvin Lee">
   <meta name="keywords" content="calvin, lee, personal, blog, beer, fitness, diet, computer, science, programming, software, engineer">
-  <link rel="canonical" href="/blog/2017/04/08/success.html">
-  <title>I am Calvin | Success - happy life</title>
+  <link rel="canonical" href="/blog/2017/04/15/vagrant-docker.html">
+  <title>I am Calvin | Vagrant vs Docker</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -175,82 +175,96 @@
     <section id="post" class="container content-section ">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <h1 style="display:inline; color: #F4A460;"><strong>Success - happy life</strong></h1>
-          <h4 style="display:inline; color: #F4A460;"><strong>my definition of success in life</strong></h4><br />
+          <h1 style="display:inline; color: #F4A460;"><strong>Vagrant vs Docker</strong></h1>
+          <h4 style="display:inline; color: #F4A460;"><strong>Independent Environmental Virtual Machines</strong></h4><br />
           <h4>
-            <strong>08 Apr 2017</strong>
+            <strong>15 Apr 2017</strong>
             <small>
-              <a href="/blog/2017/04/08/success.html#disqus_thread">Comments</a>
+              <a href="/blog/2017/04/15/vagrant-docker.html#disqus_thread">Comments</a>
               <br />
               
-                <a class="tag" href="/tags/#success">#success</a>
+                <a class="tag" href="/tags/#vagrant">#vagrant</a>
               
-                <a class="tag" href="/tags/#happy">#happy</a>
+                <a class="tag" href="/tags/#docker">#docker</a>
               
-                <a class="tag" href="/tags/#life">#life</a>
+                <a class="tag" href="/tags/#virtualization">#virtualization</a>
               
-                <a class="tag" href="/tags/#goal">#goal</a>
+                <a class="tag" href="/tags/#virtual">#virtual</a>
               
-                <a class="tag" href="/tags/#consistency">#consistency</a>
-              
-                <a class="tag" href="/tags/#regret">#regret</a>
-              
-                <a class="tag" href="/tags/#minimization">#minimization</a>
-              
-                <a class="tag" href="/tags/#money">#money</a>
-              
-                <a class="tag" href="/tags/#power">#power</a>
+                <a class="tag" href="/tags/#machines">#machines</a>
               
             </small>
           </h4>
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2017/04/15/vagrant-docker.html" class="btn" title="Vagrant vs Docker">&laquo; Vagrant vs Docker</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2017/04/01/beer-list.html" class="btn" title="Beer Pick">Beer Pick &raquo;</a>
+              <a href="https://stalk-calvin.github.io/blog/2017/04/08/success.html" class="btn" title="Success - happy life">Success - happy life &raquo;</a>
             
           </nav><!-- /.pagination -->
 
-          <p>I was at the church last Sunday and my pastor gave the talk on “<a href="https://coastalchurch.org/message-archive/sermon-on-the-mount/jesus-and-your-money/">Jesus And Your Money</a>: <em>Dealing With Hypocrisy and Greed</em>”. There he makes a 4 important factors on how to stay “content”: <em>Thanks, Prayer Meditate, Worry</em>. The pastor then makes sure we have a lot to thankful for in our life, yet nothing to worry to stay as content. I questioned what it means to stay as “content” then I eventually started asking myself, what is this so-called “<strong><em>success</em></strong>” in this life? I may not have lived a long life yet to narrow down the “<strong><em>success</em></strong>” of life is, but I certainly had a feeling of success in my life along with good achievements. Let me share some topics on what it means to stay successful in life.</p>
+          <p>Last Friday, I was at my previous company to hang out with my ex-colleagues and we dived into discussions of usage of docker vs vagrant. It was a brief talk but enough to catch my attention and I ended up searching more about them over the weekends. Both of them had a very interesting usage yet had different colors.</p>
 
-<h3 id="money">Money</h3>
+<p>Let’s assume that we are going to deploy a project in a server. We will first need a server, then need to set necessary server settings, not to mention project settings. The list goes on and on to have a successful deploy. The project may use certain language, a web server like a tomcat/apache/Nginx, which may use specific database requiring us to install libraries to use those databases. We finally need to bring the source code which would execute in this environment which may require us to install hundreds of dependencies associated to it. When this is all done, we may be able to run some this project. Well, obviously, it is vulnerable that you will miss a step in doing all this and problems will rise. Let’s call everything discussed here as “deployment” step. Just like git controlling the source codes, we can control this “deployment” in a tool like a docker or vagrant.</p>
 
-<p>Would having the endless amount of money turn your life into a successful one? People may think having tons of money is the way to live a successful life. Money undoubtedly has a very important role in life. However, I think money beyond your “need” is just a “greed”. However, it’s difficult to measure what that “need” borderline is. I guess when I say “need”, I mean well beyond living a satisfying life. I recently found <a href="http://www.globalrichlist.com/">this website</a> which tells you the bracket of your salary falls under compare to everyone else in the world. Mine is well below 1% of the world’s population which is actually embarrassing. It is shocking to realize that there are so many people out there trying to survive in their life even daily. The word “success” probably doesn’t mean to take as much as money you could possibly could, but by giving out what you have in excess that you wouldn’t need anymore. Notice the word “excess” I used. You may end up donating everything you have in your possession. The choice is certainly yours. I do not particularly think it’s a wise move to donate everything you have though. Well, if the purpose of the donation is so that others do not suffer, why are you carrying those sufferings to relieve others sufferings?</p>
+<h2 id="vagrant">Vagrant</h2>
 
-<h3 id="power">Power</h3>
+<p>Let’s start with Vagrant. Vagrant is a simplified VM manager. For example, let’s assume that you would like to install Ubuntu with your project settings on your Mac. Unless you install Ubuntu freshly on your Mac, you have to first install virtual machine regardless, then you will need to install the Ubuntu image then proper settings for your project. In order to simplify all these steps to get to that state, Vagrant had been introduced. Vagrant works as a box, let’s take a quick look at how it works.</p>
 
-<p>Power has never been a problem for me. I never felt power hungry, nor felt any need to be. I am always in hunger for things like how I could efficiently do something / how I could gain better knowledge in something / how I could basically improve myself every day, etc. I personally do not feel much special when someone thinks highly of me. Let me ask you this question, why do you want to have this so-called “power”? There was a buddy who wanted to become a manager. I obviously asked why. He said something along the line of securing the job, being able to make calls, being able to control others, being reputable, etc.</p>
-
-<ol style="padding-left: 1.5em; list-style: decimal;">
-  <li><strong><em>Securing the job</em></strong>: I rushed him, being a manager won’t secure you any job. You can probably secure the job even better if you have good knowledge in your job domain and confident of the things you do at work.</li>
-  <li><strong><em>Being able to make calls</em></strong>: You do not have to try to make calls to anything as long as you have the right knowledge and keep promoting yourself to be a better person. You will naturally want to dive in making these calls.</li>
-  <li><strong><em>Being able to control others</em></strong>: I asked him, why control other people? Why can’t you just be a person they will like and follow you? It is important to be a person who you can be proud of.</li>
+<ol>
+  <li>Box: OS image + settings (CPU, Memory, etc)</li>
+  <li>Vagrant File: Create the file by running, “vagrant init”. It describes the kind of the box.</li>
+  <li>Vagrant up: This will install and create the VM.</li>
+  <li>Vagrant ssh: connect using ssh into the VM.</li>
 </ol>
 
-<p>People have obviously different perceptions towards what “<strong><em>success</em></strong>” is in life. I am not here to tell you that any of their opinions are wrong. I picked 4 items as keys to my successful life. Things may be added to the below list over the course of my life, but these 4 items probably won’t be removed from the list.</p>
+<h2 id="docker">Docker</h2>
+<p>Most of the VMs we know all have the Host OS and there is <a href="https://en.wikipedia.org/wiki/Hypervisor">hypervisor</a> on top of it. Then there we add <a href="http://searchservervirtualization.techtarget.com/definition/guest-OS">Guest OS</a> on top of this VM. However, docker would simplify all this. Docker would not require any Hypervisor or Guest OS, it serves multiple containers which contain the differences from the host OS. For example, if host OS was a Ubuntu and you have CentOS as a container, then docker sees the differences in between the two and packages separately. This is called Guest OS Isolation. So you eventually have a light weight VM instead of full blown VM. Docker serves more than this. You can develop, test, staging, release server environment into one and manage them efficiently. If you look at docker community closely, they have well maintained <a href="https://hub.docker.com/">docker hub</a> where people would share all sorts of images out there to make it a container. You can also control versions of the image like Git where you can push/pull just like code versioning.</p>
 
-<ol style="padding-left: 1.5em;list-style: decimal;">
-<li style="padding-bottom: 1em;"><strong><em>Fail, fail and then fail again</em></strong><br />
-<span style="margin-left: 0em;margin-right: 0;display: inline-block;">
-<p style="padding-left: 30px;padding-top:30px;"><em>“Success is going from failure to failure without losing enthusiasm.” – Winston Churchill</em></p>
-This is one of the quotes I love from Winston Churchill. He has a lot more inspirational quotes which keep me moving forward. During my teenage, the society would always cram me into do the right thing. Failures weren't easily acceptable. After I graduated from college, I started working right away. There I encountered countless failures through my development of software. At first, bugs in software irritated me a lot. These days, I am grateful to anyone who finds any bug for me. Witnessing these failures and making the progress to analyze and debug these bugs motivates me to learn so much in the course. I can feel that these processes of learning would make me a better person each time. The school was so boring and tiring for me. Studying was never exciting because they always expected me to be correct and failures weren't acceptable. It was about getting good grades, learning from failures weren't that important. You must realize to learn after any failure along with the right purpose to do so. That's what is really important.
-</span></li>
-<li style="padding-bottom: 1em;"><strong><em>People</em></strong><br />
-<span style="margin-left: 0em;margin-right: 0;display: inline-block;">
-There are 2 people that I admire as a software engineer, Elon Musk, and Bill Gates. I love Musk for distinct and cool technology challenges he has initiated and building, companies include: <a href="https://en.wikipedia.org/wiki/Tesla,_Inc.">Tesla</a>, <a href="https://en.wikipedia.org/wiki/SpaceX">Space X</a>, <a href="https://en.wikipedia.org/wiki/SolarCity">SolarCity</a>, <a href="https://en.wikipedia.org/wiki/Neuralink">NeuraLink</a>, and many others. Even though Musk and Gates are both in the technology industry, they have very different color to each other. I admire Bill Gates for all the "excessive" money he is donating to the society. He even built a <a href="http://www.gatesfoundation.org/">foundation</a> under his name. Even though he happens to be the <a href="http://www.businessinsider.com/50-richest-people-on-earth-2016-1/#1-bill-gates-48">wealthiest man in the world</a>, he is a great example of what I talked about "excessive" money above. <a href="http://www.businessinsider.com/how-bill-gates-defines-success-2017-3">Here</a> is a post done by business insider where Gates expresses the importance of taking care of people closest to you to be in a successful life. He quotes, "Warren Buffett has always said the measure [of success] is whether the people close to you are happy and love you,". I agree to the fullest on this. My life had been very successful when my family and friends are all strong and well. They drive my life to live fullest with me.
-</span></li>
-<li style="padding-bottom: 1em;"><strong><em>Consistency</em></strong><br />
-<span style="margin-left: 0em;margin-right: 0;display: inline-block;">
-Consistency for me is everything. It probably is the most important point of everything discussed here. Being consistent brought me enormous changes in my life. It shapes my life in the way I want to be, builds that trust with myself and keeps me motivated all the time. I strongly believe these what-I-call "life gains" every day will make me a successful person in the future as long as I believe in doing things right. Well, regardless of being a successful person, I would like to continue to be consistent in my life because I love the feeling of achievements and excited to live life doing things I love such as writing blogs, programming hobbies or exercise every day. As always, too much = not good. I will explain what I mean from my experience. I started going to the gym in 2014. The first year, I was extremely consistent and lived a very strict life. Not going out to social with anybody, following strict rules with food consumption, counting every calories and schedule for each exercise. Then I realized I do not need to be this restrictive as I wasn't even that healthy following all these strict rules where I realized my goal of going to the gym was to stay healthy not to become some kind of body builder. You need to remember what your goal is in your life and balance that with if you are happy with that life. If my goal was to become a body builder and that is what made me a happy person, following those strict rules would have been the right thing to do.
-</span></li>
-<li style="padding-bottom: 1em;"><strong><em>Regret Minimization</em></strong><br />
-<span style="margin-left: 0em;margin-right: 0;display: inline-block;">I came across this topic as I was reading, <a href="https://www.amazon.ca/Algorithms-Live-Computer-Science-Decisions/dp/1480560367">Algorithms to Live By</a>. Here is a story discussed in the book which was quoted from Jeff Bezos from Amazon when he gave up his job at the investment firm and taking a risk to sell books online in Seattle: 
-<p style="padding-left: 30px;padding-top:30px;"><em>“The framework I found, which made the decision incredibly easy, was what I called — which only a nerd would call — a “regret minimization framework.” So I wanted to project myself forward to age 80 and say, “Okay, now I’m looking back on my life. I want to have minimized the number of regrets I have.” I knew that when I was 80 I was not going to regret having tried this. I was not going to regret trying to participate in this thing called the Internet that I thought was going to be a really big deal. I knew that if I failed I wouldn’t regret that, but I knew the one thing I might regret is not ever having tried. I knew that that would haunt me every day, and so when I thought about it that way it was an incredibly easy decision.”</em></p>
-There is a good lesson from this story. It goes back to my point #1 (Fail, fail and then fail again) above. Just like failures, "Regret can also be highly motivating". You should know and understand the failures are bound to happen. It's up to you to cope with the failures and find the best outcome from those decisions. On the other hand, you can regret that you made such decision and live your miserable life. If you think about it, what benefit is there to have any form of regrets? Learn your lessons and move on. Otherwise, it will just be with you forever and become a lifetime punishment. 
-</span></li>
-</ol>
+<table class="image">
+<caption class="custom" align="bottom">VM vs Docker</caption>
+<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/20170415vd/docker.png" alt="VM vs Docker" /></td></tr>
+</table>
+
+<h2 id="differences">Differences</h2>
+
+<p>Vagrant is a VM manager so it’s purpose is quite different from the Docker. Vagrant is used to creating a VM so it essentially works similar to traditional VM but in a slightly better way. Docker’s purpose is actually quite different. Docker provisions and creates different lightweight versions of VM (called containers).</p>
+
+<p>Quick Summary of differences:</p>
+
+<table class="mbtablestyle">
+  <thead>
+    <tr>
+      <th style="text-align: left">Docker</th>
+      <th style="text-align: left">Vagrant</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Container Type</td>
+      <td style="text-align: left">Hypervisor Type</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Host OS is same</td>
+      <td style="text-align: left">Host OS serve different OS</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Could Take Time</td>
+      <td style="text-align: left">Immediate</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Linux Only</td>
+      <td style="text-align: left">Linux, Unix, Windows</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>See below image for comparing between Vagrant and Docker:</p>
+
+<table class="image">
+<caption class="custom" align="bottom">Vagrant and Docker</caption>
+<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/20170415vd/docker-vs-vagrant.png" alt="Vagrant and Docker" /></td></tr>
+</table>
 
 
           
@@ -260,7 +274,7 @@ There is a good lesson from this story. It goes back to my point #1 (Fail, fail 
   <ul class="rrssb-buttons clearfix">
     
       <li class="rrssb-email">
-        <a href="mailto:?subject=Success - happy life&body=https://stalk-calvin.github.io/blog/2017/04/08/success.html" data-proofer-ignore>
+        <a href="mailto:?subject=Vagrant vs Docker&body=https://stalk-calvin.github.io/blog/2017/04/15/vagrant-docker.html" data-proofer-ignore>
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
               <path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"
@@ -272,7 +286,7 @@ There is a good lesson from this story. It goes back to my point #1 (Fail, fail 
     
     
       <li class="rrssb-facebook">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2017/04/08/success.html&title=Success - happy life" class="popup">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2017/04/15/vagrant-docker.html&title=Vagrant vs Docker" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="29" height="29" viewBox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z"
               class="cls-2" fill-rule="evenodd"/></svg>
@@ -282,7 +296,7 @@ There is a good lesson from this story. It goes back to my point #1 (Fail, fail 
     
     
       <li class="rrssb-twitter">
-        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2017/04/08/success.html&text=Success - happy life"
+        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2017/04/15/vagrant-docker.html&text=Vagrant vs Docker"
         class="popup">
           <span class="rrssb-icon"><svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><path d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62c-3.122.162-6.22-.646-8.86-2.32 2.702.18 5.375-.648 7.507-2.32-2.072-.248-3.818-1.662-4.49-3.64.802.13 1.62.077 2.4-.154-2.482-.466-4.312-2.586-4.412-5.11.688.276 1.426.408 2.168.387-2.135-1.65-2.73-4.62-1.394-6.965C5.574 7.816 9.54 9.84 13.802 10.07c-.842-2.738.694-5.64 3.434-6.48 2.018-.624 4.212.043 5.546 1.682 1.186-.213 2.318-.662 3.33-1.317-.386 1.256-1.248 2.312-2.4 2.942 1.048-.106 2.07-.394 3.02-.85-.458 1.182-1.343 2.15-2.48 2.71z"/></svg></span>
         </a>
@@ -290,7 +304,7 @@ There is a good lesson from this story. It goes back to my point #1 (Fail, fail 
     
     
       <li class="rrssb-linkedin">
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2017/04/08/success.html" class="popup">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2017/04/15/vagrant-docker.html" class="popup">
         <span class="rrssb-icon">
           <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
             <path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"
@@ -303,7 +317,7 @@ There is a good lesson from this story. It goes back to my point #1 (Fail, fail 
     
     
       <li class="rrssb-googleplus">
-        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2017/04/08/success.html" class="popup">
+        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2017/04/15/vagrant-docker.html" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 8.29h-1.95v2.6h-2.6v1.82h2.6v2.6H21v-2.6h2.6v-1.885H21V8.29zM7.614 10.306v2.925h3.9c-.26 1.69-1.755 2.925-3.9 2.925-2.34 0-4.29-2.016-4.29-4.354s1.885-4.353 4.29-4.353c1.104 0 2.014.326 2.794 1.105l2.08-2.08c-1.3-1.17-2.924-1.883-4.874-1.883C3.65 4.586.4 7.835.4 11.8s3.25 7.212 7.214 7.212c4.224 0 6.953-2.988 6.953-7.082 0-.52-.065-1.104-.13-1.624H7.614z"/></svg>
           </span>
@@ -345,10 +359,8 @@ There is a good lesson from this story. It goes back to my point #1 (Fail, fail 
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2017/04/15/vagrant-docker.html" class="btn" title="Vagrant vs Docker">&laquo; Vagrant vs Docker</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2017/04/01/beer-list.html" class="btn" title="Beer Pick">Beer Pick &raquo;</a>
+              <a href="https://stalk-calvin.github.io/blog/2017/04/08/success.html" class="btn" title="Success - happy life">Success - happy life &raquo;</a>
             
           </nav><!-- /.pagination -->
 
@@ -484,7 +496,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 <script>
 function addTohistory() {
   if (!window.location.host.startsWith("127.0.0.1")) {
-    history.pushState({}, 'Success - happy life', 'https://stalk-calvin.github.io/blog/2017/04/08/success.html');
+    history.pushState({}, 'Vagrant vs Docker', 'https://stalk-calvin.github.io/blog/2017/04/15/vagrant-docker.html');
   }
 }
 </script>

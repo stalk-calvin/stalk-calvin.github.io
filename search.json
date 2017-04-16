@@ -2,10 +2,19 @@
 
   
     {
+      "title"			: "Vagrant vs Docker",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/04/15/vagrant-docker.html",
+      "excerpt"		: "Independent Environmental Virtual Machines",
+      "tags"        : ["vagrant","docker","virtualization","virtual","machines"]
+    }
+  
+
+  
+    ,{
       "title"			: "Success - happy life",
       "link"			: "https://stalk-calvin.github.io/blog/2017/04/08/success.html",
       "excerpt"		: "my definition of success in life",
-      "tags"        : ["success","happy","life","goal","consistency","regretminimization","money","power"]
+      "tags"        : ["success","happy","life","goal","consistency","regret","minimization","money","power"]
     }
   
 
