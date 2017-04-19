@@ -193,8 +193,8 @@
     ,{
       "title"			: "5 Best Computer Books",
       "link"			: "https://stalk-calvin.github.io/blog/2016/11/12/Favourite-Books.html",
-      "excerpt"		: "for me :closed_book:",
-      "tags"        : ["computer","books"]
+      "excerpt"		: "I have read so far",
+      "tags"        : ["computer","books","bookreview"]
     }
   
 
@@ -293,7 +293,7 @@
       "title"			: "Jang Bum Joon (장범준)",
       "link"			: "https://stalk-calvin.github.io/blog/2016/06/24/music.html",
       "excerpt"		: "Songs I listen to these days",
-      "tags"        : ["music","장범준"]
+      "tags"        : ["korean","music","장범준"]
     }
   
 
@@ -301,7 +301,7 @@
     ,{
       "title"			: "Sugar in Fruits",
       "link"			: "https://stalk-calvin.github.io/blog/2016/06/21/fruits-sugar-health.html",
-      "excerpt"		: "Facts about natural sugar vs added sugar :watermelon: :strawberry: :apple: :+1:",
+      "excerpt"		: "Facts about natural sugar vs added sugar",
       "tags"        : ["diet","health"]
     }
   

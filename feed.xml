@@ -14,7 +14,7 @@
     
       <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
     
-    <lastBuildDate>Sun, 16 Apr 2017 17:47:29 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 18 Apr 2017 22:07:30 -0700</lastBuildDate>
 	
 		<item>
 			<title>Vagrant vs Docker</title>
@@ -602,12 +602,14 @@
 		<item>
 			<title>5 Best Computer Books</title>
 			
-				<description>for me :closed_book:</description>
+				<description>I have read so far</description>
 			
         
           <category><![CDATA[computer]]></category>
         
           <category><![CDATA[books]]></category>
+        
+          <category><![CDATA[bookreview]]></category>
         
 			<pubDate>Sat, 12 Nov 2016 00:00:00 -0800</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/11/12/Favourite-Books.html</link>
@@ -866,6 +868,8 @@
 				<description>Songs I listen to these days</description>
 			
         
+          <category><![CDATA[korean]]></category>
+        
           <category><![CDATA[music]]></category>
         
           <category><![CDATA[장범준]]></category>
@@ -884,7 +888,7 @@
 		<item>
 			<title>Sugar in Fruits</title>
 			
-				<description>Facts about natural sugar vs added sugar :watermelon: :strawberry: :apple: :+1:</description>
+				<description>Facts about natural sugar vs added sugar</description>
 			
         
           <category><![CDATA[diet]]></category>
