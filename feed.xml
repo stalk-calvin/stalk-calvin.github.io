@@ -14,7 +14,34 @@
     
       <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
     
-    <lastBuildDate>Fri, 21 Apr 2017 22:25:31 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 22 Apr 2017 16:53:33 -0700</lastBuildDate>
+	
+		<item>
+			<title>Leap Second</title>
+			
+				<description>that added extra one-second .. </description>
+			
+        
+          <category><![CDATA[leapsecond]]></category>
+        
+          <category><![CDATA[balance]]></category>
+        
+          <category><![CDATA[earthrotation]]></category>
+        
+          <category><![CDATA[UTC]]></category>
+        
+          <category><![CDATA[timezone]]></category>
+        
+			<pubDate>Sat, 22 Apr 2017 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/04/22/leap-second.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/04/22/leap-second</guid>
+		</item>
 	
 		<item>
 			<title>Vagrant vs Docker</title>

@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Leap Second",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/04/22/leap-second.html",
+      "excerpt"		: "that added extra one-second ..",
+      "tags"        : ["leapsecond","balance","earthrotation","UTC","timezone"]
+    }
+  
+
+  
+    ,{
       "title"			: "Vagrant vs Docker",
       "link"			: "https://stalk-calvin.github.io/blog/2017/04/15/vagrant-docker.html",
       "excerpt"		: "Independent Environmental Virtual Machines",
