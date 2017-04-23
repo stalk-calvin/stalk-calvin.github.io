@@ -14,7 +14,7 @@
       "title"			: "Vagrant vs Docker",
       "link"			: "https://stalk-calvin.github.io/blog/2017/04/15/vagrant-docker.html",
       "excerpt"		: "Independent Environmental Virtual Machines",
-      "tags"        : ["vagrant","docker","virtualization","virtual","machines"]
+      "tags"        : ["vagrant","docker","virtualization","virtual","machines","computer"]
     }
   
 
@@ -32,7 +32,7 @@
       "title"			: "Beer Pick",
       "link"			: "https://stalk-calvin.github.io/blog/2017/04/01/beer-list.html",
       "excerpt"		: "my favourite craft beers",
-      "tags"        : ["craftbeer","beer","microbrewery"]
+      "tags"        : ["craftbeer","beer","microbrewery","beerlife"]
     }
   
 
@@ -50,7 +50,7 @@
       "title"			: "Trip to Rocky Mountain",
       "link"			: "https://stalk-calvin.github.io/blog/2017/03/18/rocky-mountain.html",
       "excerpt"		: "4-day travel log",
-      "tags"        : ["travel","trip","rocky","mountains","banff"]
+      "tags"        : ["trip","rocky","mountains","banff","travellog"]
     }
   
 
@@ -59,7 +59,7 @@
       "title"			: "Farewell @ Global Relay",
       "link"			: "https://stalk-calvin.github.io/blog/2017/03/04/farewell.html",
       "excerpt"		: "after almost 5 years of service",
-      "tags"        : ["farewell","globalrelay","new","career","sony","spi"]
+      "tags"        : ["farewell","globalrelay","new","career","sony","spi","work"]
     }
   
 
@@ -68,7 +68,7 @@
       "title"			: "HTTP Response Codes",
       "link"			: "https://stalk-calvin.github.io/blog/2017/02/25/http-response-code.html",
       "excerpt"		: "3-digit server status acknowledgment",
-      "tags"        : ["http","response","code","status","acknowledgment"]
+      "tags"        : ["http","response","code","status","acknowledgment","web","computer"]
     }
   
 
@@ -77,7 +77,7 @@
       "title"			: "SAML",
       "link"			: "https://stalk-calvin.github.io/blog/2017/02/18/saml.html",
       "excerpt"		: "exchange authentication and authorization data",
-      "tags"        : ["saml","markup","security","authentication","authorization","SSO"]
+      "tags"        : ["saml","markup","security","authentication","authorization","SSO","computer"]
     }
   
 
@@ -86,7 +86,7 @@
       "title"			: "OAuth",
       "link"			: "https://stalk-calvin.github.io/blog/2017/02/11/oauth.html",
       "excerpt"		: "How Authorization Works over the internet",
-      "tags"        : ["oauth","programming","coding","API","authorization","SaaS","cloud"]
+      "tags"        : ["oauth","programming","coding","API","authorization","SaaS","cloud","computer"]
     }
   
 
@@ -95,7 +95,7 @@
       "title"			: "Online Judge",
       "link"			: "https://stalk-calvin.github.io/blog/2017/02/04/online-judges.html",
       "excerpt"		: "Practice your coding skills",
-      "tags"        : ["online","judges","programming","coding"]
+      "tags"        : ["online","judges","programming","coding","computer"]
     }
   
 
@@ -104,16 +104,16 @@
       "title"			: "Programming Languages",
       "link"			: "https://stalk-calvin.github.io/blog/2017/01/28/programming-languages.html",
       "excerpt"		: "I picked for 2017",
-      "tags"        : ["language","programming","computer"]
+      "tags"        : ["languages","programming","computer"]
     }
   
 
   
     ,{
       "title"			: "Java Programming Mistakes",
-      "link"			: "https://stalk-calvin.github.io/blog/2017/01/21/developers-mistake.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/01/21/java-developers-mistake.html",
       "excerpt"		: "people make",
-      "tags"        : ["mistake","programming","computer","Java"]
+      "tags"        : ["Java","mistake","programming","computer"]
     }
   
 
@@ -140,7 +140,7 @@
       "title"			: "Fibonacci Numbers",
       "link"			: "https://stalk-calvin.github.io/blog/2016/12/28/fibonacci.html",
       "excerpt"		: "",
-      "tags"        : ["computer","dynamic","programming","algorithm","recursion","Fibonacci","sequence"]
+      "tags"        : ["computer","dynamic","programming","algorithm","recursion","Fibonacci","sequence","algorithm"]
     }
   
 
@@ -167,7 +167,7 @@
       "title"			: "Big O Notations",
       "link"			: "https://stalk-calvin.github.io/blog/2016/12/10/big-o.html",
       "excerpt"		: "the way I understand algorithm complexity",
-      "tags"        : ["computer","science","complexity","big"]
+      "tags"        : ["computer","science","complexity","big","algorithms"]
     }
   
 
