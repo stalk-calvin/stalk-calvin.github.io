@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Toronto",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/05/01/toronto.html",
+      "excerpt"		: "4-day travel log",
+      "tags"        : ["trip","toronto","east","travellog"]
+    }
+  
+
+  
+    ,{
       "title"			: "Leap Second",
       "link"			: "https://stalk-calvin.github.io/blog/2017/04/22/leap-second.html",
       "excerpt"		: "that added extra one-second ..",

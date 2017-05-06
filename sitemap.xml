@@ -106,6 +106,15 @@
   
   
     <url>
+      <loc>https://stalk-calvin.github.io/blog/2017/05/01/toronto.html</loc>
+      
+        <lastmod>2017-05-01T00:00:00-07:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
       <loc>https://stalk-calvin.github.io/blog/2017/04/22/leap-second.html</loc>
       
         <lastmod>2017-04-22T00:00:00-07:00</lastmod>
