@@ -226,7 +226,7 @@
 
 <p>Most of the VMs we know all have the Host OS and there is a <a href="https://en.wikipedia.org/wiki/Hypervisor">hypervisor</a> on top of it. Then there we add <a href="http://searchservervirtualization.techtarget.com/definition/guest-OS">Guest OS</a> on top of this VM. However, docker would simplify all this. Docker would not require any Hypervisor or Guest OS, it serves multiple containers which contain the differences from the host OS. For example, if host OS was a Ubuntu and you have CentOS as a container, then docker sees the differences in between the two and packages separately. This is called Guest OS Isolation. So you eventually have a light weight VM instead of full blown VM. Docker serves more than this. You can develop, test, staging, release server environment into one and manage them efficiently. If you look at docker community closely, they have well maintained <a href="https://hub.docker.com/">docker hub</a> where people would share all sorts of images out there to make it a container. You can also control versions of the image like Git where you can push/pull just like code versioning.</p>
 
-<table class="image">
+<table class="image" style="margin-top:2em;">
 <caption class="custom" align="bottom">VM vs Docker</caption>
 <tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/20170415vd/docker.png" alt="VM vs Docker" /></td></tr>
 </table>
@@ -266,7 +266,7 @@
 
 <p>See below image for comparing between Vagrant and Docker:</p>
 
-<table class="image">
+<table class="image" style="margin-top:2em;">
 <caption class="custom" align="bottom">Vagrant and Docker</caption>
 <tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/20170415vd/docker-vs-vagrant.png" alt="Vagrant and Docker" /></td></tr>
 </table>
