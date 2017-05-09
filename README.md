@@ -1,8 +1,9 @@
-## My Personal Website and Blog [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://stalk-calvin.github.io/)
+## My Personal Website and Blog (IAMCALVIN) [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://stalk-calvin.github.io/)
 
-URL: https://stalk-calvin.github.io/
+- URL: https://stalk-calvin.github.io/
+- Description: Stories about Calvin: Beer, Fitness, Diet, Computer Science and Programming.
 
-## Contributor / Maintainer
+## Contributor / Maintainer / Author
 
 Calvin Lee @stalk.calvin
 
