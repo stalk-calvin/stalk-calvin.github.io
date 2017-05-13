@@ -14,7 +14,30 @@
     
       <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
     
-    <lastBuildDate>Sat, 06 May 2017 23:36:32 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 13 May 2017 13:28:26 -0700</lastBuildDate>
+	
+		<item>
+			<title>Binary Logarithm</title>
+			
+				<description>Relationship with computers</description>
+			
+        
+          <category><![CDATA[binary]]></category>
+        
+          <category><![CDATA[logarithm]]></category>
+        
+          <category><![CDATA[computer]]></category>
+        
+			<pubDate>Sat, 13 May 2017 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/05/13/binary-logarithm.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/05/13/binary-logarithm</guid>
+		</item>
 	
 		<item>
 			<title>Toronto</title>
@@ -498,8 +521,6 @@
 			
         
           <category><![CDATA[computer]]></category>
-        
-          <category><![CDATA[science]]></category>
         
           <category><![CDATA[future]]></category>
         

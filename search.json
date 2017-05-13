@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Binary Logarithm",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/05/13/binary-logarithm.html",
+      "excerpt"		: "Relationship with computers",
+      "tags"        : ["binary","logarithm","computer"]
+    }
+  
+
+  
+    ,{
       "title"			: "Toronto",
       "link"			: "https://stalk-calvin.github.io/blog/2017/05/06/toronto.html",
       "excerpt"		: "4-day travel log",
@@ -158,7 +167,7 @@
       "title"			: "What's Next?",
       "link"			: "https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html",
       "excerpt"		: "The Future of Computer Science",
-      "tags"        : ["computer","science","future","ai","machine","learning","IOT","industrial","revolution"]
+      "tags"        : ["computer","future","ai","machine","learning","IOT","industrial","revolution"]
     }
   
 

@@ -25,8 +25,8 @@
   <meta name="description" content="Stories about Calvin: Beer, Fitness, Diet, Computer Science and Programming.">
   <meta name="author" content="Calvin Lee">
   <meta name="keywords" content="calvin, lee, personal, blog, beer, fitness, diet, computer, science, programming, software, engineer">
-  <link rel="canonical" href="/blog/2017/05/06/toronto.html">
-  <title>I am Calvin | Toronto</title>
+  <link rel="canonical" href="/blog/2017/05/13/binary-logarithm.html">
+  <title>I am Calvin | Binary Logarithm</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -173,120 +173,99 @@
     <section id="post" class="container content-section ">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <h1 style="display:inline; color: #F4A460;"><strong>Toronto</strong></h1>
-          <h4 style="display:inline; color: #F4A460;"><strong>4-day travel log</strong></h4>
+          <h1 style="display:inline; color: #F4A460;"><strong>Binary Logarithm</strong></h1>
+          <h4 style="display:inline; color: #F4A460;"><strong>Relationship with computers</strong></h4>
 <br>
           <h4>
-            <strong>06 May 2017</strong>
+            <strong>13 May 2017</strong>
             <small>
-              <a href="/blog/2017/05/06/toronto.html#disqus_thread">Comments</a>
+              <a href="/blog/2017/05/13/binary-logarithm.html#disqus_thread">Comments</a>
               <br>
               
-                <a class="tag" href="/tags/#trip">#trip</a>
+                <a class="tag" href="/tags/#binary">#binary</a>
               
-                <a class="tag" href="/tags/#toronto">#toronto</a>
+                <a class="tag" href="/tags/#logarithm">#logarithm</a>
               
-                <a class="tag" href="/tags/#east">#east</a>
-              
-                <a class="tag" href="/tags/#travellog">#travellog</a>
+                <a class="tag" href="/tags/#computer">#computer</a>
               
             </small>
           </h4>
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2017/05/13/binary-logarithm.html" class="btn" title="Binary Logarithm">« Binary Logarithm</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2017/04/22/leap-second.html" class="btn" title="Leap Second">Leap Second »</a>
+              <a href="https://stalk-calvin.github.io/blog/2017/05/06/toronto.html" class="btn" title="Toronto">Toronto »</a>
             
           </nav><!-- /.pagination -->
 
-          <p>My wife’s cousin was getting married in Toronto. Since none of the Korean family members were able to fly down to Toronto, my wife and I went there to represent them all. Although I could have made this trip much shorter, I wanted to make it a trip rather than just visiting a family member. So I took 2 days off work and flew down to Toronto.</p>
+          
+<table class="image" align="center" style="margin-top:2em;text-align:center;">
+<caption class="custom" align="bottom">Image Source: Wikimedia Commons</caption>
+<tr><td><img src="https://www.albert.io/blog/wp-content/uploads/2016/03/Picture1-5.png" alt="Image Source: Wikimedia Commons" style="background: white;"></td></tr>
+</table>
 
-<h3 id="april-27th">April 27th</h3>
+<p>In a regular daily life, the log of something refers to log base of 10 because we normally use Decimal system. There is a good controversy of using Dozenal System (Base 12) which might be covered in the future blog, but not for this post. For this post, I want to cover why binary logarithm is very important in computing science world. Logarithm itself is a very interesting.</p>
 
-<h4 id="vancouver-yvr---toronto-yyz---sheppard-and-yonge">Vancouver (YVR) -&gt; Toronto (YYZ) -&gt; Sheppard and Yonge</h4>
+<h2 id="fundamentals">Fundamentals</h2>
 
-<p>The flight to Toronto was at 6:30 AM so I had to get up around 5 AM. It was chilly in the morning so I had a sweater on. When I arrived at Pearson airport in Toronto, it was just past 2 PM. The weather was nice but it was literally hot. I felt similar feeling to how I landed in Las Vegas - heat wave hitting at me as soon as I walked out the plane. I regretted that I didn’t bring any shorts honestly. I took the <a href="http://www.gotransit.com/">Go Transit</a> to “Sheppard and Yonge” subway station where I spent my days for the days in Toronto.</p>
+<p>It is very important (especially with large data set) to plan how we are going to write algorithm for a specific problem. Binary Logarithm algorithm basically divides the problem by 2 each time it compares data and eventually arrive to a solution. For example, let’s consider single-game elimination tournament in sports. Binary Logarithm of total number of games will get us number of rounds needed to become a winner. Let’s say there are 32 teams total then we need to win log2(32) = 5 rounds in a row to become a winner.</p>
 
-<table class="image" style="margin-top:2em;">
-<caption class="custom" align="bottom">View of Vancouver from Westjet Flight</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/toronto/yvrflight.jpg" alt="View of Vancouver from Westjet Flight"></td></tr>
+<h2 id="logarithm-law">Logarithm Law</h2>
+
+<p>There are multiple laws for computing logarithms such as product, quotient, power, and root. Out of these, I would pick “power” to be the most important one. It is probably most related to how we measure our algorithm in computer science. For example, let’s say you have total elements of 1024 items. When you have binary logarithm algorithm, your algorithm speed is measured at 10 because 2 to the power of 10 = 1024. Well then what is 1024 in Logarithm of base 4? 4 to the 5 is 1024. So it is 5. When we say in <a href="/blog/2016/12/10/big-o.html">Big O notation</a> of binary search as Log of n, it really means Log “base 2” of n since binary search is basically dividing with 2 options algorithm each time search value is being compared with data.</p>
+
+<h2 id="power-of-2-table">Power of 2 table</h2>
+
+<p>We peeked into how logarithm’s work in terms of “power” law. But wait a minute.. This just means if we remember the first basics of power of 2 table, it will be easy to measure the complexity of the computer algorithm in general. So if we remember, 2 to the 10 is 1024, it’s easy to calculate that we need 10 comparisons to achieve something for total of 1024 elements. If we think about looking at data sequentially, in the worst case scenario, it will need to look into every items which is 1024 comparisons. However, with binary logarithmic algorithm, with the worst case scenario, we need 10 comparisons for 1024 items.</p>
+
+<table class="image" align="center" style="margin-top:2em;text-align:center;">
+<caption class="custom" align="bottom">First few power of 2</caption>
+<tr><td><img src="http://www2.nzmaths.co.nz/Number/NumberImages/Exp3.gif" alt="First few power of 2" style="border:0;"></td></tr>
 </table>
 
 <table class="image" align="center" style="margin-top:2em;text-align:center;">
-<caption class="custom" align="bottom">Toronto Go Transit</caption>
-<tr><td><img src="http://www.hamiltontransit.ca/wp-content/uploads/2013/05/GO_Transit_logo.svg_.png" alt="Toronto Go Transit" style="border:0;"></td></tr>
+<caption class="custom" align="bottom">First few power of 3</caption>
+<tr><td><img src="http://www2.nzmaths.co.nz/Number/NumberImages/Exp18.gif" alt="First few power of 3" style="border:0;"></td></tr>
 </table>
 
-<h3 id="april-28th">April 28th</h3>
+<p>Power of 3 table is included in case when we have 3 choices instead of 2. Also, it’s important to some approximate values in power of 2:</p>
 
-<h4 id="sheppard-and-yonge---dundas---finch---sheppard-and-yonge">Sheppard and Yonge -&gt; Dundas -&gt; Finch -&gt; Sheppard and Yonge</h4>
-
-<p>There was an extra day to tour around Toronto. My wife already planned for where we should go for this day. We decided to take a subway to Dundas. When I arrived at the subway station, I noticed it would be best to use tokens to travel around as a visitor. I was surprised they still have people in the booth selling fares (<a href="http://www.theglobeandmail.com/news/toronto/ttc-to-fully-switch-to-presto-cards-will-stop-accepting-tickets-tokens-in-2017/article25065329/">I looked up on the internet, why</a>. There I saw a sign where it says a token costs $3.25 to travel “once” to a destination which I thought it is pretty expensive compared to Vancouver, where the cost is cheaper and it’s valid for 3 hours. The sign also said 3 for $10 and “explicitly” listed 6 for $20. I am like.. what the heck? why not list out 9 for $30, 12 for $40, 15 for $50 and so on? I bought one token for the time being. When I arrived at Dundas, I noticed one of my favourite clothing shop, <a href="http://www.uniqlo.com/ca/en/index.php">uniqlo</a>. I had shopped there for about $160 which I thought they were pretty cheap for the good quality clothing. Outside of Dundas station, there were big signs everywhere which reminded me of time square at New York. It had a quite different feeling than Vancouver downtown. Then I rode the subway to Finch as there are many Korean stores located there and yes, there I saw loads of Korean stores located. I saw so many little signs in Korean where they reminded me of streets in Korea. We dropped by a restaurant called <a href="https://www.yelp.ca/biz/huh-ga-ne-toronto">Huh Ga Ne</a>. The food and the place maintained the quality despite the 24 hours/day operation. There I met my friend from Vancouver and her baby. Then I returned back to “Sheppard And Yonge” station.</p>
-
-<table class="image" align="center" style="margin-top:2em;">
-<caption class="custom" align="bottom">Toronto Subway</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/toronto/IMG_20170428_110853.jpg" alt="Toronto Subway"></td></tr>
+<table class="mbtablestyle" style="margin:auto;margin-bottom:1em;">
+  <thead>
+    <tr>
+      <th style="text-align: center">Value in power of 2</th>
+      <th style="text-align: center">Approximation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><script type="math/tex">{2^1{^0}}</script></td>
+      <td style="text-align: center">one thousand</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><script type="math/tex">{2^2{^0}}</script></td>
+      <td style="text-align: center">one million</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><script type="math/tex">{2^3{^0}}</script></td>
+      <td style="text-align: center">one billion</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><script type="math/tex">{2^4{^0}}</script></td>
+      <td style="text-align: center">one trillion</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><script type="math/tex">{2^5{^0}}</script></td>
+      <td style="text-align: center">one quadrillion</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><script type="math/tex">{2^6{^0}}</script></td>
+      <td style="text-align: center">one quintillion</td>
+    </tr>
+  </tbody>
 </table>
 
-<table class="image" align="center" style="margin-top:2em;">
-<caption class="custom" align="bottom">Dundas</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/toronto/IMG_20170428_125849.jpg" alt="Dundas"></td></tr>
-</table>
-
-<table class="image" align="center" style="margin-top:2em;">
-<caption class="custom" align="bottom">Finch</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/toronto/IMG_20170428_140456.jpg" alt="Finch"></td></tr>
-</table>
-
-<table class="image" align="center" style="margin-top:2em;">
-<caption class="custom" align="bottom">At the Huh Ga Ne at Finch</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/toronto/IMG_20170428_160337.jpg" alt="At the Huh Ga Ne at Finch"></td></tr>
-</table>
-
-<h3 id="april-29th">April 29th</h3>
-
-<h4 id="sheppard-and-yonge---old-mill---sheppard-and-yonge">Sheppard and Yonge -&gt; Old Mill -&gt; Sheppard and Yonge</h4>
-
-<p>It’s the wedding day, the reason I came to Toronto. I got up regularly around 8-9 AM and went straight to have a breakfast downstairs. Then I caught myself talking with my wife’s elder relative from LA. He claimed he immigrated around 1975 as a doctor and it was quite interesting to hear all the stories as it was quite difficult to immigrate from Korea back in the 70s. I ended up spending 2 hours talking each other and it was time to leave to the wedding. We headed to Old Mill in Etobicoke where the wedding was supposed to happen. When I arrived at the wedding venue, I found out that the place name is actually “<a href="http://www.oldmilltoronto.com/">Old Mill Toronto</a>”. It seemed like a popular place for the wedding as I noticed a couple of other couples getting married in the same day. The wedding started at 6 pm. There is a small chapel for the couple to get officially vow each other. After that, we had the Korean traditional wedding ceremony, <a href="https://en.wikipedia.org/wiki/Pyebaek">Pyebaek</a>. It reminded of my wedding I had in Korea where I had done the similar thing. My stomach was growling and I looked at my watch to find out it was almost 8 pm. We then headed to the reception downstairs. The steak was so tender and yummy as I was so hungry. The reception was very similar to any other Canadian Wedding. They played a little game after the first dance. The open bar made my night as usual <img class="emoji" title=":smile:" alt=":smile:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f604.png" height="20" width="20" align="absmiddle"> I ended up trying every kind of beer they serve which is like 7-8 different kinds. The dance floor opened up later that night. I danced hard just like any other drunken person. Well, I didn’t know anybody there except the people I met through my wife, and I was like what do I care and danced for like 1-2 hours straight then we drove back to our place. It was super fun, well, at least for me.</p>
-
-<table class="image" align="center" style="margin-top:2em;">
-<caption class="custom" align="bottom">Bride from Wedding day</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/toronto/IMG_20170429_150147.jpg" alt="Bride from Wedding day"></td></tr>
-</table>
-
-<table class="image" align="center" style="margin-top:2em;">
-<caption class="custom" align="bottom">Groom and Bride, I DO!</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/toronto/IMG_20170429_171427.jpg" alt="Groom and Bride, I DO!"></td></tr>
-</table>
-
-<table class="image" align="center" style="margin-top:2em;">
-<caption class="custom" align="bottom">Korean Traditional Ceremony, Pyebaek</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/toronto/IMG_20170429_180510.jpg" alt="Korean Traditional Ceremony, Pyebaek"></td></tr>
-</table>
-
-<table class="image" align="center" style="margin-top:2em;">
-<caption class="custom" align="bottom">First dance</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/toronto/IMG_20170429_191931.jpg" alt="First dance"></td></tr>
-</table>
-
-<h3 id="april-30th">April 30th</h3>
-
-<h4 id="sheppard-and-yonge---toronto-yyz---vancouver-yvr">Sheppard and Yonge -&gt; Toronto (YYZ) -&gt; Vancouver (YVR)</h4>
-
-<p>Sadly, it’s the return day. My wife had a friend there who volunteered to get us the ride to the airport. We had a <a href="https://en.wikipedia.org/wiki/Samgye-tang">Samgyetang</a> together for the lunch at the Koryo. It was really delicious compared to the ones we have in Vancouver. It really felt like a restaurant in Korea. Then we dropped by the Starbucks for a quick coffee. After that off to the airport! It was 5-hour flight, slightly longer than the flying to Toronto in. Just like any other trip, my wife and I said the same thing as entering our home, “Home sweet home. East or west, home is the best”.</p>
-
-<table class="image" align="center" style="margin-top:2em;">
-<caption class="custom" align="bottom">Wife's friend on the way back</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/toronto/IMG_20170430_125617.jpg" alt="Wife's friend on the way back"></td></tr>
-</table>
-
-<table class="image" align="center" style="margin-top:2em;text-align:center;">
-<caption class="custom" align="bottom">Koryo Samgyetang (Ginseng chicken soup)</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/toronto/Koryo.jpg" alt="Koryo Samgyetang (Ginseng chicken soup)"></td></tr>
-</table>
+<p><script type="math/tex">{2^4{^0}}</script> is even a huge number. You probably heard of that if you were to fold a piece of paper in half 42 times, it would reach the moon. If you have standard paper which is about 0.1 mm thick folding it 42 times meaning, 0.1 mm * <script type="math/tex">{2^4{^2}}</script> (fold half 42 times) = 439,804,651,110 mm which is like 439,804 km which goes beyond the average distance to the moon from earth which is about 384,400km. I actually remember arguing with a colleague on this. My colleague kept telling me it is always possible to reach moon when paper is folded 42 times. I told him it has to be a certain thickness. However, he wouldn’t listen to me and kept saying that its possible. Well thickness of a paper obvious matters. If thickness of the paper is like half of the regular paper, say 0.05mm, then 0.05 * <script type="math/tex">{2^4{^2}}</script> = 219,902,325,555 mm = 219,902 km which is shorter distance compare to 384,400km. So we won’t reach the moon! I obviously did not go this far to prove my point then but here is the proof now <img class="emoji" title=":smile:" alt=":smile:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f604.png" height="20" width="20" align="absmiddle"></p>
 
 
           
@@ -298,7 +277,7 @@
   <ul class="rrssb-buttons clearfix">
     
       <li class="rrssb-email">
-        <a href="mailto:?subject=Toronto&amp;body=https://stalk-calvin.github.io/blog/2017/05/06/toronto.html" data-proofer-ignore>
+        <a href="mailto:?subject=Binary%20Logarithm&amp;body=https://stalk-calvin.github.io/blog/2017/05/13/binary-logarithm.html" data-proofer-ignore>
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28">
               <path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"></path>
@@ -309,7 +288,7 @@
     
     
       <li class="rrssb-facebook">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2017/05/06/toronto.html&amp;title=Toronto" class="popup">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2017/05/13/binary-logarithm.html&amp;title=Binary%20Logarithm" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" preserveaspectratio="xMidYMid" width="29" height="29" viewbox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z" class="cls-2" fill-rule="evenodd"></path></svg>
           </span>
@@ -318,14 +297,14 @@
     
     
       <li class="rrssb-twitter">
-        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2017/05/06/toronto.html&amp;text=Toronto" class="popup">
+        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2017/05/13/binary-logarithm.html&amp;text=Binary%20Logarithm" class="popup">
           <span class="rrssb-icon"><svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28"><path d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62c-3.122.162-6.22-.646-8.86-2.32 2.702.18 5.375-.648 7.507-2.32-2.072-.248-3.818-1.662-4.49-3.64.802.13 1.62.077 2.4-.154-2.482-.466-4.312-2.586-4.412-5.11.688.276 1.426.408 2.168.387-2.135-1.65-2.73-4.62-1.394-6.965C5.574 7.816 9.54 9.84 13.802 10.07c-.842-2.738.694-5.64 3.434-6.48 2.018-.624 4.212.043 5.546 1.682 1.186-.213 2.318-.662 3.33-1.317-.386 1.256-1.248 2.312-2.4 2.942 1.048-.106 2.07-.394 3.02-.85-.458 1.182-1.343 2.15-2.48 2.71z"></path></svg></span>
         </a>
       </li>
     
     
       <li class="rrssb-linkedin">
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2017/05/06/toronto.html" class="popup">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2017/05/13/binary-logarithm.html" class="popup">
         <span class="rrssb-icon">
           <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28">
             <path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"></path>
@@ -337,7 +316,7 @@
     
     
       <li class="rrssb-googleplus">
-        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2017/05/06/toronto.html" class="popup">
+        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2017/05/13/binary-logarithm.html" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"><path d="M21 8.29h-1.95v2.6h-2.6v1.82h2.6v2.6H21v-2.6h2.6v-1.885H21V8.29zM7.614 10.306v2.925h3.9c-.26 1.69-1.755 2.925-3.9 2.925-2.34 0-4.29-2.016-4.29-4.354s1.885-4.353 4.29-4.353c1.104 0 2.014.326 2.794 1.105l2.08-2.08c-1.3-1.17-2.924-1.883-4.874-1.883C3.65 4.586.4 7.835.4 11.8s3.25 7.212 7.214 7.212c4.224 0 6.953-2.988 6.953-7.082 0-.52-.065-1.104-.13-1.624H7.614z"></path></svg>
           </span>
@@ -381,10 +360,8 @@
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2017/05/13/binary-logarithm.html" class="btn" title="Binary Logarithm">« Binary Logarithm</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2017/04/22/leap-second.html" class="btn" title="Leap Second">Leap Second »</a>
+              <a href="https://stalk-calvin.github.io/blog/2017/05/06/toronto.html" class="btn" title="Toronto">Toronto »</a>
             
           </nav><!-- /.pagination -->
 
@@ -519,7 +496,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 <script>
 function addTohistory() {
   if (!window.location.host.startsWith("127.0.0.1")) {
-    history.pushState({}, 'Toronto', 'https://stalk-calvin.github.io/blog/2017/05/06/toronto.html');
+    history.pushState({}, 'Binary Logarithm', 'https://stalk-calvin.github.io/blog/2017/05/13/binary-logarithm.html');
   }
 }
 </script>
