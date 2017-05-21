@@ -12,33 +12,33 @@
     
 
     
-      <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+      <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 20 May 2017 14:11:06 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 22 May 2017 18:30:40 -0700</lastBuildDate>
 	
 		<item>
 			<title>Euler's number</title>
 			
-				<description>Mathematical constant, base of the natural logarithm</description>
+				<description>Mathematical constant, the base of the natural logarithm</description>
 			
         
-          <category><![CDATA[euler]]></category>
+          <category>euler</category>
         
-          <category><![CDATA[mathematics]]></category>
+          <category>mathematics</category>
         
-          <category><![CDATA[logarithm]]></category>
+          <category>logarithm</category>
         
-          <category><![CDATA[exponential]]></category>
+          <category>exponential</category>
         
-          <category><![CDATA[growth]]></category>
+          <category>growth</category>
         
-			<pubDate>Sat, 20 May 2017 00:00:00 -0700</pubDate>
+			<pubDate>20 May 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/05/20/exponential-growth.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2017/05/20/exponential-growth</guid>
 		</item>
@@ -49,19 +49,19 @@
 				<description>Relationship with computers</description>
 			
         
-          <category><![CDATA[binary]]></category>
+          <category>binary</category>
         
-          <category><![CDATA[logarithm]]></category>
+          <category>logarithm</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-			<pubDate>Sat, 13 May 2017 00:00:00 -0700</pubDate>
+			<pubDate>13 May 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/05/13/binary-logarithm.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2017/05/13/binary-logarithm</guid>
 		</item>
@@ -72,21 +72,21 @@
 				<description>4-day travel log</description>
 			
         
-          <category><![CDATA[trip]]></category>
+          <category>trip</category>
         
-          <category><![CDATA[toronto]]></category>
+          <category>toronto</category>
         
-          <category><![CDATA[east]]></category>
+          <category>east</category>
         
-          <category><![CDATA[travellog]]></category>
+          <category>travellog</category>
         
-			<pubDate>Sat, 06 May 2017 00:00:00 -0700</pubDate>
+			<pubDate>06 May 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/05/06/toronto.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2017/05/06/toronto</guid>
 		</item>
@@ -97,23 +97,23 @@
 				<description>that added extra one-second .. </description>
 			
         
-          <category><![CDATA[leapsecond]]></category>
+          <category>leapsecond</category>
         
-          <category><![CDATA[balance]]></category>
+          <category>balance</category>
         
-          <category><![CDATA[earthrotation]]></category>
+          <category>earthrotation</category>
         
-          <category><![CDATA[UTC]]></category>
+          <category>UTC</category>
         
-          <category><![CDATA[timezone]]></category>
+          <category>timezone</category>
         
-			<pubDate>Sat, 22 Apr 2017 00:00:00 -0700</pubDate>
+			<pubDate>22 April 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/04/22/leap-second.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2017/04/22/leap-second</guid>
 		</item>
@@ -124,25 +124,25 @@
 				<description>Independent Environmental Virtual Machines</description>
 			
         
-          <category><![CDATA[vagrant]]></category>
+          <category>vagrant</category>
         
-          <category><![CDATA[docker]]></category>
+          <category>docker</category>
         
-          <category><![CDATA[virtualization]]></category>
+          <category>virtualization</category>
         
-          <category><![CDATA[virtual]]></category>
+          <category>virtual</category>
         
-          <category><![CDATA[machines]]></category>
+          <category>machines</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-			<pubDate>Sat, 15 Apr 2017 00:00:00 -0700</pubDate>
+			<pubDate>15 April 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/04/15/vagrant-docker.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2017/04/15/vagrant-docker</guid>
 		</item>
@@ -153,31 +153,31 @@
 				<description>my definition of success in life</description>
 			
         
-          <category><![CDATA[success]]></category>
+          <category>success</category>
         
-          <category><![CDATA[happy]]></category>
+          <category>happy</category>
         
-          <category><![CDATA[life]]></category>
+          <category>life</category>
         
-          <category><![CDATA[goal]]></category>
+          <category>goal</category>
         
-          <category><![CDATA[consistency]]></category>
+          <category>consistency</category>
         
-          <category><![CDATA[regret]]></category>
+          <category>regret</category>
         
-          <category><![CDATA[minimization]]></category>
+          <category>minimization</category>
         
-          <category><![CDATA[money]]></category>
+          <category>money</category>
         
-          <category><![CDATA[power]]></category>
+          <category>power</category>
         
-			<pubDate>Sat, 08 Apr 2017 00:00:00 -0700</pubDate>
+			<pubDate>08 April 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/04/08/success.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2017/04/08/success</guid>
 		</item>
@@ -188,21 +188,21 @@
 				<description>my favourite craft beers</description>
 			
         
-          <category><![CDATA[craftbeer]]></category>
+          <category>craftbeer</category>
         
-          <category><![CDATA[beer]]></category>
+          <category>beer</category>
         
-          <category><![CDATA[microbrewery]]></category>
+          <category>microbrewery</category>
         
-          <category><![CDATA[beerlife]]></category>
+          <category>beerlife</category>
         
-			<pubDate>Sat, 01 Apr 2017 00:00:00 -0700</pubDate>
+			<pubDate>01 April 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/04/01/beer-list.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2017/04/01/beer-list</guid>
 		</item>
@@ -213,21 +213,21 @@
 				<description>My thoughts</description>
 			
         
-          <category><![CDATA[programming]]></category>
+          <category>programming</category>
         
-          <category><![CDATA[facts]]></category>
+          <category>facts</category>
         
-          <category><![CDATA[fallacies]]></category>
+          <category>fallacies</category>
         
-          <category><![CDATA[bookreview]]></category>
+          <category>bookreview</category>
         
-			<pubDate>Sat, 25 Mar 2017 00:00:00 -0700</pubDate>
+			<pubDate>25 March 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/03/25/software-facts-fallacies.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2017/03/25/software-facts-fallacies</guid>
 		</item>
@@ -238,23 +238,23 @@
 				<description>4-day travel log</description>
 			
         
-          <category><![CDATA[trip]]></category>
+          <category>trip</category>
         
-          <category><![CDATA[rocky]]></category>
+          <category>rocky</category>
         
-          <category><![CDATA[mountains]]></category>
+          <category>mountains</category>
         
-          <category><![CDATA[banff]]></category>
+          <category>banff</category>
         
-          <category><![CDATA[travellog]]></category>
+          <category>travellog</category>
         
-			<pubDate>Sat, 18 Mar 2017 00:00:00 -0700</pubDate>
+			<pubDate>18 March 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/03/18/rocky-mountain.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2017/03/18/rocky-mountain</guid>
 		</item>
@@ -265,27 +265,27 @@
 				<description>after almost 5 years of service</description>
 			
         
-          <category><![CDATA[farewell]]></category>
+          <category>farewell</category>
         
-          <category><![CDATA[globalrelay]]></category>
+          <category>globalrelay</category>
         
-          <category><![CDATA[new]]></category>
+          <category>new</category>
         
-          <category><![CDATA[career]]></category>
+          <category>career</category>
         
-          <category><![CDATA[sony]]></category>
+          <category>sony</category>
         
-          <category><![CDATA[spi]]></category>
+          <category>spi</category>
         
-          <category><![CDATA[work]]></category>
+          <category>work</category>
         
-			<pubDate>Sat, 04 Mar 2017 00:00:00 -0800</pubDate>
+			<pubDate>04 March 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/03/04/farewell.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2017/03/04/farewell</guid>
 		</item>
@@ -296,27 +296,27 @@
 				<description>3-digit server status acknowledgment</description>
 			
         
-          <category><![CDATA[http]]></category>
+          <category>http</category>
         
-          <category><![CDATA[response]]></category>
+          <category>response</category>
         
-          <category><![CDATA[code]]></category>
+          <category>code</category>
         
-          <category><![CDATA[status]]></category>
+          <category>status</category>
         
-          <category><![CDATA[acknowledgment]]></category>
+          <category>acknowledgment</category>
         
-          <category><![CDATA[web]]></category>
+          <category>web</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-			<pubDate>Sat, 25 Feb 2017 00:00:00 -0800</pubDate>
+			<pubDate>25 February 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/02/25/http-response-code.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2017/02/25/http-response-code</guid>
 		</item>
@@ -327,27 +327,27 @@
 				<description>exchange authentication and authorization data</description>
 			
         
-          <category><![CDATA[saml]]></category>
+          <category>saml</category>
         
-          <category><![CDATA[markup]]></category>
+          <category>markup</category>
         
-          <category><![CDATA[security]]></category>
+          <category>security</category>
         
-          <category><![CDATA[authentication]]></category>
+          <category>authentication</category>
         
-          <category><![CDATA[authorization]]></category>
+          <category>authorization</category>
         
-          <category><![CDATA[SSO]]></category>
+          <category>SSO</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-			<pubDate>Sat, 18 Feb 2017 00:00:00 -0800</pubDate>
+			<pubDate>18 February 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/02/18/saml.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2017/02/18/saml</guid>
 		</item>
@@ -358,29 +358,29 @@
 				<description>How Authorization Works over the internet</description>
 			
         
-          <category><![CDATA[oauth]]></category>
+          <category>oauth</category>
         
-          <category><![CDATA[programming]]></category>
+          <category>programming</category>
         
-          <category><![CDATA[coding]]></category>
+          <category>coding</category>
         
-          <category><![CDATA[API]]></category>
+          <category>API</category>
         
-          <category><![CDATA[authorization]]></category>
+          <category>authorization</category>
         
-          <category><![CDATA[SaaS]]></category>
+          <category>SaaS</category>
         
-          <category><![CDATA[cloud]]></category>
+          <category>cloud</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-			<pubDate>Sat, 11 Feb 2017 00:00:00 -0800</pubDate>
+			<pubDate>11 February 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/02/11/oauth.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2017/02/11/oauth</guid>
 		</item>
@@ -391,23 +391,23 @@
 				<description>Practice your coding skills</description>
 			
         
-          <category><![CDATA[online]]></category>
+          <category>online</category>
         
-          <category><![CDATA[judges]]></category>
+          <category>judges</category>
         
-          <category><![CDATA[programming]]></category>
+          <category>programming</category>
         
-          <category><![CDATA[coding]]></category>
+          <category>coding</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-			<pubDate>Sat, 04 Feb 2017 00:00:00 -0800</pubDate>
+			<pubDate>04 February 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/02/04/online-judges.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2017/02/04/online-judges</guid>
 		</item>
@@ -418,19 +418,19 @@
 				<description>I picked for 2017</description>
 			
         
-          <category><![CDATA[languages]]></category>
+          <category>languages</category>
         
-          <category><![CDATA[programming]]></category>
+          <category>programming</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-			<pubDate>Sat, 28 Jan 2017 00:00:00 -0800</pubDate>
+			<pubDate>28 January 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/01/28/programming-languages.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2017/01/28/programming-languages</guid>
 		</item>
@@ -441,21 +441,21 @@
 				<description>people make</description>
 			
         
-          <category><![CDATA[Java]]></category>
+          <category>Java</category>
         
-          <category><![CDATA[mistake]]></category>
+          <category>mistake</category>
         
-          <category><![CDATA[programming]]></category>
+          <category>programming</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-			<pubDate>Sat, 21 Jan 2017 00:00:00 -0800</pubDate>
+			<pubDate>21 January 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/01/21/java-developers-mistake.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2017/01/21/java-developers-mistake</guid>
 		</item>
@@ -466,21 +466,21 @@
 				<description>Evolution of Java</description>
 			
         
-          <category><![CDATA[java]]></category>
+          <category>java</category>
         
-          <category><![CDATA[generics]]></category>
+          <category>generics</category>
         
-          <category><![CDATA[programming]]></category>
+          <category>programming</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-			<pubDate>Sat, 14 Jan 2017 00:00:00 -0800</pubDate>
+			<pubDate>14 January 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2017/01/14/java-generics</guid>
 		</item>
@@ -491,19 +491,19 @@
 				<description> Making 2017 My Best Year Ever</description>
 			
         
-          <category><![CDATA[newyear]]></category>
+          <category>newyear</category>
         
-          <category><![CDATA[resolution]]></category>
+          <category>resolution</category>
         
-          <category><![CDATA[year2017]]></category>
+          <category>year2017</category>
         
-			<pubDate>Sat, 07 Jan 2017 00:00:00 -0800</pubDate>
+			<pubDate>07 January 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/01/07/new-year-resolution.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2017/01/07/new-year-resolution</guid>
 		</item>
@@ -514,29 +514,29 @@
 				<description></description>
 			
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-          <category><![CDATA[dynamic]]></category>
+          <category>dynamic</category>
         
-          <category><![CDATA[programming]]></category>
+          <category>programming</category>
         
-          <category><![CDATA[algorithm]]></category>
+          <category>algorithm</category>
         
-          <category><![CDATA[recursion]]></category>
+          <category>recursion</category>
         
-          <category><![CDATA[Fibonacci]]></category>
+          <category>Fibonacci</category>
         
-          <category><![CDATA[sequence]]></category>
+          <category>sequence</category>
         
-          <category><![CDATA[algorithm]]></category>
+          <category>algorithm</category>
         
-			<pubDate>Wed, 28 Dec 2016 00:00:00 -0800</pubDate>
+			<pubDate>28 December 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/12/28/fibonacci.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/12/28/fibonacci</guid>
 		</item>
@@ -547,29 +547,29 @@
 				<description>The Future of Computer Science</description>
 			
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-          <category><![CDATA[future]]></category>
+          <category>future</category>
         
-          <category><![CDATA[ai]]></category>
+          <category>ai</category>
         
-          <category><![CDATA[machine]]></category>
+          <category>machine</category>
         
-          <category><![CDATA[learning]]></category>
+          <category>learning</category>
         
-          <category><![CDATA[IOT]]></category>
+          <category>IOT</category>
         
-          <category><![CDATA[industrial]]></category>
+          <category>industrial</category>
         
-          <category><![CDATA[revolution]]></category>
+          <category>revolution</category>
         
-			<pubDate>Sat, 24 Dec 2016 00:00:00 -0800</pubDate>
+			<pubDate>24 December 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/12/24/future-of-computer-science</guid>
 		</item>
@@ -580,21 +580,21 @@
 				<description>easily encrypt, decrypt and share messages</description>
 			
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-          <category><![CDATA[keybase]]></category>
+          <category>keybase</category>
         
-          <category><![CDATA[encryption]]></category>
+          <category>encryption</category>
         
-          <category><![CDATA[messaging]]></category>
+          <category>messaging</category>
         
-			<pubDate>Sat, 17 Dec 2016 00:00:00 -0800</pubDate>
+			<pubDate>17 December 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/12/17/keybase-io.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/12/17/keybase-io</guid>
 		</item>
@@ -605,23 +605,21 @@
 				<description>the way I understand algorithm complexity</description>
 			
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-          <category><![CDATA[science]]></category>
+          <category>complexity</category>
         
-          <category><![CDATA[complexity]]></category>
+          <category>big</category>
         
-          <category><![CDATA[big]]></category>
+          <category>algorithms</category>
         
-          <category><![CDATA[algorithms]]></category>
-        
-			<pubDate>Sat, 10 Dec 2016 00:00:00 -0800</pubDate>
+			<pubDate>10 December 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/12/10/big-o.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/12/10/big-o</guid>
 		</item>
@@ -632,29 +630,29 @@
 				<description>-ables in Java</description>
 			
         
-          <category><![CDATA[java]]></category>
+          <category>java</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-          <category><![CDATA[interface]]></category>
+          <category>interface</category>
         
-          <category><![CDATA[serializable]]></category>
+          <category>serializable</category>
         
-          <category><![CDATA[cloneable]]></category>
+          <category>cloneable</category>
         
-          <category><![CDATA[iterable]]></category>
+          <category>iterable</category>
         
-          <category><![CDATA[callable]]></category>
+          <category>callable</category>
         
-          <category><![CDATA[comparable]]></category>
+          <category>comparable</category>
         
-			<pubDate>Mon, 28 Nov 2016 00:00:00 -0800</pubDate>
+			<pubDate>28 November 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/11/28/ables-java.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/11/28/ables-java</guid>
 		</item>
@@ -665,21 +663,21 @@
 				<description>a library you should incorporate on any project</description>
 			
         
-          <category><![CDATA[java]]></category>
+          <category>java</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-          <category><![CDATA[google]]></category>
+          <category>google</category>
         
-          <category><![CDATA[guava]]></category>
+          <category>guava</category>
         
-			<pubDate>Sat, 26 Nov 2016 00:00:00 -0800</pubDate>
+			<pubDate>26 November 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/11/26/google-guava.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/11/26/google-guava</guid>
 		</item>
@@ -690,31 +688,31 @@
 				<description>From my experience</description>
 			
         
-          <category><![CDATA[java]]></category>
+          <category>java</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-          <category><![CDATA[books]]></category>
+          <category>books</category>
         
-          <category><![CDATA[dao]]></category>
+          <category>dao</category>
         
-          <category><![CDATA[pojo]]></category>
+          <category>pojo</category>
         
-          <category><![CDATA[gson]]></category>
+          <category>gson</category>
         
-          <category><![CDATA[exception]]></category>
+          <category>exception</category>
         
-          <category><![CDATA[xml]]></category>
+          <category>xml</category>
         
-          <category><![CDATA[xstream]]></category>
+          <category>xstream</category>
         
-			<pubDate>Sat, 19 Nov 2016 00:00:00 -0800</pubDate>
+			<pubDate>19 November 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/11/19/useful-code-in-java.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/11/19/useful-code-in-java</guid>
 		</item>
@@ -725,19 +723,19 @@
 				<description>I have read so far</description>
 			
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-          <category><![CDATA[books]]></category>
+          <category>books</category>
         
-          <category><![CDATA[bookreview]]></category>
+          <category>bookreview</category>
         
-			<pubDate>Sat, 12 Nov 2016 00:00:00 -0800</pubDate>
+			<pubDate>12 November 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/11/12/Favourite-Books.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/11/12/Favourite-Books</guid>
 		</item>
@@ -748,19 +746,19 @@
 				<description>Place for practicing my coding skills</description>
 			
         
-          <category><![CDATA[algorithm]]></category>
+          <category>algorithm</category>
         
-          <category><![CDATA[programming]]></category>
+          <category>programming</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-			<pubDate>Sat, 05 Nov 2016 00:00:00 -0700</pubDate>
+			<pubDate>05 November 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/11/05/Algorithms.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/11/05/Algorithms</guid>
 		</item>
@@ -771,19 +769,19 @@
 				<description>Annotations Made Java Coding Simpler</description>
 			
         
-          <category><![CDATA[lombok]]></category>
+          <category>lombok</category>
         
-          <category><![CDATA[java]]></category>
+          <category>java</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-			<pubDate>Sat, 29 Oct 2016 00:00:00 -0700</pubDate>
+			<pubDate>29 October 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/10/29/lombok.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/10/29/lombok</guid>
 		</item>
@@ -794,27 +792,27 @@
 				<description>With Examples</description>
 			
         
-          <category><![CDATA[dependency]]></category>
+          <category>dependency</category>
         
-          <category><![CDATA[injection]]></category>
+          <category>injection</category>
         
-          <category><![CDATA[DI]]></category>
+          <category>DI</category>
         
-          <category><![CDATA[spring]]></category>
+          <category>spring</category>
         
-          <category><![CDATA[guice]]></category>
+          <category>guice</category>
         
-          <category><![CDATA[java]]></category>
+          <category>java</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-			<pubDate>Sat, 22 Oct 2016 00:00:00 -0700</pubDate>
+			<pubDate>22 October 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/10/22/dependency-injection.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/10/22/dependency-injection</guid>
 		</item>
@@ -825,19 +823,19 @@
 				<description>Big 2 of Creational Design Pattern</description>
 			
         
-          <category><![CDATA[builder]]></category>
+          <category>builder</category>
         
-          <category><![CDATA[factory]]></category>
+          <category>factory</category>
         
-          <category><![CDATA[pattern]]></category>
+          <category>pattern</category>
         
-			<pubDate>Sat, 15 Oct 2016 00:00:00 -0700</pubDate>
+			<pubDate>15 October 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/10/15/builder-pattern.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/10/15/builder-pattern</guid>
 		</item>
@@ -848,19 +846,19 @@
 				<description>So Far So Good!</description>
 			
         
-          <category><![CDATA[newteam]]></category>
+          <category>newteam</category>
         
-          <category><![CDATA[java]]></category>
+          <category>java</category>
         
-          <category><![CDATA[developer]]></category>
+          <category>developer</category>
         
-			<pubDate>Sun, 25 Sep 2016 00:00:00 -0700</pubDate>
+			<pubDate>25 September 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/09/25/new-team-new-life.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/09/25/new-team-new-life</guid>
 		</item>
@@ -871,23 +869,23 @@
 				<description>Junit + Annotation = Powerful Way of Unit Testing</description>
 			
         
-          <category><![CDATA[unit]]></category>
+          <category>unit</category>
         
-          <category><![CDATA[testing]]></category>
+          <category>testing</category>
         
-          <category><![CDATA[JUnit]]></category>
+          <category>JUnit</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-          <category><![CDATA[java]]></category>
+          <category>java</category>
         
-			<pubDate>Tue, 02 Aug 2016 00:00:00 -0700</pubDate>
+			<pubDate>02 August 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/08/02/junit.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/08/02/junit</guid>
 		</item>
@@ -898,19 +896,19 @@
 				<description>Frequent Git Commands I Use On Daily Basis</description>
 			
         
-          <category><![CDATA[repository]]></category>
+          <category>repository</category>
         
-          <category><![CDATA[git]]></category>
+          <category>git</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-			<pubDate>Tue, 02 Aug 2016 00:00:00 -0700</pubDate>
+			<pubDate>02 August 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/08/02/git.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/08/02/git</guid>
 		</item>
@@ -921,19 +919,19 @@
 				<description>4-way workout split I do every day</description>
 			
         
-          <category><![CDATA[fitness]]></category>
+          <category>fitness</category>
         
-          <category><![CDATA[workout]]></category>
+          <category>workout</category>
         
-          <category><![CDATA[gym]]></category>
+          <category>gym</category>
         
-			<pubDate>Tue, 12 Jul 2016 00:00:00 -0700</pubDate>
+			<pubDate>12 July 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/07/12/workout-split.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/07/12/workout-split</guid>
 		</item>
@@ -944,17 +942,17 @@
 				<description>Security of web- sites, applications and services</description>
 			
         
-          <category><![CDATA[websecurity]]></category>
+          <category>websecurity</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-			<pubDate>Sat, 02 Jul 2016 00:00:00 -0700</pubDate>
+			<pubDate>02 July 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/07/02/web-security.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/07/02/web-security</guid>
 		</item>
@@ -965,19 +963,19 @@
 				<description>Various ways of sorting methods</description>
 			
         
-          <category><![CDATA[algorithm]]></category>
+          <category>algorithm</category>
         
-          <category><![CDATA[sort]]></category>
+          <category>sort</category>
         
-          <category><![CDATA[computer]]></category>
+          <category>computer</category>
         
-			<pubDate>Tue, 28 Jun 2016 00:00:00 -0700</pubDate>
+			<pubDate>28 June 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/06/28/sorting.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/06/28/sorting</guid>
 		</item>
@@ -988,19 +986,19 @@
 				<description>Songs I listen to these days</description>
 			
         
-          <category><![CDATA[korean]]></category>
+          <category>korean</category>
         
-          <category><![CDATA[music]]></category>
+          <category>music</category>
         
-          <category><![CDATA[장범준]]></category>
+          <category>장범준</category>
         
-			<pubDate>Fri, 24 Jun 2016 00:00:00 -0700</pubDate>
+			<pubDate>24 June 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/06/24/music.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/06/24/music</guid>
 		</item>
@@ -1011,17 +1009,17 @@
 				<description>Facts about natural sugar vs added sugar</description>
 			
         
-          <category><![CDATA[diet]]></category>
+          <category>diet</category>
         
-          <category><![CDATA[health]]></category>
+          <category>health</category>
         
-			<pubDate>Tue, 21 Jun 2016 00:00:00 -0700</pubDate>
+			<pubDate>21 June 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/06/21/fruits-sugar-health.html</link>
       
         
           
           
-          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+          <dc:creator>Calvin Lee</dc:creator>
         
       <guid isPermaLink="false">/blog/2016/06/21/fruits-sugar-health</guid>
 		</item>

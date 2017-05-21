@@ -176,7 +176,7 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <h1 style="display:inline; color: #F4A460;"><strong>Euler's number</strong></h1>
-          <h4 style="display:inline; color: #F4A460;"><strong>Mathematical constant, base of the natural logarithm</strong></h4><br />
+          <h4 style="display:inline; color: #F4A460;"><strong>Mathematical constant, the base of the natural logarithm</strong></h4><br />
           <h4>
             <strong>20 May 2017</strong>
             <small>
@@ -203,7 +203,7 @@
             
           </nav><!-- /.pagination -->
 
-          <p>Last week, I covered <a href="/blog/2017/05/13/binary-logarithm.html">Binary Logarithm</a>. Here is the magic number that kind of relates to the logarithm in many ways and very useful in our daily life. It is helpful in my opinion to know and understand this number as a person in computer science industry. The magic number is called Euler’s number as known as number ‘e’. ‘e’ is just another form of constants like the ‘π’. Well, why is ‘e’ so important? To answer that in a sentence, it represents the natural growth (or decay or anything that does similar) in our life, <script type="math/tex">f(x)=e^x</script>. It can be used to estimate the growth/decay in our life.</p>
+          <p>Last week, I covered <a href="/blog/2017/05/13/binary-logarithm.html">Binary Logarithm</a>. Here is the magic number that we use in logarithm a lot as well, except in this time, it is at the base of ‘e’, instead of the 2, which we call this natural logarithm. It is helpful in my opinion to know and understand the concept of number ‘e’ and natural logarithm to solve problems to be a computer science industry person. The number ‘e’ is often called Euler’s number these days. ‘e’ is just another form of constants like the ‘π’. Well, why is ‘e’ so important? To answer that in a sentence, it represents the natural growth (or decay or anything that does similar) in our life, <script type="math/tex">f(x)=e^x</script>. It can be used to estimate the growth/decay in our life.</p>
 
 <table class="image" align="center" style="margin-top:2em;text-align:center;">
 <caption class="custom" align="bottom">Graph of f(x) = e^x</caption>
@@ -214,14 +214,13 @@
 
 <p><a href="https://en.wikipedia.org/wiki/John_Napier">John Napier</a> discovered the logarithm in 1618 but did not define any natural constant for it. The discovery of the constant itself is credited to <a href="https://en.wikipedia.org/wiki/Jacob_Bernoulli">Jacob Bernoulli</a> in 1683,[7][8] who attempted to find the value of the following expression (which is in fact e):</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-e = {\displaystyle \lim _{n\to \infty }\left(1+{\frac {1}{n}}\right)^{n}} = <span>2.7182818284590452353602874713526624977572470936999595749669676277240⋯ %]]></script>
+<script type="math/tex; mode=display">e = {\displaystyle \lim _{n\to \infty }\left(1+{\frac {1}{n}}\right)^{n}} = 2.7182818284590452353602874713526624977572470936999595749669676277240⋯</script>
 
 <p><a href="https://en.wikipedia.org/wiki/Leonhard_Euler">Leonhard Euler</a> later introduced the letter ‘e’ as the base for natural logarithms and used it for the next few years.</p>
 
 <h2 id="fundamentals">Fundamentals</h2>
 
-<p>In order to understand Euler’s number, you need to understand what exponential growth is. When you think of exponential growth, you are probably thinking “growing fast”. Let me start with giving some examples of exponential growth, <script type="math/tex">{x^2}</script> as we all know grows fast. However, <script type="math/tex">{x^2{^0}}</script> probably grows faster. They all grow fast. Well for above equation, it does. With below equation,</p>
+<p>In order to understand Euler’s number, you need to understand what exponential growth is. When you think of exponential growth, you are probably thinking “growing fast”. Let me start by giving some examples of exponential growth, <script type="math/tex">{x^2}</script> as we all know grows fast. However, <script type="math/tex">{x^2{^0}}</script> probably grows faster. They all grow fast. Following equation came as a result that they all grow fast,</p>
 
 <script type="math/tex; mode=display">a_n=(1+\frac {1}{n})^n</script>
 
@@ -250,11 +249,11 @@ e = {\displaystyle \lim _{n\to \infty }\left(1+{\frac {1}{n}}\right)^{n}} = <spa
   <li><span>2.6532977051444201339</span></li>
 </ol>
 
-<p>You can see the number slowly moves closer to <span>2.71, if we modify above equation in this fashion:</span></p>
+<p>You can see the number slowly moves closer to 2.71. We can modify above equation in this fashion:</p>
 
-<script type="math/tex; mode=display">\sum_{n=0}^\infty \frac {1}{n!}</script>
+<script type="math/tex; mode=display">b_n=\sum_{n=0}^\infty \frac {1}{n!}</script>
 
-<p>So say if we are calculate from <script type="math/tex">b_1</script> to <script type="math/tex">b_2{_0}</script>,</p>
+<p>Now let’s calculate this from <script type="math/tex">b_1</script> to <script type="math/tex">b_2{_0}</script>,</p>
 
 <ol class="listOrderedStyle">
   <li><span>2.00000000000000000000000000000</span></li>
@@ -279,33 +278,48 @@ e = {\displaystyle \lim _{n\to \infty }\left(1+{\frac {1}{n}}\right)^{n}} = <spa
   <li><span>2.71828182845904523533978449067</span></li>
 </ol>
 
-<p>We can see this is moving much faster and similarly reaches closer and closer to 2.71. People have discovered the ‘e’ value upto 12,884,901,000 decimal places which is crazy and it will probably go on till infinity.</p>
+<p>We can see this is moving much faster and similarly reaches closer and closer to 2.71. People have gone through these numbers and gone up to 12,884,901,000 decimal places which are ridiculously crazy given that the number goes to infinity.</p>
 
 <h2 id="application">Application</h2>
 
 <p>Below 2 are probably the most common real life usage you will find that heavily uses this magic number.</p>
 
 <ol>
-  <li>Population - With larger population, faster the number will grow to populate
-<span>2. Money/Investment - More money you have, more interest = more money</span></li>
+  <li>Population - With larger population, faster the number will grow to populate</li>
+  <li>Money/Investment - More money you have, more interest = more money</li>
 </ol>
 
 <h2 id="example">Example</h2>
 
 <p>Let’s talk about the 2 applications I listed above.</p>
 
-<ol>
-  <li>Let’s say P = <script type="math/tex">250,342e^0{^.{^0{^1{^2{^t}}}}}</script> where t = 0 represents the population in the year 2000. What is the expected population in year 2015? To find the population in the year 2015, we need to let t = 15.
-P = <script type="math/tex">250,342e^0{^.{^0{^1{^2{^({^5{^)}}}}}}}</script> = <script type="math/tex">250,342e^0{^.{^1{^8}}}</script> which is around 299,714 people. Let’s tweak the probelm a bit. What if we wanted to know the time when population reaches 300,000? 320,000 = <script type="math/tex">250,342e^0{^.{^0{^1{^2{^t}}}}}</script> given that rate of 1.2% growth we have time taking roughly 15 years. Let’s take a look at some other population example, A scientist starts with 100 bacteria in an experiment. After 5 days, she discovers that the population has grown to 350. Let’s determine the equation for this bacteria population growth. so we know with some constant with 5 days it grew from 100 to 350. Applying this into the function representation, 350 = <script type="math/tex">100e^5{^c}</script> then if we calculate for the constant, c, we get 0.25055. So now equation for the growth given this layout becomes <script type="math/tex">P = 100e^0{^.{^2{^5{^0{^5{^5{^t}}}}}}}</script>. With this equation, we can apply this to estimate future growth such as what is population going to be after 30 days? and so on.</li>
+<ol style="padding-left: 1.5em; list-style: decimal;">
+  <li>
+    <p>Let’s say P = <script type="math/tex">250,342e^0{^.{^0{^1{^2{^t}}}}}</script> where t = 0 represents the population in the year 2000. What is the expected population in the year 2015? To find the population in the year 2015, we need to let t = 15.
+P = <script type="math/tex">250,342e^0{^.{^0{^1{^2{^({^1{^5{^)}}}}}}}}</script> = <script type="math/tex">250,342e^0{^.{^1{^8}}}</script> which is around 299,714 people. Let’s tweak the problem a little bit. What if we wanted to know the time when the population reaches 400,000? 400,000 = <script type="math/tex">250,342e^0{^.{^0{^1{^2{^t}}}}}</script> given that rate of 1.2% growth, we have time taking roughly 39 years then. Let’s take a look at another population example, A scientist starts with 100 bacteria in an experiment. After 5 days, she discovers that the population has grown to 350. Let’s determine the equation for this bacteria population growth. First, we know with some constant with 5 days it grew from 100 to 350. Applying this to the function representation, 350 = <script type="math/tex">100e^5{^c}</script> then if we calculate for the constant, c, we get 0.25055. So now equation for the growth given this layout becomes <script type="math/tex">P = 100e^0{^.{^2{^5{^0{^5{^5{^t}}}}}}}</script>. With this equation, we can apply this to estimate future growth such as what is population going to be after 30 days? and so on.</p>
+  </li>
+  <li>
+    <p>Probably the most common example for the exponential growth is in the investment. What is your interest you would get given rate and the frequency (number)?</p>
+  </li>
 </ol>
 
-<p style="padding-left: 1.5em; list-style: decimal;"><span>2. Probably the most common example for the exponential growth is the investment. What is your interest you would get given rate and the frequency (number)? <script type="math/tex">A = P(1+\frac {r}/{n})^n{^t}</script> would be the equation, where A = the amount of money after a certain amount of time, P = the principle or the amount of money you start with, r = the interest rate and is always represented as a decimal, n = number of times interest is compounded in one year and finally t = the amount of time in years. Let’s say bank offers you 100% of interest per year with one dollar in your bank account. That’s awesome! What’s the equation to calculate that? <script type="math/tex">($1+\frac {1}{1})^1</script> which is equal to $<span>2. Now what if bank offered interest every 6 months? <script type="math/tex">(1+\frac {1}{2})^2</script>. The rate is 1/2 as its 2 times a year and frequency would be 2 in one year which is $<span>2.25. So, we actually have higher number than $<span>2. That’s great. What if we make it every month? The equation is <script type="math/tex">(1+\frac {1}{12})^1{^2}</script> which is like $<span>2.61. Now, lets make it more frequent, like every day. What’s the equation? It’s <script type="math/tex">(1+\frac {1}{365})^3{^6{^5}}</script> which is like $<span>2.71 and notice it only jumped like 10 cents as oppsed to big jump initially as it gets more frequent. If we kept on going to even smaller frequency, you will notice it just stays as $<span>2.71.</span></span></span></span></span></span></span></p>
+<p style="padding-left: 1.5em;"><script type="math/tex">A = P(1+\frac {r}{n})^n{^t}</script> would be the equation where,</p>
 
-<p>Here is a more realistic example:</p>
+<ul style="padding-left: 1.5em;">
+  <li>A = the amount of money after a certain amount of time</li>
+  <li>P = the principle or the amount of money you start with,</li>
+  <li>r = the interest rate and is always represented as a decimal</li>
+  <li>n = number of times interest is compounded in one year</li>
+  <li>t = the amount of time in years.</li>
+</ul>
+
+<p style="padding-left: 1.5em;">Let’s say bank offers you 100% of interest per year with one dollar in your bank account. Awesome deal! What’s the equation to calculate the return? <script type="math/tex">($1+\frac {1}{1})^1</script> which is equal to $2. Now, what ‘if’ bank offered interest every 6 months? <script type="math/tex">(1+\frac {1}{2})^2</script>. The rate is 1/2 as its 2 times a year and frequency would be 2 in one year which is $2.25. So, we actually have the higher number than $2. That’s somewhat exciting. What if we make it more frequent, say every month? The equation becomes <script type="math/tex">(1+\frac {1}{12})^1{^2}</script> which is like $2.61. Woohoo, it’s growing!! Now, let’s make it more frequent, like every day. What’s the equation? It’s <script type="math/tex">(1+\frac {1}{365})^3{^6{^5}}</script> which is like $2.71 and it didn’t jump a lot this time, like 10 cents as opposed to the big jump in the beginning. If we kept on going to even smaller frequency, you will notice it just stays as $2.71 as this number is what we say ‘e’, natural growth.</p>
+
+<p>Here we have a slightly more realistic example:</p>
 
 <p><em>An investment of $500 is made in a 6-year condition that earns 4<script type="math/tex">\frac 1 2</script>% annual interest that is compounded monthly. How much is the bank account worth at the end of the 6-year term</em></p>
 
-<p>Well this is easy considering we had similar example above, let’s just put the numbers in to the equation above: <script type="math/tex">(1+r)^n</script>. We then get <script type="math/tex">500(1+\frac {0.045}{12})^1{^2}</script> where 0.045 is just 4<script type="math/tex">\frac 1 2</script>%. So if we calculate this, we get that the account will be worth $654.65 at the end of the 6-year term.</p>
+<p>Well, this is easy since we had a similar example above, let’s just put the numbers into the equation above: <script type="math/tex">(1+r)^n</script>. We then get <script type="math/tex">500(1+\frac {0.045}{12})^1{^2}</script> where 0.045 is just same as 4<script type="math/tex">\frac 1 2</script>%. So if we calculate this, we get that the account will be worth $654.65 at the end of the 6-year term.</p>
 
 
           
