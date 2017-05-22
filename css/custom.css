@@ -71,3 +71,11 @@
     margin-top: -50px; /* Give negative margin of your fixed element */    
     visibility: hidden; 
 }
+
+.listOrderedStyle {
+    color: #F3F70E;
+}
+
+.listOrderedStyle span {
+    color: #fff;
+}

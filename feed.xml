@@ -14,7 +14,34 @@
     
       <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
     
-    <lastBuildDate>Sat, 13 May 2017 13:28:26 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 20 May 2017 14:11:06 -0700</lastBuildDate>
+	
+		<item>
+			<title>Euler's number</title>
+			
+				<description>Mathematical constant, base of the natural logarithm</description>
+			
+        
+          <category><![CDATA[euler]]></category>
+        
+          <category><![CDATA[mathematics]]></category>
+        
+          <category><![CDATA[logarithm]]></category>
+        
+          <category><![CDATA[exponential]]></category>
+        
+          <category><![CDATA[growth]]></category>
+        
+			<pubDate>Sat, 20 May 2017 00:00:00 -0700</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/05/20/exponential-growth.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee (mailto:stalk.calvin@gmail.com</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/05/20/exponential-growth</guid>
+		</item>
 	
 		<item>
 			<title>Binary Logarithm</title>

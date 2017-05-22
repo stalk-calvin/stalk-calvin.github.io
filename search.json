@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Euler's number",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/05/20/exponential-growth.html",
+      "excerpt"		: "Mathematical constant, base of the natural logarithm",
+      "tags"        : ["euler","mathematics","logarithm","exponential","growth"]
+    }
+  
+
+  
+    ,{
       "title"			: "Binary Logarithm",
       "link"			: "https://stalk-calvin.github.io/blog/2017/05/13/binary-logarithm.html",
       "excerpt"		: "Relationship with computers",
