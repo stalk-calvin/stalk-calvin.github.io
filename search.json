@@ -14,7 +14,7 @@
       "title"			: "Euler's number",
       "link"			: "https://stalk-calvin.github.io/blog/2017/05/20/exponential-growth.html",
       "excerpt"		: "Mathematical constant, the base of the natural logarithm",
-      "tags"        : ["euler","mathematics","logarithm","exponential","growth"]
+      "tags"        : ["euler","mathematics","logarithm","exponential","growth","algorithm"]
     }
   
 
@@ -23,7 +23,7 @@
       "title"			: "Binary Logarithm",
       "link"			: "https://stalk-calvin.github.io/blog/2017/05/13/binary-logarithm.html",
       "excerpt"		: "Relationship with computers",
-      "tags"        : ["binary","logarithm","computer"]
+      "tags"        : ["binary","logarithm","computer","algorithm"]
     }
   
 
@@ -246,7 +246,7 @@
   
     ,{
       "title"			: "Algorithms: My Programming Playground",
-      "link"			: "https://stalk-calvin.github.io/blog/2016/11/05/Algorithms.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/11/05/algorithms.html",
       "excerpt"		: "Place for practicing my coding skills",
       "tags"        : ["algorithm","programming","computer"]
     }

@@ -14,7 +14,7 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 27 May 2017 11:53:53 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 27 May 2017 12:01:48 -0700</lastBuildDate>
 	
 		<item>
 			<title>Algorithms to live by</title>
@@ -55,6 +55,8 @@
         
           <category>growth</category>
         
+          <category>algorithm</category>
+        
 			<pubDate>20 May 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/05/20/exponential-growth.html</link>
       
@@ -77,6 +79,8 @@
           <category>logarithm</category>
         
           <category>computer</category>
+        
+          <category>algorithm</category>
         
 			<pubDate>13 May 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/05/13/binary-logarithm.html</link>
@@ -760,14 +764,14 @@
           <category>computer</category>
         
 			<pubDate>05 November 2016</pubDate>
-			<link>https://stalk-calvin.github.io/blog/2016/11/05/Algorithms.html</link>
+			<link>https://stalk-calvin.github.io/blog/2016/11/05/algorithms.html</link>
       
         
           
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/11/05/Algorithms</guid>
+      <guid isPermaLink="false">/blog/2016/11/05/algorithms</guid>
 		</item>
 	
 		<item>
