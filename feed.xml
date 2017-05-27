@@ -14,7 +14,30 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Mon, 22 May 2017 18:30:40 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 27 May 2017 11:53:53 -0700</lastBuildDate>
+	
+		<item>
+			<title>Algorithms to live by</title>
+			
+				<description>The Computer Science of Human Decisions</description>
+			
+        
+          <category>bookreview</category>
+        
+          <category>computer</category>
+        
+          <category>algorithm</category>
+        
+			<pubDate>27 May 2017</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/05/27/algorithms-to-live-by.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/05/27/algorithms-to-live-by</guid>
+		</item>
 	
 		<item>
 			<title>Euler's number</title>
@@ -76,8 +99,6 @@
         
           <category>toronto</category>
         
-          <category>east</category>
-        
           <category>travellog</category>
         
 			<pubDate>06 May 2017</pubDate>
@@ -102,8 +123,6 @@
           <category>balance</category>
         
           <category>earthrotation</category>
-        
-          <category>UTC</category>
         
           <category>timezone</category>
         
@@ -193,8 +212,6 @@
           <category>beer</category>
         
           <category>microbrewery</category>
-        
-          <category>beerlife</category>
         
 			<pubDate>01 April 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/04/01/beer-list.html</link>
@@ -298,9 +315,7 @@
         
           <category>http</category>
         
-          <category>response</category>
-        
-          <category>code</category>
+          <category>responsecode</category>
         
           <category>status</category>
         
@@ -361,8 +376,6 @@
           <category>oauth</category>
         
           <category>programming</category>
-        
-          <category>coding</category>
         
           <category>API</category>
         
@@ -441,7 +454,7 @@
 				<description>people make</description>
 			
         
-          <category>Java</category>
+          <category>java</category>
         
           <category>mistake</category>
         
@@ -528,8 +541,6 @@
         
           <category>sequence</category>
         
-          <category>algorithm</category>
-        
 			<pubDate>28 December 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/12/28/fibonacci.html</link>
       
@@ -551,7 +562,7 @@
         
           <category>future</category>
         
-          <category>ai</category>
+          <category>AI</category>
         
           <category>machine</category>
         
@@ -611,7 +622,7 @@
         
           <category>big</category>
         
-          <category>algorithms</category>
+          <category>algorithm</category>
         
 			<pubDate>10 December 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/12/10/big-o.html</link>
@@ -692,8 +703,6 @@
         
           <category>computer</category>
         
-          <category>books</category>
-        
           <category>dao</category>
         
           <category>pojo</category>
@@ -725,19 +734,17 @@
         
           <category>computer</category>
         
-          <category>books</category>
-        
           <category>bookreview</category>
         
 			<pubDate>12 November 2016</pubDate>
-			<link>https://stalk-calvin.github.io/blog/2016/11/12/Favourite-Books.html</link>
+			<link>https://stalk-calvin.github.io/blog/2016/11/12/favourite-books.html</link>
       
         
           
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/11/12/Favourite-Books</guid>
+      <guid isPermaLink="false">/blog/2016/11/12/favourite-books</guid>
 		</item>
 	
 		<item>
@@ -872,8 +879,6 @@
           <category>unit</category>
         
           <category>testing</category>
-        
-          <category>JUnit</category>
         
           <category>computer</category>
         

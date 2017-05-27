@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Algorithms to live by",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/05/27/algorithms-to-live-by.html",
+      "excerpt"		: "The Computer Science of Human Decisions",
+      "tags"        : ["bookreview","computer","algorithm"]
+    }
+  
+
+  
+    ,{
       "title"			: "Euler's number",
       "link"			: "https://stalk-calvin.github.io/blog/2017/05/20/exponential-growth.html",
       "excerpt"		: "Mathematical constant, the base of the natural logarithm",
@@ -23,7 +32,7 @@
       "title"			: "Toronto",
       "link"			: "https://stalk-calvin.github.io/blog/2017/05/06/toronto.html",
       "excerpt"		: "4-day travel log",
-      "tags"        : ["trip","toronto","east","travellog"]
+      "tags"        : ["trip","toronto","travellog"]
     }
   
 
@@ -32,7 +41,7 @@
       "title"			: "Leap Second",
       "link"			: "https://stalk-calvin.github.io/blog/2017/04/22/leap-second.html",
       "excerpt"		: "that added extra one-second ..",
-      "tags"        : ["leapsecond","balance","earthrotation","UTC","timezone"]
+      "tags"        : ["leapsecond","balance","earthrotation","timezone"]
     }
   
 
@@ -59,7 +68,7 @@
       "title"			: "Beer Pick",
       "link"			: "https://stalk-calvin.github.io/blog/2017/04/01/beer-list.html",
       "excerpt"		: "my favourite craft beers",
-      "tags"        : ["craftbeer","beer","microbrewery","beerlife"]
+      "tags"        : ["craftbeer","beer","microbrewery"]
     }
   
 
@@ -95,7 +104,7 @@
       "title"			: "HTTP Response Codes",
       "link"			: "https://stalk-calvin.github.io/blog/2017/02/25/http-response-code.html",
       "excerpt"		: "3-digit server status acknowledgment",
-      "tags"        : ["http","response","code","status","acknowledgment","web","computer"]
+      "tags"        : ["http","responsecode","status","acknowledgment","web","computer"]
     }
   
 
@@ -113,7 +122,7 @@
       "title"			: "OAuth",
       "link"			: "https://stalk-calvin.github.io/blog/2017/02/11/oauth.html",
       "excerpt"		: "How Authorization Works over the internet",
-      "tags"        : ["oauth","programming","coding","API","authorization","SaaS","cloud","computer"]
+      "tags"        : ["oauth","programming","API","authorization","SaaS","cloud","computer"]
     }
   
 
@@ -140,7 +149,7 @@
       "title"			: "Java Programming Mistakes",
       "link"			: "https://stalk-calvin.github.io/blog/2017/01/21/java-developers-mistake.html",
       "excerpt"		: "people make",
-      "tags"        : ["Java","mistake","programming","computer"]
+      "tags"        : ["java","mistake","programming","computer"]
     }
   
 
@@ -167,7 +176,7 @@
       "title"			: "Fibonacci Numbers",
       "link"			: "https://stalk-calvin.github.io/blog/2016/12/28/fibonacci.html",
       "excerpt"		: "",
-      "tags"        : ["computer","dynamic","programming","algorithm","recursion","Fibonacci","sequence","algorithm"]
+      "tags"        : ["computer","dynamic","programming","algorithm","recursion","Fibonacci","sequence"]
     }
   
 
@@ -176,7 +185,7 @@
       "title"			: "What's Next?",
       "link"			: "https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html",
       "excerpt"		: "The Future of Computer Science",
-      "tags"        : ["computer","future","ai","machine","learning","IOT","industrial","revolution"]
+      "tags"        : ["computer","future","AI","machine","learning","IOT","industrial","revolution"]
     }
   
 
@@ -194,7 +203,7 @@
       "title"			: "Big O Notations",
       "link"			: "https://stalk-calvin.github.io/blog/2016/12/10/big-o.html",
       "excerpt"		: "the way I understand algorithm complexity",
-      "tags"        : ["computer","complexity","big","algorithms"]
+      "tags"        : ["computer","complexity","big","algorithm"]
     }
   
 
@@ -221,16 +230,16 @@
       "title"			: "Useful Java Code",
       "link"			: "https://stalk-calvin.github.io/blog/2016/11/19/useful-code-in-java.html",
       "excerpt"		: "From my experience",
-      "tags"        : ["java","computer","books","dao","pojo","gson","exception","xml","xstream"]
+      "tags"        : ["java","computer","dao","pojo","gson","exception","xml","xstream"]
     }
   
 
   
     ,{
       "title"			: "5 Best Computer Books",
-      "link"			: "https://stalk-calvin.github.io/blog/2016/11/12/Favourite-Books.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/11/12/favourite-books.html",
       "excerpt"		: "I have read so far",
-      "tags"        : ["computer","books","bookreview"]
+      "tags"        : ["computer","bookreview"]
     }
   
 
@@ -284,7 +293,7 @@
       "title"			: "Unit Testing Using Junit+Annotation",
       "link"			: "https://stalk-calvin.github.io/blog/2016/08/02/junit.html",
       "excerpt"		: "Junit + Annotation = Powerful Way of Unit Testing",
-      "tags"        : ["unit","testing","JUnit","computer","java"]
+      "tags"        : ["unit","testing","computer","java"]
     }
   
 
