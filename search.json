@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Java, Perl, and Python",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/06/03/java-perl-python.html",
+      "excerpt"		: "Programming languages I acquired during my career",
+      "tags"        : ["programming","computer","languages","java","perl","python"]
+    }
+  
+
+  
+    ,{
       "title"			: "Algorithms to live by",
       "link"			: "https://stalk-calvin.github.io/blog/2017/05/27/algorithms-to-live-by.html",
       "excerpt"		: "The Computer Science of Human Decisions",

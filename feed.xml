@@ -14,7 +14,36 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 27 May 2017 12:01:48 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 03 Jun 2017 14:21:15 -0700</lastBuildDate>
+	
+		<item>
+			<title>Java, Perl, and Python</title>
+			
+				<description>Programming languages I acquired during my career</description>
+			
+        
+          <category>programming</category>
+        
+          <category>computer</category>
+        
+          <category>languages</category>
+        
+          <category>java</category>
+        
+          <category>perl</category>
+        
+          <category>python</category>
+        
+			<pubDate>03 June 2017</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/06/03/java-perl-python.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/06/03/java-perl-python</guid>
+		</item>
 	
 		<item>
 			<title>Algorithms to live by</title>
