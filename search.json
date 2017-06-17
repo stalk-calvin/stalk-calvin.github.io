@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Nash Equilibrium",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/06/10/nash-equalibrium.html",
+      "excerpt"		: "Basic Game Theory that everyone should know",
+      "tags"        : ["nash","equilibrium","computer","game","theory"]
+    }
+  
+
+  
+    ,{
       "title"			: "Java, Perl, and Python",
       "link"			: "https://stalk-calvin.github.io/blog/2017/06/03/java-perl-python.html",
       "excerpt"		: "Programming languages I acquired during my career",

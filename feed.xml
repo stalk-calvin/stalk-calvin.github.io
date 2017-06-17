@@ -14,7 +14,34 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 03 Jun 2017 14:21:15 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 17 Jun 2017 09:54:37 -0700</lastBuildDate>
+	
+		<item>
+			<title>Nash Equilibrium</title>
+			
+				<description>Basic Game Theory that everyone should know</description>
+			
+        
+          <category>nash</category>
+        
+          <category>equilibrium</category>
+        
+          <category>computer</category>
+        
+          <category>game</category>
+        
+          <category>theory</category>
+        
+			<pubDate>10 June 2017</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/06/10/nash-equalibrium.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/06/10/nash-equalibrium</guid>
+		</item>
 	
 		<item>
 			<title>Java, Perl, and Python</title>
