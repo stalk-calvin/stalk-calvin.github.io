@@ -14,7 +14,32 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sun, 18 Jun 2017 01:19:30 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 24 Jun 2017 14:24:07 -0700</lastBuildDate>
+	
+		<item>
+			<title>Mockito</title>
+			
+				<description>open sourced testing framework</description>
+			
+        
+          <category>mockito</category>
+        
+          <category>testing</category>
+        
+          <category>framework</category>
+        
+          <category>mock</category>
+        
+			<pubDate>21 June 2017</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/06/21/mockito.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/06/21/mockito</guid>
+		</item>
 	
 		<item>
 			<title>Nash Equilibrium</title>
