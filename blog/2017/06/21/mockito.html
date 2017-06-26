@@ -201,15 +201,15 @@
             
           </nav><!-- /.pagination -->
 
-          <p>Mockito is a popular Java mocking framework which is used for testing that is <a href="https://github.com/mockito/mockito">open-sourced</a>. The idea of mocking is widespread out in <a href="https://github.com/mockito/mockito/wiki/Mockito-for-other-languages">other languages</a> because it is indeed useful and essential in creating unit tests.</p>
+          <p>Mockito is a popular <a href="https://github.com/mockito/mockito">open-sourced</a> Java mocking framework which is used for testing. The idea of mocking is widespread out in <a href="https://github.com/mockito/mockito/wiki/Mockito-for-other-languages">many other languages</a> because it is indeed useful and essential for creating unit tests.</p>
 
 <h3 id="mockito-what-is-it">Mockito? what is it?</h3>
 
-<p>You may be unfamiliar with the term, <code class="highlighter-rouge">mock</code>. A <code class="highlighter-rouge">mock</code> is like a disguised thing that behaves like the real thing based on given instructions. The Mockito is the tool to do just that. A <code class="highlighter-rouge">mock</code> would not actually create any real object so it just creates a type of a thing you are mocking.</p>
+<p>You may be unfamiliar with the term, <code class="highlighter-rouge">mock</code>. A <code class="highlighter-rouge">mock</code> is like creating a disguised thing that behaves like the real thing which can execute given instructions. The Mockito is a tool to do just that. A <code class="highlighter-rouge">mock</code> would not actually create any real object so it just creates a type of a thing you are mocking.</p>
 
 <p>For example (using the famous list example):</p>
 
-<p>Let’s take a look at the example of what I mean by creating a type. testIntsMock is a mock object of a List:</p>
+<p>Let’s take a look at the example of what I mean by creating a type. <code class="highlighter-rouge">testIntsMock</code> is a mock object of a List:</p>
 
 <div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="nd">@Test</span>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testListMock</span><span class="o">()</span>
@@ -224,7 +224,7 @@
 </code></pre>
 </div>
 
-<p>Note the mocked list (testIntsMock) did not actually add any values but we’ve successfully verified that it called the add(10) function which ensures us that functionally it is doing what it supposed to do.</p>
+<p>Note the mocked list (testIntsMock) did not actually add any values but we’ve successfully verified that the add operation is called which ensures us that functionally it is doing what it supposed to do.</p>
 
 <p>Let’s say that we wanted actual behavior changes with the mocked item. The Mockito supports this as well. We can use Spy instead of plain Mock to do our mocking:</p>
 
@@ -244,7 +244,7 @@
 </code></pre>
 </div>
 
-<p>Note the <code class="highlighter-rouge">Spy</code> list is now has the actual size 3 instead of 1 from our <code class="highlighter-rouge">Mock</code> example. So why use <code class="highlighter-rouge">Spy</code>? Well, the example above revealed already a couple of powerful mocking ability the <code class="highlighter-rouge">Spy</code> can do instead of using a real object. You can manipulate the spied object using when/doAnswer etc. Also, you can make <code class="highlighter-rouge">verify</code> calls to ensure the function you are testing is working.</p>
+<p>Note the <code class="highlighter-rouge">Spy</code> list is now has the actual size 3 instead of 0 from our <code class="highlighter-rouge">Mock</code> example. So why use <code class="highlighter-rouge">Spy</code>? Well, the example above revealed already a couple of powerful mocking ability the <code class="highlighter-rouge">Spy</code> can do instead of using a real object. You can manipulate the spied object using when/doAnswer etc. Also, you can make <code class="highlighter-rouge">verify</code> calls to ensure the function you are testing is working.</p>
 
 <h3 id="examples">Examples</h3>
 
@@ -259,11 +259,11 @@ Mockito is mainly written for unit tests which enable you to write tests for eac
 </span></li>
 <li style="padding-bottom: 1em;"><strong><em>Know your tests and provide compact and readable tests</em></strong><br /><br />
 <span style="margin-left: 0em;margin-right: 0;display: inline-block;">
-This one is an obvious item. You are not going to write good unit tests using various mocking abilities without knowing exactly what is happening in the code you are trying to mock. For example, you cannot simply mock encoding a string when this is expected to be done as part of the function. Also, when you are mocking an item. You need write test codes as precise and readable as you can because tests with mocking can easily lose tracks and change behaviors upside down quite easily. It will not only help others but most importantly it will help you who will eventually write the tests out. Remember that the writing clean and neat tests are for you, not for others.
+This one is an obvious item. You are not going to write good unit tests using various mocking abilities without knowing exactly what is happening in the code you are trying to mock. For example, you should not simply mock string encode operation when the operation is expected to be done as part of the function. Also, when you are mocking an item. You need write tests as precise and readable as you can because tests with mocking can easily lose tracks and change behaviors upside down quite easily. It will not only help others but most importantly it will help you who will eventually write the tests out. Writing clean and neat tests are for you, not for others.
 </span></li>
 <li style="padding-bottom: 1em;"><strong><em>Be aware of mocking types you don't own</em></strong><br /><br />
 <span style="margin-left: 0em;margin-right: 0;display: inline-block;">
-This is something programmers often look down. They do not find this important as they use trusted 3rd party libs that won't dramatically change their behaviors. This is a big mistake though. I have seen many libs which changed its behaviours drastically that the mocked tests would be invalid. It is usually wrong and dangerous thinking to assume things will behave the way it is. For 3rd party libs, we have associated versions in dependency list to make sure behaviour stick to the way the software is expecting. So there will be a time when the version will need to go up. Now, let's say we reviewed over all of its changelogs carefully. Does this mean we will remember how its usage been written in every test? Wouldn't it be safer to not mock any of its behaviours so we have the red flags (errors) when running the tests?
+This is something programmers often look down. They do not find this important as they use trusted 3rd party libs that won't dramatically change their behaviors. This is a big mistake though. I have seen many libs which changed its behaviours drastically that the mocked tests would still pass as we have mocked the the entire 3rd party lib function. It is usually wrong and dangerous thinking to assume things will behave the way it is. For 3rd party libs, we have associated versions in dependency list to make sure behaviour stick to the way the software is expecting. So there will be a time when the version will need to go up. Now, let's say we reviewed over all of its changelogs carefully. Does this mean we will remember how its usage been written in every test? Wouldn't it be safer to not mock any of its behaviours so we have the red flags (errors) when running the tests?
 </span></li>
 </ol>
 
@@ -299,7 +299,7 @@ Answer is a powerful mockito behavior which enables an idea of callbacks when th
         <span class="n">returnedValue</span><span class="o">.</span><span class="na">setCost</span><span class="o">(</span><span class="k">new</span> <span class="n">Cost</span><span class="o">(</span><span class="n">originalAmount</span> <span class="o">-</span> <span class="n">chargedAmount</span><span class="o">));</span>
         <span class="k">return</span> <span class="n">returnedValue</span> <span class="o">;</span>
     <span class="o">}</span>
-<span class="o">}).</span><span class="na">when</span><span class="o">(</span><span class="n">priceChangeRequestService</span><span class="o">).</span><span class="na">quickCharge</span><span class="o">(</span><span class="n">eq</span><span class="o">(</span><span class="n">originalAmount</span><span class="o">),</span> <span class="n">any</span><span class="o">(</span><span class="n">Integer</span><span class="o">.</span><span class="na">class</span><span class="o">));</span>
+<span class="o">}).</span><span class="na">when</span><span class="o">(</span><span class="n">priceChangeRequestService</span><span class="o">).</span><span class="na">quickCharge</span><span class="o">(</span><span class="n">any</span><span class="o">(</span><span class="n">Integer</span><span class="o">.</span><span class="na">class</span><span class="o">),</span> <span class="n">any</span><span class="o">(</span><span class="n">Integer</span><span class="o">.</span><span class="na">class</span><span class="o">));</span>
 </code></pre>
 </div>
 
