@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Salt Spring Island",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/07/08/salt-island.html",
+      "excerpt"		: "3-day travel log",
+      "tags"        : ["trip","salt","spring","island","travellog"]
+    }
+  
+
+  
+    ,{
       "title"			: "Mockito",
       "link"			: "https://stalk-calvin.github.io/blog/2017/06/21/mockito.html",
       "excerpt"		: "open sourced testing framework",

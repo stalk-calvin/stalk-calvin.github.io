@@ -14,7 +14,34 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sun, 25 Jun 2017 19:56:42 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 09 Jul 2017 20:42:59 -0700</lastBuildDate>
+	
+		<item>
+			<title>Salt Spring Island</title>
+			
+				<description>3-day travel log</description>
+			
+        
+          <category>trip</category>
+        
+          <category>salt</category>
+        
+          <category>spring</category>
+        
+          <category>island</category>
+        
+          <category>travellog</category>
+        
+			<pubDate>08 July 2017</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/07/08/salt-island.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/07/08/salt-island</guid>
+		</item>
 	
 		<item>
 			<title>Mockito</title>
