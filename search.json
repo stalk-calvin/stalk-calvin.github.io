@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Performance mistakes",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/07/15/performance-mistakes.html",
+      "excerpt"		: "From my experience, so far",
+      "tags"        : ["computer","programming","performance"]
+    }
+  
+
+  
+    ,{
       "title"			: "Salt Spring Island",
       "link"			: "https://stalk-calvin.github.io/blog/2017/07/08/salt-island.html",
       "excerpt"		: "3-day travel log",

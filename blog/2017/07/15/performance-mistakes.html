@@ -27,8 +27,8 @@
   <meta name="description" content="Stories about Calvin: Beer, Fitness, Diet, Computer Science and Programming.">
   <meta name="author" content="Calvin Lee">
   <meta name="keywords" content="calvin, lee, personal, blog, beer, fitness, diet, computer, science, programming, software, engineer">
-  <link rel="canonical" href="/blog/2017/07/08/salt-island.html">
-  <title>I am Calvin | Salt Spring Island</title>
+  <link rel="canonical" href="/blog/2017/07/15/performance-mistakes.html">
+  <title>I am Calvin | Performance mistakes</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -175,121 +175,65 @@
     <section id="post" class="container content-section ">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <h1 style="display:inline; color: #F4A460;"><strong>Salt Spring Island</strong></h1>
-          <h4 style="display:inline; color: #F4A460;"><strong>3-day travel log</strong></h4><br />
+          <h1 style="display:inline; color: #F4A460;"><strong>Performance mistakes</strong></h1>
+          <h4 style="display:inline; color: #F4A460;"><strong>From my experience, so far</strong></h4><br />
           <h4>
-            <strong>08 Jul 2017</strong>
+            <strong>15 Jul 2017</strong>
             <small>
-              <a href="/blog/2017/07/08/salt-island.html#disqus_thread">Comments</a>
+              <a href="/blog/2017/07/15/performance-mistakes.html#disqus_thread">Comments</a>
               <br />
               
-                <a class="tag" href="/tags/#trip">#trip</a>
+                <a class="tag" href="/tags/#computer">#computer</a>
               
-                <a class="tag" href="/tags/#salt">#salt</a>
+                <a class="tag" href="/tags/#programming">#programming</a>
               
-                <a class="tag" href="/tags/#spring">#spring</a>
-              
-                <a class="tag" href="/tags/#island">#island</a>
-              
-                <a class="tag" href="/tags/#travellog">#travellog</a>
+                <a class="tag" href="/tags/#performance">#performance</a>
               
             </small>
           </h4>
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2017/07/15/performance-mistakes.html" class="btn" title="Performance mistakes">&laquo; Performance mistakes</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2017/06/21/mockito.html" class="btn" title="Mockito">Mockito &raquo;</a>
+              <a href="https://stalk-calvin.github.io/blog/2017/07/08/salt-island.html" class="btn" title="Salt Spring Island">Salt Spring Island &raquo;</a>
             
           </nav><!-- /.pagination -->
 
-          <p>Salt Spring Island is a small island located beside the Vancouver Island, just above the Victoria. It is one of the popular places for the camping to enjoy the nature and to meditate. It was early this year when my friends and I got together and planned the Canada day trip. We also booked for our stay at the time since the place goes no vacancy fairly quick. My friends said they camped the year before and really enjoyed their stay. I personally do not like to camp out in a tent and we decided to book through the Airbnb and stay in a cottage instead. The cottage was booked early this year as the island gets crowded very quickly.</p>
+          <p><img src="/img/performance.jpg" alt="Performance" style="border: 0;" /></p>
 
-<h2 id="june-30th">June 30th</h2>
+<p>It has already been over a decade since I started writing codes. Writing the code has always been fun. During those time, the code always threw me challenges for me to solve. As time goes, there are few things I learned about writing codes more efficiently. Also, how it is not always about writing the efficient code, but more about balances between writing efficient code vs writing organized code through various DPs and readable code. I summarized below for few performance mistakes we can make as a software developer. I have already made a couple of these mistakes on the course of becoming a programmer, they were good experiences for me and taught me many lessons.</p>
 
-<h4 id="long-harbour---oystercatcher-seafood-bar--grill---maple-ridge-cottage-st-mary-lake">Long Harbour -&gt; Oystercatcher Seafood Bar &amp; Grill -&gt; Maple Ridge Cottage (St. Mary Lake)</h4>
+<h3 id="multiple-db-calls">Multiple DB calls</h3>
 
-<p>My wife and I got together with my friends in the morning then we got on the ferry in the afternoon. After we arrived, we went straight to the restaurant in Ganges town, which was only a couple of minutes from the harbour, called Oystercatcher. We ordered some oysters along 
-with some finger foods. We then walked around the town seeing some markets and the visitor center. I was actually quite surprised to see the visitor center still exists. At least for me, it has been years since I dropped in one of those. I was able to get some animated town maps which had animated picture of places to visit in the town. The map was quite detailed despite the island being so small. The island literally takes less than an hour to just go from tip to tip. After looking around the town, we headed to our cottage, which is called Maple Ridge Cottage located on Tripp Rd right beside St. Mary Lake. It had small 3-4 cottages just like the one we stayed in. The cottage itself was super cozy and the view from the balcony was serene. We decided that my wife and I use the bedroom with the bed and my friends volunteered to use the sofa-bed. The cottage owners had life vests and a row boat. We opted out to the lake to give it a try. There I found my true self, boat rower. I am not sure how, but I was actually rowing pretty well and efficiently. My wife was also in the boat but I literally had no problem rowing myself. At first, I really hesitated to get on the boat but once I was on the boat, oh boy, I wanted to row to the other side of the lake. My wife was a bit scared though that we called it a quit before I even question about going to the other side of the boat. At night, we were around the fire pit with the fire going. The woods were provided by the cottage owner with the cost of somewhere between $5-$7.</p>
+<p>I have seen multiple times where multiple DB calls are problematic. <strong>First</strong>, you need to know that making a DB connection for each DB call quite costly. You should try to reuse the connection you have opened initially as much as you can. <strong>Second</strong>, if you are inserting a bunch of rows, try to insert everything with one call instead of calling “insert” multiple times inside loops. This is a no brainer. Say if you have a single query sent over to DB which would execute these sequence of tasks: 1) query sent 2) parsing query 3) insert row 4) index inserted. Now, let’s say all of this takes about 10ms which is relatively fast. We now want to insert 100 rows and places these insert calls inside a loop which iterates 100 times with 10ms = 1000ms. Now we send over one bulk insert which would insert those 100 rows with tasks of 1) query sent 2) parsing query 3) insert row 4) index inserted. Inserting rows probably takes longer with bulk insert, however, that overhead is relatively small compared to executing these inserts in a row. I don’t think a lot of you do SELECTs in a loop with multiple calls. Don’t do this for inserts either.</p>
 
-<table class="image" style="margin-top:2em;">
-<caption class="custom" align="bottom">At the Oystercatcher</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/saltspring/june30-1.jpg" alt="At the Oystercatcher" /></td></tr>
-</table>
+<h3 id="software-updates--upgrades">Software Updates / Upgrades</h3>
 
-<table class="image" style="margin-top:2em;">
-<caption class="custom" align="bottom">View from the cottage</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/saltspring/june30-2.jpg" alt="View from the cottage" /></td></tr>
-</table>
+<p>A lot of people ignore “software update alerts” which may include some significant performance fixes or fixes to security vulnerabilities. I always prefer to stay in the latest version whether it is simple OS updates down to a small library dependency update for the software. There can always be a situation where we cannot upgrade to a later version. Upon discovery of this situation, we should consider fixing this reason right away and do the upgrade. If the upgrade is breaking things, you should consider moving away from the solution entirely and move onto a better solution for the future.</p>
 
-<table class="image" style="margin-top:2em;">
-<caption class="custom" align="bottom">Another view from the cottage</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/saltspring/june30-3.jpg" alt="Another view from the cottage" /></td></tr>
-</table>
+<h3 id="algorithms-and-the-data-structures">Algorithms and the data structures</h3>
 
-<table class="image" style="margin-top:2em;">
-<caption class="custom" align="bottom">On the boat</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/saltspring/june30-4.jpg" alt="On the boat" /></td></tr>
-</table>
+<p>This one is obvious. You need to know how each data structures are designed and how they are used for and use appropriately. For example, a “List” can contain items which may be duplicated items although searching for a specific item isn’t all that pretty. However, the “Set” data structure contains unique items (no duplicates), but the searching and accessing the item is instant (thanks to hash code) where you will see the benefit especially when the size of this data structure is large. This is just one example. There are benefits of using Array, List, Stack/Queue, Tree, Bits etc. Knowing what data structure to use in a certain situation is the key to a successful software.</p>
 
-<h2 id="july-1st">July 1st</h2>
+<h3 id="concurrency-threading">Concurrency (Threading)</h3>
 
-<h4 id="salt-spring-coffee-company---ruckle-provincial-park---salt-spring-island-ales-brewery---salt-spring-island-cheese---salt-spring-vineyards--tasting-room">Salt Spring Coffee Company -&gt; Ruckle Provincial Park -&gt; Salt Spring Island Ales (Brewery) -&gt; Salt Spring Island Cheese -&gt; Salt Spring Vineyards &amp; Tasting Room</h4>
+<p>You should not use the threads for performance boosts. Threads should be considered when the application requires doing the threading (such as web server hosting to multiple people). It doesn’t add much value for a small program to be multi-threaded. Threads are hard to program, not to mention the pain that comes in debugging with threads. As a matter of fact, events are processed faster than having all these complicated threads because there will be no locking overheads and no context switching between threads. So if threads have not much value in your program, it is best to just avoid. Remember threads does not always mean the optimal and efficient solution and they should not be used to boost up the performance.</p>
 
-<p>We woke up early after the great sleep. The view was even better in the morning. Everyone wanted some coffee quickly and we headed straight to the local coffee shop, <a href="http://www.saltspringcoffee.com/">Salt Spring Coffee Company</a>. Apparently, there was a long line up of people just like us wanting a fresh cup of coffee. We each ordered a different type of coffee. I had a black Americano, which they actually corrected me to call it as Canadiano. It had a bitter taste that I had added some milk and sugar. We then decided to drive south-end and found ourselves at the park called <a href="http://www.env.gov.bc.ca/bcparks/explore/parkpgs/ruckle/">Ruckle Provincial Park</a>. The park was great for a light hiking. Even though there is an option to hike longer, we just hiked to see some water which took us just a few minutes. There were some speechless views at the water side. We had our moments to take some photos. Then we moved north to start our drinking. We arrived at the place I have been waiting, <a href="http://www.saltspringislandales.com/">Salt Spring Island Ales</a> which is a beer brewery. From the beginning, I wasn’t sure whether I will have the chance to come here. However, everyone seemed to be enjoying as well where I was kind of relieved. I bought myself a one-litre growler and filled IPA which I finished drinking them that night. Next visit, we went to get some cheese nearby, <a href="http://saltspringcheese.com/">Salt Spring Island Cheese</a> got ourselves some cheese so we can have with the wines we purchased at the winery, <a href="http://www.saltspringvineyards.com/home.html">Salt Spring Vineyards &amp; Tasting Room</a>. After we are fully loaded, we came back to our cottage and finished all drinks along with another campfire.</p>
+<h3 id="binary-data-communication-rpc-protocol">Binary data communication (RPC protocol)</h3>
 
-<table class="image" style="margin-top:2em;">
-<caption class="custom" align="bottom">At the Salt Spring Coffee Company</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/saltspring/july1-1.jpg" alt="At the Salt Spring Coffee Company" /></td></tr>
-</table>
+<p>For a normal RPC (the web especially) protocol, where the server is communicating with a browser (client), JSON and XML work well because the message is interchanged by the server and client with “human-readable” resources so it is easy to debug for humans as well. However, if the client was a machine instead of a browser, there is no need for this human visibility for interchanging the data. So we can further reduce the overhead of encoding the messages. We should consider streaming the data in binary. Some binary streaming RPC protocols I have come across using include Google Protocol Buffers, Apache Thrift, ZeroC Ice. They were all well supported with great documentations/examples.</p>
 
-<table class="image" style="margin-top:2em;">
-<caption class="custom" align="bottom">View from Ruckle Provincial Park water side</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/saltspring/july1-2.jpg" alt="View from Ruckle Provincial Park water side" /></td></tr>
-</table>
+<h3 id="repeated-unnecessary-calls">Repeated unnecessary calls</h3>
 
-<table class="image" style="margin-top:2em;">
-<caption class="custom" align="bottom">Inside Salt Spring Island Ales</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/saltspring/july1-3.jpg" alt="Inside Salt Spring Island Ales" /></td></tr>
-</table>
+<p>This is surprisingly common in a lot of code. The worst I have seen so far is a call to DB to SELECT elements without really making any usage out of it. If the client is executing this part of the code every now and then, this is adding another few milliseconds to the client unnecessarily. The best way for me to work with these is just to read the function from top to bottom and ask myself if calls make sense. Modern IDE will actually nudge you that the certain variables are not being used. Another great reason to stay with the Modern IDE.</p>
 
-<table class="image" style="margin-top:2em;">
-<caption class="custom" align="bottom">Sunny Sky</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/saltspring/july1-4.jpg" alt="Sunny Sky" /></td></tr>
-</table>
+<h3 id="applying-mathematics">Applying mathematics</h3>
 
-<table class="image" style="margin-top:2em;">
-<caption class="custom" align="bottom">Campfire with drinks</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/saltspring/july1-5.jpg" alt="Campfire with drinks" /></td></tr>
-</table>
+<p>A problem can be simplified by applying the right mathematic formulae. Using the formula itself or even just simple square roots or min/max can save up a lot of time instead of having multiple loops with if/else statements. When the problem sounds very mathematical, consider applying mathematic rules first before you dive into writing code right away.</p>
 
-<h2 id="july-2nd">July 2nd</h2>
+<h3 id="scalability">Scalability</h3>
 
-<h4 id="tree-house-cafe---salt-spring-wild-cider-house---fernwood-road-cafe">Tree House Cafe -&gt; Salt Spring Wild Cider House -&gt; Fernwood Road Cafe</h4>
-
-<p>We had enough sleep with all the drinks we had the night before. We headed for a breakfast at the place we wanted to try out on our first day. The place had a decent breakfast but we just had our coffees and teas. After we dug for more drinks at the cider place. The place was like the brewery except they were serving ciders made out of fruits/plants instead of beers. It was quite unique. Then we drove all the way north to Fernwood Road Cafe. We had a well made tasty lunch but the orders took a bit of time even though we had like the whole afternoon until 3 pm ferry. We eventually got our foods and finished them right away. Then we just decided to wait for the ferry at the harbour. We parked our car at the waiting lane then just hiked around where we could just hike around for few minutes. We got on the ferry which appeared to be a brand new with automatic doors and fancy chairs.</p>
-
-<table class="image" style="margin-top:2em;">
-<caption class="custom" align="bottom">Tree House Cafe</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/saltspring/july2-1.jpg" alt="Tree House Cafe" /></td></tr>
-</table>
-
-<table class="image" style="margin-top:2em;">
-<caption class="custom" align="bottom">Salt Spring Wild Cider House</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/saltspring/july2-2.jpg" alt="Salt Spring Wild Cider House" /></td></tr>
-</table>
-
-<table class="image" style="margin-top:2em;">
-<caption class="custom" align="bottom">At the Lake beside Fernwood Road Cafe</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/saltspring/july2-3.jpg" alt="At the Lake beside Fernwood Road Cafe" /></td></tr>
-</table>
-
-<table class="image" style="margin-top:2em;">
-<caption class="custom" align="bottom">Another sunny sky at the Fernwood Road Cafe</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/saltspring/july2-4.jpg" alt="Another sunny sky at the Fernwood Road Cafe" /></td></tr>
-</table>
+<p>The topic of scalability is rising ever more as the data grows over time. When it comes to the scalability, I’d like to think small first even on a large-scale project (like putting everything inside my computer first) and breakdown from there. The one most important thing to remember about scalability is the “space to be maintained reasonable performance”. Think about what it means to be a “scalable system”. The question to ask is whether the system we designed going to hold the data (or whatever items) we initially hoped to be. The performance becomes very critical as we are maintaining that scalable system because data is to keep growing yet we don’t want the performance to degrade. We should consider solutions such as sharding, SQL or NoSQL, distributing, big data, indexing, caching etc. There are so many techniques to maintain the good performance.</p>
 
 
           
@@ -299,7 +243,7 @@ with some finger foods. We then walked around the town seeing some markets and t
   <ul class="rrssb-buttons clearfix">
     
       <li class="rrssb-email">
-        <a href="mailto:?subject=Salt Spring Island&body=https://stalk-calvin.github.io/blog/2017/07/08/salt-island.html" data-proofer-ignore>
+        <a href="mailto:?subject=Performance mistakes&body=https://stalk-calvin.github.io/blog/2017/07/15/performance-mistakes.html" data-proofer-ignore>
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
               <path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"
@@ -311,7 +255,7 @@ with some finger foods. We then walked around the town seeing some markets and t
     
     
       <li class="rrssb-facebook">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2017/07/08/salt-island.html&title=Salt Spring Island" class="popup">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2017/07/15/performance-mistakes.html&title=Performance mistakes" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="29" height="29" viewBox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z"
               class="cls-2" fill-rule="evenodd"/></svg>
@@ -321,7 +265,7 @@ with some finger foods. We then walked around the town seeing some markets and t
     
     
       <li class="rrssb-twitter">
-        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2017/07/08/salt-island.html&text=Salt Spring Island"
+        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2017/07/15/performance-mistakes.html&text=Performance mistakes"
         class="popup">
           <span class="rrssb-icon"><svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><path d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62c-3.122.162-6.22-.646-8.86-2.32 2.702.18 5.375-.648 7.507-2.32-2.072-.248-3.818-1.662-4.49-3.64.802.13 1.62.077 2.4-.154-2.482-.466-4.312-2.586-4.412-5.11.688.276 1.426.408 2.168.387-2.135-1.65-2.73-4.62-1.394-6.965C5.574 7.816 9.54 9.84 13.802 10.07c-.842-2.738.694-5.64 3.434-6.48 2.018-.624 4.212.043 5.546 1.682 1.186-.213 2.318-.662 3.33-1.317-.386 1.256-1.248 2.312-2.4 2.942 1.048-.106 2.07-.394 3.02-.85-.458 1.182-1.343 2.15-2.48 2.71z"/></svg></span>
         </a>
@@ -329,7 +273,7 @@ with some finger foods. We then walked around the town seeing some markets and t
     
     
       <li class="rrssb-linkedin">
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2017/07/08/salt-island.html" class="popup">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2017/07/15/performance-mistakes.html" class="popup">
         <span class="rrssb-icon">
           <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
             <path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"
@@ -342,7 +286,7 @@ with some finger foods. We then walked around the town seeing some markets and t
     
     
       <li class="rrssb-googleplus">
-        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2017/07/08/salt-island.html" class="popup">
+        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2017/07/15/performance-mistakes.html" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 8.29h-1.95v2.6h-2.6v1.82h2.6v2.6H21v-2.6h2.6v-1.885H21V8.29zM7.614 10.306v2.925h3.9c-.26 1.69-1.755 2.925-3.9 2.925-2.34 0-4.29-2.016-4.29-4.354s1.885-4.353 4.29-4.353c1.104 0 2.014.326 2.794 1.105l2.08-2.08c-1.3-1.17-2.924-1.883-4.874-1.883C3.65 4.586.4 7.835.4 11.8s3.25 7.212 7.214 7.212c4.224 0 6.953-2.988 6.953-7.082 0-.52-.065-1.104-.13-1.624H7.614z"/></svg>
           </span>
@@ -384,10 +328,8 @@ with some finger foods. We then walked around the town seeing some markets and t
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2017/07/15/performance-mistakes.html" class="btn" title="Performance mistakes">&laquo; Performance mistakes</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2017/06/21/mockito.html" class="btn" title="Mockito">Mockito &raquo;</a>
+              <a href="https://stalk-calvin.github.io/blog/2017/07/08/salt-island.html" class="btn" title="Salt Spring Island">Salt Spring Island &raquo;</a>
             
           </nav><!-- /.pagination -->
 
@@ -522,7 +464,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 <script>
 function addTohistory() {
   if (!window.location.host.startsWith("127.0.0.1")) {
-    history.pushState({}, 'Salt Spring Island', 'https://stalk-calvin.github.io/blog/2017/07/08/salt-island.html');
+    history.pushState({}, 'Performance mistakes', 'https://stalk-calvin.github.io/blog/2017/07/15/performance-mistakes.html');
   }
 }
 </script>
