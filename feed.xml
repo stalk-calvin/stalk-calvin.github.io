@@ -14,7 +14,34 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Fri, 28 Jul 2017 08:06:13 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 05 Aug 2017 10:56:05 -0700</lastBuildDate>
+	
+		<item>
+			<title>WebP</title>
+			
+				<description>Image format developed by Google</description>
+			
+        
+          <category>computer</category>
+        
+          <category>programming</category>
+        
+          <category>image</category>
+        
+          <category>format</category>
+        
+          <category>webp</category>
+        
+			<pubDate>05 August 2017</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/08/05/webp-image.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/08/05/webp-image</guid>
+		</item>
 	
 		<item>
 			<title>Performance mistakes</title>
