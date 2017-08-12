@@ -24,7 +24,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Stories about Calvin: Beer, Fitness, Diet, Computer Science and Programming.">
+  <meta name="description" content="Security of web- sites, applications and services">
   <meta name="author" content="Calvin Lee">
   <meta name="keywords" content="calvin, lee, personal, blog, beer, fitness, diet, computer, science, programming, software, engineer">
   <meta property="fb:app_id" content="140805279842677" /> 
@@ -32,6 +32,7 @@
   <meta property="og:description" content="Security of web- sites, applications and services" />
   <meta property="og:url" content="https://stalk-calvin.github.io/blog/2016/07/02/web-security.html" />
   <link rel="canonical" href="/blog/2016/07/02/web-security.html">
+  <link rel="author" href="https://www.linkedin.com/in/stalkme">
   <title>I am Calvin | Web Security</title>
 
   <!-- Bootstrap Core CSS -->
@@ -195,7 +196,7 @@
           <h4>
             <strong>02 Jul 2016</strong>
             <small>
-              <a href="/blog/2016/07/02/web-security.html#disqus_thread">Comments</a>
+              <a href="/blog/2016/07/02/web-security.html#fb_comment"><span class="fb-comments-count" data-href="https://stalk-calvin.github.io/blog/2016/07/02/web-security.html"></span> Comments</a>
               <br />
               
                 <a class="tag" href="/tags/#websecurity">#websecurity</a>
@@ -214,7 +215,7 @@
             
           </nav><!-- /.pagination -->
 
-          <p><img src="http://www.aspwebserver.com/wp-content/uploads/2016/03/Web-Security.jpg" alt="web_security" /></p>
+          <p><img src="https://www.aspwebserver.com/wp-content/uploads/2016/03/Web-Security.jpg" alt="web_security" /></p>
 
 <p>For being in a company where security is the most important piece of work: maintained and truly valued in my company. I naturally gained knowledge in most of security surrounding web development, not only to follow <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">Owasp Top10</a>, but also things that are not list in top 10 list. Anyone working in a secure web application environment should know owasp top 10 list. Anyway I will include some of the items that just come to my mind in the world of web security. Note below content is not everything, they are just reference of some of security that we need to enforce in areas of web technology which i find important:</p>
 
@@ -281,7 +282,7 @@ Here is more secure than above version:<br /></p>
 
 <p style="margin-bottom:0.5em;">This is one of those items where you are not careful with handling of such object, others might get an easy access to it. So say in a environment, you can get an information using simple GET request like this:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">http://example.com/app/getAccount?accountID=&lt;notyouraccountid&gt;</code></pre></figure>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">https://example.com/app/getAccount?accountID=&lt;notyouraccountid&gt;</code></pre></figure>
 
 <p>As you can see, without a proper check of session or other security measure, you are exposing access to another person’s account. The protection around this quite simple: surround webpage with proper sessions OR make sure you have some sort of keys when you are accessing the objects.</p>
 
@@ -332,7 +333,7 @@ Here is more secure than above version:<br /></p>
 
 <h4 id="i-classfa-fa-car-aria-hiddentruei-transport-layer-securityhttpsenwikipediaorgwikitransportlayersecurity"><i class="fa fa-car" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">Transport Layer Security</a></h4>
 
-<p>Well, obviously everyone knows what https (ssl) is. It is basically providing a layer for privacy and data integrity between two communicating applications. SSLs (v1, v2 and v3) have been found vulnerable (<a href="https://en.wikipedia.org/wiki/POODLE">Read Here</a> if interested) and it is recommended to use anything greater than TLS1.1. Modern browsers support at least TLS 1.0 as TLS1.0 is still widely used as the ‘best’ protocol by a lot of browsers that are not patched to the latest version. It suffers from <a href="http://www.yassl.com/yaSSL/Blog/Entries/2010/10/7_Differences_between_SSL_and_TLS_Protocol_Versions.html">CBC Chaining attacks and Padding Oracle attacks</a>. PCI DSS 3.1 prohibits use of TLS 1.0 after June 30, 2016. What’s important here is to not use SSLv2, SSLv3. SSLv1 was never publicly made available.</p>
+<p>Well, obviously everyone knows what https (ssl) is. It is basically providing a layer for privacy and data integrity between two communicating applications. SSLs (v1, v2 and v3) have been found vulnerable (<a href="https://en.wikipedia.org/wiki/POODLE">Read Here</a> if interested) and it is recommended to use anything greater than TLS1.1. Modern browsers support at least TLS 1.0 as TLS1.0 is still widely used as the ‘best’ protocol by a lot of browsers that are not patched to the latest version. It suffers from <a href="/www.yassl.com/yaSSL/Blog/Entries/2010/10/7_Differences_between_SSL_and_TLS_Protocol_Versions.html">CBC Chaining attacks and Padding Oracle attacks</a>. PCI DSS 3.1 prohibits use of TLS 1.0 after June 30, 2016. What’s important here is to not use SSLv2, SSLv3. SSLv1 was never publicly made available.</p>
 
 
           
@@ -419,7 +420,7 @@ Here is more secure than above version:<br /></p>
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-<div class="fb-comments" data-href="https://stalk-calvin.github.io/blog/2016/07/02/web-security.html" data-numposts="5" data-width="100%" data-colorscheme="dark" data-order-by="reverse_time"></div>
+<div id="fb_comment" class="fb-comments" data-href="https://stalk-calvin.github.io/blog/2016/07/02/web-security.html" data-numposts="5" data-width="100%" data-colorscheme="dark" data-order-by="reverse_time"></div>
 
           
 
