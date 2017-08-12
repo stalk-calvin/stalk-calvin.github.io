@@ -291,7 +291,7 @@
   
     ,{
       "title"			: "5 Best Computer Books",
-      "link"			: "https://stalk-calvin.github.io/blog/2016/11/12/Favourite-Books.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/11/12/favourite-books.html",
       "excerpt"		: "I have read so far",
       "tags"        : ["computer","bookreview"]
     }
@@ -300,7 +300,7 @@
   
     ,{
       "title"			: "Algorithms: My Programming Playground",
-      "link"			: "https://stalk-calvin.github.io/blog/2016/11/05/Algorithms.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2016/11/05/algorithms.html",
       "excerpt"		: "Place for practicing my coding skills",
       "tags"        : ["algorithm","programming","computer"]
     }
