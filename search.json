@@ -380,10 +380,10 @@
 
   
     ,{
-      "title"			: "Sorting",
+      "title"			: "Sorting algorithms",
       "link"			: "https://stalk-calvin.github.io/blog/2016/06/28/sorting.html",
       "excerpt"		: "Various ways of sorting methods",
-      "tags"        : ["algorithm","sort","computer"]
+      "tags"        : ["algorithm","sort","computer","complexity"]
     }
   
 
