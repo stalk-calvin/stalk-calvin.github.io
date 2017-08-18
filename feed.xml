@@ -14,7 +14,7 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Mon, 14 Aug 2017 21:32:02 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 15 Aug 2017 21:12:48 -0700</lastBuildDate>
 	
 		<item>
 			<title>WebP</title>
@@ -912,7 +912,7 @@
 		<item>
 			<title>Algorithms: My Programming Playground</title>
 			
-				<description>Place for practicing my coding skills</description>
+				<description>Place for practicing and improving my coding skills</description>
 			
         
           <category>algorithm</category>
@@ -920,6 +920,10 @@
           <category>programming</category>
         
           <category>computer</category>
+        
+          <category>practice</category>
+        
+          <category>improve</category>
         
 			<pubDate>05 November 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/11/05/algorithms.html</link>
@@ -968,6 +972,8 @@
           <category>DI</category>
         
           <category>spring</category>
+        
+          <category>google</category>
         
           <category>guice</category>
         

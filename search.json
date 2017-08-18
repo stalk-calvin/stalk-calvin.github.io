@@ -301,8 +301,8 @@
     ,{
       "title"			: "Algorithms: My Programming Playground",
       "link"			: "https://stalk-calvin.github.io/blog/2016/11/05/algorithms.html",
-      "excerpt"		: "Place for practicing my coding skills",
-      "tags"        : ["algorithm","programming","computer"]
+      "excerpt"		: "Place for practicing and improving my coding skills",
+      "tags"        : ["algorithm","programming","computer","practice","improve"]
     }
   
 
@@ -320,7 +320,7 @@
       "title"			: "DI: Comparing Spring vs Guice",
       "link"			: "https://stalk-calvin.github.io/blog/2016/10/22/dependency-injection.html",
       "excerpt"		: "With Examples",
-      "tags"        : ["dependency","injection","DI","spring","guice","java","computer"]
+      "tags"        : ["dependency","injection","DI","spring","google","guice","java","computer"]
     }
   
 

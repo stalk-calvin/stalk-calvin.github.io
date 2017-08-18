@@ -219,9 +219,9 @@
 
           <h3 style="clear:left;" id="builder-factory-pattern-huh">Builder? Factory? Pattern? huh?</h3>
 
-<p>Builder pattern is one of object creational software design pattern. This pattern is often compared with “Factory” method pattern because factory method is also object creational design pattern. The key difference is how the object is created though. For example, <code class="highlighter-rouge">createCar</code> might return <code class="highlighter-rouge">Honda</code> or <code class="highlighter-rouge">Audi</code>. Now with the Builder pattern you could be specific about the object, such as, 4 all-wheel drive red <code class="highlighter-rouge">Honda</code> with v6 engine etc. Basically, factory method pattern would create an object via <code class="highlighter-rouge">createCar</code> VS Builder pattern has ability to add granularity to the object by applying chains of function calls to the object being created.</p>
+<p>Builder pattern is an object creational software design pattern. This pattern is often compared with “Factory” method pattern because factory method is also an object creational DP. The key difference is how the object is being created though. For example with the factory DP, <code class="highlighter-rouge">createCar</code> might return <code class="highlighter-rouge">Honda</code> or <code class="highlighter-rouge">Audi</code>. To add attributes, you will need to make additional calls such as <code class="highlighter-rouge">setColor</code>, <code class="highlighter-rouge">setEngine</code> etc on the object returned. Now with the Builder pattern, you could be specific about the object all in one statement, such as 4 all-wheel drive red <code class="highlighter-rouge">Honda</code> with v6 engine etc. Basically, factory method pattern would create an object via <code class="highlighter-rouge">createCar</code> VS Builder pattern has the ability to create an object by adding granularity to the object by applying chains of function calls to the object being created.</p>
 
-<p>Here is a comparison of diagrams from wiki for both pattern, which could give you big picture of how they work.</p>
+<p>Here is a comparison of diagrams from the wiki for both pattern, which could give you a big picture of how they work.</p>
 
 <h4 style="clear:left;" id="with-factory-methods">With factory methods:</h4>
 <p style="background-color:white; width: 80%; height: 80%;"><img src="https://upload.wikimedia.org/wikipedia/commons/d/df/New_WikiFactoryMethod.png" alt="factory_method" /></p>
@@ -229,13 +229,11 @@
 <h4 style="clear:left;" id="with-builder-pattern">With Builder pattern:</h4>
 <p style="background-color:white; width: 80%; height: 80%;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Builder_UML_class_diagram.svg/1000px-Builder_UML_class_diagram.svg.png" alt="builder_pattern" /></p>
 
-<p>It’s really hard to explain their differences just on the diagrams.</p>
+<p>I know, it’s actually hard to explain their differences just from the diagrams. So let me give you some code comparison in Java:</p>
 
-<h3 id="so-let-me-give-you-the-code-comparison-in-java">So let me give you the code comparison in Java</h3>
+<h3 id="with-factory-methods-1">With factory methods:</h3>
 
-<h4 id="with-factory-methods-1">With factory methods:</h4>
-
-<p>An example is from Wikipedia that matches with the diagram above exception <code class="highlighter-rouge">OrdinaryMazeGame</code> and <code class="highlighter-rouge">OrdinaryRoom</code> are added to provide you with the picture on how multiple different instances are being created from a generic template.</p>
+<p>An example is from <a href="https://en.wikipedia.org/wiki/Factory_method_pattern#Java">Wikipedia</a> that matches with the diagram above exception <code class="highlighter-rouge">OrdinaryMazeGame</code> and <code class="highlighter-rouge">OrdinaryRoom</code> are added to provide you with the picture on how multiple different instances are being created from a generic template.</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">MazeGame</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kd">final</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Room</span><span class="o">&gt;</span> <span class="n">rooms</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
@@ -268,11 +266,11 @@
 <span class="n">MazeGame</span> <span class="n">ordinaryGame</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OrdinaryMazeGame</span><span class="o">();</span>
 <span class="n">MazeGame</span> <span class="n">magicGame</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MagicMazeGame</span><span class="o">();</span></code></pre></figure>
 
-<p>Watch closely how it makes an <code class="highlighter-rouge">ordinaryGame</code> vs <code class="highlighter-rouge">magicGame</code> objects which both will eventually inherit from MazeGame. To give you the full picture, <code class="highlighter-rouge">OrdinaryMazeGame</code> will create 2 rooms with <code class="highlighter-rouge">OrdinaryRoom</code> objects in the <code class="highlighter-rouge">List&lt;Room&gt; rooms</code> created by, <code class="highlighter-rouge">MazeGame</code>. Similarly <code class="highlighter-rouge">MagicMazeGame</code> will create 2 rooms with <code class="highlighter-rouge">MagicRoom</code> this time created by parent, <code class="highlighter-rouge">MazeGame</code>. Like a real Factory, the task it does is just to construct objects :p</p>
+<p>Watch closely how it makes an <code class="highlighter-rouge">ordinaryGame</code> vs <code class="highlighter-rouge">magicGame</code> objects which both will eventually inherit from MazeGame. To give you the full picture, <code class="highlighter-rouge">OrdinaryMazeGame</code> will create 2 rooms with <code class="highlighter-rouge">OrdinaryRoom</code> objects in the <code class="highlighter-rouge">List&lt;Room&gt; rooms</code> created by, <code class="highlighter-rouge">MazeGame</code>. Similarly <code class="highlighter-rouge">MagicMazeGame</code> will create 2 rooms with <code class="highlighter-rouge">MagicRoom</code> this time created by the parent, <code class="highlighter-rouge">MazeGame</code>. Like a real Factory, the task it does is just to construct objects.</p>
 
 <h4 id="with-builder-pattern-1">With Builder pattern:</h4>
 
-<p>Builder pattern in my personal opinion is best described and explained in Effective Java (Second Ed) by Joshua Bloch. Here is the example from his book:</p>
+<p>Builder pattern in my personal opinion is well described and explained in Effective Java (Second Ed) by Joshua Bloch. Here is the example from his book:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// Builder Pattern - Pages 14-15</span>
 <span class="kn">package</span> <span class="n">org</span><span class="o">.</span><span class="na">effectivejava</span><span class="o">.</span><span class="na">examples</span><span class="o">.</span><span class="na">chapter02</span><span class="o">.</span><span class="na">item02</span><span class="o">.</span><span class="na">builder</span><span class="o">;</span>
@@ -297,32 +295,32 @@
         <span class="kd">private</span> <span class="kt">int</span> <span class="n">sodium</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
         
         <span class="kd">public</span> <span class="nf">Builder</span><span class="o">(</span><span class="kt">int</span> <span class="n">servingSize</span><span class="o">,</span> <span class="kt">int</span> <span class="n">servings</span><span class="o">)</span> <span class="o">{</span>
-        	<span class="k">this</span><span class="o">.</span><span class="na">servingSize</span> <span class="o">=</span> <span class="n">servingSize</span><span class="o">;</span>
-        	<span class="k">this</span><span class="o">.</span><span class="na">servings</span> <span class="o">=</span> <span class="n">servings</span><span class="o">;</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">servingSize</span> <span class="o">=</span> <span class="n">servingSize</span><span class="o">;</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">servings</span> <span class="o">=</span> <span class="n">servings</span><span class="o">;</span>
         <span class="o">}</span>
         
         <span class="kd">public</span> <span class="n">Builder</span> <span class="nf">calories</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
-        	<span class="n">calories</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
-        	<span class="k">return</span> <span class="k">this</span><span class="o">;</span>
+            <span class="n">calories</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
+            <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
         <span class="o">}</span>
         
         <span class="kd">public</span> <span class="n">Builder</span> <span class="nf">fat</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
-        	<span class="n">fat</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
-        	<span class="k">return</span> <span class="k">this</span><span class="o">;</span>
+            <span class="n">fat</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
+            <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
         <span class="o">}</span>
         
         <span class="kd">public</span> <span class="n">Builder</span> <span class="nf">carbohydrate</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
-        	<span class="n">carbohydrate</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
-        	<span class="k">return</span> <span class="k">this</span><span class="o">;</span>
+            <span class="n">carbohydrate</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
+            <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
         <span class="o">}</span>
         
         <span class="kd">public</span> <span class="n">Builder</span> <span class="nf">sodium</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
-        	<span class="n">sodium</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
-        	<span class="k">return</span> <span class="k">this</span><span class="o">;</span>
+            <span class="n">sodium</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
+            <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
         <span class="o">}</span>
         
         <span class="kd">public</span> <span class="n">NutritionFacts</span> <span class="nf">build</span><span class="o">()</span> <span class="o">{</span>
-        	<span class="k">return</span> <span class="k">new</span> <span class="nf">NutritionFacts</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nf">NutritionFacts</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
         <span class="o">}</span>
     <span class="o">}</span>
     
@@ -337,11 +335,11 @@
     
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">NutritionFacts</span> <span class="n">cocaCola</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NutritionFacts</span><span class="o">.</span><span class="na">Builder</span><span class="o">(</span><span class="mi">240</span><span class="o">,</span> <span class="mi">8</span><span class="o">)</span>
-        		<span class="o">.</span><span class="na">calories</span><span class="o">(</span><span class="mi">100</span><span class="o">).</span><span class="na">sodium</span><span class="o">(</span><span class="mi">35</span><span class="o">).</span><span class="na">carbohydrate</span><span class="o">(</span><span class="mi">27</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
+                <span class="o">.</span><span class="na">calories</span><span class="o">(</span><span class="mi">100</span><span class="o">).</span><span class="na">sodium</span><span class="o">(</span><span class="mi">35</span><span class="o">).</span><span class="na">carbohydrate</span><span class="o">(</span><span class="mi">27</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
-<p>With builder, it would be possible to do a chain-call, like <code class="highlighter-rouge">new NutritionFacts.Builder(240, 8).calories...</code> etc, which would help greatly in terms of readability. From my experience with the Builder, this is the most important factor, “readability”: they carry “names” to what/how you define the object. Let me just give you an example that will say everything about what I just said. Say you have a constructor, <code class="highlighter-rouge">new Person(true, false, false, "samsung");</code> vs with Builder, `new Person.Builder().hasBeard(true).isMarried(false).isDisabled(false). You know what I mean… Oh, there is another point I’d like to mention about the Builder. I recently came across a class with inheritance where I wanted to have the builder relationship. I actually ended up using “super” command. There is probably a better way to handle this in Generic but I wasn’t sucessful with using generics so I ended up sticking with “super” calls. Anyways, let me show you how I came across the Builder inheritance, below is just an illustration of what happened:</p>
+<p>With the builder, it would be possible to do a chain-call, like <code class="highlighter-rouge">new NutritionFacts.Builder(240, 8).calories...</code> etc, which would help greatly in terms of readability. From my experience with the Builder, this is the most important factor, “readability”: they carry “names” to what/how you define the object. Let me just give you an example that will say everything about what I just said. Say you have a constructor, <code class="highlighter-rouge">new Person(true, false, false, "Samsung");</code> vs with Builder, `new Person.Builder().hasBeard(true).isMarried(false).isDisabled(false). You know what I mean… Oh, there is another point I’d like to mention about the Builder. I recently came across a class with inheritance where I wanted to have the builder relationship. I actually ended up using “super” command. There is probably a better way to handle this in Generic but I wasn’t successful with using generics so I ended up sticking with “super” calls. Anyways, let me show you how I came across the Builder inheritance, below is just an illustration of what happened:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Teacher</span> <span class="kd">extends</span> <span class="n">Employee</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>

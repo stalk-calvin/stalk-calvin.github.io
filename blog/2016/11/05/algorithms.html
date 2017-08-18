@@ -24,12 +24,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Place for practicing my coding skills">
+  <meta name="description" content="Place for practicing and improving my coding skills">
   <meta name="author" content="Calvin Lee">
   <meta name="keywords" content="calvin, lee, personal, blog, beer, fitness, diet, computer, science, programming, software, engineer">
   <meta property="fb:app_id" content="140805279842677" /> 
   <meta property="og:title" content="Algorithms: My Programming Playground" />
-  <meta property="og:description" content="Place for practicing my coding skills" />
+  <meta property="og:description" content="Place for practicing and improving my coding skills" />
   <meta property="og:url" content="https://stalk-calvin.github.io/blog/2016/11/05/algorithms.html" />
   <link rel="canonical" href="/blog/2016/11/05/algorithms.html">
   <link rel="author" href="https://www.linkedin.com/in/stalkme">
@@ -192,7 +192,7 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <h1 style="display:inline; color: #F4A460;"><strong>Algorithms: My Programming Playground</strong></h1>
-          <h4 style="display:inline; color: #F4A460;"><strong>Place for practicing my coding skills</strong></h4><br />
+          <h4 style="display:inline; color: #F4A460;"><strong>Place for practicing and improving my coding skills</strong></h4><br />
           <h4>
             <strong>05 Nov 2016</strong>
             <small>
@@ -204,6 +204,10 @@
                 <a class="tag" href="/tags/#programming">#programming</a>
               
                 <a class="tag" href="/tags/#computer">#computer</a>
+              
+                <a class="tag" href="/tags/#practice">#practice</a>
+              
+                <a class="tag" href="/tags/#improve">#improve</a>
               
             </small>
           </h4>
@@ -219,24 +223,24 @@
 
           <h3 id="new-project-algorithms-i-classfa-fa-github-alt-aria-hiddentrueihttpsgithubcomstalk-calvinalgorithms">New Project: <a href="https://github.com/stalk-calvin/Algorithms">Algorithms <i class="fa fa-github-alt" aria-hidden="true"></i></a></h3>
 
-<p>During the past weeks, I have been spending time writing algorithms and I created a <a href="https://github.com/stalk-calvin/Algorithms">repository <i class="fa fa-github-square" aria-hidden="true"></i></a> in github which has mixed levels of algorithms I have been dealing with in the past. It just used to be a simple set of problems in text files some where. Then, I decided to mavenize this and turn it into a project so I can build/test using Maven which solved my dependancy mess and now it feels a lot more like a project. Also, I have added unit tests for each algorithms. The best way to run the test is through a debug mode and step through what is happening behind the scene since many of algorithms happen in the back.</p>
+<p>During the past weeks, I have been spending time writing algorithms and I created a <a href="https://github.com/stalk-calvin/Algorithms">repository <i class="fa fa-github-square" aria-hidden="true"></i></a> in GitHub which has mixed levels of algorithms I have been dealing with in the past. It just used to be a simple set of problems in text files in my local drive. Then, I decided to mavenize this and turn it into a project so I can build/test using Maven which solved my dependency mess and now it feels a lot more like a project. Also, I have added unit tests for each algorithm. The best way to run the test is through a debug mode and step through what is happening behind the scene since many of algorithms happen in the back.</p>
 
 <h3 id="why-did-i-do-this">Why did I do this?</h3>
 
-<p>Actually, for a quite some time, I wanted a place like <a href="https://github.com/stalk-calvin/Algorithms">this <i class="fa fa-github-square" aria-hidden="true"></i></a>, a place where I can code, play and have fun! Now I finally have a place where I can continue writing more algorithms in the future. Majority of the problems here are simple because I wanted to start from the basics. I find basics are really important as it nourishes me to go a step further.</p>
+<p>Actually, for a quite some time, I wanted a place like <a href="https://github.com/stalk-calvin/Algorithms">this <i class="fa fa-github-square" aria-hidden="true"></i></a>, a place where I can code, play and have fun! Now I finally have a place where I can continue writing more algorithms in the future. The majority of the problems here are mostly the simple ones because I wanted to start from the basics. I find basics are really important as it nourishes me to go a step further.</p>
 
 <h3 id="why-maven">Why Maven?</h3>
 
 <ol>
-  <li>Maven can resolve dependencies: I do not needed to manually download required libraries and install.</li>
-  <li>Maven requires you to keep the defined structure: src/main, src/test and resources. It follows strict directory structures which keeps the project clean and easy to follow.</li>
+  <li>Maven can resolve dependencies: I do not need to manually download required libraries and install.</li>
+  <li>Maven requires you to keep the defined structure: src/main, src/test, and resources. It follows strict directory structures which keep the project clean, organized, and easy to follow.</li>
 </ol>
 
 <p>Maven is much more powerful than how I am using it here. It can handle packaging/releases and define much more through pom file. The best website to start learning about Maven would be the actual <a href="https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html">Maven Website</a>. I wouldn’t recommend reading an entire book; reading up on specific references on Google should be enough for what you would like to achieve out of it.</p>
 
 <h3 id="unit-tests">Unit tests</h3>
 
-<p>Unit tests are done in JUnit 4. “<a href="https://www.tutorialspoint.com/mockito/">Mockito</a>” is just used for a simple verification. Majority of the problems <a href="https://github.com/stalk-calvin/Algorithms">here</a> are too simple and independant to Mock as an object. I focused on test coverage as well as correctness for each test cases.</p>
+<p>Unit tests are done in JUnit 4. “<a href="https://www.tutorialspoint.com/mockito/">Mockito</a>” is just used for a simple verification. The majority of the problems <a href="https://github.com/stalk-calvin/Algorithms">here</a> are mostly focused on individual functions and independent to Mock something as an object. I also focused on covering all areas of functions to check for entire validity.</p>
 
 <h3 id="how-to-install">How to install</h3>
 
@@ -244,10 +248,10 @@
 
 <ol>
   <li>Clone <code class="highlighter-rouge">https://github.com/stalk-calvin/Algorithms.git</code> and Load pom.xml as a Maven project.</li>
-  <li>You will need to enable annotiations / necessary plugins for Lombok (You can refer to <a href="https://stackoverflow.com/questions/24006937/lombok-annotations-do-not-compile-under-intellij-idea">here</a> on how to do this)</li>
+  <li>You may need to enable annotations / necessary plugins to use Lombok for your IDE (You can refer to <a href="https://stackoverflow.com/questions/24006937/lombok-annotations-do-not-compile-under-intellij-idea">here</a> on how to do this)</li>
 </ol>
 
-<p>You can also run maven commands to do a full testing, mvn clean test.</p>
+<p>You can also run maven commands to do a full testing, <code class="highlighter-rouge">mvn clean test</code>.</p>
 
 <p>Enjoy!</p>
 

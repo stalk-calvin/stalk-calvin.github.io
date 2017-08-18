@@ -219,7 +219,7 @@
 
           <h3 style="clear:left;" id="lombok-reference-guide">Lombok Reference Guide</h3>
 
-<p style="margin-bottom:1em;">Lombok is a library in Java which will save you quite a bit of coding on stuff that can get quite repetitive/boilerplate java codes. Lombok is there to the rescue! This is more of a reference guide/cheat sheet for me to come and take a look on some of the usage. I always wanted a single page that has all the summarization of annotations that are being used in Lombok.</p>
+<p style="margin-bottom:1em;">Lombok is one of my favorite Java library which is designed to save you quite a bit of coding on stuff that can get quite repetitive/boilerplate. Lombok is there to the rescue! This is more of a reference guide/cheat sheet for me to come and take a look on some of the usage. I always wanted a single page that has a good summarization of annotations I often use:</p>
 
 <p style="margin-bottom:1em;"><a href="https://projectlombok.org/">Project Lombok</a> will reduce quite a bit of code by introducing simple annotations.</p>
 
@@ -276,7 +276,7 @@
 41
 42</pre></td><td class="code"><pre> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">GetterSetterExample</span> <span class="o">{</span>
    <span class="cm">/**
-    * Age of the person. Water is wet.
+    * Age of the person. 
     */</span> 
    <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
  
@@ -290,25 +290,25 @@
    <span class="o">}</span>  
    
    <span class="cm">/**
-    * Age of the person. Water is wet.
+    * Gets the age of the person.
     *  
-    * @return The current value of this person's age. Circles are round.
+    * @return The current value of this person's age.
     */</span> 
    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="o">()</span> <span class="o">{</span>
      <span class="k">return</span> <span class="n">age</span><span class="o">;</span>
    <span class="o">}</span>  
    
    <span class="cm">/**
-    * Age of the person. Water is wet.
+    * Sets the age of the person.
     *  
-    * @param age New value for this person's age. Sky is blue.
+    * @param age New value for this person's age.
     */</span> 
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAge</span><span class="o">(</span><span class="kt">int</span> <span class="n">age</span><span class="o">)</span> <span class="o">{</span>
      <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
    <span class="o">}</span>  
    
    <span class="cm">/**
-    * Changes the name of this person.
+    * Sets the name of this person.
     *  
     * @param name The new value.
     */</span> 
@@ -351,17 +351,17 @@
  
  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">GetterSetterExample</span> <span class="o">{</span>
    <span class="cm">/**
-    * Age of the person. Water is wet.
+    * Age of the person.
     *  
-    * @param age New value for this person's age. Sky is blue.
-    * @return The current value of this person's age. Circles are round.
+    * @param age New value for this person's age.
+    * @return The current value of this person's age.
     */</span> 
    <span class="nd">@Getter</span> <span class="nd">@Setter</span> <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
    
    <span class="cm">/**
     * Name of the person.
-    * -- SETTER -- 
-    * Changes the name of this person.
+    *
+    * Sets the name of this person.
     *  
     * @param name The new value.
     */</span> 

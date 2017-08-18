@@ -207,6 +207,8 @@
               
                 <a class="tag" href="/tags/#spring">#spring</a>
               
+                <a class="tag" href="/tags/#google">#google</a>
+              
                 <a class="tag" href="/tags/#guice">#guice</a>
               
                 <a class="tag" href="/tags/#java">#java</a>
@@ -225,9 +227,9 @@
             
           </nav><!-- /.pagination -->
 
-          <h3 style="clear:left;" id="what-is-a-dependancy-injection-why-do-we-need-it">What is a Dependancy Injection? Why do we need it?</h3>
+          <h3 style="clear:left;" id="what-is-a-dependency-injection-why-do-we-need-it">What is a Dependency Injection? Why do we need it?</h3>
 
-<p>Last time I wrote about design patterns on how we can create objects in different ways. Here is another way of creating an object, which is called Dependency Injection. Simply, dependency is being injected from outside (container). There are 2 of the most popular ways to inject objects. One is to use Spring Framework, the other would be Guice created by Google. Let’s talk about these 2 and how they compare to traditional object creation.</p>
+<p>Last time I wrote about design patterns on how we can create objects in different ways. Here is another way of creating an object, which is called Dependency Injection. Simply put, dependency is being injected from outside (container). There are 2 of the most popular ways to inject objects. One is to use Spring Framework, the other would be Guice created by Google. Let’s talk about these 2 and how they compare to traditional object creation.</p>
 
 <ol>
   <li>Spring Framework (aka Spring MVC)</li>
@@ -327,9 +329,9 @@
   <li>Google Guice (pronounced as Juice)</li>
 </ol>
 
-<p>Guice is a lightweight dependency injection framework for Java 6 and above. This framework which is released by Google is under the Apache License, meaning you can use it freely as long as you preserve the copyright notice and disclaimers. The main difference with Guice Framework compared to Spring Framework is that Guice uses <code class="highlighter-rouge">Annotations</code>. Annotations in Java are first introduced in Java 5, but it was integrated into the Javac compiler in version 1.6 which is probably why Guice is supported for Java 6 and above. There are probably ways to bind with Annotations in Spring as well. However, I never found myself useful in Spring Framework.</p>
+<p>Guice is a lightweight dependency injection framework for Java 6 and above. This framework which is released by Google is under the Apache License, meaning you can use it freely as long as you preserve the copyright notice and disclaimers. The main difference with Guice Framework compared to Spring Framework is that Guice uses <code class="highlighter-rouge">Annotations</code>. Annotations in Java are first introduced in Java 5, but it was integrated into the Javac compiler in version 1.6 which is probably why Guice is supported for Java 6 and above. There are ways to bind with Annotations in Spring as well. Honestly, I do not see much differences between Spring and Guice. I actually did not like Spring for XML-Based configuration. However, with the newer version of Spring, there are ways around Spring where you can avoid XML definition and be similar to how Guice does its injection.</p>
 
-<p>Let me first give some ideas on what all annotations in Guice mean:</p>
+<p>Here are some useful annotations in Guice:</p>
 
 <ul>
   <li><code class="highlighter-rouge">@Inject</code> - It tells where the injection is happening, you can place on constructors, methods or even fields</li>
@@ -339,7 +341,7 @@
   <li><code class="highlighter-rouge">@Singleton</code> - Similar to <code class="highlighter-rouge">@Scope</code>. Basic to DI Framework.</li>
 </ul>
 
-<p>First just like Spring, you need the libs/api provided by Google..</p>
+<p>First, just like Spring, you need the dependencies satisfied provided by Google.</p>
 
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>com.google.inject<span class="nt">&lt;/groupId&gt;</span>
@@ -430,7 +432,7 @@ Print SomeThing</code></p>
 <p><code class="highlighter-rouge">testGetCar</code> is
 <code class="highlighter-rouge">Print SomeThing</code></p>
 
-<p>As you can see, you can be flexible as you wish to create your object.</p>
+<p>As you can see, you can be flexible as you wish to create your object. Full examples discussed here are illustrated <a href="https://github.com/stalk-calvin/Java-Algorithms/tree/master/src/main/java/org/calvin/DI">here</a>.</p>
 
 
           
