@@ -14,7 +14,36 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Tue, 15 Aug 2017 21:12:48 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 26 Aug 2017 08:46:09 -0700</lastBuildDate>
+	
+		<item>
+			<title>Memory Leak</title>
+			
+				<description>by examples from Java</description>
+			
+        
+          <category>computer</category>
+        
+          <category>programming</category>
+        
+          <category>memory</category>
+        
+          <category>leak</category>
+        
+          <category>java</category>
+        
+          <category>example</category>
+        
+			<pubDate>26 August 2017</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/08/26/memory-leak.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/08/26/memory-leak</guid>
+		</item>
 	
 		<item>
 			<title>WebP</title>

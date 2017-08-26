@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Memory Leak",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/08/26/memory-leak.html",
+      "excerpt"		: "by examples from Java",
+      "tags"        : ["computer","programming","memory","leak","java","example"]
+    }
+  
+
+  
+    ,{
       "title"			: "WebP",
       "link"			: "https://stalk-calvin.github.io/blog/2017/08/05/webp-image.html",
       "excerpt"		: "Image format developed by Google",
