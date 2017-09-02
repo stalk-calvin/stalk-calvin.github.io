@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Elon Musk",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/09/02/elon-musk.html",
+      "excerpt"		: "a biography by Ashlee Vance",
+      "tags"        : ["bookreview","innovator","entrepreneur","role","model","biography"]
+    }
+  
+
+  
+    ,{
       "title"			: "Memory Leak",
       "link"			: "https://stalk-calvin.github.io/blog/2017/08/26/memory-leak.html",
       "excerpt"		: "by examples from Java",

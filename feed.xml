@@ -14,7 +14,36 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 26 Aug 2017 08:46:09 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 02 Sep 2017 15:08:33 -0700</lastBuildDate>
+	
+		<item>
+			<title>Elon Musk</title>
+			
+				<description> a biography by Ashlee Vance</description>
+			
+        
+          <category>bookreview</category>
+        
+          <category>innovator</category>
+        
+          <category>entrepreneur</category>
+        
+          <category>role</category>
+        
+          <category>model</category>
+        
+          <category>biography</category>
+        
+			<pubDate>02 September 2017</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/09/02/elon-musk.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/09/02/elon-musk</guid>
+		</item>
 	
 		<item>
 			<title>Memory Leak</title>
