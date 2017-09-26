@@ -14,7 +14,36 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 16 Sep 2017 11:47:55 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 25 Sep 2017 22:45:53 -0700</lastBuildDate>
+	
+		<item>
+			<title>Functional vs. Imperative Programming</title>
+			
+				<description>2 major programming paradigms</description>
+			
+        
+          <category>functional</category>
+        
+          <category>imperative</category>
+        
+          <category>programming</category>
+        
+          <category>computer</category>
+        
+          <category>paradigms</category>
+        
+          <category>scala</category>
+        
+			<pubDate>23 September 2017</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/09/23/functional-imperative-programming.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">/blog/2017/09/23/functional-imperative-programming</guid>
+		</item>
 	
 		<item>
 			<title>Self Love</title>

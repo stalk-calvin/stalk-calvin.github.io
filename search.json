@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Functional vs. Imperative Programming",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/09/23/functional-imperative-programming.html",
+      "excerpt"		: "2 major programming paradigms",
+      "tags"        : ["functional","imperative","programming","computer","paradigms","scala"]
+    }
+  
+
+  
+    ,{
       "title"			: "Self Love",
       "link"			: "https://stalk-calvin.github.io/blog/2017/09/07/self-love.html",
       "excerpt"		: "Am I Selfish?",
