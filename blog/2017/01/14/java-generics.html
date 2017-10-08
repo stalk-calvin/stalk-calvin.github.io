@@ -224,7 +224,7 @@
 <tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/calvin/generics.jpg" alt="Generics"></td></tr>
 </table>
 
-<h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-introduction">
+<h2 style="margin:50px 0px;" id="-introduction">
 <i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Introduction</h2>
 
 <p><a href="http://docs.oracle.com/javase/tutorial/extra/generics/">Generics</a> in Java were introduced as one of the features in JDK 5. It was one of the major changes in Java.</p>
@@ -249,12 +249,12 @@
   <p>“The use of raw types is allowed only as a concession to compatibility of legacy code. The use of raw types in code written after the introduction of genericity into the Java programming language is strongly discouraged. It is possible that future versions of the Java programming language will disallow the use of raw types.”</p>
 </blockquote>
 
-<h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-history">
+<h2 style="margin:50px 0px;" id="-history">
 <i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> History</h2>
 
 <p>Sun decided to start Java development in 1990 led by <a href="https://en.wikipedia.org/wiki/James_Gosling">James Gosling</a>. Since then, there had been numerous changes to get to Generics which was introduced in J2SE 5.0 in 2004. J2SE 5.0 consists of a bunch of other <a href="https://en.wikipedia.org/wiki/Java_version_history#J2SE_5.0"><strong>Evolutionary</strong> Changes</a>. There had been a couple of other changes after J2SE 5.0 was introduced. However, J2SE 5.0 is probably the most notable change in the Java history to be mentioned.</p>
 
-<h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-why-generics">
+<h2 style="margin:50px 0px;" id="-why-generics">
 <i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Why Generics?</h2>
 
 <p>Wikipedia says, <a href="https://en.wikipedia.org/wiki/Generics_in_Java">Generics</a> provides compile-time (static) type safety for collections and eliminates the need for most <a href="https://en.wikipedia.org/wiki/Type_conversion">typecasts (type conversion)</a> (specified by <a href="https://www.jcp.org/en/jsr/detail?id=14">JSR 14</a>). You might be thinking so what? Let’s take a look at the benefits.</p>
@@ -270,12 +270,12 @@
 
 <p>Basically, the most important point above is probably type checking of parameters in your code at the <strong><em>compile</em></strong> time, automatically! This is very important as Casting was a big <em>burn</em> as most of the errors were bypassing the compiling until runtime exception rises in the production. Generics basically added stability to your code by making more of your bugs detectable at the compile time (Checked exception).</p>
 
-<h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-how-generics-works-in-java">
+<h2 style="margin:50px 0px;" id="-how-generics-works-in-java">
 <i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> How Generics works in Java</h2>
 
 <p>There are 2 important terms to discuss the works of Generics in Java:</p>
 
-<p><img class="emoji" title=":one:" alt=":one:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png" height="20" width="20" align="absmiddle"> <a href="https://en.wikipedia.org/wiki/Type_safety">Type Safety</a></p>
+<p><img class="emoji" title=":one:" alt=":one:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png" height="20" width="20"> <a href="https://en.wikipedia.org/wiki/Type_safety">Type Safety</a></p>
 
 <p>This is basically saying as long as types are all passed compiler with Generics, ClassCastException should not occur at runtime. This is guaranteeing cast error-prone at the runtime as I discussed as the most important point in “Why Generics”.</p>
 
@@ -290,7 +290,7 @@
 </code></pre>
 </div>
 
-<p><img class="emoji" title=":two:" alt=":two:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png" height="20" width="20" align="absmiddle"> <a href="https://en.wikipedia.org/wiki/Type_erasure">Type Erasure</a></p>
+<p><img class="emoji" title=":two:" alt=":two:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png" height="20" width="20"> <a href="https://en.wikipedia.org/wiki/Type_erasure">Type Erasure</a></p>
 
 <p>This is basically saying that any of these type information added using Generics in the code will be removed in compiled bytecode. This is required to support old Java as Java itself is always backward compatible. Byte-level code is basically kept using old Java syntax which wouldn’t use the Generics.</p>
 
@@ -318,7 +318,7 @@
 
 <p>What this compares at the end of a day is ArrayList, because Types would have been Erased. There are other limitations to Generics. <a href="#generics_limitation">See end of this page</a>, you will find examples of them.</p>
 
-<h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-type-parameter-naming-conventions">
+<h2 style="margin:50px 0px;" id="-type-parameter-naming-conventions">
 <i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Type Parameter Naming Conventions</h2>
 
 <p>There are conventions Java developers like to follow when it comes to using Generics. By convention, type parameter names are single, uppercase letters. This follows <a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html#naming">Java Naming Convention</a> that most of Java developers would know about. Naming conventions make the code clean when everyone is following the same convention.</p>
@@ -336,7 +336,7 @@
 
 <p>You’ll see these names used throughout the Java SE API.</p>
 
-<h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-generics-with-wildcards">
+<h2 style="margin:50px 0px;" id="-generics-with-wildcards">
 <i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Generics with Wildcards</h2>
 
 <p>The question mark (<em>?</em>) is used as the wildcard in Generics, which represents an unknown type. A wildcard parameterized type is an instantiation of a generic type where at least one type argument is a wildcard.</p>
@@ -387,10 +387,10 @@ Then the list is a consumer, so you should use a Collection&lt;? super Thing&gt;
 <p><a name="generics_limitation"></a>
 Also, to note, wildcard should not be used as a return type.</p>
 
-<h2 style="margin:50px 0px;" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-limitations-to-generics">
+<h2 style="margin:50px 0px;" id="-limitations-to-generics">
 <i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Limitations to Generics</h2>
 
-<p><img class="emoji" title=":one:" alt=":one:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png" height="20" width="20" align="absmiddle"> <span style="color: #F4A460;"><strong>Primitives are not allowed as part of Type.</strong></span></p>
+<p><img class="emoji" title=":one:" alt=":one:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Primitives are not allowed as part of Type.</strong></span></p>
 
 <div class="language-java highlighter-rouge">
 <pre class="highlight"><code><span class="kd">class</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span> <span class="n">V</span><span class="o">&gt;</span> <span class="o">{</span>
@@ -422,7 +422,7 @@ Also, to note, wildcard should not be used as a return type.</p>
 </code></pre>
 </div>
 
-<p><img class="emoji" title=":two:" alt=":two:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png" height="20" width="20" align="absmiddle"> <span style="color: #F4A460;"><strong>Static fields are not allowed</strong></span></p>
+<p><img class="emoji" title=":two:" alt=":two:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Static fields are not allowed</strong></span></p>
 
 <div class="language-java highlighter-rouge">
 <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericsExample</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;;</span>
@@ -432,7 +432,7 @@ Also, to note, wildcard should not be used as a return type.</p>
 </code></pre>
 </div>
 
-<p><img class="emoji" title=":three:" alt=":three:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png" height="20" width="20" align="absmiddle"> <span style="color: #F4A460;"><strong>Creating an instance of Type is not allowed</strong></span></p>
+<p><img class="emoji" title=":three:" alt=":three:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Creating an instance of Type is not allowed</strong></span></p>
 
 <div class="language-java highlighter-rouge">
 <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericsExample</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span>
@@ -444,7 +444,7 @@ Also, to note, wildcard should not be used as a return type.</p>
 </code></pre>
 </div>
 
-<p><img class="emoji" title=":four:" alt=":four:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png" height="20" width="20" align="absmiddle"> <span style="color: #F4A460;"><strong>Exceptions cannot be generic-fied</strong></span></p>
+<p><img class="emoji" title=":four:" alt=":four:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Exceptions cannot be generic-fied</strong></span></p>
 
 <div class="language-java highlighter-rouge">
 <pre class="highlight"><code><span class="c1">// causes compiler error</span>
@@ -454,7 +454,7 @@ Also, to note, wildcard should not be used as a return type.</p>
 
 <p>This is because Runtime exception type has no generics information. For more detail, look into <a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-11.html">JLS 11</a>. It has the note, “subclass of Throwable must not be generic (<a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.1.2">§8.1.2</a>.”</p>
 
-<p><img class="emoji" title=":five:" alt=":five:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0035-20e3.png" height="20" width="20" align="absmiddle"> <span style="color: #F4A460;"><strong>Cannot be used as Casts or <code class="highlighter-rouge">instanceof</code> parameter</strong></span></p>
+<p><img class="emoji" title=":five:" alt=":five:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0035-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Cannot be used as Casts or <code class="highlighter-rouge">instanceof</code> parameter</strong></span></p>
 
 <div class="language-java highlighter-rouge">
 <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="n">test</span> <span class="nf">rtti</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
@@ -480,14 +480,14 @@ Also, to note, wildcard should not be used as a return type.</p>
 </code></pre>
 </div>
 
-<p><img class="emoji" title=":six:" alt=":six:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0036-20e3.png" height="20" width="20" align="absmiddle"> <span style="color: #F4A460;"><strong>You cannot create an array of parameterized types</strong></span></p>
+<p><img class="emoji" title=":six:" alt=":six:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0036-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>You cannot create an array of parameterized types</strong></span></p>
 
 <div class="language-java highlighter-rouge">
 <pre class="highlight"><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;[]</span> <span class="n">arrayOfLists</span> <span class="o">=</span> <span class="k">new</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;[</span><span class="mi">2</span><span class="o">];</span>  <span class="c1">// compile-time error</span>
 </code></pre>
 </div>
 
-<p><img class="emoji" title=":seven:" alt=":seven:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0037-20e3.png" height="20" width="20" align="absmiddle"> <span style="color: #F4A460;"><strong>You cannot have the same method signature of erasure form</strong></span></p>
+<p><img class="emoji" title=":seven:" alt=":seven:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0037-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>You cannot have the same method signature of erasure form</strong></span></p>
 
 <div class="language-java highlighter-rouge">
 <pre class="highlight"><code><span class="kd">class</span> <span class="nc">GenericsExample</span> <span class="o">{</span>
@@ -499,7 +499,7 @@ Also, to note, wildcard should not be used as a return type.</p>
 
 <p>Both result in Same strSet in the bytecode which results in a compile error, java: name clash: print(java.util.Set<java.lang.integer>) and print(java.util.Set<java.lang.string>) have the same erasure</java.lang.string></java.lang.integer></p>
 
-<h2 id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-conclusion">
+<h2 id="-conclusion">
 <i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Conclusion</h2>
 
 <p>Generics enable the use of stronger type-checking, the elimination of casts, and the ability to develop generic algorithms. Without generics, many of the features that we use in Java today would not be possible.</p>

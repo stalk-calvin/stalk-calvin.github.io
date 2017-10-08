@@ -230,8 +230,8 @@
 
 <p>This item is probably what made Guava famous. You can name a data structure to define using their static factory methods. There are ways to define structures:</p>
 
-<h5 style="margin-bottom: 1em; margin-top: 2em;" id="whitecheckmark-listshttpsgooglegithubioguavareleases190apidocscomgooglecommoncollectlistshtml">
-<img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"> <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/Lists.html">Lists</a>
+<h5 style="margin-bottom: 1em; margin-top: 2em;" id="white_check_mark-lists">
+<img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20"> <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/Lists.html">Lists</a>
 </h5>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Lists</span><span class="o">.</span><span class="na">newArrayList</span><span class="o">();</span></code></pre></figure>
@@ -268,8 +268,8 @@
 <span class="n">ImmutableList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">immutableList</span> <span class="o">=</span> 
     <span class="n">ImmutableList</span><span class="o">.&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">builder</span><span class="o">().</span><span class="na">addAll</span><span class="o">(</span><span class="n">mutableList</span><span class="o">).</span><span class="na">build</span><span class="o">();</span></code></pre></figure>
 
-<h5 style="margin-bottom: 1em; margin-top: 2em;" id="whitecheckmark-setshttpsgooglegithubioguavareleases190apidocscomgooglecommoncollectsetshtml">
-<img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"> <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/Sets.html">Sets</a>
+<h5 style="margin-bottom: 1em; margin-top: 2em;" id="white_check_mark-sets">
+<img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20"> <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/Sets.html">Sets</a>
 </h5>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Set</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <span class="n">aSet</span> <span class="o">=</span> <span class="n">Sets</span><span class="o">.</span><span class="na">newHashSet</span><span class="o">();</span></code></pre></figure>
@@ -311,8 +311,8 @@
 <span class="n">ImmutableSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">immutableSet</span> <span class="o">=</span> 
     <span class="n">ImmutableSet</span><span class="o">.&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">builder</span><span class="o">().</span><span class="na">addAll</span><span class="o">(</span><span class="n">mutableSet</span><span class="o">).</span><span class="na">build</span><span class="o">();</span></code></pre></figure>
 
-<h5 style="margin-bottom: 1em; margin-top: 2em;" id="whitecheckmark-mapshttpsgooglegithubioguavareleases190apidocscomgooglecommoncollectmapshtml">
-<img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"> <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/Maps.html">Maps</a>
+<h5 style="margin-bottom: 1em; margin-top: 2em;" id="white_check_mark-maps">
+<img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20"> <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/Maps.html">Maps</a>
 </h5>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Maps</span><span class="o">.</span><span class="na">newLinkedHashMap</span><span class="o">();</span></code></pre></figure>
@@ -354,7 +354,7 @@
       <span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"Tom"</span><span class="o">,</span> <span class="mi">2000</span><span class="o">)</span>
       <span class="o">.</span><span class="na">build</span><span class="o">();</span></code></pre></figure>
 
-<h3 style="margin-bottom: 2em; margin-top: 2em;" id="item-2-orderinghttpsgooglegithubioguavareleases190apidocscomgooglecommoncollectorderinghtml">Item 2: <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/Ordering.html">Ordering</a>
+<h3 style="margin-bottom: 2em; margin-top: 2em;" id="item-2-ordering">Item 2: <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/Ordering.html">Ordering</a>
 </h3>
 
 <p style="margin-bottom: .5em; margin-top: 1em;">Ordering is Guava’s “fluent” Comparator class, which can be used to build complex comparators and apply them to collections of objects. It’s basically a “comparator” instance. Examples are below:</p>
@@ -397,7 +397,7 @@ int found = Ordering.usingToString().binarySearch(toSort, 2);</code></pre></figu
 <span class="n">Collections</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">toSort</span><span class="o">,</span> <span class="n">Ordering</span><span class="o">.</span><span class="na">natural</span><span class="o">().</span><span class="na">nullsFirst</span><span class="o">());</span>
 <span class="n">assertThat</span><span class="o">(</span><span class="n">toSort</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">),</span> <span class="n">nullValue</span><span class="o">());</span></code></pre></figure>
 
-<h3 style="margin-bottom: 2em; margin-top: 2em;" id="item-3-stringshttpsgooglegithubioguavareleases190apidocscomgooglecommonbasestringshtml">Item 3: <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/Strings.html">Strings</a>
+<h3 style="margin-bottom: 2em; margin-top: 2em;" id="item-3-strings">Item 3: <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/Strings.html">Strings</a>
 </h3>
 
 <p>Until now, Strings are usually handled by company’s own implementation of “StringUtils”. This is typically a bad idea as there are libraries out there that handle most of the job. Trust these libraries for 2 main reasons. First, hundreds of people have laid their eyes on the codes online (open-sourced libraries). Second, a lot of people are using them. There are other options for StringUtils than Guava. There is <a href="https://commons.apache.org/">Apache Commons</a>. The project started n 2002. Somewhat Old. Still, has quite useful libraries. I love their StringBuilder/StringWriter functions. Guava has their lovely ones too such as Joiner, Splitter and especially CharMatcher. See below:</p>
@@ -436,7 +436,7 @@ int found = Ordering.usingToString().binarySearch(toSort, 2);</code></pre></figu
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">bytes</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="na">getBytes</span><span class="o">(</span><span class="n">Charsets</span><span class="o">.</span><span class="na">UTF_8</span><span class="o">);</span></code></pre></figure>
 
-<h3 style="margin-bottom: 2em; margin-top: 2em;" id="item-4-comparison-chainhttpsgooglegithubioguavareleases190apidocscomgooglecommoncollectcomparisonchainhtml">Item 4: <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ComparisonChain.html">Comparison Chain</a>
+<h3 style="margin-bottom: 2em; margin-top: 2em;" id="item-4-comparison-chain">Item 4: <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/ComparisonChain.html">Comparison Chain</a>
 </h3>
 
 <p style="margin-bottom: .5em; margin-top: 1em;">Your traditional compareTo method might look like this:</p>
@@ -493,7 +493,7 @@ int found = Ordering.usingToString().binarySearch(toSort, 2);</code></pre></figu
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>Don’t use your own Utils functions. Use only ones applicable specific to your project. There are many other options for Utils. However, at least for Java, Big 2 Java Collections Library is, <a href="https://commons.apache.org/">Apache Commons</a> and <a href="https://github.com/google/guava/wiki">Google Guava</a>. These libraries use names very well made usage so much easier and fun. There will be a time where you can solve your issues using one of these libraries, trust me <img class="emoji" title=":smile:" alt=":smile:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f604.png" height="20" width="20" align="absmiddle"> Make sure you check them first and see if you can incorporate these libraries into your project. Also, please check out my <a href="https://github.com/stalk-calvin/Algorithms/tree/master/src/test/java/org/calvin/Guava">github  <i class="fa fa-github" aria-hidden="true"></i></a> for test cases on Guava library. I have mostly covered examples I discussed in this blog. I may have added one or two more than what has covered here actually hehe <img class="emoji" title=":+1:" alt=":+1:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20" align="absmiddle"></p>
+<p>Don’t use your own Utils functions. Use only ones applicable specific to your project. There are many other options for Utils. However, at least for Java, Big 2 Java Collections Library is, <a href="https://commons.apache.org/">Apache Commons</a> and <a href="https://github.com/google/guava/wiki">Google Guava</a>. These libraries use names very well made usage so much easier and fun. There will be a time where you can solve your issues using one of these libraries, trust me <img class="emoji" title=":smile:" alt=":smile:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f604.png" height="20" width="20"> Make sure you check them first and see if you can incorporate these libraries into your project. Also, please check out my <a href="https://github.com/stalk-calvin/Algorithms/tree/master/src/test/java/org/calvin/Guava">github  <i class="fa fa-github" aria-hidden="true"></i></a> for test cases on Guava library. I have mostly covered examples I discussed in this blog. I may have added one or two more than what has covered here actually hehe <img class="emoji" title=":+1:" alt=":+1:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"></p>
 
 
           

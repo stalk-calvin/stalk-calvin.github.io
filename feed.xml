@@ -14,7 +14,32 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Mon, 25 Sep 2017 22:50:39 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 07 Oct 2017 21:48:29 -0700</lastBuildDate>
+	
+		<item>
+			<title>Binary Trees</title>
+			
+				<description>basic concepts of binary trees with examples</description>
+			
+        
+          <category>binary</category>
+        
+          <category>tree</category>
+        
+          <category>traversal</category>
+        
+          <category>programming</category>
+        
+			<pubDate>26 September 2017</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/09/26/binary-trees.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/09/26/binary-trees</guid>
+		</item>
 	
 		<item>
 			<title>Functional vs. Imperative Programming</title>
@@ -42,7 +67,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/09/23/functional-imperative-programming</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/09/23/functional-imperative-programming</guid>
 		</item>
 	
 		<item>
@@ -67,7 +92,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/09/07/self-love</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/09/07/self-love</guid>
 		</item>
 	
 		<item>
@@ -96,7 +121,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/09/02/elon-musk</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/09/02/elon-musk</guid>
 		</item>
 	
 		<item>
@@ -125,7 +150,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/08/26/memory-leak</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/08/26/memory-leak</guid>
 		</item>
 	
 		<item>
@@ -152,7 +177,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/08/05/webp-image</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/08/05/webp-image</guid>
 		</item>
 	
 		<item>
@@ -175,7 +200,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/07/15/performance-mistakes</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/07/15/performance-mistakes</guid>
 		</item>
 	
 		<item>
@@ -202,7 +227,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/07/08/salt-island</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/07/08/salt-island</guid>
 		</item>
 	
 		<item>
@@ -227,7 +252,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/06/21/mockito</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/06/21/mockito</guid>
 		</item>
 	
 		<item>
@@ -254,7 +279,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/06/10/nash-equalibrium</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/06/10/nash-equalibrium</guid>
 		</item>
 	
 		<item>
@@ -283,7 +308,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/06/03/java-perl-python</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/06/03/java-perl-python</guid>
 		</item>
 	
 		<item>
@@ -306,7 +331,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/05/27/algorithms-to-live-by</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/05/27/algorithms-to-live-by</guid>
 		</item>
 	
 		<item>
@@ -335,7 +360,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/05/20/exponential-growth</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/05/20/exponential-growth</guid>
 		</item>
 	
 		<item>
@@ -360,7 +385,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/05/13/binary-logarithm</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/05/13/binary-logarithm</guid>
 		</item>
 	
 		<item>
@@ -383,7 +408,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/05/06/toronto</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/05/06/toronto</guid>
 		</item>
 	
 		<item>
@@ -408,7 +433,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/04/22/leap-second</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/04/22/leap-second</guid>
 		</item>
 	
 		<item>
@@ -437,7 +462,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/04/15/vagrant-docker</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/04/15/vagrant-docker</guid>
 		</item>
 	
 		<item>
@@ -472,7 +497,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/04/08/success</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/04/08/success</guid>
 		</item>
 	
 		<item>
@@ -495,7 +520,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/04/01/beer-list</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/04/01/beer-list</guid>
 		</item>
 	
 		<item>
@@ -520,7 +545,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/03/25/software-facts-fallacies</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/03/25/software-facts-fallacies</guid>
 		</item>
 	
 		<item>
@@ -547,7 +572,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/03/18/rocky-mountain</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/03/18/rocky-mountain</guid>
 		</item>
 	
 		<item>
@@ -578,7 +603,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/03/04/farewell</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/03/04/farewell</guid>
 		</item>
 	
 		<item>
@@ -607,7 +632,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/02/25/http-response-code</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/02/25/http-response-code</guid>
 		</item>
 	
 		<item>
@@ -638,7 +663,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/02/18/saml</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/02/18/saml</guid>
 		</item>
 	
 		<item>
@@ -669,7 +694,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/02/11/oauth</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/02/11/oauth</guid>
 		</item>
 	
 		<item>
@@ -696,7 +721,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/02/04/online-judges</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/02/04/online-judges</guid>
 		</item>
 	
 		<item>
@@ -719,7 +744,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/01/28/programming-languages</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/01/28/programming-languages</guid>
 		</item>
 	
 		<item>
@@ -744,7 +769,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/01/21/java-developers-mistake</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/01/21/java-developers-mistake</guid>
 		</item>
 	
 		<item>
@@ -769,7 +794,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/01/14/java-generics</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/01/14/java-generics</guid>
 		</item>
 	
 		<item>
@@ -792,7 +817,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2017/01/07/new-year-resolution</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/01/07/new-year-resolution</guid>
 		</item>
 	
 		<item>
@@ -823,7 +848,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/12/28/fibonacci</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/12/28/fibonacci</guid>
 		</item>
 	
 		<item>
@@ -856,7 +881,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/12/24/future-of-computer-science</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science</guid>
 		</item>
 	
 		<item>
@@ -881,7 +906,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/12/17/keybase-io</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/12/17/keybase-io</guid>
 		</item>
 	
 		<item>
@@ -906,7 +931,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/12/10/big-o</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/12/10/big-o</guid>
 		</item>
 	
 		<item>
@@ -939,7 +964,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/11/28/ables-java</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/11/28/ables-java</guid>
 		</item>
 	
 		<item>
@@ -964,7 +989,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/11/26/google-guava</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/11/26/google-guava</guid>
 		</item>
 	
 		<item>
@@ -997,7 +1022,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/11/19/useful-code-in-java</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/11/19/useful-code-in-java</guid>
 		</item>
 	
 		<item>
@@ -1018,7 +1043,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/11/12/favourite-books</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/11/12/favourite-books</guid>
 		</item>
 	
 		<item>
@@ -1045,7 +1070,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/11/05/algorithms</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/11/05/algorithms</guid>
 		</item>
 	
 		<item>
@@ -1068,7 +1093,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/10/29/lombok</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/10/29/lombok</guid>
 		</item>
 	
 		<item>
@@ -1101,7 +1126,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/10/22/dependency-injection</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/10/22/dependency-injection</guid>
 		</item>
 	
 		<item>
@@ -1124,7 +1149,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/10/15/builder-pattern</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/10/15/builder-pattern</guid>
 		</item>
 	
 		<item>
@@ -1147,7 +1172,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/09/25/new-team-new-life</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/09/25/new-team-new-life</guid>
 		</item>
 	
 		<item>
@@ -1172,7 +1197,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/08/02/junit</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/08/02/junit</guid>
 		</item>
 	
 		<item>
@@ -1195,7 +1220,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/08/02/git</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/08/02/git</guid>
 		</item>
 	
 		<item>
@@ -1218,7 +1243,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/07/12/workout-split</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/07/12/workout-split</guid>
 		</item>
 	
 		<item>
@@ -1239,7 +1264,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/07/02/web-security</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/07/02/web-security</guid>
 		</item>
 	
 		<item>
@@ -1264,7 +1289,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/06/28/sorting</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/06/28/sorting</guid>
 		</item>
 	
 		<item>
@@ -1287,7 +1312,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/06/24/music</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/06/24/music</guid>
 		</item>
 	
 		<item>
@@ -1308,7 +1333,7 @@
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">/blog/2016/06/21/fruits-sugar-health</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2016/06/21/fruits-sugar-health</guid>
 		</item>
 	
 </channel>

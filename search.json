@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Binary Trees",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/09/26/binary-trees.html",
+      "excerpt"		: "basic concepts of binary trees with examples",
+      "tags"        : ["binary","tree","traversal","programming"]
+    }
+  
+
+  
+    ,{
       "title"			: "Functional vs. Imperative Programming",
       "link"			: "https://stalk-calvin.github.io/blog/2017/09/23/functional-imperative-programming.html",
       "excerpt"		: "2 major programming paradigms",

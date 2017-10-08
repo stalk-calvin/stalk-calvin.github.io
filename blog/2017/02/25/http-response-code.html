@@ -264,7 +264,7 @@
 
 <p>Let me emphasize on some of the important class codes. Note below are not the “full” list. Please check <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">wikipedia</a> for the full list.</p>
 
-<h3 id="xx-informational">1xx Informational</h3>
+<h3 id="1xx-informational">1xx Informational</h3>
 
 <p>It is purely used for information transfers. You could think of this act as the “ping”.  It means the server received your request and currently working on it. 1xx has not be tuned further after HTTP/1.0. It is very rarely used as this isn’t a very useful class code.</p>
 
@@ -272,7 +272,7 @@
   <li><strong><em>101 Switching Protocols</em></strong>: Sometimes used in WebSocket communication</li>
 </ul>
 
-<h3 id="xx-success">2xx Success</h3>
+<h3 id="2xx-success">2xx Success</h3>
 
 <p>This class of status codes indicates the request from the client was successfully received, understood, and accepted.</p>
 
@@ -291,7 +291,7 @@
   <li><strong><em>206 Partial Content</em></strong>: Response has partial content. Usually, this means the client requested to set a boundary which server do as commanded.</li>
 </ul>
 
-<h3 id="xx-redirection">3xx Redirection</h3>
+<h3 id="3xx-redirection">3xx Redirection</h3>
 
 <p>This response code means to be able to complete the task for this response code, redirection must happen. This is common in URL Shortener service. They use either 301 or  302. They would write destination URL in location header.</p>
 
@@ -305,7 +305,7 @@
 Note: 307 and 308 are still in the early stage of being a standard which makes the modern browsers to understand correctly.</li>
 </ul>
 
-<h3 id="xx-client-error">4xx Client Error</h3>
+<h3 id="4xx-client-error">4xx Client Error</h3>
 
 <p>The 4xx class of status code is intended for cases in which the client seems to have errors. Except when responding to a HEAD request, technically the server should include an entity containing an explanation of the error situation, and whether it is a temporary or permanent condition. These status codes are applicable to any request method.</p>
 
@@ -317,7 +317,7 @@ Note: 307 and 308 are still in the early stage of being a standard which makes t
   <li><strong><em>405 Method Not Allowed</em></strong>: Client is using unauthorized HTTP Method.</li>
 </ul>
 
-<h3 id="xx-server-error">5xx Server Error</h3>
+<h3 id="5xx-server-error">5xx Server Error</h3>
 
 <p>The 5xx class of status code intended for cases in which the server is aware that it has errors or is incapable of performing the request. Except when responding to a HEAD request, the server should include an entity containing an explanation of the error situation, and whether it is a temporary or permanent condition. User agents should display any included entity to the user. These response codes are applicable to any request method.</p>
 

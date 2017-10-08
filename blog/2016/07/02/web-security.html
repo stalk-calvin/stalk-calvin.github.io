@@ -219,7 +219,7 @@
 
 <p>For being in a company where security is the most important piece of work: maintained and truly valued in my company. I naturally gained knowledge in most of security surrounding web development, not only to follow <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">Owasp Top10</a>, but also things that are not list in top 10 list. In my opinion, anyone working in a secure web application environment should know at least the <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">Owasp Top10</a> list. Anyway I will include some of the items that just come to my mind in the world of web security. Note below content is not everything, they are just reference of some of security that we need to enforce in areas of web technology which i find important:</p>
 
-<h4 id="i-classfa-fa-database-aria-hiddentruei-sql-injectionhttpsenwikipediaorgwikisqlinjection"><i class="fa fa-database" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/SQL_injection">SQL Injection</a></h4>
+<h4 id="-sql-injection"><i class="fa fa-database" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/SQL_injection">SQL Injection</a></h4>
 
 <p style="margin-bottom:0.5em">I am not sure if there would be any web developers out there who let their code vulnerable to this. I believe no one would do this intentionally, however, people sometimes forget to make the right protection. Injection happens when attacker sends an "code" (ex. SQL query) that would change the course of execution in the program.</p>
 <p style="margin-bottom:0">For example, say we have a piece of code:</p>
@@ -247,7 +247,7 @@
 
 <p>which is just a plain invalid SQL query at this point. So severity of this vulnerability is pretty high and dangerous that you can delete an entire table if this was allowed! This has been well-known to developers these days so it is common to have this all protected, however, I remember it was literally broken in almost all personal web sites around 2005ish. Imagine one morning you got up to check subscribers and all of them had been deleted from database! These days modern programming already places some protection around this so developers can get away with it. Anyway, this is definitely an important concept every developer must know.</p>
 
-<h4 id="i-classfa-fa-file-code-o-aria-hiddentruei-xss-cross-site-scriptinghttpsenwikipediaorgwikicross-sitescripting"><i class="fa fa-file-code-o" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">XSS (Cross-site scripting)</a></h4>
+<h4 id="-xss-cross-site-scripting"><i class="fa fa-file-code-o" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">XSS (Cross-site scripting)</a></h4>
 
 <p>This attack is similar to SQL injection described above, except this injection is happening with a client’s browser which results in executing unexpected behavior such as publishing some of the user’s sensitive information, such as cookies, from the client’s browser. This can be easily achieved by passing in some sort of javascript code as part of text field submit which will eventually be executed at the client side as the content entered in being rendered and displayed on the client’s browser.</p>
 
@@ -255,7 +255,7 @@
 
 <p>As a side-note, attacks come not only in the browser but from the desktop as well. Keylogging is another problem, where the attacker can execute a piece of scripts command easily from either comment section or attacker can even send you a piece of a link via email and record to get your sensitive information such as passwords and credit card numbers. These are some examples.</p>
 
-<h4 id="i-classfa-fa-thumbs-o-up-aria-hiddentruei-encrypted-passwordhttpsenwikipediaorgwikiencryption"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/Encryption">Encrypted Password</a></h4>
+<h4 id="-encrypted-password"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/Encryption">Encrypted Password</a></h4>
 
 <p>This is really a common sense but I thought I would place this here as it is important to note for web security. First, you have to understand the scope of encryption. So if your website requires authentication (or dealing with any sensitive data) then it is probably a good idea to wrap your website with SSL protection to protect the data being transmitted between client and server. With SSL it gives that minimum protection of when data is being hijacked in the middle unless the hacker has the private key, the hacker will have very hard time to decrypt the context.</p>
 
@@ -263,11 +263,11 @@
 
 <p>For passwords, which typically is encrypted as well. There are many websites that do just a basic md5/sha1 hash applied to it. This is called “hashing”, not encrypting any password. But this doesn’t matter as it’s good enough to just hash for the password since we would like to visually mask the passwords. However, remember to add the SALT into the hash to the password. If you do not add SALT to this string, hackers can use dictionary attach to get the characters that match the hash value, but this is not gonna be possible with SALT added to the string.</p>
 
-<h4 id="i-classfa-fa-bolt-aria-hiddentruei-httponly-and-securehttpsenwikipediaorgwikihttpcookiesecurecookie"><i class="fa fa-bolt" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/HTTP_cookie#Secure_cookie">HttpOnly and Secure</a></h4>
+<h4 id="-httponly-and-secure"><i class="fa fa-bolt" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/HTTP_cookie#Secure_cookie">HttpOnly and Secure</a></h4>
 
 <p>A secure cookie can only be transmitted over an encrypted connection (i.e. HTTPS over SSL). It won’t be transmitted over non-encrypted connections. This means if cookie got stolen, they won’t be able to easily decrypt the content. Another security measure we can impose on HTTP header is a “HttpOnly” cookie. These HTTP defined headered cookies cannot be accessed by client-side APIs, such as JavaScript. This limits ability for hackers to various XSS activity against you. However, they are still vulnerable to XST (Cross Site Tracing) or CSRF (Cross-Site Request Forgery).</p>
 
-<h4 id="i-classfa-fa-folder-o-aria-hiddentruei-http-strict-transport-securityhttpsenwikipediaorgwikihttpstricttransportsecurity"><i class="fa fa-folder-o" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HTTP Strict Transport Security</a></h4>
+<h4 id="-http-strict-transport-security"><i class="fa fa-folder-o" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HTTP Strict Transport Security</a></h4>
 
 <p>This is an HTTP Response Header that will prevent such as cookie hijacking. This response header is notifying the browsers or handlers to prevent any communications from being sent over HTTP to the specified domain and will instead send all communications over HTTPS. It also prevents HTTPS click through prompts on browsers. Here is how you would use it typically:</p>
 
@@ -281,7 +281,7 @@
 
 <p>This directive started its support on major browsers from 2013-ish</p>
 
-<h4 id="i-classfa-fa-lightbulb-o-aria-hiddentruei-insecure-direct-object-referencehttpswwwowasporgindexphptop102013-a4-insecuredirectobjectreferences"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> <a href="https://www.owasp.org/index.php/Top_10_2013-A4-Insecure_Direct_Object_References">Insecure Direct Object Reference</a></h4>
+<h4 id="-insecure-direct-object-reference"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> <a href="https://www.owasp.org/index.php/Top_10_2013-A4-Insecure_Direct_Object_References">Insecure Direct Object Reference</a></h4>
 
 <p>This is one of those items where you can be careless with the handling of such object, others might get an easy access to it. So say in an environment, you can get an information using simple GET request like this:</p>
 
@@ -289,23 +289,23 @@
 
 <p>As you can see, without a proper check of the session or other security measures, you are exposing access to another person’s account. The protection around this quite simple: surround web page with proper sessions OR make sure you have some sort of keys when you are accessing the objects.</p>
 
-<h4 id="i-classfa-fa-cloud-download-aria-hiddentruei-x-frame-options-strict-transport-security-and-public-key-pinshttpswwwowasporgindexphpowaspsecureheadersprojecttabbestpractices"><i class="fa fa-cloud-download" aria-hidden="true"></i> <a href="https://www.owasp.org/index.php/OWASP_Secure_Headers_Project#tab=Best_Practices">X-Frame-Options, Strict-Transport-Security and Public-Key-Pins</a></h4>
+<h4 id="-x-frame-options-strict-transport-security-and-public-key-pins"><i class="fa fa-cloud-download" aria-hidden="true"></i> <a href="https://www.owasp.org/index.php/OWASP_Secure_Headers_Project#tab=Best_Practices">X-Frame-Options, Strict-Transport-Security and Public-Key-Pins</a></h4>
 
 <p>These are the HTTP headers to be added as part of HTTP Response to protect the client from attackers. There are few more that does extra protections. I picked these 3 since I consider them the most important out of them. If you would like to explore the full list, <a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Response_fields">here</a> is the link. <a href="https://tools.ietf.org/html/rfc7034">X-Frame-Options</a> is a header to specify the browser to not render page within a frame. There are options to choose from where you can deny displaying this content in a frame, you can allow content in a frame for the same origin. Last option is all but listed allowed from the domain is denied. This header is explicitly for protecting the clients against <a href="https://en.wikipedia.org/wiki/Clickjacking">clickjacking</a>. Clickjacking is basically using the frame manipulating the clients to react on some actions such as voting/posts/comments/follow etc. OK, let’s talk about HTTP <a href="https://tools.ietf.org/html/rfc6797">Strict-Transport-Security</a>. This is the header of HTTP response saying only process this response in secure HTTPS connections. It is communicated via HTTP response header via an HTTP header field named “Strict-Transport-Security”. Lastly, for the HTTP response header protection, I’d like to talk about <a href="https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning">HTTP Public-Key-Pins</a>. This is basically pinning the SSL certificate so attackers cannot replace the certificate with fraudulent certificates. HPKP contains a value which is basically a SHA-256 hash of the actual certificate which then the browser will verify whether the certificate is valid.</p>
 
-<h4 id="i-classfa-fa-mobile-aria-hiddentruei-input-validation-and-error-handlinghttpsenwikipediaorgwikidatavalidation"><i class="fa fa-mobile" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/Data_validation">Input Validation and Error Handling</a></h4>
+<h4 id="-input-validation-and-error-handling"><i class="fa fa-mobile" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/Data_validation">Input Validation and Error Handling</a></h4>
 
 <p>This item is not directly related to Web Security, but it is important to mention as part of it since it could prevent a lot of attack measures from applying these. Input validation is nothing but to validate inputs as they come in. Data validation would check the data are valid, reasonable, and <b>secure</b> before they are even being processed. For example, it could be as simple as checking for inputs of allowed characters, checking for limits, allowed range of values, etc. This ultimately will protect attackers from entering malformed data into input box so overall it does the prevention. When you have a text field that you can enter only digits, it is not possible to enter in any piece of javascript codes or SQL injection. Anyway, it is very important to do the input validation as it protects and filters out any invalid inputs.</p>
 
-<h4 id="i-classfa-fa-life-ring-aria-hiddentruei-insecurity-around-sensitive-datahttpsenwikipediaorgwikidatasecurity"><i class="fa fa-life-ring" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/Data_security">Insecurity around sensitive data</a></h4>
+<h4 id="-insecurity-around-sensitive-data"><i class="fa fa-life-ring" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/Data_security">Insecurity around sensitive data</a></h4>
 
 <p>I’ve mentioned on this topic briefly above which I’d like to elaborate further more here. Securing data like SIN #, credit card #, password etc need an extra layer of security. We never want to store them as plain text. We need to apply strong security encryption surrounding it. Think about when the hacker stealing the whole entire database, now he has all of those sensitive data. With the right encryption applied on those stolen data, the hackers won’t be able to decrypt them into a plain text. So data is not entirely stolen at that point. Data could also be protected from being hijacked between HTTP transfer. Even if the hackers got this information, they won’t easily be able to turn them back to plain text. So that extra layer of security is always required for those sensitive data. What are some ways to encrypt these data safely? I would use card holder’s plaintext password to encrypt and store inside the database then to access the info, it would require the user to type in the password again.</p>
 
-<h4 id="i-classfa-fa-tree-aria-hiddentruei-csrf-cross-site-reference-forgeryhttpsenwikipediaorgwikicross-siterequestforgery"><i class="fa fa-tree" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">CSRF (Cross Site Reference Forgery)</a></h4>
+<h4 id="-csrf-cross-site-reference-forgery"><i class="fa fa-tree" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">CSRF (Cross Site Reference Forgery)</a></h4>
 
 <p>I have put this here because our company recently patched a protection around this. An example of CSRF can be when an attacker sends a link that makes an action of something like changing the password of a “user” or modifying someone’s status. When the victim already has the session opened to the website with enough privileges to make this kind of changes, by clicking the link from the attacker, the attacker would automatically update the password of the “user” attacker intends to change the password. To fix this, we ended up implementing a md5 hash string tied to a session so if an attacker sends a link and it wouldn’t have the same session as the victim logged in with. Since they are the different hash, it would give a warning page to indicate me to make sure I know what I am doing. This confirmation box is an additional step so the attacker isn’t getting the job done just by sending the link.</p>
 
-<h4 id="i-classfa-fa-smile-o-aria-hiddentruei-xxe---billion-laughshttpsenwikipediaorgwikixmlexternalentityattack"><i class="fa fa-smile-o" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/XML_external_entity_attack">XXE - Billion Laughs</a></h4>
+<h4 id="-xxe---billion-laughs"><i class="fa fa-smile-o" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/XML_external_entity_attack">XXE - Billion Laughs</a></h4>
 
 <p>This interesting topic was thoroughly discussed with my teammates when we literally had someone try to attack us with LOL Billion Laughs attack. The symptoms are generally high load on the server as XML parsers are recursively parsing embedded entities. Here is a sample XML that triggers an infinite entity mappings which cause denial-of-service attack that targets XML parsers. It is also known as XML bomb.</p>
 
@@ -334,7 +334,7 @@
 
 <p>Similarly, this test could crash the web server (on a UNIX system), if the XML parser attempts to substitute the entity with the contents of the /dev/random file.</p>
 
-<h4 id="i-classfa-fa-car-aria-hiddentruei-transport-layer-securityhttpsenwikipediaorgwikitransportlayersecurity"><i class="fa fa-car" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">Transport Layer Security</a></h4>
+<h4 id="-transport-layer-security"><i class="fa fa-car" aria-hidden="true"></i> <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">Transport Layer Security</a></h4>
 
 <p>Well, obviously everyone probably knows what https (SSL) is. It is basically providing a secure layer for privacy and data integrity between two communicating applications. SSLs (v1, v2 and v3) have been found vulnerable (<a href="https://en.wikipedia.org/wiki/POODLE">Read Here</a> if interested) and it is recommended to use anything greater than TLS1.1. Modern browsers support at least TLS 1.0 as TLS1.0 is still widely used as the ‘best’ protocol by a lot of browsers that are not patched to the latest version. It suffers from <a href="/www.yassl.com/yaSSL/Blog/Entries/2010/10/7_Differences_between_SSL_and_TLS_Protocol_Versions.html">CBC Chaining attacks and Padding Oracle attacks</a>. PCI DSS 3.1 prohibits the use of TLS 1.0 after June 30, 2016. TLS 1.2 is the latest available transport layer security and all of SSLv1, SSLv2, SSLv3 are deprecated as of the year 2015.</p>
 

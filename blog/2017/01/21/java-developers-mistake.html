@@ -221,7 +221,7 @@
 
           <p>There are a couple of items I would like to go over to understand fully on some of the areas we developers make mistakes. I have personally made a couple of mistakes introduced here and I thought I would write a post about them. If you are interested in coding in Java, <strong>I would at least skim through the list</strong>. Let’s start!</p>
 
-<h3 id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-convert-array-to-arraylist"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Convert Array to ArrayList</h3>
+<h3 id="-convert-array-to-arraylist"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Convert Array to ArrayList</h3>
 
 <p>I have seen at least few people do this which is alright unless you are manipulating the size of the array.</p>
 
@@ -241,7 +241,7 @@
 
 <p>From my experiences, there were not many cases where you had to modify a List size for <code class="highlighter-rouge">Arrays.asList</code>. However, this is certainly a good to know.</p>
 
-<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-contains-usage-from-the-list"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Contains usage from the list</h3>
+<h3 style="margin-top:3em" id="-contains-usage-from-the-list"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Contains usage from the list</h3>
 
 <p>I have seen some people doing this in order to run <code class="highlighter-rouge">contains</code> operation within a List:</p>
 
@@ -258,7 +258,7 @@
 
 <p>This is pretty much the same thing as using the loop. Searching here would also be O(n), but it’s simpler and there is definitely a gain on the space complexity since we do not need to make an extra set do handle this.</p>
 
-<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-removing-an-element-from-arraylist"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Removing an element from ArrayList</h3>
+<h3 style="margin-top:3em" id="-removing-an-element-from-arraylist"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Removing an element from ArrayList</h3>
 
 <p>Common tries that people to do remove elements from a List to delete all items by iterating through the List:</p>
 
@@ -303,7 +303,7 @@
 
 <p>Now above code block will iterate and delete every element in the list and show, <code class="highlighter-rouge">[]</code>. It is basically only using <code class="highlighter-rouge">hasNext()</code> instead of using its <code class="highlighter-rouge">size()</code> or <code class="highlighter-rouge">indexOf</code> operations.</p>
 
-<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-raw-type-collection"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Raw type collection</h3>
+<h3 style="margin-top:3em" id="-raw-type-collection"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Raw type collection</h3>
 
 <p>In the previous Blog Post, I had covered on <a href="/blog/2017/01/14/java-generics.html">Java Generics</a>. Like I mentioned in the previous post, generics were introduced in JDK 1.5.0. Ever since then, it is <strong><em>not recommended</em></strong> to write a Raw typed object in programming Java, especially when you are dealing with any <a href="https://docs.oracle.com/javase/1.5.0/docs/api/java/util/Collections.html">Java Collections</a>.</p>
 
@@ -356,7 +356,7 @@
 
 <p>Just changing the <code class="highlighter-rouge">List list</code> to <code class="highlighter-rouge">List&lt;String&gt; list</code>, you won’t be able to compile this code anymore which then you will fix this error and then deliver your code with confidence!</p>
 
-<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei--vs-new-string"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> “” vs new String(…)</h3>
+<h3 style="margin-top:3em" id="--vs-new-string"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> “” vs new String(…)</h3>
 
 <p>This is another area people often misunderstand their usage. Let’s look at what I mean below, should be self descriptive:</p>
 
@@ -376,7 +376,7 @@
 
 <p>Just keep in mind, when Object is being compared, <code class="highlighter-rouge">==</code> refers to references comparison. If you wanted to values to be compared via hashCode. You use <code class="highlighter-rouge">equals</code> instead. Remember to override <code class="highlighter-rouge">hashCode</code> if you override <code class="highlighter-rouge">equals</code> so as not to “break the contract”.</p>
 
-<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-operatorshttpsdocsoraclecomjavasetutorialjavanutsandboltsopsummaryhtml"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html">Operators</a></h3>
+<h3 style="margin-top:3em" id="-operators"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html">Operators</a></h3>
 
 <p>Developers are often confused on basics, operators in Java. Here is list of operators supported in Java.</p>
 
@@ -402,7 +402,7 @@
 
 <p style="margin-top:2em">Above <code class="highlighter-rouge">Java order of operations</code> have the top, being the highest precedence to the bottom, being the most lowest precedence. Ternary operators have the same precedence as Unary ones.</p>
 
-<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-x-vs-x"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> ++x vs x++</h3>
+<h3 style="margin-top:3em" id="-x-vs-x"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> ++x vs x++</h3>
 
 <p>Another common mistake Java developers make. This is really a question of logic.</p>
 
@@ -433,7 +433,7 @@
 
 <p>the output of <code class="highlighter-rouge">2 2 3 3</code> would be incorrect, instead <code class="highlighter-rouge">2 2 2 3</code> is the correct one because if you look at line #6, with x++ example, x is assigned to i before x is incremented.</p>
 
-<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-code-comments"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Code comments</h3>
+<h3 style="margin-top:3em" id="-code-comments"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Code comments</h3>
 
 <p>Oh, where should I begin this topic …</p>
 
@@ -443,7 +443,7 @@
 
 <p>Rule of thumbs on writing comments: Comments are for <code class="highlighter-rouge">whys</code> not for <code class="highlighter-rouge">whats</code>.</p>
 
-<h3 style="margin-top:3em" id="i-stylecolor-f4a460-classfa-fa-quote-left-aria-hiddentruei-confusion-over-passing-by-value-and-passing-by-reference"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Confusion over passing by value, and passing by reference</h3>
+<h3 style="margin-top:3em" id="-confusion-over-passing-by-value-and-passing-by-reference"><i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Confusion over passing by value, and passing by reference</h3>
 
 <p>One of the developers was wondering if Java is pass-by-value or pass-by-reference. I told him Java is always <strong>pass-by-value</strong></p>
 

@@ -226,13 +226,13 @@
             
           </nav><!-- /.pagination -->
 
-          <h3 id="i-classfa-fa-quote-left-aria-hiddentruei-some-useful-code-blocks-i-find-useful-in-java-i-classfa-fa-quote-right-aria-hiddentruei">
+          <h3 id="-some-useful-code-blocks-i-find-useful-in-java-">
 <i class="fa fa-quote-left" aria-hidden="true"></i> Some useful code blocks I find useful in Java <i class="fa fa-quote-right" aria-hidden="true"></i>
 </h3>
 
 <p>I am not sure about you guys, but at least for Java, there are certainly block of codes I like to keep around for later use. I have come across some useful ones (with the concept) which I will cover here, mainly for the reference.</p>
 
-<h3 id="dao---data-access-object">1. DAO - Data Access Object</h3>
+<h3 id="1-dao---data-access-object">1. DAO - Data Access Object</h3>
 
 <p>DAO is an abstraction where it provides an interface to data objects such as SQL/NoSQL Database, CSV, Spreadsheet, etc. It could literally be anything to store values. If you have typical structures to store some item. That could also be a DAO.</p>
 
@@ -256,11 +256,11 @@
 
 <p>I would make the DAO implements a DatabaseAccessObject interface which provides basic operations such as OpenConnection, CloseConnection, getRows, writeRows, getColumns, writeColumns, checkConnection, etc. That would be common in each DAO object.</p>
 
-<h3 id="pojo---plain-old-java-object">2. POJO - Plain Old Java Object</h3>
+<h3 id="2-pojo---plain-old-java-object">2. POJO - Plain Old Java Object</h3>
 
 <p>There are many ways to create a Java Object from the different set of documents. You can read/write from/to XML and JSON are the 2 great examples. However, you use the term for making anything into Java Objects such as Databases-POJO (Hibernate). I will just cover the 2 representations, XML, and JSON here.</p>
 
-<p><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"> XML<br></p>
+<p><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20"> XML<br></p>
 
 <p>There are many different ways to make a POJO out of XML. Using @XStream is one of the ways. Here is a very simple usage. Say your XML look like,</p>
 
@@ -317,7 +317,7 @@
 
 <p>As you can see, using SAXParser would add granularity to how the document is being parsed. This granularity could save you a bit of coding and time. For a simple task, I found myself easier to use just XStream as it is much flexible going back and forth with XML to POJO in annotated way. However, the SAX way is much more flexible in terms of what you wish to do with the raw XML.</p>
 
-<p><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"> JSON<br></p>
+<p><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20"> JSON<br></p>
 
 <p>There are also numerous ways to make a POJO out of JSON. A simple way is to use Jackson 2 (com.fasterxml.jackson.databind). Here is to read from JSON.</p>
 
@@ -352,7 +352,7 @@
    <span class="o">...</span> <span class="n">etc</span> <span class="o">...</span>
 <span class="o">}</span></code></pre></figure>
 
-<h3 id="exception-template">3. Exception Template</h3>
+<h3 id="3-exception-template">3. Exception Template</h3>
 
 <p>I think it is good to divide Exceptions into different sub-exceptions. We looked at DAO above, here would be an exception caused by DAO.</p>
 
@@ -375,7 +375,7 @@
 
 <p>Templates are similar for any other exceptions, however, it gives names to what kind of exception it was and what it was for.</p>
 
-<h3 id="copying-a-file-to-another-location">4. Copying a file to another location</h3>
+<h3 id="4-copying-a-file-to-another-location">4. Copying a file to another location</h3>
 
 <p>Here is a way to copy a file to another file.</p>
 
@@ -406,7 +406,7 @@
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
-<h3 id="new-list-using-static-factories">5. New list using static factories</h3>
+<h3 id="5-new-list-using-static-factories">5. New list using static factories</h3>
 
 <p>Unless you are using a Guava libraries, I suggest you make your own static factory that handles these data structures with a name like below example:</p>
 
@@ -430,7 +430,7 @@
     <span class="k">return</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;(</span><span class="n">initialSize</span><span class="o">);</span>
 <span class="o">}</span></code></pre></figure>
 
-<h3 id="way-to-initialize-common-data-structures">6. Way to initialize common data structures</h3>
+<h3 id="6-way-to-initialize-common-data-structures">6. Way to initialize common data structures</h3>
 
 <p>Initialize HashSet:</p>
 
