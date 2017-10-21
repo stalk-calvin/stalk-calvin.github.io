@@ -2,9 +2,18 @@
 
   
     {
+      "title"			: "Common Binary Trees Examples",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/10/21/binary-tree-examples.html",
+      "excerpt"		: "",
+      "tags"        : ["binary","tree","traversal","programming","examples"]
+    }
+  
+
+  
+    ,{
       "title"			: "Binary Trees",
       "link"			: "https://stalk-calvin.github.io/blog/2017/10/07/binary-trees.html",
-      "excerpt"		: "basic concepts of binary trees with examples",
+      "excerpt"		: "basic concepts of binary trees",
       "tags"        : ["binary","tree","traversal","programming"]
     }
   
