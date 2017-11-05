@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "RPC framework",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/10/27/rpc-framework.html",
+      "excerpt"		: "Tools enabling the programmers to communicate remotely",
+      "tags"        : ["rpc","framework","remote","call","client","server"]
+    }
+  
+
+  
+    ,{
       "title"			: "Common Binary Trees Examples",
       "link"			: "https://stalk-calvin.github.io/blog/2017/10/21/binary-tree-examples.html",
       "excerpt"		: "",

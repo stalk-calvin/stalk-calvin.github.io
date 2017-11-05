@@ -14,7 +14,36 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 21 Oct 2017 03:51:12 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 04 Nov 2017 22:06:38 -0700</lastBuildDate>
+	
+		<item>
+			<title>RPC framework</title>
+			
+				<description>Tools enabling the programmers to communicate remotely</description>
+			
+        
+          <category>rpc</category>
+        
+          <category>framework</category>
+        
+          <category>remote</category>
+        
+          <category>call</category>
+        
+          <category>client</category>
+        
+          <category>server</category>
+        
+			<pubDate>27 October 2017</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/10/27/rpc-framework.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/10/27/rpc-framework</guid>
+		</item>
 	
 		<item>
 			<title>Common Binary Trees Examples</title>
