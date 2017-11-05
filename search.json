@@ -3,7 +3,7 @@
   
     {
       "title"			: "RPC framework",
-      "link"			: "https://stalk-calvin.github.io/blog/2017/10/27/rpc-framework.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/11/04/rpc-framework.html",
       "excerpt"		: "Tools enabling the programmers to communicate remotely",
       "tags"        : ["rpc","framework","remote","call","client","server"]
     }
