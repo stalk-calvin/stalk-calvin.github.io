@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Rebase in Git",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/11/04/git-rebase.html",
+      "excerpt"		: "Taking version control to the next level",
+      "tags"        : ["git","version","control","repository","rebase"]
+    }
+  
+
+  
+    ,{
       "title"			: "RPC framework",
       "link"			: "https://stalk-calvin.github.io/blog/2017/11/04/rpc-framework.html",
       "excerpt"		: "Tools enabling the programmers to communicate remotely",
