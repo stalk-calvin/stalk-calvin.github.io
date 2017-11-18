@@ -14,7 +14,34 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 11 Nov 2017 20:17:25 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 19 Nov 2017 00:09:41 -0800</lastBuildDate>
+	
+		<item>
+			<title>Lazy evaluation in Scala</title>
+			
+				<description>an important concept in functional programming</description>
+			
+        
+          <category>lazy</category>
+        
+          <category>evaluation</category>
+        
+          <category>scala</category>
+        
+          <category>functional</category>
+        
+          <category>programming</category>
+        
+			<pubDate>19 November 2017</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/11/19/lazy-evaluation.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/11/19/lazy-evaluation</guid>
+		</item>
 	
 		<item>
 			<title>Rebase in Git</title>
@@ -32,15 +59,15 @@
         
           <category>rebase</category>
         
-			<pubDate>04 November 2017</pubDate>
-			<link>https://stalk-calvin.github.io/blog/2017/11/04/git-rebase.html</link>
+			<pubDate>12 November 2017</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/11/12/git-rebase.html</link>
       
         
           
           
           <dc:creator>Calvin Lee</dc:creator>
         
-      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/11/04/git-rebase</guid>
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/11/12/git-rebase</guid>
 		</item>
 	
 		<item>

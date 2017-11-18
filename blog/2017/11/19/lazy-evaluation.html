@@ -24,16 +24,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Tools enabling the programmers to communicate remotely">
+  <meta name="description" content="an important concept in functional programming">
   <meta name="author" content="Calvin Lee">
   <meta name="keywords" content="calvin, lee, personal, blog, beer, fitness, diet, computer, science, programming, software, engineer">
   <meta property="fb:app_id" content="140805279842677" /> 
-  <meta property="og:title" content="RPC framework" />
-  <meta property="og:description" content="Tools enabling the programmers to communicate remotely" />
-  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2017/11/04/rpc-framework.html" />
-  <link rel="canonical" href="/blog/2017/11/04/rpc-framework.html">
+  <meta property="og:title" content="Lazy evaluation in Scala" />
+  <meta property="og:description" content="an important concept in functional programming" />
+  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2017/11/19/lazy-evaluation.html" />
+  <link rel="canonical" href="/blog/2017/11/19/lazy-evaluation.html">
   <link rel="author" href="https://www.linkedin.com/in/stalkme">
-  <title>I am Calvin | RPC framework</title>
+  <title>I am Calvin | Lazy evaluation in Scala</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -191,86 +191,149 @@
     <section id="post" class="container content-section ">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>RPC framework</strong></h1>
-          <h4 style="display:inline; color: #F4A460;"><strong>Tools enabling the programmers to communicate remotely</strong></h4><br />
+          <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>Lazy evaluation in Scala</strong></h1>
+          <h4 style="display:inline; color: #F4A460;"><strong>an important concept in functional programming</strong></h4><br />
           <h4>
-            <strong>04 Nov 2017</strong>
+            <strong>19 Nov 2017</strong>
             <small>
-              <a href="/blog/2017/11/04/rpc-framework.html#fb_comment"><span class="fb-comments-count" data-href="https://stalk-calvin.github.io/blog/2017/11/04/rpc-framework.html"></span> Comments</a>
+              <a href="/blog/2017/11/19/lazy-evaluation.html#fb_comment"><span class="fb-comments-count" data-href="https://stalk-calvin.github.io/blog/2017/11/19/lazy-evaluation.html"></span> Comments</a>
               <br />
               
-                <a class="tag" href="/tags/#rpc">#rpc</a>
+                <a class="tag" href="/tags/#lazy">#lazy</a>
               
-                <a class="tag" href="/tags/#framework">#framework</a>
+                <a class="tag" href="/tags/#evaluation">#evaluation</a>
               
-                <a class="tag" href="/tags/#remote">#remote</a>
+                <a class="tag" href="/tags/#scala">#scala</a>
               
-                <a class="tag" href="/tags/#call">#call</a>
+                <a class="tag" href="/tags/#functional">#functional</a>
               
-                <a class="tag" href="/tags/#client">#client</a>
-              
-                <a class="tag" href="/tags/#server">#server</a>
+                <a class="tag" href="/tags/#programming">#programming</a>
               
             </small>
           </h4>
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2017/11/12/git-rebase.html" class="btn" title="Rebase in Git">&laquo; Rebase in Git</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2017/10/21/binary-tree-examples.html" class="btn" title="Common Binary Trees Examples">Common Binary Trees Examples &raquo;</a>
+              <a href="https://stalk-calvin.github.io/blog/2017/11/12/git-rebase.html" class="btn" title="Rebase in Git">Rebase in Git &raquo;</a>
             
           </nav><!-- /.pagination -->
 
-          
-<table class="image" align="center" style="margin-top:1%;text-align:center;">
-<caption class="custom" align="bottom">UNDERSTAND!?</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/rpc_framework/speak.jpg" alt="UNDERSTAND!?" /></td></tr>
-</table>
+          <p>I recently came across some <a href="https://en.wikipedia.org/wiki/Lazy_evaluation">lazy evaluations</a> while I was working on the Scala code which is an opposite idea of <a href="https://en.wikipedia.org/wiki/Eager_evaluation">eager evaluation</a> (<a href="https://en.wikipedia.org/wiki/Strict_programming_language">strict programming language</a>). Eager evaluation (or strict programming language) runs an expression immediately as the code is being executed whereas lazy evaluation would postpone the computation until we absolutely have to execute it. Lazy evaluation can really be beneficial which can save the computation time by folds (we can avoid it from even running at all). The word “Lazy” isn’t really appropriate. I think the better name would be “Efficient”.</p>
 
-<p>RPC calls are probably the most important piece of work that API developers should know. First, we need to know what RPC is. <a href="https://en.wikipedia.org/wiki/Remote_procedure_call">Remote Procedure Call (RPC)</a> is essentially a procedure (providing micro-services) initiated from a computer that executes typically on another server which behaves like the code is executed on your localhost over typically <a href="http://www.ietf.org/rfc/rfc2616.txt">HTTP application-level protocol</a>. “RPC framework” is basically a framework to generate these remote calls conveniently, efficiently, and portable (via different languages) without having to generate these manually with your choices over different transports (Sockets, HTTP, streams, etc), protocols (JSON, binary, compact, etc), and layers (prioritization, efficient compression, etc). There are obviously many of the great RPC frameworks available out there. I just like to go over the ones I have experienced implementing in the industry.</p>
+<p>In a pure functional programming language like “Haskell”, the language is born lazy (non-strict). So the language evaluates and automatically decide to execute an expression or not. Since Scala is <strong>not</strong> a pure functional programming language (for being closely tied to JVM), evaluation is <strong>eager</strong> (strict) by default. Therefore, Scala evaluates expressions as soon as they are available. However, with Scala, there is an option to declare a variable non-strict (“lazy”) way with the <strong>“lazy”</strong> keyword, meaning the evaluation happens when required.</p>
 
-<h3 id="soap-and-rest">SOAP and REST</h3>
+<p style="margin-bottom:1%">Here is an comparison example of using the keyword “lazy” vs not. Let’s first take a look at an example without the lazyness:</p>
 
-<table class="image" align="center" style="margin-top:1%;text-align:center;">
-<caption class="custom" align="bottom">SOAP and RESTful, Venn diagram</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/rpc_framework/soap_rest.png" alt="SOAP and RESTful, Venn diagram" /></td></tr>
-</table>
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">printHi</span><span class="o">()</span><span class="k">:</span><span class="kt">Boolean</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">println</span><span class="o">(</span><span class="s">"Hello"</span><span class="o">)</span>
+    <span class="kc">true</span>
+<span class="o">}</span>
+<span class="k">val</span> <span class="n">result</span> <span class="k">=</span> <span class="n">printHi</span>
+<span class="k">if</span> <span class="o">(</span><span class="kc">false</span> <span class="o">&amp;&amp;</span> <span class="n">result</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">println</span><span class="o">(</span><span class="s">"yes"</span><span class="o">)</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">println</span><span class="o">(</span><span class="s">"no"</span><span class="o">)</span>
+<span class="o">}</span></code></pre></figure>
 
-<p>The SOAP/WSDL and the Restful representation is probably most commonly used method of communication between applications over the World Wide Web (WWW). They are <strong>not</strong> mutually exclusive. REST can be applied to use SOAP services instead of HTTP (per se). Anyways, There are obviously significant differences between them. SOAP is pretty common even nowadays which defines standard communication rules specified in the XML-based message exchange. WSDL defines the format of XML for the requests/responses. SOAP is usually done in HTTP application protocol which can be utilized in different transport protocols such as SMTP. To implement SOAP services, I would recommend using the “<a href="https://spring.io/guides/gs/producing-web-service/">Spring-WS</a>” which in my opinion, provides an intuitive way to create the SOAP web service through annotations and various dependencies. On the other hand, REST is more of a set of principles to follow (concept) than defining a standard message format like SOAP. Remember, SOAP is a <strong><em>protocol</em></strong> where REST is more of an <strong><em>architectural style</em></strong>. Unlike SOAP which is operated in XML, RESTful can be applied with pretty much any formats (plain text, HTML, XML, JSON, even binaries if you need), although JSON is a popular format for REST.</p>
+<p style="margin-bottom:1%">Output:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>Hello
+no
+</code></pre>
+</div>
 
-<p>At the end of days, the choices are yours. From my experiences, I’d like to utilize REST when it interacts with a browser (serving like a front-end web application). Utilize SOAP on services that do not necessarily interact with a browser and require strict rules for their use. With the browser, it comes with added benefits such as caching, security, etc.</p>
+<p>To explain a bit on the execution flow, it first executes the printHi function and prints “Hello” then stores the return value (“true”) to the result variable. It then executes the next line by calling, “if (false &amp;&amp; result) {“. It then sees the “false” immediately then prints “no” in the else block.</p>
 
-<h3 id="apache-thrift">Apache Thrift</h3>
+<p style="margin-bottom:1%">You can see immediately that we didn’t really need to execute “printHi” function at all. What if this “printHi” function was really expensive to run (say it runs for a few seconds)? Then everytime when this line of code is executed, we will need to execute this function. We are basically running the function inconsequentially. In Scala, we can use the “lazy” keyword for this situation. Let’s try to do the same thing as above but by giving an explicit “lazy” keyword to the result variable:</p>
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">printHi</span><span class="o">()</span><span class="k">:</span><span class="kt">Boolean</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">println</span><span class="o">(</span><span class="s">"Hello"</span><span class="o">)</span>
+    <span class="kc">true</span>
+<span class="o">}</span>
+<span class="k">lazy</span> <span class="k">val</span> <span class="n">result</span> <span class="k">=</span> <span class="n">printHi</span>
+<span class="k">if</span> <span class="o">(</span><span class="kc" style="color:red;">false</span> <span class="o">&amp;&amp;</span> <span class="n">result</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">println</span><span class="o">(</span><span class="s">"yes"</span><span class="o">)</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">println</span><span class="o">(</span><span class="s">"no"</span><span class="o">)</span>
+<span class="o">}</span></code></pre></figure>
+<p style="margin-bottom:1%">Output:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>no
+</code></pre>
+</div>
 
-<table class="image" align="center" style="margin-top:1%;text-align:center;">
-<caption class="custom" align="bottom">Performance comparison between SOAP/REST/Thrift</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/rpc_framework/perf_comparison.png" alt="Performance comparison between SOAP/REST/Thrift" /></td></tr>
-</table>
+<p>When you execute the code above, the result variable gets identified as a lazy variable. When the if statement is executed, it doesn’t even run the result as if statement sees the false right away. Then the code eventually prints “no”. You can see from the output, it doesn’t actually print “Hello” this time as it was never executed.</p>
 
-<p>Initially developed by Facebook for “scalable cross-language services”, it is now an open source project in the Apache Software Foundation. When I first used their generated code, I was mesmerized by how the code is utilized conveniently for me to use, which is just based on the Thrift <a href="https://thrift.apache.org/docs/idl">interface definition</a> I created. It was pretty easy to apply generated code to create a server or client. Here is a <a href="https://github.com/ExampleDriven/thrift-example">link</a> where you can take a look at some examples of Thrift in Java. It is fairly well organized and well laid out. One of the strong points of Thrift is that it is available for many languages so functions are run fairly seamlessly between different languages. Another strong point would be how it handles/communicates data between services by utilizing binary serialization to transfer data in a compact form quickly and efficiently.</p>
+<p style="margin-bottom:1%">Using the explicit “false” in the first condition of the if statement is used just for the illustration. It could may well be a condition that results in false most of the time. Even when the first condition generates true most of the time, as long as there is a chance of it generating false, lazy is probably is a better choice. Now you might ask, does this “lazy” code even get executed when its necessary? of course. Let’s tweak our code by making the first part of the if statement to “true” instead of “false”:</p>
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">printHi</span><span class="o">()</span><span class="k">:</span><span class="kt">Boolean</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">println</span><span class="o">(</span><span class="s">"Hello"</span><span class="o">)</span>
+    <span class="kc">true</span>
+<span class="o">}</span>
+<span class="k">lazy</span> <span class="k">val</span> <span class="n">result</span> <span class="k">=</span> <span class="n">printHi</span>
+<span class="k">if</span> <span class="o">(</span><span class="kc" style="color:red">true</span> <span class="o">&amp;&amp;</span> <span class="n">result</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">println</span><span class="o">(</span><span class="s">"yes"</span><span class="o">)</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">println</span><span class="o">(</span><span class="s">"no"</span><span class="o">)</span>
+<span class="o">}</span></code></pre></figure>
+<p style="margin-bottom:1%">Output:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>Hello
+yes
+</code></pre>
+</div>
 
-<h3 id="zeroc-ice">ZeroC ICE</h3>
+<p>Let’s, once again, walk through the execution. First, we hit the “lazy” keyword and set aside executing the result variable. When we hit the if statement, it sees the “true” and tries to execute the “result” which is declared as “lazy” and will eventually execute the “printHi” function (printing “Hello”), then it prints “yes” as it enters the if block. So the runner basically postponed the computation until we absolutely had to execute it.</p>
 
-<table class="image" align="center" style="margin-top:1%;text-align:center;">
-<caption class="custom" align="bottom">Client and Server Structure - Ice 3.6</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/rpc_framework/zeroc_ice.gif" alt="Client and Server Structure - Ice 3.6" /></td></tr>
-</table>
+<p>In Scala, there are other ways to be lazy than to use the actual keyword “lazy”. First of all, in Scala, lambda is just by default is “lazy”. When you pass in a function as a parameter, it will not be executed until it is required in the code.</p>
 
-<p>Internet Communications Engine (ICE) is an open source RPC framework initially developed by ZeroC. ZeroC is supported in various languages like Thrift. However, I personally find it very convenient use for ‘Python’ language. Ice provides a useful function called ‘loadSlice’ where I can load ice objects dynamically. When a program calls the Ice.loadSlice function, the code is generated from Slice definitions dynamically at runtime. Dynamic code generation slightly increases program start-up time but eliminates the need to generate and manage additional Python source files. For C++ or Java, you are stuck with static code generation statically, <a href="https://doc.zeroc.com/pages/viewpage.action?pageId=18255322">slice2cpp</a> or <a href="https://doc.zeroc.com/display/Ice37/slice2java+Command-Line+Options">slice2java</a>. Python also offers a code generation statically through <a href="https://doc.zeroc.com/display/Ice37/Code+Generation+in+Python#CodeGenerationinPython-StaticCodeGenerationinPython">slice2py</a>. I have not experienced a case where I had to statically load in Python. However, dynamic loading does take longer to generate ice code versus static loading (where the code is already generated). So choose wisely!</p>
+<p style="margin-bottom:1%">Second of all, there are non-strict collections aka lazy collections (such as the type “Stream”, a non-strict linked list) to be explicit. In Scala, any collection can be made non-strict with the “view” method. Here is an example which doesn’t use the “view” method:</p>
 
-<p>Similar to .thrift file for Thrift interface definition (IDL), ICE provides .slice file instead which is a ZeroC-proprietary file format that programmers follow to edit computer-language independent declarations and definitions of classes, interfaces, structures, and enumerations. ZeroC considers the <a href="https://doc.zeroc.com/display/Ice37/The+Slice+Language">“Slice”</a> as the language and they have a good documentation around it.</p>
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">val</span> <span class="n">student</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span>
+<span class="o">(</span><span class="s">"Joe"</span><span class="o">,</span> <span class="mi">87</span><span class="o">),</span>
+<span class="o">(</span><span class="s">"Bob"</span><span class="o">,</span> <span class="mi">91</span><span class="o">),</span>
+<span class="o">(</span><span class="s">"Frank"</span><span class="o">,</span> <span class="mi">60</span><span class="o">),</span>
+<span class="o">(</span><span class="s">"Saram"</span><span class="o">,</span> <span class="mi">95</span><span class="o">),</span>
+<span class="o">...</span> <span class="n">then</span> <span class="n">say</span> <span class="n">we</span> <span class="n">have</span> <span class="n">around</span> <span class="mi">100</span> <span class="n">tuples</span>
+<span class="o">)</span>
 
-<h3 id="grpc">GRPC</h3>
+<span class="k">def</span> <span class="n">gradeHigherThan90</span><span class="o">(</span><span class="n">person</span><span class="k">:</span> <span class="o">(</span><span class="kt">String</span><span class="o">,</span> <span class="kt">Int</span><span class="o">))</span> <span class="k">=</span> <span class="o">{</span>
+   <span class="n">println</span><span class="o">(</span><span class="n">s</span><span class="s">"Higher than 90 for $person"</span><span class="o">)</span>
+   <span class="n">person</span><span class="o">.</span><span class="n">_2</span> <span class="o">&gt;</span> <span class="mi">90</span>
+<span class="o">}</span>
 
-<table class="image" align="center" style="margin-top:1%;text-align:center;">
-<caption class="custom" align="bottom">Communication between a gRPC server and a client application</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/rpc_framework/grpc.jpeg" alt="Communication between a gRPC server and a client application" /></td></tr>
-</table>
+<span class="k">def</span> <span class="n">nameMatchingLetterCount</span><span class="o">(</span><span class="n">person</span><span class="k">:</span> <span class="o">(</span><span class="kt">String</span><span class="o">,</span> <span class="kt">Int</span><span class="o">),</span> <span class="n">len</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+   <span class="n">println</span><span class="o">(</span><span class="n">s</span><span class="s">"Letter has $len for $person"</span><span class="o">)</span>
+   <span class="n">person</span><span class="o">.</span><span class="n">_1</span><span class="o">.</span><span class="n">length</span> <span class="o">==</span> <span class="n">len</span>
+<span class="o">}</span>
 
-<p>gRPC is a modern, lightweight RPC framework provided by Google. It enables client and server applications to communicate transparently and makes it easier to build connected systems. gRPC uses HTTP/2 for transport (see <a href="http://www.http2demo.io/">demo</a> of http2 vs http/1.1) which utilizes the serialization through the “protocol buffers” (by providing IDLs similar to Thrift or Ice). It provides some key features as bidirectional streaming, flow-control, blocking or nonblocking bindings, which allows you to build services with both synchronous and asynchronous communication model. Fundamentally, Protocol Buffers serves message interchange format, as well as describing the service interfaces (service endpoints) then we have added RPC features which together builds the RPC framework of gRPC.</p>
+<span class="n">println</span><span class="o">(</span><span class="n">student</span><span class="o">.</span><span class="n">filter</span><span class="o">(</span><span class="n">gradeHigherThan90</span><span class="o">).</span><span class="n">filter</span><span class="o">(</span><span class="n">nameMatchingLetterCount</span><span class="o">(</span><span class="k">_</span><span class="o">,</span> <span class="mi">5</span><span class="o">)).</span><span class="n">head</span><span class="o">)</span></code></pre></figure>
 
+<p style="margin-bottom:1%">Output:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>Higher than 90 for (Sarah,91)
+Higher than 90 for (Joe,80)
+Higher than 90 for (Frank,60)
+... all the elements in the List (which has higher than 90)
+Letter has 5 for (Sarah,91)
+Letter has 5 for (Calvin,100)
+... people who has 5 letters from the 90s group above
+(Saram,95) ... we select the first out of the result (head)
+Elapsed time: 1304887ns
+</code></pre>
+</div>
+
+<p style="margin-bottom:1%">By the way, I have added a timer to our code just to compare between the executions. As you can see, the code is basically iterating through all the elements in student list (of tuples) which could have millions of data (in extreme cases). It is an overkill, just to find that first person with the higher grade than 90 then search for name containing 5 letters then find the one filters to both. This is where “view” method comes handy. “view” method produces a lazy collection. You can tweak the print statement like this: “println(student.<strong>view</strong>.filter(gradeHigherThan90).filter(nameMatchingLetterCount(_, 5)).head)”. Then this will produce the output like this:</p>
+<p style="margin-bottom:1%">Output:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>Higher than 90 for (Joe,87)
+Higher than 90 for (Bob,91)
+Letter has 5 for (Bob,91)
+Higher than 90 for (Frank,60)
+Higher than 90 for (Saram,95)
+Letter has 5 for (Saram,95)
+(Saram,95)
+Elapsed time: 844147ns
+</code></pre>
+</div>
+
+<p>Note the execution time is a bit smaller (although it really depends on the # of executions) since the code execution is minimalized (# of executions is less for the “view”) by running whatever is necessary. It simply didn’t iterate the entire collection. It picks the first element matching the first filter, matches with second filter. If not filtered for both, it moves onto the next item matched in the first filter then match against second filter. When both filters are met, it found the first element (head) that matched to the both filters.</p>
+
+<p>The concept of “lazy” is really useful in programming for building an efficient software, together with input size and frequency of code being executed.</p>
 
 
           
@@ -280,7 +343,7 @@
   <ul class="rrssb-buttons clearfix">
     
       <li class="rrssb-email">
-        <a href="mailto:?subject=RPC framework&body=https://stalk-calvin.github.io/blog/2017/11/04/rpc-framework.html" data-proofer-ignore>
+        <a href="mailto:?subject=Lazy evaluation in Scala&body=https://stalk-calvin.github.io/blog/2017/11/19/lazy-evaluation.html" data-proofer-ignore>
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
               <path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"
@@ -292,7 +355,7 @@
     
     
       <li class="rrssb-facebook">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2017/11/04/rpc-framework.html&title=RPC framework" class="popup">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2017/11/19/lazy-evaluation.html&title=Lazy evaluation in Scala" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="29" height="29" viewBox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z"
               class="cls-2" fill-rule="evenodd"/></svg>
@@ -302,7 +365,7 @@
     
     
       <li class="rrssb-twitter">
-        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2017/11/04/rpc-framework.html&text=RPC framework"
+        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2017/11/19/lazy-evaluation.html&text=Lazy evaluation in Scala"
         class="popup">
           <span class="rrssb-icon"><svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><path d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62c-3.122.162-6.22-.646-8.86-2.32 2.702.18 5.375-.648 7.507-2.32-2.072-.248-3.818-1.662-4.49-3.64.802.13 1.62.077 2.4-.154-2.482-.466-4.312-2.586-4.412-5.11.688.276 1.426.408 2.168.387-2.135-1.65-2.73-4.62-1.394-6.965C5.574 7.816 9.54 9.84 13.802 10.07c-.842-2.738.694-5.64 3.434-6.48 2.018-.624 4.212.043 5.546 1.682 1.186-.213 2.318-.662 3.33-1.317-.386 1.256-1.248 2.312-2.4 2.942 1.048-.106 2.07-.394 3.02-.85-.458 1.182-1.343 2.15-2.48 2.71z"/></svg></span>
         </a>
@@ -310,7 +373,7 @@
     
     
       <li class="rrssb-linkedin">
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2017/11/04/rpc-framework.html" class="popup">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2017/11/19/lazy-evaluation.html" class="popup">
         <span class="rrssb-icon">
           <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
             <path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"
@@ -323,7 +386,7 @@
     
     
       <li class="rrssb-googleplus">
-        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2017/11/04/rpc-framework.html" class="popup">
+        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2017/11/19/lazy-evaluation.html" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 8.29h-1.95v2.6h-2.6v1.82h2.6v2.6H21v-2.6h2.6v-1.885H21V8.29zM7.614 10.306v2.925h3.9c-.26 1.69-1.755 2.925-3.9 2.925-2.34 0-4.29-2.016-4.29-4.354s1.885-4.353 4.29-4.353c1.104 0 2.014.326 2.794 1.105l2.08-2.08c-1.3-1.17-2.924-1.883-4.874-1.883C3.65 4.586.4 7.835.4 11.8s3.25 7.212 7.214 7.212c4.224 0 6.953-2.988 6.953-7.082 0-.52-.065-1.104-.13-1.624H7.614z"/></svg>
           </span>
@@ -357,16 +420,14 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-<div id="fb_comment" class="fb-comments" data-href="https://stalk-calvin.github.io/blog/2017/11/04/rpc-framework.html" data-numposts="5" data-width="100%" data-colorscheme="dark" data-order-by="reverse_time"></div>
+<div id="fb_comment" class="fb-comments" data-href="https://stalk-calvin.github.io/blog/2017/11/19/lazy-evaluation.html" data-numposts="5" data-width="100%" data-colorscheme="dark" data-order-by="reverse_time"></div>
 
           
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2017/11/12/git-rebase.html" class="btn" title="Rebase in Git">&laquo; Rebase in Git</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2017/10/21/binary-tree-examples.html" class="btn" title="Common Binary Trees Examples">Common Binary Trees Examples &raquo;</a>
+              <a href="https://stalk-calvin.github.io/blog/2017/11/12/git-rebase.html" class="btn" title="Rebase in Git">Rebase in Git &raquo;</a>
             
           </nav><!-- /.pagination -->
 
@@ -502,7 +563,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 <script>
 function addTohistory() {
   if (!window.location.host.startsWith("127.0.0.1")) {
-    history.pushState({}, 'RPC framework', 'https://stalk-calvin.github.io/blog/2017/11/04/rpc-framework.html');
+    history.pushState({}, 'Lazy evaluation in Scala', 'https://stalk-calvin.github.io/blog/2017/11/19/lazy-evaluation.html');
   }
 }
 </script>

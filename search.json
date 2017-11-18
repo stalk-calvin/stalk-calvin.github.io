@@ -2,8 +2,17 @@
 
   
     {
+      "title"			: "Lazy evaluation in Scala",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/11/19/lazy-evaluation.html",
+      "excerpt"		: "an important concept in functional programming",
+      "tags"        : ["lazy","evaluation","scala","functional","programming"]
+    }
+  
+
+  
+    ,{
       "title"			: "Rebase in Git",
-      "link"			: "https://stalk-calvin.github.io/blog/2017/11/04/git-rebase.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/11/12/git-rebase.html",
       "excerpt"		: "Taking version control to the next level",
       "tags"        : ["git","version","control","repository","rebase"]
     }
