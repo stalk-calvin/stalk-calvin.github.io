@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Python encapsulation",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/11/25/python-encapsulation.html",
+      "excerpt"		: "Adventures in Pythonic Way of Hiding Data",
+      "tags"        : ["python","code style","encapsulation","oop","getter","setter"]
+    }
+  
+
+  
+    ,{
       "title"			: "Lazy evaluation in Scala",
       "link"			: "https://stalk-calvin.github.io/blog/2017/11/19/lazy-evaluation.html",
       "excerpt"		: "an important concept in functional programming",
@@ -320,7 +329,7 @@
       "title"			: "What's Next?",
       "link"			: "https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html",
       "excerpt"		: "The Future of Computer Science",
-      "tags"        : ["computer","future","AI","machine","learning","IOT","industrial","revolution"]
+      "tags"        : ["computer","future","AI","machine","learning","IOT","industrial","revolution","vr","ar","cybersecurity"]
     }
   
 

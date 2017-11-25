@@ -14,7 +14,36 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sun, 19 Nov 2017 00:09:41 -0800</lastBuildDate>
+    <lastBuildDate>Sat, 25 Nov 2017 11:36:40 -0800</lastBuildDate>
+	
+		<item>
+			<title>Python encapsulation</title>
+			
+				<description>Adventures in Pythonic Way of Hiding Data</description>
+			
+        
+          <category>python</category>
+        
+          <category>code style</category>
+        
+          <category>encapsulation</category>
+        
+          <category>oop</category>
+        
+          <category>getter</category>
+        
+          <category>setter</category>
+        
+			<pubDate>25 November 2017</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/11/25/python-encapsulation.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/11/25/python-encapsulation</guid>
+		</item>
 	
 		<item>
 			<title>Lazy evaluation in Scala</title>
@@ -982,6 +1011,12 @@
           <category>industrial</category>
         
           <category>revolution</category>
+        
+          <category>vr</category>
+        
+          <category>ar</category>
+        
+          <category>cybersecurity</category>
         
 			<pubDate>24 December 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html</link>

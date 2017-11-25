@@ -24,16 +24,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The Future of Computer Science">
+  <meta name="description" content="Adventures in Pythonic Way of Hiding Data">
   <meta name="author" content="Calvin Lee">
   <meta name="keywords" content="calvin, lee, personal, blog, beer, fitness, diet, computer, science, programming, software, engineer">
   <meta property="fb:app_id" content="140805279842677" /> 
-  <meta property="og:title" content="What's Next?" />
-  <meta property="og:description" content="The Future of Computer Science" />
-  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html" />
-  <link rel="canonical" href="/blog/2016/12/24/future-of-computer-science.html">
+  <meta property="og:title" content="Python encapsulation" />
+  <meta property="og:description" content="Adventures in Pythonic Way of Hiding Data" />
+  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2017/11/25/python-encapsulation.html" />
+  <link rel="canonical" href="/blog/2017/11/25/python-encapsulation.html">
   <link rel="author" href="https://www.linkedin.com/in/stalkme">
-  <title>I am Calvin | What's Next?</title>
+  <title>I am Calvin | Python encapsulation</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -191,65 +191,141 @@
     <section id="post" class="container content-section ">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>What's Next?</strong></h1>
-          <h4 style="display:inline; color: #F4A460;"><strong>The Future of Computer Science</strong></h4><br />
+          <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>Python encapsulation</strong></h1>
+          <h4 style="display:inline; color: #F4A460;"><strong>Adventures in Pythonic Way of Hiding Data</strong></h4><br />
           <h4>
-            <strong>24 Dec 2016</strong>
+            <strong>25 Nov 2017</strong>
             <small>
-              <a href="/blog/2016/12/24/future-of-computer-science.html#fb_comment"><span class="fb-comments-count" data-href="https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html"></span> Comments</a>
+              <a href="/blog/2017/11/25/python-encapsulation.html#fb_comment"><span class="fb-comments-count" data-href="https://stalk-calvin.github.io/blog/2017/11/25/python-encapsulation.html"></span> Comments</a>
               <br />
               
-                <a class="tag" href="/tags/#computer">#computer</a>
+                <a class="tag" href="/tags/#python">#python</a>
               
-                <a class="tag" href="/tags/#future">#future</a>
+                <a class="tag" href="/tags/#code style">#code style</a>
               
-                <a class="tag" href="/tags/#AI">#AI</a>
+                <a class="tag" href="/tags/#encapsulation">#encapsulation</a>
               
-                <a class="tag" href="/tags/#machine">#machine</a>
+                <a class="tag" href="/tags/#oop">#oop</a>
               
-                <a class="tag" href="/tags/#learning">#learning</a>
+                <a class="tag" href="/tags/#getter">#getter</a>
               
-                <a class="tag" href="/tags/#IOT">#IOT</a>
-              
-                <a class="tag" href="/tags/#industrial">#industrial</a>
-              
-                <a class="tag" href="/tags/#revolution">#revolution</a>
-              
-                <a class="tag" href="/tags/#vr">#vr</a>
-              
-                <a class="tag" href="/tags/#ar">#ar</a>
-              
-                <a class="tag" href="/tags/#cybersecurity">#cybersecurity</a>
+                <a class="tag" href="/tags/#setter">#setter</a>
               
             </small>
           </h4>
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2016/12/28/fibonacci.html" class="btn" title="Fibonacci Numbers">&laquo; Fibonacci Numbers</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2016/12/17/keybase-io.html" class="btn" title="Keybase.io">Keybase.io &raquo;</a>
+              <a href="https://stalk-calvin.github.io/blog/2017/11/19/lazy-evaluation.html" class="btn" title="Lazy evaluation in Scala">Lazy evaluation in Scala &raquo;</a>
             
           </nav><!-- /.pagination -->
 
-          <p><img src="https://doowansnewsandevents.files.wordpress.com/2013/03/computer-human3.jpg" alt="brain" style="border: 0;" /></p>
+          <p>As you are probably already familiar, “encapsulation” is one of the key Object Oriented Programming concepts which restricts access to method and variables which holds the purpose of keeping implementation details hidden from other users. It is an essential concept to control the <a href="https://en.wikipedia.org/wiki/Information_hiding">information hiding</a> for keeping data safe from outside interference and misuse. Usually, in some programming languages, they are controlled using <code class="highlighter-rouge">protected</code>, <code class="highlighter-rouge">private</code> and <code class="highlighter-rouge">public</code> keywords. In Python, there aren’t those keywords available. This brings many people to believe that Python really isn’t a true OOP language which has a proper data encapsulation. I don’t necessarily agree with this though. Regardless of the existence of those keywords, Python facilitates and encourages bundling data together with methods that work on that data. If you would like to define encapsulation by the existence of these keywords/terms, then Python may probably not be a perfect OOP language. However, I believe Python does have a proper data encapsulation and I am here to elaborate on my points why I think that way.</p>
 
-<h2 id="fourth-industrial-revolution">Fourth industrial revolution</h2>
+<h2 id="pythons-private-protected-public-identifiers">Python’s Private, Protected, Public identifiers</h2>
 
-<p>I thought I would cover a story in my opinion where software developers have headed and my thoughts on this topic. So I have lived through the third industrial revolution; a massive electronics production, the internet, computers, and basic automated systems. I would like to call that we are living through a fourth industrial revolution now. The items are covered below and discussed in detail.</p>
+<h4 id="1-private"><strong><em>1. Private</em></strong>:</h4>
 
-<h3 id="ai--big-data--machine-learning">AI / Big Data / Machine Learning</h3>
+<p style="margin-bottom:1%">In Python, methods or variables can be handled privately which could be useful on occasions where you would like to hide the implementation for its own class. Those private attributes are changeable within its own class method and not outside of the class. Objects can hold important/sensitive data for your application and you do not want that data to be changeable from anywhere outside the class because as an author of the class, you would know the most about the data and methods in that class. In Python, you can use private attributes by assigning a method or variable with <code class="highlighter-rouge">__</code> prefix (aka “dunder”). Here is an example:</p>
 
-<p>It’s hard to stay away from the word, <code class="highlighter-rouge">Artificial Intelligence</code>, these days, especially on tech talks. Artificial intelligence (AI) is the overall field of working to create machines that carry out tasks in a way that humans think of as smart. The field has been around for a long time although people had not had the clear vision of how AI will play its role in the future. AI cannot be discussed without Big data, Machine Learning, Deep Learning. Machine/Deep learning is a subset of AI that provides computers with the ability to learn without programming them for a specific task. Essentially the Learning involves feeding a computer system with a lot of data (big data), which it can use to make decisions about the certain task. This data is then fed through neural networks, as is the case in machine learning. These networks – logical constructions which ask a series of binary true/false questions, or extract a numerical value, of every bit of data which pass through them, and classify it according to the answers received. Because this <code class="highlighter-rouge">Learning</code> work is focused on developing these networks, they become what are known as Deep Neural Networks – logic networks of the complexity needed to deal with classifying datasets as large as, say, Google’s image library, or Twitter’s firehose of tweets. <a href="https://en.wikipedia.org/wiki/AlphaGo">AlphaGo</a> is a great example of Machine/Deep learning. AlphaGo is a computer program that calculates the move in the game of <code class="highlighter-rouge">Go</code>. March 2016 was a memorable day in AI history. A computer program beating down Lee Sedol (A Korean 9-dan Go Player) without any handicap. It is remarkable as previous attempts all failed. I was excited about the game a couple of days before the match. With the matches, I saw Lee’s frowned faces throughout the game. It was a good game. AlphaGo works by gathering massive data and calculates based on the data where would be the next move. There are <a href="https://en.wikipedia.org/wiki/Go_and_mathematics">millions of possibilities</a> of where the next move reside in the game of Go. It is truly amazing that a program which is beating a human brain.</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__a</span> <span class="o">=</span> <span class="mi">123</span> 
 
-<h3 id="iot--vr--ar">IoT / VR / AR</h3>
+<span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="p">()</span></code></pre></figure>
 
-<p>You probably heard of the word IoT (Internet of Things). From what I see, IoT could have following traits: sensors, wifi, processing power, big data and mobile devices. Using certain sensors, it can behave in a certain way. You can extend it to have wifi+data processing+mobile devices to do other <code class="highlighter-rouge">smart</code> things. Let’s take a look at a real life example. Think about a smart key to your car. You do not require the key to unlock the car. You just need to be nearby the car with the key and car door unlocks. A little more advanced IoT could be a dashboard at home acting like your personal secretary to tell you about the weather, appointments, advice on what you should do based on some historical data. It could well be combined into a Home Care system which lets you check the status of the front door using mobile devices outside then you can control it to lock and unlock from a mobile device. Let’s think about another example. There can be an application which is shared between households that list items running out at home such as toothpaste, hot sauce, laundry detergent etc. Then whoever that has an access to the application can simply go through the items and buy things that are needed. VR is another hot topic these days. VR is similar to IoT but does not necessarily have to have <code class="highlighter-rouge">smart</code> feature built into VR. VR which stands for Virtual Reality which comes in goggles or a helmet which generate realistic images, sounds and other sensations that replicate a real environment. VR is normally connected to a device for you to behave with some sort of screen on your eyes. VR is sharing quite number of traits with AR (Augmented Reality). AR is when you use entire body to act like you are playing a game instead of creating that reality on a device. I hope this summed up the good chunk of IoT, VR, and AR. I believe these items have a huge opportunity in the future. I just see an infinite number of items that can be turned into an IoT.</p>
+<p style="margin-bottom:1%">In above example, the variable <code class="highlighter-rouge">__a</code> will not be accessible as an instance/class variable. When you try to run whats inside <code class="highlighter-rouge">c.__a</code>, you will encounter an error saying, <code class="highlighter-rouge">class C has no attribute '__c'</code>. What exactly is going on? Python basically does a little mangling on the name. It updates the <code class="highlighter-rouge">__a</code> variable to <code class="highlighter-rouge">_Myclass__a</code>, which in this example, <code class="highlighter-rouge">_C__a</code>. So if you execute <code class="highlighter-rouge">c._C__a</code> instead, you will be getting “123” as the output. However, accessing directly to that variable is really discouraged and should not be used to tinker with. Think about when the class name changes to something else. You will be a nightmare trying to fix all the codes written this way. Simply, just handle it privately like any other language. However, there may be a case where you might need to read or update this variable from outside of the class. If so, introduce an accessor/mutator(getter/setter) instead, like this:</p>
 
-<h3 id="cybersecurity">Cybersecurity</h3>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">getA</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__a</span>
+<span class="k">def</span> <span class="nf">setA</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">newA</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">__a</span> <span class="o">=</span> <span class="n">newA</span></code></pre></figure>
 
-<p>I covered this topic because as technology evolves the security in cyberspace has to be growing. There had been numerous exploits with the newer technology as they are being produced. It will be more difficult to protect the data as the more data are being made. Either it is for gathering a large amount of data to IoT devices, we will be dealing with securing them. The importance of securing them will turn into the next priority of our IT. I used the word cyber instead of the computer because we are not limited to just securing computer anymore. We are responsible for securing the computers plus everything being transferred between computers. The jobs required in this area will only increase in the future.</p>
+<p>Although we will go into details on the Pythonic getters/setters later, as a general programming guideline, you can use the getter/setter to get/set the private variable if you really need to tinker with the private variable in your application. Some people may argue that using the double underscores, <code class="highlighter-rouge">__</code>, isn’t a true form of handling the private feature. However, regardless of how Python mangles the variable prefixed with a double underscore, that really is an implementation detail that developers don’t really require to worry about. It is important to know and understand why and how it is acting behind the scene, but not so important that you should worry/sweat about whether it will work the way it should.</p>
+
+<h4 id="2-protected"><strong><em>2. Protected:</em></strong></h4>
+
+<p style="padding-left: 30px;"><em>"Some people teach that _x is Python's equivalent of protected, and __x its equivalent of private, but that's very misleading."</em></p>
+<p>Although you probably won’t use protected identifiers very often even if it’s available, Python’s “protected” identifiers are handled really by the “convention”. Python doesn’t have a dedicated keyword to handle the protected behaviour between the classes (inheritance). Normally, by the convention, you would add a prefix of an underscore, <code class="highlighter-rouge">_</code>, to denote protected identifier. It’s important to keep in mind that <strong><em>the single underscore has only a conventional meaning in Python</em></strong>. Python’s <code class="highlighter-rouge">_</code> doesn’t actually stop you from accessing the attribute from outside, it just discourages you. You do not need to follow this convention, you can simply use it to denote that this identifier with the underscore prefix is to be used cautiously aka “<strong>use with caution</strong>”. The convention is really up to those groups writing the software. Commonly though, a leading underscore in Python is used as an indicate that something is internal, and not a part of the API, and use it on your own risk type of thing which doesn’t necessarily mean the variables/methods is “protected”.</p>
+
+<h4 id="3-public"><strong><em>3. Public:</em></strong></h4>
+
+<p>Almost all variables and methods that you’ve seen so far (with the exception of the constructors and identifiers which has above underscores) are probably the public ones. Public identifiers can be accessed/modified from anywhere whether its inside or outside of the class. To create a public variable or method, it’s quite simple. “Don’t use any underscore” to define things.</p>
+
+<p style="margin-bottom:1%">Below is a table which summarizes what each private, protected, private means in Python:</p>
+
+<table class="mbtablestyle" style="margin-bottom:3%">
+  <thead>
+    <tr>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: center">Accessibility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">public</td>
+      <td style="text-align: center">Accessible from anywhere</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">protected</td>
+      <td style="text-align: center">Like a public member, but they shouldn’t be directly accessed from outside.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">private method</td>
+      <td style="text-align: center">Accessible only in their own class. starts with two underscores</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">private variable</td>
+      <td style="text-align: center">Accessible only in their own class or by a method if defined. starts with two underscores</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="getters-and-setters">Getters and Setters</h2>
+
+<p>People would typically say that “The Pythonic way is to not use getter/setter” or “Python is not Java, don’t use getter/setter”. Well, they are not entirely wrong. Python code strives to adhere to the <a href="https://en.wikipedia.org/wiki/Uniform_access_principle">Uniform Access Principle</a>. Specifically, the accepted approach says:</p>
+
+<ol style="padding-left: 1.5em;list-style: decimal; margin: 0;">
+<li style="padding-bottom: 1em;">It is acceptable to simply access class or object members directly. <br />Allow, for instance, foo.x = 0, not foo.set_x(0)<br /><br />
+<span style="margin-left: 0em;margin-right: 0;display: inline-block;">
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Square</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">Square</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+<span class="n">foo</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">6</span></code></pre></figure>
+</span></li>
+<li style="padding-bottom: 1em;">If you need to wrap the accesses inside methods, <strong>for a possible reason described below<span style="color:red">*</span></strong>, use @property decorator (annotation), which preserves the access semantics. That is, foo.x = 0 now invokes foo.set_x(0).<br /><br />
+<span style="margin-left: 0em;margin-right: 0;display: inline-block;">
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__x</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">x</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""I'm the 'x' property."""</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__x</span>
+
+    <span class="nd">@x.setter</span>
+    <span class="k">def</span> <span class="nf">x</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__x</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@x.deleter</span>
+    <span class="k">def</span> <span class="nf">x</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">__x</span></code></pre></figure>
+In order to use these methods, you can first create an instance, for example, <code class="highlighter-rouge">foo</code> then you can access the "x" by calling foo.x, you can set a value using foo.x = 0 or you can delete the variable by del(foo.x) to see the value is gone.
+</span></li>
+</ol>
+
+<p style="margin-bottom:1%"><span style="color:red; font-weight: bold;">*</span> I would like to elaborate on the case where the getter/setter is probably required. It is an important to remember getter/setter is required in some cases. Remember the setter example I gave above? What if we are putting in a condition for setting the value of the private variable?</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">setA</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">newA</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">newA</span> <span class="o">&gt;</span> <span class="n">CONSTANT</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__a</span> <span class="o">=</span> <span class="n">newA</span></code></pre></figure>
+
+<p>This ensures our private variable is set only when the new value is greater than the CONSTANT value. We have the control of how the variable will be set depending on the requirement. Being able to control the getting/setting is where the “<strong>data encapsulation</strong>” really kicks in. We are essentially protecting the private <code class="highlighter-rouge">__a</code> variable by allowing the user to update this private variable on the conditions abided by the rules we created.</p>
 
 
           
@@ -259,7 +335,7 @@
   <ul class="rrssb-buttons clearfix">
     
       <li class="rrssb-email">
-        <a href="mailto:?subject=What's Next?&body=https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html" data-proofer-ignore>
+        <a href="mailto:?subject=Python encapsulation&body=https://stalk-calvin.github.io/blog/2017/11/25/python-encapsulation.html" data-proofer-ignore>
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
               <path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"
@@ -271,7 +347,7 @@
     
     
       <li class="rrssb-facebook">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html&title=What's Next?" class="popup">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2017/11/25/python-encapsulation.html&title=Python encapsulation" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="29" height="29" viewBox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z"
               class="cls-2" fill-rule="evenodd"/></svg>
@@ -281,7 +357,7 @@
     
     
       <li class="rrssb-twitter">
-        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html&text=What's Next?"
+        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2017/11/25/python-encapsulation.html&text=Python encapsulation"
         class="popup">
           <span class="rrssb-icon"><svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><path d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62c-3.122.162-6.22-.646-8.86-2.32 2.702.18 5.375-.648 7.507-2.32-2.072-.248-3.818-1.662-4.49-3.64.802.13 1.62.077 2.4-.154-2.482-.466-4.312-2.586-4.412-5.11.688.276 1.426.408 2.168.387-2.135-1.65-2.73-4.62-1.394-6.965C5.574 7.816 9.54 9.84 13.802 10.07c-.842-2.738.694-5.64 3.434-6.48 2.018-.624 4.212.043 5.546 1.682 1.186-.213 2.318-.662 3.33-1.317-.386 1.256-1.248 2.312-2.4 2.942 1.048-.106 2.07-.394 3.02-.85-.458 1.182-1.343 2.15-2.48 2.71z"/></svg></span>
         </a>
@@ -289,7 +365,7 @@
     
     
       <li class="rrssb-linkedin">
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html" class="popup">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2017/11/25/python-encapsulation.html" class="popup">
         <span class="rrssb-icon">
           <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
             <path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"
@@ -302,7 +378,7 @@
     
     
       <li class="rrssb-googleplus">
-        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html" class="popup">
+        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2017/11/25/python-encapsulation.html" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 8.29h-1.95v2.6h-2.6v1.82h2.6v2.6H21v-2.6h2.6v-1.885H21V8.29zM7.614 10.306v2.925h3.9c-.26 1.69-1.755 2.925-3.9 2.925-2.34 0-4.29-2.016-4.29-4.354s1.885-4.353 4.29-4.353c1.104 0 2.014.326 2.794 1.105l2.08-2.08c-1.3-1.17-2.924-1.883-4.874-1.883C3.65 4.586.4 7.835.4 11.8s3.25 7.212 7.214 7.212c4.224 0 6.953-2.988 6.953-7.082 0-.52-.065-1.104-.13-1.624H7.614z"/></svg>
           </span>
@@ -336,16 +412,14 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-<div id="fb_comment" class="fb-comments" data-href="https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html" data-numposts="5" data-width="100%" data-colorscheme="dark" data-order-by="reverse_time"></div>
+<div id="fb_comment" class="fb-comments" data-href="https://stalk-calvin.github.io/blog/2017/11/25/python-encapsulation.html" data-numposts="5" data-width="100%" data-colorscheme="dark" data-order-by="reverse_time"></div>
 
           
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2016/12/28/fibonacci.html" class="btn" title="Fibonacci Numbers">&laquo; Fibonacci Numbers</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2016/12/17/keybase-io.html" class="btn" title="Keybase.io">Keybase.io &raquo;</a>
+              <a href="https://stalk-calvin.github.io/blog/2017/11/19/lazy-evaluation.html" class="btn" title="Lazy evaluation in Scala">Lazy evaluation in Scala &raquo;</a>
             
           </nav><!-- /.pagination -->
 
@@ -481,7 +555,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 <script>
 function addTohistory() {
   if (!window.location.host.startsWith("127.0.0.1")) {
-    history.pushState({}, 'What's Next?', 'https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html');
+    history.pushState({}, 'Python encapsulation', 'https://stalk-calvin.github.io/blog/2017/11/25/python-encapsulation.html');
   }
 }
 </script>
