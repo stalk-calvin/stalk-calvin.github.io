@@ -14,7 +14,44 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 25 Nov 2017 11:36:40 -0800</lastBuildDate>
+    <lastBuildDate>Sat, 09 Dec 2017 13:52:37 -0800</lastBuildDate>
+	
+		<item>
+			<title>Spring Framework</title>
+			
+				<description>Framework for Java-based enterprise applications</description>
+			
+        
+          <category>spring</category>
+        
+          <category>framework</category>
+        
+          <category>enterprise</category>
+        
+          <category>dependency</category>
+        
+          <category>injection</category>
+        
+          <category>web</category>
+        
+          <category>data</category>
+        
+          <category>transaction</category>
+        
+          <category>computer</category>
+        
+          <category>programming</category>
+        
+			<pubDate>09 December 2017</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2017/12/09/spring-framework.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2017/12/09/spring-framework</guid>
+		</item>
 	
 		<item>
 			<title>Python encapsulation</title>

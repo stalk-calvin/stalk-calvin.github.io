@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Spring Framework",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/12/09/spring-framework.html",
+      "excerpt"		: "Framework for Java-based enterprise applications",
+      "tags"        : ["spring","framework","enterprise","dependency","injection","web","data","transaction","computer","programming"]
+    }
+  
+
+  
+    ,{
       "title"			: "Python encapsulation",
       "link"			: "https://stalk-calvin.github.io/blog/2017/11/25/python-encapsulation.html",
       "excerpt"		: "Adventures in Pythonic Way of Hiding Data",
