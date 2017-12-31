@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Korea 2017",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/12/30/korea.html",
+      "excerpt"		: "Family reunion",
+      "tags"        : ["trip","korea","family","reunion","travellog"]
+    }
+  
+
+  
+    ,{
       "title"			: "Spring Framework",
       "link"			: "https://stalk-calvin.github.io/blog/2017/12/09/spring-framework.html",
       "excerpt"		: "Framework for Java-based enterprise applications",
@@ -120,7 +129,7 @@
   
     ,{
       "title"			: "Salt Spring Island",
-      "link"			: "https://stalk-calvin.github.io/blog/2017/07/08/salt-island.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2017/07/08/salt-spring-island.html",
       "excerpt"		: "3-day travel log",
       "tags"        : ["trip","salt","spring","island","travellog"]
     }
