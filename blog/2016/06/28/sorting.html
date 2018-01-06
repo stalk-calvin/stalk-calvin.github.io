@@ -206,6 +206,28 @@
               
                 <a class="tag" href="/tags/#complexity">#complexity</a>
               
+                <a class="tag" href="/tags/#merge">#merge</a>
+              
+                <a class="tag" href="/tags/#quick">#quick</a>
+              
+                <a class="tag" href="/tags/#bubble">#bubble</a>
+              
+                <a class="tag" href="/tags/#selection">#selection</a>
+              
+                <a class="tag" href="/tags/#insertion">#insertion</a>
+              
+                <a class="tag" href="/tags/#shell">#shell</a>
+              
+                <a class="tag" href="/tags/#counting">#counting</a>
+              
+                <a class="tag" href="/tags/#bucket">#bucket</a>
+              
+                <a class="tag" href="/tags/#radix">#radix</a>
+              
+                <a class="tag" href="/tags/#tim">#tim</a>
+              
+                <a class="tag" href="/tags/#heap">#heap</a>
+              
             </small>
           </h4>
 
@@ -525,7 +547,7 @@
 
     <div class="container text-center">
       <p>Copyright © Calvin Lee</p>
-      <p>2016 - 2017</p>
+      <p>2016 - 2018</p>
     </div>
     <p><br><br><br></p>
 </footer>
@@ -556,22 +578,16 @@ $('.collapse').collapse('hide');
 </script> 
 <script type="text/javascript">
 $(document).ready(function() {
-    $(document).on("click","#archive_year_2017",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
-  $(document).on("click",".archive_month_2017",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
-  $(document).on("click","#archive_year_2016",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
-  $(document).on("click",".archive_month_2016",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
+  for (i = 2016; i <= 2018; i++) {
+     $(document).on("click","#archive_year_"+i,function() {
+         $(this).parent().children("li").toggle();
+         togglePointer($(this));
+     });
+     $(document).on("click",".archive_month_"+i,function() {
+         $(this).parent().children("li").toggle();
+         togglePointer($(this));
+     });
+  }
   function togglePointer(elem) {
      if (elem.text().indexOf('►') != -1) {
         elem.text(elem.text().replace('►','▼'));

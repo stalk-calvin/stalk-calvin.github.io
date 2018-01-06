@@ -225,7 +225,7 @@
             
           </nav><!-- /.pagination -->
 
-          <p><img src="https://cdn.niftyhomestead.com/assets/images/Art/Fibronacci/hubble.jpg" alt="fibonacci" style="border:0;" /></p>
+          <p><img src="http://educateinspirechange.org/wp-content/uploads/2014/08/Fibonacci-spirals.jpg" alt="fibonacci" style="border:0;" /></p>
 
 <h2 id="what-are-fibonacci-numbers">What Are Fibonacci Numbers?</h2>
 
@@ -431,7 +431,7 @@
 
     <div class="container text-center">
       <p>Copyright &copy; Calvin Lee</p>
-      <p>2016 - 2017</p>
+      <p>2016 - 2018</p>
     </div>
     <p><br><br><br></p>
 </footer>
@@ -462,22 +462,16 @@ $('.collapse').collapse('hide');
 </script> 
 <script type="text/javascript">
 $(document).ready(function() {
-    $(document).on("click","#archive_year_2017",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
-  $(document).on("click",".archive_month_2017",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
-  $(document).on("click","#archive_year_2016",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
-  $(document).on("click",".archive_month_2016",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
+  for (i = 2016; i <= 2018; i++) {
+     $(document).on("click","#archive_year_"+i,function() {
+         $(this).parent().children("li").toggle();
+         togglePointer($(this));
+     });
+     $(document).on("click",".archive_month_"+i,function() {
+         $(this).parent().children("li").toggle();
+         togglePointer($(this));
+     });
+  }
   function togglePointer(elem) {
      if (elem.text().indexOf('►') != -1) {
         elem.text(elem.text().replace('►','▼'));

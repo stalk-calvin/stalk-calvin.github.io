@@ -223,13 +223,17 @@
             
           </nav><!-- /.pagination -->
 
-          <p>As you are probably already familiar, “encapsulation” is one of the key Object Oriented Programming concepts which restricts access to method and variables which holds the purpose of keeping implementation details hidden from other users. It is an essential concept to control the <a href="https://en.wikipedia.org/wiki/Information_hiding">information hiding</a> for keeping data safe from outside interference and misuse. Usually, in some programming languages, they are controlled using <code class="highlighter-rouge">protected</code>, <code class="highlighter-rouge">private</code> and <code class="highlighter-rouge">public</code> keywords. In Python, there aren’t those keywords available. This brings many people to believe that Python really isn’t a true OOP language which has a proper data encapsulation. I don’t necessarily agree with this though. Regardless of the existence of those keywords, Python facilitates and encourages bundling data together with methods that work on that data. If you would like to define encapsulation by the existence of these keywords/terms, then Python may probably not be a perfect OOP language. However, I believe Python does have a proper data encapsulation and I am here to elaborate on my points why I think that way.</p>
+          <p>As you are probably already familiar, “encapsulation” is one of the key Object Oriented Programming concepts which restricts access to method and variables which holds the purpose of keeping implementation details hidden from other users. It is an essential concept to control the <a href="https://en.wikipedia.org/wiki/Information_hiding">information hiding</a> for keeping data safe from outside interference and misuse. Usually, in some programming languages, they are controlled using <code class="highlighter-rouge">protected</code>, <code class="highlighter-rouge">private</code> and <code class="highlighter-rouge">public</code> keywords. In Python, there aren’t those keywords available. This brings many people to believe that Python really isn’t a true OOP language which has a proper data encapsulation. I don’t necessarily agree with this though. Regardless of the existence of those keywords, Python facilitates and encourages bundling data together with methods that work on that data.</p>
+
+<p>If you would like to define the “encapsulation” by the existence of these keywords/terms, then Python may probably not be a perfect OOP language. However, I believe Python does have a proper data encapsulation and I am here to elaborate on my points why I think that way.</p>
 
 <h2 id="pythons-private-protected-public-identifiers">Python’s Private, Protected, Public identifiers</h2>
 
 <h4 id="1-private"><strong><em>1. Private</em></strong>:</h4>
 
-<p style="margin-bottom:1%">In Python, methods or variables can be handled privately which could be useful on occasions where you would like to hide the implementation for its own class. Those private attributes are changeable within its own class method and not outside of the class. Objects can hold important/sensitive data for your application and you do not want that data to be changeable from anywhere outside the class because as an author of the class, you would know the most about the data and methods in that class. In Python, you can use private attributes by assigning a method or variable with <code class="highlighter-rouge">__</code> prefix (aka “dunder”). Here is an example:</p>
+<p>In Python, methods or variables can be handled privately which could be useful to hide the implementation to protect its own class. Those private attributes then are modifiable within its own class method and not outside of the class. Objects can hold important/sensitive data for your application and you do not want that data to be tinkered from anywhere outside the class because as an author of the class, you would know the most about the data and methods in that class that you determined its best to not let others alter the value/function. In Python, you can use private attributes by assigning a method or variable with <code class="highlighter-rouge">__</code> prefix (aka “dunder”).</p>
+
+<p style="margin-bottom:1%">Let’s take a look at an example:</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -237,14 +241,16 @@
 
 <span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="p">()</span></code></pre></figure>
 
-<p style="margin-bottom:1%">In above example, the variable <code class="highlighter-rouge">__a</code> will not be accessible as an instance/class variable. When you try to run whats inside <code class="highlighter-rouge">c.__a</code>, you will encounter an error saying, <code class="highlighter-rouge">class C has no attribute '__c'</code>. What exactly is going on? Python basically does a little mangling on the name. It updates the <code class="highlighter-rouge">__a</code> variable to <code class="highlighter-rouge">_Myclass__a</code>, which in this example, <code class="highlighter-rouge">_C__a</code>. So if you execute <code class="highlighter-rouge">c._C__a</code> instead, you will be getting “123” as the output. However, accessing directly to that variable is really discouraged and should not be used to tinker with. Think about when the class name changes to something else. You will be a nightmare trying to fix all the codes written this way. Simply, just handle it privately like any other language. However, there may be a case where you might need to read or update this variable from outside of the class. If so, introduce an accessor/mutator(getter/setter) instead, like this:</p>
+<p>In above example, the variable <code class="highlighter-rouge">__a</code> will not be accessible as an instance/class variable. When you try to run whats inside <code class="highlighter-rouge">c.__a</code>, you will encounter an error saying, <code class="highlighter-rouge">class C has no attribute '__c'</code>. What exactly is going on? Python basically does a little mangling on the name. It updates the <code class="highlighter-rouge">__a</code> variable to <code class="highlighter-rouge">_Myclass__a</code>, which in this example, <code class="highlighter-rouge">_C__a</code>. So if you execute <code class="highlighter-rouge">c._C__a</code> instead, you will be getting “123” as the output. However, accessing directly to that variable is really discouraged and should not be used. Think about when the class name changes to something else. You will be in a nightmare trying to fix all the codes written this way. Simply, just handle it privately like any other language.</p>
+
+<p style="margin-bottom:1%">However, there may be a case where you might need to read or update this variable from outside of the class. If so, introduce an accessor/mutator(getter/setter) instead, like this:</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">getA</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__a</span>
 <span class="k">def</span> <span class="nf">setA</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">newA</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">__a</span> <span class="o">=</span> <span class="n">newA</span></code></pre></figure>
 
-<p>Although we will go into details on the Pythonic getters/setters later, as a general programming guideline, you can use the getter/setter to get/set the private variable if you really need to tinker with the private variable in your application. Some people may argue that using the double underscores, <code class="highlighter-rouge">__</code>, isn’t a true form of handling the private feature. However, regardless of how Python mangles the variable prefixed with a double underscore, that really is an implementation detail that developers don’t really require to worry about. It is important to know and understand why and how it is acting behind the scene, but not so important that you should worry/sweat about whether it will work the way it should.</p>
+<p>Although we will go into details on the Pythonic getters/setters later, as a general programming guideline, you can use the getter/setter to get/set the private variable if you really need to fiddle with the private variable in your application. Some people may argue that using the double underscores, <code class="highlighter-rouge">__</code>, isn’t a true form of handling the private feature. However, regardless of how Python mangles the variable prefixed with a double underscore, that really is an implementation detail that developers don’t really require to worry about. It is important to know and understand why and how it is acting behind the scene, but not so important that you should worry/sweat about whether it will work the way it should.</p>
 
 <h4 id="2-protected"><strong><em>2. Protected:</em></strong></h4>
 
@@ -477,7 +483,7 @@ In order to use these methods, you can first create an instance, for example, <c
 
     <div class="container text-center">
       <p>Copyright &copy; Calvin Lee</p>
-      <p>2016 - 2017</p>
+      <p>2016 - 2018</p>
     </div>
     <p><br><br><br></p>
 </footer>
@@ -508,22 +514,16 @@ $('.collapse').collapse('hide');
 </script> 
 <script type="text/javascript">
 $(document).ready(function() {
-    $(document).on("click","#archive_year_2017",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
-  $(document).on("click",".archive_month_2017",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
-  $(document).on("click","#archive_year_2016",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
-  $(document).on("click",".archive_month_2016",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
+  for (i = 2016; i <= 2018; i++) {
+     $(document).on("click","#archive_year_"+i,function() {
+         $(this).parent().children("li").toggle();
+         togglePointer($(this));
+     });
+     $(document).on("click",".archive_month_"+i,function() {
+         $(this).parent().children("li").toggle();
+         togglePointer($(this));
+     });
+  }
   function togglePointer(elem) {
      if (elem.text().indexOf('►') != -1) {
         elem.text(elem.text().replace('►','▼'));

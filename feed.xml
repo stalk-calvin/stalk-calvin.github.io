@@ -14,7 +14,30 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 30 Dec 2017 17:40:11 -0800</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jan 2018 05:41:13 -0800</lastBuildDate>
+	
+		<item>
+			<title>The Year 2018</title>
+			
+				<description>Another happy new year!</description>
+			
+        
+          <category>newyear</category>
+        
+          <category>resolution</category>
+        
+          <category>year2018</category>
+        
+			<pubDate>06 January 2018</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2018/01/06/new-year-resolution.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2018/01/06/new-year-resolution</guid>
+		</item>
 	
 		<item>
 			<title>Korea 2017</title>
@@ -1489,6 +1512,28 @@
           <category>computer</category>
         
           <category>complexity</category>
+        
+          <category>merge</category>
+        
+          <category>quick</category>
+        
+          <category>bubble</category>
+        
+          <category>selection</category>
+        
+          <category>insertion</category>
+        
+          <category>shell</category>
+        
+          <category>counting</category>
+        
+          <category>bucket</category>
+        
+          <category>radix</category>
+        
+          <category>tim</category>
+        
+          <category>heap</category>
         
 			<pubDate>28 June 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/06/28/sorting.html</link>

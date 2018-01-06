@@ -202,6 +202,23 @@
 <!-- Post List Start -->
 
 <h4 align="left">
+  <strong>25 Sep 2016</strong>
+  <small>.
+  .</small>
+  <br class="visible-xs-block">
+  <a href="/blog/2016/09/25/new-team-new-life.html">
+    <strong>New Team New Life</strong>
+  </a>
+  <br class="visible-xs-block">
+  <small><a href="/blog/2016/09/25/new-team-new-life.html#fb_comment"><span class="fb-comments-count" data-href="https://stalk-calvin.github.io/blog/2016/09/25/new-team-new-life.html"></span> Comments</a></small>
+</h4>
+<!-- Post List End -->
+
+          
+            
+<!-- Post List Start -->
+
+<h4 align="left">
   <strong>02 Aug 2016</strong>
   <small>.
   .</small>
@@ -380,7 +397,7 @@
 
     <div class="container text-center">
       <p>Copyright &copy; Calvin Lee</p>
-      <p>2016 - 2017</p>
+      <p>2016 - 2018</p>
     </div>
     <p><br><br><br></p>
 </footer>
@@ -411,22 +428,16 @@ $('.collapse').collapse('hide');
 </script> 
 <script type="text/javascript">
 $(document).ready(function() {
-    $(document).on("click","#archive_year_2017",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
-  $(document).on("click",".archive_month_2017",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
-  $(document).on("click","#archive_year_2016",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
-  $(document).on("click",".archive_month_2016",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
+  for (i = 2016; i <= 2018; i++) {
+     $(document).on("click","#archive_year_"+i,function() {
+         $(this).parent().children("li").toggle();
+         togglePointer($(this));
+     });
+     $(document).on("click",".archive_month_"+i,function() {
+         $(this).parent().children("li").toggle();
+         togglePointer($(this));
+     });
+  }
   function togglePointer(elem) {
      if (elem.text().indexOf('►') != -1) {
         elem.text(elem.text().replace('►','▼'));

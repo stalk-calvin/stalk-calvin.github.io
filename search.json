@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "The Year 2018",
+      "link"			: "https://stalk-calvin.github.io/blog/2018/01/06/new-year-resolution.html",
+      "excerpt"		: "Another happy new year!",
+      "tags"        : ["newyear","resolution","year2018"]
+    }
+  
+
+  
+    ,{
       "title"			: "Korea 2017",
       "link"			: "https://stalk-calvin.github.io/blog/2017/12/30/korea.html",
       "excerpt"		: "Family reunion",
@@ -491,7 +500,7 @@
       "title"			: "Sorting algorithms",
       "link"			: "https://stalk-calvin.github.io/blog/2016/06/28/sorting.html",
       "excerpt"		: "Various ways of sorting methods",
-      "tags"        : ["algorithm","sort","computer","complexity"]
+      "tags"        : ["algorithm","sort","computer","complexity","merge","quick","bubble","selection","insertion","shell","counting","bucket","radix","tim","heap"]
     }
   
 

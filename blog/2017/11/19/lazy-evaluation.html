@@ -308,14 +308,16 @@ yes
 <span class="n">println</span><span class="o">(</span><span class="n">student</span><span class="o">.</span><span class="n">filter</span><span class="o">(</span><span class="n">gradeHigherThan90</span><span class="o">).</span><span class="n">filter</span><span class="o">(</span><span class="n">nameMatchingLetterCount</span><span class="o">(</span><span class="k">_</span><span class="o">,</span> <span class="mi">5</span><span class="o">)).</span><span class="n">head</span><span class="o">)</span></code></pre></figure>
 
 <p style="margin-bottom:1%">Output:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>Higher than 90 for (Sarah,91)
-Higher than 90 for (Joe,80)
+<div class="highlighter-rouge"><pre class="highlight"><code>Higher than 90 for (Joe,87)
+Higher than 90 for (Bob,91)
 Higher than 90 for (Frank,60)
-... all the elements in the List (which has higher than 90)
-Letter has 5 for (Sarah,91)
+Higher than 90 for (Saram,95)
+... Go through the list filter out people higher grade than 90
+Letter has 5 for (Bob,91)
+Letter has 5 for (Saram,95)
 Letter has 5 for (Calvin,100)
-... people who has 5 letters from the 90s group above
-(Saram,95) ... we select the first out of the result (head)
+... Out of those people with 90, get the first (head) person who has 5-letter name
+(Saram,95)
 Elapsed time: 1304887ns
 </code></pre>
 </div>
@@ -333,7 +335,7 @@ Elapsed time: 844147ns
 </code></pre>
 </div>
 
-<p>Note the execution time is a bit smaller (although it really depends on the # of executions) since the code execution is minimalized (# of executions is less for the “view”) by running whatever is necessary. It simply didn’t iterate the entire collection. It picks the first element matching the first filter, matches with second filter. If not filtered for both, it moves onto the next item matched in the first filter then match against second filter. When both filters are met, it found the first element (head) that matched to the both filters.</p>
+<p>Note the execution time is a bit smaller (although it really depends on the # of executions) since the code execution is minimalized (# of executions is less for the “view”) by running whatever is necessary. It simply didn’t iterate the entire collection. It picks the first element matching the first filter, matches with second filter. If not matched for both, it moves onto the next item matched in the first filter then match against second filter. When both filters are met, it found the first element (head) that matched to the both filters.</p>
 
 <p>The concept of “lazy” is really useful in programming for building an efficient software, together with input size and frequency of code being executed.</p>
 
@@ -485,7 +487,7 @@ Elapsed time: 844147ns
 
     <div class="container text-center">
       <p>Copyright &copy; Calvin Lee</p>
-      <p>2016 - 2017</p>
+      <p>2016 - 2018</p>
     </div>
     <p><br><br><br></p>
 </footer>
@@ -516,22 +518,16 @@ $('.collapse').collapse('hide');
 </script> 
 <script type="text/javascript">
 $(document).ready(function() {
-    $(document).on("click","#archive_year_2017",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
-  $(document).on("click",".archive_month_2017",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
-  $(document).on("click","#archive_year_2016",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
-  $(document).on("click",".archive_month_2016",function() {
-      $(this).parent().children("li").toggle();
-      togglePointer($(this));
-  });
+  for (i = 2016; i <= 2018; i++) {
+     $(document).on("click","#archive_year_"+i,function() {
+         $(this).parent().children("li").toggle();
+         togglePointer($(this));
+     });
+     $(document).on("click",".archive_month_"+i,function() {
+         $(this).parent().children("li").toggle();
+         togglePointer($(this));
+     });
+  }
   function togglePointer(elem) {
      if (elem.text().indexOf('►') != -1) {
         elem.text(elem.text().replace('►','▼'));
