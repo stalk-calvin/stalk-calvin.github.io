@@ -14,7 +14,7 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 06 Jan 2018 05:41:13 -0800</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jan 2018 16:26:29 -0800</lastBuildDate>
 	
 		<item>
 			<title>The Year 2018</title>
@@ -1486,7 +1486,23 @@
         
           <category>websecurity</category>
         
+          <category>web</category>
+        
+          <category>security</category>
+        
           <category>computer</category>
+        
+          <category>sql</category>
+        
+          <category>injection</category>
+        
+          <category>crosssite</category>
+        
+          <category>scripting</category>
+        
+          <category>csrf</category>
+        
+          <category>http</category>
         
 			<pubDate>02 July 2016</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2016/07/02/web-security.html</link>

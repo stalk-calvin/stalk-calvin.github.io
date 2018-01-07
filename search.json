@@ -491,7 +491,7 @@
       "title"			: "Web Security",
       "link"			: "https://stalk-calvin.github.io/blog/2016/07/02/web-security.html",
       "excerpt"		: "Security of web- sites, applications and services",
-      "tags"        : ["websecurity","computer"]
+      "tags"        : ["websecurity","web","security","computer","sql","injection","crosssite","scripting","csrf","http"]
     }
   
 
