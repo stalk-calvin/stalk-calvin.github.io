@@ -5,7 +5,9 @@
       "title"			: "The Year 2018",
       "link"			: "https://stalk-calvin.github.io/blog/2018/01/06/new-year-resolution.html",
       "excerpt"		: "Another happy new year!",
-      "tags"        : ["newyear","resolution","year2018"]
+      "tags"        : ["newyear","resolution","year2018"],
+      "date"        : "2018 Jan 06",
+      "year"        : 2018
     }
   
 
@@ -14,7 +16,9 @@
       "title"			: "Korea 2017",
       "link"			: "https://stalk-calvin.github.io/blog/2017/12/30/korea.html",
       "excerpt"		: "Family reunion",
-      "tags"        : ["trip","korea","family","reunion","travellog"]
+      "tags"        : ["trip","korea","family","reunion","travellog"],
+      "date"        : "2017 Dec 30",
+      "year"        : 2017
     }
   
 
@@ -23,7 +27,9 @@
       "title"			: "Spring Framework",
       "link"			: "https://stalk-calvin.github.io/blog/2017/12/09/spring-framework.html",
       "excerpt"		: "Framework for Java-based enterprise applications",
-      "tags"        : ["spring","framework","enterprise","dependency","injection","web","data","transaction","computer","programming"]
+      "tags"        : ["spring","framework","enterprise","dependency","injection","web","data","transaction","computer","programming"],
+      "date"        : "2017 Dec 09",
+      "year"        : 2017
     }
   
 
@@ -32,7 +38,9 @@
       "title"			: "Python encapsulation",
       "link"			: "https://stalk-calvin.github.io/blog/2017/11/25/python-encapsulation.html",
       "excerpt"		: "Adventures in Pythonic Way of Hiding Data",
-      "tags"        : ["python","code style","encapsulation","oop","getter","setter"]
+      "tags"        : ["python","code style","encapsulation","oop","getter","setter"],
+      "date"        : "2017 Nov 25",
+      "year"        : 2017
     }
   
 
@@ -41,7 +49,9 @@
       "title"			: "Lazy evaluation in Scala",
       "link"			: "https://stalk-calvin.github.io/blog/2017/11/19/lazy-evaluation.html",
       "excerpt"		: "an important concept in functional programming",
-      "tags"        : ["lazy","evaluation","scala","functional","programming"]
+      "tags"        : ["lazy","evaluation","scala","functional","programming"],
+      "date"        : "2017 Nov 19",
+      "year"        : 2017
     }
   
 
@@ -50,7 +60,9 @@
       "title"			: "Rebase in Git",
       "link"			: "https://stalk-calvin.github.io/blog/2017/11/12/git-rebase.html",
       "excerpt"		: "Taking version control to the next level",
-      "tags"        : ["git","version","control","repository","rebase"]
+      "tags"        : ["git","version","control","repository","rebase"],
+      "date"        : "2017 Nov 12",
+      "year"        : 2017
     }
   
 
@@ -59,7 +71,9 @@
       "title"			: "RPC framework",
       "link"			: "https://stalk-calvin.github.io/blog/2017/11/04/rpc-framework.html",
       "excerpt"		: "Tools enabling the programmers to communicate remotely",
-      "tags"        : ["rpc","framework","remote","call","client","server"]
+      "tags"        : ["rpc","framework","remote","call","client","server"],
+      "date"        : "2017 Nov 04",
+      "year"        : 2017
     }
   
 
@@ -68,7 +82,9 @@
       "title"			: "Common Binary Trees Examples",
       "link"			: "https://stalk-calvin.github.io/blog/2017/10/21/binary-tree-examples.html",
       "excerpt"		: "",
-      "tags"        : ["binary","tree","traversal","programming","examples"]
+      "tags"        : ["binary","tree","traversal","programming","examples"],
+      "date"        : "2017 Oct 21",
+      "year"        : 2017
     }
   
 
@@ -77,7 +93,9 @@
       "title"			: "Binary Trees",
       "link"			: "https://stalk-calvin.github.io/blog/2017/10/07/binary-trees.html",
       "excerpt"		: "basic concepts of binary trees",
-      "tags"        : ["binary","tree","traversal","programming"]
+      "tags"        : ["binary","tree","traversal","programming"],
+      "date"        : "2017 Oct 07",
+      "year"        : 2017
     }
   
 
@@ -86,7 +104,9 @@
       "title"			: "Functional vs. Imperative Programming",
       "link"			: "https://stalk-calvin.github.io/blog/2017/09/23/functional-imperative-programming.html",
       "excerpt"		: "2 major programming paradigms",
-      "tags"        : ["functional","imperative","programming","computer","paradigms","scala"]
+      "tags"        : ["functional","imperative","programming","computer","paradigms","scala"],
+      "date"        : "2017 Sep 23",
+      "year"        : 2017
     }
   
 
@@ -95,7 +115,9 @@
       "title"			: "Self Love",
       "link"			: "https://stalk-calvin.github.io/blog/2017/09/07/self-love.html",
       "excerpt"		: "Am I Selfish?",
-      "tags"        : ["selflove","selfish","lifelesson","inspiration"]
+      "tags"        : ["selflove","selfish","lifelesson","inspiration"],
+      "date"        : "2017 Sep 07",
+      "year"        : 2017
     }
   
 
@@ -104,7 +126,9 @@
       "title"			: "Elon Musk",
       "link"			: "https://stalk-calvin.github.io/blog/2017/09/02/elon-musk.html",
       "excerpt"		: "a biography by Ashlee Vance",
-      "tags"        : ["bookreview","innovator","entrepreneur","role","model","biography"]
+      "tags"        : ["bookreview","innovator","entrepreneur","role","model","biography"],
+      "date"        : "2017 Sep 02",
+      "year"        : 2017
     }
   
 
@@ -113,7 +137,9 @@
       "title"			: "Memory Leak",
       "link"			: "https://stalk-calvin.github.io/blog/2017/08/26/memory-leak.html",
       "excerpt"		: "by examples from Java",
-      "tags"        : ["computer","programming","memory","leak","java","example"]
+      "tags"        : ["computer","programming","memory","leak","java","example"],
+      "date"        : "2017 Aug 26",
+      "year"        : 2017
     }
   
 
@@ -122,7 +148,9 @@
       "title"			: "WebP",
       "link"			: "https://stalk-calvin.github.io/blog/2017/08/05/webp-image.html",
       "excerpt"		: "Image format developed by Google",
-      "tags"        : ["computer","programming","image","format","webp"]
+      "tags"        : ["computer","programming","image","format","webp"],
+      "date"        : "2017 Aug 05",
+      "year"        : 2017
     }
   
 
@@ -131,7 +159,9 @@
       "title"			: "Performance mistakes",
       "link"			: "https://stalk-calvin.github.io/blog/2017/07/15/performance-mistakes.html",
       "excerpt"		: "From my experience, so far",
-      "tags"        : ["computer","programming","performance"]
+      "tags"        : ["computer","programming","performance"],
+      "date"        : "2017 Jul 15",
+      "year"        : 2017
     }
   
 
@@ -140,7 +170,9 @@
       "title"			: "Salt Spring Island",
       "link"			: "https://stalk-calvin.github.io/blog/2017/07/08/salt-spring-island.html",
       "excerpt"		: "3-day travel log",
-      "tags"        : ["trip","salt","spring","island","travellog"]
+      "tags"        : ["trip","salt","spring","island","travellog"],
+      "date"        : "2017 Jul 08",
+      "year"        : 2017
     }
   
 
@@ -149,7 +181,9 @@
       "title"			: "Mockito",
       "link"			: "https://stalk-calvin.github.io/blog/2017/06/21/mockito.html",
       "excerpt"		: "open sourced testing framework",
-      "tags"        : ["mockito","testing","framework","mock"]
+      "tags"        : ["mockito","testing","framework","mock"],
+      "date"        : "2017 Jun 21",
+      "year"        : 2017
     }
   
 
@@ -158,7 +192,9 @@
       "title"			: "Nash Equilibrium",
       "link"			: "https://stalk-calvin.github.io/blog/2017/06/10/nash-equalibrium.html",
       "excerpt"		: "Basic Game Theory that everyone should know",
-      "tags"        : ["nash","equilibrium","computer","game","theory"]
+      "tags"        : ["nash","equilibrium","computer","game","theory"],
+      "date"        : "2017 Jun 10",
+      "year"        : 2017
     }
   
 
@@ -167,7 +203,9 @@
       "title"			: "Java, Perl, and Python",
       "link"			: "https://stalk-calvin.github.io/blog/2017/06/03/java-perl-python.html",
       "excerpt"		: "Programming languages I acquired during my career",
-      "tags"        : ["programming","computer","languages","java","perl","python"]
+      "tags"        : ["programming","computer","languages","java","perl","python"],
+      "date"        : "2017 Jun 03",
+      "year"        : 2017
     }
   
 
@@ -176,7 +214,9 @@
       "title"			: "Algorithms to live by",
       "link"			: "https://stalk-calvin.github.io/blog/2017/05/27/algorithms-to-live-by.html",
       "excerpt"		: "The Computer Science of Human Decisions",
-      "tags"        : ["bookreview","computer","algorithm"]
+      "tags"        : ["bookreview","computer","algorithm"],
+      "date"        : "2017 May 27",
+      "year"        : 2017
     }
   
 
@@ -185,7 +225,9 @@
       "title"			: "Euler's number",
       "link"			: "https://stalk-calvin.github.io/blog/2017/05/20/exponential-growth.html",
       "excerpt"		: "Mathematical constant, the base of the natural logarithm",
-      "tags"        : ["euler","mathematics","logarithm","exponential","growth","algorithm"]
+      "tags"        : ["euler","mathematics","logarithm","exponential","growth","algorithm"],
+      "date"        : "2017 May 20",
+      "year"        : 2017
     }
   
 
@@ -194,7 +236,9 @@
       "title"			: "Binary Logarithm",
       "link"			: "https://stalk-calvin.github.io/blog/2017/05/13/binary-logarithm.html",
       "excerpt"		: "Relationship with computers",
-      "tags"        : ["binary","logarithm","computer","algorithm"]
+      "tags"        : ["binary","logarithm","computer","algorithm"],
+      "date"        : "2017 May 13",
+      "year"        : 2017
     }
   
 
@@ -203,7 +247,9 @@
       "title"			: "Toronto",
       "link"			: "https://stalk-calvin.github.io/blog/2017/05/06/toronto.html",
       "excerpt"		: "4-day travel log",
-      "tags"        : ["trip","toronto","travellog"]
+      "tags"        : ["trip","toronto","travellog"],
+      "date"        : "2017 May 06",
+      "year"        : 2017
     }
   
 
@@ -212,7 +258,9 @@
       "title"			: "Leap Second",
       "link"			: "https://stalk-calvin.github.io/blog/2017/04/22/leap-second.html",
       "excerpt"		: "that added extra one-second ..",
-      "tags"        : ["leapsecond","balance","earthrotation","timezone"]
+      "tags"        : ["leapsecond","balance","earthrotation","timezone"],
+      "date"        : "2017 Apr 22",
+      "year"        : 2017
     }
   
 
@@ -221,7 +269,9 @@
       "title"			: "Vagrant vs Docker",
       "link"			: "https://stalk-calvin.github.io/blog/2017/04/15/vagrant-docker.html",
       "excerpt"		: "Independent Environmental Virtual Machines",
-      "tags"        : ["vagrant","docker","virtualization","virtual","machines","computer"]
+      "tags"        : ["vagrant","docker","virtualization","virtual","machines","computer"],
+      "date"        : "2017 Apr 15",
+      "year"        : 2017
     }
   
 
@@ -230,7 +280,9 @@
       "title"			: "Success - happy life",
       "link"			: "https://stalk-calvin.github.io/blog/2017/04/08/success.html",
       "excerpt"		: "my definition of success in life",
-      "tags"        : ["success","happy","life","goal","consistency","regret","minimization","money","power"]
+      "tags"        : ["success","happy","life","goal","consistency","regret","minimization","money","power"],
+      "date"        : "2017 Apr 08",
+      "year"        : 2017
     }
   
 
@@ -239,7 +291,9 @@
       "title"			: "Beer Pick",
       "link"			: "https://stalk-calvin.github.io/blog/2017/04/01/beer-list.html",
       "excerpt"		: "my favourite craft beers",
-      "tags"        : ["craftbeer","beer","microbrewery"]
+      "tags"        : ["craftbeer","beer","microbrewery"],
+      "date"        : "2017 Apr 01",
+      "year"        : 2017
     }
   
 
@@ -248,7 +302,9 @@
       "title"			: "Facts and Fallacies of Software Engineering",
       "link"			: "https://stalk-calvin.github.io/blog/2017/03/25/software-facts-fallacies.html",
       "excerpt"		: "My thoughts",
-      "tags"        : ["programming","facts","fallacies","bookreview"]
+      "tags"        : ["programming","facts","fallacies","bookreview"],
+      "date"        : "2017 Mar 25",
+      "year"        : 2017
     }
   
 
@@ -257,7 +313,9 @@
       "title"			: "Trip to Rocky Mountain",
       "link"			: "https://stalk-calvin.github.io/blog/2017/03/18/rocky-mountain.html",
       "excerpt"		: "4-day travel log",
-      "tags"        : ["trip","rocky","mountains","banff","travellog"]
+      "tags"        : ["trip","rocky","mountains","banff","travellog"],
+      "date"        : "2017 Mar 18",
+      "year"        : 2017
     }
   
 
@@ -266,7 +324,9 @@
       "title"			: "Farewell @ Global Relay",
       "link"			: "https://stalk-calvin.github.io/blog/2017/03/04/farewell.html",
       "excerpt"		: "after almost 5 years of service",
-      "tags"        : ["farewell","globalrelay","new","career","sony","spi","work"]
+      "tags"        : ["farewell","globalrelay","new","career","sony","spi","work"],
+      "date"        : "2017 Mar 04",
+      "year"        : 2017
     }
   
 
@@ -275,7 +335,9 @@
       "title"			: "HTTP Response Codes",
       "link"			: "https://stalk-calvin.github.io/blog/2017/02/25/http-response-code.html",
       "excerpt"		: "3-digit server status acknowledgment",
-      "tags"        : ["http","responsecode","status","acknowledgment","web","computer"]
+      "tags"        : ["http","responsecode","status","acknowledgment","web","computer"],
+      "date"        : "2017 Feb 25",
+      "year"        : 2017
     }
   
 
@@ -284,7 +346,9 @@
       "title"			: "SAML",
       "link"			: "https://stalk-calvin.github.io/blog/2017/02/18/saml.html",
       "excerpt"		: "exchange authentication and authorization data",
-      "tags"        : ["saml","markup","security","authentication","authorization","SSO","computer"]
+      "tags"        : ["saml","markup","security","authentication","authorization","SSO","computer"],
+      "date"        : "2017 Feb 18",
+      "year"        : 2017
     }
   
 
@@ -293,7 +357,9 @@
       "title"			: "OAuth",
       "link"			: "https://stalk-calvin.github.io/blog/2017/02/11/oauth.html",
       "excerpt"		: "How Authorization Works over the internet",
-      "tags"        : ["oauth","programming","API","authorization","SaaS","cloud","computer"]
+      "tags"        : ["oauth","programming","API","authorization","SaaS","cloud","computer"],
+      "date"        : "2017 Feb 11",
+      "year"        : 2017
     }
   
 
@@ -302,7 +368,9 @@
       "title"			: "Online Judge",
       "link"			: "https://stalk-calvin.github.io/blog/2017/02/04/online-judges.html",
       "excerpt"		: "Practice your coding skills",
-      "tags"        : ["online","judges","programming","coding","computer"]
+      "tags"        : ["online","judges","programming","coding","computer"],
+      "date"        : "2017 Feb 04",
+      "year"        : 2017
     }
   
 
@@ -311,7 +379,9 @@
       "title"			: "Programming Languages",
       "link"			: "https://stalk-calvin.github.io/blog/2017/01/28/programming-languages.html",
       "excerpt"		: "I picked for 2017",
-      "tags"        : ["languages","programming","computer"]
+      "tags"        : ["languages","programming","computer"],
+      "date"        : "2017 Jan 28",
+      "year"        : 2017
     }
   
 
@@ -320,7 +390,9 @@
       "title"			: "Java Programming Mistakes",
       "link"			: "https://stalk-calvin.github.io/blog/2017/01/21/java-developers-mistake.html",
       "excerpt"		: "people make",
-      "tags"        : ["java","mistake","programming","computer"]
+      "tags"        : ["java","mistake","programming","computer"],
+      "date"        : "2017 Jan 21",
+      "year"        : 2017
     }
   
 
@@ -329,7 +401,9 @@
       "title"			: "Java Generics",
       "link"			: "https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html",
       "excerpt"		: "Evolution of Java",
-      "tags"        : ["java","generics","programming","computer"]
+      "tags"        : ["java","generics","programming","computer"],
+      "date"        : "2017 Jan 14",
+      "year"        : 2017
     }
   
 
@@ -338,7 +412,9 @@
       "title"			: "New Year's Resolution",
       "link"			: "https://stalk-calvin.github.io/blog/2017/01/07/new-year-resolution.html",
       "excerpt"		: "Making 2017 My Best Year Ever",
-      "tags"        : ["newyear","resolution","year2017"]
+      "tags"        : ["newyear","resolution","year2017"],
+      "date"        : "2017 Jan 07",
+      "year"        : 2017
     }
   
 
@@ -347,7 +423,9 @@
       "title"			: "Fibonacci Numbers",
       "link"			: "https://stalk-calvin.github.io/blog/2016/12/28/fibonacci.html",
       "excerpt"		: "",
-      "tags"        : ["computer","dynamic","programming","algorithm","recursion","Fibonacci","sequence"]
+      "tags"        : ["computer","dynamic","programming","algorithm","recursion","Fibonacci","sequence"],
+      "date"        : "2016 Dec 28",
+      "year"        : 2016
     }
   
 
@@ -356,7 +434,9 @@
       "title"			: "What's Next?",
       "link"			: "https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html",
       "excerpt"		: "The Future of Computer Science",
-      "tags"        : ["computer","future","AI","machine","learning","IOT","industrial","revolution","vr","ar","cybersecurity"]
+      "tags"        : ["computer","future","AI","machine","learning","IOT","industrial","revolution","vr","ar","cybersecurity"],
+      "date"        : "2016 Dec 24",
+      "year"        : 2016
     }
   
 
@@ -365,7 +445,9 @@
       "title"			: "Keybase.io",
       "link"			: "https://stalk-calvin.github.io/blog/2016/12/17/keybase-io.html",
       "excerpt"		: "easily encrypt, decrypt and share messages",
-      "tags"        : ["computer","keybase","encryption","messaging"]
+      "tags"        : ["computer","keybase","encryption","messaging"],
+      "date"        : "2016 Dec 17",
+      "year"        : 2016
     }
   
 
@@ -374,7 +456,9 @@
       "title"			: "Big O Notations",
       "link"			: "https://stalk-calvin.github.io/blog/2016/12/10/big-o.html",
       "excerpt"		: "the way I understand algorithm complexity",
-      "tags"        : ["computer","complexity","big","algorithm"]
+      "tags"        : ["computer","complexity","big","algorithm"],
+      "date"        : "2016 Dec 10",
+      "year"        : 2016
     }
   
 
@@ -383,7 +467,9 @@
       "title"			: "Java Interfaces",
       "link"			: "https://stalk-calvin.github.io/blog/2016/11/28/ables-java.html",
       "excerpt"		: "-ables in Java",
-      "tags"        : ["java","computer","interface","serializable","cloneable","iterable","callable","comparable"]
+      "tags"        : ["java","computer","interface","serializable","cloneable","iterable","callable","comparable"],
+      "date"        : "2016 Nov 28",
+      "year"        : 2016
     }
   
 
@@ -392,7 +478,9 @@
       "title"			: "Google Guava",
       "link"			: "https://stalk-calvin.github.io/blog/2016/11/26/google-guava.html",
       "excerpt"		: "a library you should incorporate on any project",
-      "tags"        : ["java","computer","google","guava"]
+      "tags"        : ["java","computer","google","guava"],
+      "date"        : "2016 Nov 26",
+      "year"        : 2016
     }
   
 
@@ -401,7 +489,9 @@
       "title"			: "Useful Java Code",
       "link"			: "https://stalk-calvin.github.io/blog/2016/11/19/useful-code-in-java.html",
       "excerpt"		: "From my experience",
-      "tags"        : ["java","computer","dao","pojo","gson","exception","xml","xstream"]
+      "tags"        : ["java","computer","dao","pojo","gson","exception","xml","xstream"],
+      "date"        : "2016 Nov 19",
+      "year"        : 2016
     }
   
 
@@ -410,7 +500,9 @@
       "title"			: "5 Best Computer Books",
       "link"			: "https://stalk-calvin.github.io/blog/2016/11/12/favourite-books.html",
       "excerpt"		: "I have read so far",
-      "tags"        : ["computer","bookreview"]
+      "tags"        : ["computer","bookreview"],
+      "date"        : "2016 Nov 12",
+      "year"        : 2016
     }
   
 
@@ -419,7 +511,9 @@
       "title"			: "Algorithms: My Programming Playground",
       "link"			: "https://stalk-calvin.github.io/blog/2016/11/05/algorithms.html",
       "excerpt"		: "Place for practicing and improving my coding skills",
-      "tags"        : ["algorithm","programming","computer","practice","improve"]
+      "tags"        : ["algorithm","programming","computer","practice","improve"],
+      "date"        : "2016 Nov 05",
+      "year"        : 2016
     }
   
 
@@ -428,7 +522,9 @@
       "title"			: "Lombok: Simplify your development of Java code",
       "link"			: "https://stalk-calvin.github.io/blog/2016/10/29/lombok.html",
       "excerpt"		: "Annotations Made Java Coding Simpler",
-      "tags"        : ["lombok","java","computer"]
+      "tags"        : ["lombok","java","computer"],
+      "date"        : "2016 Oct 29",
+      "year"        : 2016
     }
   
 
@@ -437,7 +533,9 @@
       "title"			: "DI: Comparing Spring vs Guice",
       "link"			: "https://stalk-calvin.github.io/blog/2016/10/22/dependency-injection.html",
       "excerpt"		: "With Examples",
-      "tags"        : ["dependency","injection","DI","spring","google","guice","java","computer"]
+      "tags"        : ["dependency","injection","DI","spring","google","guice","java","computer"],
+      "date"        : "2016 Oct 22",
+      "year"        : 2016
     }
   
 
@@ -446,7 +544,9 @@
       "title"			: "Builder Pattern vs Factory Method Pattern",
       "link"			: "https://stalk-calvin.github.io/blog/2016/10/15/builder-pattern.html",
       "excerpt"		: "Big 2 of Creational Design Pattern",
-      "tags"        : ["builder","factory","pattern"]
+      "tags"        : ["builder","factory","pattern"],
+      "date"        : "2016 Oct 15",
+      "year"        : 2016
     }
   
 
@@ -455,7 +555,9 @@
       "title"			: "New Team New Life",
       "link"			: "https://stalk-calvin.github.io/blog/2016/09/25/new-team-new-life.html",
       "excerpt"		: "So Far So Good!",
-      "tags"        : ["newteam","java","developer"]
+      "tags"        : ["newteam","java","developer"],
+      "date"        : "2016 Sep 25",
+      "year"        : 2016
     }
   
 
@@ -464,7 +566,9 @@
       "title"			: "Unit Testing Using Junit+Annotation",
       "link"			: "https://stalk-calvin.github.io/blog/2016/08/02/junit.html",
       "excerpt"		: "Junit + Annotation = Powerful Way of Unit Testing",
-      "tags"        : ["unit","testing","computer","java"]
+      "tags"        : ["unit","testing","computer","java"],
+      "date"        : "2016 Aug 02",
+      "year"        : 2016
     }
   
 
@@ -473,7 +577,9 @@
       "title"			: "Git Info",
       "link"			: "https://stalk-calvin.github.io/blog/2016/08/02/git.html",
       "excerpt"		: "Frequent Git Commands I Use On Daily Basis",
-      "tags"        : ["repository","git","computer"]
+      "tags"        : ["repository","git","computer"],
+      "date"        : "2016 Aug 02",
+      "year"        : 2016
     }
   
 
@@ -482,7 +588,9 @@
       "title"			: "Workout Split",
       "link"			: "https://stalk-calvin.github.io/blog/2016/07/12/workout-split.html",
       "excerpt"		: "4-way workout split I do every day",
-      "tags"        : ["fitness","workout","gym"]
+      "tags"        : ["fitness","workout","gym"],
+      "date"        : "2016 Jul 12",
+      "year"        : 2016
     }
   
 
@@ -491,7 +599,9 @@
       "title"			: "Web Security",
       "link"			: "https://stalk-calvin.github.io/blog/2016/07/02/web-security.html",
       "excerpt"		: "Security of web- sites, applications and services",
-      "tags"        : ["websecurity","web","security","computer","sql","injection","crosssite","scripting","csrf","http"]
+      "tags"        : ["websecurity","web","security","computer","sql","injection","crosssite","scripting","csrf","http"],
+      "date"        : "2016 Jul 02",
+      "year"        : 2016
     }
   
 
@@ -500,7 +610,9 @@
       "title"			: "Sorting algorithms",
       "link"			: "https://stalk-calvin.github.io/blog/2016/06/28/sorting.html",
       "excerpt"		: "Various ways of sorting methods",
-      "tags"        : ["algorithm","sort","computer","complexity","merge","quick","bubble","selection","insertion","shell","counting","bucket","radix","tim","heap"]
+      "tags"        : ["algorithm","sort","computer","complexity","merge","quick","bubble","selection","insertion","shell","counting","bucket","radix","tim","heap"],
+      "date"        : "2016 Jun 28",
+      "year"        : 2016
     }
   
 
@@ -509,7 +621,9 @@
       "title"			: "Jang Bum Joon (장범준)",
       "link"			: "https://stalk-calvin.github.io/blog/2016/06/24/music.html",
       "excerpt"		: "Songs I listen to these days",
-      "tags"        : ["korean","music","장범준"]
+      "tags"        : ["korean","music","장범준"],
+      "date"        : "2016 Jun 24",
+      "year"        : 2016
     }
   
 
@@ -518,7 +632,9 @@
       "title"			: "Sugar in Fruits",
       "link"			: "https://stalk-calvin.github.io/blog/2016/06/21/fruits-sugar-health.html",
       "excerpt"		: "Facts about natural sugar vs added sugar",
-      "tags"        : ["diet","health"]
+      "tags"        : ["diet","health"],
+      "date"        : "2016 Jun 21",
+      "year"        : 2016
     }
   
 
