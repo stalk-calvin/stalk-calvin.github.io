@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "Rise of the robots",
+      "link"			: "https://stalk-calvin.github.io/blog/2018/01/13/rise-of-the-robots.html",
+      "excerpt"		: "Technology and the Threat of a Jobless Future",
+      "tags"        : ["bookreview","robots","automation","jobthreat","technology"],
+      "date"        : "2018 Jan 13",
+      "year"        : 2018
+    }
+  
+
+  
+    ,{
       "title"			: "The Year 2018",
       "link"			: "https://stalk-calvin.github.io/blog/2018/01/06/new-year-resolution.html",
       "excerpt"		: "Another happy new year!",
