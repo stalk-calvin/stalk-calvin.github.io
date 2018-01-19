@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "XOR swaps",
+      "link"			: "https://stalk-calvin.github.io/blog/2018/01/14/xor-swaps.html",
+      "excerpt"		: "Swap two variables using XOR operations",
+      "tags"        : ["xor","swap","algorithm","programming","bitwise","operation"],
+      "date"        : "2018 Jan 14",
+      "year"        : 2018
+    }
+  
+
+  
+    ,{
       "title"			: "Rise of the robots",
       "link"			: "https://stalk-calvin.github.io/blog/2018/01/13/rise-of-the-robots.html",
       "excerpt"		: "Technology and the Threat of a Jobless Future",

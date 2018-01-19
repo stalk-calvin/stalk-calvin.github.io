@@ -14,7 +14,36 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Thu, 18 Jan 2018 18:42:31 -0800</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jan 2018 16:06:33 -0800</lastBuildDate>
+	
+		<item>
+			<title>XOR swaps</title>
+			
+				<description>Swap two variables using XOR operations</description>
+			
+        
+          <category>xor</category>
+        
+          <category>swap</category>
+        
+          <category>algorithm</category>
+        
+          <category>programming</category>
+        
+          <category>bitwise</category>
+        
+          <category>operation</category>
+        
+			<pubDate>14 January 2018</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2018/01/14/xor-swaps.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2018/01/14/xor-swaps</guid>
+		</item>
 	
 		<item>
 			<title>Rise of the robots</title>
