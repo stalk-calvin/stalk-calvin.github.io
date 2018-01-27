@@ -14,7 +14,32 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 20 Jan 2018 16:06:33 -0800</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jan 2018 14:39:53 -0800</lastBuildDate>
+	
+		<item>
+			<title>Proxy and VPN</title>
+			
+				<description>What are the differences?</description>
+			
+        
+          <category>proxy</category>
+        
+          <category>VPN</category>
+        
+          <category>computers</category>
+        
+          <category>network</category>
+        
+			<pubDate>24 January 2018</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2018/01/24/proxy-vpn.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2018/01/24/proxy-vpn</guid>
+		</item>
 	
 		<item>
 			<title>XOR swaps</title>

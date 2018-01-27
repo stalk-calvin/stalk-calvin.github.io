@@ -132,6 +132,28 @@
        </url>
     
   
+    
+      <url>
+        <loc>https://stalk-calvin.github.io/blog/page7/</loc>
+        
+          
+          
+          
+          <priority>1.0</priority>
+          
+        
+       </url>
+    
+  
+  
+    <url>
+      <loc>https://stalk-calvin.github.io/blog/2018/01/24/proxy-vpn.html</loc>
+      
+        <lastmod>2018-01-24T00:00:00-08:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
   
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/01/14/xor-swaps.html</loc>
