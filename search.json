@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "Java 9",
+      "link"			: "https://stalk-calvin.github.io/blog/2018/02/03/java-9.html",
+      "excerpt"		: "Overview of new features",
+      "tags"        : ["java9","java","computers","programming","Jigsaw"],
+      "date"        : "2018 Feb 03",
+      "year"        : 2018
+    }
+  
+
+  
+    ,{
       "title"			: "Proxy and VPN",
       "link"			: "https://stalk-calvin.github.io/blog/2018/01/24/proxy-vpn.html",
       "excerpt"		: "What are the differences?",

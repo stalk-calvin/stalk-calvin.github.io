@@ -14,7 +14,34 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 27 Jan 2018 14:39:53 -0800</lastBuildDate>
+    <lastBuildDate>Sat, 03 Feb 2018 14:01:33 -0800</lastBuildDate>
+	
+		<item>
+			<title>Java 9</title>
+			
+				<description>Overview of new features</description>
+			
+        
+          <category>java9</category>
+        
+          <category>java</category>
+        
+          <category>computers</category>
+        
+          <category>programming</category>
+        
+          <category>Jigsaw</category>
+        
+			<pubDate>03 February 2018</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2018/02/03/java-9.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2018/02/03/java-9</guid>
+		</item>
 	
 		<item>
 			<title>Proxy and VPN</title>
