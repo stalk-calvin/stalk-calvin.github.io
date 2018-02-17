@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "Binary Arithmetic",
+      "link"			: "https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic.html",
+      "excerpt"		: "Elementary arithmetic operations in 0 and 1",
+      "tags"        : ["binary","arithmetic","addition","subtraction","multiplication","division"],
+      "date"        : "2018 Feb 17",
+      "year"        : 2018
+    }
+  
+
+  
+    ,{
       "title"			: "Java 9",
       "link"			: "https://stalk-calvin.github.io/blog/2018/02/03/java-9.html",
       "excerpt"		: "Overview of new features",

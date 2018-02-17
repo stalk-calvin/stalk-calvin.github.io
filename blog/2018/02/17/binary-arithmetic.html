@@ -24,19 +24,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Overview of new features">
+  <meta name="description" content="Elementary arithmetic operations in 0 and 1">
   <meta name="author" content="Calvin Lee">
   <meta name="keywords" content="calvin, lee, personal, blog, beer, fitness, diet, computer, science, programming, software, engineer">
   <meta property="fb:app_id" content="140805279842677" /> 
-  <meta property="og:title" content="Java 9" />
-  <meta property="og:description" content="Overview of new features" />
-  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2018/02/03/java-9.html" />
+  <meta property="og:title" content="Binary Arithmetic" />
+  <meta property="og:description" content="Elementary arithmetic operations in 0 and 1" />
+  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic.html" />
 
-  <link rel="alternate" hreflang="en" href="https://stalk-calvin.github.io/blog/2018/02/03/java-9.html" />
-  <link rel="alternate" hreflang="kr" href="https://stalk-calvin.github.io/blog/2018/02/03/java-9.html" />
-  <link rel="canonical" href="/blog/2018/02/03/java-9.html">
+  <link rel="alternate" hreflang="en" href="https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic.html" />
+  <link rel="alternate" hreflang="kr" href="https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic.html" />
+  <link rel="canonical" href="/blog/2018/02/17/binary-arithmetic.html">
   <link rel="author" href="https://www.linkedin.com/in/stalkme">
-  <title>I am Calvin | Java 9</title>
+  <title>I am Calvin | Binary Arithmetic</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -194,138 +194,140 @@
     <section id="post" class="container content-section ">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>Java 9</strong></h1>
-          <h4 style="display:inline; color: #F4A460;"><strong>Overview of new features</strong></h4><br />
+          <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>Binary Arithmetic</strong></h1>
+          <h4 style="display:inline; color: #F4A460;"><strong>Elementary arithmetic operations in 0 and 1</strong></h4><br />
           <h4>
-            <strong>03 Feb 2018</strong>
+            <strong>17 Feb 2018</strong>
             <small>
-              <a href="/blog/2018/02/03/java-9.html#fb_comment"><span class="fb-comments-count" data-href="https://stalk-calvin.github.io/blog/2018/02/03/java-9.html"></span> Comments</a>
+              <a href="/blog/2018/02/17/binary-arithmetic.html#fb_comment"><span class="fb-comments-count" data-href="https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic.html"></span> Comments</a>
               <br />
               
-                <a class="tag" href="/tags/#java9">#java9</a>
+                <a class="tag" href="/tags/#binary">#binary</a>
               
-                <a class="tag" href="/tags/#java">#java</a>
+                <a class="tag" href="/tags/#arithmetic">#arithmetic</a>
               
-                <a class="tag" href="/tags/#computers">#computers</a>
+                <a class="tag" href="/tags/#addition">#addition</a>
               
-                <a class="tag" href="/tags/#programming">#programming</a>
+                <a class="tag" href="/tags/#subtraction">#subtraction</a>
               
-                <a class="tag" href="/tags/#Jigsaw">#Jigsaw</a>
+                <a class="tag" href="/tags/#multiplication">#multiplication</a>
+              
+                <a class="tag" href="/tags/#division">#division</a>
               
             </small>
           </h4>
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic.html" class="btn" title="Binary Arithmetic">&laquo; Binary Arithmetic</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2018/01/24/proxy-vpn.html" class="btn" title="Proxy and VPN">Proxy and VPN &raquo;</a>
+              <a href="https://stalk-calvin.github.io/blog/2018/02/03/java-9.html" class="btn" title="Java 9">Java 9 &raquo;</a>
             
           </nav><!-- /.pagination -->
 
-          <p>Java 9 has been finally released in September 2017. It has been delayed a couple of times already well over 3 years. There are approximately <a href="http://openjdk.java.net/projects/jdk9/">90 new changes/enhancements</a> released as part of the Java 9. According to the <a href="https://en.wikipedia.org/wiki/JDK_Enhancement_Proposal">JDK Enhancement Proposal</a> <a href="http://openjdk.java.net/jeps/322">JEP 322</a>,  next Java version is planned to be <a href="http://openjdk.java.net/projects/jdk/10/">Java 10</a>. See diagram below for the reference to the upcoming Java releases in the future.</p>
+          <p>Arithmetic basically is a calculation with numbers. It is just one branch of mathematics. When you add, subtract, 
+multiply, divide, take square roots, and so on, you are doing arithmetic. There are a couple of other branches of mathematics. For example, when you solve an equation, you are doing algebra. When you are calculating angles, areas or even modelling, you are doing geometry. Arithmetic is something you would have learned as soon as you went to the elementary school. We would have learned this as a decimal number which uses 10 digits. We are quite familiar with the base 10 arithmetic. What is 9+2? 11. What is 5*9? 45. What is 10/2? 5 What is 15-7? 8. and so on.</p>
+
+<p>We can basically apply the same logic (as in decimal) to the binary numbers using 2 digits instead of 10 digits. A similar idea is taken and the best part is that they are simpler than 10 digits. So simple that sometimes we confuse because we are so accustomed to the base 10 arithmetic.</p>
+
+<h3 id="binary-addition">Binary Addition</h3>
+
+<p>Addition in binary is the easiest yet the most important process of all. The process, as I mentioned, is a lot simpler than decimal because we only have to deal with 2 digits instead of 10 digits. Binary addition sometimes is easier by calculation using the possibility table. This table is simple but handy as there are certain limited operations using the binary (0 and 1):</p>
+
+<ul>
+  <li>0 + 0 = 0</li>
+  <li>1 + 0 = 1 or 0 + 1 = 1</li>
+  <li>1 + 1 = 2 which is 10 in binary which is 0 with a carry of 1</li>
+  <li>1 + 1 + 1 (carry) = 3 which is 11 in binary which is 1 with a carry of 1</li>
+</ul>
+
+<p>In Binary, it is represented either 0 or 1. So when we have a result larger than 1, the carry occurs since we already reached the maximum representable digit. When we deal with decimal, carry happens every 10 which is why we have 10 after 9 then it restarts from 1 like 11, 12 … etc.</p>
+
+<p>Here is an example:</p>
 
 <table class="image" align="center" style="margin-top:1%;text-align:center;">
-<caption class="custom" align="bottom">Java release plans</caption>
-<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/java9/roadmap.png" alt="Java release plans" /></td></tr>
+<caption class="custom" align="bottom">Addition in binary digits</caption>
+<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/binary_arithmetic/binary_addition.png" alt="Addition in binary digits" /></td></tr>
 </table>
 
-<p>Please keep in mind that the schedule is roughly scheduled and not accurate. This diagram is mainly showing the versioning change in Java 9 along with the plans. Anyways, let’s take a look at some of the updates in Java 9.</p>
+<p>Well above example has chaining carries which eventually has 1 in the 2nd column of the digit. Notice how you can apply the same logic to the decimal places.</p>
 
-<p>By the way, there are 2 important acronyms you need to understand before we dive into it.</p>
+<p>It is definitely possible to add more than 2 binary numbers in one go. My suggestion, however, is that you add the 1st and 2nd numbers together to get the result. Then take that result and add the 3rd number to that to get another result. Then take that result and add the 4th to get another result, and continue operating until you have your answer.  This way you wouldn’t get unmanageable carries since you can treat of each addition separately.</p>
 
-<ol style="padding-left: 1.5em;list-style: decimal; margin: 0;">
-<li style="padding-bottom: 1em;"><strong>JSR - Java Specification Requests</strong><br />
-<span style="margin-left: 0em;margin-right: 0;display: inline-block;">includes change requests for the Java language, libraries and other components.</span></li>
-<li style="padding-bottom: 1em;"><strong>JEP - Java Enhancement Proposal</strong><br />
-<span style="margin-left: 0em;margin-right: 0;display: inline-block;">includes enhancements proposals for the Java Development Kit and OpenJDK.</span></li>
-</ol>
+<h3 id="binary-subtraction">Binary Subtraction</h3>
 
-<p>As you read the overview below, you will encounter these names with numbers quite often. For example, with JSR 376, you can read the formal documents from either <a href="http://openjdk.java.net/projects/jigsaw/spec/">Openjdk</a> or <a href="https://docs.oracle.com/javase/9/whatsnew/toc.htm">Oracle</a>. As I mentioned above, all the JEPs discussed here are listed under <a href="http://openjdk.java.net/projects/jdk9/">90 new changes/enhancements</a>: For example, <a href="http://openjdk.java.net/jeps/222">JEP 222</a>, <a href="http://openjdk.java.net/jeps/102">JEP 102</a>, <a href="http://openjdk.java.net/jeps/110">JEP 110</a>, <a href="http://openjdk.java.net/jeps/165">JEP 165</a> etc.</p>
+<p>Binary Subtraction is usually more difficult to calculate than the addition. Instead of Carrying forward (like in addition), we are going to use the term, borrowing backward for the subtraction. It is pretty straightforward when you think about it. Just remember what we are borrowing and how we use the value in the rest of the subtraction. Similar to the addition, we have a possibility table:</p>
 
-<h2 style="margin-top: 35px;" id="1-the-java-platform-module-system">1. The Java Platform module system</h2>
+<ul>
+  <li>0 - 0 = 0</li>
+  <li>1 - 0 = 1</li>
+  <li>1 - 1 = 0</li>
+  <li>0 - 1 we borrow 1 from the before column. This makes it 10 - 1 which is 1.</li>
+</ul>
 
-<h3 id="project-jigsaw---jsr-376">Project Jigsaw - JSR 376</h3>
-
-<p>Here is probably the most important change featured in Java 9, The Java Platform Module System. It is developed under Project Jigsaw which comes to us with the specific goal: to provide reliable configuration and strong flexible encapsulation. Currently, every public class can be accessed by any other public classes on the classpath, leading to inadvertent usage of classes that weren’t meant to be public API. Furthermore, the “classpath hell” itself is problematic because it assumes that all JARs are available and non-duplicated. By providing a reliable configuration, we can avoid using this CLASSPATH mechanism to load the configurations. Strong encapsulation means that a class would recognize which public types are used appropriately. With these changes, it provides a scalable platform for improved performance.</p>
-
-<p>Overall what this means at the end of the day is the new JDK has been divided into a set of modules. Programmers can now combine these JDK modules into a variety of configurations meaning the programmers are getting what they really need. They can run <code class="highlighter-rouge">java --list-modules</code> to see the list of available modules. <code class="highlighter-rouge">java.base</code> is probably one of the most important modules in the list. It includes all the libraries we are used to using like java.util, java.lang, etc.</p>
-
-<p>So why do we need to modularize? It allows us to build a flexible (by loose coupling) and scalable (small devices to a cloud environment) application which also fairly improves the performance and security as well.</p>
-
-<p>For the reference, there are at least 4 important JEPs contained in this JSR 376:</p>
+<p>You really need to remember how things are borrowed in subtraction. Let’s make things really simple, say we have <strong>100 - 1</strong>:</p>
 
 <ol>
-  <li><a href="http://openjdk.java.net/jeps/200">JEP 200</a>- The Modular JDK: Modularizing JDK itself.</li>
-  <li><a href="http://openjdk.java.net/jeps/220">JEP 220</a>- Modular Run-Time Images</li>
-  <li><a href="http://openjdk.java.net/jeps/260">JEP 260</a>- Encapsulate Most Internal APIs</li>
-  <li><a href="http://openjdk.java.net/jeps/261">JEP 261</a>- Module System itself: Big piece of the puzzle, really.</li>
+  <li>Column 1 (rightmost) is 0. When subtracting 0 - 1, we need to borrow a 1 for the before column (Column 2).</li>
+  <li>Column 2 is 0 as well. We cannot give 1 to the Column 1, we would need to borrow a 1 from the Column 3 (leftmost) and which gives 10 (2 in decimal).</li>
+  <li>Now we can lend 1 to the Column 1 from 10 (2 in decimal). So we give one, and Column 2 is left with 1 remaining.</li>
+  <li>Column 1 now gotten 10 from Column 2, 10 - 1 = 1, so end result is 011.</li>
 </ol>
 
-<h2 style="margin-top: 35px;" id="2-jshell---java-repl">2. JShell - Java REPL</h2>
+<p>We can verify our result by converting the binary to decimal and do the subtraction: binary 100 is 4 in decimal and binary 1 is 1 in decimal. 4-1 = 3. The result is 011 which is 3 in decimal.</p>
 
-<h3 id="jep-222"><a href="http://openjdk.java.net/jeps/222">JEP 222</a></h3>
+<p>Computers do not use this method though as this is not the most efficient way for a computer to subtract. They subtract by <a href="https://en.wikipedia.org/wiki/Method_of_complements">adding complements</a>. To handle the subtraction, in decimal, you would use nine’s complement or ten’s complement; in binary, you would use ones’ complement or two’s complement.</p>
 
-<p>There is Read-Evaluate-Print-Loop (REPL) available for most of the modern languages these days including, Python and Scala. REPL is basically an interactive shell where you can run the program inside a command line tool. They are generally useful in evaluating declarations, statements and expressions which could be used to confirm many of your algorithms. It is also a great tool to explore new coding options when you are developing a new one. Some features including: a history with editing, tab-completion, automatic addition of needed terminal semicolons, and configurable predefined imports and definitions. If you are looking for an immediate feedback on your code, REPL is the way to go!</p>
+<h3 id="binary-multiplication">Binary Multiplication</h3>
 
-<h2 style="margin-top: 35px;" id="3-process-api-updates">3. Process API Updates</h2>
+<p>As you are probably familiar, we kind of memorize the “multiplication table” for the decimal from 0 to 9. So when we say what is 4x8? we know its 32 right away. Here we have 4 as the multiplicand and 8 as a multiplier.</p>
 
-<h3 id="jep-102"><a href="http://openjdk.java.net/jeps/102">JEP 102</a></h3>
-
-<p>Java had been relying on the native code to execute process related calls, here are some updates to the new Java 9:</p>
+<p>Whenever binary multiplication is done, it is much simpler than decimal multiplication. It is basically dealing with 0 and 1 as well and the table can be made even simpler than the previous 2 operations:</p>
 
 <ul>
-  <li>The update extends Java’s ability to interact with the OS</li>
-  <li>ProcessHandle class provides access to critical data</li>
-  <li>Native processor ID, arguments, command, start time, CPU time, user</li>
+  <li>0 * 0 = 0</li>
+  <li>0 * 1 = 0</li>
+  <li>1 * 0 = 0</li>
+  <li>1 * 1 = 1</li>
 </ul>
 
-<p>For example, here is a little comparison of getting a processor ID in earlier Java vs Java 9:</p>
+<p>For binary multiplication, I think of a AND gate operation. It is really simple if you think this way. One is true, one is false. You’ll notice two things: there are never any carries, and the result is either 0 or 1.</p>
 
-<p>Earlier Java using JNA:</p>
+<p>We can start with an example:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">CLibrary</span> <span class="kd">extends</span> <span class="n">Library</span> <span class="o">{</span>
-<span class="n">CLibrary</span> <span class="n">INSTANCE</span> <span class="o">=</span> <span class="o">(</span><span class="n">CLibrary</span><span class="o">)</span><span class="n">Native</span><span class="o">.</span><span class="na">loadLibrary</span><span class="o">(</span><span class="s">"c"</span><span class="o">,</span> <span class="n">CLibrary</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-<span class="kt">int</span> <span class="nf">getpid</span> <span class="o">();</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<table class="image" align="center" style="margin-top:1%;text-align:center;">
+<caption class="custom" align="bottom">Multiplication in binary digits</caption>
+<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/binary_arithmetic/binary_multiplication.png" alt="Multiplication in binary digits" /></td></tr>
+</table>
 
-<p>then use the following call to get the PID:</p>
+<p>As you can see it is similar to how we deal with decimal multiplication except that its just within 0 or 1. This is simpler by folds than the decimal multiplication.</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">pid</span> <span class="o">=</span> <span class="n">CLibrary</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">.</span><span class="na">getpid</span><span class="o">();</span>
-</code></pre>
-</div>
+<h3 id="binary-division">Binary Division</h3>
 
-<p>However, in Java 9, we can use ProcessHandle class which makes everything simpler.</p>
+<p>Well, as you may have guessed, the binary division is simpler than decimal division. Remember when you work on a simple division, what dividend, divisor and quotient is? To recap, see the image below for what they are as I will be describing the division with these terms.</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kt">long</span> <span class="n">pid</span> <span class="o">=</span> <span class="n">ProcessHandle</span><span class="o">.</span><span class="na">current</span><span class="o">().</span><span class="na">getPid</span><span class="o">();</span>
-</code></pre>
-</div>
+<table class="image" style="margin-top:1%;">
+<caption class="custom" align="bottom">Explaining what quotient, divisor, dividend are in division</caption>
+<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/binary_arithmetic/division_explained.jpg" alt="Explaining what quotient, divisor, dividend are in division" /></td></tr>
+</table>
 
-<h2 style="margin-top: 35px;" id="4-http2-client-incubator">4. HTTP/2 Client (Incubator)</h2>
+<p>Similar to the decimal division, you will need to find out how many divisors can divide the dividend to get the partial quotient. Let’s just dive straight into the example:</p>
 
-<h3 id="jep-110"><a href="http://openjdk.java.net/jeps/110">JEP 110</a></h3>
+<p>As usual, let’s start off with an example:</p>
 
-<p>In 2015, HTTP/2 was standardized. The HTTP/2 protocol itself features a lot more advantages than the earlier HTTP/1. Here are some new features in HTTP/2:</p>
+<table class="image" align="center" style="margin-top:1%;text-align:center;">
+<caption class="custom" align="bottom">Division in binary digits</caption>
+<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/binary_arithmetic/binary_division.png" alt="Division in binary digits" /></td></tr>
+</table>
 
-<ul>
-  <li>bidirectional communication using push requests</li>
-  <li>multiplexing within a single TCP connection</li>
-  <li>long running connections eventually fewer connections, less load</li>
-  <li>stateful connections</li>
-</ul>
+<p>We have 11 as the divisor, 1011.11 as the dividend. Let’s solve this step by step.</p>
 
-<p>Anyways, HTTP/2 brings a better performance overall. I will cover the HTTP/2 topic in the future blog in detail.</p>
-
-<p>In JDK 9, this is handled through HttpClient class which handles creation and send requests. This is sitting in the package of <code class="highlighter-rouge">jdk.incubator</code>. The word incubator is used because the API and implementation will not be part of Java SE. The package will not be loaded by default at compile- or run-time. With the latest JDK 9, You will have to load it separately using the –add-modules command-line option to request that an incubator module is resolved, like this:</p>
-
-<p><code class="highlighter-rouge">java -jar --add-modules jdk.incubator.httpclient sample-run.jar</code></p>
-
-<h2 style="margin-top: 35px;" id="conclusion">Conclusion</h2>
-
-<p>There are many other features (JEPs) added to JDK 9 which improves security and performance overall. They are all in the <a href="http://openjdk.java.net/projects/jdk9/">90 new changes/enhancements</a> of JDK 9. It is worth your time to read the list to see what changes are happening in Java 9.</p>
+<ol>
+  <li>Can 11 fit into the first 1 of the 1011.11 (dividend)? Nope, so we get 0 as a first digit of the quotient.</li>
+  <li>Can 11 fit into the first and second 10 of the 1011.11? Nope, so we still get 0 as the second digit of the quotient.</li>
+  <li>Can 11 fit into the first 3 digits of the dividend which is the 101? Yes, so we get 1 as the third digit of the quotient.</li>
+  <li>Subtracting the 11 from the 101, we get 10, then we bring the next 1 down to make 101 and there we can fit in 11. and the fourth digit of the quotient becomes 1.</li>
+  <li>We keep following the similar logic in the picture above to achieve our quotient of 0011.11101010… Note how 10 keeps repeating because the division keeps repeating like the decimal.</li>
+</ol>
 
 
           
@@ -335,7 +337,7 @@
   <ul class="rrssb-buttons clearfix">
     
       <li class="rrssb-email">
-        <a href="mailto:?subject=Java 9&body=https://stalk-calvin.github.io/blog/2018/02/03/java-9.html" data-proofer-ignore>
+        <a href="mailto:?subject=Binary Arithmetic&body=https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic.html" data-proofer-ignore>
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
               <path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"
@@ -347,7 +349,7 @@
     
     
       <li class="rrssb-facebook">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2018/02/03/java-9.html&title=Java 9" class="popup">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic.html&title=Binary Arithmetic" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="29" height="29" viewBox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z"
               class="cls-2" fill-rule="evenodd"/></svg>
@@ -357,7 +359,7 @@
     
     
       <li class="rrssb-twitter">
-        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2018/02/03/java-9.html&text=Java 9"
+        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic.html&text=Binary Arithmetic"
         class="popup">
           <span class="rrssb-icon"><svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><path d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62c-3.122.162-6.22-.646-8.86-2.32 2.702.18 5.375-.648 7.507-2.32-2.072-.248-3.818-1.662-4.49-3.64.802.13 1.62.077 2.4-.154-2.482-.466-4.312-2.586-4.412-5.11.688.276 1.426.408 2.168.387-2.135-1.65-2.73-4.62-1.394-6.965C5.574 7.816 9.54 9.84 13.802 10.07c-.842-2.738.694-5.64 3.434-6.48 2.018-.624 4.212.043 5.546 1.682 1.186-.213 2.318-.662 3.33-1.317-.386 1.256-1.248 2.312-2.4 2.942 1.048-.106 2.07-.394 3.02-.85-.458 1.182-1.343 2.15-2.48 2.71z"/></svg></span>
         </a>
@@ -365,7 +367,7 @@
     
     
       <li class="rrssb-linkedin">
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2018/02/03/java-9.html" class="popup">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic.html" class="popup">
         <span class="rrssb-icon">
           <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
             <path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"
@@ -378,7 +380,7 @@
     
     
       <li class="rrssb-googleplus">
-        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2018/02/03/java-9.html" class="popup">
+        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic.html" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 8.29h-1.95v2.6h-2.6v1.82h2.6v2.6H21v-2.6h2.6v-1.885H21V8.29zM7.614 10.306v2.925h3.9c-.26 1.69-1.755 2.925-3.9 2.925-2.34 0-4.29-2.016-4.29-4.354s1.885-4.353 4.29-4.353c1.104 0 2.014.326 2.794 1.105l2.08-2.08c-1.3-1.17-2.924-1.883-4.874-1.883C3.65 4.586.4 7.835.4 11.8s3.25 7.212 7.214 7.212c4.224 0 6.953-2.988 6.953-7.082 0-.52-.065-1.104-.13-1.624H7.614z"/></svg>
           </span>
@@ -412,16 +414,14 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-<div id="fb_comment" class="fb-comments" data-href="https://stalk-calvin.github.io/blog/2018/02/03/java-9.html" data-numposts="5" data-width="100%" data-colorscheme="dark" data-order-by="reverse_time"></div>
+<div id="fb_comment" class="fb-comments" data-href="https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic.html" data-numposts="5" data-width="100%" data-colorscheme="dark" data-order-by="reverse_time"></div>
 
           
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic.html" class="btn" title="Binary Arithmetic">&laquo; Binary Arithmetic</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2018/01/24/proxy-vpn.html" class="btn" title="Proxy and VPN">Proxy and VPN &raquo;</a>
+              <a href="https://stalk-calvin.github.io/blog/2018/02/03/java-9.html" class="btn" title="Java 9">Java 9 &raquo;</a>
             
           </nav><!-- /.pagination -->
 
@@ -551,7 +551,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 <script>
 function addTohistory() {
   if (!window.location.host.startsWith("127.0.0.1")) {
-    history.pushState({}, 'Java 9', 'https://stalk-calvin.github.io/blog/2018/02/03/java-9.html');
+    history.pushState({}, 'Binary Arithmetic', 'https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic.html');
   }
 }
 </script>

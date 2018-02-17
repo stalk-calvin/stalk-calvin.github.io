@@ -147,6 +147,15 @@
   
   
     <url>
+      <loc>https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic.html</loc>
+      
+        <lastmod>2018-02-17T00:00:00-08:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
       <loc>https://stalk-calvin.github.io/blog/2018/02/03/java-9.html</loc>
       
         <lastmod>2018-02-03T00:00:00-08:00</lastmod>

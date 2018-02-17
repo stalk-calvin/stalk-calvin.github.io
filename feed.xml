@@ -14,7 +14,36 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 03 Feb 2018 14:01:33 -0800</lastBuildDate>
+    <lastBuildDate>Sat, 17 Feb 2018 13:37:32 -0800</lastBuildDate>
+	
+		<item>
+			<title>Binary Arithmetic</title>
+			
+				<description>Elementary arithmetic operations in 0 and 1</description>
+			
+        
+          <category>binary</category>
+        
+          <category>arithmetic</category>
+        
+          <category>addition</category>
+        
+          <category>subtraction</category>
+        
+          <category>multiplication</category>
+        
+          <category>division</category>
+        
+			<pubDate>17 February 2018</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic</guid>
+		</item>
 	
 		<item>
 			<title>Java 9</title>
