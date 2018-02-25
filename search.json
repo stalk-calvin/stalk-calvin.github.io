@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "Complement",
+      "link"			: "https://stalk-calvin.github.io/blog/2018/02/24/complement.html",
+      "excerpt"		: "Why is this important?",
+      "tags"        : ["complement","computer","binary","number","subtraction"],
+      "date"        : "2018 Feb 24",
+      "year"        : 2018
+    }
+  
+
+  
+    ,{
       "title"			: "Binary Arithmetic",
       "link"			: "https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic.html",
       "excerpt"		: "Elementary arithmetic operations in 0 and 1",
