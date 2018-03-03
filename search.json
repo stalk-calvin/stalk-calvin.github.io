@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "CODE",
+      "link"			: "https://stalk-calvin.github.io/blog/2018/03/03/code.html",
+      "excerpt"		: "The Hidden Language of Computer Hardware and Software",
+      "tags"        : ["bookreview","code","hardware","software","computer","Charles","Petzold"],
+      "date"        : "2018 Mar 03",
+      "year"        : 2018
+    }
+  
+
+  
+    ,{
       "title"			: "Complement",
       "link"			: "https://stalk-calvin.github.io/blog/2018/02/24/complement.html",
       "excerpt"		: "Why is this important?",

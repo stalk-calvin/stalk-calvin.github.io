@@ -80,3 +80,8 @@
 .listOrderedStyle span {
     color: #fff;
 }
+
+span.checked {
+  color: orange;
+}
+
