@@ -14,7 +14,34 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 03 Mar 2018 14:38:32 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 11 Mar 2018 05:05:21 -0700</lastBuildDate>
+	
+		<item>
+			<title>C Pointers Explained</title>
+			
+				<description>Yet again.</description>
+			
+        
+          <category>pointer</category>
+        
+          <category>reference</category>
+        
+          <category>memory</category>
+        
+          <category>computer</category>
+        
+          <category>programming</category>
+        
+			<pubDate>10 March 2018</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2018/03/10/pointers.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2018/03/10/pointers</guid>
+		</item>
 	
 		<item>
 			<title>CODE</title>
