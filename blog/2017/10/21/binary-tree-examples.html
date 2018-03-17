@@ -230,59 +230,63 @@
 
 <p>For all the examples below, let’s assume that we have a TreeNode structured available like below:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+<div style="margin-bottom: 2%;" class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">TreeNode</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">val</span><span class="o">;</span>
+    <span class="n">TreeNode</span> <span class="n">left</span><span class="o">;</span>
+    <span class="n">TreeNode</span> <span class="n">right</span><span class="o">;</span>
 
-    public TreeNode(int data) {
-        this.val = val;
-        this.left = null;
-        this.right = null;
-    }
-}</code></pre></figure>
-
+    <span class="kd">public</span> <span class="nf">TreeNode</span><span class="o">(</span><span class="kt">int</span> <span class="n">data</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">val</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">left</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">right</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
 <h3 id="1-invert-a-binary-tree">1. Invert a binary tree</h3>
 
-<p>Let’s start off with a famous tree problem of inverting a binary tree. Max Howell, creator of the <a href="https://en.wikipedia.org/wiki/Homebrew_(package_management_software)">HomeBrew</a>, one day <a href="https://twitter.com/mxcl/status/608682016205344768">tweeted</a> saying that “Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on a whiteboard so fuck off.”. Wow, pretty bold statement, but understandable.</p>
+<p>Let’s start off with a famous tree problem of inverting a binary tree. One day, Max Howell (creator of the <a href="https://en.wikipedia.org/wiki/Homebrew_(package_management_software)" target="_blank" rel="noopener noreferrer">HomeBrew</a>)  <a href="https://twitter.com/mxcl/status/608682016205344768" target="_blank" rel="noopener noreferrer">tweeted</a> saying that “Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on a whiteboard so fuck off”. Wow, that is a pretty bold statement, but understandable.</p>
 
 <p><strong>Problem statement</strong>: “Invert a binary tree.”</p>
 
 <p>Here is a visual example of what inverting a tree means:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">     4
+<div class="language-text highlighter-rouge"><pre class="highlight"><code>     4
    /   \
   2     7
  / \   / \
-1   3 6   9</code></pre></figure>
-
+1   3 6   9
+</code></pre>
+</div>
 <p>to</p>
-
-<figure class="highlight"><pre><code class="language-text" data-lang="text">     4
+<div class="language-text highlighter-rouge"><pre class="highlight"><code>     4
    /   \
   7     2
  / \   / \
-9   6 3   1</code></pre></figure>
+9   6 3   1
+</code></pre>
+</div>
 
 <p>The problem is pretty simple when you have a visual example like above. It is solved using a BFS tree traversal (as we went over in the <a href="/blog/2017/10/07/binary-trees.html">previous blog post</a>). We can swap the left and right child as we go along BFS traversing the tree iteratively.</p>
 
 <p><strong>Code solution</strong>:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">public TreeNode invertTree(TreeNode root) {
-    if (root == null) return root;
-    Queue&lt;TreeNode&gt; queue = new LinkedList&lt;TreeNode&gt;();
-    queue.offer(root);
-    while (!queue.isEmpty()) {
-        TreeNode node = queue.poll();
-        TreeNode tmp = node.left;
-        node.left = node.right;
-        node.right = tmp;
-        if (node.left != null) queue.offer(node.left);
-        if (node.right != null) queue.offer(node.right);
-    }
-    return root;
-}</code></pre></figure>
-
+<div style="margin-bottom: 2%;" class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="n">TreeNode</span> <span class="nf">invertTree</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">root</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span> <span class="n">root</span><span class="o">;</span>
+    <span class="n">Queue</span><span class="o">&lt;</span><span class="n">TreeNode</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">TreeNode</span><span class="o">&gt;();</span>
+    <span class="n">queue</span><span class="o">.</span><span class="na">offer</span><span class="o">(</span><span class="n">root</span><span class="o">);</span>
+    <span class="k">while</span> <span class="o">(!</span><span class="n">queue</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+        <span class="n">TreeNode</span> <span class="n">node</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="na">poll</span><span class="o">();</span>
+        <span class="n">TreeNode</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="na">left</span><span class="o">;</span>
+        <span class="n">node</span><span class="o">.</span><span class="na">left</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="na">right</span><span class="o">;</span>
+        <span class="n">node</span><span class="o">.</span><span class="na">right</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">left</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="n">queue</span><span class="o">.</span><span class="na">offer</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">left</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">right</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="n">queue</span><span class="o">.</span><span class="na">offer</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">root</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre>
+</div>
 <h3 id="2-lowest-common-ancestor-of-a-binary-search-tree-bst">2. Lowest Common Ancestor of a Binary Search Tree (BST)</h3>
 
 <p>Here is another quite popular algorithm for a binary tree, searching for the lowest common ancestor.</p>
@@ -293,7 +297,7 @@
 
 <p>Example:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>        _______6______
+<div class="language-text highlighter-rouge"><pre class="highlight"><code>        _______6______
        /              \
     ___2__          ___8__
    /      \        /      \
@@ -312,20 +316,22 @@
 
 <p><strong>Code solution</strong>:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-    while (root != null) {
-        if (root.val &lt; p.val &amp;&amp; root.val &lt; q.val) { //search right
-            root = root.right;
-        } else if (root.val &gt; p.val &amp;&amp; root.val &gt; q.val) { //search left
-            root = root.left;
-        } else { //found
-            return root;
-        }
-    }
-    return null;
-}</code></pre></figure>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="n">TreeNode</span> <span class="nf">lowestCommonAncestor</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">,</span> <span class="n">TreeNode</span> <span class="n">p</span><span class="o">,</span> <span class="n">TreeNode</span> <span class="n">q</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">while</span> <span class="o">(</span><span class="n">root</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">val</span> <span class="o">&lt;</span> <span class="n">p</span><span class="o">.</span><span class="na">val</span> <span class="o">&amp;&amp;</span> <span class="n">root</span><span class="o">.</span><span class="na">val</span> <span class="o">&lt;</span> <span class="n">q</span><span class="o">.</span><span class="na">val</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//search right</span>
+            <span class="n">root</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="na">right</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">val</span> <span class="o">&gt;</span> <span class="n">p</span><span class="o">.</span><span class="na">val</span> <span class="o">&amp;&amp;</span> <span class="n">root</span><span class="o">.</span><span class="na">val</span> <span class="o">&gt;</span> <span class="n">q</span><span class="o">.</span><span class="na">val</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//search left</span>
+            <span class="n">root</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="na">left</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span> <span class="c1">//found</span>
+            <span class="k">return</span> <span class="n">root</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre>
+</div>
 
-<p>Above algorithm is solved iteratively rather than recursively. We could certainly have solved the algorithm recursively. If you would like to solve this problem in recursion, it is indeed simple. You can just return the recursion when those if conditions are met in the loop.</p>
+<p>Above algorithm is solved iteratively rather than recursively. We could certainly have solved the algorithm recursively. If you would like to solve this problem in recursion, it is indeed simpler. You can just return the function itself creating a recursion when those if conditions are met in the loop. You would need the base case for the recursion to avoid infinite recursion.</p>
 
 <h3 id="3-lca-of-a-binary-tree-instead-of-bst">3. LCA of a Binary Tree (instead of BST)</h3>
 
@@ -339,31 +345,33 @@
 
 <p><strong>Code solution</strong>:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">public TreeNode lca(TreeNode root, TreeNode a, TreeNode b) {
-    if (root == null) {
-        return null;
-    }
-    if (root.equals(a) || root.equals(b)) {
-        return root;
-    }
-    TreeNode left = lca(root.left, a, b);
-    TreeNode right = lca(root.right, a, b);
-    if (left != null &amp;&amp; right != null ) return root;
-    if (left == null) return right;
-    else return left;
-}</code></pre></figure>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="n">TreeNode</span> <span class="nf">lca</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">,</span> <span class="n">TreeNode</span> <span class="n">a</span><span class="o">,</span> <span class="n">TreeNode</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">root</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">a</span><span class="o">)</span> <span class="o">||</span> <span class="n">root</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">b</span><span class="o">))</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">root</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="n">TreeNode</span> <span class="n">left</span> <span class="o">=</span> <span class="n">lca</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">left</span><span class="o">,</span> <span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">);</span>
+    <span class="n">TreeNode</span> <span class="n">right</span> <span class="o">=</span> <span class="n">lca</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">right</span><span class="o">,</span> <span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">);</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">left</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">right</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">)</span> <span class="k">return</span> <span class="n">root</span><span class="o">;</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">left</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span> <span class="n">right</span><span class="o">;</span>
+    <span class="k">else</span> <span class="k">return</span> <span class="n">left</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre>
+</div>
 
-<p>Let’s analyze the code a bit. The code is traversing the tree using a post-order DFS with a few conditions. First, it traverses the tree all the way to left <strong>unless</strong> we have a hit the node <code class="highlighter-rouge">a</code> or <code class="highlighter-rouge">b</code> which are the 2 base nodes to get the lowest common ancestor. Then we will recurse to locate <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">b</code> in the tree. At the time when both left and right are defined, we have found the lowest common ancestor. Note that using a post-order DFS is important here as we need to make sure the parent nodes are hit later than the children nodes.</p>
+<p>Let’s analyze the code a bit. This piece of code might confuse you as it did for me a lot. The code is traversing the tree using a post-order DFS with a few conditions. First, it traverses the tree all the way to left <strong>unless</strong> we have a hit the node <code class="highlighter-rouge">a</code> or <code class="highlighter-rouge">b</code> which are the 2 base nodes to get the lowest common ancestor. Then we will recurse to locate <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">b</code> in the tree. At the time when both left and right are defined, we have found the lowest common ancestor. Using the post-order DFS is important here as we need to make sure the parent nodes are hit the last to ensure that we have the ultimate parent node.</p>
 
 <h3 id="4-symmetric-tree">4. Symmetric Tree</h3>
 
 <p><strong>Problem statement</strong>:</p>
 
-<p>Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).</p>
+<p>“Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).”</p>
 
 <p>For example, this binary tree is symmetric:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>    1
+<div class="language-text highlighter-rouge"><pre class="highlight"><code>    1
    / \
   2   2
  / \ / \
@@ -373,7 +381,7 @@
 
 <p>But the following tree is not:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>    1
+<div class="language-text highlighter-rouge"><pre class="highlight"><code>    1
    / \
   2   2
    \   \
@@ -385,19 +393,21 @@
 
 <p><strong>Code solution</strong>:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">public boolean isSymmetric(TreeNode root) {
-    if (root == null) return true;
-    if (root.left == null &amp;&amp; root.right == null) return true;
-    return isSymmetric(root.left, root.right);
-}
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isSymmetric</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">root</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">left</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">root</span><span class="o">.</span><span class="na">right</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="k">return</span> <span class="nf">isSymmetric</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">left</span><span class="o">,</span> <span class="n">root</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
+<span class="o">}</span>
 
-private boolean isSymmetric(TreeNode left, TreeNode right) {
-    if (left == null &amp;&amp; right == null) return true;
-    if (left == null || right == null) return false;
-    return (left.val == right.val) &amp;&amp; isSymmetric(left.left, right.right) &amp;&amp; isSymmetric(left.right, right.left);
-}</code></pre></figure>
+<span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">isSymmetric</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">left</span><span class="o">,</span> <span class="n">TreeNode</span> <span class="n">right</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">left</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">right</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">left</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">right</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="k">return</span> <span class="o">(</span><span class="n">left</span><span class="o">.</span><span class="na">val</span> <span class="o">==</span> <span class="n">right</span><span class="o">.</span><span class="na">val</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">isSymmetric</span><span class="o">(</span><span class="n">left</span><span class="o">.</span><span class="na">left</span><span class="o">,</span> <span class="n">right</span><span class="o">.</span><span class="na">right</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">isSymmetric</span><span class="o">(</span><span class="n">left</span><span class="o">.</span><span class="na">right</span><span class="o">,</span> <span class="n">right</span><span class="o">.</span><span class="na">left</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre>
+</div>
 
-<p>Above example is basically another DFS variation which checks the value as it traverses 2 trees at the same time. It is simply checking the left node’s left child must be equal to the right node’s right child; vice-versa. We could have solved this using BFS traversal as well. Basically instead of one queue, track iteratively with 2 separate queues. Then for each level, check the child nodes symmetry like similar to above code, <code class="highlighter-rouge">left.val != right.val</code>. In my opinion, both solutions make good sense. Intuitively for me, BFS solution came into my mind first but I presented DFS solution because it turns out this is easier to understand and follow through.</p>
+<p>This straightforward example is another DFS variation (pre-order) which checks the value as it traverses 2 trees at the same time. It is simply checking the left node’s left child must be equal to the right node’s right child; vice-versa. We could have solved this using BFS traversal as well. Basically instead of one queue, track iteratively with 2 separate queues. Then for each level, check the child nodes symmetry like similar to above code, <code class="highlighter-rouge">left.val != right.val</code>. In my opinion, both solutions make good sense. Intuitively for me, BFS solution came into my mind first but I presented DFS solution because this solution is pretty easy to understand and follow through.</p>
 
 <h3 id="5-minimum-height">5. Minimum height</h3>
 
@@ -405,11 +415,11 @@ private boolean isSymmetric(TreeNode left, TreeNode right) {
 
 <p>Given a binary tree, find its minimum depth.</p>
 
-<p>The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</p>
+<p>“The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.”</p>
 
 <p>Here is a visual example:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>        _______6______
+<div class="language-text highlighter-rouge"><pre class="highlight"><code>        _______6______
        /              \
     ___2__          ___8__
    /      \        /      \
@@ -423,38 +433,40 @@ private boolean isSymmetric(TreeNode left, TreeNode right) {
 
 <p><strong>Code solution</strong>:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">public int minDepth(TreeNode root) {
-    if (root == null)
-        return 0;
-    int depth = 1;
-    Queue&lt;TreeNode&gt; queue = new LinkedList&lt;TreeNode&gt;();
-    TreeNode temp, magic = new TreeNode(0);
-    queue.add(root);
-    queue.add(magic);
-    while (!queue.isEmpty()) {
-        temp = queue.poll();
-        if (temp.equals(magic)) {
-            if (!queue.isEmpty()) {
-                depth++;
-                queue.add(magic);
-            }
-            continue;
-        }
-        if (temp.left == null &amp;&amp; temp.right == null)
-            return depth;
-        if (temp.left != null)
-            queue.add(temp.left);
-        if (temp.right != null)
-            queue.add(temp.right);
-    }
-    return depth;
-}</code></pre></figure>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">minDepth</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">root</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">depth</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="n">Queue</span><span class="o">&lt;</span><span class="n">TreeNode</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">TreeNode</span><span class="o">&gt;();</span>
+    <span class="n">TreeNode</span> <span class="n">temp</span><span class="o">,</span> <span class="n">magic</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeNode</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+    <span class="n">queue</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">root</span><span class="o">);</span>
+    <span class="n">queue</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">magic</span><span class="o">);</span>
+    <span class="k">while</span> <span class="o">(!</span><span class="n">queue</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="na">poll</span><span class="o">();</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">temp</span> <span class="o">==</span> <span class="n">magic</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(!</span><span class="n">queue</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+                <span class="n">depth</span><span class="o">++;</span>
+                <span class="n">queue</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">magic</span><span class="o">);</span>
+            <span class="o">}</span>
+            <span class="k">continue</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">temp</span><span class="o">.</span><span class="na">left</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">temp</span><span class="o">.</span><span class="na">right</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
+            <span class="k">return</span> <span class="n">depth</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">temp</span><span class="o">.</span><span class="na">left</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
+            <span class="n">queue</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">temp</span><span class="o">.</span><span class="na">left</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">temp</span><span class="o">.</span><span class="na">right</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
+            <span class="n">queue</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">temp</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">depth</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre>
+</div>
 
 <p>A simple and intuitive BFS traversal solution. The algorithm traverses level by level which checks whether it encounters a node with no children (both left and right child nodes are null). Meanwhile, it tracks the count of levels (<code class="highlighter-rouge">depth</code>) by adding a <code class="highlighter-rouge">magic</code> node to indicate the end of the level. After it found a node with no children, it simply returns the <code class="highlighter-rouge">depth</code> it has been counting.</p>
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>The tree problem is often solved using either DFS or BFS traversal. If you are planning to use DFS, the problem can be further reduced by choosing one of pre/in/post -order traversal. If you would like to know the distinct benefits of these 3 variations of DFS traversal, please check out my <a href="/blog/2017/10/07/binary-trees.html">previous post</a>. In this post, we saw some examples that are really fundamentals to the binary trees. There are binary trees which can also be self-balancing, such as AVL or Red-Black tree. It adds a slight complication to the algorithm as it requires the tree to rotate as it is self-balancing. However, the majority of the tree fundamentals stay the same. It prevents the tree being skewed to one side which could cut down worst-case time complexity by letting the tree always stay balanced. Trees are not always binary though. The number of leaves can, in fact, be more than 2. They are sometimes called ternary trees, quaternary trees and so on. However, we just normally call it an <code class="highlighter-rouge">n-ary</code> tree. There can be <a href="https://en.wikipedia.org/wiki/K-ary_tree">as many numbers of children</a> in the tree. There are certainly added complications on operations to this kind of tree. However, more leaves often lead to a slower performance. For instance, you may think ternary search is faster than binary search as <script type="math/tex">log_3(n)</script> produces smaller value than <script type="math/tex">log_2(n)</script>. However, this is quite misleading because when tree node has more than choices of 2, it no longer can apply one comparison per iteration. So in the end, it becomes slower. There is also a tree structure called a <code class="highlighter-rouge">trie</code> which can have any # of children as well. It is useful to auto-completing something which could be applied in searching a set of words in the dictionary. Anyways, in my view, a tree is just another objects (node) that made up to be a data structure like a linked list. When we know exactly what we are expecting, the algorithm can improve significantly.  If you are looking for more tree examples, I suggest you take a look at my <a href="https://github.com/stalk-calvin/Java-Algorithms/tree/master/src/main/java/org/calvin/Tree">GitHub</a>. I have summarized some common tree problems there.</p>
+<p>The tree problem is often solved using either DFS or BFS traversal. If you are planning to use DFS, the problem can be further reduced by choosing one of pre/in/post -order traversal. If you would like to know the distinct benefits of these 3 variations of DFS traversal, please check out my <a href="/blog/2017/10/07/binary-trees.html">previous post</a>. In this post, we saw some examples that are really fundamentals to the binary trees. There are binary trees which can also be self-balancing, such as AVL or Red-Black tree. It adds a slight complication to the algorithm as it requires the tree to rotate as it is self-balancing. However, the majority of the tree fundamentals stay the same. It prevents the tree being skewed to one side which could cut down worst-case time complexity by letting the tree always stay balanced. Trees are not always binary though. The number of leaves can, in fact, be more than 2. They are sometimes called ternary trees, quaternary trees and so on. However, we just normally call it an <code class="highlighter-rouge">n-ary</code> tree. There can be <a href="https://en.wikipedia.org/wiki/K-ary_tree">as many numbers of children</a> in the tree. There are certainly added complications on operations to this kind of tree. However, more leaves often lead to a slower performance. For instance, you may think ternary search is faster than binary search as <script type="math/tex">log_3(n)</script> produces smaller value than <script type="math/tex">log_2(n)</script>. However, this is quite misleading because when tree node has more than choices of 2, it no longer can apply one comparison per iteration. So in the end, it becomes slower. There is also a tree structure called a <code class="highlighter-rouge">trie</code> which can have any # of children as well. It is useful to auto-completing something which could be applied in searching a set of words in the dictionary. Anyways, in my view, a tree is just another object (node) which is made up to be a data structure like a linked list with strict rules. When we know exactly what we are expecting, the algorithm can improve significantly.  If you are looking for more tree examples, I suggest you take a look at my <a href="https://github.com/stalk-calvin/Java-Algorithms/tree/master/src/main/java/org/calvin/Tree">GitHub</a>. I have summarized some common tree problems there.</p>
 
 
           

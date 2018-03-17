@@ -234,27 +234,27 @@
 
 <p>Here is a little background on myself with version control system. I remember using <a href="https://en.wikipedia.org/wiki/Concurrent_Versions_System">CVS</a> (Concurrent Versions System) as my first repository back in mid-2000 in university. I literally had a very tiny knowledge of what the repository is and why it is required. When I joined my first software company, I started using the <a href="https://en.wikipedia.org/wiki/Apache_Subversion">SVN</a> (Apache Subversion) extensively. When I used it, it was very flexible in terms of how SVN generates diffs and handling the merges of my codes. I genuinely had an excellent workflow by enforcing the branching per issues and managing the trunk as the latest code setup. I was quite satisfied with it until I was exposed to <a href="https://en.wikipedia.org/wiki/Git">GIT</a>.</p>
 
-<p>At first, I wasn’t sure whether I am going to get accustomed to it partially because I was already very familiar with SVN and there wasn’t much of a motivation to jump off the SVN ship. I eventually moved onto GIT as it was becoming popular. After a few years of using it, I love it, #nosarcasm. It is not only faster in general, but its fully distributed meaning there is no centralized server to handle the code handling. So when you are coding, commits are very tangible and malleable to the local machines. This is where the <code class="highlighter-rouge">rebase</code> in Git comes really handy. Rebase basically is recreating your work of one branch onto another. Rebase is really powerful and there are a couple of really handy tasks you can do with rebase. I would like to introduce some of the daily <code class="highlighter-rouge">rebase</code> tasks I normally do day to day.</p>
+<p>At first, I wasn’t sure whether I am going to get accustomed to GIT partially because I was already very familiar with SVN and there wasn’t much of a motivation to jump off the SVN ship. I eventually moved onto GIT as it was becoming quite popular. After a few years of using GIT, I love it, #nosarcasm. It is not only faster in general, but its fully distributed meaning there is no centralized server to handle the code handling. So when you are coding, commits are very tangible and malleable to the local machines. This is where the <code class="highlighter-rouge">rebase</code> in Git comes really handy. Rebase basically is recreating your work of one branch onto another (or the same). Rebase is really powerful and there are a couple of really handy tasks you can do with rebase. I would like to share some of the daily <code class="highlighter-rouge">rebase</code> tasks I often do.</p>
 
-<p><strong><em>NOTE</em></strong>: When I am explaining below, I would assume you are already familiar with the <a href="https://jeffkreeftmeijer.com/git-flow/">GIT flow</a>. Also please note. This is important. Rebase means “copy commits, then try to forget the originals and use the copies instead”. <strong>This means “making a new history entirely”</strong>. This is the reason why you need <code class="highlighter-rouge">--force</code> during your push your code to the remote server. Therefore, it may be annoying for other people to manage their repository linked to the branch I rebased. Since the new commits (after rebase) will have different hash, checking out the latest code by the traditional <code class="highlighter-rouge">git pull</code> is not going to work well. This is why it is best to stay away from rebasing when you are working on a branch with multiple people. The branch is almost always owned and ran by me. So this problem rarely happens to me at least.</p>
+<p><strong><em>NOTE</em></strong>: When I am explaining below, I would assume you are already familiar with the <a href="https://jeffkreeftmeijer.com/git-flow/">GIT flow</a>. Also please note as it is important. Rebase means “copy commits, then try to forget the originals and use the copies instead”. <strong>This means “making a new history entirely”</strong>. This is the reason why you most likely need a <code class="highlighter-rouge">--force</code> during your push to the remote server. It could be a little annoying for other people to manage their repository linked to the branch I rebased. Since the new commits (after rebase) will have different hash, checking out the latest code by the traditional <code class="highlighter-rouge">git pull</code> is not going to work well. This is why it is best to stay away from rebasing when you are working with multiple people on the same branch. The issue branch is almost always owned and ran by me. So this problem rarely happens to me at least.</p>
 
 <h2 style="margin-top: 10%" id="1-fast-forward-merge">1. Fast-forward merge</h2>
 
-<p style="margin-bottom: 2%">Rebase is very handy when you try to merge your feature code to the <code class="highlighter-rouge">master</code> branch. Let’s say you have a <code class="highlighter-rouge">master</code> branch with X commit point and created a feature branch called <code class="highlighter-rouge">feature</code> from <code class="highlighter-rouge">master</code>. Here is how master branch looks like currently:</p>
+<p style="margin-bottom: 2%">Rebase is very handy when you try to merge stuffs. Here is an example using the <code class="highlighter-rouge">feature</code> branch and the <code class="highlighter-rouge">master</code> branch. Let’s say you have a <code class="highlighter-rouge">master</code> branch with X commit point and created a feature branch called <code class="highlighter-rouge">feature</code>. Here is how master branch looks like currently:</p>
 
 <table class="image" style="margin-top:1%;">
 <caption class="custom" align="bottom"></caption>
 <tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/git_rebase/git_rebase_fast_forward1.png" alt="" /></td></tr>
 </table>
 
-<p style="margin-bottom: 2%">Now after making some code changes to this <code class="highlighter-rouge">feature</code> branch and added few commits on top of it:</p>
+<p style="margin-bottom: 2%">I’ve created a <code class="highlighter-rouge">feature</code> branch from this commit and made a few commits on top of it, like below:</p>
 
 <table class="image" style="margin-top:1%;">
 <caption class="custom" align="bottom"></caption>
 <tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/git_rebase/git_rebase_fast_forward2.png" alt="" /></td></tr>
 </table>
 
-<p style="margin-bottom: 2%">Let’s make some complication by adding a commit into the <code class="highlighter-rouge">master</code> after this <code class="highlighter-rouge">feature</code> branch was created:</p>
+<p style="margin-bottom: 2%">Let’s make some complication by adding a commit in the <code class="highlighter-rouge">master</code> branch after this <code class="highlighter-rouge">feature</code> branch was created:</p>
 
 <table class="image" style="margin-top:1%;">
 <caption class="custom" align="bottom"></caption>
@@ -271,7 +271,9 @@
 Let's assume we would want to run the `merge` command and decided to bring changes from <code class="highlighter-rouge">master</code> branch to <code class="highlighter-rouge">feature</code> branch:
 
 <div class="highlighter-rouge" style="margin-top:1%"><pre class="highlight"><code>$git checkout master
-$git merge feature
+$git pull // gets the latest change in master branch
+$git checkout feature
+$git merge master
 </code></pre>
 </div>
 
@@ -488,6 +490,10 @@ However, notice there is no dummy commit in the <code class="highlighter-rouge">
 <caption class="custom" align="bottom"></caption>
 <tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/git_rebase/git_rebase_deleted_24.png" alt="" /></td></tr>
 </table>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>These rebase tasks are some of common ones I do daily to make commits happy. Obviously, you are going to get familiar a lot quicker if you start using GIT itself. In addition, there are a couple more rebase tasks you can do such as re-ordering commits, separate out portion of code into a separate commit, “fixup”, or even exec where you can run command within GIT commit. Also, I’d like to add that <code class="highlighter-rouge">git commit --amend</code> is really just a rebase of the most recent commit. If you know the power of amend, extend the power to all the other commits!</p>
 
 
           
