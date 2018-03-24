@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "Encryption",
+      "link"			: "https://stalk-calvin.github.io/blog/2018/03/10/encryption.html",
+      "excerpt"		: "symmetric vs asymmetric",
+      "tags"        : ["computer","programming","cryptographic","algorithm","scheme","security","RSA","AES"],
+      "date"        : "2018 Mar 10",
+      "year"        : 2018
+    }
+  
+
+  
+    ,{
       "title"			: "C Pointers Explained",
       "link"			: "https://stalk-calvin.github.io/blog/2018/03/10/pointers.html",
       "excerpt"		: "Yet again.",

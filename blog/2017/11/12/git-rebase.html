@@ -232,11 +232,11 @@
 
 <h2 id="introduction">Introduction</h2>
 
-<p>Here is a little background on myself with version control system. I remember using <a href="https://en.wikipedia.org/wiki/Concurrent_Versions_System">CVS</a> (Concurrent Versions System) as my first repository back in mid-2000 in university. I literally had a very tiny knowledge of what the repository is and why it is required. When I joined my first software company, I started using the <a href="https://en.wikipedia.org/wiki/Apache_Subversion">SVN</a> (Apache Subversion) extensively. When I used it, it was very flexible in terms of how SVN generates diffs and handling the merges of my codes. I genuinely had an excellent workflow by enforcing the branching per issues and managing the trunk as the latest code setup. I was quite satisfied with it until I was exposed to <a href="https://en.wikipedia.org/wiki/Git">GIT</a>.</p>
+<p>Here is a little background on myself with version control system. I remember using <a href="https://en.wikipedia.org/wiki/Concurrent_Versions_System" target="_blank" rel="noopener noreferrer">CVS</a> (Concurrent Versions System) as my first repository back in mid-2000 in university. I literally had a very tiny knowledge of what the repository is and why it is required. When I joined my first software company, I started using the <a href="https://en.wikipedia.org/wiki/Apache_Subversion" target="_blank" rel="noopener noreferrer">SVN</a> (Apache Subversion) extensively. When I used it, it was very flexible in terms of how SVN generates diffs and handling the merges of my codes. I genuinely had an excellent workflow by enforcing the branching per issues and managing the trunk as the latest code setup. I was quite satisfied with it until I was exposed to <a href="https://en.wikipedia.org/wiki/Git" target="_blank" rel="noopener noreferrer">GIT</a>.</p>
 
 <p>At first, I wasn’t sure whether I am going to get accustomed to GIT partially because I was already very familiar with SVN and there wasn’t much of a motivation to jump off the SVN ship. I eventually moved onto GIT as it was becoming quite popular. After a few years of using GIT, I love it, #nosarcasm. It is not only faster in general, but its fully distributed meaning there is no centralized server to handle the code handling. So when you are coding, commits are very tangible and malleable to the local machines. This is where the <code class="highlighter-rouge">rebase</code> in Git comes really handy. Rebase basically is recreating your work of one branch onto another (or the same). Rebase is really powerful and there are a couple of really handy tasks you can do with rebase. I would like to share some of the daily <code class="highlighter-rouge">rebase</code> tasks I often do.</p>
 
-<p><strong><em>NOTE</em></strong>: When I am explaining below, I would assume you are already familiar with the <a href="https://jeffkreeftmeijer.com/git-flow/">GIT flow</a>. Also please note as it is important. Rebase means “copy commits, then try to forget the originals and use the copies instead”. <strong>This means “making a new history entirely”</strong>. This is the reason why you most likely need a <code class="highlighter-rouge">--force</code> during your push to the remote server. It could be a little annoying for other people to manage their repository linked to the branch I rebased. Since the new commits (after rebase) will have different hash, checking out the latest code by the traditional <code class="highlighter-rouge">git pull</code> is not going to work well. This is why it is best to stay away from rebasing when you are working with multiple people on the same branch. The issue branch is almost always owned and ran by me. So this problem rarely happens to me at least.</p>
+<p><strong><em>NOTE</em></strong>: When I am explaining below, I would assume you are already familiar with the <a href="https://jeffkreeftmeijer.com/git-flow/" target="_blank" rel="noopener noreferrer">GIT flow</a>. Also please note as it is important. Rebase means “copy commits, then try to forget the originals and use the copies instead”. <strong>This means “making a new history entirely”</strong>. This is the reason why you most likely need a <code class="highlighter-rouge">--force</code> during your push to the remote server. It could be a little annoying for other people to manage their repository linked to the branch I rebased. Since the new commits (after rebase) will have different hash, checking out the latest code by the traditional <code class="highlighter-rouge">git pull</code> is not going to work well. This is why it is best to stay away from rebasing when you are working with multiple people on the same branch. The issue branch is almost always owned and ran by me. So this problem rarely happens to me at least.</p>
 
 <h2 style="margin-top: 10%" id="1-fast-forward-merge">1. Fast-forward merge</h2>
 
@@ -288,7 +288,6 @@ The result (shown below) leaves a dummy commit which specifies the code had been
 
 
 
-
 <table class="image" style="margin-top:1%;">
 <caption class="custom" align="bottom"></caption>
 <tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/git_rebase/git_rebase_fast_forward3.png" alt="" /></td></tr>
@@ -303,7 +302,6 @@ $git merge feature
 </div>
 
 This will merge the <code class="highlighter-rouge">feature</code> branch cleanly just by fast forwarding since <code class="highlighter-rouge">feature</code> branch and <code class="highlighter-rouge">master</code> branch is on the same path of commits. However, the dummy commit still follows:
-
 
 
 
@@ -332,8 +330,6 @@ $git rebase master
 </div>
 
 Notice there is no dummy commit because it restructured the commit history basically by running the rebase:
-
-anot
 
 
 
@@ -368,7 +364,6 @@ Another fast-forwarding here since the <code class="highlighter-rouge">feature</
 
 
 
-
 <table class="image" style="margin-top:1%;">
 <caption class="custom" align="bottom"></caption>
 <tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/git_rebase/git_rebase_fast_forward5.png" alt="" /></td></tr>
@@ -376,7 +371,6 @@ Another fast-forwarding here since the <code class="highlighter-rouge">feature</
 
 
 However, notice there is no dummy commit in the <code class="highlighter-rouge">master</code> branch either because it just fast forwarded whatever we have in <code class="highlighter-rouge">feature</code> to be the new <code class="highlighter-rouge">master</code>.
-
 
 
 

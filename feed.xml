@@ -14,7 +14,40 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sun, 18 Mar 2018 11:21:18 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 24 Mar 2018 15:27:02 -0700</lastBuildDate>
+	
+		<item>
+			<title>Encryption</title>
+			
+				<description>symmetric vs asymmetric</description>
+			
+        
+          <category>computer</category>
+        
+          <category>programming</category>
+        
+          <category>cryptographic</category>
+        
+          <category>algorithm</category>
+        
+          <category>scheme</category>
+        
+          <category>security</category>
+        
+          <category>RSA</category>
+        
+          <category>AES</category>
+        
+			<pubDate>10 March 2018</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2018/03/10/encryption.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2018/03/10/encryption</guid>
+		</item>
 	
 		<item>
 			<title>C Pointers Explained</title>
