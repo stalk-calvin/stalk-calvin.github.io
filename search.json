@@ -14,10 +14,10 @@
   
     ,{
       "title"			: "Encryption",
-      "link"			: "https://stalk-calvin.github.io/blog/2018/03/10/encryption.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2018/03/24/encryption.html",
       "excerpt"		: "symmetric vs asymmetric",
       "tags"        : ["computer","programming","cryptographic","algorithm","scheme","security","RSA","AES"],
-      "date"        : "2018 Mar 10",
+      "date"        : "2018 Mar 24",
       "year"        : 2018
     }
   
