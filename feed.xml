@@ -14,7 +14,32 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 24 Mar 2018 15:27:02 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 08 Apr 2018 22:15:45 -0700</lastBuildDate>
+	
+		<item>
+			<title>Computer Science - Distilled</title>
+			
+				<description>Art of Solving Computational Problems</description>
+			
+        
+          <category>bookreview</category>
+        
+          <category>computer</category>
+        
+          <category>programming</category>
+        
+          <category>algorithm</category>
+        
+			<pubDate>07 April 2018</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2018/04/07/computer-sceince-distilled.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2018/04/07/computer-sceince-distilled</guid>
+		</item>
 	
 		<item>
 			<title>Encryption</title>

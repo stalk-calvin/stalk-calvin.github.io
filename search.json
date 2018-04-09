@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "Computer Science - Distilled",
+      "link"			: "https://stalk-calvin.github.io/blog/2018/04/07/computer-sceince-distilled.html",
+      "excerpt"		: "Art of Solving Computational Problems",
+      "tags"        : ["bookreview","computer","programming","algorithm"],
+      "date"        : "2018 Apr 07",
+      "year"        : 2018
+    }
+  
+
+  
+    ,{
       "title"			: "Encryption",
       "link"			: "https://stalk-calvin.github.io/blog/2018/03/10/encryption.html",
       "excerpt"		: "symmetric vs asymmetric",
