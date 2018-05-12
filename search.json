@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "S.O.L.I.D. principles",
+      "link"			: "https://stalk-calvin.github.io/blog/2018/05/12/SOLID.html",
+      "excerpt"		: "Principles for the object-oriented working",
+      "tags"        : ["computer","working","SOLID","OOP"],
+      "date"        : "2018 May 12",
+      "year"        : 2018
+    }
+  
+
+  
+    ,{
       "title"			: "알고리즘 라이프 (Bad Choices)",
       "link"			: "https://stalk-calvin.github.io/blog/2018/04/28/bad-choices.html",
       "excerpt"		: "일상 속 스마트한 선택을 위해",

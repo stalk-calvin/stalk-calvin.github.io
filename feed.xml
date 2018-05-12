@@ -14,7 +14,32 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 28 Apr 2018 17:00:54 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 12 May 2018 23:08:03 -0700</lastBuildDate>
+	
+		<item>
+			<title>S.O.L.I.D. principles</title>
+			
+				<description>Principles for the object-oriented working</description>
+			
+        
+          <category>computer</category>
+        
+          <category>working</category>
+        
+          <category>SOLID</category>
+        
+          <category>OOP</category>
+        
+			<pubDate>12 May 2018</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2018/05/12/SOLID.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2018/05/12/SOLID</guid>
+		</item>
 	
 		<item>
 			<title>알고리즘 라이프 (Bad Choices)</title>
