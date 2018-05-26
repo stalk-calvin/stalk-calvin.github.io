@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "ASCII vs Unicode",
+      "link"			: "https://stalk-calvin.github.io/blog/2018/05/26/ascii-unicode.html",
+      "excerpt"		: "Understanding why they were created in the first place",
+      "tags"        : ["computer","ascii","unicode","encoding"],
+      "date"        : "2018 May 26",
+      "year"        : 2018
+    }
+  
+
+  
+    ,{
       "title"			: "S.O.L.I.D. principles",
       "link"			: "https://stalk-calvin.github.io/blog/2018/05/12/SOLID.html",
       "excerpt"		: "Principles for the object-oriented working",

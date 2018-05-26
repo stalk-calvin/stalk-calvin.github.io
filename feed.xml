@@ -14,7 +14,32 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 12 May 2018 23:08:03 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 26 May 2018 13:27:53 -0700</lastBuildDate>
+	
+		<item>
+			<title>ASCII vs Unicode</title>
+			
+				<description>Understanding why they were created in the first place</description>
+			
+        
+          <category>computer</category>
+        
+          <category>ascii</category>
+        
+          <category>unicode</category>
+        
+          <category>encoding</category>
+        
+			<pubDate>26 May 2018</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2018/05/26/ascii-unicode.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2018/05/26/ascii-unicode</guid>
+		</item>
 	
 		<item>
 			<title>S.O.L.I.D. principles</title>

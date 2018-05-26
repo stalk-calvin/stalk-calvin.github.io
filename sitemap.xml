@@ -145,6 +145,28 @@
        </url>
     
   
+    
+      <url>
+        <loc>https://stalk-calvin.github.io/blog/page8/</loc>
+        
+          
+          
+          
+          <priority>1.0</priority>
+          
+        
+       </url>
+    
+  
+  
+    <url>
+      <loc>https://stalk-calvin.github.io/blog/2018/05/26/ascii-unicode.html</loc>
+      
+        <lastmod>2018-05-26T00:00:00-07:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
   
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/05/12/SOLID.html</loc>
