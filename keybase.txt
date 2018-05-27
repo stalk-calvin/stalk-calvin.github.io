@@ -21,6 +21,16 @@ To do so, I am signing this object:
       "uid": "8f876b267bb4da7dc7c931ca22c54119",
       "username": "stalkcalvin"
     },
+    "merkle_root": {
+      "ctime": 1527388550,
+      "hash_meta": "57cbdad0036b9725c87cb027e3cf1affd7e7eda8671899b80d7c86aa28c1b7e2",
+      "seqno": 2938902
+    },
+    "revoke": {
+      "sig_ids": [
+        "17d0cc621718391fbf393bbe83c97538b8801e62a77664ceac23397b6ea28abc0f"
+      ]
+    },
     "service": {
       "hostname": "stalk-calvin.github.io",
       "protocol": "https:"
@@ -28,10 +38,10 @@ To do so, I am signing this object:
     "type": "web_service_binding",
     "version": 1
   },
-  "ctime": 1527388135,
+  "ctime": 1527388554,
   "expire_in": 157680000,
-  "prev": "4883a748bb0e1a64c4c9a385d48706cc6286199cad31b390eed4c726098e35ad",
-  "seqno": 40,
+  "prev": "885eafacf405740b57f95c3d789d252de5bb00c34b12860e5a82340d0d563c53",
+  "seqno": 42,
   "tag": "signature"
 }
 
@@ -39,29 +49,32 @@ which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
 
-owGtkm1QVFUYx5dXYQ1UmCEqELmTRPHifX9ZxBAIrSymgURcDO+95+xyY7l32b1s
-gqFYToSskWUzgIPrADZqAUbppAHyQaWEiXJGkCCTMaaxQBzAcCCkezFn+tDHzvlw
-5nnO7/8/z/PM+TDIxxDglXDkUHtMTu1LXr23BYPZ+Pid3YiggFLEtBsphEsHtAHo
-VPMLJYCYEBTTNkVSDER5AmVRnmQ5iNGQ5DiMYyApCiJJUiiHEwBSOEsTEBIkh/IM
-QAHDW1DWokdIPGKRZCt02B2SrGq2PA0EnGc5iwVjKR5ihICjmIXEccAJHCbgOE0x
-HEvqwgLFqSu04gTeCRMlRctpQf5Sef/B/891lyzZsRaWoQWcZgSBBBokMiJHYCKP
-4yJFYhing07okPkiqNFOlbcVirzNJclIeTyiXbgkEeqz1Zv5N5TwkEq0SmpBifCw
-ObtDURVRsWlMgaranSbdQy2166K3oJD/j12+IMlAG6qmcEGHU1JkxIRppKhKuj9G
-4QzBshhBxSNwl11ywHxJJyiGZlFtae9YHNCleZIsS/AMyQoCCjGeJkVS5HiCpQDJ
-MigtirQ2HozjRB4QmEBwKISAFBmcRjkWEhQPEL3DYllBTKTmqvJWvTnJKvNqiQMi
-5cYqb8LX4BVgiAyL9v10+LmqxfDto0lrolIf/UQ/b/0bGoyBKx9lop5dsWheXWbY
-mmmcj9tc54md2fOy4KzvGtwS/oDtOV8x5zeLpljGls+tr0DzQq/E36p+owMYT3vC
-i6kGn8HVeJdsvN67avKb7JWhycmez107j0/ee6rbkHEsrbbq7Fxr1K9X+jo+BsXE
-fqV6bVlni9safe44ldXU/i4gRty+MydOfeIaX78weKemZiLllY+SIjvDKhs95kPl
-7+8dMv1iXzj7TETZkX1DPcGtgXP+tyfi6oazK0GkNfVmmmGji+qInS6f8b4Ve/Pk
-Dxndq9LvT7/ovzBT1LCur/VwZ7BhanNCyGtT6JcHLrm/bw3aum0u7fXlmS3m4KaN
-/UEX1j2wfDUuyStC/+raiea+iQVQf5prWtY6Xy3f8IHdJyBTDjp59DHx7uKEIlyV
-ubbIb+MHfvScv3rR70TStZmwg1/8rlzurd9/bBDxxLU1TJ27sMN2sRYU+0ghn+UC
-KSZNvjYyOh6yw3HQ/XbucHpgTkrbaPiy2O2bDhTdaAnJyGquExMa/b8ei21W+yuS
-o7kh80LetoHWguDfsoLm2T8CZ/chMYc7c37ek91DdFSm2t5Lsy9rco9gvT49LwSk
-bwD1tU+euVTzxE/V3v5ke551Xnl605aW7y63vUNX4LvOrIkoPX09qute3d7nRTdq
-S73RHZF1Ct6PPto2OduQ6CxujlAb1btj48R032zoYv/A3w==
-=hmIM
+owGtU21QFVUYvl4MgbBU0JHMgNUcFNCz32cvjaSjo0aGUChpej3n7FnuCty97i4X
+UBnDGEU006bJUhk/86MyjcqPKZF0RiYpR9KmrPzIb8ssh8oyjc5iTk3Tz/b82Dnv
+PO/zPu/zvmd5zxhfXLfs1Suahkx55bFubVewb1pCyrK5HLb0ai4wlyulXT9aplPH
+DZaaOhfgAM+OLMkqBUgEECAJapRXqKRpvKZSiWAiSTLQBFGnsgAVkVJR0gBSdaCr
+yADQ8G5cFmeY4RJqR2wz7DJapOhYQFAzDB7KiPIiFgBvSIKga1jjsSAosqpByUsM
+WY6XwcRh5NDhpsVi7BLskvcf+P9Zd0UXHTSgqmBBUTGWdAYiKtFEniBBILLE85oH
+dKgdRuWUoR0XlZUSVBY1w1xNFldO7dIyGrQty/X8Ja7poXhZUEUIZRmwHpETCpZT
+F7FkWSVYRzoAooI1VZAJZAEgqFQkBo8MQ1epSnUEFZWHmoYh00uggpAACY9VKjAp
+Dp0dtriAoIlQAwJTYNOoVUq94o5ZwpxzuMA0jm+pY90Sogg8oxI13sCGqIkYUygS
+TZVFiCEEPFUEpKqKIhGKiCCKmooVyqohTIDBTa/xytlRk3TRe8P6pwnZd1wYXmK6
+oQp8Z3gR23ItYpUxTMh1I07A88itjnhJlRQH/6ILYjOss6VhGVFqO6YVZp4x5L/t
+k7I4WhUxbRo0PYSsKhCwz6tDo97ooEyRgYghAVmVAJZVQ5OJqKtQ0wVZYOPHGAAi
+SphnewCojKAgSoDtgayIRBb/9lMSmE5U4vVmloSRW2FTriZhsV/s7usW5xvYL737
+5q+GLe7sP/WbnLTU0Xcf2j1+75X5EuJ73Y0k7+nla1gWOXilPT6uPWPfoLYX2mfO
++Pjyjv1tX0R9OScXdGxa/McHo8dcM9/56WzijczGGan1l97Lfq732f3c9IWt5Z1H
+obMiKXtJwfWUFLC3duKjt4tHfdtAQ1dvnIoJHzYWtOS9dfH2gbyWASNLhl9OTh+c
+Fttj7hMrmtY/WXdRHpBZNj7t+PM5o2o7xvbZ8vasvq82y1sf8sfX/XqyftuPlh23
+ZlLxRv/WlXHfX//BL3fm73z653sTxne0Dpv6Uer8tUdz3eJ8nNx8OOz2E0e2N+QO
+Cp/LywrhXaf3/fL4oulLE8/nN3YuiRu8/dyFCa9VNH734afzThTMSpwUqb45cHXz
+bvlMz/Xjhs6xmiZPeaZxEVgV80kLEVvH+/Pq6o9dSqpx0otu5a5LSuy/Uwe5uQ3b
+1lRW9ESPDD0kvJtW2fh+04Evi3q/GbP89zVjSf6RHsEdt0P8olPqxMknC0Jf9zkb
+H5Eyj362OfvY5BHAGhS79Ja6ZXZVwkuFz15K6ohtvewU9ziR2X12RlVDKj2SE7sw
+36rcm97v8KiqgsL5Fwfe72yIjjnUMVIcd9++5uSrUkLKjDlJFwL1N0vP5/XNyig4
+XrtBvpbKP+Dbo+z6vC1gnykiJPF03boR/gPawZwJ+xOX+Wrbb+jzRry49o20wr6/
+ZUx4auPuBzcFVqW/vnTlpl4vF0aq5zjbycyG54qGXC848/CkpKF/Ag==
+=DUYK
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
