@@ -14,7 +14,32 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 26 May 2018 13:27:53 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 02 Jul 2018 12:20:24 -0700</lastBuildDate>
+	
+		<item>
+			<title>Switzerland</title>
+			
+				<description>1-week vacation to Zürich, Switzerland</description>
+			
+        
+          <category>switzerland</category>
+        
+          <category>zurich</category>
+        
+          <category>travellog</category>
+        
+          <category>encoding</category>
+        
+			<pubDate>30 June 2018</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2018/06/30/switzerland.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2018/06/30/switzerland</guid>
+		</item>
 	
 		<item>
 			<title>ASCII vs Unicode</title>
