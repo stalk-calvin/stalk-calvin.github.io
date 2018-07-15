@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "Python tricks",
+      "link"			: "https://stalk-calvin.github.io/blog/2018/07/15/python-tricks.html",
+      "excerpt"		: "A buffet of awesome python features",
+      "tags"        : ["bookreview","python","software","computer","programming"],
+      "date"        : "2018 Jul 15",
+      "year"        : 2018
+    }
+  
+
+  
+    ,{
       "title"			: "Switzerland",
       "link"			: "https://stalk-calvin.github.io/blog/2018/06/30/switzerland.html",
       "excerpt"		: "1-week vacation to Zürich, Switzerland",
