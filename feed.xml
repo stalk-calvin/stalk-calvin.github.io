@@ -14,7 +14,38 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Tue, 17 Jul 2018 00:32:51 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 28 Jul 2018 00:42:29 -0700</lastBuildDate>
+	
+		<item>
+			<title>Currying</title>
+			
+				<description>Not the food from India</description>
+			
+        
+          <category>functional</category>
+        
+          <category>programming</category>
+        
+          <category>software</category>
+        
+          <category>computer</category>
+        
+          <category>currying</category>
+        
+          <category>partial</category>
+        
+          <category>application</category>
+        
+			<pubDate>28 July 2018</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2018/07/28/currying.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2018/07/28/currying</guid>
+		</item>
 	
 		<item>
 			<title>Python tricks</title>
