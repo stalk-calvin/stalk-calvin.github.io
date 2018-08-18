@@ -14,7 +14,32 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 28 Jul 2018 00:42:29 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 18 Aug 2018 00:48:29 -0700</lastBuildDate>
+	
+		<item>
+			<title>Abstraction</title>
+			
+				<description>help you write a better code</description>
+			
+        
+          <category>abstraction</category>
+        
+          <category>computer</category>
+        
+          <category>programming</category>
+        
+          <category>oop</category>
+        
+			<pubDate>18 August 2018</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2018/08/18/abstraction.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2018/08/18/abstraction</guid>
+		</item>
 	
 		<item>
 			<title>Currying</title>
