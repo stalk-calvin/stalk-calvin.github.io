@@ -14,7 +14,36 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 18 Aug 2018 00:48:29 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 01 Sep 2018 12:13:21 -0700</lastBuildDate>
+	
+		<item>
+			<title>Basics of Films</title>
+			
+				<description>movie, image, video, film, etc</description>
+			
+        
+          <category>graphics</category>
+        
+          <category>framerate</category>
+        
+          <category>computer</category>
+        
+          <category>refreshrate</category>
+        
+          <category>resolution</category>
+        
+          <category>flops</category>
+        
+			<pubDate>31 August 2018</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2018/08/31/films-basics.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2018/08/31/films-basics</guid>
+		</item>
 	
 		<item>
 			<title>Abstraction</title>
