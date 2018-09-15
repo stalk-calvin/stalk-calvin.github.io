@@ -2,11 +2,22 @@
 
   
     {
+      "title"			: "Recursion",
+      "link"			: "https://stalk-calvin.github.io/blog/2018/09/15/recursion.html",
+      "excerpt"		: "a beauty who also could be ugly as sin",
+      "tags"        : ["programming","software","algorithm","recursion"],
+      "date"        : "2018 Sep 15",
+      "year"        : 2018
+    }
+  
+
+  
+    ,{
       "title"			: "Basics of Films",
-      "link"			: "https://stalk-calvin.github.io/blog/2018/08/31/films-basics.html",
+      "link"			: "https://stalk-calvin.github.io/blog/2018/09/01/films-basics.html",
       "excerpt"		: "movie, image, video, film, etc",
       "tags"        : ["graphics","framerate","computer","refreshrate","resolution","flops"],
-      "date"        : "2018 Aug 31",
+      "date"        : "2018 Sep 01",
       "year"        : 2018
     }
   
