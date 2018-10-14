@@ -160,9 +160,18 @@
   
   
     <url>
+      <loc>https://stalk-calvin.github.io/blog/2018/10/13/captcha.html</loc>
+      
+        <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
       <loc>https://stalk-calvin.github.io/blog/2018/09/15/recursion.html</loc>
       
-        <lastmod>2018-09-15T00:00:00-07:00</lastmod>
+        <lastmod>2018-09-15T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -171,7 +180,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/09/01/films-basics.html</loc>
       
-        <lastmod>2018-09-01T00:00:00-07:00</lastmod>
+        <lastmod>2018-09-01T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -180,7 +189,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/08/18/abstraction.html</loc>
       
-        <lastmod>2018-08-18T00:00:00-07:00</lastmod>
+        <lastmod>2018-08-18T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -189,7 +198,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/07/28/currying.html</loc>
       
-        <lastmod>2018-07-28T00:00:00-07:00</lastmod>
+        <lastmod>2018-07-28T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -198,7 +207,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/07/15/python-tricks.html</loc>
       
-        <lastmod>2018-07-15T00:00:00-07:00</lastmod>
+        <lastmod>2018-07-15T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -207,7 +216,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/06/30/switzerland.html</loc>
       
-        <lastmod>2018-06-30T00:00:00-07:00</lastmod>
+        <lastmod>2018-06-30T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -216,7 +225,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/05/26/ascii-unicode.html</loc>
       
-        <lastmod>2018-05-26T00:00:00-07:00</lastmod>
+        <lastmod>2018-05-26T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -225,7 +234,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/05/12/SOLID.html</loc>
       
-        <lastmod>2018-05-12T00:00:00-07:00</lastmod>
+        <lastmod>2018-05-12T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -234,7 +243,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/04/28/bad-choices.html</loc>
       
-        <lastmod>2018-04-28T00:00:00-07:00</lastmod>
+        <lastmod>2018-04-28T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -243,7 +252,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/04/07/computer-sceince-distilled.html</loc>
       
-        <lastmod>2018-04-07T00:00:00-07:00</lastmod>
+        <lastmod>2018-04-07T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -252,7 +261,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/03/24/encryption.html</loc>
       
-        <lastmod>2018-03-24T00:00:00-07:00</lastmod>
+        <lastmod>2018-03-24T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -261,7 +270,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/03/10/pointers.html</loc>
       
-        <lastmod>2018-03-10T00:00:00-08:00</lastmod>
+        <lastmod>2018-03-10T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -270,7 +279,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/03/03/code.html</loc>
       
-        <lastmod>2018-03-03T00:00:00-08:00</lastmod>
+        <lastmod>2018-03-03T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -279,7 +288,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/02/24/complement.html</loc>
       
-        <lastmod>2018-02-24T00:00:00-08:00</lastmod>
+        <lastmod>2018-02-24T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -288,7 +297,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/02/17/binary-arithmetic.html</loc>
       
-        <lastmod>2018-02-17T00:00:00-08:00</lastmod>
+        <lastmod>2018-02-17T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -297,7 +306,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/02/03/java-9.html</loc>
       
-        <lastmod>2018-02-03T00:00:00-08:00</lastmod>
+        <lastmod>2018-02-03T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -306,7 +315,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/01/24/proxy-vpn.html</loc>
       
-        <lastmod>2018-01-24T00:00:00-08:00</lastmod>
+        <lastmod>2018-01-24T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -315,7 +324,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/01/14/xor-swaps.html</loc>
       
-        <lastmod>2018-01-14T00:00:00-08:00</lastmod>
+        <lastmod>2018-01-14T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -324,7 +333,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/01/13/rise-of-the-robots.html</loc>
       
-        <lastmod>2018-01-13T00:00:00-08:00</lastmod>
+        <lastmod>2018-01-13T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -333,7 +342,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2018/01/06/new-year-resolution.html</loc>
       
-        <lastmod>2018-01-06T00:00:00-08:00</lastmod>
+        <lastmod>2018-01-06T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -342,7 +351,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/12/30/korea.html</loc>
       
-        <lastmod>2017-12-30T00:00:00-08:00</lastmod>
+        <lastmod>2017-12-30T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -351,7 +360,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/12/09/spring-framework.html</loc>
       
-        <lastmod>2017-12-09T00:00:00-08:00</lastmod>
+        <lastmod>2017-12-09T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -360,7 +369,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/11/25/python-encapsulation.html</loc>
       
-        <lastmod>2017-11-25T00:00:00-08:00</lastmod>
+        <lastmod>2017-11-25T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -369,7 +378,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/11/19/lazy-evaluation.html</loc>
       
-        <lastmod>2017-11-19T00:00:00-08:00</lastmod>
+        <lastmod>2017-11-19T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -378,7 +387,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/11/12/git-rebase.html</loc>
       
-        <lastmod>2017-11-12T00:00:00-08:00</lastmod>
+        <lastmod>2017-11-12T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -387,7 +396,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/11/04/rpc-framework.html</loc>
       
-        <lastmod>2017-11-04T00:00:00-07:00</lastmod>
+        <lastmod>2017-11-04T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -396,7 +405,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/10/21/binary-tree-examples.html</loc>
       
-        <lastmod>2017-10-21T00:00:00-07:00</lastmod>
+        <lastmod>2017-10-21T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -405,7 +414,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/10/07/binary-trees.html</loc>
       
-        <lastmod>2017-10-07T00:00:00-07:00</lastmod>
+        <lastmod>2017-10-07T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -414,7 +423,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/09/23/functional-imperative-programming.html</loc>
       
-        <lastmod>2017-09-23T00:00:00-07:00</lastmod>
+        <lastmod>2017-09-23T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -423,7 +432,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/09/07/self-love.html</loc>
       
-        <lastmod>2017-09-07T00:00:00-07:00</lastmod>
+        <lastmod>2017-09-07T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -432,7 +441,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/09/02/elon-musk.html</loc>
       
-        <lastmod>2017-09-02T00:00:00-07:00</lastmod>
+        <lastmod>2017-09-02T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -441,7 +450,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/08/26/memory-leak.html</loc>
       
-        <lastmod>2017-08-26T00:00:00-07:00</lastmod>
+        <lastmod>2017-08-26T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -450,7 +459,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/08/05/webp-image.html</loc>
       
-        <lastmod>2017-08-05T00:00:00-07:00</lastmod>
+        <lastmod>2017-08-05T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -459,7 +468,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/07/15/performance-mistakes.html</loc>
       
-        <lastmod>2017-07-15T00:00:00-07:00</lastmod>
+        <lastmod>2017-07-15T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -468,7 +477,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/07/08/salt-spring-island.html</loc>
       
-        <lastmod>2017-07-08T00:00:00-07:00</lastmod>
+        <lastmod>2017-07-08T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -477,7 +486,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/06/21/mockito.html</loc>
       
-        <lastmod>2017-06-21T00:00:00-07:00</lastmod>
+        <lastmod>2017-06-21T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -486,7 +495,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/06/10/nash-equalibrium.html</loc>
       
-        <lastmod>2017-06-10T00:00:00-07:00</lastmod>
+        <lastmod>2017-06-10T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -495,7 +504,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/06/03/java-perl-python.html</loc>
       
-        <lastmod>2017-06-03T00:00:00-07:00</lastmod>
+        <lastmod>2017-06-03T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -504,7 +513,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/05/27/algorithms-to-live-by.html</loc>
       
-        <lastmod>2017-05-27T00:00:00-07:00</lastmod>
+        <lastmod>2017-05-27T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -513,7 +522,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/05/20/exponential-growth.html</loc>
       
-        <lastmod>2017-05-20T00:00:00-07:00</lastmod>
+        <lastmod>2017-05-20T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -522,7 +531,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/05/13/binary-logarithm.html</loc>
       
-        <lastmod>2017-05-13T00:00:00-07:00</lastmod>
+        <lastmod>2017-05-13T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -531,7 +540,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/05/06/toronto.html</loc>
       
-        <lastmod>2017-05-06T00:00:00-07:00</lastmod>
+        <lastmod>2017-05-06T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -540,7 +549,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/04/22/leap-second.html</loc>
       
-        <lastmod>2017-04-22T00:00:00-07:00</lastmod>
+        <lastmod>2017-04-22T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -549,7 +558,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/04/15/vagrant-docker.html</loc>
       
-        <lastmod>2017-04-15T00:00:00-07:00</lastmod>
+        <lastmod>2017-04-15T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -558,7 +567,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/04/08/success.html</loc>
       
-        <lastmod>2017-04-08T00:00:00-07:00</lastmod>
+        <lastmod>2017-04-08T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -567,7 +576,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/04/01/beer-list.html</loc>
       
-        <lastmod>2017-04-01T00:00:00-07:00</lastmod>
+        <lastmod>2017-04-01T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -576,7 +585,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/03/25/software-facts-fallacies.html</loc>
       
-        <lastmod>2017-03-25T00:00:00-07:00</lastmod>
+        <lastmod>2017-03-25T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -585,7 +594,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/03/18/rocky-mountain.html</loc>
       
-        <lastmod>2017-03-18T00:00:00-07:00</lastmod>
+        <lastmod>2017-03-18T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -594,7 +603,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/03/04/farewell.html</loc>
       
-        <lastmod>2017-03-04T00:00:00-08:00</lastmod>
+        <lastmod>2017-03-04T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -603,7 +612,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/02/25/http-response-code.html</loc>
       
-        <lastmod>2017-02-25T00:00:00-08:00</lastmod>
+        <lastmod>2017-02-25T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -612,7 +621,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/02/18/saml.html</loc>
       
-        <lastmod>2017-02-18T00:00:00-08:00</lastmod>
+        <lastmod>2017-02-18T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -621,7 +630,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/02/11/oauth.html</loc>
       
-        <lastmod>2017-02-11T00:00:00-08:00</lastmod>
+        <lastmod>2017-02-11T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -630,7 +639,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/02/04/online-judges.html</loc>
       
-        <lastmod>2017-02-04T00:00:00-08:00</lastmod>
+        <lastmod>2017-02-04T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -639,7 +648,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/01/28/programming-languages.html</loc>
       
-        <lastmod>2017-01-28T00:00:00-08:00</lastmod>
+        <lastmod>2017-01-28T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -648,7 +657,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/01/21/java-developers-mistake.html</loc>
       
-        <lastmod>2017-01-21T00:00:00-08:00</lastmod>
+        <lastmod>2017-01-21T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -657,7 +666,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html</loc>
       
-        <lastmod>2017-01-14T00:00:00-08:00</lastmod>
+        <lastmod>2017-01-14T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -666,7 +675,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2017/01/07/new-year-resolution.html</loc>
       
-        <lastmod>2017-01-07T00:00:00-08:00</lastmod>
+        <lastmod>2017-01-07T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -675,7 +684,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/12/28/fibonacci.html</loc>
       
-        <lastmod>2016-12-28T00:00:00-08:00</lastmod>
+        <lastmod>2016-12-28T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -684,7 +693,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/12/24/future-of-computer-science.html</loc>
       
-        <lastmod>2016-12-24T00:00:00-08:00</lastmod>
+        <lastmod>2016-12-24T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -693,7 +702,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/12/17/keybase-io.html</loc>
       
-        <lastmod>2016-12-17T00:00:00-08:00</lastmod>
+        <lastmod>2016-12-17T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -702,7 +711,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/12/10/big-o.html</loc>
       
-        <lastmod>2016-12-10T00:00:00-08:00</lastmod>
+        <lastmod>2016-12-10T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -711,7 +720,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/11/28/ables-java.html</loc>
       
-        <lastmod>2016-11-28T00:00:00-08:00</lastmod>
+        <lastmod>2016-11-28T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -720,7 +729,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/11/26/google-guava.html</loc>
       
-        <lastmod>2016-11-26T00:00:00-08:00</lastmod>
+        <lastmod>2016-11-26T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -729,7 +738,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/11/19/useful-code-in-java.html</loc>
       
-        <lastmod>2016-11-19T00:00:00-08:00</lastmod>
+        <lastmod>2016-11-19T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -738,7 +747,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/11/12/favourite-books.html</loc>
       
-        <lastmod>2016-11-12T00:00:00-08:00</lastmod>
+        <lastmod>2016-11-12T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -747,7 +756,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/11/05/algorithms.html</loc>
       
-        <lastmod>2016-11-05T00:00:00-07:00</lastmod>
+        <lastmod>2016-11-05T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -756,7 +765,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/10/29/lombok.html</loc>
       
-        <lastmod>2016-10-29T00:00:00-07:00</lastmod>
+        <lastmod>2016-10-29T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -765,7 +774,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/10/22/dependency-injection.html</loc>
       
-        <lastmod>2016-10-22T00:00:00-07:00</lastmod>
+        <lastmod>2016-10-22T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -774,7 +783,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/10/15/builder-pattern.html</loc>
       
-        <lastmod>2016-10-15T00:00:00-07:00</lastmod>
+        <lastmod>2016-10-15T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -783,7 +792,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/09/25/new-team-new-life.html</loc>
       
-        <lastmod>2016-09-25T00:00:00-07:00</lastmod>
+        <lastmod>2016-09-25T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -792,7 +801,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/08/02/junit.html</loc>
       
-        <lastmod>2016-08-02T00:00:00-07:00</lastmod>
+        <lastmod>2016-08-02T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -801,7 +810,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/08/02/git.html</loc>
       
-        <lastmod>2016-08-02T00:00:00-07:00</lastmod>
+        <lastmod>2016-08-02T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -810,7 +819,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/07/12/workout-split.html</loc>
       
-        <lastmod>2016-07-12T00:00:00-07:00</lastmod>
+        <lastmod>2016-07-12T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -819,7 +828,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/07/02/web-security.html</loc>
       
-        <lastmod>2016-07-02T00:00:00-07:00</lastmod>
+        <lastmod>2016-07-02T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -828,7 +837,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/06/28/sorting.html</loc>
       
-        <lastmod>2016-06-28T00:00:00-07:00</lastmod>
+        <lastmod>2016-06-28T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -837,7 +846,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/06/24/music.html</loc>
       
-        <lastmod>2016-06-24T00:00:00-07:00</lastmod>
+        <lastmod>2016-06-24T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -846,7 +855,7 @@
     <url>
       <loc>https://stalk-calvin.github.io/blog/2016/06/21/fruits-sugar-health.html</loc>
       
-        <lastmod>2016-06-21T00:00:00-07:00</lastmod>
+        <lastmod>2016-06-21T00:00:00+00:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>

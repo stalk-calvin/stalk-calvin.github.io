@@ -14,4 +14,4 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 RUN mkdir -p /usr/src/site
 WORKDIR /usr/src/site
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["sh", "-c", "bundle exec jekyll serve --incremental --host 0.0.0.0 --port 4000" ]
+CMD ["sh", "-c", "bundle exec jekyll serve --incremental --host 0.0.0.0 --port 4000"]

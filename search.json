@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "C.A.P.T.C.H.A.",
+      "link"			: "https://stalk-calvin.github.io/blog/2018/10/13/captcha.html",
+      "excerpt"		: "Are you a human?",
+      "tags"        : ["captcha","verification","programming","security"],
+      "date"        : "2018 Oct 13",
+      "year"        : 2018
+    }
+  
+
+  
+    ,{
       "title"			: "Recursion",
       "link"			: "https://stalk-calvin.github.io/blog/2018/09/15/recursion.html",
       "excerpt"		: "a beauty who also could be ugly as sin",
@@ -15,7 +26,7 @@
     ,{
       "title"			: "Basics of Films",
       "link"			: "https://stalk-calvin.github.io/blog/2018/09/01/films-basics.html",
-      "excerpt"		: "movie, image, video, film, etc.",
+      "excerpt"		: "movie, image, video, film, etc",
       "tags"        : ["graphics","framerate","computer","refreshrate","resolution","flops"],
       "date"        : "2018 Sep 01",
       "year"        : 2018

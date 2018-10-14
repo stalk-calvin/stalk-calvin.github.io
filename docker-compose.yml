@@ -2,11 +2,11 @@ version: '3'
 
 services:
   site:
-    environment:
-      JEKYLL_ENV: foobar
     image: blog:latest
-    command: bundle exec jekyll serve --incremental --host 0.0.0.0 --port 4000
+    environment:
+       - JEKYLL_ENV=foobar
+    command: bundle exec jekyll serve --watch --incremental -H 0.0.0.0 -P 4000
     volumes:
-      - /Users/calvinlee/workspace/www:/usr/src/site
+      - .:/usr/src/site
     ports:
       - '4000:4000'

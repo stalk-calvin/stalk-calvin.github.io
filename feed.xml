@@ -14,7 +14,32 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Mon, 17 Sep 2018 19:19:03 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 14 Oct 2018 03:38:18 +0000</lastBuildDate>
+	
+		<item>
+			<title>C.A.P.T.C.H.A.</title>
+			
+				<description>Are you a human?</description>
+			
+        
+          <category>captcha</category>
+        
+          <category>verification</category>
+        
+          <category>programming</category>
+        
+          <category>security</category>
+        
+			<pubDate>13 October 2018</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2018/10/13/captcha.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2018/10/13/captcha</guid>
+		</item>
 	
 		<item>
 			<title>Recursion</title>
@@ -44,7 +69,7 @@
 		<item>
 			<title>Basics of Films</title>
 			
-				<description>movie, image, video, film, etc.</description>
+				<description>movie, image, video, film, etc</description>
 			
         
           <category>graphics</category>

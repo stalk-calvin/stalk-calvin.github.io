@@ -24,19 +24,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="movie, image, video, film, etc">
+  <meta name="description" content="Are you a human?">
   <meta name="author" content="Calvin Lee">
   <meta name="keywords" content="calvin, lee, personal, blog, beer, fitness, diet, computer, science, programming, software, engineer">
   <meta property="fb:app_id" content="140805279842677" /> 
-  <meta property="og:title" content="Basics of Films" />
-  <meta property="og:description" content="movie, image, video, film, etc" />
-  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2018/09/01/films-basics.html" />
+  <meta property="og:title" content="C.A.P.T.C.H.A." />
+  <meta property="og:description" content="Are you a human?" />
+  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2018/10/13/captcha.html" />
 
-  <link rel="alternate" hreflang="en" href="https://stalk-calvin.github.io/blog/2018/09/01/films-basics.html" />
-  <link rel="alternate" hreflang="kr" href="https://stalk-calvin.github.io/blog/2018/09/01/films-basics.html" />
-  <link rel="canonical" href="/blog/2018/09/01/films-basics.html">
+  <link rel="alternate" hreflang="en" href="https://stalk-calvin.github.io/blog/2018/10/13/captcha.html" />
+  <link rel="alternate" hreflang="kr" href="https://stalk-calvin.github.io/blog/2018/10/13/captcha.html" />
+  <link rel="canonical" href="/blog/2018/10/13/captcha.html">
   <link rel="author" href="https://www.linkedin.com/in/stalkme">
-  <title>I am Calvin | Basics of Films</title>
+  <title>I am Calvin | C.A.P.T.C.H.A.</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -194,111 +194,77 @@
     <section id="post" class="container content-section ">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>Basics of Films</strong></h1>
-          <h4 style="display:inline; color: #F4A460;"><strong>movie, image, video, film, etc</strong></h4><br />
+          <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>C.A.P.T.C.H.A.</strong></h1>
+          <h4 style="display:inline; color: #F4A460;"><strong>Are you a human?</strong></h4><br />
           <h4>
-            <strong>01 Sep 2018</strong>
+            <strong>13 Oct 2018</strong>
             <small>
-              <a href="/blog/2018/09/01/films-basics.html#fb_comment"><span class="fb-comments-count" data-href="https://stalk-calvin.github.io/blog/2018/09/01/films-basics.html"></span> Comments</a>
+              <a href="/blog/2018/10/13/captcha.html#fb_comment"><span class="fb-comments-count" data-href="https://stalk-calvin.github.io/blog/2018/10/13/captcha.html"></span> Comments</a>
               <br />
               
-                <a class="tag" href="/tags/#graphics">#graphics</a>
+                <a class="tag" href="/tags/#captcha">#captcha</a>
               
-                <a class="tag" href="/tags/#framerate">#framerate</a>
+                <a class="tag" href="/tags/#verification">#verification</a>
               
-                <a class="tag" href="/tags/#computer">#computer</a>
+                <a class="tag" href="/tags/#programming">#programming</a>
               
-                <a class="tag" href="/tags/#refreshrate">#refreshrate</a>
-              
-                <a class="tag" href="/tags/#resolution">#resolution</a>
-              
-                <a class="tag" href="/tags/#flops">#flops</a>
+                <a class="tag" href="/tags/#security">#security</a>
               
             </small>
           </h4>
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2018/09/15/recursion.html" class="btn" title="Recursion">&laquo; Recursion</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2018/08/18/abstraction.html" class="btn" title="Abstraction">Abstraction &raquo;</a>
+              <a href="https://stalk-calvin.github.io/blog/2018/09/15/recursion.html" class="btn" title="Recursion">Recursion &raquo;</a>
             
           </nav><!-- /.pagination -->
 
-          <p>Working in a film industry where every bit of images, graphics and colours are fairly important, I often encounter the terms related to them. I recently attended the <a href="https://s2018.siggraph.org/" target="_blank" rel="noopener noreferrer">Siggraph Conference in 2018</a> at the Convention center, Vancouver. There I was able to attend a couple of interesting displays from the graphics vendors. With the understanding of the terms below, I was able to understand better most of what they were trying to explain and relate to how it should be applied.</p>
+          <p><img src="https://i.kym-cdn.com/photos/images/newsfeed/000/401/711/3a6.gif" alt="CAPTCHA" /></p>
 
-<p>The terms I am about to introduce are rather rudimentary. However, I actually find them extremely valuable for working in the movie industry. I actually revisited multiple times to fully understand their meanings and relationships to each other.</p>
+<p>CAPTCHA is a verification method to determine whether a user is a real person or a bot. Most of us are probably familiar with this challenging images we had to answer to verify you are a human. I believe CAPTCHA is one of those things people know how to use it but not sure why we need to go through all the hassles. Let’s take a look at its history and “how-it-works”. By understanding all this, we can be sure why we need to fill these in and prevent us from potential vulnerability.</p>
 
-<h2 id="framerate-fps">Framerate (FPS)</h2>
+<p>CAPTCHA is an acronym for Completely Automated Public Turing Test to Tell Computers and Humans Apart. A few people refer to it as “CAPTured CHAracter” (CAPTCHA). In 1999, there was a voting for choosing the best university for their scientific computer program. Students from some universities exploited the fact they could use bots to have a higher voting count. The results were fraud, manipulative and inaccurate. That’s when CAPTCHA had been gaining its popularity, and people started to apply it whenever some specific personal information collected.</p>
 
-<p>If you ever played video games, the acronym, FPS, comes up pretty often. Well, at least it did or me. In its simplest form, it is basically the number of frames or images that are projected or displayed on screen per second. This rate is what synchronizes audio with pictures. In most films and TV, FPS is set to 24, 25 and 30 depending on the use. But in a standard situation, movies are set to 24 FPS whereas TVs are usually set to 30 FPS these days.</p>
+<p>CAPTCHA started as a pretty straightforward wiggly image like the one showing below. Bots would have had a tough time identifying which letter it is whereas a human can recognize it without much trouble. Back in the year 2000s, there weren’t any program that would distinguish which alphabets an image would show, so it was working quite effectively at the time.</p>
 
-<p>In reality, human visions can process up to 12 frames (images) per second so anything above 12 FPS is to be perceived as a motion (moving images). The motion would be smoother with higher FPS. Higher FPS is not always great though. With higher rates, you can have the motion too smooth that it doesn’t feel authentic. The highest commercially available frame rate is 300 FPS which might be useful in watching the sports game or a film that requires comprehensive detail compositing.</p>
-
-<p>Here are comparisons of how moving images look like in different FPS:</p>
-
-<video style="margin: 0 auto 35px auto; display:block;" autoplay="" muted="" loop="loop">
-  <source src="https://i.kinja-img.com/gawker-media/image/upload/s--g6NsiJUi--/c_fit,fl_progressive,q_80,w_636/dtfbqbnlr89ecopaqewy.mp4" type="video/mp4" />
-</video>
-
-<p>You should know by now that multiple of these frames connected together to create a movement. This process is what we call a shot. With multiple of these motions, they eventually create a distinct scene that is referred to as a sequence.</p>
-
-<p>You can compare these concepts to a novel. Think of a single shot as a sentence, a sequence as a paragraph. When we have all these sequences ready to be plugged, a movie is made.</p>
-
-<h2 id="refresh-rate-hz-and-how-it-relates-to-fps">Refresh rate (Hz) and how it relates to FPS</h2>
-
-<p>The refresh rates (Hz) controls how many times the monitor (or display) is refreshing the image on the screen. The refresh rate is not going to change how many FPSs are being inputted. However, if your FPS is higher than what your display’s refresh rate can support, your display will not be able to display all of the frames your computer is producing. Meaning, users will not be able to see all the frames through the display. So effectively your monitor (or can be anything that displays) is setting a limit to how many frames will be shown per second.</p>
-
-<p>Common display refresh rates include 30 Hz, 60 Hz (75 Hz) and 120 Hz. 60 Hz is a common refresh rate as a monitor these days. 60 Hz means there won’t be any noticeable differences after 60 FPS. It basically has a rate of 16.67ms/fps (1000ms/60fps) to refresh the screen (once). When you go to a higher Hz like 120 Hz, rates become faster down to 8.33ms to refresh the screen. However, 60 FPS is already in the high-end of FPS zone. So even when your monitor supports it, chances are you will need a supportive CPU with a GPU (Graphics card) to support that FPS.</p>
-
-<p>You may have come across a term called Vertical Sync (V-Sync). It usually comes up when we talk about these rates. The idea is rather straightforward. It has to do with how frame rates (FPS) are related to refresh rates (Hz).  Instead of wasting the computer power trying to achieve a higher FPS than your monitor can handle, it detects the refresh rate of your monitor, (say, 60 Hz), and then restricts automatically your FPS to that number it can support. Well, isn’t it always a good idea to enable V-Sync? Well, not always. There isn’t a definitive answer because it has to do with how your computer is configured along with your display. If you have no problem generating the maximum FPS with V-Sync enabled, there wouldn’t be any harm to have it on. It will probably save you a cost of energy requiring to generate excessive fps (than what your display can support). When the Vsync is turned off, people might obtain a higher frame rate. The display will essentially try to display as much as it possibly can. So it will probably introduce unnecessary energy (more cost). Also, this action may introduce artifacts (choppy objects) like below for trying to display more than what your screen is capable of:</p>
-
-<table class="image" align="center" style="margin-top:2em;text-align:center;">
-<caption class="custom" align="bottom">VSync Explained</caption>
-<tr><td><img src="https://www.gamingscan.com/wp-content/uploads/2017/12/v-sync-explained.jpg" alt="VSync Explained" style="border:0;" /></td></tr>
+<table class="image" style="margin-top:2em;">
+<caption class="custom" align="bottom">CAPTCHA v1 showing smwm</caption>
+<tr><td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Captcha.jpg/220px-Captcha.jpg" alt="CAPTCHA v1 showing smwm" style="border:0;" /></td></tr>
 </table>
 
-<p>For more information on V-Sync specifically, please follow this <a href="https://www.gamingscan.com/what-is-v-sync/" target="_blank" rel="noopener noreferrer">link</a>.</p>
+<p>However, most of regular CAPTCHA had been tampered and hacked by many researchers. There had been many different attempts on variations to the traditional alphabet CAPTCHA, and we even attempted to show images other than wiggly alphabets. Our image processing and recognition were continuously getting better each day. According to the researchers, even those replaced-to-image-CAPTCHAs can be broken by bots 10-20% of the trials. You may think 10-20% a low success rate. However, considering how bots can execute a countless number of tries, aggregated successes will be incredibly high.</p>
 
-<h2 id="resolution">Resolution</h2>
+<p>From the beginning, CAPTCHA had many controversies. It imposed a definite issue for visually impaired people because they obviously cannot get a pass through the CAPTCHA when they can’t see what it is!</p>
 
-<p>In the image business (including films, games etc), the term resolution is used to measure the details of an image. FPS and Hz control how frames/images in motion are displayed on the screen whereas resolution controls how much details are to be shown on the screen. Let’s say we have an image with size 600x400. The image will be showing differently in different resolution monitors. Resolution is important to display the images correctly and with precision on our display.</p>
-
-<table class="image" align="center" style="margin-top:2em;text-align:center;">
-<caption class="custom" align="bottom">Resolution Explained</caption>
-<tr><td><img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/image-size-resolution/_jcr_content/main-pars/image_2/im_06.png" alt="Resolution Explained" style="border:0;" /></td></tr>
+<table class="image" style="margin-top:2em;">
+<caption class="custom" align="bottom">reCAPTCHA v1</caption>
+<tr><td><img src="https://developers.google.com/recaptcha/old/images/reCAPTCHA_Sample_Red.png" alt="reCAPTCHA v1" style="border:0;" /></td></tr>
 </table>
 
-<p>Resolution is where the terms like HD and 4K comes into action. They are merely how many pixels a display is capable of showing.</p>
+<p>That’s when reCAPTCHA came into the market, with audio capability! Few researchers at Carnegie Mellon University first developed reCAPTCHA. They essentially processed all of New York Times archives from Google Books by completely digitizing them using OCR (Optical Character Recognition) software.</p>
 
-<p>We typically say HD in either 720p or 1080p/i. 720 basically means 1280x720 pixels wide a display can support. 1080 means 1920x1080 pixels wide a display can support.</p>
+<iframe width="560" height="400" src="//www.youtube.com/embed/oj8gGhVFWTE" frameborder="0"> </iframe>
 
-<p>4K is when the screen starts to support really large pixels. 4K refers to one of two high definition resolutions: 3840 x 2160 pixels or 4096 x 2160 pixels. It can support up to 2x many pixels than the HD one. That’s why we sometimes call it an “Ultra” HD, UHD.</p>
+<p>Google fancied the idea of reCAPTCHA and acquired it in 2009. However, there remained a fundamental issue, that the OCR process is pretty inaccurate. Few letters were not digitized correctly. That’s when Google decided to show a pair of text images like the image above. So in the above picture, one of the words represent a ‘clean’ word that Google knows what the word represents, and the other is a ‘dirty’ word, that they aren’t sure. Google expected if people successfully got the answer to ‘clean’ word, ‘dirty’ word must be correct as well. They collected all these answers and built their confidence to those ‘dirty’ words incrementally.</p>
 
-<p>There are other options which support larger than 4K such as 8K which seems a bit of too high end at least for now. For me, HD quality is already satisfying. 4K is still a luxury for me. I probably do not need much further than HD unless it is fairly cheap to upgrade to 4K.</p>
-
-<h2 id="interlaced-scan-vs-progressive-scan">Interlaced Scan vs Progressive Scan</h2>
-
-<p>There are many people out there where “p” stands for pixels in 1080p. This isn’t entirely wrong, but odds are they mean the scanning method. You probably noticed 1080i in contrast to 1080p. What is “i” here vs “p”? Essentially, video displays use one of these 2 scanning methods to draw an image on a screen: interlaced (“i”) and progressive (“p”)</p>
-
-<p>For Interlaced scanning, alternate lines are drawn. First, even numbers lines are displayed then immediately follows odd numbered lines being drawn. It is said to be drawn very quickly (1/60th of a second) for each set of even/odd lines.</p>
-
-<table class="image" align="center" style="margin-top:2em;text-align:center;">
-<caption class="custom" align="bottom">Interlaced Scanning</caption>
-<tr><td><img src="https://pixfeeds.com/images/31/606755/640-interlaced-scan.jpg" alt="Interlaced Scanning" style="border:0;" /></td></tr>
+<table class="image" style="margin-top:2em;">
+<caption class="custom" align="bottom">reCAPTCHA v2 from Google</caption>
+<tr><td><img src="https://developers.google.com/recaptcha/images/newCaptchaAnchor.gif" alt="reCAPTCHA v2 from Google" style="border:0;" /></td></tr>
 </table>
 
-<p>We have another scanning method called, Progressive scanning. This method basically draws the entire image on the screen instead of alternating lines. This will generally result in a clearer image because they are free from any artifacts since the full image is shown immediately. Individual images are basically a still photo.</p>
+<p>Google was still stuck with the intrinsic problems that bots would start learning to be able to bypass the CAPTCHA and that humans naturally make human errors to make correct answers to the image. In the year 2014, Chinese researchers hacked reCAPTCHA v1. See video above for more detail. It wasn’t much sustainable around the time. In March 2018, Google had terminated usage of reCAPTCHA v1 entirely.</p>
 
-<table class="image" align="center" style="margin-top:2em;text-align:center;">
-<caption class="custom" align="bottom">Progressive Scanning</caption>
-<tr><td><img src="https://pixfeeds.com/images/31/606755/640-progressive-scan.jpg" alt="Progressive Scanning" style="border:0;" /></td></tr>
+<iframe width="560" height="380" src="//www.youtube.com/embed/jwslDn3ImM0" frameborder="0"> </iframe>
+
+<p>To alleviate all these problems, Google released NoCAPTCHA (reCAPTCHA v2) in 2014 by removing all of these verification steps unless you are deemed to be “suspicious”. If you are not “suspicious”, you are given a checkbox saying “I’m not a bot” to be validated. Google uses an iframe to determine whether you are a real person by collecting and analyzing your IP, loaded resources, cookies, your browsing history, etc. Theoretically, bots aren’t supposed to see anything related to reCAPTCHA at all when they approach the site with NoCaptcha (checkbox validation). For those “suspicious” users, they are usually prompted with additional images to verify as a human (like an image below).</p>
+
+<table class="image" style="margin-top:2em;">
+<caption class="custom" align="bottom">suspicious users shown picture like this</caption>
+<tr><td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Images_Recaptcha.png/200px-Images_Recaptcha.png" alt="suspicious users shown picture like this" style="border:0;" /></td></tr>
 </table>
 
-<p>In either method, Human eyes will not have a chance to tell much differences. However, there are chances the artifacts shown in an interlaced version for whatever reasons a full picture could not be made. However, as technologies evolve and as we can support Progressive scanning easily, it certainly is beginning to get more popular these days. I usually prefer p version as the image shown on the screen will be more natural and colourful.</p>
-
-<p>For more detailed comparisons with examples, please see this <a href="http://mhdfoto.info/suggest/interlaced-vs-progressive-which-is-better/" target="_blank" rel="noopener noreferrer">link</a>.</p>
+<p>Google is developing yet another version of reCAPTCHA, version 3. It currently is in the beta version, but you can think of it as “invisible” reCAPTCHA. You won’t even see a checkbox any more instead there may be a little badge in the corner saying the page is using the reCAPTCHA. It is a JavaScript API which returns a score giving you the ability to take action in the context of your site: for instance, requiring additional factors of authentication. Version 3 still is not a bulletproof solution against the bots, but it at least stops them from bombarding continuous submits.</p>
 
 
           
@@ -308,7 +274,7 @@
   <ul class="rrssb-buttons clearfix">
     
       <li class="rrssb-email">
-        <a href="mailto:?subject=Basics of Films&body=https://stalk-calvin.github.io/blog/2018/09/01/films-basics.html" data-proofer-ignore>
+        <a href="mailto:?subject=C.A.P.T.C.H.A.&body=https://stalk-calvin.github.io/blog/2018/10/13/captcha.html" data-proofer-ignore>
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
               <path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"
@@ -320,7 +286,7 @@
     
     
       <li class="rrssb-facebook">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2018/09/01/films-basics.html&title=Basics of Films" class="popup">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2018/10/13/captcha.html&title=C.A.P.T.C.H.A." class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="29" height="29" viewBox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z"
               class="cls-2" fill-rule="evenodd"/></svg>
@@ -330,7 +296,7 @@
     
     
       <li class="rrssb-twitter">
-        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2018/09/01/films-basics.html&text=Basics of Films"
+        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2018/10/13/captcha.html&text=C.A.P.T.C.H.A."
         class="popup">
           <span class="rrssb-icon"><svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><path d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62c-3.122.162-6.22-.646-8.86-2.32 2.702.18 5.375-.648 7.507-2.32-2.072-.248-3.818-1.662-4.49-3.64.802.13 1.62.077 2.4-.154-2.482-.466-4.312-2.586-4.412-5.11.688.276 1.426.408 2.168.387-2.135-1.65-2.73-4.62-1.394-6.965C5.574 7.816 9.54 9.84 13.802 10.07c-.842-2.738.694-5.64 3.434-6.48 2.018-.624 4.212.043 5.546 1.682 1.186-.213 2.318-.662 3.33-1.317-.386 1.256-1.248 2.312-2.4 2.942 1.048-.106 2.07-.394 3.02-.85-.458 1.182-1.343 2.15-2.48 2.71z"/></svg></span>
         </a>
@@ -338,7 +304,7 @@
     
     
       <li class="rrssb-linkedin">
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2018/09/01/films-basics.html" class="popup">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2018/10/13/captcha.html" class="popup">
         <span class="rrssb-icon">
           <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
             <path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"
@@ -351,7 +317,7 @@
     
     
       <li class="rrssb-googleplus">
-        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2018/09/01/films-basics.html" class="popup">
+        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2018/10/13/captcha.html" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 8.29h-1.95v2.6h-2.6v1.82h2.6v2.6H21v-2.6h2.6v-1.885H21V8.29zM7.614 10.306v2.925h3.9c-.26 1.69-1.755 2.925-3.9 2.925-2.34 0-4.29-2.016-4.29-4.354s1.885-4.353 4.29-4.353c1.104 0 2.014.326 2.794 1.105l2.08-2.08c-1.3-1.17-2.924-1.883-4.874-1.883C3.65 4.586.4 7.835.4 11.8s3.25 7.212 7.214 7.212c4.224 0 6.953-2.988 6.953-7.082 0-.52-.065-1.104-.13-1.624H7.614z"/></svg>
           </span>
@@ -385,16 +351,14 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-<div id="fb_comment" class="fb-comments" data-href="https://stalk-calvin.github.io/blog/2018/09/01/films-basics.html" data-numposts="5" data-width="100%" data-colorscheme="dark" data-order-by="reverse_time"></div>
+<div id="fb_comment" class="fb-comments" data-href="https://stalk-calvin.github.io/blog/2018/10/13/captcha.html" data-numposts="5" data-width="100%" data-colorscheme="dark" data-order-by="reverse_time"></div>
 
           
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2018/09/15/recursion.html" class="btn" title="Recursion">&laquo; Recursion</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2018/08/18/abstraction.html" class="btn" title="Abstraction">Abstraction &raquo;</a>
+              <a href="https://stalk-calvin.github.io/blog/2018/09/15/recursion.html" class="btn" title="Recursion">Recursion &raquo;</a>
             
           </nav><!-- /.pagination -->
 
@@ -524,7 +488,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 <script>
 function addTohistory() {
   if (!window.location.host.startsWith("127.0.0.1")) {
-    history.pushState({}, 'Basics of Films', 'https://stalk-calvin.github.io/blog/2018/09/01/films-basics.html');
+    history.pushState({}, 'C.A.P.T.C.H.A.', 'https://stalk-calvin.github.io/blog/2018/10/13/captcha.html');
   }
 }
 </script>
