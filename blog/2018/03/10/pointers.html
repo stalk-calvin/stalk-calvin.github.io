@@ -235,25 +235,23 @@
 <p style="padding-left: 30px;"><em>A pointer in C/C++ points to a memory location. That's pretty much it.</em></p>
 
 <p style="margin-bottom: 20px;">As usual, we can start with a very simple example in C:</p>
-<div class="language-c highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">foo</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="kt">int</span><span class="o">*</span> <span class="n">pFoo</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">foo</span><span class="p">;</span>
-</code></pre>
-</div>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="n">foo</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kt">int</span><span class="o">*</span> <span class="n">pFoo</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">foo</span><span class="p">;</span></code></pre></figure>
 
 <p style="margin-bottom: 20px;">What is happening above? The first line sets an integer variable called <code class="highlighter-rouge">foo</code> to the value 1. Then the second line creates the integer <code class="highlighter-rouge">pointer</code> called <code class="highlighter-rouge">pFoo</code> which holds the memory location of <code class="highlighter-rouge">foo</code> by calling <code class="highlighter-rouge">&amp;foo</code>. When you print out the content of the pointer, <code class="highlighter-rouge">pFoo</code> in human-visible form, it would be something like:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>pFoo: 0x7ffd01d82d54
-</code></pre>
-</div>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">pFoo: 0x7ffd01d82d54</code></pre></figure>
 
 <p style="margin-bottom: 20px;">As you see <code class="highlighter-rouge">pFoo</code> contains the memory location of the variable <code class="highlighter-rouge">foo</code>. How do we use the pointers then? Let’s add the third line to the example above.</p>
-<div class="language-c highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">foo</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="n">foo</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="kt">int</span><span class="o">*</span> <span class="n">pFoo</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">foo</span><span class="p">;</span>
-<span class="o">*</span><span class="n">pFoo</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
-</code></pre>
-</div>
+<span class="o">*</span><span class="n">pFoo</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span></code></pre></figure>
 
 <p style="margin-bottom: 20px;">This 3rd line might confuse a couple of people here because this could be appearing as setting 15 to the memory location. That is obviously not the case. <code class="highlighter-rouge">*pFoo</code> means to follow the memory address and deal with the memory it points to. We should not be confused ourselves with, <type>*. This would be used for initializing a pointer. It's probably easier to understand the above example more straightforward if I draw out the example above, like below:</type></p>
-<div class="highlighter-rouge"><pre class="highlight"><code>   :
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">   :
    :        
 |-----|
 0x5100|   1  |   foo is an integer with value 1
@@ -263,19 +261,16 @@
 0x5108|   ?  |   others (who knows whats in here)
 |-----|
    :
-   :
-</code></pre>
-</div>
+   :</code></pre></figure>
 
 <p>We can see that the <code class="highlighter-rouge">pFoo</code> is basically pointing to the <code class="highlighter-rouge">foo</code> variable (residing in memory location 0x5100). This example is really all there are for C pointers.</p>
 
 <p style="margin-bottom: 20px;">However, we can make things more interesting to the problem by adding a pointer to a pointer. Let’s take a look at the new fourth line below:</p>
-<div class="language-c highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">foo</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="n">foo</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="kt">int</span><span class="o">*</span> <span class="n">pFoo</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">foo</span><span class="p">;</span>
 <span class="o">*</span><span class="n">pFoo</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
-<span class="kt">int</span><span class="o">**</span> <span class="n">ppFoo</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">pFoo</span><span class="p">;</span>
-</code></pre>
-</div>
+<span class="kt">int</span><span class="o">**</span> <span class="n">ppFoo</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">pFoo</span><span class="p">;</span></code></pre></figure>
 
 <p>So ppFoo is pointing to the memory location of pFoo which is a pointer to a variable pFoo. Now if you wanted to change the value of foo using ppFoo, you can simply call: <code class="highlighter-rouge">**pFoo = 15;</code>, then the pointers will follow to the memory location it’s pointing at and eventually update the value of foo.</p>
 

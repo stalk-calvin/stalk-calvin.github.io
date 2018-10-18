@@ -242,13 +242,12 @@
 
 <p>This means we should have single responsibility for each class, not multiple. Let’s take a look at an example:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">UserAccount</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">UserAccount</span> <span class="o">{</span>
   <span class="kd">public</span> <span class="n">Stub</span> <span class="nf">calculatePayCheck</span><span class="o">()</span> <span class="o">{...}</span>
   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">save</span><span class="o">()</span> <span class="o">{...}</span>
   <span class="kd">public</span> <span class="n">String</span> <span class="nf">showUserStatus</span><span class="o">()</span> <span class="o">{...}</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
+
 <p>You have 3 distinct operations here: calculation of paycheck, saving user information to the storage(ex: database), showing the user information. These operations do not require to be coupled to each other. You should create a class for each of these operations so you have a class that does distinct operation such as the one that calculates, one handling the storage and one handling the user information.</p>
 
 <h3 id="o---open-closed-principle">O - Open-Closed Principle</h3>
@@ -259,7 +258,7 @@
 
 <p>Classes should be designed so you could extend the functionalities easily but the developed class should not be modified except to correct any bugs or issues. The focus sometimes is misinterpreted as “extending” to “inheriting” as the keyword “extend” refers to the “inherit” in many languages. However, this is not true. Principles are older than these modern languages and they do not necessarily mean you should subclass the actual class that needs the new behaviour. We should favour <a href="https://en.wikipedia.org/wiki/Composition_over_inheritance">composition over inheritance</a> where favouring the composition produces more malleable and favours polymorphic behaviour rather than using the inheritance where it is more tightly coupled and breaks encapsulation. Let me show an example of what I mean:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">Receipt</span> <span class="nf">pay</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Stuff</span><span class="o">&gt;</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Receipt</span> <span class="nf">pay</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Stuff</span><span class="o">&gt;</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
    <span class="n">Receipt</span> <span class="n">r</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Receipt</span><span class="o">();</span>
    <span class="n">BigInteger</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">BigInteger</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
    <span class="k">for</span> <span class="o">(</span><span class="n">item</span> <span class="o">:</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
@@ -268,13 +267,11 @@
    <span class="o">}</span>
    <span class="n">Payment</span> <span class="n">p</span> <span class="o">=</span> <span class="n">payCash</span><span class="o">(</span><span class="n">sum</span><span class="o">);</span>
    <span class="k">return</span> <span class="n">r</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
 
 <p>Now let’s say we would like to extend this to support multiple different payment methods. We could pass in a boolean flag which controls the payment method like this: <code class="highlighter-rouge">if (credit) payCredit(sum) else payCash(sum)</code>. However, this is kind of boolean flag argument (parameter) is a code smell and should be avoided because you are providing 2 different behaviours in one function in contrast to just one. This is probably a better way:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">PaymentMethod</span> <span class="o">{</span><span class="kt">void</span> <span class="nf">acceptPayment</span><span class="o">(</span><span class="n">Money</span> <span class="n">total</span><span class="o">);}</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">PaymentMethod</span> <span class="o">{</span><span class="kt">void</span> <span class="nf">acceptPayment</span><span class="o">(</span><span class="n">Money</span> <span class="n">total</span><span class="o">);}</span>
 
 <span class="n">Receipt</span> <span class="nf">pay</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Stuff</span><span class="o">&gt;</span> <span class="n">items</span><span class="o">,</span> <span class="n">PaymentMethod</span> <span class="n">pm</span><span class="o">)</span> <span class="o">{</span>
    <span class="n">Receipt</span> <span class="n">r</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Receipt</span><span class="o">();</span>
@@ -285,9 +282,8 @@
    <span class="o">}</span>
    <span class="n">Payment</span> <span class="n">p</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="na">acceptPayment</span><span class="o">(</span><span class="n">sum</span><span class="o">);</span>
    <span class="k">return</span> <span class="n">r</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
+
 <p>This does what OCP really wants. It provides the support for even more payments methods by leaving the implementation open-ended in a concise and clean manner.</p>
 
 <h3 id="l---liskov-substitution-principle">L - Liskov Substitution Principle</h3>
@@ -298,13 +294,11 @@
 
 <p>This statement really explains everything. In other words, It’s basically saying not to forcibly fit objects to become one of your models. Here is an example. Say you defined a “Car” in this fashion:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">ICar</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">interface</span> <span class="nc">ICar</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">drive</span><span class="o">();</span>
     <span class="o">...</span> <span class="n">bunch</span> <span class="n">of</span> <span class="n">other</span> <span class="n">operations</span> <span class="k">for</span> <span class="n">ICar</span> <span class="o">...</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">startBlueToothCall</span><span class="o">();</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
 
 <p>Well, most of the recent modern cars are equipped and comes with a Bluetooth function. What if a car has no Bluetooth functionality at all? like cars made before the year 2000? We can make our ways out and just throw an exception or something or ignore such functionality to make the program flow and define this old car to be our ICar interface. However, this is what’s breaking Liskov Substitution Principle because we end up altering the correctness of the work. A better way to design this would be to rename ICar to such as IModernCar and create another interface that describes older cars. In common sense, old cars definitely categorize into cars, but with the way we have designed the ICar, those old cars are not how the car should be defined and they shouldn’t be categorized as the ICar.</p>
 
@@ -316,7 +310,7 @@
 
 <p>Within object-oriented design, interfaces provide layers of abstraction that facilitate conceptual explanation of the code and create a barrier preventing coupling to dependencies which means that interfaces should be constructed very specifically to its needs. Let’s describe a Worker who can work and eat at the same time.</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">IWorker</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">interface</span> <span class="nc">IWorker</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">work</span><span class="o">();</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">();</span>
 <span class="o">}</span>
@@ -349,13 +343,11 @@
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">manage</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">worker</span><span class="o">.</span><span class="na">work</span><span class="o">();</span>
     <span class="o">}</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
 
 <p>We have a problem though. Not all workers require eating. Also, if we have more behaviours added to this “Worker”, the single interface will be cluttered and confusing. Instead, we can simplify this and design in this fashion by segregating interfaces:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">IWorker</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">interface</span> <span class="nc">IWorker</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">work</span><span class="o">();</span>
 <span class="o">}</span>
 <span class="kd">interface</span> <span class="nc">IFeedable</span> <span class="o">{</span>
@@ -399,9 +391,7 @@
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">manage</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">worker</span><span class="o">.</span><span class="na">work</span><span class="o">();</span>
     <span class="o">}</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
 
 <p>You can see that by dividing the works necessary to the specific interfaces, you can manage the different classes according to the necessary action in a much more flexible way. <a href="https://sourcemaking.com/design_patterns/adapter">Adapter</a> design pattern usually helps to segregate these fat interfaces.</p>
 
@@ -414,15 +404,13 @@
 
 <p>The way of thinking is “inverted” for OOP designers designing their dependencies. High-level classes are not working directly with low-level classes anymore, they are built through the abstractions. The DIP is about the level of the abstraction in the messages sent from your code to the thing it is calling. It is about the shape of the object upon which the code depends. Let’s start with an example. We have a reader which reads a book in Scala:</p>
 
-<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BookReader</span><span class="o">(</span><span class="n">book</span><span class="k">:</span> <span class="kt">Book</span><span class="o">)</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">class</span> <span class="nc">BookReader</span><span class="o">(</span><span class="n">book</span><span class="k">:</span> <span class="kt">Book</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">def</span> <span class="n">read</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"reading a book"</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
 
 <p>Now requirement becomes that you need to be able to read more than just a physical book such as PDF book, physical book, Kindle book, etc. You could build multiple classes to handle each case, but can’t you abstract this? Yes, you can!</p>
 
-<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">trait</span> <span class="nc">Book</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">trait</span> <span class="nc">Book</span> <span class="o">{</span>
    <span class="k">val</span> <span class="n">name</span><span class="k">:</span> <span class="kt">String</span>
    <span class="k">def</span> <span class="n">read</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span>
 <span class="o">}</span>
@@ -434,13 +422,11 @@
 <span class="o">}</span>
 <span class="k">class</span> <span class="nc">KindleBook</span><span class="o">(</span><span class="k">val</span> <span class="n">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Book</span> <span class="o">{</span> 
     <span class="k">override</span> <span class="k">def</span> <span class="n">read</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"reading a Kindle book."</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
 
 <p>You can then use it in a very flexible way. You can apply design patterns like Adapter or Decorator depending on the tasks you are to do. See below for basic usage on above design:</p>
 
-<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">val</span> <span class="n">pdfbook</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">PDFBook</span><span class="o">(</span><span class="s">"wonderful"</span><span class="o">)</span>
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">val</span> <span class="n">pdfbook</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">PDFBook</span><span class="o">(</span><span class="s">"wonderful"</span><span class="o">)</span>
 <span class="k">val</span> <span class="n">kindlebook</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">KindleBook</span><span class="o">(</span><span class="s">"beautiful"</span><span class="o">)</span>
 <span class="n">pdfbook</span><span class="o">.</span><span class="n">read</span><span class="o">()</span> <span class="c1">// prints reading a PDF book
 </span><span class="n">kindlebook</span><span class="o">.</span><span class="n">read</span><span class="o">()</span> <span class="c1">// prints reading a Kindle book
@@ -449,9 +435,7 @@
 </span><span class="k">val</span> <span class="n">books</span> <span class="k">=</span> <span class="nc">ArrayBuffer</span><span class="o">.</span><span class="n">empty</span><span class="o">[</span><span class="kt">Book</span><span class="o">]</span>
 <span class="n">books</span><span class="o">.</span><span class="n">append</span><span class="o">(</span><span class="n">pdfbook</span><span class="o">)</span>
 <span class="n">books</span><span class="o">.</span><span class="n">append</span><span class="o">(</span><span class="n">physicalbook</span><span class="o">)</span>
-<span class="n">books</span><span class="o">.</span><span class="n">foreach</span><span class="o">(</span><span class="n">book</span> <span class="k">=&gt;</span> <span class="n">println</span><span class="o">(</span><span class="n">book</span><span class="o">.</span><span class="n">name</span><span class="o">))</span>
-</code></pre>
-</div>
+<span class="n">books</span><span class="o">.</span><span class="n">foreach</span><span class="o">(</span><span class="n">book</span> <span class="k">=&gt;</span> <span class="n">println</span><span class="o">(</span><span class="n">book</span><span class="o">.</span><span class="n">name</span><span class="o">))</span></code></pre></figure>
 
 
           

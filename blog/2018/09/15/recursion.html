@@ -232,27 +232,27 @@
 
 <p>There are controls in programming languages such as <code class="highlighter-rouge">if x do y else do z</code> or <code class="highlighter-rouge">switch (x) case 1: do y</code> etc. These controls along with iterative features like <code class="highlighter-rouge">for</code> or <code class="highlighter-rouge">while</code> loops make up the flow of controls within most of our programs. They are bread and butter of our programs. They instruct different things to execute in different conditions. However, there is another reasonably vital way to control our program: recursion.</p>
 
-<p>Recursion consists of the base case(s) which eventually would terminate the call. Otherwise, the function calls itself over and over with slight modifications to the function arguments. It is therefore vital to have a proper base case(s) which would exit the function otherwise the same function will be called infinitely (until your computer can handle).</p>
+<p>Recursion consists of the base case(s) which eventually would terminate the call. Otherwise, the function itself over and over with slight modifications to the function arguments. It is therefore vital to have a proper base case(s) which would exit the function otherwise the same function will be called infinitely (until your computer can handle).</p>
 
 <p>Complicated recursion usually preserves nasty long call stacks which hog the memory and eventually leading to a stack overflow (a Runtime Error). In this case, iterative solutions may alternatively be ideal because variables in the iteration are executed at the same time as the iteration happens not necessarily remembering what was on the previous iteration. That’s why in most of the problems, we can avoid this overhead by rewriting recursive algorithms to an iterative form. But sometimes iterative style could become pretty ugly and arduous to follow through than recursion.</p>
 
 <h2 id="when-is-recursion-appropriate">When is recursion appropriate?</h2>
 
-<p>There are a couple of algorithms that are more naturally expressed using recursion. Writing these in the iterative form is often ugly and sometimes even impossible. For example, we use recursion on searching/traversing trees/graphs by applying a DFS algorithm. Using a recursion for DFS strategy is natural. I don’t even know how I would solve DFS using iteration.</p>
+<p>There are a couple of algorithms that are more naturally expressed using recursion. Writing these in the iterative form is often ugly and sometimes even impossible. For example, we often use recursion on searching/traversing trees by applying a DFS algorithm. Using a recursion for DFS is natural. I don’t even know how I would solve DFS using iteration.</p>
 
-<p>Also, recursions work elegantly when implementing a <a href="/blog/2016/06/28/sorting.html">sorting algorithm</a>. Several efficient sorting algorithms such as merge or quick sort employs recursion to take care of dividing the item by half. It naturally makes sense to use recursion for these tasks since the similar functionalities pretty much repeat.</p>
+<p>Also, recursions work elegantly when implementing a <a href="/blog/2016/06/28/sorting.html">sorting algorithm</a>. Many efficient sorting algorithms such as merge or quick sort employs recursion to take care of its divisibility by half. It naturally makes sense to use recursion for these tasks since the rest of the functionalities stays pretty much alike.</p>
 
-<p>Clarity is also important when writing recursions. I typically apply recursions when the code is more explicit by using it and not suffering much efficiency. For example, we could write printing elements in LinkedList iteratively. However, I feel clearer applying a recursion instead here. It is more precise and natural to follow through written in recursion.</p>
+<p>Clarity is also critical when writing recursions. I typically apply recursions when the code is more explicit by using it and not suffering much efficiency. For example, we could write printing elements in LinkedList iteratively. However, I would feel clearer applying a recursion here. It is more precise and natural to follow through written in recursion.</p>
 
 <h2 id="top-bottom-head-recursion-vs-bottom-up-recursion-tail-recursion">Top-Bottom (head recursion) vs Bottom-up Recursion (tail recursion)</h2>
 
-<p>In head recursion, the recursive call comes before other processing the rest of the function (I like to think of it as winding at the top, or head, of the function).</p>
+<p>In head recursion, the recursive call comes before other processing the function (I like to think of it as winding at the top, or head, of the function).</p>
 
-<p>In tail recursion, it’s the opposite - the processing of the function occurs before the actual recursive call. Recursion follows after jobs processed.</p>
+<p>In tail recursion, it’s the opposite - the processing occurs before the recursive call. It follows after jobs processed.</p>
 
-<p>The recursion can happen in the middle or even multiple times during the function call. There are also <a href="https://en.wikipedia.org/wiki/Mutual_recursion">mutual recursions</a>. However, these aren’t very common or efficient for that matter. Often, they create confusion in the code (difficult to understand).</p>
+<p>The recursion can happen in the middle or multiple times during the function call. There are also <a href="https://en.wikipedia.org/wiki/Mutual_recursion">mutual recursions</a>. However, these aren’t very common or efficient for that matter. Often, they create confusion in the code.</p>
 
-<p>The first two types of recursions (head or tail) are common recursion types used in the industry. Choosing between the two recursive styles may seem random, but the choice can make all the difference when you start using recursions.</p>
+<p>The first two types of recursions (head or tail) are common ones used in the industry. Choosing between the two recursive styles may seem random, but the choice can make all the difference when you start using recursions.</p>
 
 <p>There is a technique that language implementers can opt-in to use called “tail call optimization” which can eliminate some levels of stack overflow. Put succinctly: if a function’s return expression is merely the result of a function call, then you don’t need to add a new level onto the stack, you can reuse the current one for the function being called (like how iterative style would do). Regrettably, there are only a few imperative languages have tail-call optimization feature.</p>
 

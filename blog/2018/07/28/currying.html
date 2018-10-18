@@ -240,14 +240,12 @@ In both mathematical and programming world, the term “Currying” is often men
 <p>The concept of “Currying” may be explained simpler by showing you the following comparisons.</p>
 
 <p style="margin-bottom: 10px;">In programming, “Currying” could mean as simple as,</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>result = f(x)(y)(z)
-</code></pre>
-</div>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="n">result</span> <span class="k">=</span> <span class="n">f</span><span class="o">(</span><span class="n">x</span><span class="o">)(</span><span class="n">y</span><span class="o">)(</span><span class="n">z</span><span class="o">)</span></code></pre></figure>
 
 <p style="margin-bottom: 10px;">which mathematically is pretty much same as writing,</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>f1 = f(x), f2 = f1(y), result = f2(z)
-</code></pre>
-</div>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="n">f1</span> <span class="k">=</span> <span class="n">f</span><span class="o">(</span><span class="n">x</span><span class="o">),</span> <span class="n">f2</span> <span class="k">=</span> <span class="n">f1</span><span class="o">(</span><span class="n">y</span><span class="o">),</span> <span class="n">result</span> <span class="k">=</span> <span class="n">f2</span><span class="o">(</span><span class="n">z</span><span class="o">)</span></code></pre></figure>
 
 <p>Note how the function breaks down into a multiple of one-argument functions which each gets executed separately in all in a single call of “Currying” (first code).</p>
 
@@ -256,65 +254,57 @@ In both mathematical and programming world, the term “Currying” is often men
 <p><code class="highlighter-rouge">sum</code> function is a great example to show “Currying” behaviour because the function could be used in different ways of summing such as multiplications, additions, divisions, subtractions, representing other complex values. This is the key of “Currying”. This chameleon-like <code class="highlighter-rouge">sum</code> function can be applied to various different situations which leave us room for organizing/refactoring the codes.</p>
 
 <p style="margin-bottom: 10px;">Let’s initially define the <code class="highlighter-rouge">sum</code> function like this below.</p>
-<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="n">sum</span><span class="o">(</span><span class="n">f</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=&gt;</span> <span class="nc">Int</span><span class="o">,</span> <span class="n">a</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">sum</span><span class="o">(</span><span class="n">f</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=&gt;</span> <span class="nc">Int</span><span class="o">,</span> <span class="n">a</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span>
    <span class="k">if</span> <span class="o">(</span><span class="n">a</span><span class="o">&gt;</span><span class="n">b</span><span class="o">)</span> <span class="mi">0</span> 
-   <span class="k">else</span> <span class="n">f</span><span class="o">(</span><span class="n">a</span><span class="o">)</span> <span class="o">+</span> <span class="n">sum</span><span class="o">(</span><span class="n">f</span><span class="o">,</span> <span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span><span class="n">b</span><span class="o">)</span>
-</code></pre>
-</div>
+   <span class="k">else</span> <span class="n">f</span><span class="o">(</span><span class="n">a</span><span class="o">)</span> <span class="o">+</span> <span class="n">sum</span><span class="o">(</span><span class="n">f</span><span class="o">,</span> <span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span><span class="n">b</span><span class="o">)</span></code></pre></figure>
 
 <p style="margin-bottom: 10px;">Now we can define the following functions which use the generic <code class="highlighter-rouge">sum</code> function we defined above.</p>
-<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="n">sumInts</span><span class="o">(</span><span class="n">a</span><span class="k">:</span><span class="kt">Int</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="n">sum</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span><span class="o">,</span> <span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">)</span>
-<span class="n">sumCubes</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="n">sum</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">,</span> <span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">)</span>
-</code></pre>
-</div>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="n">sumInts</span><span class="o">(</span><span class="n">a</span><span class="k">:</span><span class="kt">Int</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="n">sum</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span><span class="o">,</span> <span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">)</span>
+<span class="n">sumCubes</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="n">sum</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">,</span> <span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">)</span></code></pre></figure>
 
 <p>You may have noticed that above functions have repeated <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">b</code> parameters which get passed into our <code class="highlighter-rouge">sum</code> function. They seem to be unnecessary and can probably be simpler.</p>
 
 <p>Could there be a way to remove these out? There must be a way to simplify the above functions. Well, that’s when the technique of “Currying” applies. Let me show you a step-by-step of the transformation we could make to simplify this using “Currying”.</p>
 
 <p style="margin-bottom: 10px;">Let’s update our <code class="highlighter-rouge">sum</code> function to return a function instead, (Int, Int) =&gt; Int.</p>
-<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="n">sum</span><span class="o">(</span><span class="n">f</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=&gt;</span> <span class="nc">Int</span><span class="o">)</span><span class="k">:</span> <span class="o">(</span><span class="kt">Int</span><span class="o">,</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="nc">Int</span> <span class="k">=</span> <span class="o">{</span>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">sum</span><span class="o">(</span><span class="n">f</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=&gt;</span> <span class="nc">Int</span><span class="o">)</span><span class="k">:</span> <span class="o">(</span><span class="kt">Int</span><span class="o">,</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="nc">Int</span> <span class="k">=</span> <span class="o">{</span>
    <span class="k">def</span> <span class="n">sumF</span><span class="o">(</span><span class="n">a</span><span class="k">:</span><span class="kt">Int</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span><span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> 
       <span class="k">if</span> <span class="o">(</span><span class="n">a</span><span class="o">&gt;</span><span class="n">b</span><span class="o">)</span> <span class="mi">0</span> 
       <span class="k">else</span> <span class="n">f</span><span class="o">(</span><span class="n">a</span><span class="o">)</span> <span class="o">+</span> <span class="n">sumF</span><span class="o">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span><span class="n">b</span><span class="o">)</span>
    <span class="n">sumF</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
 
 <p style="margin-bottom: 10px;">When we’ve done that, we can simply define <code class="highlighter-rouge">sumInts</code> and <code class="highlighter-rouge">sumCubes</code>
  as themselves a function.</p>
-<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">val</span> <span class="n">sumInts</span> <span class="k">=</span> <span class="n">sum</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span><span class="o">)</span>
-<span class="k">val</span> <span class="n">sumCubes</span> <span class="k">=</span> <span class="n">sum</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">)</span>
-</code></pre>
-</div>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">val</span> <span class="n">sumInts</span> <span class="k">=</span> <span class="n">sum</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">sumCubes</span> <span class="k">=</span> <span class="n">sum</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">)</span></code></pre></figure>
 
 <p style="margin-bottom: 10px;">where we can use it like below. It will aggregate values from 1 to 5 (15) and add it to the aggregate of cubed values from 3 to 5 (216) which would be equal to 15+216=231.</p>
-<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="n">sumInts</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">5</span><span class="o">)</span> <span class="o">+</span> <span class="n">sumCubes</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span><span class="mi">5</span><span class="o">)</span>
-</code></pre>
-</div>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="n">sumInts</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">5</span><span class="o">)</span> <span class="o">+</span> <span class="n">sumCubes</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span><span class="mi">5</span><span class="o">)</span></code></pre></figure>
 
 <p>Now can we avoid even these names <code class="highlighter-rouge">sumInts</code> and <code class="highlighter-rouge">sumCubes</code> and straight use our <code class="highlighter-rouge">sum</code> function instead? After all, they are basically using the core function, <code class="highlighter-rouge">sum</code>. The answer is “Yes” and that is where “Currying” kicks in.</p>
 
 <p style="margin-bottom: 10px;">We can pass in a function to our sum with values attached beside the function which is equivalent to <code class="highlighter-rouge">sumInts(1,5) + sumCubes(3,5)</code> we defined above like this.</p>
-<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="n">sum</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span><span class="o">)(</span><span class="mi">1</span><span class="o">,</span><span class="mi">5</span><span class="o">)</span> <span class="o">+</span> <span class="n">sum</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">)(</span><span class="mi">3</span><span class="o">,</span><span class="mi">5</span><span class="o">)</span>
-</code></pre>
-</div>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="n">sum</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span><span class="o">)(</span><span class="mi">1</span><span class="o">,</span><span class="mi">5</span><span class="o">)</span> <span class="o">+</span> <span class="n">sum</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">)(</span><span class="mi">3</span><span class="o">,</span><span class="mi">5</span><span class="o">)</span></code></pre></figure>
 
 <p>This is what the Currying is in a nutshell. Being able to pass in different sets of parameters to execute the function in a specific way we want it function.</p>
 
 <p>We have analyzed a rather a long explained step-by-step example of Currying above. To simply put, you could think of a function like this <code class="highlighter-rouge">doSomething(10,“Hello”, true)</code> which essentially is <code class="highlighter-rouge">doSomething(10)(“Hello”)(true)</code>. It basically is calling doSomething function with anonymous functions 3 times.</p>
 
 <p style="margin-bottom: 10px;">I’ve mentioned above there are subtle differences between “Currying” and  “Partially applied functions”. They are very similar but not exactly the same. Partial application is slightly different from Currying in that it takes the argument(s), applies it partially and returns a new function without the passed parameter. To see what it means, I will show an example using the exactly the same example as above. Let’s make a new rule (for argument sake) that the above <code class="highlighter-rouge">sum</code> function gets an upper bound of fixed 5.</p>
-<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="k">val</span> <span class="n">sumTo5</span> <span class="k">=</span> <span class="n">sum</span><span class="o">(</span><span class="n">x</span><span class="k">=&gt;</span><span class="n">x</span><span class="o">)(</span><span class="k">_:</span><span class="kt">Int</span><span class="o">,</span><span class="mi">5</span><span class="o">)</span>
-<span class="k">val</span> <span class="n">sumCubesTo5</span> <span class="k">=</span> <span class="n">sum</span><span class="o">(</span><span class="n">x</span><span class="k">=&gt;</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">)(</span><span class="k">_:</span><span class="kt">Int</span><span class="o">,</span><span class="mi">5</span><span class="o">)</span>
-</code></pre>
-</div>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">val</span> <span class="n">sumTo5</span> <span class="k">=</span> <span class="n">sum</span><span class="o">(</span><span class="n">x</span><span class="k">=&gt;</span><span class="n">x</span><span class="o">)(</span><span class="k">_:</span><span class="kt">Int</span><span class="o">,</span><span class="mi">5</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">sumCubesTo5</span> <span class="k">=</span> <span class="n">sum</span><span class="o">(</span><span class="n">x</span><span class="k">=&gt;</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">)(</span><span class="k">_:</span><span class="kt">Int</span><span class="o">,</span><span class="mi">5</span><span class="o">)</span></code></pre></figure>
 
 <p style="margin-bottom: 10px;">We have partially created a function here which can take a lower bound as any inputs but has fixed upper bound of 5. To apply this partially created function,</p>
-<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="n">sumTo5</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="o">+</span> <span class="n">sumCubesTo5</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span> <span class="c1">// will output 231 as well
-</span></code></pre>
-</div>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="n">sumTo5</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="o">+</span> <span class="n">sumCubesTo5</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span> <span class="o">//</span> <span class="n">will</span> <span class="n">output</span> <span class="mi">231</span> <span class="n">as</span> <span class="n">well</span></code></pre></figure>
 
 <p>At this point, you might wonder, what is the advantage of doing all this? To be honest, I have not come across a time where I was absolutely required to use Currying to make something work. This is probably why a lot of people thinks Currying is just another syntactic sugar for functional programming. I do not disagree. It could well be a syntactic sugar despite a possible grain of performance gains which may not even be noticeable. However, Currying is still an important concept to understand in functional programming.</p>
 
