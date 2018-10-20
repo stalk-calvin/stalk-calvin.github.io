@@ -195,11 +195,10 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>알고리즘 라이프 (Bad Choices)</strong></h1>
-          <h4 style="display:inline; color: #F4A460;"><strong>일상 속 스마트한 선택을 위해</strong></h4><br />
           <h4>
             <strong>28 Apr 2018</strong>
             <small>
-              <a href="/blog/2018/04/28/bad-choices.html#fb_comment"><span class="fb-comments-count" data-href="https://stalk-calvin.github.io/blog/2018/04/28/bad-choices.html"></span> Comments</a>
+              <h4 style="display:inline; color: #F4A460;"><strong>일상 속 스마트한 선택을 위해</strong></h4><br />
               <br />
               
                 <a class="tag" href="/tags/#bookreview">#bookreview</a>
@@ -230,16 +229,20 @@
 
 <p>양말이 한더미 쌓여있는데 양말의 짝을 맞춰야 합니다. 어떻게 해야 효율적일까요? 아마 가장 쉽게 생각할수 있는 방법은 아마 양말 한짝을 찾아서 다른 한짝을 양말 산더미에서 찾는 방법일겁니다. 만약 많은 양말이 쌓여있다면 다른 한짝의 양말을 찾는데 오랜 시간이 걸릴 겁니다. 코드로 표현하자면 이런 식이겠네요:</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">socks</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">socks</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="err">찾았다!</span> <span class="n">socks</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="err">와</span> <span class="n">socks</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="err">는</span> <span class="err">빼서</span> <span class="err">정리</span></code></pre></figure>
+        <span class="k">if</span> <span class="p">(</span><span class="n">socks</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">socks</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="err">찾았다!</span> <span class="n">socks</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="err">와</span> <span class="n">socks</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="err">는</span> <span class="err">빼서</span> <span class="err">정리</span>
+</code></pre>
+</div>
 
 <p>그럼 다른방법이 뭐가 있을까요? 그냥 무자비로 나열하는 방법이 있습니다. 나열하다가 짝이 맞으면 맞춘것끼리 치워두면 되니까요. 우린 흔히 이 방법을 코딩에선 캐시(해시)로 구현해볼수 있습니다. 한짝을 캐시에 넣어두었다 다른 한쪽이 맞으면 치워두는 방식입니다. 대충 코드로 적어볼까요?</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">socks</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="n">cache</span><span class="p">):</span>
         <span class="err">찾았다!</span> <span class="err">캐시에</span> <span class="err">있는</span> <span class="err">양말과</span> <span class="err">현재</span> <span class="err">양말을</span> <span class="err">정리</span>
-    <span class="n">cache</span><span class="p">[</span><span class="n">socks</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">socks</span><span class="p">[</span><span class="n">i</span><span class="p">]</span></code></pre></figure>
+    <span class="n">cache</span><span class="p">[</span><span class="n">socks</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">socks</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</code></pre>
+</div>
 
 <p>위에 코드들은 대충 적은것이고 정말 제대로 코드를 적는다면 양말의 맞춤을 알기위해 왼쪽인지, 오른쪽인지, 모양은 어떤지, 무늬는 어떤지등등 각각 양말이 가져야할 특징들이 필요할테고 이 정보를 가지고 제대로 짝을 맞춰 나갈 수 있을 것입니다.</p>
 

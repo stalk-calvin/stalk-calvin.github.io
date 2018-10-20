@@ -195,11 +195,10 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>XOR swaps</strong></h1>
-          <h4 style="display:inline; color: #F4A460;"><strong>Swap two variables using XOR operations</strong></h4><br />
           <h4>
             <strong>14 Jan 2018</strong>
             <small>
-              <a href="/blog/2018/01/14/xor-swaps.html#fb_comment"><span class="fb-comments-count" data-href="https://stalk-calvin.github.io/blog/2018/01/14/xor-swaps.html"></span> Comments</a>
+              <h4 style="display:inline; color: #F4A460;"><strong>Swap two variables using XOR operations</strong></h4><br />
               <br />
               
                 <a class="tag" href="/tags/#xor">#xor</a>
@@ -234,15 +233,19 @@
 
 <p>XOR swaps algorithm is a technique in programming that uses XOR bitwise operations to swap values of <code class="highlighter-rouge">distinct variables</code> having the same data type without using a temporary variable. We commonly swap 2 values which use a temporary variable, like below:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">tmp = x
+<div class="language-text highlighter-rouge"><pre class="highlight"><code>tmp = x
 x = y
-y = tmp</code></pre></figure>
+y = tmp
+</code></pre>
+</div>
 
 <p>Swapping using temporary variable works perfectly fine. However, there is another trick to swap the variable, XOR swaps algorithm. No temporary storage is needed. The algorithm looks like this:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">x = x xor y
+<div class="language-text highlighter-rouge"><pre class="highlight"><code>x = x xor y
 y = x xor y
-x = x xor y</code></pre></figure>
+x = x xor y
+</code></pre>
+</div>
 
 <table class="image" align="center" style="margin-top:1%;text-align:center;">
 <caption class="custom" align="bottom">XOR in Venn diagram</caption>
@@ -255,7 +258,7 @@ x = x xor y</code></pre></figure>
 
 <p>As I mentioned, the algorithm can also be applied to a string for reversing its content because the character is essentially is composed of a set of binary numbers. For example, character ‘a’ is represented as 97 (decimal value) in ASCII, which is same as ‘01100001’ in binary. Most computers typically reserve 1 byte, 8 bits, for an ASCII character so a character is can typically be represented by 256 different values. ASCII, however, do not typically use the first bit which would use only 7 bits to represent 128 different values. The first bit may be used as a parity bit if necessary. The code example in Java is found in my <a href="https://github.com/stalk-calvin/Java-Algorithms/blob/343565651331e95b35ad0b8aa4e42b1506ac8eff/src/main/java/org/calvin/String/Reverse.java">github</a> where the tests are written <a href="https://github.com/stalk-calvin/Java-Algorithms/blob/343565651331e95b35ad0b8aa4e42b1506ac8eff/src/test/java/org/calvin/String/ReverseTest.java">here</a> OR code snippets are shown below:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">String</span> <span class="nf">reverseStringXOR</span><span class="o">(</span><span class="n">String</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+<div style="margin-bottom:1%" class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="n">String</span> <span class="nf">reverseStringXOR</span><span class="o">(</span><span class="n">String</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
     <span class="kt">char</span><span class="o">[]</span> <span class="n">charArray</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">toCharArray</span><span class="o">();</span>
     <span class="kt">int</span> <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
     <span class="kt">int</span> <span class="n">end</span> <span class="o">=</span> <span class="n">charArray</span><span class="o">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
@@ -267,9 +270,11 @@ x = x xor y</code></pre></figure>
         <span class="o">--</span><span class="n">end</span><span class="o">;</span>
     <span class="o">}</span>
     <span class="k">return</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="n">charArray</span><span class="o">);</span>
-<span class="o">}</span></code></pre></figure>
+<span class="o">}</span>
+</code></pre>
+</div>
 
-<p style="margin-bottom:1%">The trick just isn’t limited to the ASCII, you can apply the same code to swap UTF-8 characters. Using the UTF encoding means that character is represented using 1/2/3/4 bytes length, it doesn’t change the fact the character swaps after using the XOR swaps algorithm. ASCII uses only the first 7 bits of an 8 bit byte. So all combinations from 00000000 to 01111111. All 128 bytes in this range are mapped to a specific character. UTF-8 basically keeps these exact mappings. So trick will work in either unicode or ASCII.</p>
+<p>The trick just isn’t limited to the ASCII, you can apply the same code to swap UTF-8 characters. Using the UTF encoding means that character is represented using 1/2/3/4 bytes length, it doesn’t change the fact the character swaps after using the XOR swaps algorithm. ASCII uses only the first 7 bits of an 8 bit byte. So all combinations from 00000000 to 01111111. All 128 bytes in this range are mapped to a specific character. UTF-8 basically keeps these exact mappings. So trick will work in either unicode or ASCII.</p>
 
 <h3 id="pitfall--drawback">Pitfall / Drawback</h3>
 

@@ -195,11 +195,10 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>Abstraction</strong></h1>
-          <h4 style="display:inline; color: #F4A460;"><strong>help you write a better code</strong></h4><br />
           <h4>
             <strong>18 Aug 2018</strong>
             <small>
-              <a href="/blog/2018/08/18/abstraction.html#fb_comment"><span class="fb-comments-count" data-href="https://stalk-calvin.github.io/blog/2018/08/18/abstraction.html"></span> Comments</a>
+              <h4 style="display:inline; color: #F4A460;"><strong>help you write a better code</strong></h4><br />
               <br />
               
                 <a class="tag" href="/tags/#abstraction">#abstraction</a>
@@ -241,29 +240,35 @@ boundaries, relative to the perspective of the viewer."</em><br /> — Grady Boo
 
 <p>Let me show you an example. Say we have a Dog class which can <code class="highlighter-rouge">eatDogFood</code> like below:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="o">{</span>
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eatDogFood</span><span class="o">()</span> <span class="o">{...}</span>
-<span class="o">}</span></code></pre></figure>
+<span class="o">}</span>
+</code></pre>
+</div>
 
 <p>Now there is a Cat class which can <code class="highlighter-rouge">eatCatFood</code> like below:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cat</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cat</span> <span class="o">{</span>
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eatCatFood</span><span class="o">()</span> <span class="o">{...}</span>
-<span class="o">}</span></code></pre></figure>
+<span class="o">}</span>
+</code></pre>
+</div>
 
 <p>One could make a use out of these classes in this fashion:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">if</span> <span class="o">(</span><span class="n">isDog</span><span class="o">)</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span><span class="n">isDog</span><span class="o">)</span> <span class="o">{</span>
    <span class="k">new</span> <span class="nf">Dog</span><span class="o">().</span><span class="na">eatDogFood</span><span class="o">();</span>
 <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
    <span class="k">new</span> <span class="nf">Cat</span><span class="o">().</span><span class="na">eatCatFood</span><span class="o">();</span>
-<span class="o">}</span></code></pre></figure>
+<span class="o">}</span>
+</code></pre>
+</div>
 
 <p>This works great until we have another animal, a <code class="highlighter-rouge">horse</code>, then we have another one <code class="highlighter-rouge">pig</code>, then another, and so on. Above if-else block can get really long and it is pretty tightly coupled.</p>
 
 <p>There obviously is a better way to handle this through abstraction with composition. Instead of having these if-else block, we could create an Animal interface which handles eat functionality along with animal classes:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Animal</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Animal</span> <span class="o">{</span>
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">();</span>
 <span class="o">}</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">implements</span> <span class="n">Animal</span> <span class="o">{</span>
@@ -277,13 +282,17 @@ boundaries, relative to the perspective of the viewer."</em><br /> — Grady Boo
 <span class="o">}</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Pig</span> <span class="kd">implements</span> <span class="n">Animal</span> <span class="o">{</span>
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">()</span> <span class="o">{...}</span>
-<span class="o">}</span></code></pre></figure>
+<span class="o">}</span>
+</code></pre>
+</div>
 
 <p>Then have the function pass in the object that is eating and our code can be as simple as:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="n">Animal</span> <span class="n">obj</span><span class="o">)</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="n">Animal</span> <span class="n">obj</span><span class="o">)</span> <span class="o">{</span>
    <span class="n">obj</span><span class="o">.</span><span class="na">eat</span><span class="o">();</span>
-<span class="o">}</span></code></pre></figure>
+<span class="o">}</span>
+</code></pre>
+</div>
 
 <p>Now our code is not only loosely coupled, it is simplified and much more organized. Also, our code does not require all these dependencies of different animal classes/modules.</p>
 

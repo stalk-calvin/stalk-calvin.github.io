@@ -195,11 +195,10 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>ASCII vs Unicode</strong></h1>
-          <h4 style="display:inline; color: #F4A460;"><strong>Understanding why they were created in the first place</strong></h4><br />
           <h4>
             <strong>26 May 2018</strong>
             <small>
-              <a href="/blog/2018/05/26/ascii-unicode.html#fb_comment"><span class="fb-comments-count" data-href="https://stalk-calvin.github.io/blog/2018/05/26/ascii-unicode.html"></span> Comments</a>
+              <h4 style="display:inline; color: #F4A460;"><strong>Understanding why they were created in the first place</strong></h4><br />
               <br />
               
                 <a class="tag" href="/tags/#computer">#computer</a>
@@ -238,11 +237,13 @@
 
 <p>See below the binary representation of a few example characters represented in ASCII:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">0100101 -&gt; % (Percent Sign - 37)
+<div class="highlighter-rouge"><pre class="highlight"><code>0100101 -&gt; % (Percent Sign - 37)
 1000001 -&gt; A (Capital letter A - 65)
 1000010 -&gt; B (Capital letter B - 66)
 1000011 -&gt; C (Capital letter C - 67)
-0001101 -&gt; Carriage Return (13)</code></pre></figure>
+0001101 -&gt; Carriage Return (13)
+</code></pre>
+</div>
 
 <p>As you may have noticed, ASCII is designed to support only English since the center of the computer industry was in America at that time. As a consequence, they didn’t need to support other latin characters such as á, ü, ç, ñ, etc. (aka diacritics).</p>
 
@@ -252,8 +253,10 @@
 
 <p>See below binary representation of a new character set which uses the last 8th bit:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">10000010 -&gt; é (e with acute accent - 130)
-10100000 -&gt; á (a with acute accent - 160)</code></pre></figure>
+<div class="highlighter-rouge"><pre class="highlight"><code>10000010 -&gt; é (e with acute accent - 130)
+10100000 -&gt; á (a with acute accent - 160)
+</code></pre>
+</div>
 
 <p>The name for this “ASCII extended to 8 bits and not 7 bits as before” could be just referred as “<a href="https://en.wikipedia.org/wiki/Extended_ASCII">extended ASCII</a>” or “8-bit ASCII”.</p>
 
