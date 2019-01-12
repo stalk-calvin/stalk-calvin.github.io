@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "New Year's Resolution",
+      "link"			: "https://stalk-calvin.github.io/blog/2019/01/12/new-year-resolution.html",
+      "excerpt"		: "2019, here I come!",
+      "tags"        : ["newyear","resolution","year2019"],
+      "date"        : "2019 Jan 12",
+      "year"        : 2019
+    }
+  
+
+  
+    ,{
       "title"			: "Permutation and Combination",
       "link"			: "https://stalk-calvin.github.io/blog/2018/11/17/permutation-combination.html",
       "excerpt"		: "Basic probability everyone should know.",
