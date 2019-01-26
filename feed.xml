@@ -14,7 +14,32 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 12 Jan 2019 21:43:50 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Jan 2019 22:59:36 +0000</lastBuildDate>
+	
+		<item>
+			<title>Caching</title>
+			
+				<description>Strategy, Control, Pattern</description>
+			
+        
+          <category>computer</category>
+        
+          <category>programming</category>
+        
+          <category>cache</category>
+        
+          <category>caching</category>
+        
+			<pubDate>26 January 2019</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2019/01/26/caching.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2019/01/26/caching</guid>
+		</item>
 	
 		<item>
 			<title>New Year's Resolution</title>
@@ -181,6 +206,8 @@
           <category>programming</category>
         
           <category>oop</category>
+        
+          <category>composition</category>
         
 			<pubDate>18 August 2018</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2018/08/18/abstraction.html</link>

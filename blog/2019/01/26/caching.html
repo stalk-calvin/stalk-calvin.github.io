@@ -24,19 +24,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="help you write a better code">
+  <meta name="description" content="Strategy, Control, Pattern">
   <meta name="author" content="Calvin Lee">
   <meta name="keywords" content="calvin, lee, personal, blog, beer, fitness, diet, computer, science, programming, software, engineer">
   <meta property="fb:app_id" content="140805279842677" /> 
-  <meta property="og:title" content="Abstraction" />
-  <meta property="og:description" content="help you write a better code" />
-  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2018/08/18/abstraction.html" />
+  <meta property="og:title" content="Caching" />
+  <meta property="og:description" content="Strategy, Control, Pattern" />
+  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2019/01/26/caching.html" />
 
-  <link rel="alternate" hreflang="en" href="https://stalk-calvin.github.io/blog/2018/08/18/abstraction.html" />
-  <link rel="alternate" hreflang="kr" href="https://stalk-calvin.github.io/blog/2018/08/18/abstraction.html" />
-  <link rel="canonical" href="/blog/2018/08/18/abstraction.html">
+  <link rel="alternate" hreflang="en" href="https://stalk-calvin.github.io/blog/2019/01/26/caching.html" />
+  <link rel="alternate" hreflang="kr" href="https://stalk-calvin.github.io/blog/2019/01/26/caching.html" />
+  <link rel="canonical" href="/blog/2019/01/26/caching.html">
   <link rel="author" href="https://www.linkedin.com/in/stalkme">
-  <title>I am Calvin | Abstraction</title>
+  <title>I am Calvin | Caching</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -194,144 +194,106 @@
     <section id="post" class="container content-section ">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>Abstraction</strong></h1>
-	  <h4 style="display:inline; color: #F4A460;"><strong>help you write a better code</strong></h4><br />
+          <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>Caching</strong></h1>
+	  <h4 style="display:inline; color: #F4A460;"><strong>Strategy, Control, Pattern</strong></h4><br />
           <h4>
-            <strong>18 Aug 2018</strong>
+            <strong>26 Jan 2019</strong>
             <small>
-               <a href="/blog/2018/08/18/abstraction.html#fb_comment">View Comments</a>
+               <a href="/blog/2019/01/26/caching.html#fb_comment">View Comments</a>
               <br />
-              
-                <a class="tag" href="/tags/#abstraction">#abstraction</a>
               
                 <a class="tag" href="/tags/#computer">#computer</a>
               
                 <a class="tag" href="/tags/#programming">#programming</a>
               
-                <a class="tag" href="/tags/#oop">#oop</a>
+                <a class="tag" href="/tags/#cache">#cache</a>
               
-                <a class="tag" href="/tags/#composition">#composition</a>
+                <a class="tag" href="/tags/#caching">#caching</a>
               
             </small>
           </h4>
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2018/09/01/films-basics.html" class="btn" title="Basics of Films">&laquo; Basics of Films</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2018/07/28/currying.html" class="btn" title="Currying">Currying &raquo;</a>
+              <a href="https://stalk-calvin.github.io/blog/2019/01/12/new-year-resolution.html" class="btn" title="New Year's Resolution">New Year's Resolution &raquo;</a>
             
           </nav><!-- /.pagination -->
 
-          <p style="padding-left: 30px;"><em>"An abstraction denotes
-the essential characteristics of an object that distinguish it from all
-other kinds of object and thus provide crisply defined conceptual
-boundaries, relative to the perspective of the viewer."</em><br /> — Grady Booch</p>
+          <p>Caching can be extremely useful in a lot of applications. Caching allows you to reuse previously computed and fetched data. It even helps the program achieve unattainable product requirements. However, it could be a double-edged sword and haunt you instead because caches can mess up and have adverse effects on your application (such as OOM). That is why you would want to have the appropriate strategy which has good control over your “caches.”</p>
 
-<p>Abstraction basically does not require us to understand the specifics.  For example, take a look at your monitor. Is it CRT? or LCD? what’s the resolution? how many buttons are there? How big is it? How bright is it? The answers to these questions will describe the specifics of the monitor. However, in the end, it just is a monitor. If you know the model and maker of the monitor, you will definitely find out the answers to all of the above questions. The idea that those models are just a “monitor” would be equivalent to what an “abstraction” of that monitor is. The monitor in front of you will be a specific model of what “monitor” (abstraction) is. Well, you need a maker and model for every monitor but the specifics can be abstracted.</p>
+<p>Caches are not limited to software, in fact, chances are they are in every computing layer: OS, hardware, etc. Sometimes devices are explicitly built for caching purpose. For software, caches are typically saved locally meaning they take advantage of “fast” loading through the local server. You could technically design a cache served outside of the local server. However, this may introduce extra latency which defeats the entire purpose of having a cache.</p>
 
-<p>From the coding perspective, abstraction is simply an interface which simplifies the functionalities of complex items in a simple way. With abstractions, you should be able to work on it without knowing any specifics of the item. From the testing perspective, think of a “black-box testing”. It is basically a test of an abstraction. You basically know what you are facing with, without the details.</p>
+<p>When caches stored in the local server, they are often stored in hardware such as RAM (Random-access memory) to take advantage of faster write/access time. It is entirely possible to store and retrieve disk data, which has a significantly slower response time compared to memory, but you may gain the benefit of having a lot more space than memory. Generally, caches are meant to be short-term memory storage meaning it strives to have a small and “limited” space which usually keeps track of most recently accessed items (LRU).</p>
 
-<h2 id="understanding-abstraction-is-important">Understanding Abstraction is Important</h2>
+<h2 id="cache-invalidation">Cache Invalidation</h2>
 
-<p>In programming, by abstracting objects, our goals are to achieve the following 2 items:</p>
-<ol>
-  <li>Code maintainability through loosely coupled code which increases readability greatly.</li>
-  <li>It can minimize dependencies in code thus more organized code.</li>
+<p>The idea of caching is great, but it’s not going to be valuable if cached items contain incorrect (wrong) data. That is why we need it frequently updated and managed. If not, it can cause some unexpected and inconsistent application behaviour.</p>
+
+<p>Solving this type of problem is known as “cache invalidation.” To prevent such invalidations, we frequently categorize caches to different techniques. Here are the three techniques mainly in use these days. For these examples, I will assume cached data are for the database data.</p>
+
+<ol style="padding-left: 1.5em;list-style: decimal; margin: 0;">
+<li style="padding-bottom: 1em;"><b>Write-through cache</b>: Data goes into the cache, and that data is also going to the database. The cached data is beneficial upon fast access. This method will protect us from having inconsistent data or lost data. However, this scheme has higher latency in writes and cache can easily be flooded (unless we have appropriate eviction policy). Btw
+<table class="image" align="center" style="margin-top:3%;text-align:center;">
+<caption style="font-size:14px" class="custom" align="bottom">Write-through cache</caption>
+<tbody><tr><td><img src="https://cdn-images-1.medium.com/max/1600/1*_HEX25Jpn30-6R_shn7UTQ.jpeg" alt="Write-through cache" /></td></tr>
+</tbody></table>
+</li>
+<li style="padding-bottom: 1em;"><b>Write-around cache</b>: Similar to the above technique, but if we never seen this kind of data before, we write to the database only. We will avoid flooding cache with write operations which may not even reread in the future, but obviously, this also means we will have a lot of "cache miss" upon reading the data. It's generally useful when you have a lot of writes, but little reads.
+<table class="image" align="center" style="margin-top:3%;text-align:center;">
+<caption style="font-size:14px" class="custom" align="bottom">Write-around cache</caption>
+<tbody><tr><td><img src="https://cdn-images-1.medium.com/max/1600/1*K48TyQStzpD8mAYAmQ7YWw.jpeg" alt="Write-around cache" /></td></tr>
+</tbody></table>
+</li>
+<li style="padding-bottom: 2em;"><b>Write-back cache</b>: We store the data in cache instantly and notify clients (like how async works). Then permanent storage (to the database) is handled separately. It saves huge latency/response time but could risk data loss in case of a server crash (where cache resides) or other unexpected events because the cache is the only place that has this data. There are strategies to mitigate such issues.
+<table class="image" align="center" style="margin-top:3%;text-align:center;">
+<caption style="font-size:14px" class="custom" align="bottom">Write-back cache</caption>
+<tbody><tr><td><img src="https://cdn-images-1.medium.com/max/1600/1*Ml35Clk7It8OhEhcru0cqA.jpeg" alt="Write-back cache" /></td></tr>
+</tbody></table>
+</li>
 </ol>
 
-<p>Let me show you an example. Say we have a Dog class which can <code class="highlighter-rouge">eatDogFood</code> like below:</p>
+<h2 id="cache-eviction-policies">Cache Eviction Policies</h2>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="o">{</span>
-   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eatDogFood</span><span class="o">()</span> <span class="o">{...}</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<p>Remember how I mentioned that cache size is to be “limited”? Cache eviction policies precisely handle such situations. The cached item(s) is released when the cached object(s) exceeds the quota to make up the space for the incoming new data. The process of releasing blocks is called eviction. The following are a couple of practiced eviction policies. However, from my experience, it is best to come up with a strategy for your application.</p>
 
-<p>Now there is a Cat class which can <code class="highlighter-rouge">eatCatFood</code> like below:</p>
-
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cat</span> <span class="o">{</span>
-   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eatCatFood</span><span class="o">()</span> <span class="o">{...}</span>
-<span class="o">}</span>
-</code></pre>
-</div>
-
-<p>One could make a use out of these classes in this fashion:</p>
-
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span><span class="n">isDog</span><span class="o">)</span> <span class="o">{</span>
-   <span class="k">new</span> <span class="nf">Dog</span><span class="o">().</span><span class="na">eatDogFood</span><span class="o">();</span>
-<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-   <span class="k">new</span> <span class="nf">Cat</span><span class="o">().</span><span class="na">eatCatFood</span><span class="o">();</span>
-<span class="o">}</span>
-</code></pre>
-</div>
-
-<p>This works great until we have another animal, a <code class="highlighter-rouge">horse</code>, then we have another one <code class="highlighter-rouge">pig</code>, then another, and so on. Above if-else block can get really long and it is pretty tightly coupled.</p>
-
-<p>There obviously is a better way to handle this through abstraction with composition. Instead of having these if-else block, we could create an Animal interface which handles eat functionality along with animal classes:</p>
-
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Animal</span> <span class="o">{</span>
-   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">();</span>
-<span class="o">}</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">implements</span> <span class="n">Animal</span> <span class="o">{</span>
-   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">()</span> <span class="o">{...}</span>
-<span class="o">}</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cat</span> <span class="kd">implements</span> <span class="n">Animal</span> <span class="o">{</span>
-   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">()</span> <span class="o">{...}</span>
-<span class="o">}</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Horse</span> <span class="kd">implements</span> <span class="n">Animal</span> <span class="o">{</span>
-   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">()</span> <span class="o">{...}</span>
-<span class="o">}</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Pig</span> <span class="kd">implements</span> <span class="n">Animal</span> <span class="o">{</span>
-   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">()</span> <span class="o">{...}</span>
-<span class="o">}</span>
-</code></pre>
-</div>
-
-<p>Then have the function pass in the object that is eating and our code can be as simple as:</p>
-
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="n">Animal</span> <span class="n">obj</span><span class="o">)</span> <span class="o">{</span>
-   <span class="n">obj</span><span class="o">.</span><span class="na">eat</span><span class="o">();</span>
-<span class="o">}</span>
-</code></pre>
-</div>
-
-<p>Now our code is not only loosely coupled, it is simplified and much more organized. Also, our code does not require all these dependencies of different animal classes/modules.</p>
-
-<h2 id="abstractions-are-everywhere">Abstractions are Everywhere</h2>
-
-<p>You will notice that abstractions are used in a lot of different software principles because that is the nature of humans, we love to abstract things. We like to see things in an abstracted way because of the simplicity and easier understanding of an object.</p>
-
-<p>An example of abstraction can be as simple as, a pen which dispenses ink when I write. How does it do that? No idea. I just need to know that a “pen” lets me write. “TV” is another example. We need to know how to turn it on and change channels but how it works inside TV is hidden to the users. Think of a “war”. It is an abstract idea since there are many different kinds of wars which have their own unique events and places. World War II is one of a specific example of a “war”. We know the details such as when, how, where and why it happened. It’s specific, not abstract. Abstraction can really be any objects you see around.</p>
-
-<p>What about that bus I took this morning? Do you happen to know the technical implementation of the bus? how it moves through the engine and how they are all connected? Probably not. At most, you probably need to know that “I took a bus”. The “bus” itself is an abstraction. But as soon as I got out of the bus, I saw this beautiful Porche waiting right behind the bus. A “car” could be another abstraction of that specific Porche that was waiting behind the bus.</p>
-
-<p>Now, we can raise a question, can “car” and “bus” be abstracted into a “transit”? Sure. Let’s say these abstractions are used in a software. When the software gets bigger and bigger, we may need to support “airplanes”, “trains”, or “cruises” etc. An abstracting these abstracted objects can be helpful to organize and simplify your code. However, it also can complicate the system. It can create a maze to find a functionality or behaviour. The complication is worst kind in code. So it is important to have a right balance. Remember our goal of abstraction? Code readability and simplicity!</p>
-
-<h2 id="no-abstraction-is-better-than-the-wrong-abstraction">No Abstraction is Better Than the Wrong Abstraction</h2>
-
-<p>“Abstraction &gt; Complexity &gt; Complicated”</p>
-
-<p>Abstraction is almost always better than complexity but in my opinion, complexity is still better than complication. If abstracting creates a complication in your code, leave it the way complex.</p>
-
-<p>If you think about it, you probably can abstract a lot of objects of little things like “round”, “dispenser”, “metal”, etc. Then have multiple of these abstractions to create an object such as “metal round dispenser”. Well, its abstracted to a nearly a thing. But it can be complicated to see what that thing really is. I now have to dig up the “round” features which have “dispenser” capabilities along with “metal” feature.</p>
-
-<p>If above were the case, I would just abstract them to a general “Part” and name the class to what that “metal round dispenser” is and describe its appearances and behaviours as a method and variables in it. It’s much clearer and simpler this way.</p>
-
-<h2 id="abstraction-in-object-oriented-programming">Abstraction in Object-Oriented Programming</h2>
-
-<p>If you are around my age, we have always been taught that there are 3 major principles of Object Oriented Programming:</p>
-
-<ul>
-  <li>Encapsulation</li>
-  <li>Inheritance</li>
-  <li>Polymorphism</li>
+<ul style="padding-left: 1.5em;list-style: disc; margin: 0;">
+<li style="padding-bottom: 1em;"><b>First In First Out (FIFO, QUEUE)</b>: The cache evicts the first block accessed first regardless of any information about data (pretty dull)</li>
+<li style="padding-bottom: 1em;"><b>Last In First Out (LIFO, STACK)</b>: Removes the most recently accessed cache first irrespective of any information about data (pretty dull)</li>
+<li style="padding-bottom: 1em;"><b>Least Recently Used (LRU)</b>: Evicts the least recently used items.</li>
+<li style="padding-bottom: 1em;"><b>Most Recently Used (MRU)</b>: Evicts the most recently used items. (in contrast to LRU).</li>
+<li style="padding-bottom: 1em;"><b>Least Frequently Used (LFU)</b>: This one store counts of how often the item is needed. Evicts the lowest counts, meaning least commonly (frequently) used.</li>
+<li style="padding-bottom: 2em;"><b>Random Replacement (RR)</b>: Randomly selects a candidate item and discards it to make space when necessary (Not very useful)</li>
 </ul>
 
-<p>aka “The PIE”. If I were to add the fourth one here, it will have to be the abstraction. “IPEA”?</p>
+<h2 id="caching-as-pattern">Caching as Pattern</h2>
 
-<p>Abstraction in OOP will hide all the unnecessary bits of an object to make objects stand out only the necessary bits. This eventually allows code much more distinct and obvious which leads to a simpler and efficient code.</p>
+<p>When we deal with caches, there are specific rules we generally follow to have them working. These rules later become a generic pattern most people follow.</p>
+
+<h3 id="cache-aside-pattern">Cache-Aside Pattern</h3>
+
+<table class="image" align="center" style="margin-top:2em;text-align:center;">
+<caption class="custom" align="bottom">Cache-Aside</caption>
+<tr><td><img src="https://cdn-images-1.medium.com/max/1600/1*rRh3FWB1wGFced8bdZjfUg.jpeg" alt="Cache-Aside" style="border:0;" /></td></tr>
+</table>
+
+<p>This pattern presumes the fundamental idea of caching. The application essentially works directly with the cache and see if the item exists in the cache. If not, fetch it from the data store and save the object in Cache.</p>
+
+<p>Few issues may occur in applying this pattern though. All of these have already been discussed above. To reiterate:</p>
+
+<ol>
+  <li><strong>Lifetime of data</strong>: Should have expiry at some point.</li>
+  <li><strong>Data eviction</strong>: As described above, data should be able to control the cache size</li>
+  <li><strong>Consistency</strong>:  We need to make sure the data in the cache consistent to what’s in the data store.</li>
+</ol>
+
+<h3 id="flyweight-pattern">Flyweight Pattern</h3>
+
+<p>This pattern is well-known throughout the software industry for caching design pattern. However, a lot of people seem to be misunderstanding what it is. This pattern is very similar to Cache-Aside Pattern except that it deals with immutable data. It is essential to have the data immutable because those data ought to be shared between others.</p>
+
+<p>There are many examples of flyweight. You could have a cache pool of a set of graphical representation unit, a set of connection pools, etc. The purpose is to save time calculating and generating such repetitive data.</p>
+
+<p>While it is an excellent pattern for saving the amount of RAM usage, it can create messy and complicated codes.</p>
 
 
           
@@ -341,7 +303,7 @@ boundaries, relative to the perspective of the viewer."</em><br /> — Grady Boo
   <ul class="rrssb-buttons clearfix">
     
       <li class="rrssb-email">
-        <a href="mailto:?subject=Abstraction&body=https://stalk-calvin.github.io/blog/2018/08/18/abstraction.html" data-proofer-ignore>
+        <a href="mailto:?subject=Caching&body=https://stalk-calvin.github.io/blog/2019/01/26/caching.html" data-proofer-ignore>
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
               <path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"
@@ -353,7 +315,7 @@ boundaries, relative to the perspective of the viewer."</em><br /> — Grady Boo
     
     
       <li class="rrssb-facebook">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2018/08/18/abstraction.html&title=Abstraction" class="popup">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2019/01/26/caching.html&title=Caching" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="29" height="29" viewBox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z"
               class="cls-2" fill-rule="evenodd"/></svg>
@@ -363,7 +325,7 @@ boundaries, relative to the perspective of the viewer."</em><br /> — Grady Boo
     
     
       <li class="rrssb-twitter">
-        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2018/08/18/abstraction.html&text=Abstraction"
+        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2019/01/26/caching.html&text=Caching"
         class="popup">
           <span class="rrssb-icon"><svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><path d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62c-3.122.162-6.22-.646-8.86-2.32 2.702.18 5.375-.648 7.507-2.32-2.072-.248-3.818-1.662-4.49-3.64.802.13 1.62.077 2.4-.154-2.482-.466-4.312-2.586-4.412-5.11.688.276 1.426.408 2.168.387-2.135-1.65-2.73-4.62-1.394-6.965C5.574 7.816 9.54 9.84 13.802 10.07c-.842-2.738.694-5.64 3.434-6.48 2.018-.624 4.212.043 5.546 1.682 1.186-.213 2.318-.662 3.33-1.317-.386 1.256-1.248 2.312-2.4 2.942 1.048-.106 2.07-.394 3.02-.85-.458 1.182-1.343 2.15-2.48 2.71z"/></svg></span>
         </a>
@@ -371,7 +333,7 @@ boundaries, relative to the perspective of the viewer."</em><br /> — Grady Boo
     
     
       <li class="rrssb-linkedin">
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2018/08/18/abstraction.html" class="popup">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2019/01/26/caching.html" class="popup">
         <span class="rrssb-icon">
           <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
             <path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"
@@ -384,7 +346,7 @@ boundaries, relative to the perspective of the viewer."</em><br /> — Grady Boo
     
     
       <li class="rrssb-googleplus">
-        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2018/08/18/abstraction.html" class="popup">
+        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2019/01/26/caching.html" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 8.29h-1.95v2.6h-2.6v1.82h2.6v2.6H21v-2.6h2.6v-1.885H21V8.29zM7.614 10.306v2.925h3.9c-.26 1.69-1.755 2.925-3.9 2.925-2.34 0-4.29-2.016-4.29-4.354s1.885-4.353 4.29-4.353c1.104 0 2.014.326 2.794 1.105l2.08-2.08c-1.3-1.17-2.924-1.883-4.874-1.883C3.65 4.586.4 7.835.4 11.8s3.25 7.212 7.214 7.212c4.224 0 6.953-2.988 6.953-7.082 0-.52-.065-1.104-.13-1.624H7.614z"/></svg>
           </span>
@@ -418,16 +380,14 @@ boundaries, relative to the perspective of the viewer."</em><br /> — Grady Boo
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-<div id="fb_comment" class="fb-comments" data-href="https://stalk-calvin.github.io/blog/2018/08/18/abstraction.html" data-numposts="5" data-width="100%" data-colorscheme="dark" data-order-by="reverse_time"></div>
+<div id="fb_comment" class="fb-comments" data-href="https://stalk-calvin.github.io/blog/2019/01/26/caching.html" data-numposts="5" data-width="100%" data-colorscheme="dark" data-order-by="reverse_time"></div>
 
           
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2018/09/01/films-basics.html" class="btn" title="Basics of Films">&laquo; Basics of Films</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2018/07/28/currying.html" class="btn" title="Currying">Currying &raquo;</a>
+              <a href="https://stalk-calvin.github.io/blog/2019/01/12/new-year-resolution.html" class="btn" title="New Year's Resolution">New Year's Resolution &raquo;</a>
             
           </nav><!-- /.pagination -->
 
@@ -557,7 +517,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 <script>
 function addTohistory() {
   if (!window.location.host.startsWith("127.0.0.1")) {
-    history.pushState({}, 'Abstraction', 'https://stalk-calvin.github.io/blog/2018/08/18/abstraction.html');
+    history.pushState({}, 'Caching', 'https://stalk-calvin.github.io/blog/2019/01/26/caching.html');
   }
 }
 </script>
