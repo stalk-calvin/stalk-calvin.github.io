@@ -242,10 +242,9 @@
 <span class="o">}</span></code></pre></figure>
 
 <p style="margin-bottom:1%">Output:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>Hello
-no
-</code></pre>
-</div>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">Hello
+no</code></pre></figure>
 
 <p>To explain the above code execution flow, the code first executes the <code class="highlighter-rouge">printHi</code> function and prints “Hello” then stores the return value “true” to the <code class="highlighter-rouge">result</code> variable. It then executes the next line by calling, <code class="highlighter-rouge">if (false &amp;&amp; result) {</code>. It  sees the “false” immediately which eventually prints “no” in the <code class="highlighter-rouge">else</code> block.</p>
 
@@ -261,9 +260,8 @@ no
     <span class="n">println</span><span class="o">(</span><span class="s">"no"</span><span class="o">)</span>
 <span class="o">}</span></code></pre></figure>
 <p style="margin-bottom:1%">Output:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>no
-</code></pre>
-</div>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">no</code></pre></figure>
 
 <p>When you execute the code above, the result variable gets identified as a lazy variable. When the if statement is executed, it doesn’t even run the result as if statement sees the false right away. Then the code eventually prints “no”. You can see from the output, it doesn’t actually print “Hello” this time as it was never executed.</p>
 
@@ -279,10 +277,9 @@ no
     <span class="n">println</span><span class="o">(</span><span class="s">"no"</span><span class="o">)</span>
 <span class="o">}</span></code></pre></figure>
 <p style="margin-bottom:1%">Output:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>Hello
-yes
-</code></pre>
-</div>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">Hello
+yes</code></pre></figure>
 
 <p>Walking through the above example, we first hit the <code class="highlighter-rouge">lazy</code> keyword and set aside executing the result variable. When we hit the if statement, the if statement sees the first boolean as <code class="highlighter-rouge">true</code> and tries to execute the <code class="highlighter-rouge">result</code> which is declared as <code class="highlighter-rouge">lazy</code> and will eventually execute the <code class="highlighter-rouge">printHi</code> function (printing “Hello”), then it prints “yes” as it enters the if block. So the runner basically postponed the computation until we absolutely had to execute it.</p>
 
@@ -311,7 +308,8 @@ yes
 <span class="n">println</span><span class="o">(</span><span class="n">student</span><span class="o">.</span><span class="n">filter</span><span class="o">(</span><span class="n">gradeHigherThan90</span><span class="o">).</span><span class="n">filter</span><span class="o">(</span><span class="n">nameMatchingLetterCount</span><span class="o">(</span><span class="k">_</span><span class="o">,</span> <span class="mi">5</span><span class="o">)).</span><span class="n">head</span><span class="o">)</span></code></pre></figure>
 
 <p style="margin-bottom:1%">Output:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>Higher than 90 for (Joe,87)
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">Higher than 90 for (Joe,87)
 Higher than 90 for (Bob,91)
 Higher than 90 for (Frank,60)
 Higher than 90 for (Saram,95)
@@ -321,22 +319,19 @@ Letter has 5 for (Saram,95)
 Letter has 5 for (Calvin,100)
 ... Out of those people with 90, get the first (head) person who has 5-letter name
 (Saram,95)
-Elapsed time: 1304887ns
-</code></pre>
-</div>
+Elapsed time: 1304887ns</code></pre></figure>
 
 <p style="margin-bottom:1%">By the way, I have added a timer to our code just to compare between the executions. As you can see, the code is basically iterating through all the elements in student list (of tuples) which could have millions of data (in extreme cases). It is an overkill, just to find that first person with the higher grade than 90 then search for name containing 5 letters then find the one filters to both. This is where the <code class="highlighter-rouge">view</code> method comes handy. The <code class="highlighter-rouge">view</code> method produces a lazy collection. You can tweak the print statement like this: “println(student.<strong>view</strong>.filter(gradeHigherThan90).filter(nameMatchingLetterCount(_, 5)).head)” which would produce an output like this:</p>
 <p style="margin-bottom:1%">Output:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>Higher than 90 for (Joe,87)
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">Higher than 90 for (Joe,87)
 Higher than 90 for (Bob,91)
 Letter has 5 for (Bob,91)
 Higher than 90 for (Frank,60)
 Higher than 90 for (Saram,95)
 Letter has 5 for (Saram,95)
 (Saram,95)
-Elapsed time: 844147ns
-</code></pre>
-</div>
+Elapsed time: 844147ns</code></pre></figure>
 
 <p>Note the execution time is a bit smaller (although it really depends on the # of executions) since the code execution is minimalized (# of executions is less for the “view”) by running whatever is necessary. It simply didn’t iterate the entire collection. It picks the first element matching the first filter, matches with second filter. If not matched for both, it moves onto the next item matched in the first filter then match against second filter. When both filters are met, it found the first element (head) that matched to the both filters.</p>
 

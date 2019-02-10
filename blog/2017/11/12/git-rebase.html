@@ -401,9 +401,7 @@ However, notice there is no dummy commit in the <code class="highlighter-rouge">
 
 <p style="margin-bottom: 1%">You can then run,</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$git rebase -i HEAD~2
-</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">$git rebase -i HEAD~2</code></pre></figure>
 
 <p style="margin-bottom: 2%">2 is the number of commits you would like to rewrite using rebase, so in this case, it is 2 commits behind. Then there will a page popping up where you can change the pick to a reword:</p>
 
@@ -434,9 +432,7 @@ However, notice there is no dummy commit in the <code class="highlighter-rouge">
 
 <p style="margin-bottom: 1%">Run the rebase command again:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$git rebase -i HEAD~2
-</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">$git rebase -i HEAD~2</code></pre></figure>
 
 <p style="margin-bottom: 2%">Here you can put ‘squash’ instead of ‘pick’:</p>
 
@@ -465,9 +461,7 @@ However, notice there is no dummy commit in the <code class="highlighter-rouge">
 
 <p style="margin-bottom: 1%">Say you want the “Change 2” and “Change 4” deleted from this branch. Run the following to cover everything until “Change 2”</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$git rebase -i HEAD~4
-</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">$git rebase -i HEAD~4</code></pre></figure>
 
 <p style="margin-bottom: 2%">When you have a screen popup, delete those commits, “Change 2” and “Change 4”:</p>
 

@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "Python Switch Over",
+      "link"			: "https://stalk-calvin.github.io/blog/2019/02/09/python-port-over.html",
+      "excerpt"		: "Transitioning from 2 to 3",
+      "tags"        : ["computer","programming","python","python3"],
+      "date"        : "2019 Feb 09",
+      "year"        : 2019
+    }
+  
+
+  
+    ,{
       "title"			: "Caching",
       "link"			: "https://stalk-calvin.github.io/blog/2019/01/26/caching.html",
       "excerpt"		: "Strategy, Control, Pattern",

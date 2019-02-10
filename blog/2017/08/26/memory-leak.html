@@ -232,7 +232,7 @@
 
 <p>This topic isn’t really about leaking memory but more about holding onto the memory unnecessarily. In one of <a href="https://en.wikipedia.org/wiki/Robert_C._Martin" target="_blank" rel="noopener noreferrer">Robert Martin</a>’s books, <a href="https://books.google.ca/books?id=hjEFCAAAQBAJ&amp;dq=9780132350884&amp;hl=en&amp;sa=X&amp;ved=0ahUKEwjNzZfVmebZAhVC5WMKHc9JAb8Q6AEIKDAA" target="_blank" rel="noopener noreferrer">Clean Code</a>, he discusses that the function should do only one thing. The book then describes the main reason doing so is to have code through cohesion and coupling which makes the overall code highly reusable. Making reusable code is very important to make the overall program flexible and adaptable. By following this rule, you can also make sure the memory is safely cleared before you do something else. The garbage collector can then collect these obsolete objects when more memory space is required. Here is an example of what I mean:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
     <span class="kt">int</span><span class="o">[]</span> <span class="n">ints</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10000</span><span class="o">];</span>
     <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">ints</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
         <span class="n">ints</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>
@@ -244,13 +244,11 @@
     <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"no go"</span><span class="o">);</span>
     <span class="o">}</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
 
 <p>We have a simple block of code inserting some random values just for the illustrating the problem. Above function will load up the int array into the memory. Then it will <strong>not</strong> be released or cleared until the entire function ends. This isn’t quite ideal because this int array isn’t required by the following loop. We can break down above function like following:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
     <span class="kt">boolean</span> <span class="n">condition</span> <span class="o">=</span> <span class="n">addElementsAndDoActions</span><span class="o">();</span>
     <span class="c1">// do some other stuffs unrelated to int array itself</span>
     <span class="k">if</span><span class="o">(</span><span class="n">condition</span><span class="o">)</span> <span class="o">{</span>
@@ -266,9 +264,7 @@
         <span class="n">ints</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>
     <span class="o">}</span>
     <span class="k">return</span> <span class="n">ints</span><span class="o">[</span><span class="mi">20</span><span class="o">]</span> <span class="o">==</span> <span class="mi">1</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
 
 <p>Now if we separated out the insertion and its action associated with the ints array, the garbage collector can then release memory block whenever it requires it since the int array itself is locally defined to its separate function.</p>
 
@@ -276,7 +272,7 @@
 
 <p>You should close with “finally” when closing any kind of connections or streams to make sure they are always closed when exceptions are encountered. Let’s go straight into the example:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="k">try</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">try</span>
 <span class="o">{</span>
   <span class="n">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="n">DriverManager</span><span class="o">.</span><span class="na">getConnection</span><span class="o">();</span>
   <span class="o">...</span>
@@ -284,13 +280,11 @@
 <span class="o">}</span>
 <span class="n">Catch</span><span class="o">(</span><span class="n">exception</span> <span class="n">ex</span><span class="o">)</span>
 <span class="o">{</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
 
 <p>In this example, there is a possibility an exception occurring before it even gets a chance to make <code class="highlighter-rouge">conn.close()</code> call. Yikes, Memory Leak! The connection will likely stay open. In a situation like this, we can generally close the connection manually inside finally block, like this:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="k">try</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">try</span>
 <span class="o">{</span>
   <span class="n">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="n">DriverManager</span><span class="o">.</span><span class="na">getConnection</span><span class="o">();</span>
   <span class="o">...</span>
@@ -300,9 +294,7 @@
 <span class="o">}</span>
 <span class="k">finally</span> <span class="o">{</span>
     <span class="n">conn</span><span class="o">.</span><span class="na">close</span><span class="o">();</span> <span class="c1">//ensure close is always called.</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
 
 <p>But what if <code class="highlighter-rouge">conn</code> is null? we might encounter an NPE then. We can simply just check for whether the <code class="highlighter-rouge">conn</code> is null. Or you can replace <code class="highlighter-rouge">conn.close();</code> call with something like <code class="highlighter-rouge">DbUtils</code> from the apache commons and call <code class="highlighter-rouge">DbUtils.closequietly(conn);</code> instead. This will ensure to close a connection, handles conn being null and hide any exceptions that may occur. A similar concept applies to the streams. Instead of DbUtils.closequietly, you can instead do <code class="highlighter-rouge">IOUtils.closequietly(stream)</code>, provided from the apache commons as well. Also, I would like to mention that starting in Java SE 7 and later, you can <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html" target="_blank" rel="noopener noreferrer">try-with-resources</a>. This will also ensure stuffs that needs to be closed will be closed. You can declare as many as resources that require closing at the end and this try-with-resources are just like any other try block that would support catch and finally as well.</p>
 
@@ -310,7 +302,7 @@
 
 <p>When the cache is implemented using the hash-based data structure like a Map with a key that doesn’t have any overrides for equals() and hashCode(), you are bound to leak the memory easily because the size of the hash will continue to grow regardless of what you put in as a key. Example:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Key</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Key</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
     <span class="kd">public</span> <span class="nf">Key</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span>
     <span class="o">{</span>
@@ -322,13 +314,11 @@
             <span class="n">cache</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="k">new</span> <span class="n">Key</span><span class="o">(</span><span class="s">"key"</span><span class="o">),</span> <span class="s">"value"</span><span class="o">);</span>
         <span class="o">}</span>
     <span class="o">}</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
 
 <p>Since Key object do not have equals() and hashCode() overridden, this code will do nothing but inserting new map entry into the map each time it loops. hashmap has no way of knowing if the 2 different referenced objects are equal or containing the same hashcode. What you need here is implementing the proper equals() and hashCode(), like following:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Key</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Key</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
     <span class="kd">public</span> <span class="nf">Key</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span>
     <span class="o">{</span>
@@ -356,9 +346,7 @@
             <span class="n">cache</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="k">new</span> <span class="n">Key</span><span class="o">(</span><span class="s">"key"</span><span class="o">),</span> <span class="s">"value"</span><span class="o">);</span>
         <span class="o">}</span>
     <span class="o">}</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
 
 <p>Let me describe what is happening behind the scene. <code class="highlighter-rouge">cache.put</code> will try to get the <code class="highlighter-rouge">hashCode()</code> for the item to place in the aka <code class="highlighter-rouge">bucketing</code>. If the hashCode produces the same, that means there is already an item in that bucket. So the code runs <code class="highlighter-rouge">equals()</code> method to see if the object inserting is truly the same object. When they are indeed equal, the same item will be overwritten, otherwise, a new item will be created. To note, internally equals will be running for all the items in the cache which has the same hashCode (bucket number) but you really don’t need to know this further. Anyways, as a general contract for Java developers, it is very important to override both <code class="highlighter-rouge">equals()</code> and <code class="highlighter-rouge">hashCode()</code> together (always together!) especially when they are dealing with any kind of hash-based collections.</p>
 

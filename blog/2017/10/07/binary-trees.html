@@ -230,7 +230,8 @@
 <h4 id="full-strict-binary-tree">Full (Strict) Binary Tree</h4>
 
 <p>A binary tree T with n levels is “full” if the tree nodes have 0 or 2 children. Following are examples of full binary tree</p>
-<div style="margin-bottom: 2%;" class="language-text highlighter-rouge"><pre class="highlight"><code>              18
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">              18
            /      \  
          15        30  
         /  \      /  \
@@ -243,21 +244,19 @@
         /  \       
       40    50   
     /   \
-   30   50
-</code></pre>
-</div>
-<h4 id="complete-tree">Complete Tree</h4>
+   30   50</code></pre></figure>
+
+<h4 style="margin-bottom: 2%;" id="complete-tree">Complete Tree</h4>
 
 <p>A binary tree T with n levels is “complete” if all levels except possibly the last are completely full</p>
 
-<div style="margin-bottom: 2%;" class="language-text highlighter-rouge"><pre class="highlight"><code>             18
+<figure class="highlight"><pre><code class="language-text" data-lang="text">             18
            /    \  
          15      30  
         /  \
-      40    50
-</code></pre>
-</div>
-<h4 id="full-and-complete-tree">Full And Complete Tree</h4>
+      40    50</code></pre></figure>
+
+<h4 style="margin-bottom: 2%;" id="full-and-complete-tree">Full And Complete Tree</h4>
 
 <p style="margin-bottom: 1%;">In a full binary tree,</p>
 <ul>
@@ -275,18 +274,16 @@
 
 <p>Before we define what balanced binary tree is, we should examine what height/depth of a tree is. The height of a node is the number of edges from the node to the deepest leaf. Now that we have the height in mind, what is a balanced tree? A rooted binary tree of height “h” is balanced if all leaves are perfect at levels h “or” h − 1. It is important to say that all complete trees are balanced trees, all balanced trees are not necessarily complete trees. See the example below:</p>
 
-<div class="language-text highlighter-rouge"><pre class="highlight"><code>       x
+<figure class="highlight"><pre><code class="language-text" data-lang="text">       x
      x   x
    x   x   x
- x 
-</code></pre>
-</div>
+ x </code></pre></figure>
 
 <p>Above is a balanced binary tree but not a complete binary tree.</p>
 
 <p>Here is an example code (in Java) which checks whether given tree is balanced:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isBalanced</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isBalanced</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">root</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
     <span class="o">}</span>
@@ -302,9 +299,7 @@
         <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
     <span class="o">}</span>
     <span class="k">return</span> <span class="n">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">getHeight</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">left</span><span class="o">),</span> <span class="n">getHeight</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">right</span><span class="o">))</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
 
 <p>Note there is a function for calculating the height because it needs to know that to understand the tree is balanced. Basically the function recurses all the way down to the tree by validating the height difference (cannot be greater than 1)until the base case is hit (root == null).</p>
 
@@ -314,7 +309,7 @@
 
 <p style="margin: 0px">Check <code class="highlighter-rouge">checkBST</code> function to see how it validates BST:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="n">Integer</span> <span class="n">last_printed</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">Integer</span> <span class="n">last_printed</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
 <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">checkBST</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
@@ -336,23 +331,20 @@
         <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
     <span class="o">}</span>
     <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
+
 <p>Above code would recurse left tree first and check whether all nodes are in BST mode. Then check the right by doing the same check. When every nodes are validated, the function returns “PASS”.</p>
 
 <p style="margin: 0px">Here is a bit more simpler way of check using recursion:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">isValidBST</span><span class="o">(</span><span class="n">Node</span> <span class="n">node</span><span class="o">,</span> <span class="kt">int</span> <span class="n">min</span><span class="o">,</span> <span class="kt">int</span> <span class="n">max</span><span class="o">)</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">isValidBST</span><span class="o">(</span><span class="n">Node</span> <span class="n">node</span><span class="o">,</span> <span class="kt">int</span> <span class="n">min</span><span class="o">,</span> <span class="kt">int</span> <span class="n">max</span><span class="o">)</span> <span class="o">{</span>
      <span class="k">if</span><span class="o">(</span><span class="n">node</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
          <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
      <span class="k">return</span> <span class="n">node</span><span class="o">.</span><span class="na">value</span> <span class="o">&gt;</span> <span class="n">min</span> 
          <span class="o">&amp;&amp;</span> <span class="n">node</span><span class="o">.</span><span class="na">value</span> <span class="o">&lt;</span> <span class="n">max</span>
          <span class="o">&amp;&amp;</span> <span class="n">isValidBST</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">left</span><span class="o">,</span> <span class="n">min</span><span class="o">,</span> <span class="n">node</span><span class="o">.</span><span class="na">value</span><span class="o">)</span>
          <span class="o">&amp;&amp;</span> <span class="n">isValidBST</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">right</span><span class="o">,</span> <span class="n">node</span><span class="o">.</span><span class="na">value</span><span class="o">,</span> <span class="n">max</span><span class="o">);</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
 
 <p>Above code recurses left and right subtrees and check if the value is set properly to BST rule. Returns false if the tree violates the BST rule.</p>
 
@@ -378,7 +370,7 @@
 
 <p style="margin: 0px">Here is an example code:</p>
 
-<div style="margin-bottom: 2%;" class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">private</span> <span class="n">Node</span> <span class="nf">preOrderCopy</span><span class="o">(</span><span class="n">Node</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="n">Node</span> <span class="nf">preOrderCopy</span><span class="o">(</span><span class="n">Node</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
         <span class="c1">// base case</span>
         <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
@@ -387,11 +379,9 @@
     <span class="n">copy</span><span class="o">.</span><span class="na">leftChild</span> <span class="o">=</span> <span class="n">preOrderCopy</span><span class="o">(</span><span class="n">n</span><span class="o">.</span><span class="na">leftChild</span><span class="o">);</span>
     <span class="n">copy</span><span class="o">.</span><span class="na">rightChild</span> <span class="o">=</span> <span class="n">preOrderCopy</span><span class="o">(</span><span class="n">n</span><span class="o">.</span><span class="na">rightChild</span><span class="o">);</span>
     <span class="k">return</span> <span class="n">copy</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
 
-<h4 id="in-order">In-order</h4>
+<h4 style="margin-bottom: 2%;" id="in-order">In-order</h4>
 
 <p>This traversal is very useful in search trees, as it will retrieve and flatten the nodes in sorted order.</p>
 
@@ -406,7 +396,7 @@
 
 <p style="margin: 0px">Here is an example code:</p>
 
-<div style="margin-bottom: 2%;" class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="nf">findInorder</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="nf">findInorder</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">root</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
     <span class="k">return</span> <span class="nf">findInorder</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="n">result</span><span class="o">);</span>
@@ -418,11 +408,9 @@
     <span class="n">result</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">getVal</span><span class="o">());</span>
     <span class="n">findInorder</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">getRight</span><span class="o">(),</span> <span class="n">result</span><span class="o">);</span>
     <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
 
-<h4 id="post-order">Post-order</h4>
+<h4 style="margin-bottom: 2%;" id="post-order">Post-order</h4>
 
 <p>If you know you need to explore all the leaves first starting from the left side, use this traversal. This traversal is useful in an expression tree that is to do with calculating stuff.</p>
 
@@ -437,7 +425,7 @@
 
 <p style="margin: 0px">Here is an example code:</p>
 
-<div style="margin-bottom: 4%;" class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">deleteTree</span><span class="o">(</span><span class="n">Node</span> <span class="n">node</span><span class="o">)</span> 
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">deleteTree</span><span class="o">(</span><span class="n">Node</span> <span class="n">node</span><span class="o">)</span> 
 <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">node</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
         <span class="k">return</span><span class="o">;</span>
@@ -449,14 +437,13 @@
     <span class="cm">/* then delete the node */</span>
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The deleted node is "</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="na">data</span><span class="o">);</span>
     <span class="n">node</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre>
-</div>
-<h3 id="breadth-first-search-bfs"><a href="https://en.wikipedia.org/wiki/Breadth-first_search" target="_blank" rel="noopener noreferrer">Breadth-First Search</a> (BFS)</h3>
+<span class="o">}</span></code></pre></figure>
+
+<h3 style="margin-bottom: 4%;" id="breadth-first-search-bfs"><a href="https://en.wikipedia.org/wiki/Breadth-first_search" target="_blank" rel="noopener noreferrer">Breadth-First Search</a> (BFS)</h3>
 
 <p>Trees can also be traversed in level-by-level, where we visit every node on a level before going to a lower level. This search is referred to as breadth-first search (BFS), which interchangeably is called as level order tree traversal, as the search tree is broadened as much as possible on each depth before going to the next depth. <code class="highlighter-rouge">Queue</code> (FIFO collection) is used in the algorithm. The algorithm is often used to find the shortest path from one node to another. You can use an algorithm like <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm#Pseudocode">Dijkstra’s algorithm</a> to let you find a single-source shortest path from one node to another. BFS is used in many other cases depending on how the tree is structured.</p>
 
-<div style="margin-bottom: 4%;" class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="nf">findBFS</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="nf">findBFS</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">root</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
     <span class="n">Queue</span><span class="o">&lt;</span><span class="n">TreeNode</span><span class="o">&gt;</span> <span class="n">tracker</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;();</span>
@@ -472,10 +459,9 @@
         <span class="o">}</span>
     <span class="o">}</span>
     <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre>
-</div>
-<h2 id="recursiveness"><a href="https://en.wikipedia.org/wiki/Recursion" target="_blank" rel="noopener noreferrer">Recursiveness</a></h2>
+<span class="o">}</span></code></pre></figure>
+
+<h2 style="margin-bottom: 4%;" id="recursiveness"><a href="https://en.wikipedia.org/wiki/Recursion" target="_blank" rel="noopener noreferrer">Recursiveness</a></h2>
 
 <p>It is fairly common for the tree operations to run in recursion. Recursion is generally appropriate and useful when we have a structure that has a similar repeated structural form. A tree is really a recursive data type because a tree is made of another tree (subtrees) like a diagram below (recursively):</p>
 

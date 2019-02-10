@@ -173,6 +173,15 @@
   
   
     <url>
+      <loc>https://stalk-calvin.github.io/blog/2019/02/09/python-port-over.html</loc>
+      
+        <lastmod>2019-02-09T00:00:00+00:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
       <loc>https://stalk-calvin.github.io/blog/2019/01/26/caching.html</loc>
       
         <lastmod>2019-01-26T00:00:00+00:00</lastmod>

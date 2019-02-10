@@ -14,7 +14,32 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sat, 26 Jan 2019 22:59:36 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 Feb 2019 06:47:38 +0000</lastBuildDate>
+	
+		<item>
+			<title>Python Switch Over</title>
+			
+				<description>Transitioning from 2 to 3</description>
+			
+        
+          <category>computer</category>
+        
+          <category>programming</category>
+        
+          <category>python</category>
+        
+          <category>python3</category>
+        
+			<pubDate>09 February 2019</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2019/02/09/python-port-over.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2019/02/09/python-port-over</guid>
+		</item>
 	
 		<item>
 			<title>Caching</title>

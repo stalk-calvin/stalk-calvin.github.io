@@ -285,24 +285,18 @@
 
 <p>Earlier Java using JNA:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">CLibrary</span> <span class="kd">extends</span> <span class="n">Library</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">CLibrary</span> <span class="kd">extends</span> <span class="n">Library</span> <span class="o">{</span>
 <span class="n">CLibrary</span> <span class="n">INSTANCE</span> <span class="o">=</span> <span class="o">(</span><span class="n">CLibrary</span><span class="o">)</span><span class="n">Native</span><span class="o">.</span><span class="na">loadLibrary</span><span class="o">(</span><span class="s">"c"</span><span class="o">,</span> <span class="n">CLibrary</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
 <span class="kt">int</span> <span class="nf">getpid</span> <span class="o">();</span>
-<span class="o">}</span>
-</code></pre>
-</div>
+<span class="o">}</span></code></pre></figure>
 
 <p>then use the following call to get the PID:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">pid</span> <span class="o">=</span> <span class="n">CLibrary</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">.</span><span class="na">getpid</span><span class="o">();</span>
-</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">pid</span> <span class="o">=</span> <span class="n">CLibrary</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">.</span><span class="na">getpid</span><span class="o">();</span></code></pre></figure>
 
 <p>However, in Java 9, we can use ProcessHandle class which makes everything simpler.</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kt">long</span> <span class="n">pid</span> <span class="o">=</span> <span class="n">ProcessHandle</span><span class="o">.</span><span class="na">current</span><span class="o">().</span><span class="na">getPid</span><span class="o">();</span>
-</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">long</span> <span class="n">pid</span> <span class="o">=</span> <span class="n">ProcessHandle</span><span class="o">.</span><span class="na">current</span><span class="o">().</span><span class="na">getPid</span><span class="o">();</span></code></pre></figure>
 
 <h2 style="margin-top: 35px;" id="4-http2-client-incubator">4. HTTP/2 Client (Incubator)</h2>
 

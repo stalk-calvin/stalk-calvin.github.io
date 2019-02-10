@@ -65,12 +65,12 @@
     text-align: center;
 }
 
-.offset:before { 
-    display: block; 
-    content: " "; 
+.offset:before {
+    display: block;
+    content: " ";
     height: 50px;      /* Give height of your fixed element */
-    margin-top: -50px; /* Give negative margin of your fixed element */    
-    visibility: hidden; 
+    margin-top: -50px; /* Give negative margin of your fixed element */
+    visibility: hidden;
 }
 
 .listOrderedStyle {
@@ -83,5 +83,61 @@
 
 span.checked {
   color: orange;
+}
+
+/* For hightlighter */
+figure.highlight, div.highlight {
+  position: relative;
+}
+
+figure.highlight pre code, div.highlight pre code {
+    counter-reset: code;
+    display: block;
+    line-height: 1.5;
+}
+figure.highlight pre code[data-lang]:before, div.highlight pre code[data-lang]:before {
+    content: attr(data-lang);
+    position: absolute;
+    left: 20px;
+    font-size: 11px;
+    top: 0px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    border: 1px solid #828282;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    min-width: 40px;
+    text-align: center;
+    color: #8fbc8f;
+    background-color: #1a1a1a;
+}
+@media screen and (max-width: 300px) {
+    figure.highlight pre code[data-lang]:before, div.highlight pre code[data-lang]:before {
+        visibility: hidden;
+    }
+}
+figure.highlight pre code div, div.highlight pre code div {
+    counter-increment: code;
+    /* Line numbers */
+}
+figure.highlight pre code div:before, div.highlight pre code div:before {
+    color: #608079;
+    content: counter(code);
+    width: 14px;
+    text-align: right;
+    /* Add a nice border */
+    display: inline-block;
+    padding-right: 7.5px;
+    margin-right: 12px;
+    border-right: 1px solid #656565;
+    /* For older browsers and Safari */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
