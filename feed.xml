@@ -14,7 +14,44 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sun, 10 Feb 2019 06:47:38 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 Mar 2019 04:33:32 +0000</lastBuildDate>
+	
+		<item>
+			<title>Consistent Hashing</title>
+			
+				<description>distributed, scalable system</description>
+			
+        
+          <category>computer</category>
+        
+          <category>programming</category>
+        
+          <category>consistent</category>
+        
+          <category>hashing</category>
+        
+          <category>cache</category>
+        
+          <category>caching</category>
+        
+          <category>DHT</category>
+        
+          <category>distributed</category>
+        
+          <category>cloud</category>
+        
+          <category>system</category>
+        
+			<pubDate>09 March 2019</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2019/03/09/consistent-hashing.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2019/03/09/consistent-hashing</guid>
+		</item>
 	
 		<item>
 			<title>Python Switch Over</title>

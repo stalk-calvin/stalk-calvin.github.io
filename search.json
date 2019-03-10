@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "Consistent Hashing",
+      "link"			: "https://stalk-calvin.github.io/blog/2019/03/09/consistent-hashing.html",
+      "excerpt"		: "distributed, scalable system",
+      "tags"        : ["computer","programming","consistent","hashing","cache","caching","DHT","distributed","cloud","system"],
+      "date"        : "2019 Mar 09",
+      "year"        : 2019
+    }
+  
+
+  
+    ,{
       "title"			: "Python Switch Over",
       "link"			: "https://stalk-calvin.github.io/blog/2019/02/09/python-port-over.html",
       "excerpt"		: "Transitioning from 2 to 3",
