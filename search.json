@@ -335,7 +335,7 @@
       "title"			: "Python encapsulation",
       "link"			: "https://stalk-calvin.github.io/blog/2017/11/25/python-encapsulation.html",
       "excerpt"		: "Adventures in Pythonic Way of Hiding Data",
-      "tags"        : ["python","code style","encapsulation","oop","getter","setter"],
+      "tags"        : ["python","code style","encapsulation","oop","getter","setter","property"],
       "date"        : "2017 Nov 25",
       "year"        : 2017
     }

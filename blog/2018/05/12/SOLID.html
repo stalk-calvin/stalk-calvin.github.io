@@ -406,14 +406,11 @@
 
 <figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">class</span> <span class="nc">BookReader</span><span class="o">(</span><span class="n">book</span><span class="k">:</span> <span class="kt">Book</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">def</span> <span class="n">read</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"reading a book"</span><span class="o">;</span>
-<span class="o">}</span>
-<span class="o">```</span>
+<span class="o">}</span></code></pre></figure>
 
-<span class="nc">Now</span> <span class="n">requirement</span> <span class="n">becomes</span> <span class="n">that</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span> <span class="n">read</span> <span class="n">more</span> <span class="n">than</span> <span class="n">just</span> <span class="n">a</span> <span class="n">physical</span> <span class="n">book</span> <span class="n">such</span> <span class="n">as</span> <span class="nc">PDF</span> <span class="n">book</span><span class="o">,</span> <span class="n">physical</span> <span class="n">book</span><span class="o">,</span> <span class="nc">Kindle</span> <span class="n">book</span><span class="o">,</span> <span class="n">etc</span><span class="o">.</span> <span class="nc">You</span> <span class="n">could</span> <span class="n">build</span> <span class="n">multiple</span> <span class="n">classes</span> <span class="n">to</span> <span class="n">handle</span> <span class="n">each</span> <span class="k">case</span><span class="o">,</span> <span class="n">but</span> <span class="n">can</span><span class="ss">'t </span><span class="n">you</span> <span class="k">abstract</span> <span class="k">this</span><span class="o">?</span> <span class="nc">Yes</span><span class="o">,</span> <span class="n">you</span> <span class="n">can</span><span class="o">!</span>
+<p>Now requirement becomes that you need to be able to read more than just a physical book such as PDF book, physical book, Kindle book, etc. You could build multiple classes to handle each case, but can’t you abstract this? Yes, you can!</p>
 
-<span class="o">{%</span> <span class="n">highlight</span> <span class="n">scala</span> <span class="o">%}</span>
-<span class="o">{%</span> <span class="n">raw</span> <span class="o">%}</span>
-<span class="k">trait</span> <span class="nc">Book</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">trait</span> <span class="nc">Book</span> <span class="o">{</span>
    <span class="k">val</span> <span class="n">name</span><span class="k">:</span> <span class="kt">String</span>
    <span class="k">def</span> <span class="n">read</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span>
 <span class="o">}</span>

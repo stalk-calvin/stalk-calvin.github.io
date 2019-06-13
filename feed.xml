@@ -14,7 +14,7 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Sun, 02 Jun 2019 18:59:39 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Jun 2019 08:21:58 +0000</lastBuildDate>
 	
 		<item>
 			<title>Importance of Delegation</title>
@@ -855,6 +855,8 @@
           <category>getter</category>
         
           <category>setter</category>
+        
+          <category>property</category>
         
 			<pubDate>25 November 2017</pubDate>
 			<link>https://stalk-calvin.github.io/blog/2017/11/25/python-encapsulation.html</link>

@@ -241,11 +241,11 @@ In both mathematical and programming world, the term “Currying” is often men
 
 <p style="margin-bottom: 10px;">In programming, “Currying” could mean as simple as,</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">result = f(x)(y)(z)</code></pre></figure>
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="n">result</span> <span class="k">=</span> <span class="n">f</span><span class="o">(</span><span class="n">x</span><span class="o">)(</span><span class="n">y</span><span class="o">)(</span><span class="n">z</span><span class="o">)</span></code></pre></figure>
 
 <p style="margin-bottom: 10px;">which mathematically is pretty much same as writing,</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">f1 = f(x), f2 = f1(y), result = f2(z)</code></pre></figure>
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="n">f1</span> <span class="k">=</span> <span class="n">f</span><span class="o">(</span><span class="n">x</span><span class="o">),</span> <span class="n">f2</span> <span class="k">=</span> <span class="n">f1</span><span class="o">(</span><span class="n">y</span><span class="o">),</span> <span class="n">result</span> <span class="k">=</span> <span class="n">f2</span><span class="o">(</span><span class="n">z</span><span class="o">)</span></code></pre></figure>
 
 <p>Note how the function breaks down into a multiple of one-argument functions which each gets executed separately in all in a single call of “Currying” (first code).</p>
 
