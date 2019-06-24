@@ -14,7 +14,7 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Thu, 13 Jun 2019 08:21:58 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Jun 2019 07:25:01 +0000</lastBuildDate>
 	
 		<item>
 			<title>Importance of Delegation</title>
@@ -285,7 +285,7 @@
 		</item>
 	
 		<item>
-			<title>Abstraction</title>
+			<title>Abstraction / Composition</title>
 			
 				<description>help you write a better code</description>
 			

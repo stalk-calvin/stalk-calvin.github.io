@@ -112,7 +112,7 @@
 
   
     ,{
-      "title"			: "Abstraction",
+      "title"			: "Abstraction / Composition",
       "link"			: "https://stalk-calvin.github.io/blog/2018/08/18/abstraction.html",
       "excerpt"		: "help you write a better code",
       "tags"        : ["abstraction","computer","programming","oop","composition"],
