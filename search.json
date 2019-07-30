@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "Explaining Backtracking",
+      "link"			: "https://stalk-calvin.github.io/blog/2019/07/27/backtracking.html",
+      "excerpt"		: "Keep trying. Every possibility.",
+      "tags"        : ["computer","programming","backtracking","DFS","depth","first","search","algorithms"],
+      "date"        : "2019 Jul 27",
+      "year"        : 2019
+    }
+  
+
+  
+    ,{
       "title"			: "Importance of Delegation",
       "link"			: "https://stalk-calvin.github.io/blog/2019/06/01/delegation.html",
       "excerpt"		: "Power of working together; happy together",

@@ -14,7 +14,40 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Mon, 24 Jun 2019 07:25:01 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jul 2019 18:02:25 +0000</lastBuildDate>
+	
+		<item>
+			<title>Explaining Backtracking</title>
+			
+				<description>Keep trying. Every possibility.</description>
+			
+        
+          <category>computer</category>
+        
+          <category>programming</category>
+        
+          <category>backtracking</category>
+        
+          <category>DFS</category>
+        
+          <category>depth</category>
+        
+          <category>first</category>
+        
+          <category>search</category>
+        
+          <category>algorithms</category>
+        
+			<pubDate>27 July 2019</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2019/07/27/backtracking.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2019/07/27/backtracking</guid>
+		</item>
 	
 		<item>
 			<title>Importance of Delegation</title>
