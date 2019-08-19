@@ -9,7 +9,7 @@
  ╔═╗┌┬┐┌─┐┬  ┬┌─     _____     __     _
  ╚═╗ │ ├─┤│  ├┴┐    / ___/__ _/ /  __(_)__
  ╚═╝ ┴ ┴ ┴┴─┘┴ ┴   / /__/ _ `/ / |/ / / _ \
-                   \___/\_,_/_/|___/_/_//_/        
+                   \___/\_,_/_/|___/_/_//_/
  ============================================
  Author: Calvin Lee
  Email: stalk.calvin@gmail.com
@@ -27,7 +27,7 @@
   <meta name="description" content="Stories about Calvin: Beer, Fitness, Diet, Computer Science and Programming.">
   <meta name="author" content="Calvin Lee">
   <meta name="keywords" content="calvin, lee, personal, blog, beer, fitness, diet, computer, science, programming, software, engineer">
-  <meta property="fb:app_id" content="140805279842677" /> 
+  <meta property="fb:app_id" content="140805279842677" />
   <meta property="og:title" content="404 Not Found" />
   <meta property="og:description" content="Stories about Calvin: Beer, Fitness, Diet, Computer Science and Programming." />
   <meta property="og:url" content="https://stalk-calvin.github.io/404.html" />
@@ -51,7 +51,7 @@
   <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/css/rrssb.css" />
-  <link rel="stylesheet" href="/css/custom.css" />
+  <link rel="stylesheet" href="/css/custom.css?v=2" />
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -99,7 +99,7 @@
   
 
 
-    
+
   
   <!-- MathJax -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -111,10 +111,10 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      
+
       ga('create', 'UA-88428523-1', 'auto');
       ga('send', 'pageview');
-      
+
   </script>
 
   
@@ -273,7 +273,7 @@
 $(document).on('click',function(){
 $('.collapse').collapse('hide');
 })
-</script> 
+</script>
 <script type="text/javascript">
 $(document).ready(function() {
   for (i = 2016; i <= 2019; i++) {
@@ -295,6 +295,8 @@ $(document).ready(function() {
   }
   if ($(window).width() < 768) {
      $('#index_leftbar').css("width", "100%");
+     $('#index_leftbar').removeClass("left_round_corner");
+     $('#index_leftbar').addClass("all_round_corner");
      $('#index_right_t_bar').hide();
      $('#index_right_b_bar').hide();
   }
