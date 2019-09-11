@@ -1,5 +1,8 @@
+
+<!-- Post Layout Start -->
+
 <!DOCTYPE html>
-<!-- Post Layout Start --><html lang="en">
+<html lang="en">
 
    <!--
  ============================================
@@ -14,7 +17,6 @@
  ============================================
  -->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
 
 
@@ -25,13 +27,13 @@
   <meta name="description" content="Evolution of Java">
   <meta name="author" content="Calvin Lee">
   <meta name="keywords" content="calvin, lee, personal, blog, beer, fitness, diet, computer, science, programming, software, engineer">
-  <meta property="fb:app_id" content="140805279842677">
-  <meta property="og:title" content="Java Generics">
-  <meta property="og:description" content="Evolution of Java">
-  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html">
+  <meta property="fb:app_id" content="140805279842677" />
+  <meta property="og:title" content="Java Generics" />
+  <meta property="og:description" content="Evolution of Java" />
+  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html" />
 
-  <link rel="alternate" hreflang="en" href="https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html">
-  <link rel="alternate" hreflang="kr" href="https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html">
+  <link rel="alternate" hreflang="en" href="https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html" />
+  <link rel="alternate" hreflang="kr" href="https://stalk-calvin.github.io/blog/2017/01/14/java-generics.html" />
   <link rel="canonical" href="/blog/2017/01/14/java-generics.html">
   <link rel="author" href="https://www.linkedin.com/in/stalkme">
   <title>I am Calvin | Java Generics</title>
@@ -48,8 +50,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/rrssb.css">
-  <link rel="stylesheet" href="/css/custom.css?v=2">
+  <link rel="stylesheet" href="/css/rrssb.css" />
+  <link rel="stylesheet" href="/css/custom.css?v=2" />
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -272,7 +274,7 @@
 
 <p>There are 2 important terms to discuss the works of Generics in Java:</p>
 
-<p><img class="emoji" title=":one:" alt=":one:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png" height="20" width="20"> <a href="https://en.wikipedia.org/wiki/Type_safety">Type Safety</a></p>
+<p><img class="emoji" title=":one:" alt=":one:" src="https://github.githubassets.com/images/icons/emoji/unicode/0031-20e3.png" height="20" width="20"> <a href="https://en.wikipedia.org/wiki/Type_safety">Type Safety</a></p>
 
 <p>This is basically saying as long as types are all passed compiler with Generics, ClassCastException should not occur at runtime. This is guaranteeing cast error-prone at the runtime as I discussed as the most important point in “Why Generics”.</p>
 
@@ -284,7 +286,7 @@
  
 <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"testing"</span><span class="o">);</span> <span class="c1">//compile time error; Error: java: no suitable method found for add(java.lang.String)</span></code></pre></figure>
 
-<p><img class="emoji" title=":two:" alt=":two:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png" height="20" width="20"> <a href="https://en.wikipedia.org/wiki/Type_erasure">Type Erasure</a></p>
+<p><img class="emoji" title=":two:" alt=":two:" src="https://github.githubassets.com/images/icons/emoji/unicode/0032-20e3.png" height="20" width="20"> <a href="https://en.wikipedia.org/wiki/Type_erasure">Type Erasure</a></p>
 
 <p>This is basically saying that any of these type information added using Generics in the code will be removed in compiled bytecode. This is required to support old Java as Java itself is always backward compatible. Byte-level code is basically kept using old Java syntax which wouldn’t use the Generics.</p>
 
@@ -372,7 +374,7 @@ Also, to note, wildcard should not be used as a return type.</p>
 <h2 style="margin:50px 0px;" id="-limitations-to-generics">
 <i style="color: #F4A460;" class="fa fa-quote-left" aria-hidden="true"></i> Limitations to Generics</h2>
 
-<p><img class="emoji" title=":one:" alt=":one:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Primitives are not allowed as part of Type.</strong></span></p>
+<p><img class="emoji" title=":one:" alt=":one:" src="https://github.githubassets.com/images/icons/emoji/unicode/0031-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Primitives are not allowed as part of Type.</strong></span></p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span> <span class="n">V</span><span class="o">&gt;</span> <span class="o">{</span>
 
@@ -395,14 +397,14 @@ Also, to note, wildcard should not be used as a return type.</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Pair</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">Character</span><span class="o">&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Pair</span><span class="o">&lt;&gt;(</span><span class="mi">8</span><span class="o">,</span> <span class="sc">'a'</span><span class="o">);</span></code></pre></figure>
 
-<p><img class="emoji" title=":two:" alt=":two:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Static fields are not allowed</strong></span></p>
+<p><img class="emoji" title=":two:" alt=":two:" src="https://github.githubassets.com/images/icons/emoji/unicode/0032-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Static fields are not allowed</strong></span></p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericsExample</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;;</span>
 <span class="o">{</span>
    <span class="kd">private</span> <span class="kd">static</span> <span class="n">T</span> <span class="n">member</span><span class="o">;</span> <span class="c1">//This is not allowed</span>
 <span class="o">}</span></code></pre></figure>
 
-<p><img class="emoji" title=":three:" alt=":three:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Creating an instance of Type is not allowed</strong></span></p>
+<p><img class="emoji" title=":three:" alt=":three:" src="https://github.githubassets.com/images/icons/emoji/unicode/0033-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Creating an instance of Type is not allowed</strong></span></p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericsExample</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span>
 <span class="o">{</span>
@@ -411,14 +413,14 @@ Also, to note, wildcard should not be used as a return type.</p>
    <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
-<p><img class="emoji" title=":four:" alt=":four:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Exceptions cannot be generic-fied</strong></span></p>
+<p><img class="emoji" title=":four:" alt=":four:" src="https://github.githubassets.com/images/icons/emoji/unicode/0034-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Exceptions cannot be generic-fied</strong></span></p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// causes compiler error</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericException</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="n">Exception</span> <span class="o">{}</span></code></pre></figure>
 
 <p>This is because Runtime exception type has no generics information. For more detail, look into <a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-11.html">JLS 11</a>. It has the note, “subclass of Throwable must not be generic (<a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.1.2">§8.1.2</a>.”</p>
 
-<p><img class="emoji" title=":five:" alt=":five:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0035-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Cannot be used as Casts or <code class="highlighter-rouge">instanceof</code> parameter</strong></span></p>
+<p><img class="emoji" title=":five:" alt=":five:" src="https://github.githubassets.com/images/icons/emoji/unicode/0035-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Cannot be used as Casts or <code class="highlighter-rouge">instanceof</code> parameter</strong></span></p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="n">test</span> <span class="nf">rtti</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">list</span> <span class="k">instanceof</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;)</span> <span class="o">{</span>  <span class="c1">// compile-time error</span>
@@ -438,11 +440,11 @@ Also, to note, wildcard should not be used as a return type.</p>
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
-<p><img class="emoji" title=":six:" alt=":six:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0036-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>You cannot create an array of parameterized types</strong></span></p>
+<p><img class="emoji" title=":six:" alt=":six:" src="https://github.githubassets.com/images/icons/emoji/unicode/0036-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>You cannot create an array of parameterized types</strong></span></p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;[]</span> <span class="n">arrayOfLists</span> <span class="o">=</span> <span class="k">new</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;[</span><span class="mi">2</span><span class="o">];</span>  <span class="c1">// compile-time error</span></code></pre></figure>
 
-<p><img class="emoji" title=":seven:" alt=":seven:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0037-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>You cannot have the same method signature of erasure form</strong></span></p>
+<p><img class="emoji" title=":seven:" alt=":seven:" src="https://github.githubassets.com/images/icons/emoji/unicode/0037-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>You cannot have the same method signature of erasure form</strong></span></p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">GenericsExample</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">strSet</span><span class="o">)</span> <span class="o">{</span> <span class="o">}</span>
@@ -706,4 +708,6 @@ function addTohistory() {
 
 
   </body>
-</html><!-- Post Layout End -->
+</html>
+
+<!-- Post Layout End -->

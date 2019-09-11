@@ -223,6 +223,8 @@
 
           <nav class="pagination" role="navigation">
             
+              <a href="https://stalk-calvin.github.io/blog/2019/08/24/tdd.html" class="btn" title="Test Driven Development">&laquo; Test Driven Development</a>
+            
             
               <a href="https://stalk-calvin.github.io/blog/2019/06/01/delegation.html" class="btn" title="Importance of Delegation">Importance of Delegation &raquo;</a>
             
@@ -241,18 +243,17 @@
 <h3 id="1-word-search">1. Word Search</h3>
 
 <p>Here is one of my favourite algorithm. When you have a 2D array like this:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>array =
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>array =
 [
   ['A','B','C','E'],
   ['S','F','C','S'],
   ['A','D','E','E']
 ]
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>You need to find whether there is a path to a given string. For example, when a string “ABCESE” given, the algorithm should return “true” because there is a path on the board for this string, A-&gt;B-&gt;C-&gt;E-&gt;S-&gt;E. For the “false” case, we can go with “ABFE” because none of the characters in the board satisfies the exact A-&gt;B-&gt;F-&gt;E.</p>
 
-<p>It is one of a typical backtracking problem. You go through all the possible characters in the board to see if we can make a full traverse of the provided string. Once we have a match, we found it!</p>
+<p>It is one of a typical DFS problem which has a bit of Backtracking involved. You go through every possible character in the matrix to find if we can come up with the provided string. Once we have a match, we found it, return true!</p>
 
 <p>Below is the <a href="https://github.com/stalk-calvin/Python-Algorithms/blob/master/calvin/backtracking_dfs/wordsearch.py" target="_blank" rel="noopener noreferrer">code</a> written in Python:</p>
 
@@ -266,9 +267,9 @@
 
 <p>When I first encountered this problem, it gave me a headache as it seemed too complicated to write an algorithm for it. However, as I gazed at the problem, contemplating various ways to solve the problems, the word Backtracking suddenly hit me!</p>
 
-<p>The algorithm tries again and again, very rigorously this time until we have a filled board with a set of validations passed.</p>
+<p>The algorithm tries again and again, very rigorously until we have a filled board with a set of validations passed.</p>
 
-<p>Honestly, writing an algorithm to solve Sudoku can indeed be confusing because we are puzzled to the fact where we should begin.</p>
+<p>Honestly, writing an algorithm to solve Sudoku can indeed be confusing. It gave me a lot of headaches because we aren’t sure where we should even begin.</p>
 
 <p>First, we should generalize our thoughts in our head as much as possible. It is then probably a good idea to start by thinking about how we are going to validate the board like a row-wise, col-wise, 3x3 board with unique 1-9. With this validation in mind, we can keep trying to fill a number from 1-9 in the empty spot as we go until we have a full, complete and valid board. When the validation fails, we reset (backtrack) the row/col to what it was before and try a new number again.</p>
 
@@ -278,13 +279,13 @@
 
 <h3 style="margin: 5% 0%" id="3-combination-sum">3. Combination Sum</h3>
 
-<p>Here we are given with an array. Rigorously, we are trying to find all sum of numbers in an array that sums up to a target we provide.</p>
+<p>Here we are given with an array. We are relentlessly trying to find all sum of numbers in an array which sums up to a target number provided.</p>
 
 <p>For example, let’s say that we have [2,3,7] as a provided array and target is 7. We need to find any combinations of numbers (numbers can be repeating itself to create the sum. So for the above example, we have [2,2,3] and [7] as our answers.</p>
 
-<p>You should think about how these numbers get repeated themselves to make up for the sum. Luckily, we have a good base case here. We stop and add the combination when we have the <code class="highlighter-rouge">target</code> met.</p>
+<p>You should think about how these numbers get repeated themselves to make up for the sum. Luckily, we have a good base case here. We stop and add the combination when we have the <code class="highlighter-rouge">target</code> met. Sorting happens in the beginning so the algorithm can bail out early when the condition isn’t satisfied.</p>
 
-<p>But how do we know when the target is met? Let’s subtract the encountered numbers from the original target until we have exact “zero.” Then we can add the numbers into the gathered result so far.</p>
+<p>But how do we know when the target is met? We can subtract the encountered numbers from the original target until we have exact “zero.” If we do not have the condition we want, we want to add the number back so the algorithm can continue its search.</p>
 
 <p>Below is the <a href="https://github.com/stalk-calvin/Python-Algorithms/blob/master/calvin/backtracking_dfs/combinationsum.py" target="_blank" rel="noopener noreferrer">code</a> written in Python:</p>
 
@@ -292,15 +293,15 @@
 
 <h3 style="margin: 5% 0%" id="4-permutation">4. Permutation</h3>
 
-<p>As you have seen in previous examples, it is common to use the technique called Backtracking when we want to get a combination or permutation. Then we can variate the technique to use DFS as needed.</p>
+<p>As you have seen in previous examples, it is common to use the technique called Backtracking for combination or permutation. Then we can variate the technique (Backtracking/DFS) to meet the condition as needed.</p>
 
-<p>Permutation can be confusing, especially when there are multiple of the same numbers (instances). When you think of a permutation, you need to remember its position and think of it as a distinct entity.</p>
+<p>Permutation can be confusing, especially when there are multiple of the same numbers (instances). When you think of a permutation, you need to remember its exact position and think of it as a distinct entity.</p>
 
-<p>Check this <a href="https://github.com/stalk-calvin/Python-Algorithms/blob/master/calvin/backtracking_dfs/permutation.py" target="_blank" rel="noopener noreferrer">code example</a> in Python. There are 2 different functions to distinguish between the one which shows all possible positions of an array vs the one does not count the duplicated items.</p>
+<p>Check this <a href="https://github.com/stalk-calvin/Python-Algorithms/blob/master/calvin/backtracking_dfs/permutation.py" target="_blank" rel="noopener noreferrer">code example</a> in Python. There are 2 similar functions in there but serves a different purpose. One shows all possible positions of an array and the other one does not include the duplicated items.</p>
 
 <p>The algorithm is showing how it uses DFS to reach to the base case, which gathers all possible outcome. It tries each of the different places in digits to find all distinct possible output. I also added the unique case, so it does not further recurse when algorithm already witnessed number.</p>
 
-<p>Without the uniqueness, it is unique per position. So for “12321” case, we have 1 at index 0, 2 at index 1, etc. Now if we swap the positions, so they are represented as 12321, there are 4 different ways to do this because we can swap between 1s and 2s to make the same number. Please look at the test case for the permutation algorithm. It will make a whole lot more sense.</p>
+<p>Without the uniqueness, it is unique per position. So for “12321” case, we have 1 at index 0, 2 at index 1, etc. Now if we swap the positions, so they are represented as 12321, there are 4 different ways to to represent this “12321” because we can swap between 1s and 2s to make it as the same number. Please look at the test case for the permutation algorithm. It will make a whole lot more sense.</p>
 
 <p>Code written in Python:</p>
 
@@ -334,7 +335,7 @@ Sample output:
 
 <p>After rewriting a couple of times, I finally was able to have an algorithm that’s was producing some expected result. The algorithm tries every possible outcome, then aggregates the result when the condition is met.</p>
 
-<p>NOTE: The solution I wrote is not 100% correct because it doesn’t go through every possibility of spaces in between these numbers. However, we can try the intrinsic method to solve the problem. We could generate every possibility of adding a space in between the numbers (1 and 2 number pos) and see if they can form a number meeting above conditions. The idea of generating every possibility is key here.</p>
+<p>NOTE: I noticed the solution I wrote is not 100% correct because it doesn’t go through every possibility of spaces in between these numbers. One way to approach this problem is we could try the intrinsic method to solve the problem. We could generate every possibility of adding a space in between the numbers (1 and 2 number pos) and see if they can form a number meeting above conditions. To do this means rewriting the current algorithm, which shows the idea of generating every possibility, which is the key here.</p>
 
 <p>Below is the <a href="https://github.com/stalk-calvin/Python-Algorithms/blob/master/calvin/backtracking_dfs/number_combinations.py" target="_blank" rel="noopener noreferrer">code</a> written in Python.</p>
 
@@ -342,7 +343,7 @@ Sample output:
 
 <h2 style="margin: 5% 0%" id="conclusion">Conclusion</h2>
 
-<p>We just went through 5 examples above, where they employ Backtracking technique, and some have a bit of taste in DFS. If you look at the problem alone, it can be daunting and puzzling. However, if you think about the idea of <a href="https://en.wikipedia.org/wiki/Backtracking" target="_blank" rel="noopener noreferrer">Backtracking</a> alone, it is quite simple. It tries to go through all possibilities and see if they would work. If not, step back and try more possibilities. Common classic examples include <a href="https://en.wikipedia.org/wiki/Eight_queens_puzzle" target="_blank" rel="dnoopener noreferrer">eight queens puzzle</a> or <a href="https://en.wikipedia.org/wiki/Knapsack_problem" target="_blank" rel="noopener noreferrer">knapsack problem</a>. I would recommend you read through some of these classic examples to understand the algorithm better. Backtracking might not be the best solution, or it could be the only solution because sometimes, there are no short-cuts available. We just have to go through all the possibilities!</p>
+<p>We just went through 5 examples above, where they employ Backtracking technique, and some have a bit of taste in DFS. If you look at the problem alone, it can be daunting and puzzling. However, if you think about the idea of <a href="https://en.wikipedia.org/wiki/Backtracking" target="_blank" rel="noopener noreferrer">Backtracking</a> alone, it is quite simple. It tries to go through all possibilities and see if they would work. If not, step back and try more possibilities. Common classic examples include <a href="https://en.wikipedia.org/wiki/Eight_queens_puzzle" target="_blank" rel="dnoopener noreferrer">eight queens puzzle</a> or <a href="https://en.wikipedia.org/wiki/Knapsack_problem" target="_blank" rel="noopener noreferrer">knapsack problem</a>. I would recommend you read through some of these classic examples to understand the algorithm better. It might not be the best solution, or it might be the only solution. There are seldom no short-cuts available. We have to go through all the possibilities!</p>
 
 
           
@@ -434,6 +435,8 @@ Sample output:
           
 
           <nav class="pagination" role="navigation">
+            
+              <a href="https://stalk-calvin.github.io/blog/2019/08/24/tdd.html" class="btn" title="Test Driven Development">&laquo; Test Driven Development</a>
             
             
               <a href="https://stalk-calvin.github.io/blog/2019/06/01/delegation.html" class="btn" title="Importance of Delegation">Importance of Delegation &raquo;</a>

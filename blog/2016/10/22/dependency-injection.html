@@ -294,15 +294,15 @@
         <span class="na">xmlns:util=</span><span class="s">"http://www.springframework.org/schema/util"</span>
         <span class="na">xmlns:aop=</span><span class="s">"http://www.springframework.org/schema/aop"</span>
         <span class="na">xmlns:tx=</span><span class="s">"http://www.springframework.org/schema/tx"</span>
-        <span class="na">xsi:schemaLocation=</span><span class="s">"http://www.springframework.org/schema/beans</span> <span class="err">http://www.springframework.org/schema/beans/spring-beans-2.5.xsd</span>
-           <span class="err">http://www.springframework.org/schema/context</span> <span class="err">http://www.springframework.org/schema/context/spring-context-2.5.xsd</span>
-           <span class="err">http://www.springframework.org/schema/lang</span> <span class="err">http://www.springframework.org/schema/lang/spring-lang-2.5.xsd</span>
-           <span class="err">http://www.springframework.org/schema/aop</span> <span class="err">http://www.springframework.org/schema/aop/spring-aop-2.5.xsd</span>
-           <span class="err">http://www.springframework.org/schema/util</span> <span class="err">http://www.springframework.org/schema/util/spring-util-2.5.xsd</span>
-           <span class="err">http://www.springframework.org/schema/tx</span> <span class="err">http://www.springframework.org/schema/tx/spring-tx-2.5.xsd"</span><span class="nt">&gt;</span>
+        <span class="na">xsi:schemaLocation=</span><span class="s">"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd"</span><span class="nt">&gt;</span>
  
-    <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"fileManager"</span> <span class="na">class=</span><span class="s">"org.calvin.beans.FileManager</span> <span class="nt">/&gt;</span> 
-    <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"springTest"</span> <span class="na">class=</span><span class="s">"org.calvin.beans.SpringTest"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"fileManager"</span> <span class="na">class=</span><span class="s">"org.calvin.beans.FileManager /&gt; 
+    &lt;bean id="</span><span class="err">springTest"</span> <span class="na">class=</span><span class="s">"org.calvin.beans.SpringTest"</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;constructor-arg</span> <span class="na">ref=</span><span class="s">"fileManager"</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;/bean&gt;</span>
 <span class="nt">&lt;/beans&gt;</span></code></pre></figure>

@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "Test Driven Development",
+      "link"			: "https://stalk-calvin.github.io/blog/2019/08/24/tdd.html",
+      "excerpt"		: "Write tests first, Implement then",
+      "tags"        : ["programming","test","driven","development","tdd"],
+      "date"        : "2019 Aug 24",
+      "year"        : 2019
+    }
+  
+
+  
+    ,{
       "title"			: "Explaining Backtracking",
       "link"			: "https://stalk-calvin.github.io/blog/2019/07/27/backtracking.html",
       "excerpt"		: "Keep trying. Every possibility.",

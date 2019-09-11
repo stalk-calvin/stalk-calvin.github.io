@@ -1,5 +1,8 @@
+
+<!-- Post Layout Start -->
+
 <!DOCTYPE html>
-<!-- Post Layout Start --><html lang="en">
+<html lang="en">
 
    <!--
  ============================================
@@ -14,7 +17,6 @@
  ============================================
  -->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
 
 
@@ -25,13 +27,13 @@
   <meta name="description" content="Various ways of sorting methods">
   <meta name="author" content="Calvin Lee">
   <meta name="keywords" content="calvin, lee, personal, blog, beer, fitness, diet, computer, science, programming, software, engineer">
-  <meta property="fb:app_id" content="140805279842677">
-  <meta property="og:title" content="Sorting algorithms">
-  <meta property="og:description" content="Various ways of sorting methods">
-  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2016/06/28/sorting.html">
+  <meta property="fb:app_id" content="140805279842677" />
+  <meta property="og:title" content="Sorting algorithms" />
+  <meta property="og:description" content="Various ways of sorting methods" />
+  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2016/06/28/sorting.html" />
 
-  <link rel="alternate" hreflang="en" href="https://stalk-calvin.github.io/blog/2016/06/28/sorting.html">
-  <link rel="alternate" hreflang="kr" href="https://stalk-calvin.github.io/blog/2016/06/28/sorting.html">
+  <link rel="alternate" hreflang="en" href="https://stalk-calvin.github.io/blog/2016/06/28/sorting.html" />
+  <link rel="alternate" hreflang="kr" href="https://stalk-calvin.github.io/blog/2016/06/28/sorting.html" />
   <link rel="canonical" href="/blog/2016/06/28/sorting.html">
   <link rel="author" href="https://www.linkedin.com/in/stalkme">
   <title>I am Calvin | Sorting algorithms</title>
@@ -48,8 +50,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/rrssb.css">
-  <link rel="stylesheet" href="/css/custom.css?v=2">
+  <link rel="stylesheet" href="/css/rrssb.css" />
+  <link rel="stylesheet" href="/css/custom.css?v=2" />
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -246,7 +248,7 @@
           <p>So today I felt like to talk about general sorting algorithms these days. There are many sorting algorithms available, from brute force to divide and conquer. Let’s have a look at some worst time coplexity ones to better ones. For simplicity of description below, let’s assume we are sorting ascending order of integer. This can be easily applied to descending or strings depending on the requirements.</p>
 
 <h4 style="clear:left;" id="one-merge-sort">
-<img class="emoji" title=":one:" alt=":one:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png" height="20" width="20"> Merge Sort</h4>
+<img class="emoji" title=":one:" alt=":one:" src="https://github.githubassets.com/images/icons/emoji/unicode/0031-20e3.png" height="20" width="20"> Merge Sort</h4>
 <p style="float: left!important;margin-right: 1em;"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif" alt="merge_sort"></p>
 
 <ul>
@@ -256,7 +258,7 @@
 <p>Here is a fundamental of divide and conquer sorting algorithm which uses a comparison-based sorting method. The algorithm is stable meaning the order of sorted elements are preserved. Merge sort divides elements recursively into a smaller pieces and slowly sort them as they merges together. The amazing part of this algorithm is that it has Best/Average/Worst case performance of all O(nlogn). The pitfall of merge sort is the space complexity which is O(n). This is not the best algorithm for places where space is limited such as embbed software.</p>
 
 <h4 style="clear:left;" id="two-quick-sort">
-<img class="emoji" title=":two:" alt=":two:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png" height="20" width="20"> Quick Sort</h4>
+<img class="emoji" title=":two:" alt=":two:" src="https://github.githubassets.com/images/icons/emoji/unicode/0032-20e3.png" height="20" width="20"> Quick Sort</h4>
 
 <table style="background-color:#fff;border-collapse: separate; border-spacing: 5px; float: left; margin-right: 1em; color: #000; text-align: center; margin-bottom: 2em;">
   <thead>
@@ -278,7 +280,7 @@
 <p>The quick sort algorithm is famous for its recursivities and its probably the most famous sorting algorithms of all. There is no doubt a lot of people have misconception that this is the fastest algorithm out there. However, in worst case scenario, the algorithm can produce time complexity of O(<script type="math/tex">n^2</script>) when array is already sorted and pivot chosen at the last element <strong>or</strong> simply all elements in array is identical. Algorithm partitions array so element on left side has less than the element or right side has greater than equal to the element. Then algorithm recursives calls this until all element found the right position where it needs to be.</p>
 
 <h4 style="clear:left;" id="three-bubble-sort">
-<img class="emoji" title=":three:" alt=":three:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png" height="20" width="20"> Bubble Sort</h4>
+<img class="emoji" title=":three:" alt=":three:" src="https://github.githubassets.com/images/icons/emoji/unicode/0033-20e3.png" height="20" width="20"> Bubble Sort</h4>
 
 <p style="float: left!important;margin-right: 1em;"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" alt="bubble_sort"></p>
 
@@ -289,7 +291,7 @@
 <p>The bubble sort is quite old and fundametal algorithm which is discovered in 1960s. This sorting method takes each values adjacent to each other and compares and swap if one is less than the other. Worst and Average time of this sorting method is O(<script type="math/tex">n^2</script>). However, if the list is already sorted, the best time of this sort would be done in one pass which is O(n). Another variation of this sort is <a href="https://en.wikipedia.org/wiki/Odd%E2%80%93even_sort">Odd-Even sort</a> which is just bubble sort in parallel.</p>
 
 <h4 style="clear:left;" id="four-selection-sort">
-<img class="emoji" title=":four:" alt=":four:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png" height="20" width="20"> Selection Sort</h4>
+<img class="emoji" title=":four:" alt=":four:" src="https://github.githubassets.com/images/icons/emoji/unicode/0034-20e3.png" height="20" width="20"> Selection Sort</h4>
 
 <p style="float: left!important;margin-right: 1em;"><img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif" alt="selection_sort"></p>
 
@@ -300,7 +302,7 @@
 <p>Selection sort selects the lowest in the array and places in front. Worst and Average time of this sorting method is kind of obvious, O(<script type="math/tex">n^2</script>). In order to run this sorting method, you need to run one pass, one pass -1, one pass -2, …etc. Also note, regardless of array already sorted, it needs take an effort to ensure the lowest item is in front. There are multiple variation of this method to improve the performance. For variants and further analysis, see: https://en.wikipedia.org/wiki/Selection_sort.</p>
 
 <h4 style="clear:left;" id="five-insertion-sort">
-<img class="emoji" title=":five:" alt=":five:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0035-20e3.png" height="20" width="20"> Insertion Sort</h4>
+<img class="emoji" title=":five:" alt=":five:" src="https://github.githubassets.com/images/icons/emoji/unicode/0035-20e3.png" height="20" width="20"> Insertion Sort</h4>
 
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif" alt="insertion_sort" style="float: left!important;margin-right: 1em;"></p>
 
@@ -311,12 +313,12 @@
 <p>The most popular and simplest sort of all. Insertion sort goes through the array look for the position of an item that is being looked at. For example, let’s say you have 4,2,3,1. Then insertion sort will first compare 4,2 and they need to swap. List becomes 2,4,3,1. Then 4,3 will be looked at and list becomes 2,3,4,1. then it sees 2 is less then 3, leave it be. Then 4,1 will be looked at and 2,3,1,4 but 1 is still less then 3, so it swaps 3,1 -&gt; 2,1,3,4 -&gt; then eventually 1,2,3,4. The worst/average case of this method is O(<script type="math/tex">n^2</script>). However, the best case obviously will be O(n), simply when array is already sorted it has all the items at the position it needs to be. There are variations to this sort as well. Such as shell sort, binary insertion sort, etc. This works great when array is mostly sorted which means # of swaps it does will be significant smaller.</p>
 
 <h4 style="clear:left;" id="six-shell-sort">
-<img class="emoji" title=":six:" alt=":six:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0036-20e3.png" height="20" width="20"> Shell sort</h4>
+<img class="emoji" title=":six:" alt=":six:" src="https://github.githubassets.com/images/icons/emoji/unicode/0036-20e3.png" height="20" width="20"> Shell sort</h4>
 
 <p>The shell sort is variation of insertion sort. You start with x-number apart and sort and narrows for each iteration and takes advantage of how fast already sorted elements works in insertion sort.</p>
 
 <h4 style="clear:left;" id="seven-counting-sort">
-<img class="emoji" title=":seven:" alt=":seven:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0037-20e3.png" height="20" width="20"> Counting Sort</h4>
+<img class="emoji" title=":seven:" alt=":seven:" src="https://github.githubassets.com/images/icons/emoji/unicode/0037-20e3.png" height="20" width="20"> Counting Sort</h4>
 
 <ul>
   <li><a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/CountingSort.java">Code Example</a></li>
@@ -325,7 +327,7 @@
 <p><strong>Non-comparative</strong> sorting algorithm, which can sort better than O(nlogn) since no comparison. Downside of this sort is that we need to know # of occurrences on all numbers in an array before hand. You sort by the number of occurrence for such # in an array.</p>
 
 <h4 style="clear:left;" id="eight-bucket-sort">
-<img class="emoji" title=":eight:" alt=":eight:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0038-20e3.png" height="20" width="20"> Bucket Sort</h4>
+<img class="emoji" title=":eight:" alt=":eight:" src="https://github.githubassets.com/images/icons/emoji/unicode/0038-20e3.png" height="20" width="20"> Bucket Sort</h4>
 
 <table style="border-collapse: separate; border-spacing: 5px; float: left; margin-right: 1em;">
   <thead>
@@ -359,17 +361,17 @@
 <p>so end total time is O(n + k)</p>
 
 <h4 style="clear:left;" id="nine-radix-sort">
-<img class="emoji" title=":nine:" alt=":nine:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0039-20e3.png" height="20" width="20"> Radix Sort</h4>
+<img class="emoji" title=":nine:" alt=":nine:" src="https://github.githubassets.com/images/icons/emoji/unicode/0039-20e3.png" height="20" width="20"> Radix Sort</h4>
 
 <p>Non-comparative integer sorting algorithm by sorting the least significant digit and next digit and so on until most significant digit is reached. Important to note here the algorithm requires single pass over the data. This algorithm is similar to bucket sort that it creates buckets of digit-position and sorts it that way. There is other ways such as using the queues or using the most significant digits first (unstable)</p>
 
 <h4 style="clear:left;" id="keycap_ten-tim-sort">
-<img class="emoji" title=":keycap_ten:" alt=":keycap_ten:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f51f.png" height="20" width="20"> Tim Sort</h4>
+<img class="emoji" title=":keycap_ten:" alt=":keycap_ten:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f51f.png" height="20" width="20"> Tim Sort</h4>
 
 <p>Tim sort is a hybrid sorting algorithm that uses both binary insertion sort and merge sort. Currently, Java 7 SDK implements timsort and a new quicksort variant. Also Tim sort is default for Python, Android, GNU Octave etc. Tim sort produces good time complexity for a big number of n. Best Case: O(n) Average Case: O(nlogn) Worst Case: O(nlogn). The algorithm is stable + faster than old mergesort. If you need stable sorting method, use Tim Sort over Quicksort. Best case achieved when the input is already sorted. Worst is when they are not.</p>
 
 <h4 style="clear:left;" id="fast_forward-heap-sort">
-<img class="emoji" title=":fast_forward:" alt=":fast_forward:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/23e9.png" height="20" width="20"> Heap Sort</h4>
+<img class="emoji" title=":fast_forward:" alt=":fast_forward:" src="https://github.githubassets.com/images/icons/emoji/unicode/23e9.png" height="20" width="20"> Heap Sort</h4>
 <p style="float: left!important;margin-right: 1em;"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Heapsort-example.gif" alt="heap_sort"></p>
 
 <ul>
@@ -379,7 +381,7 @@
 <p>This comparison-based unstable sorting algorithm takes an advantage of the tree being max/min heap. Taking root element and places in a sorted array. The sorting can happen in 4 stages. 1. buildMaxHeap() in O(n). 2. Swap first (root) with last child. 3. siftDown() to keep heap property in O(logn). 4. Keep repeat of 2 and 3 until all element is gone and all sorted in sorted array. Performance is O(n+n*log(n)) which is O(nlogn) for a big number of n.</p>
 
 <h4 style="clear:left;" id="fast_forward-stable-sort">
-<img class="emoji" title=":fast_forward:" alt=":fast_forward:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/23e9.png" height="20" width="20"> Stable Sort</h4>
+<img class="emoji" title=":fast_forward:" alt=":fast_forward:" src="https://github.githubassets.com/images/icons/emoji/unicode/23e9.png" height="20" width="20"> Stable Sort</h4>
 
 <p>Stable sort is not an algorithm of sorting an array. Stable sorting algorithms maintain the relative order of records with equal keys, unstable sorting not. Anyway, I thought I would include this in here to note some of the sorting methods that are stable vs not stable.</p>
 
@@ -652,4 +654,6 @@ function addTohistory() {
 
 
   </body>
-</html><!-- Post Layout End -->
+</html>
+
+<!-- Post Layout End -->

@@ -24,19 +24,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Songs I listen to these days">
+  <meta name="description" content="Write tests first, Implement then">
   <meta name="author" content="Calvin Lee">
   <meta name="keywords" content="calvin, lee, personal, blog, beer, fitness, diet, computer, science, programming, software, engineer">
   <meta property="fb:app_id" content="140805279842677" />
-  <meta property="og:title" content="Jang Bum Joon (장범준)" />
-  <meta property="og:description" content="Songs I listen to these days" />
-  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2016/06/24/music.html" />
+  <meta property="og:title" content="Test Driven Development" />
+  <meta property="og:description" content="Write tests first, Implement then" />
+  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2019/09/05/tdd.html" />
 
-  <link rel="alternate" hreflang="en" href="https://stalk-calvin.github.io/blog/2016/06/24/music.html" />
-  <link rel="alternate" hreflang="kr" href="https://stalk-calvin.github.io/blog/2016/06/24/music.html" />
-  <link rel="canonical" href="/blog/2016/06/24/music.html">
+  <link rel="alternate" hreflang="en" href="https://stalk-calvin.github.io/blog/2019/09/05/tdd.html" />
+  <link rel="alternate" hreflang="kr" href="https://stalk-calvin.github.io/blog/2019/09/05/tdd.html" />
+  <link rel="canonical" href="/blog/2019/09/05/tdd.html">
   <link rel="author" href="https://www.linkedin.com/in/stalkme">
-  <title>I am Calvin | Jang Bum Joon (장범준)</title>
+  <title>I am Calvin | Test Driven Development</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -194,80 +194,121 @@
     <section id="post" class="container content-section ">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>Jang Bum Joon (장범준)</strong></h1>
-	  <h4 style="display:inline; color: #F4A460;"><strong>Songs I listen to these days</strong></h4>
-<br>
+          <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>Test Driven Development</strong></h1>
+	  <h4 style="display:inline; color: #F4A460;"><strong>Write tests first, Implement then</strong></h4><br />
           <h4>
-            <strong>24 Jun 2016</strong>
+            <strong>05 Sep 2019</strong>
             <small>
-               <a href="/blog/2016/06/24/music.html#fb_comment">View Comments</a>
-              <br>
+               <a href="/blog/2019/09/05/tdd.html#fb_comment">View Comments</a>
+              <br />
               
-                <a class="tag" href="/tags/#korean">#korean</a>
+                <a class="tag" href="/tags/#programming">#programming</a>
               
-                <a class="tag" href="/tags/#music">#music</a>
+                <a class="tag" href="/tags/#test">#test</a>
               
-                <a class="tag" href="/tags/#%EC%9E%A5%EB%B2%94%EC%A4%80">#장범준</a>
+                <a class="tag" href="/tags/#driven">#driven</a>
+              
+                <a class="tag" href="/tags/#development">#development</a>
+              
+                <a class="tag" href="/tags/#tdd">#tdd</a>
               
             </small>
           </h4>
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2016/06/28/sorting.html" class="btn" title="Sorting algorithms">« Sorting algorithms</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2016/06/21/fruits-sugar-health.html" class="btn" title="Sugar in Fruits">Sugar in Fruits »</a>
+              <a href="https://stalk-calvin.github.io/blog/2019/07/27/backtracking.html" class="btn" title="Explaining Backtracking">Explaining Backtracking &raquo;</a>
             
           </nav><!-- /.pagination -->
 
-          <p><img class="emoji" title=":kr:" alt=":kr:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1f0-1f1f7.png" height="20" width="20"> I have been listening to Korean musics these days. My point of view in Korean musics were basically can be grouped into two: pop or old pop.</p>
+          <p>Have you ever been in a situation where a hot-fix was breaking the software even further that you had to roll back that change? I have, and it wasn’t a pleasant experience at all. We rolled out the feature, and it was essentially breaking the entire login process on the mobile for OAuth users. We rolled back our changes which involved multiple people such as ops, devs, QAs, PMs, etc. Could there be a way to prevent these show-stopping bugs to production? Turns out there is!</p>
 
-<p>One day, I came across a Korean singer, Busker Busker's Jang Bum Joon (장범준). He has good ability make his own music from both pop + old pop. Even though he is not much aged at all, he can remake some of the old pops turn into his modern style. He has a special vocal sound which defines who he is. Also, most of his songs are relaxed and easy-to-listen.</p>
+<p>Simple answer is, <strong><em>Everyone in the team can build habits of testing, rigorously</em></strong>.</p>
 
-<p>Sometimes you would find his songs are some-what repetitive and similar style in most of the songs. However, that is what I like about him. He has his own colour to his songs.</p>
+<p>Test Driven Development is one of the processes that can get you in the habit.</p>
 
-<p>Here are some of his songs I have been enjoying listening to lately <img class="emoji" title=":blush:" alt=":blush:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f60a.png" height="20" width="20"></p>
+<p>Test Driven Development (TDD) in a nutshell suggests the tests to be the driver of producing the software. You continuously run through these tests to complete your algorithm and progress based on the feedback from the run. We usually write algorithm first and then write tests required for the algorithm. We reverse this process to complete your algorithm. Once all the tests pass, one can further refactor the algorithm to complete your code.</p>
 
-<h4 id="the-flower-꽃송이가">The Flower (꽃송이가)</h4>
-<iframe width="560" height="315" src="//www.youtube.com/embed/yzlv2yX7lzQ" frameborder="0"> </iframe>
+<p>When Kent Back first developed TDD, he sought to narrow the gap between the algorithm decision and its feedback. TDD is the psychological process for closing this gap. When you have enough passes and fails during your tests, you are getting consistent feedback on the decision you made. That’s where you become confident with the changes you have made.</p>
 
-<h4 id="spring-rain-봄비">Spring Rain (봄비)</h4>
-<iframe width="560" height="315" src="//www.youtube.com/embed/u0hEgrjqQro" frameborder="0"> </iframe>
+<h2 id="the-process">The Process</h2>
 
-<h4 id="falling-in-love-immediately-사랑에-빠져요">Falling in Love Immediately (사랑에 빠져요)</h4>
-<iframe width="560" height="315" src="//www.youtube.com/embed/kV4yLmESs78" frameborder="0"> </iframe>
+<table class="image" style="margin-top:1%;">
+<caption class="custom" align="bottom">TDD Flow</caption>
+<tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/tdd/tdd_cycle.png" alt="TDD Flow" /></td></tr>
+</table>
 
-<h4 id="fallen-in-love-사랑에-빠졌죠">Fallen in Love (사랑에 빠졌죠)</h4>
-<iframe width="560" height="315" src="//www.youtube.com/embed/nQRBLrtohxA" frameborder="0"> </iframe>
+<p style="margin-bottom: 2%">TDD has a fundamental guideline for anyone starting their programming.</p>
+<ol style="margin: 2% 0%">
+  <li>Write unit tests that will fail</li>
+  <li>Fix those tests to make them pass</li>
+  <li>Refactor: code reuse, long method, tightly coupled, large class, long parameter list, etc.</li>
+  <li>REPEAT until satisfied</li>
+</ol>
 
-<h4 id="yeosu-night-sea-여수-밤바다">Yeosu Night Sea (여수 밤바다)</h4>
-<iframe width="560" height="315" src="//www.youtube.com/embed/K2MFPTekyMM" frameborder="0"> </iframe>
+<p>The importance here is that you wrote tests to fail and fixed them along with refactoring.</p>
 
-<h4 id="cherry-blossom-ending-벚꽃엔딩">Cherry Blossom Ending (벚꽃엔딩)</h4>
-<iframe width="560" height="315" src="//www.youtube.com/embed/jrYIZ9VgmKo" frameborder="0"> </iframe>
+<p>Another important concept here is that you start with test cases that fail. And then begin developing your algorithms. And repeat this process in a short amount of time.</p>
 
-<h4 id="difficult-woman-어려운-여자">Difficult Woman (어려운 여자)</h4>
-<iframe width="560" height="315" src="//www.youtube.com/embed/hKFtA1g1CAU" frameborder="0"> </iframe>
+<h2 id="when-to-use-tdd">When to use TDD</h2>
 
-<h4 id="reminiscence-회상">Reminiscence (회상)</h4>
-<iframe width="560" height="315" src="//www.youtube.com/embed/40WklavZYEs" frameborder="0"> </iframe>
+<p>If your project has steadily built where the result is quite apparent (we all know 1+1 is 2), TDD is probably an overkill. TDD is useful when there are uncertainties in your software. If your software is pretty simple, don’t over complicate things. However, with increasing number of users these days, we have variety of microservices and software is quite complicated. We can easily encounter frequent changes which may involve different microservices and often time we lose the confidence in making such changes.</p>
 
+<p>One important benefit from TDD is that the programmer would understand well what the expected outcome when developing the functionalities. TDD helps you precisely to overcome that uncertainty. Also following TDD avoids writing redundant code.</p>
+
+<h2 id="good-and-bad">GOOD AND BAD</h2>
+
+<p>There are so many pros and cons of TDD. From my experience, the pros win over. I have acquired the habit of writing tests for anything I write, which is how I gain confidence in my code.</p>
+
+<p><strong>PROS</strong>:</p>
+<ol style="padding-left: 1.5em;list-style: decimal;">
+<li style="padding-bottom: 1em;">
+<strong><em>Helps programmers understand the problem fully</em></strong>
+<br />
+<span style="margin-left: 0em;margin-right: 0;display: inline-block;">
+It naturally enforces programmers to understand well what and why of the problem you are solving. Because without this acknowledgement, you are not going to be able to write any test cases. Test cases can help you visualize the problem.
+Continuously monitor the status of your code. Feedback right away. Be confident in your software.
+</span></li>
+<li style="padding-bottom: 1em;">
+<strong><em>Having feedback for your change is very important.</em></strong>
+<br />
+<span style="margin-left: 0em;margin-right: 0;display: inline-block;">
+For example, when you change something which has a dependency on a piece that has very well covered and concise tests. The changes you make to your function expects those tests pass. It will eventually lead you to be confident in your changes and adds significant stability in the code. Also, it promotes you to refactor the code and simplify as required.
+</span></li>
+<li style="padding-bottom: 1em;">
+<strong><em>Good for teamwork. Good for development.</em></strong>
+<br />
+<span style="margin-left: 0em;margin-right: 0;display: inline-block;">
+There is an implicit push on collaboration with team members because they have to share their knowledge and interact to understand their software better. It promotes writing better overall code because everyone is motivated to write a better quality of software.
+</span></li></ol>
+
+<p><strong>CONS</strong>:</p>
+<ol style="padding-left: 1.5em;list-style: decimal;">
+<li style="padding-bottom: 1em;"><strong><em>Reduces productivity / Increased development time</em></strong>
+<br />
+<span style="margin-left: 0em;margin-right: 0;display: inline-block;">
+Many companies wish to finish their tasks ASAP.  However, with TDD, with the apparent reason for writing extra tests, it could initially increase development time which leads to reduced productivity. However, once TDD matures, and you get used to it, you can develop faster and have that confidence in your code.
+</span></li>
+<li style="padding-bottom: 1em;"><strong><em>Can easily trap yourself into the TDD rigid mindset</em></strong>
+<br />
+<span style="margin-left: 0em;margin-right: 0;display: inline-block;">
+You may start focusing on developing precise and specific tests that you can easily forget the big picture. For example, you start focusing on writing tests and its 100% coverage, but if your code doesn't align with business requirements, the tests are useless.
+</span></li></ol>
 
 
           
 <!-- Share Buttons Start -->
 <div>
-  <h5 style="margin-bottom:1em;margin-left:.5em;">
-<i class="fa fa-quote-left" aria-hidden="true"></i> Share this post <i class="fa fa-quote-right" aria-hidden="true"></i>
-</h5>
+  <h5 style="margin-bottom:1em;margin-left:.5em;"><i class="fa fa-quote-left" aria-hidden="true"></i> Share this post <i class="fa fa-quote-right" aria-hidden="true"></i></h5>
   <ul class="rrssb-buttons clearfix">
     
       <li class="rrssb-email">
-        <a href="mailto:?subject=Jang%20Bum%20Joon%20(%EC%9E%A5%EB%B2%94%EC%A4%80)&amp;body=https://stalk-calvin.github.io/blog/2016/06/24/music.html" data-proofer-ignore>
+        <a href="mailto:?subject=Test Driven Development&body=https://stalk-calvin.github.io/blog/2019/09/05/tdd.html" data-proofer-ignore>
           <span class="rrssb-icon">
-            <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28">
-              <path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"></path>
+            <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+              <path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"
+              />
             </svg>
           </span>
         </a>
@@ -275,26 +316,29 @@
     
     
       <li class="rrssb-facebook">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2016/06/24/music.html&amp;title=Jang%20Bum%20Joon%20(%EC%9E%A5%EB%B2%94%EC%A4%80)" class="popup">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2019/09/05/tdd.html&title=Test Driven Development" class="popup">
           <span class="rrssb-icon">
-            <svg xmlns="https://www.w3.org/2000/svg" preserveaspectratio="xMidYMid" width="29" height="29" viewbox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z" class="cls-2" fill-rule="evenodd"></path></svg>
+            <svg xmlns="https://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="29" height="29" viewBox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z"
+              class="cls-2" fill-rule="evenodd"/></svg>
           </span>
         </a>
       </li>
     
     
       <li class="rrssb-twitter">
-        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2016/06/24/music.html&amp;text=Jang%20Bum%20Joon%20(%EC%9E%A5%EB%B2%94%EC%A4%80)" class="popup">
-          <span class="rrssb-icon"><svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28"><path d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62c-3.122.162-6.22-.646-8.86-2.32 2.702.18 5.375-.648 7.507-2.32-2.072-.248-3.818-1.662-4.49-3.64.802.13 1.62.077 2.4-.154-2.482-.466-4.312-2.586-4.412-5.11.688.276 1.426.408 2.168.387-2.135-1.65-2.73-4.62-1.394-6.965C5.574 7.816 9.54 9.84 13.802 10.07c-.842-2.738.694-5.64 3.434-6.48 2.018-.624 4.212.043 5.546 1.682 1.186-.213 2.318-.662 3.33-1.317-.386 1.256-1.248 2.312-2.4 2.942 1.048-.106 2.07-.394 3.02-.85-.458 1.182-1.343 2.15-2.48 2.71z"></path></svg></span>
+        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2019/09/05/tdd.html&text=Test Driven Development"
+        class="popup">
+          <span class="rrssb-icon"><svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><path d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62c-3.122.162-6.22-.646-8.86-2.32 2.702.18 5.375-.648 7.507-2.32-2.072-.248-3.818-1.662-4.49-3.64.802.13 1.62.077 2.4-.154-2.482-.466-4.312-2.586-4.412-5.11.688.276 1.426.408 2.168.387-2.135-1.65-2.73-4.62-1.394-6.965C5.574 7.816 9.54 9.84 13.802 10.07c-.842-2.738.694-5.64 3.434-6.48 2.018-.624 4.212.043 5.546 1.682 1.186-.213 2.318-.662 3.33-1.317-.386 1.256-1.248 2.312-2.4 2.942 1.048-.106 2.07-.394 3.02-.85-.458 1.182-1.343 2.15-2.48 2.71z"/></svg></span>
         </a>
       </li>
     
     
       <li class="rrssb-linkedin">
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2016/06/24/music.html" class="popup">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2019/09/05/tdd.html" class="popup">
         <span class="rrssb-icon">
-          <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28">
-            <path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"></path>
+          <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+            <path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"
+            />
           </svg>
         </span>
       </a>
@@ -303,9 +347,9 @@
     
     
       <li class="rrssb-googleplus">
-        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2016/06/24/music.html" class="popup">
+        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2019/09/05/tdd.html" class="popup">
           <span class="rrssb-icon">
-            <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"><path d="M21 8.29h-1.95v2.6h-2.6v1.82h2.6v2.6H21v-2.6h2.6v-1.885H21V8.29zM7.614 10.306v2.925h3.9c-.26 1.69-1.755 2.925-3.9 2.925-2.34 0-4.29-2.016-4.29-4.354s1.885-4.353 4.29-4.353c1.104 0 2.014.326 2.794 1.105l2.08-2.08c-1.3-1.17-2.924-1.883-4.874-1.883C3.65 4.586.4 7.835.4 11.8s3.25 7.212 7.214 7.212c4.224 0 6.953-2.988 6.953-7.082 0-.52-.065-1.104-.13-1.624H7.614z"></path></svg>
+            <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 8.29h-1.95v2.6h-2.6v1.82h2.6v2.6H21v-2.6h2.6v-1.885H21V8.29zM7.614 10.306v2.925h3.9c-.26 1.69-1.755 2.925-3.9 2.925-2.34 0-4.29-2.016-4.29-4.354s1.885-4.353 4.29-4.353c1.104 0 2.014.326 2.794 1.105l2.08-2.08c-1.3-1.17-2.924-1.883-4.874-1.883C3.65 4.586.4 7.835.4 11.8s3.25 7.212 7.214 7.212c4.224 0 6.953-2.988 6.953-7.082 0-.52-.065-1.104-.13-1.624H7.614z"/></svg>
           </span>
         </a>
       </li>
@@ -337,27 +381,25 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-<div id="fb_comment" class="fb-comments" data-href="https://stalk-calvin.github.io/blog/2016/06/24/music.html" data-numposts="5" data-width="100%" data-colorscheme="dark" data-order-by="reverse_time"></div>
+<div id="fb_comment" class="fb-comments" data-href="https://stalk-calvin.github.io/blog/2019/09/05/tdd.html" data-numposts="5" data-width="100%" data-colorscheme="dark" data-order-by="reverse_time"></div>
 
           
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2016/06/28/sorting.html" class="btn" title="Sorting algorithms">« Sorting algorithms</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2016/06/21/fruits-sugar-health.html" class="btn" title="Sugar in Fruits">Sugar in Fruits »</a>
+              <a href="https://stalk-calvin.github.io/blog/2019/07/27/backtracking.html" class="btn" title="Explaining Backtracking">Explaining Backtracking &raquo;</a>
             
           </nav><!-- /.pagination -->
 
-          <hr>
+          <hr />
 
           
           <div class="author row">
-            <img class="img-circle col-xs-4 col-sm-3 col-md-2" src="/img/timeline/IMG_20160124_103417.jpg" alt="Me">
+            <img class="img-circle col-xs-4 col-sm-3 col-md-2" src="/img/timeline/IMG_20160124_103417.jpg" alt="Me" />
             <p class="col-xs-8 col-sm-9 col-md-10" style="padding-top: 1.3em;">
             I am a passionate software developer working in Downtown, Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
-            <a href="javascript:location='mailto:%5Cu0073%5Cu0074%5Cu0061%5Cu006c%5Cu006b%5Cu002e%5Cu0063%5Cu0061%5Cu006c%5Cu0076%5Cu0069%5Cu006e%5Cu0040%5Cu0067%5Cu006d%5Cu0061%5Cu0069%5Cu006c%5Cu002e%5Cu0063%5Cu006f%5Cu006d';void%200"><script type="text/javascript">document.write('\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
+            <a href="javascript:location='mailto:\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"><script type="text/javascript">document.write('\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
             </p>
           </div>
           
@@ -399,7 +441,7 @@
     <p><br></p>
 
     <div class="container text-center">
-      <p>Copyright © Calvin Lee</p>
+      <p>Copyright &copy; Calvin Lee</p>
       <p>2016 - 2019</p>
     </div>
     <p><br><br><br></p>
@@ -478,7 +520,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 <script>
 function addTohistory() {
   if (!window.location.host.startsWith("127.0.0.1")) {
-    history.pushState({}, 'Jang Bum Joon (장범준)', 'https://stalk-calvin.github.io/blog/2016/06/24/music.html');
+    history.pushState({}, 'Test Driven Development', 'https://stalk-calvin.github.io/blog/2019/09/05/tdd.html');
   }
 }
 </script>

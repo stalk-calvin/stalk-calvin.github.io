@@ -14,7 +14,34 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Mon, 19 Aug 2019 00:29:13 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Sep 2019 19:35:25 +0000</lastBuildDate>
+	
+		<item>
+			<title>Test Driven Development</title>
+			
+				<description>Write tests first, Implement then</description>
+			
+        
+          <category>programming</category>
+        
+          <category>test</category>
+        
+          <category>driven</category>
+        
+          <category>development</category>
+        
+          <category>tdd</category>
+        
+			<pubDate>24 August 2019</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2019/08/24/tdd.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2019/08/24/tdd</guid>
+		</item>
 	
 		<item>
 			<title>Explaining Backtracking</title>
