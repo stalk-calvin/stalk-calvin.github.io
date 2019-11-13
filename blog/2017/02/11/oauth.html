@@ -233,12 +233,12 @@
 <h3 id="oauth-vocabulary">OAuth Vocabulary</h3>
 
 <ul>
-  <li><code class="highlighter-rouge">User</code> - a customer who has an account in both consumer and service provider.</li>
-  <li><code class="highlighter-rouge">Consumer</code> - Uses OAuth (Open API) to communicate between service provider.</li>
-  <li><code class="highlighter-rouge">Service Provider</code> - Uses OAuth to communicate between consumer to provide service.</li>
-  <li><code class="highlighter-rouge">Consumer Key</code> - API key associated with the application. It identifies the client which is the service that is trying to access user’s resource</li>
-  <li><code class="highlighter-rouge">Consumer Secret</code> - Password used to authenticate consumer from service provider</li>
-  <li><code class="highlighter-rouge">Access Token</code> - Access tokens are credentials used to access protected resources. There is no visible username/password. Token is meant to be the authorization to user’s resource</li>
+  <li><code class="language-plaintext highlighter-rouge">User</code> - a customer who has an account in both consumer and service provider.</li>
+  <li><code class="language-plaintext highlighter-rouge">Consumer</code> - Uses OAuth (Open API) to communicate between service provider.</li>
+  <li><code class="language-plaintext highlighter-rouge">Service Provider</code> - Uses OAuth to communicate between consumer to provide service.</li>
+  <li><code class="language-plaintext highlighter-rouge">Consumer Key</code> - API key associated with the application. It identifies the client which is the service that is trying to access user’s resource</li>
+  <li><code class="language-plaintext highlighter-rouge">Consumer Secret</code> - Password used to authenticate consumer from service provider</li>
+  <li><code class="language-plaintext highlighter-rouge">Access Token</code> - Access tokens are credentials used to access protected resources. There is no visible username/password. Token is meant to be the authorization to user’s resource</li>
 </ul>
 
 <h3 id="oauth-use-case">OAuth Use Case</h3>
@@ -335,7 +335,7 @@
 <p>OAuth 1.0 Protocol is defined by <a href="http://tools.ietf.org/html/rfc5849">RFC 5849</a>. It is sometimes referred to as 3-Legged OAuth due to the number of requests
 between the provider and consumer. It has been found vulnerable to <a href="https://www.owasp.org/index.php/Session_fixation">session fixation</a>. Recommended uses are OAuth 1.0a or OAuth 2.0.</p>
 
-<p>To enable an OAuth provider, you should add a Service Provider record with the necessary <code class="highlighter-rouge">request_token_url</code>, <code class="highlighter-rouge">authorization_url</code> and <code class="highlighter-rouge">access_token_url</code> as defined by the protocol. Service provider’s API documentation should detail these for you. You will also need to define a <code class="highlighter-rouge">profile_url</code> which is the API endpoint for requesting the currently authenticated user’s profile information. You will also need to register for a key/secret pair from the service provider.</p>
+<p>To enable an OAuth provider, you should add a Service Provider record with the necessary <code class="language-plaintext highlighter-rouge">request_token_url</code>, <code class="language-plaintext highlighter-rouge">authorization_url</code> and <code class="language-plaintext highlighter-rouge">access_token_url</code> as defined by the protocol. Service provider’s API documentation should detail these for you. You will also need to define a <code class="language-plaintext highlighter-rouge">profile_url</code> which is the API endpoint for requesting the currently authenticated user’s profile information. You will also need to register for a key/secret pair from the service provider.</p>
 
 <p>This protocol is implemented by a number of providers. These providers include Twitter, Netflix, Yahoo, Flickr, Bitbucket, and Dropbox. Additional providers can be found on the <a href="http://wiki.oauth.net/w/page/12238551/ServiceProviders">OAuth.net Wiki</a>.</p>
 
@@ -343,8 +343,8 @@ between the provider and consumer. It has been found vulnerable to <a href="http
 
 <p>Unlike OAuth 1.0, OAuth 2.0 is only a <a href="http://tools.ietf.org/html/draft-ietf-oauth-v2-28">working draft</a> and not an official standard. In many ways, it is much simpler than its predecessor. It is often referred to as 2-Legged OAuth because it removes the need for the request token step.</p>
 
-<p>To enable an OAuth provider, you should add a <code class="highlighter-rouge">Provider</code> record with the necessary <code class="highlighter-rouge">authorization_url</code> and <code class="highlighter-rouge">access_token_url</code> as defined by the protocol. The provider’s API documentation should detail these for you. You
-will also need to define a <code class="highlighter-rouge">profile_url</code> which is the API endpoint for requesting the currently authenticated user’s profile information. You will also need to register for a key/secret pair from the provider.</p>
+<p>To enable an OAuth provider, you should add a <code class="language-plaintext highlighter-rouge">Provider</code> record with the necessary <code class="language-plaintext highlighter-rouge">authorization_url</code> and <code class="language-plaintext highlighter-rouge">access_token_url</code> as defined by the protocol. The provider’s API documentation should detail these for you. You
+will also need to define a <code class="language-plaintext highlighter-rouge">profile_url</code> which is the API endpoint for requesting the currently authenticated user’s profile information. You will also need to register for a key/secret pair from the provider.</p>
 
 <p>OAuth 2.0 relies on HTTPS for security and is currently used and implemented by APIs from companies such as Facebook, Google, Twitter, and Microsoft. OAuth1.0a is more difficult to use because it requires the use of cryptographic libraries for digital signatures. However, since OAuth1.0a does not rely on HTTPS for security it can be more suited for higher risk transactions. I wouldn’t recommend using OAuth 2.0 for handling sensitive data. It is pretty much secured by HTTPS protocol.</p>
 
@@ -452,7 +452,7 @@ will also need to define a <code class="highlighter-rouge">profile_url</code> wh
           <div class="author row">
             <img class="img-circle col-xs-4 col-sm-3 col-md-2" src="/img/timeline/IMG_20160124_103417.jpg" alt="Me" />
             <p class="col-xs-8 col-sm-9 col-md-10" style="padding-top: 1.3em;">
-            I am a passionate software developer working in Downtown, Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
+            I am a passionate programmer working in Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
             <a href="javascript:location='mailto:\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"><script type="text/javascript">document.write('\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
             </p>
           </div>

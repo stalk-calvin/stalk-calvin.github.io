@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "Common Design Patterns",
+      "link"			: "https://stalk-calvin.github.io/blog/2019/11/07/design-patterns.html",
+      "excerpt"		: "Ones I came across these days",
+      "tags"        : ["design","patterns","computer","software","programming","cleancode"],
+      "date"        : "2019 Nov 07",
+      "year"        : 2019
+    }
+  
+
+  
+    ,{
       "title"			: "Test Driven Development",
       "link"			: "https://stalk-calvin.github.io/blog/2019/08/24/tdd.html",
       "excerpt"		: "Write tests first, Implement then",

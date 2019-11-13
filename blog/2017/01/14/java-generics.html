@@ -236,11 +236,11 @@
 
 <p>In Java 4, we had raw types only:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">List</span> <span class="n">newArray</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">();</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">List</span> <span class="n">newArray</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">();</span></code></pre></figure>
 
 <p>Java 5 introduced generics:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">newArray</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">newArray</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;();</span></code></pre></figure>
 
 <p>As you can see, the generics would imply the type of the List. In Java, Generic types or methods differ from raw types in the sense that they have type parameters such as above example. You may pass in the Type or wildcard instead of “Integer” in the above example. According to the JLS (4.8 Raw Types):</p>
 
@@ -262,7 +262,7 @@
 
 <ol style="padding-left: 1.5em; list-style: decimal;">
   <li>Stronger type checks at compile time: Probably the most important point of all. Avoiding runtime cast exception!</li>
-  <li>Elimination of casts: Before Java 5, we had to cast Objects in order for it to be an explicit type. Such as <code class="highlighter-rouge">(String) list.get(0)</code>. Now we can replace that by enforcing the list to be String, <code class="highlighter-rouge">List&lt;String&gt; list = new ArrayList&lt;String&gt;();</code>
+  <li>Elimination of casts: Before Java 5, we had to cast Objects in order for it to be an explicit type. Such as <code class="language-plaintext highlighter-rouge">(String) list.get(0)</code>. Now we can replace that by enforcing the list to be String, <code class="language-plaintext highlighter-rouge">List&lt;String&gt; list = new ArrayList&lt;String&gt;();</code>
 </li>
   <li>Enabling programmers to implement generic algorithms: You can have a generic type instead of one-specific (i.e. String) type.</li>
 </ol>
@@ -280,7 +280,7 @@
 
 <p>Example of Type Safety:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;();</span>
  
 <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">1000</span><span class="o">);</span> <span class="c1">//works and add 1000 to the list</span>
  
@@ -292,7 +292,7 @@
 
 <p>Here is an example of Type Erasure. Basically above Generics Type Safety example is converted like this:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">List</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">();</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">List</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">();</span>
  
 <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">1000</span><span class="o">);</span>    </code></pre></figure>
 
@@ -300,10 +300,10 @@
 
 <p>Also, Type Erasure introduces a problem like following:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">li</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
-<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Float</span><span class="o">&gt;</span> <span class="n">lf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Float</span><span class="o">&gt;();</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">li</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;();</span>
+<span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Float</span><span class="o">&gt;</span> <span class="n">lf</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Float</span><span class="o">&gt;();</span>
 <span class="k">if</span> <span class="o">(</span><span class="n">li</span><span class="o">.</span><span class="na">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="n">lf</span><span class="o">.</span><span class="na">getClass</span><span class="o">())</span> <span class="o">{</span> <span class="c1">// evaluates to true</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Equal"</span><span class="o">);</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Equal"</span><span class="o">);</span>
 <span class="o">}</span></code></pre></figure>
 
 <p>What this compares at the end of a day is ArrayList, because Types would have been Erased. There are other limitations to Generics. <a href="#generics_limitation">See end of this page</a>, you will find examples of them.</p>
@@ -339,21 +339,21 @@
   <li>Comparator&lt;? super String&gt; denotes all instantiations of the Comparator interface for type argument types that are supertypes of String.</li>
 </ol>
 
-<p>Examples of <code class="highlighter-rouge">correct</code> usage of wildcard:</p>
+<p>Examples of <code class="language-plaintext highlighter-rouge">correct</code> usage of wildcard:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Collection</span><span class="o">&lt;?&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span> 
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Collection</span><span class="o">&lt;?&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;();</span> 
 <span class="c1">//OR</span>
-<span class="n">List</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">Number</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">&gt;();</span> 
+<span class="nc">List</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="nc">Number</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">&gt;();</span> 
 <span class="c1">//OR</span>
-<span class="n">Pair</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,?&gt;</span> <span class="n">pair</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Pair</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="n">Integer</span><span class="o">&gt;();</span></code></pre></figure>
+<span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,?&gt;</span> <span class="n">pair</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Integer</span><span class="o">&gt;();</span></code></pre></figure>
 
-<p>Examples of <code class="highlighter-rouge">incorrect</code> usage of wildcard:</p>
+<p>Examples of <code class="language-plaintext highlighter-rouge">incorrect</code> usage of wildcard:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">Number</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>  <span class="c1">//String iscannot be a subclass of Number; error</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">List</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="nc">Number</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;();</span>  <span class="c1">//String iscannot be a subclass of Number; error</span>
 <span class="c1">//OR</span>
-<span class="n">Comparator</span><span class="o">&lt;?</span> <span class="kd">super</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">cmp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RuleBasedCollator</span><span class="o">(</span><span class="k">new</span> <span class="n">Integer</span><span class="o">(</span><span class="mi">100</span><span class="o">));</span> <span class="c1">//Integer is not superclass of String</span></code></pre></figure>
+<span class="nc">Comparator</span><span class="o">&lt;?</span> <span class="kd">super</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">cmp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RuleBasedCollator</span><span class="o">(</span><span class="k">new</span> <span class="nc">Integer</span><span class="o">(</span><span class="mi">100</span><span class="o">));</span> <span class="c1">//Integer is not superclass of String</span></code></pre></figure>
 
-<p>If you look closely to the usage of generics in the diamond brackets, the object is being defined using <code class="highlighter-rouge">extends</code> or <code class="highlighter-rouge">super</code>. There is a rule to define how and when to use <code class="highlighter-rouge">extends</code> vs <code class="highlighter-rouge">super</code>.</p>
+<p>If you look closely to the usage of generics in the diamond brackets, the object is being defined using <code class="language-plaintext highlighter-rouge">extends</code> or <code class="language-plaintext highlighter-rouge">super</code>. There is a rule to define how and when to use <code class="language-plaintext highlighter-rouge">extends</code> vs <code class="language-plaintext highlighter-rouge">super</code>.</p>
 
 <p>PECS stands for Producer-Extends, Consumer-Super. Let’s take an example of how they are used:</p>
 
@@ -376,12 +376,12 @@ Also, to note, wildcard should not be used as a return type.</p>
 
 <p><img class="emoji" title=":one:" alt=":one:" src="https://github.githubassets.com/images/icons/emoji/unicode/0031-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Primitives are not allowed as part of Type.</strong></span></p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span> <span class="n">V</span><span class="o">&gt;</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="no">K</span><span class="o">,</span> <span class="no">V</span><span class="o">&gt;</span> <span class="o">{</span>
 
-    <span class="kd">private</span> <span class="n">K</span> <span class="n">key</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="n">V</span> <span class="n">value</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="no">K</span> <span class="n">key</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="no">V</span> <span class="n">value</span><span class="o">;</span>
 
-    <span class="kd">public</span> <span class="nf">Pair</span><span class="o">(</span><span class="n">K</span> <span class="n">key</span><span class="o">,</span> <span class="n">V</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nf">Pair</span><span class="o">(</span><span class="no">K</span> <span class="n">key</span><span class="o">,</span> <span class="no">V</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">this</span><span class="o">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="o">;</span>
         <span class="k">this</span><span class="o">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">;</span>
     <span class="o">}</span>
@@ -391,22 +391,22 @@ Also, to note, wildcard should not be used as a return type.</p>
 
 <p>Above code example cannot be used like this:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">,</span> <span class="kt">char</span><span class="o">&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Pair</span><span class="o">&lt;&gt;(</span><span class="mi">8</span><span class="o">,</span> <span class="sc">'a'</span><span class="o">);</span>  <span class="c1">// compile-time error</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">,</span> <span class="kt">char</span><span class="o">&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;&gt;(</span><span class="mi">8</span><span class="o">,</span> <span class="sc">'a'</span><span class="o">);</span>  <span class="c1">// compile-time error</span></code></pre></figure>
 
 <p>It is to be used like this with values being autoboxed:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Pair</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">Character</span><span class="o">&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Pair</span><span class="o">&lt;&gt;(</span><span class="mi">8</span><span class="o">,</span> <span class="sc">'a'</span><span class="o">);</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">,</span> <span class="nc">Character</span><span class="o">&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;&gt;(</span><span class="mi">8</span><span class="o">,</span> <span class="sc">'a'</span><span class="o">);</span></code></pre></figure>
 
 <p><img class="emoji" title=":two:" alt=":two:" src="https://github.githubassets.com/images/icons/emoji/unicode/0032-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Static fields are not allowed</strong></span></p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericsExample</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericsExample</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;;</span>
 <span class="o">{</span>
-   <span class="kd">private</span> <span class="kd">static</span> <span class="n">T</span> <span class="n">member</span><span class="o">;</span> <span class="c1">//This is not allowed</span>
+   <span class="kd">private</span> <span class="kd">static</span> <span class="no">T</span> <span class="n">member</span><span class="o">;</span> <span class="c1">//This is not allowed</span>
 <span class="o">}</span></code></pre></figure>
 
 <p><img class="emoji" title=":three:" alt=":three:" src="https://github.githubassets.com/images/icons/emoji/unicode/0033-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Creating an instance of Type is not allowed</strong></span></p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericsExample</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericsExample</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span>
 <span class="o">{</span>
    <span class="kd">public</span> <span class="nf">GenericsExample</span><span class="o">(){</span>
       <span class="k">new</span> <span class="nf">T</span><span class="o">();</span>
@@ -416,39 +416,39 @@ Also, to note, wildcard should not be used as a return type.</p>
 <p><img class="emoji" title=":four:" alt=":four:" src="https://github.githubassets.com/images/icons/emoji/unicode/0034-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Exceptions cannot be generic-fied</strong></span></p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// causes compiler error</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericException</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="n">Exception</span> <span class="o">{}</span></code></pre></figure>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericException</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="nc">Exception</span> <span class="o">{}</span></code></pre></figure>
 
 <p>This is because Runtime exception type has no generics information. For more detail, look into <a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-11.html">JLS 11</a>. It has the note, “subclass of Throwable must not be generic (<a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.1.2">§8.1.2</a>.”</p>
 
-<p><img class="emoji" title=":five:" alt=":five:" src="https://github.githubassets.com/images/icons/emoji/unicode/0035-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Cannot be used as Casts or <code class="highlighter-rouge">instanceof</code> parameter</strong></span></p>
+<p><img class="emoji" title=":five:" alt=":five:" src="https://github.githubassets.com/images/icons/emoji/unicode/0035-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>Cannot be used as Casts or <code class="language-plaintext highlighter-rouge">instanceof</code> parameter</strong></span></p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="n">test</span> <span class="nf">rtti</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">list</span> <span class="k">instanceof</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;)</span> <span class="o">{</span>  <span class="c1">// compile-time error</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="n">test</span> <span class="nf">rtti</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">list</span> <span class="k">instanceof</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;)</span> <span class="o">{</span>  <span class="c1">// compile-time error</span>
         <span class="c1">// ...</span>
-    <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">list</span> <span class="k">instanceof</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;)</span> <span class="o">{</span>  <span class="c1">// ERROR</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"LinkedList"</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">list</span> <span class="k">instanceof</span> <span class="nc">LinkedList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;)</span> <span class="o">{</span>  <span class="c1">// ERROR</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"LinkedList"</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
 <p>Above can be used with a wildcard like so:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">test</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;?&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">list</span> <span class="k">instanceof</span> <span class="n">ArrayList</span><span class="o">&lt;?&gt;)</span> <span class="o">{</span>  <span class="c1">// OK; instanceof requires a reifiable type</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"ArrayList"</span><span class="o">);</span>
-    <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">list</span> <span class="k">instanceof</span> <span class="n">LinkedList</span><span class="o">&lt;?&gt;)</span> <span class="o">{</span>  <span class="c1">// OK; instanceof requires a reifiable type</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"LinkedList"</span><span class="o">);</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">test</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;?&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">list</span> <span class="k">instanceof</span> <span class="nc">ArrayList</span><span class="o">&lt;?&gt;)</span> <span class="o">{</span>  <span class="c1">// OK; instanceof requires a reifiable type</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"ArrayList"</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">list</span> <span class="k">instanceof</span> <span class="nc">LinkedList</span><span class="o">&lt;?&gt;)</span> <span class="o">{</span>  <span class="c1">// OK; instanceof requires a reifiable type</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"LinkedList"</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
 <p><img class="emoji" title=":six:" alt=":six:" src="https://github.githubassets.com/images/icons/emoji/unicode/0036-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>You cannot create an array of parameterized types</strong></span></p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;[]</span> <span class="n">arrayOfLists</span> <span class="o">=</span> <span class="k">new</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;[</span><span class="mi">2</span><span class="o">];</span>  <span class="c1">// compile-time error</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;[]</span> <span class="n">arrayOfLists</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;[</span><span class="mi">2</span><span class="o">];</span>  <span class="c1">// compile-time error</span></code></pre></figure>
 
 <p><img class="emoji" title=":seven:" alt=":seven:" src="https://github.githubassets.com/images/icons/emoji/unicode/0037-20e3.png" height="20" width="20"> <span style="color: #F4A460;"><strong>You cannot have the same method signature of erasure form</strong></span></p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">GenericsExample</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">strSet</span><span class="o">)</span> <span class="o">{</span> <span class="o">}</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">intSet</span><span class="o">)</span> <span class="o">{</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="nc">Set</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">strSet</span><span class="o">)</span> <span class="o">{</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="nc">Set</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">intSet</span><span class="o">)</span> <span class="o">{</span> <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
 <p>Both result in Same strSet in the bytecode which results in a compile error, java: name clash: print(java.util.Set<java.lang.integer>) and print(java.util.Set<java.lang.string>) have the same erasure</java.lang.string></java.lang.integer></p>
@@ -562,7 +562,7 @@ Also, to note, wildcard should not be used as a return type.</p>
           <div class="author row">
             <img class="img-circle col-xs-4 col-sm-3 col-md-2" src="/img/timeline/IMG_20160124_103417.jpg" alt="Me">
             <p class="col-xs-8 col-sm-9 col-md-10" style="padding-top: 1.3em;">
-            I am a passionate software developer working in Downtown, Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
+            I am a passionate programmer working in Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
             <a href="javascript:location='mailto:%5Cu0073%5Cu0074%5Cu0061%5Cu006c%5Cu006b%5Cu002e%5Cu0063%5Cu0061%5Cu006c%5Cu0076%5Cu0069%5Cu006e%5Cu0040%5Cu0067%5Cu006d%5Cu0061%5Cu0069%5Cu006c%5Cu002e%5Cu0063%5Cu006f%5Cu006d';void%200"><script type="text/javascript">document.write('\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
             </p>
           </div>

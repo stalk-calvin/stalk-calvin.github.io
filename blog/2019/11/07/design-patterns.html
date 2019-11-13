@@ -24,19 +24,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Transitioning from 2 to 3">
+  <meta name="description" content="Ones I came across these days">
   <meta name="author" content="Calvin Lee">
   <meta name="keywords" content="calvin, lee, personal, blog, beer, fitness, diet, computer, science, programming, software, engineer">
   <meta property="fb:app_id" content="140805279842677" />
-  <meta property="og:title" content="Python Switch Over" />
-  <meta property="og:description" content="Transitioning from 2 to 3" />
-  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2019/02/09/python-port-over.html" />
+  <meta property="og:title" content="Common Design Patterns" />
+  <meta property="og:description" content="Ones I came across these days" />
+  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2019/11/07/design-patterns.html" />
 
-  <link rel="alternate" hreflang="en" href="https://stalk-calvin.github.io/blog/2019/02/09/python-port-over.html" />
-  <link rel="alternate" hreflang="kr" href="https://stalk-calvin.github.io/blog/2019/02/09/python-port-over.html" />
-  <link rel="canonical" href="/blog/2019/02/09/python-port-over.html">
+  <link rel="alternate" hreflang="en" href="https://stalk-calvin.github.io/blog/2019/11/07/design-patterns.html" />
+  <link rel="alternate" hreflang="kr" href="https://stalk-calvin.github.io/blog/2019/11/07/design-patterns.html" />
+  <link rel="canonical" href="/blog/2019/11/07/design-patterns.html">
   <link rel="author" href="https://www.linkedin.com/in/stalkme">
-  <title>I am Calvin | Python Switch Over</title>
+  <title>I am Calvin | Common Design Patterns</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -194,147 +194,69 @@
     <section id="post" class="container content-section ">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>Python Switch Over</strong></h1>
-	  <h4 style="display:inline; color: #F4A460;"><strong>Transitioning from 2 to 3</strong></h4><br />
+          <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>Common Design Patterns</strong></h1>
+	  <h4 style="display:inline; color: #F4A460;"><strong>Ones I came across these days</strong></h4><br />
           <h4>
-            <strong>09 Feb 2019</strong>
+            <strong>07 Nov 2019</strong>
             <small>
-               <a href="/blog/2019/02/09/python-port-over.html#fb_comment">View Comments</a>
+               <a href="/blog/2019/11/07/design-patterns.html#fb_comment">View Comments</a>
               <br />
+              
+                <a class="tag" href="/tags/#design">#design</a>
+              
+                <a class="tag" href="/tags/#patterns">#patterns</a>
               
                 <a class="tag" href="/tags/#computer">#computer</a>
               
+                <a class="tag" href="/tags/#software">#software</a>
+              
                 <a class="tag" href="/tags/#programming">#programming</a>
               
-                <a class="tag" href="/tags/#python">#python</a>
-              
-                <a class="tag" href="/tags/#python3">#python3</a>
+                <a class="tag" href="/tags/#cleancode">#cleancode</a>
               
             </small>
           </h4>
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2019/03/09/consistent-hashing.html" class="btn" title="Consistent Hashing">&laquo; Consistent Hashing</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2019/01/26/caching.html" class="btn" title="Caching">Caching &raquo;</a>
+              <a href="https://stalk-calvin.github.io/blog/2019/08/24/tdd.html" class="btn" title="Test Driven Development">Test Driven Development &raquo;</a>
             
           </nav><!-- /.pagination -->
 
-          <p>2018 has been an exciting year for me to develop my skills in Python. I had so much exposure, not entirely from work, but drove by my sole interest in Python (Python 3 especially). We use Python 2 mainly at work, but I honestly spend more time on Python 3 for my personal development at home. So I get to have experiences in both Python 2 and 3.</p>
+          <p>Design patterns help one to write code cleanly and flexibly. It is popular these days because the size of the code is becoming large and clunky to a complicated state.</p>
 
-<p>Python 2 and 3 are, in some ways similar, but there are still fair bits of differences between the two, which is why there are compatibility libraries available like <a href="https://pythonhosted.org/six">six</a> or <a href="http://python-future.org">future</a> where it helps you port your Python 2 code to Python 3. However, I have not had a big enough project to use these libraries on my own. I heard good things about them though.</p>
+<p>Design patterns attracted its attention after the book <a href="https://en.wikipedia.org/wiki/Design_Patterns" target="_blank" rel="noopener noreferrer">Design Patterns: Elements of Reusable Object-Oriented Software</a> was published in 1994 by the so-called “Gang of Four” (frequently abbreviated as “GoF”). It went even more popular after <a href="http://shop.oreilly.com/product/9780596007126.do" target="_blank" rel="noopener noreferrer">Head First Design Patterns</a> was released in 2009 as people start noticing how common patterns helps writing clean code.</p>
 
-<p>Whenever I needed to do the switch from Python 2 to 3, I used Python 3’s built-in tool called, <a href="https://docs.python.org/2/library/2to3.html">2to3</a>. From my experiences, I have not yet come across a situation where it did not handle well (not that I tried a million times though). I suspect the may have a hard time converting some complicated and sophisticated lines of codes. I suggest reviewing the codes thoroughly after the conversion.</p>
+<p style="margin-bottom: 2%">We are likely already familiar with a few well-known design patterns. Some are quite popular and some not so much. Generally, most of these patterns themselves fall in one of three general categories:</p>
+<ul style="margin: 2% 0%">
+  <li>Behavioural</li>
+  <li>Structural</li>
+  <li>Creational</li>
+</ul>
+<p>Three categories are simply guidelines. We should not restrict ourselves to these categories. There isn’t a strict pattern to apply to write a clean code. You can always come up with a new pattern that would express your code more readable and flexible in a way people will appreciate.</p>
 
-<p><strong><em>NOTE:</em></strong> When I am comparing between Python 2 and 3, I am comparing the somewhat latest versions of both.</p>
+<p>Here I would like to spare some time and share the top five most-seen design patterns I came across.  I noticed them a couple of times in the industry and I believe there are benefits associated with each one when used right.</p>
 
-<h2 id="what-changed">What Changed?</h2>
+<h3 id="1-strategy-test">1. <a href="https://github.com/stalk-calvin/Java-Algorithms/tree/master/src/main/java/org/calvin/DesignPatterns/Behavioral/Strategy" target="_blank" rel="noopener noreferrer">Strategy</a> [<a href="https://github.com/stalk-calvin/Java-Algorithms/tree/master/src/test/java/org/calvin/DesignPatterns/Behavioral/Strategy" target="_blank" rel="noopener noreferrer">Test</a>]</h3>
 
-<p>There are a fair amount of little things that had been improved/deprecated from Python 2 to 3. Even though I love most of the changes made in Python 3, some features are still missing in Python. The changes are robust, durable and well-thought which is why I started to enjoy coding in Python 3.</p>
+<p>This behavioural design pattern selects the algorithm at runtime through composition. You can toss in the actual object of operation confined by a generic interface you wish to execute and let the operator handle it and run it. The idea is quite simple and it makes your code simple. This pattern is similar to the decorator pattern in terms of how objects delegate from one to another (composite pattern). However, the purpose is different. The strategy pattern focuses on executing a set of concrete operations whereas the decorator pattern focuses on decorating an object by delegation.</p>
 
-<h3 id="1-imports">1. Imports</h3>
+<h3 id="2-factory-test--static-factory-test">2. <a href="https://github.com/stalk-calvin/Java-Algorithms/tree/master/src/main/java/org/calvin/DesignPatterns/Creational/Factory" target="_blank" rel="noopener noreferrer">Factory</a> [<a href="https://github.com/stalk-calvin/Java-Algorithms/tree/master/src/test/java/org/calvin/DesignPatterns/Creational/Factory" target="_blank" rel="noopener noreferrer">Test</a>] + <a href="https://github.com/stalk-calvin/Java-Algorithms/tree/master/src/main/java/org/calvin/DesignPatterns/Creational/StaticFactory" target="_blank" rel="noopener noreferrer">Static Factory</a> [<a href="https://github.com/stalk-calvin/Java-Algorithms/tree/master/src/test/java/org/calvin/DesignPatterns/Creational/StaticFactory" target="_blank" rel="noopener noreferrer">Test</a>]</h3>
 
-<p>There are a few subtle changes to the import itself. The main difference, I would say, is that we no longer require <code class="language-plaintext highlighter-rouge">__init__.py</code> to define our package. Yay!</p>
+<p>I love the creational design pattern because the pattern helps organize and structures how a set of objects should be defined rather than explicitly defining each object individually.  The factory pattern could govern how an object should be created not just at compile time but also at runtime based on factors. Examples of factors can be operating systems, different data types, or input parameters. You can think of it as a black-box, an abstracted factory that creates an object based on your need. The static factory is similar but we abandon the needs for the runtime creation. There are several reasons people want you to use it. However, I frequently use it for one reason: it makes your code much more comprehensible that is readable.</p>
 
-<p>Also, in Python 2, we would typically import like <code class="language-plaintext highlighter-rouge">import xyz</code>, but in Python 3, it is preferred to use <code class="language-plaintext highlighter-rouge">from . import xyz</code> syntax. We usually replace the <code class="language-plaintext highlighter-rouge">dot</code> with the package location (folder and filename). It is not mandated, but rather a good coding habit.</p>
+<h3 id="3-builder-test">3. <a href="https://github.com/stalk-calvin/Java-Algorithms/tree/master/src/main/java/org/calvin/DesignPatterns/Creational/Builder" target="_blank" rel="noopener noreferrer">Builder</a> [<a href="https://github.com/stalk-calvin/Java-Algorithms/tree/master/src/test/java/org/calvin/DesignPatterns/Creational/Builder" target="_blank" rel="noopener noreferrer">Test</a>]</h3>
 
-<h3 id="2-print">2. Print</h3>
+<p>The builder design pattern is quite useful in a situation where objects have many constructor parameters that may otherwise require developers to generate overrides or multiple constructors to create an object. The builder pattern is responsible for creating an object but is quite different from the factory design pattern. Factory allows creating a different type of object with a single call whereas the builder would allow assigning different traits to an object with chaining.</p>
 
-<p>Anyone who is somewhat familiar with Python would know this infamous change: <code class="language-plaintext highlighter-rouge">print</code> is treated as a function call in Python 3.</p>
+<h3 id="4-decorator-test">4. <a href="https://github.com/stalk-calvin/Java-Algorithms/tree/master/src/main/java/org/calvin/DesignPatterns/Structural/Decorator" target="_blank" rel="noopener noreferrer">Decorator</a> [<a href="https://github.com/stalk-calvin/Java-Algorithms/tree/master/src/test/java/org/calvin/DesignPatterns/Structural/Decorator" target="_blank" rel="noopener noreferrer">Test</a>]</h3>
 
-<p>Instead of <code class="language-plaintext highlighter-rouge">print "foobar"</code> (in Python 2), we now call print as a function like this: <code class="language-plaintext highlighter-rouge">print("foobar")</code></p>
+<p>Decorators are a cleaner and flexible alternative to sub-classing. You can pass in an object to decorators to extend the functionality of an object without affecting other instances of the same class. This is achieved by wrapping an object of the extended class into one that extends the same class and overrides the methods whose functionality is supposed to be changed.</p>
 
-<p>There is an option in Python 2 to enable using the print function like Python 3:</p>
+<h3 id="5-facade-test">5. <a href="https://github.com/stalk-calvin/Java-Algorithms/tree/master/src/main/java/org/calvin/DesignPatterns/Structural/Facade" target="_blank" rel="noopener noreferrer">Facade</a> [<a href="https://github.com/stalk-calvin/Java-Algorithms/tree/master/src/test/java/org/calvin/DesignPatterns/Structural/Facade" target="_blank" rel="noopener noreferrer">Test</a>]</h3>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"foobar"</span><span class="p">)</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"barbaz"</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span></code></pre></figure>
-
-<p><code class="language-plaintext highlighter-rouge">file=sys.stderr</code> is the way to pipe the output to standard error. For the comparison, in Python 2, we had to do something like this to pipe to stderr: <code class="language-plaintext highlighter-rouge">print &gt;&gt; sys.stderr, "barbaz"</code></p>
-
-<h3 id="3-exceptions">3. Exceptions</h3>
-
-<p>There aren’t any significant changes to how we raise exceptions. If you are familiar with Python 2 syntax, the syntax for raising exceptions should be pretty much the same. However, there was some extra work done on the catching side.</p>
-
-<p>We used to catch exceptions like this in Python 2:</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">try</span><span class="p">:</span>
-    <span class="k">raise</span> <span class="nb">RuntimeError</span><span class="p">()</span>
-<span class="k">except</span><span class="p">:</span> <span class="nb">RuntimeError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
-    <span class="k">pass</span></code></pre></figure>
-
-<p>Here is the Python 3 with subtle changes to how it is caught:</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">try</span><span class="p">:</span>
-    <span class="k">raise</span> <span class="nb">RuntimeError</span><span class="p">()</span>
-<span class="k">except</span><span class="p">:</span> <span class="nb">RuntimeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-    <span class="k">pass</span></code></pre></figure>
-
-<p>The comma was replaced with “as,” which is more concise and descriptive.</p>
-
-<h3 id="4-division">4. Division</h3>
-
-<p>There are a few changes to the integers in general. I want to focus on the division operator though. In Python 2, this is true:</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="mi">5</span><span class="o">/</span><span class="mi">2</span> <span class="c1"># results 2
-</span><span class="mf">5.0</span><span class="o">/</span><span class="mi">2</span> <span class="c1"># results 2.5
-</span><span class="mf">5.0</span><span class="o">//</span><span class="mi">2</span> <span class="c1"># results 2</span></code></pre></figure>
-
-<p>It is pretty similar in Python 3, but float is by <strong>default</strong> instead of rounding down to an integer (even when an integer is used). I like this update as I couldn’t understand better why python would round down automatically.  There were numerous times, I got burned by the miscalculation of divisions in Python. As you can see from the example below, you can use <code class="language-plaintext highlighter-rouge">//</code> to mimic the Python 2 behaviour of round-down.</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="mi">5</span><span class="o">/</span><span class="mi">2</span> <span class="c1"># results 2.5
-</span><span class="mf">5.0</span><span class="o">//</span><span class="mi">2</span> <span class="c1"># results 2</span></code></pre></figure>
-
-<h3 id="5-stringsunicodes">5. Strings/Unicodes</h3>
-
-<p>There have been a few radical revamp of Strings in Python 3. For the most critical part, Python 3 uses <strong>Unicode by default</strong> whereas Python 2 wasn’t.</p>
-
-<p>Therefore, when porting, Python recommends prefixing the string with <code class="language-plaintext highlighter-rouge">u''</code> on any existing Python 2 string like so, <code class="language-plaintext highlighter-rouge">u'foobar'</code>. This way it is supported in both Python 2 and Python 3 without any broken characters. As you may have noticed, the letter <code class="language-plaintext highlighter-rouge">u</code> refers to Unicode. You can optionally pass in below import in Python 2 to address Unicode issues.</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">unicode_literals</span> </code></pre></figure>
-
-<p>This import takes care of having the <code class="language-plaintext highlighter-rouge">u</code> prefix on every string.  If you are worried about backward compatibility, you can be explicit to the string like <code class="language-plaintext highlighter-rouge">b'foobar'</code> (used in Python 3) which would interpret the string as a “raw” byte string like Python 2.</p>
-
-<p>You can contrarily think this way, <code class="language-plaintext highlighter-rouge">unicode</code> strings in Python 2 are equivalent to <code class="language-plaintext highlighter-rouge">str</code> in Python 3.</p>
-
-<h3 id="6-classes">6. Classes</h3>
-
-<p>We were able to define classes like this which makes a distinct “class” type:</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
-    <span class="k">pass</span></code></pre></figure>
-
-<p>Then there is another way of defining a class:</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">pass</span></code></pre></figure>
-
-<p>We would have had to explicit inheritance from the “object.” Python 3 essentially inherit everything from the Object by <strong>default</strong> (like Java). Also, there were some changes in super calls, metaclasses, etc. I do not think it’s much helpful to show them here. You can search online easily for the changes if you are interested.</p>
-
-<h3 id="7-dictionaries">7. Dictionaries</h3>
-
-<p>Python 3 dictionaries enforce the Ordering of inserts now (above 3.6). The change can help in situations when you need to retrieve items from insertion order. The change is not equal to “sorted keys” like how “TreeMap” works in Java. I found it a bit annoying <strong>not</strong> having the treemap in Python Standard Library (but what can I do, I think you can even import extra libraries if you want)</p>
-
-<p>Also, there were some syntax changes on how we iterate dictionaries.</p>
-
-<p>In Python 2, we do something like:</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">iterkeys</span><span class="p">():</span>
-    <span class="k">print</span> <span class="n">key</span>
-
-<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
-    <span class="k">print</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span></code></pre></figure>
-
-<p>In Python 3, we no longer have the <code class="language-plaintext highlighter-rouge">iter</code> methods and have a distinct call on each (keys, values, items) like:</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code></pre></figure>
+<p>The facade design pattern provides the client with a simpler interface to use by putting together objects to simplify tasks. In the end, the pattern helps to make the code more readable. It works as a wrapper around the system that is being simplified. For example, say you have several tasks you do for going to a gym such as wear gym clothes, wear running shoes, prepare towels, etc. Now you can have a facade class that contains responsible for all these tasks, then you can create a simpler call called, “goToGym()”, which does all the basic things before getting to the gym. Your call now as simple as, “facade.goToGym()”.</p>
 
 
           
@@ -344,7 +266,7 @@
   <ul class="rrssb-buttons clearfix">
     
       <li class="rrssb-email">
-        <a href="mailto:?subject=Python Switch Over&body=https://stalk-calvin.github.io/blog/2019/02/09/python-port-over.html" data-proofer-ignore>
+        <a href="mailto:?subject=Common Design Patterns&body=https://stalk-calvin.github.io/blog/2019/11/07/design-patterns.html" data-proofer-ignore>
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
               <path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"
@@ -356,7 +278,7 @@
     
     
       <li class="rrssb-facebook">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2019/02/09/python-port-over.html&title=Python Switch Over" class="popup">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2019/11/07/design-patterns.html&title=Common Design Patterns" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="29" height="29" viewBox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z"
               class="cls-2" fill-rule="evenodd"/></svg>
@@ -366,7 +288,7 @@
     
     
       <li class="rrssb-twitter">
-        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2019/02/09/python-port-over.html&text=Python Switch Over"
+        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2019/11/07/design-patterns.html&text=Common Design Patterns"
         class="popup">
           <span class="rrssb-icon"><svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><path d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62c-3.122.162-6.22-.646-8.86-2.32 2.702.18 5.375-.648 7.507-2.32-2.072-.248-3.818-1.662-4.49-3.64.802.13 1.62.077 2.4-.154-2.482-.466-4.312-2.586-4.412-5.11.688.276 1.426.408 2.168.387-2.135-1.65-2.73-4.62-1.394-6.965C5.574 7.816 9.54 9.84 13.802 10.07c-.842-2.738.694-5.64 3.434-6.48 2.018-.624 4.212.043 5.546 1.682 1.186-.213 2.318-.662 3.33-1.317-.386 1.256-1.248 2.312-2.4 2.942 1.048-.106 2.07-.394 3.02-.85-.458 1.182-1.343 2.15-2.48 2.71z"/></svg></span>
         </a>
@@ -374,7 +296,7 @@
     
     
       <li class="rrssb-linkedin">
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2019/02/09/python-port-over.html" class="popup">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2019/11/07/design-patterns.html" class="popup">
         <span class="rrssb-icon">
           <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
             <path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"
@@ -387,7 +309,7 @@
     
     
       <li class="rrssb-googleplus">
-        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2019/02/09/python-port-over.html" class="popup">
+        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2019/11/07/design-patterns.html" class="popup">
           <span class="rrssb-icon">
             <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 8.29h-1.95v2.6h-2.6v1.82h2.6v2.6H21v-2.6h2.6v-1.885H21V8.29zM7.614 10.306v2.925h3.9c-.26 1.69-1.755 2.925-3.9 2.925-2.34 0-4.29-2.016-4.29-4.354s1.885-4.353 4.29-4.353c1.104 0 2.014.326 2.794 1.105l2.08-2.08c-1.3-1.17-2.924-1.883-4.874-1.883C3.65 4.586.4 7.835.4 11.8s3.25 7.212 7.214 7.212c4.224 0 6.953-2.988 6.953-7.082 0-.52-.065-1.104-.13-1.624H7.614z"/></svg>
           </span>
@@ -421,16 +343,14 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-<div id="fb_comment" class="fb-comments" data-href="https://stalk-calvin.github.io/blog/2019/02/09/python-port-over.html" data-numposts="5" data-width="100%" data-colorscheme="dark" data-order-by="reverse_time"></div>
+<div id="fb_comment" class="fb-comments" data-href="https://stalk-calvin.github.io/blog/2019/11/07/design-patterns.html" data-numposts="5" data-width="100%" data-colorscheme="dark" data-order-by="reverse_time"></div>
 
           
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2019/03/09/consistent-hashing.html" class="btn" title="Consistent Hashing">&laquo; Consistent Hashing</a>
             
-            
-              <a href="https://stalk-calvin.github.io/blog/2019/01/26/caching.html" class="btn" title="Caching">Caching &raquo;</a>
+              <a href="https://stalk-calvin.github.io/blog/2019/08/24/tdd.html" class="btn" title="Test Driven Development">Test Driven Development &raquo;</a>
             
           </nav><!-- /.pagination -->
 
@@ -562,7 +482,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 <script>
 function addTohistory() {
   if (!window.location.host.startsWith("127.0.0.1")) {
-    history.pushState({}, 'Python Switch Over', 'https://stalk-calvin.github.io/blog/2019/02/09/python-port-over.html');
+    history.pushState({}, 'Common Design Patterns', 'https://stalk-calvin.github.io/blog/2019/11/07/design-patterns.html');
   }
 }
 </script>

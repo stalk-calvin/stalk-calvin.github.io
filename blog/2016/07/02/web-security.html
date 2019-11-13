@@ -243,26 +243,26 @@
 <p style="margin-bottom:0.5em">I am not sure if there would be any web developers out there who let their code vulnerable to this. I believe no one would do this intentionally, however, people sometimes forget to make the right protection. Injection happens when attacker sends an "code" (ex. SQL query) that would change the course of execution in the program.</p>
 <p style="margin-bottom:0">For example, say we have a piece of code:</p>
 
-<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="k">my</span> <span class="nv">$query</span> <span class="o">=</span> <span class="s">"SELECT * FROM accounts WHERE custID='"</span> <span class="o">.</span> <span class="nv">$cgi</span><span class="o">-&gt;</span><span class="nv">param</span><span class="p">(</span><span class="s">"id"</span><span class="p">)</span> <span class="o">.</span> <span class="s">"'"</span><span class="p">;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="k">my</span> <span class="nv">$query</span> <span class="o">=</span> <span class="p">"</span><span class="s2">SELECT * FROM accounts WHERE custID='</span><span class="p">"</span> <span class="o">.</span> <span class="nv">$cgi</span><span class="o">-&gt;</span><span class="nv">param</span><span class="p">("</span><span class="s2">id</span><span class="p">")</span> <span class="o">.</span> <span class="p">"</span><span class="s2">'</span><span class="p">";</span></code></pre></figure>
 
-<p style="margin-top:0.5em;margin-bottom:0.5em;">which takes in direct input of parameter from cgi object. And let’s have <code class="highlighter-rouge">$cgi-&gt;param("id")</code> = <code class="highlighter-rouge">' or '1'='1</code>.</p>
+<p style="margin-top:0.5em;margin-bottom:0.5em;">which takes in direct input of parameter from cgi object. And let’s have <code class="language-plaintext highlighter-rouge">$cgi-&gt;param("id")</code> = <code class="language-plaintext highlighter-rouge">' or '1'='1</code>.</p>
 <p style="margin-bottom:0">Then above query becomes:</p>
 
-<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="k">my</span> <span class="nv">$query</span> <span class="o">=</span> <span class="s">"SELECT * FROM accounts WHERE custID='' or '1'='1'"</span><span class="p">;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="k">my</span> <span class="nv">$query</span> <span class="o">=</span> <span class="p">"</span><span class="s2">SELECT * FROM accounts WHERE custID='' or '1'='1'</span><span class="p">";</span></code></pre></figure>
 
-<p style="margin-top:0.5em;margin-bottom:0.5em;">For sake of argument, there is no data type check in custID in Database. This above will query for everything in accounts table. Or let’s make a slight variation. Let’s say this time we replace <code class="highlighter-rouge">$cgi-&gt;param("id")</code> with something like <code class="highlighter-rouge">123'; DELETE FROM accounts; SELECT '1'='1</code>.</p>
+<p style="margin-top:0.5em;margin-bottom:0.5em;">For sake of argument, there is no data type check in custID in Database. This above will query for everything in accounts table. Or let’s make a slight variation. Let’s say this time we replace <code class="language-plaintext highlighter-rouge">$cgi-&gt;param("id")</code> with something like <code class="language-plaintext highlighter-rouge">123'; DELETE FROM accounts; SELECT '1'='1</code>.</p>
 <p style="margin-bottom:0">Then this is how query becomes at the end:</p>
 
-<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="k">my</span> <span class="nv">$query</span> <span class="o">=</span> <span class="s">"SELECT * FROM accounts WHERE custID='123'; DELETE FROM accounts; SELECT '1'='1';"</span><span class="p">;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="k">my</span> <span class="nv">$query</span> <span class="o">=</span> <span class="p">"</span><span class="s2">SELECT * FROM accounts WHERE custID='123'; DELETE FROM accounts; SELECT '1'='1';</span><span class="p">";</span></code></pre></figure>
 
 <p style="margin-top:0.5em;margin-bottom:0.5em;">Seriously, are we going to let the attacker delete entire records from accounts table? It is a very serious security hole if this were to happen. Anyway, we can fix this simply by separating the commands and queries. Carefully escape characters that is being feed to the query.</p>
 <p style="margin-bottom:0">So above statement can be cleaned to something like this:</p>
 
-<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="k">my</span> <span class="nv">$query</span> <span class="o">=</span> <span class="s">"SELECT * FROM accounts WHERE custID="</span> <span class="o">.</span> <span class="nv">$dbh</span><span class="o">-&gt;</span><span class="nv">quote</span><span class="p">(</span><span class="nv">$cgi</span><span class="o">-&gt;</span><span class="nv">param</span><span class="p">(</span><span class="s">"id"</span><span class="p">));</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="k">my</span> <span class="nv">$query</span> <span class="o">=</span> <span class="p">"</span><span class="s2">SELECT * FROM accounts WHERE custID=</span><span class="p">"</span> <span class="o">.</span> <span class="nv">$dbh</span><span class="o">-&gt;</span><span class="nv">quote</span><span class="p">(</span><span class="nv">$cgi</span><span class="o">-&gt;</span><span class="nv">param</span><span class="p">("</span><span class="s2">id</span><span class="p">"));</span></code></pre></figure>
 
-<p style="margin-top:0.5em;margin-bottom:0.5em;">When above param is replaced with <code class="highlighter-rouge">123'; DELETE FROM accounts; SELECT '1'='1</code> this piece of input will be escaped and produce smething like below query:</p>
+<p style="margin-top:0.5em;margin-bottom:0.5em;">When above param is replaced with <code class="language-plaintext highlighter-rouge">123'; DELETE FROM accounts; SELECT '1'='1</code> this piece of input will be escaped and produce smething like below query:</p>
 
-<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="k">my</span> <span class="nv">$query</span> <span class="o">=</span> <span class="s">"SELECT * FROM accounts WHERE custID='123''; DELETE FROM accounts; SELECT ''1''=''1'"</span><span class="p">;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="k">my</span> <span class="nv">$query</span> <span class="o">=</span> <span class="p">"</span><span class="s2">SELECT * FROM accounts WHERE custID='123''; DELETE FROM accounts; SELECT ''1''=''1'</span><span class="p">";</span></code></pre></figure>
 
 <p>which is just a plain invalid SQL query at this point. So severity of this vulnerability is pretty high and dangerous that you can delete an entire table if this was allowed! This has been well-known to developers these days so it is common to have this all protected, however, I remember it was literally broken in almost all personal web sites around 2005ish. Imagine one morning you got up to check subscribers and all of them had been deleted from database! These days modern programming already places some protection around this so developers can get away with it. Anyway, this is definitely an important concept every developer must know.</p>
 
@@ -342,7 +342,7 @@
 ]&gt;
 <span class="nt">&lt;lolz&gt;</span><span class="ni">&amp;lol9;</span><span class="nt">&lt;/lolz&gt;</span></code></pre></figure>
 
-<p>Basically, as you see from this example, there are 10 different entities, <code class="highlighter-rouge">lol</code> to <code class="highlighter-rouge">lol9</code>. The first <code class="highlighter-rouge">lol</code> = String <code class="highlighter-rouge">"lol"</code>, then each of other entities becomes chains of other entities. So when you expand all of this, there are 100,000,000 instances of the string of <code class="highlighter-rouge">"lol"</code> which brings us to the name, billion laughs.</p>
+<p>Basically, as you see from this example, there are 10 different entities, <code class="language-plaintext highlighter-rouge">lol</code> to <code class="language-plaintext highlighter-rouge">lol9</code>. The first <code class="language-plaintext highlighter-rouge">lol</code> = String <code class="language-plaintext highlighter-rouge">"lol"</code>, then each of other entities becomes chains of other entities. So when you expand all of this, there are 100,000,000 instances of the string of <code class="language-plaintext highlighter-rouge">"lol"</code> which brings us to the name, billion laughs.</p>
 
 <p>Below is an example of XXE:</p>
 
@@ -461,7 +461,7 @@
           <div class="author row">
             <img class="img-circle col-xs-4 col-sm-3 col-md-2" src="/img/timeline/IMG_20160124_103417.jpg" alt="Me" />
             <p class="col-xs-8 col-sm-9 col-md-10" style="padding-top: 1.3em;">
-            I am a passionate software developer working in Downtown, Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
+            I am a passionate programmer working in Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
             <a href="javascript:location='mailto:\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"><script type="text/javascript">document.write('\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
             </p>
           </div>

@@ -243,9 +243,9 @@
 <p>This means we should have single responsibility for each class, not multiple. Let’s take a look at an example:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">UserAccount</span> <span class="o">{</span>
-  <span class="kd">public</span> <span class="n">Stub</span> <span class="nf">calculatePayCheck</span><span class="o">()</span> <span class="o">{...}</span>
+  <span class="kd">public</span> <span class="nc">Stub</span> <span class="nf">calculatePayCheck</span><span class="o">()</span> <span class="o">{...}</span>
   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">save</span><span class="o">()</span> <span class="o">{...}</span>
-  <span class="kd">public</span> <span class="n">String</span> <span class="nf">showUserStatus</span><span class="o">()</span> <span class="o">{...}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">showUserStatus</span><span class="o">()</span> <span class="o">{...}</span>
 <span class="o">}</span></code></pre></figure>
 
 <p>You have 3 distinct operations here: calculation of paycheck, saving user information to the storage(ex: database), showing the user information. These operations do not require to be coupled to each other. You should create a class for each of these operations so you have a class that does distinct operation such as the one that calculates, one handling the storage and one handling the user information.</p>
@@ -258,29 +258,29 @@
 
 <p>Classes should be designed so you could extend the functionalities easily but the developed class should not be modified except to correct any bugs or issues. The focus sometimes is misinterpreted as “extending” to “inheriting” as the keyword “extend” refers to the “inherit” in many languages. However, this is not true. Principles are older than these modern languages and they do not necessarily mean you should subclass the actual class that needs the new behaviour. We should favour <a href="https://en.wikipedia.org/wiki/Composition_over_inheritance">composition over inheritance</a> where favouring the composition produces more malleable and favours polymorphic behaviour rather than using the inheritance where it is more tightly coupled and breaks encapsulation. Let me show an example of what I mean:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Receipt</span> <span class="nf">pay</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Stuff</span><span class="o">&gt;</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
-   <span class="n">Receipt</span> <span class="n">r</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Receipt</span><span class="o">();</span>
-   <span class="n">BigInteger</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">BigInteger</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Receipt</span> <span class="nf">pay</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Stuff</span><span class="o">&gt;</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
+   <span class="nc">Receipt</span> <span class="n">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Receipt</span><span class="o">();</span>
+   <span class="nc">BigInteger</span> <span class="n">sum</span> <span class="o">=</span> <span class="nc">BigInteger</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
    <span class="k">for</span> <span class="o">(</span><span class="n">item</span> <span class="o">:</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
       <span class="n">r</span><span class="o">.</span><span class="na">addItem</span><span class="o">(</span><span class="n">item</span><span class="o">);</span>
-      <span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">BigInteger</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">getPrice</span><span class="o">()));</span>
+      <span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">BigInteger</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">getPrice</span><span class="o">()));</span>
    <span class="o">}</span>
-   <span class="n">Payment</span> <span class="n">p</span> <span class="o">=</span> <span class="n">payCash</span><span class="o">(</span><span class="n">sum</span><span class="o">);</span>
+   <span class="nc">Payment</span> <span class="n">p</span> <span class="o">=</span> <span class="n">payCash</span><span class="o">(</span><span class="n">sum</span><span class="o">);</span>
    <span class="k">return</span> <span class="n">r</span><span class="o">;</span>
 <span class="o">}</span></code></pre></figure>
 
-<p>Now let’s say we would like to extend this to support multiple different payment methods. We could pass in a boolean flag which controls the payment method like this: <code class="highlighter-rouge">if (credit) payCredit(sum) else payCash(sum)</code>. However, this is kind of boolean flag argument (parameter) is a code smell and should be avoided because you are providing 2 different behaviours in one function in contrast to just one. This is probably a better way:</p>
+<p>Now let’s say we would like to extend this to support multiple different payment methods. We could pass in a boolean flag which controls the payment method like this: <code class="language-plaintext highlighter-rouge">if (credit) payCredit(sum) else payCash(sum)</code>. However, this is kind of boolean flag argument (parameter) is a code smell and should be avoided because you are providing 2 different behaviours in one function in contrast to just one. This is probably a better way:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">PaymentMethod</span> <span class="o">{</span><span class="kt">void</span> <span class="nf">acceptPayment</span><span class="o">(</span><span class="n">Money</span> <span class="n">total</span><span class="o">);}</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">PaymentMethod</span> <span class="o">{</span><span class="kt">void</span> <span class="nf">acceptPayment</span><span class="o">(</span><span class="nc">Money</span> <span class="n">total</span><span class="o">);}</span>
 
-<span class="n">Receipt</span> <span class="nf">pay</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Stuff</span><span class="o">&gt;</span> <span class="n">items</span><span class="o">,</span> <span class="n">PaymentMethod</span> <span class="n">pm</span><span class="o">)</span> <span class="o">{</span>
-   <span class="n">Receipt</span> <span class="n">r</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Receipt</span><span class="o">();</span>
-   <span class="n">BigInteger</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">BigInteger</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+<span class="nc">Receipt</span> <span class="nf">pay</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Stuff</span><span class="o">&gt;</span> <span class="n">items</span><span class="o">,</span> <span class="nc">PaymentMethod</span> <span class="n">pm</span><span class="o">)</span> <span class="o">{</span>
+   <span class="nc">Receipt</span> <span class="n">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Receipt</span><span class="o">();</span>
+   <span class="nc">BigInteger</span> <span class="n">sum</span> <span class="o">=</span> <span class="nc">BigInteger</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
    <span class="k">for</span> <span class="o">(</span><span class="n">item</span> <span class="o">:</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
       <span class="n">r</span><span class="o">.</span><span class="na">addItem</span><span class="o">(</span><span class="n">item</span><span class="o">);</span>
-      <span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">BigInteger</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">getPrice</span><span class="o">()));</span>
+      <span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">BigInteger</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">getPrice</span><span class="o">()));</span>
    <span class="o">}</span>
-   <span class="n">Payment</span> <span class="n">p</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="na">acceptPayment</span><span class="o">(</span><span class="n">sum</span><span class="o">);</span>
+   <span class="nc">Payment</span> <span class="n">p</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="na">acceptPayment</span><span class="o">(</span><span class="n">sum</span><span class="o">);</span>
    <span class="k">return</span> <span class="n">r</span><span class="o">;</span>
 <span class="o">}</span></code></pre></figure>
 
@@ -296,7 +296,7 @@
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">interface</span> <span class="nc">ICar</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">drive</span><span class="o">();</span>
-    <span class="o">...</span> <span class="n">bunch</span> <span class="n">of</span> <span class="n">other</span> <span class="n">operations</span> <span class="k">for</span> <span class="n">ICar</span> <span class="o">...</span>
+    <span class="o">...</span> <span class="n">bunch</span> <span class="n">of</span> <span class="n">other</span> <span class="n">operations</span> <span class="k">for</span> <span class="nc">ICar</span> <span class="o">...</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">startBlueToothCall</span><span class="o">();</span>
 <span class="o">}</span></code></pre></figure>
 
@@ -315,7 +315,7 @@
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">();</span>
 <span class="o">}</span>
 
-<span class="kd">class</span> <span class="nc">Worker</span> <span class="kd">implements</span> <span class="n">IWorker</span><span class="o">{</span>
+<span class="kd">class</span> <span class="nc">Worker</span> <span class="kd">implements</span> <span class="nc">IWorker</span><span class="o">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">work</span><span class="o">()</span> <span class="o">{</span>
         <span class="c1">// ....working</span>
     <span class="o">}</span>
@@ -324,7 +324,7 @@
     <span class="o">}</span>
 <span class="o">}</span>
 
-<span class="kd">class</span> <span class="nc">SuperWorker</span> <span class="kd">implements</span> <span class="n">IWorker</span><span class="o">{</span>
+<span class="kd">class</span> <span class="nc">SuperWorker</span> <span class="kd">implements</span> <span class="nc">IWorker</span><span class="o">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">work</span><span class="o">()</span> <span class="o">{</span>
         <span class="c1">//.... working much more</span>
     <span class="o">}</span>
@@ -334,9 +334,9 @@
 <span class="o">}</span>
 
 <span class="kd">class</span> <span class="nc">Manager</span> <span class="o">{</span>
-    <span class="n">IWorker</span> <span class="n">worker</span><span class="o">;</span>
+    <span class="nc">IWorker</span> <span class="n">worker</span><span class="o">;</span>
 
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setWorker</span><span class="o">(</span><span class="n">IWorker</span> <span class="n">p</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setWorker</span><span class="o">(</span><span class="nc">IWorker</span> <span class="n">p</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">worker</span><span class="o">=</span><span class="n">p</span><span class="o">;</span>
     <span class="o">}</span>
 
@@ -357,7 +357,7 @@
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">study</span><span class="o">();</span>
 <span class="o">}</span>
 
-<span class="kd">class</span> <span class="nc">Worker</span> <span class="kd">implements</span> <span class="n">IWorker</span><span class="o">,</span> <span class="n">IFeedable</span> <span class="o">{</span>
+<span class="kd">class</span> <span class="nc">Worker</span> <span class="kd">implements</span> <span class="nc">IWorker</span><span class="o">,</span> <span class="nc">IFeedable</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">work</span><span class="o">()</span> <span class="o">{</span>
         <span class="c1">// ....working</span>
     <span class="o">}</span>
@@ -366,7 +366,7 @@
     <span class="o">}</span>
 <span class="o">}</span>
 
-<span class="kd">class</span> <span class="nc">Student</span> <span class="kd">implements</span> <span class="n">IStudy</span><span class="o">,</span> <span class="n">IFeedable</span> <span class="o">{</span>
+<span class="kd">class</span> <span class="nc">Student</span> <span class="kd">implements</span> <span class="nc">IStudy</span><span class="o">,</span> <span class="nc">IFeedable</span> <span class="o">{</span>
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">study</span><span class="o">()</span> <span class="o">{</span>
         <span class="c1">// ....studying</span>
     <span class="o">}</span>
@@ -375,16 +375,16 @@
     <span class="o">}</span>
 <span class="o">}</span>
 
-<span class="kd">class</span> <span class="nc">Robot</span> <span class="kd">implements</span> <span class="n">IWorker</span> <span class="o">{</span>
+<span class="kd">class</span> <span class="nc">Robot</span> <span class="kd">implements</span> <span class="nc">IWorker</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">work</span><span class="o">()</span> <span class="o">{</span>
         <span class="c1">// ....working</span>
     <span class="o">}</span>
 <span class="o">}</span>
 
 <span class="kd">class</span> <span class="nc">Manager</span> <span class="o">{</span>
-    <span class="n">IWorker</span> <span class="n">worker</span><span class="o">;</span>
+    <span class="nc">IWorker</span> <span class="n">worker</span><span class="o">;</span>
 
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setWorker</span><span class="o">(</span><span class="n">IWorker</span> <span class="n">p</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setWorker</span><span class="o">(</span><span class="nc">IWorker</span> <span class="n">p</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">worker</span><span class="o">=</span><span class="n">p</span><span class="o">;</span>
     <span class="o">}</span>
 
@@ -405,37 +405,37 @@
 <p>The way of thinking is “inverted” for OOP designers designing their dependencies. High-level classes are not working directly with low-level classes anymore, they are built through the abstractions. The DIP is about the level of the abstraction in the messages sent from your code to the thing it is calling. It is about the shape of the object upon which the code depends. Let’s start with an example. We have a reader which reads a book in Scala:</p>
 
 <figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">class</span> <span class="nc">BookReader</span><span class="o">(</span><span class="n">book</span><span class="k">:</span> <span class="kt">Book</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">def</span> <span class="n">read</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"reading a book"</span><span class="o">;</span>
+    <span class="k">def</span> <span class="nf">read</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"reading a book"</span><span class="o">;</span>
 <span class="o">}</span></code></pre></figure>
 
 <p>Now requirement becomes that you need to be able to read more than just a physical book such as PDF book, physical book, Kindle book, etc. You could build multiple classes to handle each case, but can’t you abstract this? Yes, you can!</p>
 
 <figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">trait</span> <span class="nc">Book</span> <span class="o">{</span>
-   <span class="k">val</span> <span class="n">name</span><span class="k">:</span> <span class="kt">String</span>
-   <span class="k">def</span> <span class="n">read</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span>
+   <span class="k">val</span> <span class="nv">name</span><span class="k">:</span> <span class="kt">String</span>
+   <span class="k">def</span> <span class="nf">read</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span>
 <span class="o">}</span>
-<span class="k">class</span> <span class="nc">PDFBook</span><span class="o">(</span><span class="k">val</span> <span class="n">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Book</span> <span class="o">{</span>
-    <span class="k">override</span> <span class="k">def</span> <span class="n">read</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"reading a PDF book."</span>
+<span class="k">class</span> <span class="nc">PDFBook</span><span class="o">(</span><span class="k">val</span> <span class="nv">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Book</span> <span class="o">{</span>
+    <span class="k">override</span> <span class="k">def</span> <span class="nf">read</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"reading a PDF book."</span>
 <span class="o">}</span>
-<span class="k">class</span> <span class="nc">PhysicalBook</span><span class="o">(</span><span class="k">val</span> <span class="n">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Book</span> <span class="o">{</span> 
-    <span class="k">override</span> <span class="k">def</span> <span class="n">read</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"reading a physical book."</span>
+<span class="k">class</span> <span class="nc">PhysicalBook</span><span class="o">(</span><span class="k">val</span> <span class="nv">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Book</span> <span class="o">{</span> 
+    <span class="k">override</span> <span class="k">def</span> <span class="nf">read</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"reading a physical book."</span>
 <span class="o">}</span>
-<span class="k">class</span> <span class="nc">KindleBook</span><span class="o">(</span><span class="k">val</span> <span class="n">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Book</span> <span class="o">{</span> 
-    <span class="k">override</span> <span class="k">def</span> <span class="n">read</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"reading a Kindle book."</span>
+<span class="k">class</span> <span class="nc">KindleBook</span><span class="o">(</span><span class="k">val</span> <span class="nv">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Book</span> <span class="o">{</span> 
+    <span class="k">override</span> <span class="k">def</span> <span class="nf">read</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"reading a Kindle book."</span>
 <span class="o">}</span></code></pre></figure>
 
 <p>You can then use it in a very flexible way. You can apply design patterns like Adapter or Decorator depending on the tasks you are to do. See below for basic usage on above design:</p>
 
-<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">val</span> <span class="n">pdfbook</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">PDFBook</span><span class="o">(</span><span class="s">"wonderful"</span><span class="o">)</span>
-<span class="k">val</span> <span class="n">kindlebook</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">KindleBook</span><span class="o">(</span><span class="s">"beautiful"</span><span class="o">)</span>
-<span class="n">pdfbook</span><span class="o">.</span><span class="n">read</span><span class="o">()</span> <span class="c1">// prints reading a PDF book
-</span><span class="n">kindlebook</span><span class="o">.</span><span class="n">read</span><span class="o">()</span> <span class="c1">// prints reading a Kindle book
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">val</span> <span class="nv">pdfbook</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">PDFBook</span><span class="o">(</span><span class="s">"wonderful"</span><span class="o">)</span>
+<span class="k">val</span> <span class="nv">kindlebook</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">KindleBook</span><span class="o">(</span><span class="s">"beautiful"</span><span class="o">)</span>
+<span class="nv">pdfbook</span><span class="o">.</span><span class="py">read</span><span class="o">()</span> <span class="c1">// prints reading a PDF book
+</span><span class="nv">kindlebook</span><span class="o">.</span><span class="py">read</span><span class="o">()</span> <span class="c1">// prints reading a Kindle book
 </span>
 <span class="c1">//Also can gather and do operations on abstractions like this.
-</span><span class="k">val</span> <span class="n">books</span> <span class="k">=</span> <span class="nc">ArrayBuffer</span><span class="o">.</span><span class="n">empty</span><span class="o">[</span><span class="kt">Book</span><span class="o">]</span>
-<span class="n">books</span><span class="o">.</span><span class="n">append</span><span class="o">(</span><span class="n">pdfbook</span><span class="o">)</span>
-<span class="n">books</span><span class="o">.</span><span class="n">append</span><span class="o">(</span><span class="n">physicalbook</span><span class="o">)</span>
-<span class="n">books</span><span class="o">.</span><span class="n">foreach</span><span class="o">(</span><span class="n">book</span> <span class="k">=&gt;</span> <span class="n">println</span><span class="o">(</span><span class="n">book</span><span class="o">.</span><span class="n">name</span><span class="o">))</span></code></pre></figure>
+</span><span class="k">val</span> <span class="nv">books</span> <span class="k">=</span> <span class="nv">ArrayBuffer</span><span class="o">.</span><span class="py">empty</span><span class="o">[</span><span class="kt">Book</span><span class="o">]</span>
+<span class="nv">books</span><span class="o">.</span><span class="py">append</span><span class="o">(</span><span class="n">pdfbook</span><span class="o">)</span>
+<span class="nv">books</span><span class="o">.</span><span class="py">append</span><span class="o">(</span><span class="n">physicalbook</span><span class="o">)</span>
+<span class="nv">books</span><span class="o">.</span><span class="py">foreach</span><span class="o">(</span><span class="n">book</span> <span class="k">=&gt;</span> <span class="nf">println</span><span class="o">(</span><span class="nv">book</span><span class="o">.</span><span class="py">name</span><span class="o">))</span></code></pre></figure>
 
 
           
@@ -541,7 +541,7 @@
           <div class="author row">
             <img class="img-circle col-xs-4 col-sm-3 col-md-2" src="/img/timeline/IMG_20160124_103417.jpg" alt="Me" />
             <p class="col-xs-8 col-sm-9 col-md-10" style="padding-top: 1.3em;">
-            I am a passionate software developer working in Downtown, Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
+            I am a passionate programmer working in Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
             <a href="javascript:location='mailto:\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"><script type="text/javascript">document.write('\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
             </p>
           </div>

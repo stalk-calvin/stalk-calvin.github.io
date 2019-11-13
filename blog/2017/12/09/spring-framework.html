@@ -258,11 +258,11 @@
 
 <p>To deploy and run JavaServer Pages remotely, a compatible web server with a servlet container, such as Apache Tomcat or Jetty, is normally required. The best example of how web pages are served in Spring MVC is best described in <a href="https://spring.io/guides/gs/serving-web-content/" target="_blank" rel="noopener noreferrer">Spring website</a> from my experience. They provide a very simple case of loading “hello world” which I highly recommend you to try it out.</p>
 
-<p>Spring Framework 5 also delivers a new “reactive” web stack called, Spring WebFlux, which is offered side-by-side with the traditional Spring MVC web stack. What is “reactive”? You might ask. In plain terms, “reactive” programming is about non-blocking applications that are asynchronous and event-driven and require a small number of threads to scale vertically (i.e. within the JVM) rather than horizontally (i.e. through clustering). Reactive programming also leads to a major shift from imperative to a declarative async composition of logic. It is comparable to writing blocking code vs using the <code class="highlighter-rouge">CompletableFuture</code> from Java 8 to compose follow-up actions via lambda expressions. For a longer introduction check the blog series <a href="https://spring.io/blog/2016/06/07/notes-on-reactive-programming-part-i-the-reactive-landscape" target="_blank" rel="noopener noreferrer">“Notes on Reactive Programming”</a> by Dave Syer.</p>
+<p>Spring Framework 5 also delivers a new “reactive” web stack called, Spring WebFlux, which is offered side-by-side with the traditional Spring MVC web stack. What is “reactive”? You might ask. In plain terms, “reactive” programming is about non-blocking applications that are asynchronous and event-driven and require a small number of threads to scale vertically (i.e. within the JVM) rather than horizontally (i.e. through clustering). Reactive programming also leads to a major shift from imperative to a declarative async composition of logic. It is comparable to writing blocking code vs using the <code class="language-plaintext highlighter-rouge">CompletableFuture</code> from Java 8 to compose follow-up actions via lambda expressions. For a longer introduction check the blog series <a href="https://spring.io/blog/2016/06/07/notes-on-reactive-programming-part-i-the-reactive-landscape" target="_blank" rel="noopener noreferrer">“Notes on Reactive Programming”</a> by Dave Syer.</p>
 
 <h2 id="dal-db--dao">DAL (DB) / DAO</h2>
 
-<p>Typically in order to handle data, modern Java provides a plain-vanilla JDBC library which connects to the datasource then run through prepare/execute of the DB  statement and you are responsible for the cleaning up on those connections. They can get overly complicated and verbose for such a simple task. The Data Access Object (DAO) support in Spring (or any other DB framework) is aiming to make it easy to work with data access layers such as JDBC. Spring provides a template class called <code class="highlighter-rouge">JdbcTemplate</code> that makes it easy to work with SQL relational databases along with JDBC. The JdbcTemplate takes care of resource acquisition, connection management, exception handling, and general error checking, and many others for you. All you have to do is focus on the task at hand.</p>
+<p>Typically in order to handle data, modern Java provides a plain-vanilla JDBC library which connects to the datasource then run through prepare/execute of the DB  statement and you are responsible for the cleaning up on those connections. They can get overly complicated and verbose for such a simple task. The Data Access Object (DAO) support in Spring (or any other DB framework) is aiming to make it easy to work with data access layers such as JDBC. Spring provides a template class called <code class="language-plaintext highlighter-rouge">JdbcTemplate</code> that makes it easy to work with SQL relational databases along with JDBC. The JdbcTemplate takes care of resource acquisition, connection management, exception handling, and general error checking, and many others for you. All you have to do is focus on the task at hand.</p>
 
 <p>I will show you a simple and quick example of how they all work together and what I really mean.</p>
 
@@ -279,10 +279,10 @@ jdbc.url=jdbc:oracle:oci:@dev // TNS mapped url</code></pre></figure>
 <span class="nd">@ComponentScan</span><span class="o">(</span><span class="n">basePackages</span> <span class="o">=</span> <span class="o">{</span><span class="s">"com.dao"</span><span class="o">})</span>
 <span class="nd">@Configuration</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">AppConfig</span> <span class="o">{</span>
-    <span class="kd">private</span> <span class="n">DataSource</span> <span class="n">dataSource</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">DataSource</span> <span class="n">dataSource</span><span class="o">;</span>
 
-    <span class="nd">@Bean</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"dataSource"</span><span class="o">)</span> <span class="kd">public</span> <span class="n">DataSource</span> <span class="nf">getDataSource</span><span class="o">()</span> <span class="o">{</span>
-        <span class="n">DriverManagerDataSource</span> <span class="n">ds</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DriverManagerDataSource</span><span class="o">();</span>
+    <span class="nd">@Bean</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"dataSource"</span><span class="o">)</span> <span class="kd">public</span> <span class="nc">DataSource</span> <span class="nf">getDataSource</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">DriverManagerDataSource</span> <span class="n">ds</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DriverManagerDataSource</span><span class="o">();</span>
         <span class="n">ds</span><span class="o">.</span><span class="na">setDriverClassName</span><span class="o">(</span><span class="n">env</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">"jdbc.driverClass"</span><span class="o">));</span>
         <span class="n">ds</span><span class="o">.</span><span class="na">setUrl</span><span class="o">(</span><span class="n">env</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">"jdbc.url"</span><span class="o">));</span>
         <span class="n">ds</span><span class="o">.</span><span class="na">setUsername</span><span class="o">(</span><span class="n">env</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">"jdbc.username"</span><span class="o">));</span>
@@ -294,21 +294,21 @@ jdbc.url=jdbc:oracle:oci:@dev // TNS mapped url</code></pre></figure>
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
-<p>To initialize these beans, run: <code class="highlighter-rouge">new AnnotationConfigApplicationContext(AppConfig.class)</code>. Once we have the data source loaded into the application DAO object can load it up something like this:</p>
+<p>To initialize these beans, run: <code class="language-plaintext highlighter-rouge">new AnnotationConfigApplicationContext(AppConfig.class)</code>. Once we have the data source loaded into the application DAO object can load it up something like this:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">dataCustomerDAO</span> <span class="o">{</span>
     <span class="nd">@Autowired</span>
-    <span class="kd">private</span> <span class="n">DataSource</span> <span class="n">dataSource</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">DataSource</span> <span class="n">dataSource</span><span class="o">;</span>
     
     <span class="nd">@Getter</span>
-    <span class="kd">private</span> <span class="n">JdbcTemplate</span> <span class="n">jdbcTemplate</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">JdbcTemplate</span> <span class="n">jdbcTemplate</span><span class="o">;</span>
 
     <span class="nd">@PostConstruct</span>
     <span class="kd">private</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">()</span> <span class="o">{</span>
-        <span class="n">jdbcTemplate</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JdbcTemplate</span><span class="o">(</span><span class="n">dataSource</span><span class="o">);</span>
+        <span class="n">jdbcTemplate</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JdbcTemplate</span><span class="o">(</span><span class="n">dataSource</span><span class="o">);</span>
     <span class="o">}</span></code></pre></figure>
 
-<p>Then you can freely run the select/update/insert queries depending on your need. For example, <code class="highlighter-rouge">getJdbcTemplate().queryForObject(sql, BeanPropertyRowMapper.newInstance(Customer.class), id);</code>. Customer.class is where it belongs to the “Model”. Here we are assigning the SQL results as a Customer.class objects to be used. You can literally map it into any kind of expected output depending on your query, for example, Integer.class.</p>
+<p>Then you can freely run the select/update/insert queries depending on your need. For example, <code class="language-plaintext highlighter-rouge">getJdbcTemplate().queryForObject(sql, BeanPropertyRowMapper.newInstance(Customer.class), id);</code>. Customer.class is where it belongs to the “Model”. Here we are assigning the SQL results as a Customer.class objects to be used. You can literally map it into any kind of expected output depending on your query, for example, Integer.class.</p>
 
 <p>This isn’t everything. This is only a fraction of whats in Spring DB handling, just to show you how to interact with DB (Oracle in the above example). You can also extend the application using Spring so it uses <a href="http://hibernate.org/" target="_blank" rel="noopener noreferrer">Hibernate</a> instead of Spring JdbcTemplate. You can hook it with <a href="http://www.mybatis.org/spring/getting-started.html" target="_blank" rel="noopener noreferrer">MyBatis</a> instead JdbcTemplate for DB handling. Anyways, I already find Spring’s JdbcTemplate pretty convenient for most of the time. These alternate solutions may simplify the data related tasks when it comes too complex to manage queries. The best comparisons between these options I have witnessed so far is found <a href="http://www.springboottutorial.com/introduction-to-jpa-with-spring-boot-data-jpa" target="_blank" rel="noopener noreferrer">here</a>.</p>
 
@@ -449,7 +449,7 @@ jdbc.url=jdbc:oracle:oci:@dev // TNS mapped url</code></pre></figure>
           <div class="author row">
             <img class="img-circle col-xs-4 col-sm-3 col-md-2" src="/img/timeline/IMG_20160124_103417.jpg" alt="Me" />
             <p class="col-xs-8 col-sm-9 col-md-10" style="padding-top: 1.3em;">
-            I am a passionate software developer working in Downtown, Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
+            I am a passionate programmer working in Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
             <a href="javascript:location='mailto:\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"><script type="text/javascript">document.write('\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
             </p>
           </div>

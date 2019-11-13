@@ -233,20 +233,20 @@
 <p>Functional programming is born to solve the problems by introducing purely functional approaches. Functional programming offers anonymous types and lambda expressions which enable to be much shorter and expressive through functional programming. However, just offering these merits do not come close to meet the requirement of the functional programming. In functional programming approach, the focus is on the set of functions to be executed. There is a concrete input to each function, then those functions <strong>always</strong> return something. This is why functional programming does not have a “void” type because that has no meaning in functional programming. Also, the loop is kind of misleading because in the functional programming loop is not built in “for” or “while”. It’s built around “map”, “fold”, or “recursion”. Let me show an example code in Scala for a better understanding. Actually similar code to below tripped me for like an hour trying to understand what is going on:</p>
 
 <figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">object</span> <span class="nc">testApp</span> <span class="k">extends</span> <span class="nc">App</span> <span class="o">{</span>
-    <span class="k">def</span> <span class="n">findMinor</span><span class="o">(</span><span class="n">group</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span><span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span> <span class="o">{</span>
-        <span class="k">for</span> <span class="o">(</span><span class="n">name</span> <span class="k">&lt;-</span> <span class="n">group</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">if</span> <span class="o">(</span><span class="n">name</span> <span class="n">equals</span> <span class="s">"John"</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">def</span> <span class="nf">findMinor</span><span class="o">(</span><span class="n">group</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span><span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span> <span class="o">{</span>
+        <span class="nf">for</span> <span class="o">(</span><span class="n">name</span> <span class="k">&lt;-</span> <span class="n">group</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nf">if</span> <span class="o">(</span><span class="n">name</span> <span class="n">equals</span> <span class="s">"John"</span><span class="o">)</span> <span class="o">{</span>
                 <span class="kc">true</span>
             <span class="o">}</span>
         <span class="o">}</span>
         <span class="kc">false</span>
     <span class="o">}</span>
 
-    <span class="k">val</span> <span class="n">input</span> <span class="k">=</span> <span class="nc">Array</span><span class="o">(</span><span class="s">"Mary"</span><span class="o">,</span> <span class="s">"Calvin"</span><span class="o">,</span> <span class="s">"John"</span><span class="o">)</span>
-    <span class="k">if</span><span class="o">(</span><span class="n">findMinor</span><span class="o">(</span><span class="n">input</span><span class="o">))</span> <span class="o">{</span>
-        <span class="n">println</span><span class="o">(</span><span class="s">"Minor"</span><span class="o">)</span>
+    <span class="k">val</span> <span class="nv">input</span> <span class="k">=</span> <span class="nc">Array</span><span class="o">(</span><span class="s">"Mary"</span><span class="o">,</span> <span class="s">"Calvin"</span><span class="o">,</span> <span class="s">"John"</span><span class="o">)</span>
+    <span class="nf">if</span><span class="o">(</span><span class="nf">findMinor</span><span class="o">(</span><span class="n">input</span><span class="o">))</span> <span class="o">{</span>
+        <span class="nf">println</span><span class="o">(</span><span class="s">"Minor"</span><span class="o">)</span>
     <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-        <span class="n">println</span><span class="o">(</span><span class="s">"Not Minor"</span><span class="o">)</span>
+        <span class="nf">println</span><span class="o">(</span><span class="s">"Not Minor"</span><span class="o">)</span>
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
@@ -254,13 +254,13 @@
 
 <p style="margin-bottom: 0;"><strong>Functional approach</strong>:</p>
 
-<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">increment</span><span class="o">(</span><span class="n">a</span><span class="o">)</span><span class="k">:</span>
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="nf">increment</span><span class="o">(</span><span class="n">a</span><span class="o">)</span><span class="k">:</span>
     <span class="kt">return</span> <span class="kt">a</span> <span class="kt">+</span> <span class="err">1</span></code></pre></figure>
 
 <p style="margin-bottom: 0;"><strong>Not Functional approach</strong>:</p>
 
 <figure class="highlight"><pre><code class="language-scala" data-lang="scala">    <span class="k">var</span> <span class="n">a</span> <span class="k">=</span> <span class="mi">0</span>
-    <span class="k">def</span> <span class="n">increment</span><span class="o">()</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="k">def</span> <span class="nf">increment</span><span class="o">()</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
         <span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="o">}</span></code></pre></figure>
 
@@ -281,8 +281,8 @@
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">BankAccount</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">balance</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">accNum</span><span class="o">;</span>
-    <span class="kd">public</span> <span class="nf">BankAccount</span><span class="o">(</span><span class="n">String</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">accNum</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nf">BankAccount</span><span class="o">(</span><span class="nc">String</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">accNum</span> <span class="o">=</span> <span class="n">a</span><span class="o">;</span>
         <span class="n">balance</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
     <span class="o">}</span>
@@ -295,7 +295,7 @@
 <span class="o">}</span>
 
 <span class="kd">class</span> <span class="nc">BankClient</span> <span class="o">{</span>
-    <span class="kd">private</span> <span class="n">BankAccount</span> <span class="n">bk1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BankAccount</span><span class="o">(</span><span class="err">“</span><span class="n">a123</span><span class="err">”</span><span class="o">);</span>
+    <span class="kd">private</span> <span class="nc">BankAccount</span> <span class="n">bk1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BankAccount</span><span class="o">(</span><span class="err">“</span><span class="n">a123</span><span class="err">”</span><span class="o">);</span>
     <span class="o">...</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">cutDebt</span><span class="o">(</span><span class="kt">int</span> <span class="n">m</span><span class="o">)</span> <span class="o">{</span>
         <span class="kt">int</span> <span class="n">am1</span> <span class="o">=</span> <span class="n">bk1</span><span class="o">.</span><span class="na">getBalance</span><span class="o">();</span>
@@ -424,7 +424,7 @@
           <div class="author row">
             <img class="img-circle col-xs-4 col-sm-3 col-md-2" src="/img/timeline/IMG_20160124_103417.jpg" alt="Me" />
             <p class="col-xs-8 col-sm-9 col-md-10" style="padding-top: 1.3em;">
-            I am a passionate software developer working in Downtown, Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
+            I am a passionate programmer working in Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
             <a href="javascript:location='mailto:\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"><script type="text/javascript">document.write('\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
             </p>
           </div>

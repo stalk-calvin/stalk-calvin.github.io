@@ -283,22 +283,22 @@
 
 <p>Here is an example code (in Java) which checks whether given tree is balanced:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isBalanced</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isBalanced</span><span class="o">(</span><span class="nc">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">root</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
     <span class="o">}</span>
     <span class="kt">int</span> <span class="n">diff</span> <span class="o">=</span> <span class="n">getHeight</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">left</span><span class="o">)</span> <span class="o">-</span> <span class="n">getHeight</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="n">diff</span><span class="o">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="n">diff</span><span class="o">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
     <span class="o">}</span>
     <span class="k">return</span> <span class="nf">isBalanced</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">left</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">isBalanced</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
 <span class="o">}</span>
 
-<span class="kd">private</span> <span class="kt">int</span> <span class="nf">getHeight</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
+<span class="kd">private</span> <span class="kt">int</span> <span class="nf">getHeight</span><span class="o">(</span><span class="nc">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">root</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
     <span class="o">}</span>
-    <span class="k">return</span> <span class="n">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">getHeight</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">left</span><span class="o">),</span> <span class="n">getHeight</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">right</span><span class="o">))</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="k">return</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">getHeight</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">left</span><span class="o">),</span> <span class="n">getHeight</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">right</span><span class="o">))</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
 <span class="o">}</span></code></pre></figure>
 
 <p>Note there is a function for calculating the height because it needs to know that to understand the tree is balanced. Basically the function recurses all the way down to the tree by validating the height difference (cannot be greater than 1)until the base case is hit (root == null).</p>
@@ -307,10 +307,10 @@
 
 <p>We saw what it means to be a tree to be balanced. Here is another form of a binary tree that allows for a faster search. It produces O(log n) when a tree is balanced. When a tree with n nodes is kept balanced, its height is always <em>O(log n)</em>. This is why we have self-balancing (height-balanced) binary search trees such as AVL (1962), 2-3 Tree (1970) or Red-Black Tree (1972). These trees would make additional effort in insertion/removal of the nodes to keep the tree balanced by rotating trees around in an efficient way to keep the complexity at O(log n). Without balancing the trees, the tree could be skewed to one side. In extreme cases, it would basically be a O(n) searching.</p>
 
-<p style="margin: 0px">Check <code class="highlighter-rouge">checkBST</code> function to see how it validates BST:</p>
+<p style="margin: 0px">Check <code class="language-plaintext highlighter-rouge">checkBST</code> function to see how it validates BST:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">Integer</span> <span class="n">last_printed</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">checkBST</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="nc">Integer</span> <span class="n">last_printed</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">checkBST</span><span class="o">(</span><span class="nc">TreeNode</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
     <span class="o">}</span>
@@ -337,7 +337,7 @@
 
 <p style="margin: 0px">Here is a bit more simpler way of check using recursion:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">isValidBST</span><span class="o">(</span><span class="n">Node</span> <span class="n">node</span><span class="o">,</span> <span class="kt">int</span> <span class="n">min</span><span class="o">,</span> <span class="kt">int</span> <span class="n">max</span><span class="o">)</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">isValidBST</span><span class="o">(</span><span class="nc">Node</span> <span class="n">node</span><span class="o">,</span> <span class="kt">int</span> <span class="n">min</span><span class="o">,</span> <span class="kt">int</span> <span class="n">max</span><span class="o">)</span> <span class="o">{</span>
      <span class="k">if</span><span class="o">(</span><span class="n">node</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
          <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
      <span class="k">return</span> <span class="n">node</span><span class="o">.</span><span class="na">value</span> <span class="o">&gt;</span> <span class="n">min</span> 
@@ -370,12 +370,12 @@
 
 <p style="margin: 0px">Here is an example code:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="n">Node</span> <span class="nf">preOrderCopy</span><span class="o">(</span><span class="n">Node</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="nc">Node</span> <span class="nf">preOrderCopy</span><span class="o">(</span><span class="nc">Node</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
         <span class="c1">// base case</span>
         <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
     <span class="o">}</span>
-    <span class="n">Node</span> <span class="n">copy</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="o">(</span><span class="n">n</span><span class="o">.</span><span class="na">key</span><span class="o">,</span> <span class="n">n</span><span class="o">.</span><span class="na">name</span><span class="o">);</span>
+    <span class="nc">Node</span> <span class="n">copy</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="n">n</span><span class="o">.</span><span class="na">key</span><span class="o">,</span> <span class="n">n</span><span class="o">.</span><span class="na">name</span><span class="o">);</span>
     <span class="n">copy</span><span class="o">.</span><span class="na">leftChild</span> <span class="o">=</span> <span class="n">preOrderCopy</span><span class="o">(</span><span class="n">n</span><span class="o">.</span><span class="na">leftChild</span><span class="o">);</span>
     <span class="n">copy</span><span class="o">.</span><span class="na">rightChild</span> <span class="o">=</span> <span class="n">preOrderCopy</span><span class="o">(</span><span class="n">n</span><span class="o">.</span><span class="na">rightChild</span><span class="o">);</span>
     <span class="k">return</span> <span class="n">copy</span><span class="o">;</span>
@@ -396,13 +396,13 @@
 
 <p style="margin: 0px">Here is an example code:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="nf">findInorder</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="nf">findInorder</span><span class="o">(</span><span class="nc">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">root</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
     <span class="k">return</span> <span class="nf">findInorder</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="n">result</span><span class="o">);</span>
 <span class="o">}</span>
 
-<span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="nf">findInorder</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">,</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">result</span><span class="o">)</span> <span class="o">{</span>
+<span class="kd">private</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="nf">findInorder</span><span class="o">(</span><span class="nc">TreeNode</span> <span class="n">root</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">result</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">root</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
     <span class="n">findInorder</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">getLeft</span><span class="o">(),</span> <span class="n">result</span><span class="o">);</span>
     <span class="n">result</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">getVal</span><span class="o">());</span>
@@ -425,7 +425,7 @@
 
 <p style="margin: 0px">Here is an example code:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">deleteTree</span><span class="o">(</span><span class="n">Node</span> <span class="n">node</span><span class="o">)</span> 
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">deleteTree</span><span class="o">(</span><span class="nc">Node</span> <span class="n">node</span><span class="o">)</span> 
 <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">node</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
         <span class="k">return</span><span class="o">;</span>
@@ -435,21 +435,21 @@
     <span class="n">deleteTree</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
 
     <span class="cm">/* then delete the node */</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The deleted node is "</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="na">data</span><span class="o">);</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The deleted node is "</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="na">data</span><span class="o">);</span>
     <span class="n">node</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
 <span class="o">}</span></code></pre></figure>
 
 <h3 style="margin-bottom: 4%;" id="breadth-first-search-bfs"><a href="https://en.wikipedia.org/wiki/Breadth-first_search" target="_blank" rel="noopener noreferrer">Breadth-First Search</a> (BFS)</h3>
 
-<p>Trees can also be traversed in level-by-level, where we visit every node on a level before going to a lower level. This search is referred to as breadth-first search (BFS), which interchangeably is called as level order tree traversal, as the search tree is broadened as much as possible on each depth before going to the next depth. <code class="highlighter-rouge">Queue</code> (FIFO collection) is used in the algorithm. The algorithm is often used to find the shortest path from one node to another. You can use an algorithm like <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm#Pseudocode">Dijkstra’s algorithm</a> to let you find a single-source shortest path from one node to another. BFS is used in many other cases depending on how the tree is structured.</p>
+<p>Trees can also be traversed in level-by-level, where we visit every node on a level before going to a lower level. This search is referred to as breadth-first search (BFS), which interchangeably is called as level order tree traversal, as the search tree is broadened as much as possible on each depth before going to the next depth. <code class="language-plaintext highlighter-rouge">Queue</code> (FIFO collection) is used in the algorithm. The algorithm is often used to find the shortest path from one node to another. You can use an algorithm like <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm#Pseudocode">Dijkstra’s algorithm</a> to let you find a single-source shortest path from one node to another. BFS is used in many other cases depending on how the tree is structured.</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="nf">findBFS</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="nf">findBFS</span><span class="o">(</span><span class="nc">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">root</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
-    <span class="n">Queue</span><span class="o">&lt;</span><span class="n">TreeNode</span><span class="o">&gt;</span> <span class="n">tracker</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;();</span>
+    <span class="nc">Queue</span><span class="o">&lt;</span><span class="nc">TreeNode</span><span class="o">&gt;</span> <span class="n">tracker</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span>
     <span class="n">tracker</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">root</span><span class="o">);</span>
     <span class="k">while</span><span class="o">(!</span><span class="n">tracker</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
-        <span class="n">TreeNode</span> <span class="n">node</span> <span class="o">=</span> <span class="n">tracker</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
+        <span class="nc">TreeNode</span> <span class="n">node</span> <span class="o">=</span> <span class="n">tracker</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
         <span class="n">result</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">getVal</span><span class="o">());</span>
         <span class="k">if</span> <span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">left</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">tracker</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">left</span><span class="o">);</span>
@@ -573,7 +573,7 @@
           <div class="author row">
             <img class="img-circle col-xs-4 col-sm-3 col-md-2" src="/img/timeline/IMG_20160124_103417.jpg" alt="Me" />
             <p class="col-xs-8 col-sm-9 col-md-10" style="padding-top: 1.3em;">
-            I am a passionate software developer working in Downtown, Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
+            I am a passionate programmer working in Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
             <a href="javascript:location='mailto:\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"><script type="text/javascript">document.write('\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
             </p>
           </div>

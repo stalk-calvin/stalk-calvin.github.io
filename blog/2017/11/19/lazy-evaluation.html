@@ -230,15 +230,15 @@
 
 <p style="margin-bottom:1%">Here is an comparison example of using the keyword “lazy” vs not. Let’s first take a look at an example <strong>without</strong> the lazyness:</p>
 
-<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">printHi</span><span class="o">()</span><span class="k">:</span><span class="kt">Boolean</span> <span class="o">=</span> <span class="o">{</span>
-    <span class="n">println</span><span class="o">(</span><span class="s">"Hello"</span><span class="o">)</span>
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="nf">printHi</span><span class="o">()</span><span class="k">:</span><span class="kt">Boolean</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="nf">println</span><span class="o">(</span><span class="s">"Hello"</span><span class="o">)</span>
     <span class="kc">true</span>
 <span class="o">}</span>
-<span class="k">val</span> <span class="n">result</span> <span class="k">=</span> <span class="n">printHi</span>
-<span class="k">if</span> <span class="o">(</span><span class="kc">false</span> <span class="o">&amp;&amp;</span> <span class="n">result</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">println</span><span class="o">(</span><span class="s">"yes"</span><span class="o">)</span>
+<span class="k">val</span> <span class="nv">result</span> <span class="k">=</span> <span class="n">printHi</span>
+<span class="nf">if</span> <span class="o">(</span><span class="kc">false</span> <span class="o">&amp;&amp;</span> <span class="n">result</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nf">println</span><span class="o">(</span><span class="s">"yes"</span><span class="o">)</span>
 <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-    <span class="n">println</span><span class="o">(</span><span class="s">"no"</span><span class="o">)</span>
+    <span class="nf">println</span><span class="o">(</span><span class="s">"no"</span><span class="o">)</span>
 <span class="o">}</span></code></pre></figure>
 
 <p style="margin-bottom:1%">Output:</p>
@@ -246,9 +246,9 @@
 <figure class="highlight"><pre><code class="language-text" data-lang="text">Hello
 no</code></pre></figure>
 
-<p>To explain the above code execution flow, the code first executes the <code class="highlighter-rouge">printHi</code> function and prints “Hello” then stores the return value “true” to the <code class="highlighter-rouge">result</code> variable. It then executes the next line by calling, <code class="highlighter-rouge">if (false &amp;&amp; result) {</code>. It  sees the “false” immediately which eventually prints “no” in the <code class="highlighter-rouge">else</code> block.</p>
+<p>To explain the above code execution flow, the code first executes the <code class="language-plaintext highlighter-rouge">printHi</code> function and prints “Hello” then stores the return value “true” to the <code class="language-plaintext highlighter-rouge">result</code> variable. It then executes the next line by calling, <code class="language-plaintext highlighter-rouge">if (false &amp;&amp; result) {</code>. It  sees the “false” immediately which eventually prints “no” in the <code class="language-plaintext highlighter-rouge">else</code> block.</p>
 
-<p style="margin-bottom:1%">You can tell immediately that it wasn’t required to execute <code class="highlighter-rouge">printHi</code> function at all. What if this <code class="highlighter-rouge">printHi</code> function was really expensive to run (say it runs for a few seconds)? Then everytime when this line of code is executed, we will need to execute this unnecessary function. We are basically running the function inconsequentially. In Scala, we can use the “lazy” keyword to handle this kind of situation. Let’s try to do the same thing as above but by giving an explicit “lazy” keyword to the result variable:</p>
+<p style="margin-bottom:1%">You can tell immediately that it wasn’t required to execute <code class="language-plaintext highlighter-rouge">printHi</code> function at all. What if this <code class="language-plaintext highlighter-rouge">printHi</code> function was really expensive to run (say it runs for a few seconds)? Then everytime when this line of code is executed, we will need to execute this unnecessary function. We are basically running the function inconsequentially. In Scala, we can use the “lazy” keyword to handle this kind of situation. Let’s try to do the same thing as above but by giving an explicit “lazy” keyword to the result variable:</p>
 <figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">printHi</span><span class="o">()</span><span class="k">:</span><span class="kt">Boolean</span> <span class="o">=</span> <span class="o">{</span>
     <span class="n">println</span><span class="o">(</span><span class="s">"Hello"</span><span class="o">)</span>
     <span class="kc">true</span>
@@ -265,7 +265,7 @@ no</code></pre></figure>
 
 <p>When you execute the code above, the result variable gets identified as a lazy variable. When the if statement is executed, it doesn’t even run the result as if statement sees the false right away. Then the code eventually prints “no”. You can see from the output, it doesn’t actually print “Hello” this time as it was never executed.</p>
 
-<p style="margin-bottom:1%">Using the explicit <code class="highlighter-rouge">false</code> in the first condition of the if statement is used just for the illustration. It could just be a condition that results in false most of the time. Even when the first condition generates true most of the time, as long as there is a chance of it generating false, lazy is probably is a better choice. Now you might ask, does this “lazy” code even get executed when its necessary? of course. Let’s tweak our code by making the first part of the if statement to “true” instead of “false”:</p>
+<p style="margin-bottom:1%">Using the explicit <code class="language-plaintext highlighter-rouge">false</code> in the first condition of the if statement is used just for the illustration. It could just be a condition that results in false most of the time. Even when the first condition generates true most of the time, as long as there is a chance of it generating false, lazy is probably is a better choice. Now you might ask, does this “lazy” code even get executed when its necessary? of course. Let’s tweak our code by making the first part of the if statement to “true” instead of “false”:</p>
 <figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">printHi</span><span class="o">()</span><span class="k">:</span><span class="kt">Boolean</span> <span class="o">=</span> <span class="o">{</span>
     <span class="n">println</span><span class="o">(</span><span class="s">"Hello"</span><span class="o">)</span>
     <span class="kc">true</span>
@@ -281,13 +281,13 @@ no</code></pre></figure>
 <figure class="highlight"><pre><code class="language-text" data-lang="text">Hello
 yes</code></pre></figure>
 
-<p>Walking through the above example, we first hit the <code class="highlighter-rouge">lazy</code> keyword and set aside executing the result variable. When we hit the if statement, the if statement sees the first boolean as <code class="highlighter-rouge">true</code> and tries to execute the <code class="highlighter-rouge">result</code> which is declared as <code class="highlighter-rouge">lazy</code> and will eventually execute the <code class="highlighter-rouge">printHi</code> function (printing “Hello”), then it prints “yes” as it enters the if block. So the runner basically postponed the computation until we absolutely had to execute it.</p>
+<p>Walking through the above example, we first hit the <code class="language-plaintext highlighter-rouge">lazy</code> keyword and set aside executing the result variable. When we hit the if statement, the if statement sees the first boolean as <code class="language-plaintext highlighter-rouge">true</code> and tries to execute the <code class="language-plaintext highlighter-rouge">result</code> which is declared as <code class="language-plaintext highlighter-rouge">lazy</code> and will eventually execute the <code class="language-plaintext highlighter-rouge">printHi</code> function (printing “Hello”), then it prints “yes” as it enters the if block. So the runner basically postponed the computation until we absolutely had to execute it.</p>
 
-<p>In Scala, there are other ways to be lazy than to use the actual keyword <code class="highlighter-rouge">lazy</code>. First of all, in Scala, “lambda” is just by default is <code class="highlighter-rouge">lazy</code>. When you pass in a function as a parameter, it will not be executed until it is required in the code.</p>
+<p>In Scala, there are other ways to be lazy than to use the actual keyword <code class="language-plaintext highlighter-rouge">lazy</code>. First of all, in Scala, “lambda” is just by default is <code class="language-plaintext highlighter-rouge">lazy</code>. When you pass in a function as a parameter, it will not be executed until it is required in the code.</p>
 
-<p style="margin-bottom:1%">Second of all, there are non-strict collections aka lazy collections (such as the type “Stream”, a non-strict linked list) to be explicit. In Scala, any collection can be made non-strict with the <code class="highlighter-rouge">view</code> method. Here is an example which doesn’t use the <code class="highlighter-rouge">view</code> method:</p>
+<p style="margin-bottom:1%">Second of all, there are non-strict collections aka lazy collections (such as the type “Stream”, a non-strict linked list) to be explicit. In Scala, any collection can be made non-strict with the <code class="language-plaintext highlighter-rouge">view</code> method. Here is an example which doesn’t use the <code class="language-plaintext highlighter-rouge">view</code> method:</p>
 
-<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">val</span> <span class="n">student</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span>
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">val</span> <span class="nv">student</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span>
 <span class="o">(</span><span class="s">"Joe"</span><span class="o">,</span> <span class="mi">87</span><span class="o">),</span>
 <span class="o">(</span><span class="s">"Bob"</span><span class="o">,</span> <span class="mi">91</span><span class="o">),</span>
 <span class="o">(</span><span class="s">"Frank"</span><span class="o">,</span> <span class="mi">60</span><span class="o">),</span>
@@ -295,17 +295,17 @@ yes</code></pre></figure>
 <span class="o">...</span> <span class="n">say</span> <span class="n">we</span> <span class="n">have</span> <span class="n">around</span> <span class="mi">100</span> <span class="n">tuples</span>
 <span class="o">)</span>
 
-<span class="k">def</span> <span class="n">gradeHigherThan90</span><span class="o">(</span><span class="n">person</span><span class="k">:</span> <span class="o">(</span><span class="kt">String</span><span class="o">,</span> <span class="kt">Int</span><span class="o">))</span> <span class="k">=</span> <span class="o">{</span>
-   <span class="n">println</span><span class="o">(</span><span class="n">s</span><span class="s">"Higher than 90 for $person"</span><span class="o">)</span>
-   <span class="n">person</span><span class="o">.</span><span class="n">_2</span> <span class="o">&gt;</span> <span class="mi">90</span>
+<span class="k">def</span> <span class="nf">gradeHigherThan90</span><span class="o">(</span><span class="n">person</span><span class="k">:</span> <span class="o">(</span><span class="kt">String</span><span class="o">,</span> <span class="kt">Int</span><span class="o">))</span> <span class="k">=</span> <span class="o">{</span>
+   <span class="nf">println</span><span class="o">(</span><span class="n">s</span><span class="s">"Higher than 90 for $person"</span><span class="o">)</span>
+   <span class="nv">person</span><span class="o">.</span><span class="py">_2</span> <span class="o">&gt;</span> <span class="mi">90</span>
 <span class="o">}</span>
 
-<span class="k">def</span> <span class="n">nameMatchingLetterCount</span><span class="o">(</span><span class="n">person</span><span class="k">:</span> <span class="o">(</span><span class="kt">String</span><span class="o">,</span> <span class="kt">Int</span><span class="o">),</span> <span class="n">len</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
-   <span class="n">println</span><span class="o">(</span><span class="n">s</span><span class="s">"Letter has $len for $person"</span><span class="o">)</span>
-   <span class="n">person</span><span class="o">.</span><span class="n">_1</span><span class="o">.</span><span class="n">length</span> <span class="o">==</span> <span class="n">len</span>
+<span class="k">def</span> <span class="nf">nameMatchingLetterCount</span><span class="o">(</span><span class="n">person</span><span class="k">:</span> <span class="o">(</span><span class="kt">String</span><span class="o">,</span> <span class="kt">Int</span><span class="o">),</span> <span class="n">len</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+   <span class="nf">println</span><span class="o">(</span><span class="n">s</span><span class="s">"Letter has $len for $person"</span><span class="o">)</span>
+   <span class="nv">person</span><span class="o">.</span><span class="py">_1</span><span class="o">.</span><span class="py">length</span> <span class="o">==</span> <span class="n">len</span>
 <span class="o">}</span>
 
-<span class="n">println</span><span class="o">(</span><span class="n">student</span><span class="o">.</span><span class="n">filter</span><span class="o">(</span><span class="n">gradeHigherThan90</span><span class="o">).</span><span class="n">filter</span><span class="o">(</span><span class="n">nameMatchingLetterCount</span><span class="o">(</span><span class="k">_</span><span class="o">,</span> <span class="mi">5</span><span class="o">)).</span><span class="n">head</span><span class="o">)</span></code></pre></figure>
+<span class="nf">println</span><span class="o">(</span><span class="nv">student</span><span class="o">.</span><span class="py">filter</span><span class="o">(</span><span class="n">gradeHigherThan90</span><span class="o">).</span><span class="py">filter</span><span class="o">(</span><span class="nf">nameMatchingLetterCount</span><span class="o">(</span><span class="k">_</span><span class="o">,</span> <span class="mi">5</span><span class="o">)).</span><span class="py">head</span><span class="o">)</span></code></pre></figure>
 
 <p style="margin-bottom:1%">Output:</p>
 
@@ -321,7 +321,7 @@ Letter has 5 for (Calvin,100)
 (Saram,95)
 Elapsed time: 1304887ns</code></pre></figure>
 
-<p style="margin-bottom:1%">By the way, I have added a timer to our code just to compare between the executions. As you can see, the code is basically iterating through all the elements in student list (of tuples) which could have millions of data (in extreme cases). It is an overkill, just to find that first person with the higher grade than 90 then search for name containing 5 letters then find the one filters to both. This is where the <code class="highlighter-rouge">view</code> method comes handy. The <code class="highlighter-rouge">view</code> method produces a lazy collection. You can tweak the print statement like this: “println(student.<strong>view</strong>.filter(gradeHigherThan90).filter(nameMatchingLetterCount(_, 5)).head)” which would produce an output like this:</p>
+<p style="margin-bottom:1%">By the way, I have added a timer to our code just to compare between the executions. As you can see, the code is basically iterating through all the elements in student list (of tuples) which could have millions of data (in extreme cases). It is an overkill, just to find that first person with the higher grade than 90 then search for name containing 5 letters then find the one filters to both. This is where the <code class="language-plaintext highlighter-rouge">view</code> method comes handy. The <code class="language-plaintext highlighter-rouge">view</code> method produces a lazy collection. You can tweak the print statement like this: “println(student.<strong>view</strong>.filter(gradeHigherThan90).filter(nameMatchingLetterCount(_, 5)).head)” which would produce an output like this:</p>
 <p style="margin-bottom:1%">Output:</p>
 
 <figure class="highlight"><pre><code class="language-text" data-lang="text">Higher than 90 for (Joe,87)
@@ -441,7 +441,7 @@ Elapsed time: 844147ns</code></pre></figure>
           <div class="author row">
             <img class="img-circle col-xs-4 col-sm-3 col-md-2" src="/img/timeline/IMG_20160124_103417.jpg" alt="Me" />
             <p class="col-xs-8 col-sm-9 col-md-10" style="padding-top: 1.3em;">
-            I am a passionate software developer working in Downtown, Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
+            I am a passionate programmer working in Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
             <a href="javascript:location='mailto:\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"><script type="text/javascript">document.write('\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
             </p>
           </div>

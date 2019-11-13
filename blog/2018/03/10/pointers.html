@@ -239,17 +239,17 @@
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="n">foo</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="kt">int</span><span class="o">*</span> <span class="n">pFoo</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">foo</span><span class="p">;</span></code></pre></figure>
 
-<p style="margin-bottom: 20px;">What is happening above? The first line sets an integer variable called <code class="highlighter-rouge">foo</code> to the value 1. Then the second line creates the integer <code class="highlighter-rouge">pointer</code> called <code class="highlighter-rouge">pFoo</code> which holds the memory location of <code class="highlighter-rouge">foo</code> by calling <code class="highlighter-rouge">&amp;foo</code>. When you print out the content of the pointer, <code class="highlighter-rouge">pFoo</code> in human-visible form, it would be something like:</p>
+<p style="margin-bottom: 20px;">What is happening above? The first line sets an integer variable called <code class="language-plaintext highlighter-rouge">foo</code> to the value 1. Then the second line creates the integer <code class="language-plaintext highlighter-rouge">pointer</code> called <code class="language-plaintext highlighter-rouge">pFoo</code> which holds the memory location of <code class="language-plaintext highlighter-rouge">foo</code> by calling <code class="language-plaintext highlighter-rouge">&amp;foo</code>. When you print out the content of the pointer, <code class="language-plaintext highlighter-rouge">pFoo</code> in human-visible form, it would be something like:</p>
 
 <figure class="highlight"><pre><code class="language-text" data-lang="text">pFoo: 0x7ffd01d82d54</code></pre></figure>
 
-<p style="margin-bottom: 20px;">As you see <code class="highlighter-rouge">pFoo</code> contains the memory location of the variable <code class="highlighter-rouge">foo</code>. How do we use the pointers then? Let’s add the third line to the example above.</p>
+<p style="margin-bottom: 20px;">As you see <code class="language-plaintext highlighter-rouge">pFoo</code> contains the memory location of the variable <code class="language-plaintext highlighter-rouge">foo</code>. How do we use the pointers then? Let’s add the third line to the example above.</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="n">foo</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="kt">int</span><span class="o">*</span> <span class="n">pFoo</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">foo</span><span class="p">;</span>
 <span class="o">*</span><span class="n">pFoo</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span></code></pre></figure>
 
-<p style="margin-bottom: 20px;">This 3rd line might confuse a couple of people here because this could be appearing as setting 15 to the memory location. That is obviously not the case. <code class="highlighter-rouge">*pFoo</code> means to follow the memory address and deal with the memory it points to. We should not be confused ourselves with, <type>*. This would be used for initializing a pointer. It's probably easier to understand the above example more straightforward if I draw out the example above, like below:</type></p>
+<p style="margin-bottom: 20px;">This 3rd line might confuse a couple of people here because this could be appearing as setting 15 to the memory location. That is obviously not the case. <code class="language-plaintext highlighter-rouge">*pFoo</code> means to follow the memory address and deal with the memory it points to. We should not be confused ourselves with, <type>*. This would be used for initializing a pointer. It's probably easier to understand the above example more straightforward if I draw out the example above, like below:</type></p>
 
 <figure class="highlight"><pre><code class="language-text" data-lang="text">   :
    :        
@@ -263,7 +263,7 @@
    :
    :</code></pre></figure>
 
-<p>We can see that the <code class="highlighter-rouge">pFoo</code> is basically pointing to the <code class="highlighter-rouge">foo</code> variable (residing in memory location 0x5100). This example is really all there are for C pointers.</p>
+<p>We can see that the <code class="language-plaintext highlighter-rouge">pFoo</code> is basically pointing to the <code class="language-plaintext highlighter-rouge">foo</code> variable (residing in memory location 0x5100). This example is really all there are for C pointers.</p>
 
 <p style="margin-bottom: 20px;">However, we can make things more interesting to the problem by adding a pointer to a pointer. Let’s take a look at the new fourth line below:</p>
 
@@ -272,9 +272,9 @@
 <span class="o">*</span><span class="n">pFoo</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
 <span class="kt">int</span><span class="o">**</span> <span class="n">ppFoo</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">pFoo</span><span class="p">;</span></code></pre></figure>
 
-<p>So ppFoo is pointing to the memory location of pFoo which is a pointer to a variable pFoo. Now if you wanted to change the value of foo using ppFoo, you can simply call: <code class="highlighter-rouge">**pFoo = 15;</code>, then the pointers will follow to the memory location it’s pointing at and eventually update the value of foo.</p>
+<p>So ppFoo is pointing to the memory location of pFoo which is a pointer to a variable pFoo. Now if you wanted to change the value of foo using ppFoo, you can simply call: <code class="language-plaintext highlighter-rouge">**pFoo = 15;</code>, then the pointers will follow to the memory location it’s pointing at and eventually update the value of foo.</p>
 
-<p>There are even more complexities you can add to the pointer flavour such as <code class="highlighter-rouge">**ppFoo++</code>. Well, what does <code class="highlighter-rouge">**ppFoo++</code> mean? ++ binds tighter than *, so this is equivalent to:  *( *( ppFoo++ ) ). So you essentially broke your pointer to point at some random spot (probably nowhere, null). Your compiler will most likely bark at you if you try to do this seemingly unrealistic thing. What about this? <code class="highlighter-rouge">++**ppFoo</code>. This is nothing but fetching what’s contained in ppFoo and increment 1 to it. You will get the similar issue as the previous if you do this though, <code class="highlighter-rouge">**++ppFoo</code>.</p>
+<p>There are even more complexities you can add to the pointer flavour such as <code class="language-plaintext highlighter-rouge">**ppFoo++</code>. Well, what does <code class="language-plaintext highlighter-rouge">**ppFoo++</code> mean? ++ binds tighter than *, so this is equivalent to:  *( *( ppFoo++ ) ). So you essentially broke your pointer to point at some random spot (probably nowhere, null). Your compiler will most likely bark at you if you try to do this seemingly unrealistic thing. What about this? <code class="language-plaintext highlighter-rouge">++**ppFoo</code>. This is nothing but fetching what’s contained in ppFoo and increment 1 to it. You will get the similar issue as the previous if you do this though, <code class="language-plaintext highlighter-rouge">**++ppFoo</code>.</p>
 
 <p>So why do we use pointers? Well, there are a couple of reasons:</p>
 
@@ -292,7 +292,7 @@
 
 <p style="padding-left: 30px;"><em>A reference variable is essentially an alias which is another name for an already existing variable.</em></p>
 
-<p>References work just like pointers with some syntactic sugar. <code class="highlighter-rouge">int&amp; rFoo</code> and <code class="highlighter-rouge">int* pFoo</code> are essentially the same things, but you don’t have to dereference the reference. The reference basically acts as an ‘alias’ to a variable meaning unlike pointers, you do not always need the * in front of it to fetch/set the data.</p>
+<p>References work just like pointers with some syntactic sugar. <code class="language-plaintext highlighter-rouge">int&amp; rFoo</code> and <code class="language-plaintext highlighter-rouge">int* pFoo</code> are essentially the same things, but you don’t have to dereference the reference. The reference basically acts as an ‘alias’ to a variable meaning unlike pointers, you do not always need the * in front of it to fetch/set the data.</p>
 
 <p>We should remember that the references are required to always be pointing to a valid destination though. You cannot have an empty reference. Also, with a reference, you cannot change it to refer some other variable once it had been initialized. You can only choose what that reference would point to upon initializing it.</p>
 
@@ -400,7 +400,7 @@
           <div class="author row">
             <img class="img-circle col-xs-4 col-sm-3 col-md-2" src="/img/timeline/IMG_20160124_103417.jpg" alt="Me" />
             <p class="col-xs-8 col-sm-9 col-md-10" style="padding-top: 1.3em;">
-            I am a passionate software developer working in Downtown, Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
+            I am a passionate programmer working in Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
             <a href="javascript:location='mailto:\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"><script type="text/javascript">document.write('\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
             </p>
           </div>

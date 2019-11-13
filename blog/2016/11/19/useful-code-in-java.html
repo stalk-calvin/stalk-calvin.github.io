@@ -244,14 +244,14 @@
 <p>Simple codes that show how it could handle various DAO Object in maybe a day factory which constructs and provide you objects needed, Example of using Factory pattern:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DAOFactory</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="n">DatabaseAccessObject</span> <span class="nf">getInstance</span><span class="o">(</span><span class="n">String</span> <span class="n">type</span><span class="o">,</span> <span class="n">Config</span> <span class="n">config</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">DatabaseAccessObject</span> <span class="n">dao</span><span class="o">;</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">MONGO_DATABASE</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">type</span><span class="o">))</span> <span class="o">{</span>
-            <span class="n">dao</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MongoDatabase</span><span class="o">(</span><span class="n">config</span><span class="o">);</span>
-        <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">DATABASE</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">type</span><span class="o">))</span> <span class="o">{</span>
-            <span class="n">dao</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Database</span><span class="o">(</span><span class="n">config</span><span class="o">);</span>
-        <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">CSV</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">type</span><span class="o">))</span> <span class="o">{</span>
-            <span class="n">dao</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CSV</span><span class="o">(</span><span class="n">config</span><span class="o">);</span>
+    <span class="kd">public</span> <span class="nc">DatabaseAccessObject</span> <span class="nf">getInstance</span><span class="o">(</span><span class="nc">String</span> <span class="n">type</span><span class="o">,</span> <span class="nc">Config</span> <span class="n">config</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">DatabaseAccessObject</span> <span class="n">dao</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">(</span><span class="no">MONGO_DATABASE</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">type</span><span class="o">))</span> <span class="o">{</span>
+            <span class="n">dao</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MongoDatabase</span><span class="o">(</span><span class="n">config</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="no">DATABASE</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">type</span><span class="o">))</span> <span class="o">{</span>
+            <span class="n">dao</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Database</span><span class="o">(</span><span class="n">config</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="no">CSV</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">type</span><span class="o">))</span> <span class="o">{</span>
+            <span class="n">dao</span> <span class="o">=</span> <span class="k">new</span> <span class="no">CSV</span><span class="o">(</span><span class="n">config</span><span class="o">);</span>
         <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
             <span class="k">throw</span> <span class="k">new</span> <span class="nf">UnsupportedDAOException</span><span class="o">(</span><span class="s">"not supported dao: "</span><span class="o">+</span><span class="n">type</span><span class="o">);</span>
         <span class="o">}</span>
@@ -281,39 +281,39 @@
  
      <span class="nd">@XStreamAsAttribute</span>
      <span class="nd">@XStreamAlias</span><span class="o">(</span><span class="s">"birth_day"</span><span class="o">)</span>
-     <span class="kd">private</span> <span class="n">String</span> <span class="n">birthDay</span><span class="o">;</span> <span class="o">/</span></code></pre></figure>
+     <span class="kd">private</span> <span class="nc">String</span> <span class="n">birthDay</span><span class="o">;</span> <span class="o">/</span></code></pre></figure>
 
 <p>Another way would be using a <a href="https://docs.oracle.com/javase/tutorial/jaxp/sax/parsing.html">sax</a> and parse the raw XML. You can do something like getXMLDeclCharset, parseThisAsSuch using a DefaultHandler. Here is an example:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="n">String</span> <span class="nf">parseThisAsSuch</span><span class="o">(</span><span class="n">InputStream</span> <span class="n">xmlStream</span><span class="o">,</span> <span class="n">Charset</span> <span class="n">cs</span><span class="o">,</span> <span class="n">SAXParser</span> <span class="n">reader</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">SAXException</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="n">StringBuffer</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuffer</span><span class="o">();</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="nc">String</span> <span class="nf">parseThisAsSuch</span><span class="o">(</span><span class="nc">InputStream</span> <span class="n">xmlStream</span><span class="o">,</span> <span class="nc">Charset</span> <span class="n">cs</span><span class="o">,</span> <span class="nc">SAXParser</span> <span class="n">reader</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">SAXException</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">StringBuffer</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuffer</span><span class="o">();</span>
     <span class="k">try</span>
     <span class="o">{</span>
-        <span class="n">DefaultHandler</span> <span class="n">handler</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DefaultHandler</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">DefaultHandler</span> <span class="n">handler</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DefaultHandler</span><span class="o">()</span> <span class="o">{</span>
 
             <span class="nd">@Override</span>
-            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">endElement</span><span class="o">(</span><span class="n">String</span> <span class="n">uri</span><span class="o">,</span> <span class="n">String</span> <span class="n">localName</span><span class="o">,</span> <span class="n">String</span> <span class="n">name</span><span class="o">)</span>
-                    <span class="kd">throws</span> <span class="n">SAXException</span> <span class="o">{</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">endElement</span><span class="o">(</span><span class="nc">String</span> <span class="n">uri</span><span class="o">,</span> <span class="nc">String</span> <span class="n">localName</span><span class="o">,</span> <span class="nc">String</span> <span class="n">name</span><span class="o">)</span>
+                    <span class="kd">throws</span> <span class="nc">SAXException</span> <span class="o">{</span>
                 <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="sc">' '</span><span class="o">);</span>
             <span class="o">}</span>
 
             <span class="nd">@Override</span>
-            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">startElement</span><span class="o">(</span><span class="n">String</span> <span class="n">uri</span><span class="o">,</span> <span class="n">String</span> <span class="n">localName</span><span class="o">,</span>
-                    <span class="n">String</span> <span class="n">name</span><span class="o">,</span> <span class="n">Attributes</span> <span class="n">attributes</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">SAXException</span> <span class="o">{</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">startElement</span><span class="o">(</span><span class="nc">String</span> <span class="n">uri</span><span class="o">,</span> <span class="nc">String</span> <span class="n">localName</span><span class="o">,</span>
+                    <span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="nc">Attributes</span> <span class="n">attributes</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">SAXException</span> <span class="o">{</span>
                 <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="sc">' '</span><span class="o">);</span>
             <span class="o">}</span>
 
             <span class="nd">@Override</span>
-            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">characters</span><span class="o">(</span><span class="kt">char</span><span class="o">[]</span> <span class="n">ch</span><span class="o">,</span> <span class="kt">int</span> <span class="n">start</span><span class="o">,</span> <span class="kt">int</span> <span class="n">length</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">SAXException</span> <span class="o">{</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">characters</span><span class="o">(</span><span class="kt">char</span><span class="o">[]</span> <span class="n">ch</span><span class="o">,</span> <span class="kt">int</span> <span class="n">start</span><span class="o">,</span> <span class="kt">int</span> <span class="n">length</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">SAXException</span> <span class="o">{</span>
                 <span class="k">if</span><span class="o">(</span><span class="n">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
-                    <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="n">ch</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">length</span><span class="o">));</span>
+                    <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="n">ch</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">length</span><span class="o">));</span>
                     <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="sc">'\n'</span><span class="o">);</span>
                 <span class="o">}</span>
             <span class="o">}</span>
         <span class="o">};</span>
         <span class="n">reader</span><span class="o">.</span><span class="na">setContentHandler</span><span class="o">(</span><span class="n">handler</span><span class="o">);</span>            
         <span class="n">reader</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">createInputSource</span><span class="o">(</span><span class="n">stream</span><span class="o">,</span> <span class="n">cs</span><span class="o">));</span>
-    <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">IOException</span> <span class="n">ioe</span><span class="o">)</span> <span class="o">{</span>
+    <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="nc">IOException</span> <span class="n">ioe</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">throw</span> <span class="k">new</span> <span class="nf">SAXException</span><span class="o">(</span><span class="n">ioe</span><span class="o">);</span>
     <span class="o">:</span><span class="n">wq</span><span class="o">!}</span> 
 
@@ -326,24 +326,24 @@
 
 <p>There are also numerous ways to make a POJO out of JSON. A simple way is to use Jackson 2 (com.fasterxml.jackson.databind). Here is to read from JSON.</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ObjectMapper</span> <span class="n">mapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectMapper</span><span class="o">();</span>
-<span class="n">String</span> <span class="n">jsonInString</span> <span class="o">=</span> <span class="s">"{'name' : 'calvin'}"</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">ObjectMapper</span> <span class="n">mapper</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ObjectMapper</span><span class="o">();</span>
+<span class="nc">String</span> <span class="n">jsonInString</span> <span class="o">=</span> <span class="s">"{'name' : 'calvin'}"</span><span class="o">;</span>
 
 <span class="c1">//JSON from file to Object</span>
-<span class="n">Staff</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="na">readValue</span><span class="o">(</span><span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"&lt;json_file_location&gt;"</span><span class="o">),</span> <span class="n">Staff</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="nc">Staff</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="na">readValue</span><span class="o">(</span><span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"&lt;json_file_location&gt;"</span><span class="o">),</span> <span class="nc">Staff</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
 
 <span class="c1">//JSON from URL to Object</span>
-<span class="n">Staff</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="na">readValue</span><span class="o">(</span><span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">"http://stalkcalvin.com/api/staff.json"</span><span class="o">),</span> <span class="n">Staff</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="nc">Staff</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="na">readValue</span><span class="o">(</span><span class="k">new</span> <span class="no">URL</span><span class="o">(</span><span class="s">"http://stalkcalvin.com/api/staff.json"</span><span class="o">),</span> <span class="nc">Staff</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
 
 <span class="c1">//JSON from String to Object</span>
-<span class="n">Staff</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="na">readValue</span><span class="o">(</span><span class="n">jsonInString</span><span class="o">,</span> <span class="n">Staff</span><span class="o">.</span><span class="na">class</span><span class="o">);</span></code></pre></figure>
+<span class="nc">Staff</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="na">readValue</span><span class="o">(</span><span class="n">jsonInString</span><span class="o">,</span> <span class="nc">Staff</span><span class="o">.</span><span class="na">class</span><span class="o">);</span></code></pre></figure>
 
 <p>However, I personally use Gson from Google most of the time. It’s similar logic as above. Let’s take a look at a Staff JSON:</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-  </span><span class="s2">"staff"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123"</span><span class="p">,</span><span class="w">
-     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calvin"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"staff"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calvin"</span><span class="p">,</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
@@ -353,7 +353,7 @@
    <span class="nd">@SerializedName</span><span class="o">(</span><span class="s">"id"</span><span class="o">);</span>
    <span class="kd">private</span> <span class="kt">int</span> <span class="n">staffId</span><span class="o">;</span>
    <span class="nd">@SerializedName</span><span class="o">(</span><span class="s">"name"</span><span class="o">);</span>
-   <span class="kd">private</span> <span class="n">String</span> <span class="n">staffName</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">String</span> <span class="n">staffName</span><span class="o">;</span>
    <span class="o">...</span> <span class="n">etc</span> <span class="o">...</span>
 <span class="o">}</span></code></pre></figure>
 
@@ -361,18 +361,18 @@
 
 <p>I think it is good to divide Exceptions into different sub-exceptions. We looked at DAO above, here would be an exception caused by DAO.</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DataAccessObjectException</span> <span class="kd">extends</span> <span class="n">Exception</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DataAccessObjectException</span> <span class="kd">extends</span> <span class="nc">Exception</span> <span class="o">{</span>
 
     <span class="kd">public</span> <span class="nf">DataAccessObjectException</span><span class="o">()</span> <span class="o">{</span>
         <span class="kd">super</span><span class="o">();</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="nf">DataAccessObjectException</span><span class="o">(</span><span class="n">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nf">DataAccessObjectException</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
         <span class="kd">super</span><span class="o">(</span><span class="n">message</span><span class="o">);</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="nf">DataAccessObjectException</span><span class="o">(</span><span class="n">String</span> <span class="n">message</span><span class="o">,</span> <span class="n">Throwable</span> <span class="n">cause</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nf">DataAccessObjectException</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">,</span> <span class="nc">Throwable</span> <span class="n">cause</span><span class="o">)</span> <span class="o">{</span>
         <span class="kd">super</span><span class="o">(</span><span class="n">message</span><span class="o">,</span> <span class="n">cause</span><span class="o">);</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="nf">DataAccessObjectException</span><span class="o">(</span><span class="n">Throwable</span> <span class="n">cause</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nf">DataAccessObjectException</span><span class="o">(</span><span class="nc">Throwable</span> <span class="n">cause</span><span class="o">)</span> <span class="o">{</span>
         <span class="kd">super</span><span class="o">(</span><span class="n">cause</span><span class="o">);</span>
     <span class="o">}</span>
 
@@ -384,22 +384,22 @@
 
 <p>Here is a way to copy a file to another file.</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kt">void</span> <span class="nf">copyFile</span><span class="o">(</span><span class="n">File</span> <span class="n">fromFile</span><span class="o">,</span> <span class="n">File</span> <span class="n">toFile</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-    <span class="n">BufferedInputStream</span> <span class="n">bis</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-    <span class="n">BufferedOutputStream</span> <span class="n">bos</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kt">void</span> <span class="nf">copyFile</span><span class="o">(</span><span class="nc">File</span> <span class="n">fromFile</span><span class="o">,</span> <span class="nc">File</span> <span class="n">toFile</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="nc">BufferedInputStream</span> <span class="n">bis</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="nc">BufferedOutputStream</span> <span class="n">bos</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
     <span class="k">try</span> <span class="o">{</span>
         <span class="c1">// reading and writing 16 KB at a time</span>
         <span class="kt">int</span> <span class="n">bSize</span> <span class="o">=</span> <span class="mi">16</span> <span class="o">*</span> <span class="mi">1024</span><span class="o">;</span>
         <span class="kt">byte</span><span class="o">[]</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="n">bSize</span><span class="o">];</span>
     
-        <span class="n">bis</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedInputStream</span><span class="o">(</span><span class="k">new</span> <span class="n">FileInputStream</span><span class="o">(</span><span class="n">fromFile</span><span class="o">),</span> <span class="n">bSize</span><span class="o">);</span>
-        <span class="n">bos</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedOutputStream</span><span class="o">(</span><span class="k">new</span> <span class="n">FileOutputStream</span><span class="o">(</span><span class="n">toFile</span><span class="o">),</span> <span class="n">bSize</span><span class="o">);</span>
+        <span class="n">bis</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedInputStream</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileInputStream</span><span class="o">(</span><span class="n">fromFile</span><span class="o">),</span> <span class="n">bSize</span><span class="o">);</span>
+        <span class="n">bos</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedOutputStream</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileOutputStream</span><span class="o">(</span><span class="n">toFile</span><span class="o">),</span> <span class="n">bSize</span><span class="o">);</span>
         <span class="kt">int</span> <span class="n">last</span><span class="o">;</span>
         <span class="k">while</span> <span class="o">((</span><span class="n">last</span> <span class="o">=</span> <span class="n">bis</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="n">buffer</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">buffer</span><span class="o">.</span><span class="na">length</span><span class="o">))</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">bos</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">buffer</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">last</span><span class="o">);</span>
         <span class="o">}</span>
         <span class="n">bos</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
-    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">ioe</span><span class="o">)</span> <span class="o">{</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ioe</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">log</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="s">"Unable to copy fromFile: "</span> <span class="o">+</span> <span class="n">fromFile</span><span class="o">.</span><span class="na">getAbsolutePath</span><span class="o">());</span>
     <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
         <span class="k">if</span> <span class="o">(</span><span class="n">bis</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
@@ -415,31 +415,31 @@
 
 <p>Unless you are using a Guava libraries, I suggest you make your own static factory that handles these data structures with a name like below example:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">K</span><span class="o">,</span> <span class="n">V</span><span class="o">&gt;</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;</span> <span class="nf">newHashMap</span><span class="o">()</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="no">K</span><span class="o">,</span> <span class="no">V</span><span class="o">&gt;</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="no">K</span><span class="o">,</span><span class="no">V</span><span class="o">&gt;</span> <span class="nf">newHashMap</span><span class="o">()</span>
 <span class="o">{</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span> <span class="n">V</span><span class="o">&gt;();</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="no">K</span><span class="o">,</span> <span class="no">V</span><span class="o">&gt;();</span>
 <span class="o">}</span>
 
-<span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">K</span><span class="o">,</span> <span class="n">V</span><span class="o">&gt;</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;</span> <span class="nf">newHashMap</span><span class="o">(</span><span class="kt">int</span> <span class="n">initialSize</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="no">K</span><span class="o">,</span> <span class="no">V</span><span class="o">&gt;</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="no">K</span><span class="o">,</span><span class="no">V</span><span class="o">&gt;</span> <span class="nf">newHashMap</span><span class="o">(</span><span class="kt">int</span> <span class="n">initialSize</span><span class="o">)</span>
 <span class="o">{</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span> <span class="n">V</span><span class="o">&gt;(</span><span class="n">initialSize</span><span class="o">);</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="no">K</span><span class="o">,</span> <span class="no">V</span><span class="o">&gt;(</span><span class="n">initialSize</span><span class="o">);</span>
 <span class="o">}</span>
 
-<span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">newArrayList</span><span class="o">()</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nf">newArrayList</span><span class="o">()</span>
 <span class="o">{</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;();</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;();</span>
 <span class="o">}</span>
 
-<span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">newArrayList</span><span class="o">(</span><span class="kt">int</span> <span class="n">initialSize</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nf">newArrayList</span><span class="o">(</span><span class="kt">int</span> <span class="n">initialSize</span><span class="o">)</span>
 <span class="o">{</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;(</span><span class="n">initialSize</span><span class="o">);</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;(</span><span class="n">initialSize</span><span class="o">);</span>
 <span class="o">}</span></code></pre></figure>
 
 <h3 id="6-way-to-initialize-common-data-structures">6. Way to initialize common data structures</h3>
 
 <p>Initialize HashSet:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">SYSTEM_COLLECTIONS_NAMES</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;()</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="no">SYSTEM_COLLECTIONS_NAMES</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashSet</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;()</span> <span class="o">{</span>
     <span class="o">{</span>
         <span class="n">add</span><span class="o">(</span><span class="s">"system.namespaces"</span><span class="o">);</span>
         <span class="n">add</span><span class="o">(</span><span class="s">"system.indexes"</span><span class="o">);</span>
@@ -450,7 +450,7 @@
 
 <p>Initializing a List:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;()</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;()</span> <span class="o">{</span>
    <span class="o">{</span>
      <span class="n">add</span><span class="o">(</span><span class="s">"A"</span><span class="o">);</span>
      <span class="n">add</span><span class="o">(</span><span class="s">"B"</span><span class="o">);</span>
@@ -460,7 +460,7 @@
 
 <p>Initialize HashMap:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">h</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;()</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">h</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;()</span> <span class="o">{</span>
    <span class="o">{</span>
       <span class="n">put</span><span class="o">(</span><span class="s">"a"</span><span class="o">,</span><span class="s">"b"</span><span class="o">);</span>
    <span class="o">}</span>
@@ -574,7 +574,7 @@
           <div class="author row">
             <img class="img-circle col-xs-4 col-sm-3 col-md-2" src="/img/timeline/IMG_20160124_103417.jpg" alt="Me">
             <p class="col-xs-8 col-sm-9 col-md-10" style="padding-top: 1.3em;">
-            I am a passionate software developer working in Downtown, Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
+            I am a passionate programmer working in Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
             <a href="javascript:location='mailto:%5Cu0073%5Cu0074%5Cu0061%5Cu006c%5Cu006b%5Cu002e%5Cu0063%5Cu0061%5Cu006c%5Cu0076%5Cu0069%5Cu006e%5Cu0040%5Cu0067%5Cu006d%5Cu0061%5Cu0069%5Cu006c%5Cu002e%5Cu0063%5Cu006f%5Cu006d';void%200"><script type="text/javascript">document.write('\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
             </p>
           </div>

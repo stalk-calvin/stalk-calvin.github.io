@@ -241,13 +241,13 @@ boundaries, relative to the perspective of the viewer."</em><br /> — Grady Boo
   <li>It can minimize dependencies in code thus more organized code.</li>
 </ol>
 
-<p>Let me show you an example. Say we have a Dog class which can <code class="highlighter-rouge">eatDogFood</code> like below:</p>
+<p>Let me show you an example. Say we have a Dog class which can <code class="language-plaintext highlighter-rouge">eatDogFood</code> like below:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="o">{</span>
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eatDogFood</span><span class="o">()</span> <span class="o">{...}</span>
 <span class="o">}</span></code></pre></figure>
 
-<p>Now there is a Cat class which can <code class="highlighter-rouge">eatCatFood</code> like below:</p>
+<p>Now there is a Cat class which can <code class="language-plaintext highlighter-rouge">eatCatFood</code> like below:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cat</span> <span class="o">{</span>
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eatCatFood</span><span class="o">()</span> <span class="o">{...}</span>
@@ -261,29 +261,29 @@ boundaries, relative to the perspective of the viewer."</em><br /> — Grady Boo
    <span class="k">new</span> <span class="nf">Cat</span><span class="o">().</span><span class="na">eatCatFood</span><span class="o">();</span>
 <span class="o">}</span></code></pre></figure>
 
-<p>This works great until we have another animal, a <code class="highlighter-rouge">horse</code>, then we have another one <code class="highlighter-rouge">pig</code>, then another, and so on. Above if-else block can get really long and it is pretty tightly coupled.</p>
+<p>This works great until we have another animal, a <code class="language-plaintext highlighter-rouge">horse</code>, then we have another one <code class="language-plaintext highlighter-rouge">pig</code>, then another, and so on. Above if-else block can get really long and it is pretty tightly coupled.</p>
 
 <p>There obviously is a better way to handle this through abstraction with composition. Instead of having these if-else block, we could create an Animal interface which handles eat functionality along with animal classes:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Animal</span> <span class="o">{</span>
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">();</span>
 <span class="o">}</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">implements</span> <span class="n">Animal</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">implements</span> <span class="nc">Animal</span> <span class="o">{</span>
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">()</span> <span class="o">{...}</span>
 <span class="o">}</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cat</span> <span class="kd">implements</span> <span class="n">Animal</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cat</span> <span class="kd">implements</span> <span class="nc">Animal</span> <span class="o">{</span>
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">()</span> <span class="o">{...}</span>
 <span class="o">}</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Horse</span> <span class="kd">implements</span> <span class="n">Animal</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Horse</span> <span class="kd">implements</span> <span class="nc">Animal</span> <span class="o">{</span>
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">()</span> <span class="o">{...}</span>
 <span class="o">}</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Pig</span> <span class="kd">implements</span> <span class="n">Animal</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Pig</span> <span class="kd">implements</span> <span class="nc">Animal</span> <span class="o">{</span>
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">()</span> <span class="o">{...}</span>
 <span class="o">}</span></code></pre></figure>
 
 <p>Then have the function pass in the object that is eating and our code can be as simple as:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="n">Animal</span> <span class="n">obj</span><span class="o">)</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">(</span><span class="nd">@Nonnull</span> <span class="nc">Animal</span> <span class="n">obj</span><span class="o">)</span> <span class="o">{</span>
    <span class="n">obj</span><span class="o">.</span><span class="na">eat</span><span class="o">();</span>
 <span class="o">}</span></code></pre></figure>
 
@@ -427,7 +427,7 @@ boundaries, relative to the perspective of the viewer."</em><br /> — Grady Boo
           <div class="author row">
             <img class="img-circle col-xs-4 col-sm-3 col-md-2" src="/img/timeline/IMG_20160124_103417.jpg" alt="Me" />
             <p class="col-xs-8 col-sm-9 col-md-10" style="padding-top: 1.3em;">
-            I am a passionate software developer working in Downtown, Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
+            I am a passionate programmer working in Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
             <a href="javascript:location='mailto:\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"><script type="text/javascript">document.write('\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
             </p>
           </div>

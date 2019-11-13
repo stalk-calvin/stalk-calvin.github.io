@@ -14,7 +14,36 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Wed, 11 Sep 2019 19:35:25 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 Nov 2019 00:13:22 +0000</lastBuildDate>
+	
+		<item>
+			<title>Common Design Patterns</title>
+			
+				<description>Ones I came across these days</description>
+			
+        
+          <category>design</category>
+        
+          <category>patterns</category>
+        
+          <category>computer</category>
+        
+          <category>software</category>
+        
+          <category>programming</category>
+        
+          <category>cleancode</category>
+        
+			<pubDate>07 November 2019</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2019/11/07/design-patterns.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2019/11/07/design-patterns</guid>
+		</item>
 	
 		<item>
 			<title>Test Driven Development</title>

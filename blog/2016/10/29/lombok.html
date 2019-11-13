@@ -232,7 +232,7 @@
   <li><a href="https://projectlombok.org/features/GetterSetter.html">Getters/Setters</a></li>
 </ul>
 
-<p style="margin-bottom:1em;">By annotating <code class="highlighter-rouge">@Getter</code> or <code class="highlighter-rouge">@Setter</code> lets lombok generate default getter/setter automatically. It automattically creates with the name: getField, setField. Below are the comparisons:</p>
+<p style="margin-bottom:1em;">By annotating <code class="language-plaintext highlighter-rouge">@Getter</code> or <code class="language-plaintext highlighter-rouge">@Setter</code> lets lombok generate default getter/setter automatically. It automattically creates with the name: getField, setField. Below are the comparisons:</p>
 
 <p style="margin-bottom:1em;">Plain Vanilla Java:</p>
 
@@ -287,10 +287,10 @@
    <span class="cm">/**
     * Name of the person.
     */</span> 
-   <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
    
-   <span class="nd">@Override</span> <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
-     <span class="k">return</span> <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s (age: %d)"</span><span class="o">,</span> <span class="n">name</span><span class="o">,</span> <span class="n">age</span><span class="o">);</span>
+   <span class="nd">@Override</span> <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+     <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s (age: %d)"</span><span class="o">,</span> <span class="n">name</span><span class="o">,</span> <span class="n">age</span><span class="o">);</span>
    <span class="o">}</span>  
    
    <span class="cm">/**
@@ -316,10 +316,11 @@
     *  
     * @param name The new value.
     */</span> 
-   <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+   <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
      <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
    <span class="o">}</span>  
- <span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
+ <span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p style="margin-bottom:1em;">With Lombok:</p>
 
@@ -369,12 +370,13 @@
     *  
     * @param name The new value.
     */</span> 
-   <span class="nd">@Setter</span><span class="o">(</span><span class="n">AccessLevel</span><span class="o">.</span><span class="na">PROTECTED</span><span class="o">)</span> <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+   <span class="nd">@Setter</span><span class="o">(</span><span class="nc">AccessLevel</span><span class="o">.</span><span class="na">PROTECTED</span><span class="o">)</span> <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
    
-   <span class="nd">@Override</span> <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
-     <span class="k">return</span> <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s (age: %d)"</span><span class="o">,</span> <span class="n">name</span><span class="o">,</span> <span class="n">age</span><span class="o">);</span>
+   <span class="nd">@Override</span> <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+     <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s (age: %d)"</span><span class="o">,</span> <span class="n">name</span><span class="o">,</span> <span class="n">age</span><span class="o">);</span>
    <span class="o">}</span>  
- <span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
+ <span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p><strong>Result</strong>: 42 lines vs 26 lines</p>
 
@@ -419,17 +421,17 @@
 </pre></td><td class="code"><pre> <span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
  
  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ToStringExample</span> <span class="o">{</span>
-   <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">STATIC_VAR</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
-   <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
-   <span class="kd">private</span> <span class="n">Shape</span> <span class="n">shape</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Square</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">10</span><span class="o">);</span>
-   <span class="kd">private</span> <span class="n">String</span><span class="o">[]</span> <span class="n">tags</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="no">STATIC_VAR</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">Shape</span> <span class="n">shape</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Square</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">10</span><span class="o">);</span>
+   <span class="kd">private</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">tags</span><span class="o">;</span>
    <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
    
-   <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+   <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
      <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">getName</span><span class="o">();</span>
    <span class="o">}</span>  
    
-   <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Square</span> <span class="kd">extends</span> <span class="n">Shape</span> <span class="o">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Square</span> <span class="kd">extends</span> <span class="nc">Shape</span> <span class="o">{</span>
      <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">;</span>
         
      <span class="kd">public</span> <span class="nf">Square</span><span class="o">(</span><span class="kt">int</span> <span class="n">width</span><span class="o">,</span> <span class="kt">int</span> <span class="n">height</span><span class="o">)</span> <span class="o">{</span>
@@ -437,15 +439,16 @@
        <span class="k">this</span><span class="o">.</span><span class="na">height</span> <span class="o">=</span> <span class="n">height</span><span class="o">;</span>
      <span class="o">}</span>  
         
-     <span class="nd">@Override</span> <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+     <span class="nd">@Override</span> <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
        <span class="k">return</span> <span class="s">"Square(super="</span> <span class="o">+</span> <span class="kd">super</span><span class="o">.</span><span class="na">toString</span><span class="o">()</span> <span class="o">+</span> <span class="s">", width="</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">width</span> <span class="o">+</span> <span class="s">", height="</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">height</span> <span class="o">+</span> <span class="s">")"</span><span class="o">;</span>
      <span class="o">}</span>  
    <span class="o">}</span>  
    
-   <span class="nd">@Override</span> <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
-     <span class="k">return</span> <span class="s">"ToStringExample("</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">shape</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">deepToString</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">tags</span><span class="o">)</span> <span class="o">+</span> <span class="s">")"</span><span class="o">;</span>
+   <span class="nd">@Override</span> <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+     <span class="k">return</span> <span class="s">"ToStringExample("</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">shape</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">deepToString</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">tags</span><span class="o">)</span> <span class="o">+</span> <span class="s">")"</span><span class="o">;</span>
    <span class="o">}</span>  
- <span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
+ <span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p style="margin-bottom:1em;">With Lombok:</p>
 
@@ -477,18 +480,18 @@
  
  <span class="nd">@ToString</span><span class="o">(</span><span class="n">exclude</span><span class="o">=</span><span class="s">"id"</span><span class="o">)</span>
  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ToStringExample</span> <span class="o">{</span>
-   <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">STATIC_VAR</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
-   <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
-   <span class="kd">private</span> <span class="n">Shape</span> <span class="n">shape</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Square</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">10</span><span class="o">);</span>
-   <span class="kd">private</span> <span class="n">String</span><span class="o">[]</span> <span class="n">tags</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="no">STATIC_VAR</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">Shape</span> <span class="n">shape</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Square</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">10</span><span class="o">);</span>
+   <span class="kd">private</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">tags</span><span class="o">;</span>
    <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
    
-   <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+   <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
      <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">getName</span><span class="o">();</span>
    <span class="o">}</span>
    
    <span class="nd">@ToString</span><span class="o">(</span><span class="n">callSuper</span><span class="o">=</span><span class="kc">true</span><span class="o">,</span> <span class="n">includeFieldNames</span><span class="o">=</span><span class="kc">true</span><span class="o">)</span>
-   <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Square</span> <span class="kd">extends</span> <span class="n">Shape</span> <span class="o">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Square</span> <span class="kd">extends</span> <span class="nc">Shape</span> <span class="o">{</span>
      <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">;</span>
         
      <span class="kd">public</span> <span class="nf">Square</span><span class="o">(</span><span class="kt">int</span> <span class="n">width</span><span class="o">,</span> <span class="kt">int</span> <span class="n">height</span><span class="o">)</span> <span class="o">{</span>
@@ -496,7 +499,8 @@
        <span class="k">this</span><span class="o">.</span><span class="na">height</span> <span class="o">=</span> <span class="n">height</span><span class="o">;</span>
      <span class="o">}</span>
    <span class="o">}</span>
- <span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
+ <span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p><strong>Result</strong>: 30 lines vs 24 lines</p>
 
@@ -584,42 +588,42 @@
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">EqualsAndHashCodeExample</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">transient</span> <span class="kt">int</span> <span class="n">transientVar</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kt">double</span> <span class="n">score</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="n">Shape</span> <span class="n">shape</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Square</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">10</span><span class="o">);</span>
-  <span class="kd">private</span> <span class="n">String</span><span class="o">[]</span> <span class="n">tags</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">Shape</span> <span class="n">shape</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Square</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">10</span><span class="o">);</span>
+  <span class="kd">private</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">tags</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
   
-  <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
     <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">;</span>
   <span class="o">}</span>
   
-  <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="n">Object</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="nc">Object</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">o</span> <span class="o">==</span> <span class="k">this</span><span class="o">)</span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-    <span class="k">if</span> <span class="o">(!(</span><span class="n">o</span> <span class="k">instanceof</span> <span class="n">EqualsAndHashCodeExample</span><span class="o">))</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-    <span class="n">EqualsAndHashCodeExample</span> <span class="n">other</span> <span class="o">=</span> <span class="o">(</span><span class="n">EqualsAndHashCodeExample</span><span class="o">)</span> <span class="n">o</span><span class="o">;</span>
-    <span class="k">if</span> <span class="o">(!</span><span class="n">other</span><span class="o">.</span><span class="na">canEqual</span><span class="o">((</span><span class="n">Object</span><span class="o">)</span><span class="k">this</span><span class="o">))</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="k">if</span> <span class="o">(!(</span><span class="n">o</span> <span class="k">instanceof</span> <span class="nc">EqualsAndHashCodeExample</span><span class="o">))</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="nc">EqualsAndHashCodeExample</span> <span class="n">other</span> <span class="o">=</span> <span class="o">(</span><span class="nc">EqualsAndHashCodeExample</span><span class="o">)</span> <span class="n">o</span><span class="o">;</span>
+    <span class="k">if</span> <span class="o">(!</span><span class="n">other</span><span class="o">.</span><span class="na">canEqual</span><span class="o">((</span><span class="nc">Object</span><span class="o">)</span><span class="k">this</span><span class="o">))</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
     <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">?</span> <span class="n">other</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">:</span> <span class="o">!</span><span class="k">this</span><span class="o">.</span><span class="na">getName</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="n">other</span><span class="o">.</span><span class="na">getName</span><span class="o">()))</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">Double</span><span class="o">.</span><span class="na">compare</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">score</span><span class="o">,</span> <span class="n">other</span><span class="o">.</span><span class="na">score</span><span class="o">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">)</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-    <span class="k">if</span> <span class="o">(!</span><span class="n">Arrays</span><span class="o">.</span><span class="na">deepEquals</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">tags</span><span class="o">,</span> <span class="n">other</span><span class="o">.</span><span class="na">tags</span><span class="o">))</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="k">if</span> <span class="o">(</span><span class="nc">Double</span><span class="o">.</span><span class="na">compare</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">score</span><span class="o">,</span> <span class="n">other</span><span class="o">.</span><span class="na">score</span><span class="o">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">)</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="k">if</span> <span class="o">(!</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">deepEquals</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">tags</span><span class="o">,</span> <span class="n">other</span><span class="o">.</span><span class="na">tags</span><span class="o">))</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
     <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
   <span class="o">}</span>
   
   <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">int</span> <span class="nf">hashCode</span><span class="o">()</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="kt">int</span> <span class="n">PRIME</span> <span class="o">=</span> <span class="mi">59</span><span class="o">;</span>
+    <span class="kd">final</span> <span class="kt">int</span> <span class="no">PRIME</span> <span class="o">=</span> <span class="mi">59</span><span class="o">;</span>
     <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
-    <span class="kd">final</span> <span class="kt">long</span> <span class="n">temp1</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">doubleToLongBits</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">score</span><span class="o">);</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="o">(</span><span class="n">result</span><span class="o">*</span><span class="n">PRIME</span><span class="o">)</span> <span class="o">+</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">?</span> <span class="mi">43</span> <span class="o">:</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">.</span><span class="na">hashCode</span><span class="o">());</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="o">(</span><span class="n">result</span><span class="o">*</span><span class="n">PRIME</span><span class="o">)</span> <span class="o">+</span> <span class="o">(</span><span class="kt">int</span><span class="o">)(</span><span class="n">temp1</span> <span class="o">^</span> <span class="o">(</span><span class="n">temp1</span> <span class="o">&gt;&gt;&gt;</span> <span class="mi">32</span><span class="o">));</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="o">(</span><span class="n">result</span><span class="o">*</span><span class="n">PRIME</span><span class="o">)</span> <span class="o">+</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">deepHashCode</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">tags</span><span class="o">);</span>
+    <span class="kd">final</span> <span class="kt">long</span> <span class="n">temp1</span> <span class="o">=</span> <span class="nc">Double</span><span class="o">.</span><span class="na">doubleToLongBits</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">score</span><span class="o">);</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="o">(</span><span class="n">result</span><span class="o">*</span><span class="no">PRIME</span><span class="o">)</span> <span class="o">+</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">?</span> <span class="mi">43</span> <span class="o">:</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">.</span><span class="na">hashCode</span><span class="o">());</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="o">(</span><span class="n">result</span><span class="o">*</span><span class="no">PRIME</span><span class="o">)</span> <span class="o">+</span> <span class="o">(</span><span class="kt">int</span><span class="o">)(</span><span class="n">temp1</span> <span class="o">^</span> <span class="o">(</span><span class="n">temp1</span> <span class="o">&gt;&gt;&gt;</span> <span class="mi">32</span><span class="o">));</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="o">(</span><span class="n">result</span><span class="o">*</span><span class="no">PRIME</span><span class="o">)</span> <span class="o">+</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">deepHashCode</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">tags</span><span class="o">);</span>
     <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
   <span class="o">}</span>
   
-  <span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">canEqual</span><span class="o">(</span><span class="n">Object</span> <span class="n">other</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="n">other</span> <span class="k">instanceof</span> <span class="n">EqualsAndHashCodeExample</span><span class="o">;</span>
+  <span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">canEqual</span><span class="o">(</span><span class="nc">Object</span> <span class="n">other</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">other</span> <span class="k">instanceof</span> <span class="nc">EqualsAndHashCodeExample</span><span class="o">;</span>
   <span class="o">}</span>
   
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Square</span> <span class="kd">extends</span> <span class="n">Shape</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Square</span> <span class="kd">extends</span> <span class="nc">Shape</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">;</span>
     
     <span class="kd">public</span> <span class="nf">Square</span><span class="o">(</span><span class="kt">int</span> <span class="n">width</span><span class="o">,</span> <span class="kt">int</span> <span class="n">height</span><span class="o">)</span> <span class="o">{</span>
@@ -627,11 +631,11 @@
       <span class="k">this</span><span class="o">.</span><span class="na">height</span> <span class="o">=</span> <span class="n">height</span><span class="o">;</span>
     <span class="o">}</span>
     
-    <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="n">Object</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="nc">Object</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
       <span class="k">if</span> <span class="o">(</span><span class="n">o</span> <span class="o">==</span> <span class="k">this</span><span class="o">)</span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-      <span class="k">if</span> <span class="o">(!(</span><span class="n">o</span> <span class="k">instanceof</span> <span class="n">Square</span><span class="o">))</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-      <span class="n">Square</span> <span class="n">other</span> <span class="o">=</span> <span class="o">(</span><span class="n">Square</span><span class="o">)</span> <span class="n">o</span><span class="o">;</span>
-      <span class="k">if</span> <span class="o">(!</span><span class="n">other</span><span class="o">.</span><span class="na">canEqual</span><span class="o">((</span><span class="n">Object</span><span class="o">)</span><span class="k">this</span><span class="o">))</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+      <span class="k">if</span> <span class="o">(!(</span><span class="n">o</span> <span class="k">instanceof</span> <span class="nc">Square</span><span class="o">))</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+      <span class="nc">Square</span> <span class="n">other</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Square</span><span class="o">)</span> <span class="n">o</span><span class="o">;</span>
+      <span class="k">if</span> <span class="o">(!</span><span class="n">other</span><span class="o">.</span><span class="na">canEqual</span><span class="o">((</span><span class="nc">Object</span><span class="o">)</span><span class="k">this</span><span class="o">))</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
       <span class="k">if</span> <span class="o">(!</span><span class="kd">super</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">o</span><span class="o">))</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
       <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">width</span> <span class="o">!=</span> <span class="n">other</span><span class="o">.</span><span class="na">width</span><span class="o">)</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
       <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">height</span> <span class="o">!=</span> <span class="n">other</span><span class="o">.</span><span class="na">height</span><span class="o">)</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
@@ -639,19 +643,20 @@
     <span class="o">}</span>
     
     <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">int</span> <span class="nf">hashCode</span><span class="o">()</span> <span class="o">{</span>
-      <span class="kd">final</span> <span class="kt">int</span> <span class="n">PRIME</span> <span class="o">=</span> <span class="mi">59</span><span class="o">;</span>
+      <span class="kd">final</span> <span class="kt">int</span> <span class="no">PRIME</span> <span class="o">=</span> <span class="mi">59</span><span class="o">;</span>
       <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
-      <span class="n">result</span> <span class="o">=</span> <span class="o">(</span><span class="n">result</span><span class="o">*</span><span class="n">PRIME</span><span class="o">)</span> <span class="o">+</span> <span class="kd">super</span><span class="o">.</span><span class="na">hashCode</span><span class="o">();</span>
-      <span class="n">result</span> <span class="o">=</span> <span class="o">(</span><span class="n">result</span><span class="o">*</span><span class="n">PRIME</span><span class="o">)</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">width</span><span class="o">;</span>
-      <span class="n">result</span> <span class="o">=</span> <span class="o">(</span><span class="n">result</span><span class="o">*</span><span class="n">PRIME</span><span class="o">)</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">height</span><span class="o">;</span>
+      <span class="n">result</span> <span class="o">=</span> <span class="o">(</span><span class="n">result</span><span class="o">*</span><span class="no">PRIME</span><span class="o">)</span> <span class="o">+</span> <span class="kd">super</span><span class="o">.</span><span class="na">hashCode</span><span class="o">();</span>
+      <span class="n">result</span> <span class="o">=</span> <span class="o">(</span><span class="n">result</span><span class="o">*</span><span class="no">PRIME</span><span class="o">)</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">width</span><span class="o">;</span>
+      <span class="n">result</span> <span class="o">=</span> <span class="o">(</span><span class="n">result</span><span class="o">*</span><span class="no">PRIME</span><span class="o">)</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">height</span><span class="o">;</span>
       <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
     <span class="o">}</span>
     
-    <span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">canEqual</span><span class="o">(</span><span class="n">Object</span> <span class="n">other</span><span class="o">)</span> <span class="o">{</span>
-      <span class="k">return</span> <span class="n">other</span> <span class="k">instanceof</span> <span class="n">Square</span><span class="o">;</span>
+    <span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">canEqual</span><span class="o">(</span><span class="nc">Object</span> <span class="n">other</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">other</span> <span class="k">instanceof</span> <span class="nc">Square</span><span class="o">;</span>
     <span class="o">}</span>
   <span class="o">}</span>
-<span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p style="margin-bottom:1em;">With Lombok:</p>
 
@@ -685,18 +690,18 @@
 <span class="nd">@EqualsAndHashCode</span><span class="o">(</span><span class="n">exclude</span><span class="o">={</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"shape"</span><span class="o">})</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">EqualsAndHashCodeExample</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">transient</span> <span class="kt">int</span> <span class="n">transientVar</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kt">double</span> <span class="n">score</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="n">Shape</span> <span class="n">shape</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Square</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">10</span><span class="o">);</span>
-  <span class="kd">private</span> <span class="n">String</span><span class="o">[]</span> <span class="n">tags</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">Shape</span> <span class="n">shape</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Square</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">10</span><span class="o">);</span>
+  <span class="kd">private</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">tags</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
   
-  <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
     <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">;</span>
   <span class="o">}</span>
   
   <span class="nd">@EqualsAndHashCode</span><span class="o">(</span><span class="n">callSuper</span><span class="o">=</span><span class="kc">true</span><span class="o">)</span>
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Square</span> <span class="kd">extends</span> <span class="n">Shape</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Square</span> <span class="kd">extends</span> <span class="nc">Shape</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">;</span>
     
     <span class="kd">public</span> <span class="nf">Square</span><span class="o">(</span><span class="kt">int</span> <span class="n">width</span><span class="o">,</span> <span class="kt">int</span> <span class="n">height</span><span class="o">)</span> <span class="o">{</span>
@@ -704,7 +709,8 @@
       <span class="k">this</span><span class="o">.</span><span class="na">height</span> <span class="o">=</span> <span class="n">height</span><span class="o">;</span>
     <span class="o">}</span>
   <span class="o">}</span>
-<span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p><strong>Result</strong>: 72 lines vs 25 lines</p>
 
@@ -712,7 +718,7 @@
   <li>To do with Constructors. <a href="https://projectlombok.org/features/Constructor.html">@NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor</a></li>
 </ul>
 
-<p>@NoArgsConstructor will generate a constructor with no parameters. Just like how Object class would generate one for you. If not possible due to final variables, then compile error will happen. You can do something like <code class="highlighter-rouge">@NoArgsConstructor(force = true)</code> which will default the final values to default values (0 / false / null).</p>
+<p>@NoArgsConstructor will generate a constructor with no parameters. Just like how Object class would generate one for you. If not possible due to final variables, then compile error will happen. You can do something like <code class="language-plaintext highlighter-rouge">@NoArgsConstructor(force = true)</code> which will default the final values to default values (0 / false / null).</p>
 
 <p style="margin-bottom:1em;">Plain Vanilla Java:</p>
 
@@ -737,25 +743,26 @@
 19
 20
 </pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">NoArgsExample</span> <span class="o">{</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">field</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">field</span><span class="o">;</span>
 
     <span class="kd">public</span> <span class="nf">NoArgsExample</span><span class="o">()</span> <span class="o">{</span>
     <span class="o">}</span>
 
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getField</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getField</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">field</span><span class="o">;</span>
     <span class="o">}</span>
 
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setField</span><span class="o">(</span><span class="n">String</span> <span class="n">field</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setField</span><span class="o">(</span><span class="nc">String</span> <span class="n">field</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">this</span><span class="o">.</span><span class="na">field</span> <span class="o">=</span> <span class="n">field</span><span class="o">;</span>
     <span class="o">}</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">NoArgsExample</span> <span class="n">example</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NoArgsExample</span><span class="o">();</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">NoArgsExample</span> <span class="n">example</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">NoArgsExample</span><span class="o">();</span>
         <span class="n">example</span><span class="o">.</span><span class="na">setField</span><span class="o">(</span><span class="s">"test"</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">example</span><span class="o">.</span><span class="na">field</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">example</span><span class="o">.</span><span class="na">field</span><span class="o">);</span>
     <span class="o">}</span>
-<span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p style="margin-bottom:1em;">With Lombok:</p>
 
@@ -783,14 +790,15 @@
 <span class="nd">@Setter</span>
 <span class="nd">@NoArgsConstructor</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">NoArgsExample</span> <span class="o">{</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">field</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">field</span><span class="o">;</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">NoArgsExample</span> <span class="n">example</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NoArgsExample</span><span class="o">();</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">NoArgsExample</span> <span class="n">example</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">NoArgsExample</span><span class="o">();</span>
         <span class="n">example</span><span class="o">.</span><span class="na">setField</span><span class="o">(</span><span class="s">"test"</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">example</span><span class="o">.</span><span class="na">field</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">example</span><span class="o">.</span><span class="na">field</span><span class="o">);</span>
     <span class="o">}</span>
-<span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p><strong>Result:</strong> 20 lines vs 16 lines</p>
 
@@ -852,23 +860,23 @@
 52
 </pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">lombok.NonNull</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ConstructorExample</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ConstructorExample</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">;</span>
     <span class="nd">@NonNull</span>
-    <span class="kd">private</span> <span class="n">T</span> <span class="n">description</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="no">T</span> <span class="n">description</span><span class="o">;</span>
 
-    <span class="kd">private</span> <span class="nf">ConstructorExample</span><span class="o">(</span><span class="n">T</span> <span class="n">description</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nf">ConstructorExample</span><span class="o">(</span><span class="no">T</span> <span class="n">description</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">if</span> <span class="o">(</span><span class="n">description</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
             <span class="k">throw</span> <span class="k">new</span> <span class="nf">NullPointerException</span><span class="o">(</span><span class="s">"description"</span><span class="o">);</span>
         <span class="k">this</span><span class="o">.</span><span class="na">description</span> <span class="o">=</span> <span class="n">description</span><span class="o">;</span>
     <span class="o">}</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">ConstructorExample</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">of</span><span class="o">(</span><span class="n">T</span> <span class="n">description</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="n">ConstructorExample</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;(</span><span class="n">description</span><span class="o">);</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nc">ConstructorExample</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nf">of</span><span class="o">(</span><span class="no">T</span> <span class="n">description</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nc">ConstructorExample</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;(</span><span class="n">description</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="nd">@java</span><span class="o">.</span><span class="na">beans</span><span class="o">.</span><span class="na">ConstructorProperties</span><span class="o">({</span> <span class="s">"x"</span><span class="o">,</span> <span class="s">"y"</span><span class="o">,</span> <span class="s">"description"</span> <span class="o">})</span>
-    <span class="kd">protected</span> <span class="nf">ConstructorExample</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">,</span> <span class="n">T</span> <span class="n">description</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="nf">ConstructorExample</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">,</span> <span class="no">T</span> <span class="n">description</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">if</span> <span class="o">(</span><span class="n">description</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
             <span class="k">throw</span> <span class="k">new</span> <span class="nf">NullPointerException</span><span class="o">(</span><span class="s">"description"</span><span class="o">);</span>
         <span class="k">this</span><span class="o">.</span><span class="na">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">;</span>
@@ -877,31 +885,32 @@
     <span class="o">}</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">OneArgExample</span> <span class="o">{</span>
-        <span class="kd">private</span> <span class="n">String</span> <span class="n">field</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="nc">String</span> <span class="n">field</span><span class="o">;</span>
 
-        <span class="kd">public</span> <span class="nf">OneArgExample</span><span class="o">(</span><span class="n">String</span> <span class="n">field</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="nf">OneArgExample</span><span class="o">(</span><span class="nc">String</span> <span class="n">field</span><span class="o">)</span> <span class="o">{</span>
             <span class="k">this</span><span class="o">.</span><span class="na">field</span> <span class="o">=</span> <span class="n">field</span><span class="o">;</span>
         <span class="o">}</span>
 
         <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
             <span class="k">return</span> <span class="s">"OneArgExample{"</span> <span class="o">+</span>
                     <span class="s">"field='"</span> <span class="o">+</span> <span class="n">field</span> <span class="o">+</span> <span class="sc">'\''</span> <span class="o">+</span>
                     <span class="sc">'}'</span><span class="o">;</span>
         <span class="o">}</span>
     <span class="o">}</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">OneArgExample</span> <span class="n">example</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OneArgExample</span><span class="o">(</span><span class="s">"test"</span><span class="o">);</span>
-        <span class="n">ConstructorExample</span> <span class="n">typeExample</span> <span class="o">=</span> <span class="n">ConstructorExample</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">example</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">typeExample</span><span class="o">.</span><span class="na">description</span><span class="o">);</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">OneArgExample</span> <span class="n">example</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">OneArgExample</span><span class="o">(</span><span class="s">"test"</span><span class="o">);</span>
+        <span class="nc">ConstructorExample</span> <span class="n">typeExample</span> <span class="o">=</span> <span class="nc">ConstructorExample</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">example</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">typeExample</span><span class="o">.</span><span class="na">description</span><span class="o">);</span>
 
-        <span class="n">ConstructorExample</span> <span class="n">allArgsExample</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ConstructorExample</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="n">example</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">allArgsExample</span><span class="o">.</span><span class="na">x</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">allArgsExample</span><span class="o">.</span><span class="na">y</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">allArgsExample</span><span class="o">.</span><span class="na">description</span><span class="o">);</span>
+        <span class="nc">ConstructorExample</span> <span class="n">allArgsExample</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ConstructorExample</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="n">example</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">allArgsExample</span><span class="o">.</span><span class="na">x</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">allArgsExample</span><span class="o">.</span><span class="na">y</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">allArgsExample</span><span class="o">.</span><span class="na">description</span><span class="o">);</span>
     <span class="o">}</span>
-<span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p style="margin-bottom:1em;">With Lombok:</p>
 
@@ -949,38 +958,39 @@
 <span class="kn">import</span> <span class="nn">lombok.ToString</span><span class="o">;</span>
 
 <span class="nd">@AllArgsConstructor</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ConstructorExample</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ConstructorExample</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">;</span>
     <span class="nd">@NonNull</span>
-    <span class="kd">private</span> <span class="n">T</span> <span class="n">description</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="no">T</span> <span class="n">description</span><span class="o">;</span>
 
-    <span class="kd">private</span> <span class="nf">ConstructorExample</span><span class="o">(</span><span class="n">T</span> <span class="n">description</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nf">ConstructorExample</span><span class="o">(</span><span class="no">T</span> <span class="n">description</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">if</span> <span class="o">(</span><span class="n">description</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
             <span class="k">throw</span> <span class="k">new</span> <span class="nf">NullPointerException</span><span class="o">(</span><span class="s">"description"</span><span class="o">);</span>
         <span class="k">this</span><span class="o">.</span><span class="na">description</span> <span class="o">=</span> <span class="n">description</span><span class="o">;</span>
     <span class="o">}</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">ConstructorExample</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">of</span><span class="o">(</span><span class="n">T</span> <span class="n">description</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="n">ConstructorExample</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;(</span><span class="n">description</span><span class="o">);</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nc">ConstructorExample</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nf">of</span><span class="o">(</span><span class="no">T</span> <span class="n">description</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nc">ConstructorExample</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;(</span><span class="n">description</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="nd">@RequiredArgsConstructor</span>
     <span class="nd">@ToString</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">OneArgExample</span> <span class="o">{</span>
-        <span class="nd">@NonNull</span> <span class="kd">private</span> <span class="n">String</span> <span class="n">field</span><span class="o">;</span>
+        <span class="nd">@NonNull</span> <span class="kd">private</span> <span class="nc">String</span> <span class="n">field</span><span class="o">;</span>
     <span class="o">}</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">OneArgExample</span> <span class="n">example</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OneArgExample</span><span class="o">(</span><span class="s">"test"</span><span class="o">);</span>
-        <span class="n">ConstructorExample</span> <span class="n">typeExample</span> <span class="o">=</span> <span class="n">ConstructorExample</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">example</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">typeExample</span><span class="o">.</span><span class="na">description</span><span class="o">);</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">OneArgExample</span> <span class="n">example</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">OneArgExample</span><span class="o">(</span><span class="s">"test"</span><span class="o">);</span>
+        <span class="nc">ConstructorExample</span> <span class="n">typeExample</span> <span class="o">=</span> <span class="nc">ConstructorExample</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">example</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">typeExample</span><span class="o">.</span><span class="na">description</span><span class="o">);</span>
 
-        <span class="n">ConstructorExample</span> <span class="n">allArgsExample</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ConstructorExample</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="n">example</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">allArgsExample</span><span class="o">.</span><span class="na">x</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">allArgsExample</span><span class="o">.</span><span class="na">y</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">allArgsExample</span><span class="o">.</span><span class="na">description</span><span class="o">);</span>
+        <span class="nc">ConstructorExample</span> <span class="n">allArgsExample</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ConstructorExample</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="n">example</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">allArgsExample</span><span class="o">.</span><span class="na">x</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">allArgsExample</span><span class="o">.</span><span class="na">y</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">allArgsExample</span><span class="o">.</span><span class="na">description</span><span class="o">);</span>
     <span class="o">}</span>
-<span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p><strong>Result:</strong> 52 lines vs 38 lines</p>
 
@@ -988,7 +998,7 @@
   <li><a href="https://projectlombok.org/features/Data.html">@Data</a></li>
 </ul>
 
-<p>@Data annotation is a convenient shortcut annotation that bundles the features of <code class="highlighter-rouge">@ToString</code>, <code class="highlighter-rouge">@EqualsAndHashCode</code>, <code class="highlighter-rouge">@Getter / @Setter</code> and <code class="highlighter-rouge">@RequiredArgsConstructor</code> together. I will use an example above to show you how it can further reduce:</p>
+<p>@Data annotation is a convenient shortcut annotation that bundles the features of <code class="language-plaintext highlighter-rouge">@ToString</code>, <code class="language-plaintext highlighter-rouge">@EqualsAndHashCode</code>, <code class="language-plaintext highlighter-rouge">@Getter / @Setter</code> and <code class="language-plaintext highlighter-rouge">@RequiredArgsConstructor</code> together. I will use an example above to show you how it can further reduce:</p>
 
 <p style="margin-bottom:1em;">Remember we had an example above in Lombok:</p>
 
@@ -1016,16 +1026,17 @@
 <span class="nd">@Setter</span>
 <span class="nd">@NoArgsConstructor</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">NoArgsExample</span> <span class="o">{</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">field</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">field</span><span class="o">;</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">NoArgsExample</span> <span class="n">example</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NoArgsExample</span><span class="o">();</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">NoArgsExample</span> <span class="n">example</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">NoArgsExample</span><span class="o">();</span>
         <span class="n">example</span><span class="o">.</span><span class="na">setField</span><span class="o">(</span><span class="s">"test"</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">example</span><span class="o">.</span><span class="na">field</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">example</span><span class="o">.</span><span class="na">field</span><span class="o">);</span>
     <span class="o">}</span>
-<span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
-<p style="margin-bottom:1em;">Now if we used, <code class="highlighter-rouge">@Data</code> instead,</p>
+<p style="margin-bottom:1em;">Now if we used, <code class="language-plaintext highlighter-rouge">@Data</code> instead,</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
@@ -1041,14 +1052,15 @@
 </pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">lombok.Data</span><span class="o">;</span>
 
 <span class="nd">@Data</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">NoArgsExample</span> <span class="o">{</span>
-    <span class="n">String</span> <span class="n">field</span><span class="o">;</span>
+    <span class="nc">String</span> <span class="n">field</span><span class="o">;</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">NoArgsExample</span> <span class="n">example</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NoArgsExample</span><span class="o">();</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">NoArgsExample</span> <span class="n">example</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">NoArgsExample</span><span class="o">();</span>
         <span class="n">example</span><span class="o">.</span><span class="na">setField</span><span class="o">(</span><span class="s">"test"</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">example</span><span class="o">.</span><span class="na">getField</span><span class="o">());</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">example</span><span class="o">.</span><span class="na">getField</span><span class="o">());</span>
     <span class="o">}</span>
-<span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p><strong>Result:</strong> 16 lines further reduced to 11 lines of code</p>
 
@@ -1158,7 +1170,7 @@
           <div class="author row">
             <img class="img-circle col-xs-4 col-sm-3 col-md-2" src="/img/timeline/IMG_20160124_103417.jpg" alt="Me" />
             <p class="col-xs-8 col-sm-9 col-md-10" style="padding-top: 1.3em;">
-            I am a passionate software developer working in Downtown, Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
+            I am a passionate programmer working in Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
             <a href="javascript:location='mailto:\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"><script type="text/javascript">document.write('\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
             </p>
           </div>

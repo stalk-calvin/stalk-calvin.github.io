@@ -250,7 +250,7 @@
 
 <p>Here is probably the most important change featured in Java 9, The Java Platform Module System. It is developed under Project Jigsaw which comes to us with the specific goal: to provide reliable configuration and strong flexible encapsulation. Currently, every public class can be accessed by any other public classes on the classpath, leading to inadvertent usage of classes that weren’t meant to be public API. Furthermore, the “classpath hell” itself is problematic because it assumes that all JARs are available and non-duplicated. By providing a reliable configuration, we can avoid using this CLASSPATH mechanism to load the configurations. Strong encapsulation means that a class would recognize which public types are used appropriately. With these changes, it provides a scalable platform for improved performance.</p>
 
-<p>Overall what this means at the end of the day is the new JDK has been divided into a set of modules. Programmers can now combine these JDK modules into a variety of configurations meaning the programmers are getting what they really need. They can run <code class="highlighter-rouge">java --list-modules</code> to see the list of available modules. <code class="highlighter-rouge">java.base</code> is probably one of the most important modules in the list. It includes all the libraries we are used to using like java.util, java.lang, etc.</p>
+<p>Overall what this means at the end of the day is the new JDK has been divided into a set of modules. Programmers can now combine these JDK modules into a variety of configurations meaning the programmers are getting what they really need. They can run <code class="language-plaintext highlighter-rouge">java --list-modules</code> to see the list of available modules. <code class="language-plaintext highlighter-rouge">java.base</code> is probably one of the most important modules in the list. It includes all the libraries we are used to using like java.util, java.lang, etc.</p>
 
 <p>So why do we need to modularize? It allows us to build a flexible (by loose coupling) and scalable (small devices to a cloud environment) application which also fairly improves the performance and security as well.</p>
 
@@ -285,18 +285,18 @@
 
 <p>Earlier Java using JNA:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">CLibrary</span> <span class="kd">extends</span> <span class="n">Library</span> <span class="o">{</span>
-<span class="n">CLibrary</span> <span class="n">INSTANCE</span> <span class="o">=</span> <span class="o">(</span><span class="n">CLibrary</span><span class="o">)</span><span class="n">Native</span><span class="o">.</span><span class="na">loadLibrary</span><span class="o">(</span><span class="s">"c"</span><span class="o">,</span> <span class="n">CLibrary</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">CLibrary</span> <span class="kd">extends</span> <span class="nc">Library</span> <span class="o">{</span>
+<span class="nc">CLibrary</span> <span class="no">INSTANCE</span> <span class="o">=</span> <span class="o">(</span><span class="nc">CLibrary</span><span class="o">)</span><span class="nc">Native</span><span class="o">.</span><span class="na">loadLibrary</span><span class="o">(</span><span class="s">"c"</span><span class="o">,</span> <span class="nc">CLibrary</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
 <span class="kt">int</span> <span class="nf">getpid</span> <span class="o">();</span>
 <span class="o">}</span></code></pre></figure>
 
 <p>then use the following call to get the PID:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">pid</span> <span class="o">=</span> <span class="n">CLibrary</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">.</span><span class="na">getpid</span><span class="o">();</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">pid</span> <span class="o">=</span> <span class="nc">CLibrary</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">.</span><span class="na">getpid</span><span class="o">();</span></code></pre></figure>
 
 <p>However, in Java 9, we can use ProcessHandle class which makes everything simpler.</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">long</span> <span class="n">pid</span> <span class="o">=</span> <span class="n">ProcessHandle</span><span class="o">.</span><span class="na">current</span><span class="o">().</span><span class="na">getPid</span><span class="o">();</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">long</span> <span class="n">pid</span> <span class="o">=</span> <span class="nc">ProcessHandle</span><span class="o">.</span><span class="na">current</span><span class="o">().</span><span class="na">getPid</span><span class="o">();</span></code></pre></figure>
 
 <h2 style="margin-top: 35px;" id="4-http2-client-incubator">4. HTTP/2 Client (Incubator)</h2>
 
@@ -313,9 +313,9 @@
 
 <p>Anyways, HTTP/2 brings a better performance overall. I will cover the HTTP/2 topic in the future blog in detail.</p>
 
-<p>In JDK 9, this is handled through HttpClient class which handles creation and send requests. This is sitting in the package of <code class="highlighter-rouge">jdk.incubator</code>. The word incubator is used because the API and implementation will not be part of Java SE. The package will not be loaded by default at compile- or run-time. With the latest JDK 9, You will have to load it separately using the –add-modules command-line option to request that an incubator module is resolved, like this:</p>
+<p>In JDK 9, this is handled through HttpClient class which handles creation and send requests. This is sitting in the package of <code class="language-plaintext highlighter-rouge">jdk.incubator</code>. The word incubator is used because the API and implementation will not be part of Java SE. The package will not be loaded by default at compile- or run-time. With the latest JDK 9, You will have to load it separately using the –add-modules command-line option to request that an incubator module is resolved, like this:</p>
 
-<p><code class="highlighter-rouge">java -jar --add-modules jdk.incubator.httpclient sample-run.jar</code></p>
+<p><code class="language-plaintext highlighter-rouge">java -jar --add-modules jdk.incubator.httpclient sample-run.jar</code></p>
 
 <h2 style="margin-top: 35px;" id="conclusion">Conclusion</h2>
 
@@ -425,7 +425,7 @@
           <div class="author row">
             <img class="img-circle col-xs-4 col-sm-3 col-md-2" src="/img/timeline/IMG_20160124_103417.jpg" alt="Me" />
             <p class="col-xs-8 col-sm-9 col-md-10" style="padding-top: 1.3em;">
-            I am a passionate software developer working in Downtown, Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
+            I am a passionate programmer working in Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
             <a href="javascript:location='mailto:\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"><script type="text/javascript">document.write('\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
             </p>
           </div>

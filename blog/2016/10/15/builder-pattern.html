@@ -222,7 +222,7 @@
 
           <h3 style="clear:left;" id="builder-factory-pattern-huh">Builder? Factory? Pattern? huh?</h3>
 
-<p>Builder pattern is an object creational software design pattern. This pattern is often compared with “Factory” method pattern because factory method is also an object creational DP. The key difference is how the object is being created though. For example with the factory DP, <code class="highlighter-rouge">createCar</code> might return <code class="highlighter-rouge">Honda</code> or <code class="highlighter-rouge">Audi</code>. To add attributes, you will need to make additional calls such as <code class="highlighter-rouge">setColor</code>, <code class="highlighter-rouge">setEngine</code> etc on the object returned. Now with the Builder pattern, you could be specific about the object all in one statement, such as 4 all-wheel drive red <code class="highlighter-rouge">Honda</code> with v6 engine etc. Basically, factory method pattern would create an object via <code class="highlighter-rouge">createCar</code> VS Builder pattern has the ability to create an object by adding granularity to the object by applying chains of function calls to the object being created.</p>
+<p>Builder pattern is an object creational software design pattern. This pattern is often compared with “Factory” method pattern because factory method is also an object creational DP. The key difference is how the object is being created though. For example with the factory DP, <code class="language-plaintext highlighter-rouge">createCar</code> might return <code class="language-plaintext highlighter-rouge">Honda</code> or <code class="language-plaintext highlighter-rouge">Audi</code>. To add attributes, you will need to make additional calls such as <code class="language-plaintext highlighter-rouge">setColor</code>, <code class="language-plaintext highlighter-rouge">setEngine</code> etc on the object returned. Now with the Builder pattern, you could be specific about the object all in one statement, such as 4 all-wheel drive red <code class="language-plaintext highlighter-rouge">Honda</code> with v6 engine etc. Basically, factory method pattern would create an object via <code class="language-plaintext highlighter-rouge">createCar</code> VS Builder pattern has the ability to create an object by adding granularity to the object by applying chains of function calls to the object being created.</p>
 
 <p>Here is a comparison of diagrams from the wiki for both pattern, which could give you a big picture of how they work.</p>
 
@@ -236,40 +236,40 @@
 
 <h3 id="with-factory-methods-1">With factory methods:</h3>
 
-<p>An example is from <a href="https://en.wikipedia.org/wiki/Factory_method_pattern#Java">Wikipedia</a> that matches with the diagram above exception <code class="highlighter-rouge">OrdinaryMazeGame</code> and <code class="highlighter-rouge">OrdinaryRoom</code> are added to provide you with the picture on how multiple different instances are being created from a generic template.</p>
+<p>An example is from <a href="https://en.wikipedia.org/wiki/Factory_method_pattern#Java">Wikipedia</a> that matches with the diagram above exception <code class="language-plaintext highlighter-rouge">OrdinaryMazeGame</code> and <code class="language-plaintext highlighter-rouge">OrdinaryRoom</code> are added to provide you with the picture on how multiple different instances are being created from a generic template.</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">MazeGame</span> <span class="o">{</span>
-    <span class="kd">private</span> <span class="kd">final</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Room</span><span class="o">&gt;</span> <span class="n">rooms</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Room</span><span class="o">&gt;</span> <span class="n">rooms</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
 
     <span class="kd">public</span> <span class="nf">MazeGame</span><span class="o">()</span> <span class="o">{</span>
-        <span class="n">Room</span> <span class="n">room1</span> <span class="o">=</span> <span class="n">makeRoom</span><span class="o">();</span>
-        <span class="n">Room</span> <span class="n">room2</span> <span class="o">=</span> <span class="n">makeRoom</span><span class="o">();</span>
+        <span class="nc">Room</span> <span class="n">room1</span> <span class="o">=</span> <span class="n">makeRoom</span><span class="o">();</span>
+        <span class="nc">Room</span> <span class="n">room2</span> <span class="o">=</span> <span class="n">makeRoom</span><span class="o">();</span>
         <span class="n">room1</span><span class="o">.</span><span class="na">connect</span><span class="o">(</span><span class="n">room2</span><span class="o">);</span>
         <span class="n">rooms</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">room1</span><span class="o">);</span>
         <span class="n">rooms</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">room2</span><span class="o">);</span>
     <span class="o">}</span>
 
-    <span class="kd">abstract</span> <span class="kd">protected</span> <span class="n">Room</span> <span class="nf">makeRoom</span><span class="o">();</span>
+    <span class="kd">abstract</span> <span class="kd">protected</span> <span class="nc">Room</span> <span class="nf">makeRoom</span><span class="o">();</span>
 <span class="o">}</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MagicMazeGame</span> <span class="kd">extends</span> <span class="n">MazeGame</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MagicMazeGame</span> <span class="kd">extends</span> <span class="nc">MazeGame</span> <span class="o">{</span>
     <span class="nd">@Override</span>
-    <span class="kd">protected</span> <span class="n">Room</span> <span class="nf">makeRoom</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="nc">Room</span> <span class="nf">makeRoom</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="k">new</span> <span class="nf">MagicRoom</span><span class="o">();</span> 
     <span class="o">}</span>
 <span class="o">}</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">OrdinaryMazeGame</span> <span class="kd">extends</span> <span class="n">MazeGame</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">OrdinaryMazeGame</span> <span class="kd">extends</span> <span class="nc">MazeGame</span> <span class="o">{</span>
     <span class="nd">@Override</span>
-    <span class="kd">protected</span> <span class="n">Room</span> <span class="nf">makeRoom</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="nc">Room</span> <span class="nf">makeRoom</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="k">new</span> <span class="nf">OrdinaryRoom</span><span class="o">();</span> 
     <span class="o">}</span>
 <span class="o">}</span>
 
-<span class="n">MazeGame</span> <span class="n">ordinaryGame</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OrdinaryMazeGame</span><span class="o">();</span>
-<span class="n">MazeGame</span> <span class="n">magicGame</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MagicMazeGame</span><span class="o">();</span></code></pre></figure>
+<span class="nc">MazeGame</span> <span class="n">ordinaryGame</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">OrdinaryMazeGame</span><span class="o">();</span>
+<span class="nc">MazeGame</span> <span class="n">magicGame</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MagicMazeGame</span><span class="o">();</span></code></pre></figure>
 
-<p>Watch closely how it makes an <code class="highlighter-rouge">ordinaryGame</code> vs <code class="highlighter-rouge">magicGame</code> objects which both will eventually inherit from MazeGame. To give you the full picture, <code class="highlighter-rouge">OrdinaryMazeGame</code> will create 2 rooms with <code class="highlighter-rouge">OrdinaryRoom</code> objects in the <code class="highlighter-rouge">List&lt;Room&gt; rooms</code> created by, <code class="highlighter-rouge">MazeGame</code>. Similarly <code class="highlighter-rouge">MagicMazeGame</code> will create 2 rooms with <code class="highlighter-rouge">MagicRoom</code> this time created by the parent, <code class="highlighter-rouge">MazeGame</code>. Like a real Factory, the task it does is just to construct objects.</p>
+<p>Watch closely how it makes an <code class="language-plaintext highlighter-rouge">ordinaryGame</code> vs <code class="language-plaintext highlighter-rouge">magicGame</code> objects which both will eventually inherit from MazeGame. To give you the full picture, <code class="language-plaintext highlighter-rouge">OrdinaryMazeGame</code> will create 2 rooms with <code class="language-plaintext highlighter-rouge">OrdinaryRoom</code> objects in the <code class="language-plaintext highlighter-rouge">List&lt;Room&gt; rooms</code> created by, <code class="language-plaintext highlighter-rouge">MazeGame</code>. Similarly <code class="language-plaintext highlighter-rouge">MagicMazeGame</code> will create 2 rooms with <code class="language-plaintext highlighter-rouge">MagicRoom</code> this time created by the parent, <code class="language-plaintext highlighter-rouge">MazeGame</code>. Like a real Factory, the task it does is just to construct objects.</p>
 
 <h4 id="with-builder-pattern-1">With Builder pattern:</h4>
 
@@ -302,32 +302,32 @@
             <span class="k">this</span><span class="o">.</span><span class="na">servings</span> <span class="o">=</span> <span class="n">servings</span><span class="o">;</span>
         <span class="o">}</span>
         
-        <span class="kd">public</span> <span class="n">Builder</span> <span class="nf">calories</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="nc">Builder</span> <span class="nf">calories</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">calories</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
             <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
         <span class="o">}</span>
         
-        <span class="kd">public</span> <span class="n">Builder</span> <span class="nf">fat</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="nc">Builder</span> <span class="nf">fat</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">fat</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
             <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
         <span class="o">}</span>
         
-        <span class="kd">public</span> <span class="n">Builder</span> <span class="nf">carbohydrate</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="nc">Builder</span> <span class="nf">carbohydrate</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">carbohydrate</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
             <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
         <span class="o">}</span>
         
-        <span class="kd">public</span> <span class="n">Builder</span> <span class="nf">sodium</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="nc">Builder</span> <span class="nf">sodium</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">sodium</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
             <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
         <span class="o">}</span>
         
-        <span class="kd">public</span> <span class="n">NutritionFacts</span> <span class="nf">build</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="nc">NutritionFacts</span> <span class="nf">build</span><span class="o">()</span> <span class="o">{</span>
             <span class="k">return</span> <span class="k">new</span> <span class="nf">NutritionFacts</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
         <span class="o">}</span>
     <span class="o">}</span>
     
-    <span class="kd">private</span> <span class="nf">NutritionFacts</span><span class="o">(</span><span class="n">Builder</span> <span class="n">builder</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nf">NutritionFacts</span><span class="o">(</span><span class="nc">Builder</span> <span class="n">builder</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">servingSize</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">servingSize</span><span class="o">;</span>
         <span class="n">servings</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">servings</span><span class="o">;</span>
         <span class="n">calories</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">calories</span><span class="o">;</span>
@@ -336,61 +336,61 @@
         <span class="n">carbohydrate</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">carbohydrate</span><span class="o">;</span>
     <span class="o">}</span>
     
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">NutritionFacts</span> <span class="n">cocaCola</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NutritionFacts</span><span class="o">.</span><span class="na">Builder</span><span class="o">(</span><span class="mi">240</span><span class="o">,</span> <span class="mi">8</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">NutritionFacts</span> <span class="n">cocaCola</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">NutritionFacts</span><span class="o">.</span><span class="na">Builder</span><span class="o">(</span><span class="mi">240</span><span class="o">,</span> <span class="mi">8</span><span class="o">)</span>
                 <span class="o">.</span><span class="na">calories</span><span class="o">(</span><span class="mi">100</span><span class="o">).</span><span class="na">sodium</span><span class="o">(</span><span class="mi">35</span><span class="o">).</span><span class="na">carbohydrate</span><span class="o">(</span><span class="mi">27</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
-<p>With the builder, it would be possible to do a chain-call, like <code class="highlighter-rouge">new NutritionFacts.Builder(240, 8).calories...</code> etc, which would help greatly in terms of readability. From my experience with the Builder, this is the most important factor, “readability”: they carry “names” to what/how you define the object. Let me just give you an example that will say everything about what I just said. Say you have a constructor, <code class="highlighter-rouge">new Person(true, false, false, "Samsung");</code> vs with Builder, `new Person.Builder().hasBeard(true).isMarried(false).isDisabled(false). You know what I mean… Oh, there is another point I’d like to mention about the Builder. I recently came across a class with inheritance where I wanted to have the builder relationship. I actually ended up using “super” command. There is probably a better way to handle this in Generic but I wasn’t successful with using generics so I ended up sticking with “super” calls. Anyways, let me show you how I came across the Builder inheritance, below is just an illustration of what happened:</p>
+<p>With the builder, it would be possible to do a chain-call, like <code class="language-plaintext highlighter-rouge">new NutritionFacts.Builder(240, 8).calories...</code> etc, which would help greatly in terms of readability. From my experience with the Builder, this is the most important factor, “readability”: they carry “names” to what/how you define the object. Let me just give you an example that will say everything about what I just said. Say you have a constructor, <code class="language-plaintext highlighter-rouge">new Person(true, false, false, "Samsung");</code> vs with Builder, `new Person.Builder().hasBeard(true).isMarried(false).isDisabled(false). You know what I mean… Oh, there is another point I’d like to mention about the Builder. I recently came across a class with inheritance where I wanted to have the builder relationship. I actually ended up using “super” command. There is probably a better way to handle this in Generic but I wasn’t successful with using generics so I ended up sticking with “super” calls. Anyways, let me show you how I came across the Builder inheritance, below is just an illustration of what happened:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Teacher</span> <span class="kd">extends</span> <span class="n">Employee</span> <span class="o">{</span>
-    <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
-    <span class="kd">public</span> <span class="nf">Employee</span><span class="o">(</span><span class="n">Builder</span> <span class="n">builder</span><span class="o">)</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Teacher</span> <span class="kd">extends</span> <span class="nc">Employee</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nf">Employee</span><span class="o">(</span><span class="nc">Builder</span> <span class="n">builder</span><span class="o">)</span> <span class="o">{</span>
         <span class="kd">super</span><span class="o">(</span><span class="n">builder</span><span class="o">)</span>
         <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
     <span class="o">}</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Builder</span> <span class="o">{</span>
-        <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
-        <span class="kd">public</span> <span class="n">Builder</span> <span class="nf">name</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+        <span class="kd">public</span> <span class="nc">Builder</span> <span class="nf">name</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
             <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
             <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
         <span class="o">}</span>
 
-        <span class="kd">public</span> <span class="n">Employee</span> <span class="nf">build</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="nc">Employee</span> <span class="nf">build</span><span class="o">()</span> <span class="o">{</span>
             <span class="k">return</span> <span class="k">new</span> <span class="nf">Employee</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
         <span class="o">}</span>
 
         <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
             <span class="k">return</span> <span class="s">"Employee.Builder = "</span> <span class="o">+</span> <span class="s">"Employee name: "</span> <span class="o">+</span> <span class="n">name</span><span class="o">;</span>
         <span class="o">}</span>
     <span class="o">}</span>
 <span class="o">}</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MathTeacher</span> <span class="kd">extends</span> <span class="n">Teacher</span> <span class="o">{</span>
-     <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">type</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MathTeacher</span> <span class="kd">extends</span> <span class="nc">Teacher</span> <span class="o">{</span>
+     <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">type</span><span class="o">;</span>
      
-     <span class="kd">public</span> <span class="nf">Teacher</span><span class="o">(</span><span class="n">Builder</span> <span class="n">builder</span><span class="o">)</span> <span class="o">{</span>
+     <span class="kd">public</span> <span class="nf">Teacher</span><span class="o">(</span><span class="nc">Builder</span> <span class="n">builder</span><span class="o">)</span> <span class="o">{</span>
          <span class="kd">super</span><span class="o">(</span><span class="n">builder</span><span class="o">);</span>
          <span class="k">this</span><span class="o">.</span><span class="na">type</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">type</span><span class="o">;</span>
      <span class="o">}</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Builder</span> <span class="kd">extends</span> <span class="n">Employee</span><span class="o">.</span><span class="na">Builder</span> <span class="o">{</span>
-        <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">type</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Builder</span> <span class="kd">extends</span> <span class="nc">Employee</span><span class="o">.</span><span class="na">Builder</span> <span class="o">{</span>
+        <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">type</span><span class="o">;</span>
 
-        <span class="kd">public</span> <span class="nf">Builder</span><span class="o">(</span><span class="n">String</span> <span class="n">type</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="nf">Builder</span><span class="o">(</span><span class="nc">String</span> <span class="n">type</span><span class="o">)</span> <span class="o">{</span>
             <span class="k">this</span><span class="o">.</span><span class="na">type</span> <span class="o">=</span> <span class="n">type</span><span class="o">;</span>
         <span class="o">}</span>
 
-        <span class="kd">public</span> <span class="n">Builder</span> <span class="nf">name</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="nc">Builder</span> <span class="nf">name</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
             <span class="kd">super</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
             <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
         <span class="o">}</span>
     <span class="o">}</span></code></pre></figure>
 
-<p>Then, let’s say <code class="highlighter-rouge">Employee</code> class <code class="highlighter-rouge">implements Person</code>. Now, you can apply Composite design pattern: <code class="highlighter-rouge">Person p;</code> as <code class="highlighter-rouge">p=new MathTeacher.Builder("calculus").name("Jane")</code> or <code class="highlighter-rouge">p=new Teacher.Builder().name("Dan")</code> etc… Anyways, Builder is powerful and very flexible on what and how you would like to create an object. There is only one disadvantage with the Builder. As you can see from above examples, you will end up introducing more lines of code. However, I prefer much in readability over the lines of code. Using the Builder will organize your constructor well and defined.</p>
+<p>Then, let’s say <code class="language-plaintext highlighter-rouge">Employee</code> class <code class="language-plaintext highlighter-rouge">implements Person</code>. Now, you can apply Composite design pattern: <code class="language-plaintext highlighter-rouge">Person p;</code> as <code class="language-plaintext highlighter-rouge">p=new MathTeacher.Builder("calculus").name("Jane")</code> or <code class="language-plaintext highlighter-rouge">p=new Teacher.Builder().name("Dan")</code> etc… Anyways, Builder is powerful and very flexible on what and how you would like to create an object. There is only one disadvantage with the Builder. As you can see from above examples, you will end up introducing more lines of code. However, I prefer much in readability over the lines of code. Using the Builder will organize your constructor well and defined.</p>
 
 
           
@@ -496,7 +496,7 @@
           <div class="author row">
             <img class="img-circle col-xs-4 col-sm-3 col-md-2" src="/img/timeline/IMG_20160124_103417.jpg" alt="Me" />
             <p class="col-xs-8 col-sm-9 col-md-10" style="padding-top: 1.3em;">
-            I am a passionate software developer working in Downtown, Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
+            I am a passionate programmer working in Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
             <a href="javascript:location='mailto:\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"><script type="text/javascript">document.write('\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
             </p>
           </div>

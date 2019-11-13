@@ -234,36 +234,36 @@
 
 <p>Here is a little background on myself with version control system. I remember using <a href="https://en.wikipedia.org/wiki/Concurrent_Versions_System" target="_blank" rel="noopener noreferrer">CVS</a> (Concurrent Versions System) as my first repository back in mid-2000 in university. I literally had a very tiny knowledge of what the repository is and why it is required. When I joined my first software company, I started using the <a href="https://en.wikipedia.org/wiki/Apache_Subversion" target="_blank" rel="noopener noreferrer">SVN</a> (Apache Subversion) extensively. When I used it, it was very flexible in terms of how SVN generates diffs and handling the merges of my codes. I genuinely had an excellent workflow by enforcing the branching per issues and managing the trunk as the latest code setup. I was quite satisfied with it until I was exposed to <a href="https://en.wikipedia.org/wiki/Git" target="_blank" rel="noopener noreferrer">GIT</a>.</p>
 
-<p>At first, I wasn’t sure whether I am going to get accustomed to GIT partially because I was already very familiar with SVN and there wasn’t much of a motivation to jump off the SVN ship. I eventually moved onto GIT as it was becoming quite popular. After a few years of using GIT, I love it, #nosarcasm. It is not only faster in general, but its fully distributed meaning there is no centralized server to handle the code handling. So when you are coding, commits are very tangible and malleable to the local machines. This is where the <code class="highlighter-rouge">rebase</code> in Git comes really handy. Rebase basically is recreating your work of one branch onto another (or the same). Rebase is really powerful and there are a couple of really handy tasks you can do with rebase. I would like to share some of the daily <code class="highlighter-rouge">rebase</code> tasks I often do.</p>
+<p>At first, I wasn’t sure whether I am going to get accustomed to GIT partially because I was already very familiar with SVN and there wasn’t much of a motivation to jump off the SVN ship. I eventually moved onto GIT as it was becoming quite popular. After a few years of using GIT, I love it, #nosarcasm. It is not only faster in general, but its fully distributed meaning there is no centralized server to handle the code handling. So when you are coding, commits are very tangible and malleable to the local machines. This is where the <code class="language-plaintext highlighter-rouge">rebase</code> in Git comes really handy. Rebase basically is recreating your work of one branch onto another (or the same). Rebase is really powerful and there are a couple of really handy tasks you can do with rebase. I would like to share some of the daily <code class="language-plaintext highlighter-rouge">rebase</code> tasks I often do.</p>
 
-<p><strong><em>NOTE</em></strong>: When I am explaining below, I would assume you are already familiar with the <a href="https://jeffkreeftmeijer.com/git-flow/" target="_blank" rel="noopener noreferrer">GIT flow</a>. Also please note as it is important. Rebase means “copy commits, then try to forget the originals and use the copies instead”. <strong>This means “making a new history entirely”</strong>. This is the reason why you most likely need a <code class="highlighter-rouge">--force</code> during your push to the remote server. It could be a little annoying for other people to manage their repository linked to the branch I rebased. Since the new commits (after rebase) will have different hash, checking out the latest code by the traditional <code class="highlighter-rouge">git pull</code> is not going to work well. This is why it is best to stay away from rebasing when you are working with multiple people on the same branch. The issue branch is almost always owned and ran by me. So this problem rarely happens to me at least.</p>
+<p><strong><em>NOTE</em></strong>: When I am explaining below, I would assume you are already familiar with the <a href="https://jeffkreeftmeijer.com/git-flow/" target="_blank" rel="noopener noreferrer">GIT flow</a>. Also please note as it is important. Rebase means “copy commits, then try to forget the originals and use the copies instead”. <strong>This means “making a new history entirely”</strong>. This is the reason why you most likely need a <code class="language-plaintext highlighter-rouge">--force</code> during your push to the remote server. It could be a little annoying for other people to manage their repository linked to the branch I rebased. Since the new commits (after rebase) will have different hash, checking out the latest code by the traditional <code class="language-plaintext highlighter-rouge">git pull</code> is not going to work well. This is why it is best to stay away from rebasing when you are working with multiple people on the same branch. The issue branch is almost always owned and ran by me. So this problem rarely happens to me at least.</p>
 
 <h2 style="margin-top: 10%" id="1-fast-forward-merge">1. Fast-forward merge</h2>
 
-<p style="margin-bottom: 2%">Rebase is very handy when you try to merge stuffs. Here is an example using the <code class="highlighter-rouge">feature</code> branch and the <code class="highlighter-rouge">master</code> branch. Let’s say you have a <code class="highlighter-rouge">master</code> branch with X commit point and created a feature branch called <code class="highlighter-rouge">feature</code>. Here is how master branch looks like currently:</p>
+<p style="margin-bottom: 2%">Rebase is very handy when you try to merge stuffs. Here is an example using the <code class="language-plaintext highlighter-rouge">feature</code> branch and the <code class="language-plaintext highlighter-rouge">master</code> branch. Let’s say you have a <code class="language-plaintext highlighter-rouge">master</code> branch with X commit point and created a feature branch called <code class="language-plaintext highlighter-rouge">feature</code>. Here is how master branch looks like currently:</p>
 
 <table class="image" style="margin-top:1%;">
 <caption class="custom" align="bottom"></caption>
 <tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/git_rebase/git_rebase_fast_forward1.png" alt="" /></td></tr>
 </table>
 
-<p style="margin-bottom: 2%">I’ve created a <code class="highlighter-rouge">feature</code> branch from this commit and made a few commits on top of it, like below:</p>
+<p style="margin-bottom: 2%">I’ve created a <code class="language-plaintext highlighter-rouge">feature</code> branch from this commit and made a few commits on top of it, like below:</p>
 
 <table class="image" style="margin-top:1%;">
 <caption class="custom" align="bottom"></caption>
 <tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/git_rebase/git_rebase_fast_forward2.png" alt="" /></td></tr>
 </table>
 
-<p style="margin-bottom: 2%">Let’s make some complication by adding a commit in the <code class="highlighter-rouge">master</code> branch after this <code class="highlighter-rouge">feature</code> branch was created:</p>
+<p style="margin-bottom: 2%">Let’s make some complication by adding a commit in the <code class="language-plaintext highlighter-rouge">master</code> branch after this <code class="language-plaintext highlighter-rouge">feature</code> branch was created:</p>
 
 <table class="image" style="margin-top:1%;">
 <caption class="custom" align="bottom"></caption>
 <tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/git_rebase/git_rebase_fast_forward.png" alt="" /></td></tr>
 </table>
 
-<p>We now have few commits in <code class="highlighter-rouge">feature</code> branch but that does not have all the changes in latest <code class="highlighter-rouge">master</code>.</p>
+<p>We now have few commits in <code class="language-plaintext highlighter-rouge">feature</code> branch but that does not have all the changes in latest <code class="language-plaintext highlighter-rouge">master</code>.</p>
 
-<p>To put the changes in one place, we have choices between to <code class="highlighter-rouge">merge</code> or <code class="highlighter-rouge">rebase</code>.</p>
+<p>To put the changes in one place, we have choices between to <code class="language-plaintext highlighter-rouge">merge</code> or <code class="language-plaintext highlighter-rouge">rebase</code>.</p>
 
 <ol style="padding-left: 1.5em;list-style: decimal; margin: 0;">
 <li style="padding-bottom: 1em;"><strong>Using the command <em>"merge"</em> to merge</strong><br /><br />
@@ -441,7 +441,7 @@ However, notice there is no dummy commit in the <code class="highlighter-rouge">
 <tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/git_rebase/git_rebase_squash.png" alt="" /></td></tr>
 </table>
 
-<p style="margin-bottom: 2%">When you save and quit, you will be prompted to edit commit message, here you can give your reasons to whats being combined or simply keep the oldest commit message. After editing the message, you can see your <code class="highlighter-rouge">git log</code> is displayed in one commit:</p>
+<p style="margin-bottom: 2%">When you save and quit, you will be prompted to edit commit message, here you can give your reasons to whats being combined or simply keep the oldest commit message. After editing the message, you can see your <code class="language-plaintext highlighter-rouge">git log</code> is displayed in one commit:</p>
 
 <table class="image" style="margin-top:1%;">
 <caption class="custom" align="bottom"></caption>
@@ -470,7 +470,7 @@ However, notice there is no dummy commit in the <code class="highlighter-rouge">
 <tr><td><img style="border:0;" src="https://stalk-calvin.github.io/img/git_rebase/git_rebase_delete_24.png" alt="" /></td></tr>
 </table>
 
-<p>After removing those lines, save and quit. You might run into a couple of conflicts in between, resolve them, hit <code class="highlighter-rouge">git rebase --acontinue</code> to complete those tasks.</p>
+<p>After removing those lines, save and quit. You might run into a couple of conflicts in between, resolve them, hit <code class="language-plaintext highlighter-rouge">git rebase --acontinue</code> to complete those tasks.</p>
 
 <p style="margin-bottom: 2%">Once you have done rebasing, those commits should be gone:</p>
 
@@ -481,7 +481,7 @@ However, notice there is no dummy commit in the <code class="highlighter-rouge">
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>These rebase tasks are some of common ones I do daily to make commits happy. Obviously, you are going to get familiar a lot quicker if you start using GIT itself. In addition, there are a couple more rebase tasks you can do such as re-ordering commits, separate out portion of code into a separate commit, “fixup”, or even exec where you can run command within GIT commit. Also, I’d like to add that <code class="highlighter-rouge">git commit --amend</code> is really just a rebase of the most recent commit. If you know the power of amend, extend the power to all the other commits!</p>
+<p>These rebase tasks are some of common ones I do daily to make commits happy. Obviously, you are going to get familiar a lot quicker if you start using GIT itself. In addition, there are a couple more rebase tasks you can do such as re-ordering commits, separate out portion of code into a separate commit, “fixup”, or even exec where you can run command within GIT commit. Also, I’d like to add that <code class="language-plaintext highlighter-rouge">git commit --amend</code> is really just a rebase of the most recent commit. If you know the power of amend, extend the power to all the other commits!</p>
 
 
           
@@ -587,7 +587,7 @@ However, notice there is no dummy commit in the <code class="highlighter-rouge">
           <div class="author row">
             <img class="img-circle col-xs-4 col-sm-3 col-md-2" src="/img/timeline/IMG_20160124_103417.jpg" alt="Me" />
             <p class="col-xs-8 col-sm-9 col-md-10" style="padding-top: 1.3em;">
-            I am a passionate software developer working in Downtown, Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
+            I am a passionate programmer working in Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
             <a href="javascript:location='mailto:\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"><script type="text/javascript">document.write('\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
             </p>
           </div>
