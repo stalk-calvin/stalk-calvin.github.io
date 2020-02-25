@@ -1,0 +1,560 @@
+
+<!-- Post Layout Start -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+   <!--
+ ============================================
+ ╔═╗┌┬┐┌─┐┬  ┬┌─     _____     __     _
+ ╚═╗ │ ├─┤│  ├┴┐    / ___/__ _/ /  __(_)__
+ ╚═╝ ┴ ┴ ┴┴─┘┴ ┴   / /__/ _ `/ / |/ / / _ \
+                   \___/\_,_/_/|___/_/_//_/
+ ============================================
+ Author: Calvin Lee
+ Email: stalk.calvin@gmail.com
+ Profile: https://keybase.io/stalkcalvin
+ ============================================
+ -->
+<head>
+  
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fungorithms">
+  <meta name="author" content="Calvin Lee">
+  <meta name="keywords" content="calvin, lee, personal, blog, beer, fitness, diet, computer, science, programming, software, engineer">
+  <meta property="fb:app_id" content="140805279842677" />
+  <meta property="og:title" content="Dutch national flag problem" />
+  <meta property="og:description" content="Fungorithms" />
+  <meta property="og:url" content="https://stalk-calvin.github.io/blog/2020/02/22/fungorithms.html" />
+
+  <link rel="alternate" hreflang="en" href="https://stalk-calvin.github.io/blog/2020/02/22/fungorithms.html" />
+  <link rel="alternate" hreflang="kr" href="https://stalk-calvin.github.io/blog/2020/02/22/fungorithms.html" />
+  <link rel="canonical" href="/blog/2020/02/22/fungorithms.html">
+  <link rel="author" href="https://www.linkedin.com/in/stalkme">
+  <title>I am Calvin | Dutch national flag problem</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link href="/css/grayscale.css" rel="stylesheet">
+  
+
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/rrssb.css" />
+  <link rel="stylesheet" href="/css/custom.css?v=2" />
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+  
+
+  
+
+  
+
+
+  <!-- iOS Web App mode -->
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" sizes="36x36" href="/img/web-app/icon-36p.png">
+  <link rel="apple-touch-icon" sizes="48x48" href="/img/web-app/icon-48p.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/web-app/icon-72p.png">
+  <link rel="apple-touch-icon" sizes="96x96" href="/img/web-app/icon-96p.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/web-app/icon-144p.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="/img/web-app/icon-192p.png">
+
+  <!-- Android Web App mode -->
+
+  <link rel="manifest" href="/manifest.json">
+
+
+
+
+  
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#000000">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#000000">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+  
+
+
+
+  
+  <!-- MathJax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="/js/mobile-detect.js"></script>
+  
+  <!-- Google Analytics -->
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-88428523-1', 'auto');
+      ga('send', 'pageview');
+
+  </script>
+
+  
+</head>
+<!-- HEAD End -->
+
+
+  <body>
+
+    
+<!-- Navigation Start -->
+
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+        <i class="fa fa-bars"></i>
+      </button>
+      
+        <a class="navbar-brand" href="/">
+      
+          <div style="display:inline;">
+            
+              <img src="/img/favicon.ico" alt="favicon">
+            
+            <h4 style="display:inline">I am Calvin</h4>
+          </div>
+          <div id="fb-root" style="display:inline;"></div>
+          <script>(function(d, s, id) {
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) return;
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=140805279842677";
+           fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));</script>
+          <div id="fb-like-parent" style="display:inline;" class="fb-like" data-href="https://stalk-calvin.github.io/" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="false" data-colorscheme="dark"></div>
+          <script>var md = new MobileDetect(window.navigator.userAgent); if(md.mobile()) { document.getElementById('fb-like-parent').setAttribute('data-layout','button') }</script>
+        </a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul class="nav navbar-nav">
+        
+          <!-- Blog, Post, Tag and Error pages -->
+          
+            <li>
+            
+                <a href="/#about"> About </a>
+            
+            </li>
+          
+            <li>
+            
+                <a href="/#search"> Search </a>
+            
+            </li>
+          
+            <li>
+            
+                <a href="/#timeline"> Timeline </a>
+            
+            </li>
+          
+            <li>
+            
+                <a href="/#contact"> Contact </a>
+            
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Navigation End -->
+
+
+    <section id="post" class="container content-section ">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h1 style="display:block; color: #F4A460; margin:0 0 10px"><strong>Dutch national flag problem</strong></h1>
+	  <h4 style="display:inline; color: #F4A460;"><strong>Fungorithms</strong></h4><br />
+          <h4>
+            <strong>22 Feb 2020</strong>
+            <small>
+               <a href="/blog/2020/02/22/fungorithms.html#fb_comment">View Comments</a>
+              <br />
+              
+                <a class="tag" href="/tags/#programming">#programming</a>
+              
+                <a class="tag" href="/tags/#fun">#fun</a>
+              
+                <a class="tag" href="/tags/#algorithm">#algorithm</a>
+              
+                <a class="tag" href="/tags/#series">#series</a>
+              
+                <a class="tag" href="/tags/#efficient">#efficient</a>
+              
+                <a class="tag" href="/tags/#sorting">#sorting</a>
+              
+                <a class="tag" href="/tags/#dutch">#dutch</a>
+              
+                <a class="tag" href="/tags/#flags">#flags</a>
+              
+            </small>
+          </h4>
+
+          <nav class="pagination" role="navigation">
+            
+            
+              <a href="https://stalk-calvin.github.io/blog/2020/01/25/new-year-resolution.html" class="btn" title="2020, Let's go!">2020, Let's go! &raquo;</a>
+            
+          </nav><!-- /.pagination -->
+
+          <p>“Fungorithms” is a blog series that I would like to introduce an algorithm I came across I found interesting. They are not necessarily difficult, but they are the building blocks of your next sophisticated algorithm. I want to share the “fun” by analyzing and discussing the algorithm.</p>
+
+<h2 id="sorting-3-values">Sorting 3 values</h2>
+
+<p>The problem is pretty straightforward. We have 3 distinct values scattered in an array (or any container with the memory location, index), and we need to sort them. This algorithm is better known as “<a href="https://en.wikipedia.org/wiki/Dutch_national_flag_problem" target="_blank" rel="noopener noreferrer">Dutch national flag problem</a>” because the dutch flag has three colours: red, white and blue, and sorting these colours would complete the flag. As you may have noticed, having 3 distinct values here is the catch. That’s the critical assumption of our algorithm.</p>
+
+<p>For example, here is a potential input array, <code class="language-plaintext highlighter-rouge">[2,0,2,1,0,1,0,2,1]</code>. After we sort these values, we would get <code class="language-plaintext highlighter-rouge">[0,0,0,1,1,1,2,2,2]</code>.</p>
+
+<p>One intuitive approach would be to apply one of the <a href="/blog/2016/06/28/sorting.html" target="_blank" rel="noopener noreferrer">popular sorting algorithms</a> such as merge-sort or quick-sort, which would get us the final answer in a relatively fine way. It works in the time complexity of <script type="math/tex">O(nlogn)</script>, where n is the number of total items in the array. So in the worst case, for each item, we need to do extra <script type="math/tex">logn</script>amount of work to be able to complete the sort. The space complexity for the merge sort, by the way, is <script type="math/tex">O(n)</script>, which might not be something we want either.</p>
+
+<p>So here is the famous question which comes to mind, “Can we have a more efficient algorithm than using these conventional sorting algorithms?”</p>
+
+<p>The answer is yes. We can leverage the fact that there are just 3 distinct values scattered in the array.</p>
+
+<p>The idea is quite simple. Track and Swap:</p>
+
+<ol style="padding-left: 2.5em;">
+  <li>First, we can start with the mid-value of the 3 values as a pivot.</li>
+  <li>From that pivot (middle) value, we can place values less than pivot in the left of the pivot.</li>
+  <li>Place values higher than pivot in the right of the pivot.</li>
+  <li>If they are equal to the pivot (middle) value, we do pretty much nothing.</li>
+</ol>
+
+<p>To avoid using any extra space, we are going to swap array elements around. To do this, we are going to need to keep pointers for each of the left-bucket, mid-bucket and right-bucket.  The “pointers” will help us to sort by swapping array values in constant time. If we do not care about the extra space complexity, we can just use 3rd containers to group them in values and concatenate these at the end. However, this isn’t the cleanest solution obviously.</p>
+
+<h2 id="complexity">Complexity</h2>
+
+<p style="margin: 0px"><strong>Time complexity O(n)</strong></p>
+<ul style="padding-bottom: 1em; list-style: disc;">
+  <li>Since we are doing the sorting in one pass of an ‘n’-item array, the time it takes to execute the algorithm is in <script type="math/tex">O(n)</script></li>
+</ul>
+
+<p style="margin: 0px"><strong>Space complexity O(1)</strong></p>
+<ul style="padding-bottom: 1em; list-style: disc;">
+  <li>We exchange elements as we progress as I described above, meaning we do not use any extra space to store these values. Hence, space complexity is <script type="math/tex">O(1)</script></li>
+</ul>
+
+<h2 id="code">Code</h2>
+
+<p>The code is provided in Python, which is a well-suited language for writing out algorithms. You can easily follow and understand their meanings because it obfuscated a lot of verbosities.</p>
+
+<p>As you can see, we are looping the input array once to figure out the position and make necessary swaps to have the array sorted. Tracking the equal is important. Also, tracking the smallest and largest pointer from the end of the array is important.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">sortColors</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+    <span class="n">pivot</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">smaller</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">equal</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">larger</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">equal</span> <span class="o">&lt;=</span> <span class="n">larger</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">pivot</span> <span class="o">&gt;</span> <span class="n">nums</span><span class="p">[</span><span class="n">equal</span><span class="p">]:</span>
+            <span class="n">tmp</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">smaller</span><span class="p">]</span>
+            <span class="n">nums</span><span class="p">[</span><span class="n">smaller</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">equal</span><span class="p">]</span>
+            <span class="n">nums</span><span class="p">[</span><span class="n">equal</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp</span>
+            <span class="n">smaller</span><span class="o">+=</span><span class="mi">1</span>
+            <span class="n">equal</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">pivot</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">equal</span><span class="p">]:</span>
+            <span class="n">equal</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">tmp</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">larger</span><span class="p">]</span>
+            <span class="n">nums</span><span class="p">[</span><span class="n">larger</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">equal</span><span class="p">]</span>
+            <span class="n">nums</span><span class="p">[</span><span class="n">equal</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp</span>
+            <span class="n">larger</span><span class="o">-=</span><span class="mi">1</span>
+
+<span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Before Sort: "</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+<span class="c1"># [0, 1, 2, 2, 1, 1, 2, 2, 0, 0, 0, 0, 2, 1]
+</span>
+<span class="n">sortColors</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"After Sort: "</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+<span class="c1"># [0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2]</span></code></pre></figure>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>This algorithm is repeatedly used in quick-sort because this task eventually is what quick sort does. Watch how <code class="language-plaintext highlighter-rouge">partition</code> function is handled in <a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/QuickSortArray.java">quick sort</a>. The code is not identical to above but fundamentality of the algorithm is pretty much the same.</p>
+
+<p>The algorithm quite amusing because we just reduced time complexity down from <script type="math/tex">O(nlogn)</script> to <script type="math/tex">O(n)</script>. Reducing the bits of complexity is always fun and challenging. Please be careful when reducing though, we still want the algorithm to function as expected.</p>
+
+
+          
+<!-- Share Buttons Start -->
+<div>
+  <h5 style="margin-bottom:1em;margin-left:.5em;"><i class="fa fa-quote-left" aria-hidden="true"></i> Share this post <i class="fa fa-quote-right" aria-hidden="true"></i></h5>
+  <ul class="rrssb-buttons clearfix">
+    
+      <li class="rrssb-email">
+        <a href="mailto:?subject=Dutch national flag problem&body=https://stalk-calvin.github.io/blog/2020/02/22/fungorithms.html" data-proofer-ignore>
+          <span class="rrssb-icon">
+            <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+              <path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"
+              />
+            </svg>
+          </span>
+        </a>
+      </li>
+    
+    
+      <li class="rrssb-facebook">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://stalk-calvin.github.io/blog/2020/02/22/fungorithms.html&title=Dutch national flag problem" class="popup">
+          <span class="rrssb-icon">
+            <svg xmlns="https://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="29" height="29" viewBox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z"
+              class="cls-2" fill-rule="evenodd"/></svg>
+          </span>
+        </a>
+      </li>
+    
+    
+      <li class="rrssb-twitter">
+        <a href="https://twitter.com/share?url=https://stalk-calvin.github.io/blog/2020/02/22/fungorithms.html&text=Dutch national flag problem"
+        class="popup">
+          <span class="rrssb-icon"><svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><path d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62c-3.122.162-6.22-.646-8.86-2.32 2.702.18 5.375-.648 7.507-2.32-2.072-.248-3.818-1.662-4.49-3.64.802.13 1.62.077 2.4-.154-2.482-.466-4.312-2.586-4.412-5.11.688.276 1.426.408 2.168.387-2.135-1.65-2.73-4.62-1.394-6.965C5.574 7.816 9.54 9.84 13.802 10.07c-.842-2.738.694-5.64 3.434-6.48 2.018-.624 4.212.043 5.546 1.682 1.186-.213 2.318-.662 3.33-1.317-.386 1.256-1.248 2.312-2.4 2.942 1.048-.106 2.07-.394 3.02-.85-.458 1.182-1.343 2.15-2.48 2.71z"/></svg></span>
+        </a>
+      </li>
+    
+    
+      <li class="rrssb-linkedin">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://stalk-calvin.github.io/blog/2020/02/22/fungorithms.html" class="popup">
+        <span class="rrssb-icon">
+          <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+            <path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"
+            />
+          </svg>
+        </span>
+      </a>
+      </li>
+    
+    
+    
+      <li class="rrssb-googleplus">
+        <a href="https://plus.google.com/share?url=https://stalk-calvin.github.io/blog/2020/02/22/fungorithms.html" class="popup">
+          <span class="rrssb-icon">
+            <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 8.29h-1.95v2.6h-2.6v1.82h2.6v2.6H21v-2.6h2.6v-1.885H21V8.29zM7.614 10.306v2.925h3.9c-.26 1.69-1.755 2.925-3.9 2.925-2.34 0-4.29-2.016-4.29-4.354s1.885-4.353 4.29-4.353c1.104 0 2.014.326 2.794 1.105l2.08-2.08c-1.3-1.17-2.924-1.883-4.874-1.883C3.65 4.586.4 7.835.4 11.8s3.25 7.212 7.214 7.212c4.224 0 6.953-2.988 6.953-7.082 0-.52-.065-1.104-.13-1.624H7.614z"/></svg>
+          </span>
+        </a>
+      </li>
+    
+    
+  </ul>
+</div>
+
+<!-- Share Buttons End -->
+
+
+          
+            <!-- <div id="disqus_thread"></div> /#disqus_thread -->
+            <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '140805279842677',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div id="fb_comment" class="fb-comments" data-href="https://stalk-calvin.github.io/blog/2020/02/22/fungorithms.html" data-numposts="5" data-width="100%" data-colorscheme="dark" data-order-by="reverse_time"></div>
+
+          
+
+          <nav class="pagination" role="navigation">
+            
+            
+              <a href="https://stalk-calvin.github.io/blog/2020/01/25/new-year-resolution.html" class="btn" title="2020, Let's go!">2020, Let's go! &raquo;</a>
+            
+          </nav><!-- /.pagination -->
+
+          <hr />
+
+          
+          <div class="author row">
+            <img class="img-circle col-xs-4 col-sm-3 col-md-2" src="/img/timeline/IMG_20160124_103417.jpg" alt="Me" />
+            <p class="col-xs-8 col-sm-9 col-md-10" style="padding-top: 1.3em;">
+            I am a passionate programmer working in Vancouver. I strongly believe in art of algorithms and together with it to write clean and efficient software to build awesome products. If you would like to connect with me, choose one from below options :) You can also send me an email at 
+            <a href="javascript:location='mailto:\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"><script type="text/javascript">document.write('\u0073\u0074\u0061\u006c\u006b\u002e\u0063\u0061\u006c\u0076\u0069\u006e\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    
+ <!-- Footer Start -->
+
+<footer>
+
+    
+<!-- Social Buttons Start -->
+
+<ul class="list-inline social-buttons">
+  
+    <li><a href="https://keybase.io/stalkcalvin" target="_blank"><i class="fa fa-key fa-fw"></i></a></li>
+  
+    <li><a href="https://instagram.com/stalk.calvin" target="_blank"><i class="fa fa-instagram fa-fw"></i></a></li>
+  
+    <li><a href="https://linkedin.com/in/stalkme" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i></a></li>
+  
+    <li><a href="https://github.com/stalk-calvin" target="_blank"><i class="fa fa-github-alt fa-fw"></i></a></li>
+  
+    <li><a href="https://leetcode.com/stalkcalvin/" target="_blank"><i class="fa fa-code fa-fw"></i></a></li>
+  
+    <li><a href="https://www.hackerrank.com/stalk_calvin" target="_blank"><i class="fa fa-header fa-fw"></i></a></li>
+  
+    <li><a href="https://untappd.com/user/stalk-calvin" target="_blank"><i class="fa fa-beer fa-fw"></i></a></li>
+  
+    <li><a href="http://feeds.feedburner.com/github/xTcO" target="_blank"><i class="fa fa-rss fa-fw"></i></a></li>
+  
+</ul>
+
+<!-- Social Buttons End -->
+
+
+    <p><br></p>
+
+    <div class="container text-center">
+      <p>Copyright &copy; Calvin Lee</p>
+      <p>2016 - 2020</p>
+    </div>
+    <p><br><br><br></p>
+</footer>
+
+<!-- Footer End -->
+
+
+    
+<!-- Javascript Start -->
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<!--* Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+* Code licensed under the Apache License v2.0.
+* For details, see http://www.apache.org/licenses/LICENSE-2.0.-->
+<script>
+$(document).on('click',function(){
+$('.collapse').collapse('hide');
+})
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+  for (i = 2016; i <= 2020; i++) {
+     $(document).on("click","#archive_year_"+i,function() {
+         $(this).parent().children("li").toggle();
+         togglePointer($(this));
+     });
+     $(document).on("click",".archive_month_"+i,function() {
+         $(this).parent().children("li").toggle();
+         togglePointer($(this));
+     });
+  }
+  function togglePointer(elem) {
+     if (elem.text().indexOf('►') != -1) {
+        elem.text(elem.text().replace('►','▼'));
+     } else {
+        elem.text(elem.text().replace('▼','►'));
+     }
+  }
+  if ($(window).width() < 768) {
+     $('#index_leftbar').css("width", "100%");
+     $('#index_leftbar').removeClass("left_round_corner");
+     $('#index_leftbar').addClass("all_round_corner");
+     $('#index_right_t_bar').hide();
+     $('#index_right_b_bar').hide();
+  }
+});
+</script>
+<script>
+function toggleNavCollapse(){50<$(".navbar").offset().top?$(".navbar-fixed-top").addClass("top-nav-collapse"):$(".navbar-fixed-top").removeClass("top-nav-collapse");}
+$(document).ready(toggleNavCollapse);
+$(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click",function(b){var a=$(this);$("html, body").stop().animate({scrollTop:$(a.attr("href")).offset().top-50},1500,"easeInOutExpo",function(){a.blur()});b.preventDefault()})});$(".navbar-collapse ul li a").click(function(){$(".navbar-toggle:visible").click()});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function addTohistory() {
+  if (!window.location.host.startsWith("127.0.0.1")) {
+    history.pushState({}, 'Dutch national flag problem', 'https://stalk-calvin.github.io/blog/2020/02/22/fungorithms.html');
+  }
+}
+</script>
+
+<!-- Gesture Navigation / Swipe Instruction Start -->
+
+
+  
+
+  
+
+  
+
+  
+
+<!-- Gesture Navigation / Swipe Instruction End -->
+
+
+
+<!-- Javascript End -->
+
+
+  </body>
+</html>
+
+<!-- Post Layout End -->
