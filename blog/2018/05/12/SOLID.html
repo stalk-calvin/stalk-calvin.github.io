@@ -210,6 +210,8 @@
               
                 <a class="tag" href="/tags/#OOP">#OOP</a>
               
+                <a class="tag" href="/tags/#composition">#composition</a>
+              
             </small>
           </h4>
 
@@ -417,10 +419,10 @@
 <span class="k">class</span> <span class="nc">PDFBook</span><span class="o">(</span><span class="k">val</span> <span class="nv">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Book</span> <span class="o">{</span>
     <span class="k">override</span> <span class="k">def</span> <span class="nf">read</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"reading a PDF book."</span>
 <span class="o">}</span>
-<span class="k">class</span> <span class="nc">PhysicalBook</span><span class="o">(</span><span class="k">val</span> <span class="nv">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Book</span> <span class="o">{</span> 
+<span class="k">class</span> <span class="nc">PhysicalBook</span><span class="o">(</span><span class="k">val</span> <span class="nv">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Book</span> <span class="o">{</span>
     <span class="k">override</span> <span class="k">def</span> <span class="nf">read</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"reading a physical book."</span>
 <span class="o">}</span>
-<span class="k">class</span> <span class="nc">KindleBook</span><span class="o">(</span><span class="k">val</span> <span class="nv">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Book</span> <span class="o">{</span> 
+<span class="k">class</span> <span class="nc">KindleBook</span><span class="o">(</span><span class="k">val</span> <span class="nv">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Book</span> <span class="o">{</span>
     <span class="k">override</span> <span class="k">def</span> <span class="nf">read</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"reading a Kindle book."</span>
 <span class="o">}</span></code></pre></figure>
 
@@ -436,6 +438,7 @@
 <span class="nv">books</span><span class="o">.</span><span class="py">append</span><span class="o">(</span><span class="n">pdfbook</span><span class="o">)</span>
 <span class="nv">books</span><span class="o">.</span><span class="py">append</span><span class="o">(</span><span class="n">physicalbook</span><span class="o">)</span>
 <span class="nv">books</span><span class="o">.</span><span class="py">foreach</span><span class="o">(</span><span class="n">book</span> <span class="k">=&gt;</span> <span class="nf">println</span><span class="o">(</span><span class="nv">book</span><span class="o">.</span><span class="py">name</span><span class="o">))</span></code></pre></figure>
+
 
 
           

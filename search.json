@@ -2,6 +2,17 @@
 
   
     {
+      "title"			: "Dutch national flag problem",
+      "link"			: "https://stalk-calvin.github.io/blog/2020/02/22/fungorithms.html",
+      "excerpt"		: "Fungorithms",
+      "tags"        : ["programming","fun","algorithm","series","efficient","sorting","dutch","flags"],
+      "date"        : "2020 Feb 22",
+      "year"        : 2020
+    }
+  
+
+  
+    ,{
       "title"			: "2020, Let's go!",
       "link"			: "https://stalk-calvin.github.io/blog/2020/01/25/new-year-resolution.html",
       "excerpt"		: "Tons of things to get done",
@@ -16,7 +27,7 @@
       "title"			: "Common Design Patterns",
       "link"			: "https://stalk-calvin.github.io/blog/2019/11/07/design-patterns.html",
       "excerpt"		: "Ones I came across these days",
-      "tags"        : ["design","patterns","computer","software","programming","cleancode"],
+      "tags"        : ["design","patterns","computer","software","programming","cleancode","composition"],
       "date"        : "2019 Nov 07",
       "year"        : 2019
     }
@@ -214,7 +225,7 @@
       "title"			: "S.O.L.I.D. principles",
       "link"			: "https://stalk-calvin.github.io/blog/2018/05/12/SOLID.html",
       "excerpt"		: "Principles for the object-oriented working",
-      "tags"        : ["computer","working","SOLID","OOP"],
+      "tags"        : ["computer","working","SOLID","OOP","composition"],
       "date"        : "2018 May 12",
       "year"        : 2018
     }
