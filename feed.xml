@@ -14,7 +14,34 @@
     
       <dc:creator>Calvin Lee</dc:creator>
     
-    <lastBuildDate>Tue, 25 Feb 2020 02:22:51 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2020 00:13:25 +0000</lastBuildDate>
+	
+		<item>
+			<title>React.js</title>
+			
+				<description>Front-end Development</description>
+			
+        
+          <category>programming</category>
+        
+          <category>react</category>
+        
+          <category>javascript</category>
+        
+          <category>js</category>
+        
+          <category>front-end</category>
+        
+			<pubDate>22 May 2020</pubDate>
+			<link>https://stalk-calvin.github.io/blog/2020/05/22/react.html</link>
+      
+        
+          
+          
+          <dc:creator>Calvin Lee</dc:creator>
+        
+      <guid isPermaLink="false">https://stalk-calvin.github.io/blog/2020/05/22/react</guid>
+		</item>
 	
 		<item>
 			<title>Dutch national flag problem</title>
