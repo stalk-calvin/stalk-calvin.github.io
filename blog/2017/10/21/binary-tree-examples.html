@@ -327,7 +327,7 @@
 
 <h3 id="3-lca-of-a-binary-tree-instead-of-bst">3. LCA of a Binary Tree (instead of BST)</h3>
 
-<p>I can see some of you may have asked yourself, what if it isn’t binary search tree? Well, the problem isn’t so simple anymore. In above BST case, things were good-looking where we can get an amazing worst time complexity of O(h) where h is the height of the tree. In a balanced tree, this means we can get an amazing complexity of our famous <script type="math/tex">O(log_2(n))</script>. Unfortunately, with a binary tree case, we are required to search the whole tree to find our nodes. So the worst case time complexity is O(n) for this case where n is equal to every node of the tree.</p>
+<p>I can see some of you may have asked yourself, what if it isn’t binary search tree? Well, the problem isn’t so simple anymore. In above BST case, things were good-looking where we can get an amazing worst time complexity of O(h) where h is the height of the tree. In a balanced tree, this means we can get an amazing complexity of our famous \(O(log_2(n))\). Unfortunately, with a binary tree case, we are required to search the whole tree to find our nodes. So the worst case time complexity is O(n) for this case where n is equal to every node of the tree.</p>
 
 <p><strong>Problem statement</strong>:</p>
 
@@ -446,7 +446,7 @@
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>The tree problem is often solved using either DFS or BFS traversal. If you are planning to use DFS, the problem can be further reduced by choosing one of pre/in/post -order traversal. If you would like to know the distinct benefits of these 3 variations of DFS traversal, please check out my <a href="/blog/2017/10/07/binary-trees.html">previous post</a>. In this post, we saw some examples that are really fundamentals to the binary trees. There are binary trees which can also be self-balancing, such as AVL or Red-Black tree. It adds a slight complication to the algorithm as it requires the tree to rotate as it is self-balancing. However, the majority of the tree fundamentals stay the same. It prevents the tree being skewed to one side which could cut down worst-case time complexity by letting the tree always stay balanced. Trees are not always binary though. The number of leaves can, in fact, be more than 2. They are sometimes called ternary trees, quaternary trees and so on. However, we just normally call it an <code class="language-plaintext highlighter-rouge">n-ary</code> tree. There can be <a href="https://en.wikipedia.org/wiki/K-ary_tree">as many numbers of children</a> in the tree. There are certainly added complications on operations to this kind of tree. However, more leaves often lead to a slower performance. For instance, you may think ternary search is faster than binary search as <script type="math/tex">log_3(n)</script> produces smaller value than <script type="math/tex">log_2(n)</script>. However, this is quite misleading because when tree node has more than choices of 2, it no longer can apply one comparison per iteration. So in the end, it becomes slower. There is also a tree structure called a <code class="language-plaintext highlighter-rouge">trie</code> which can have any # of children as well. It is useful to auto-completing something which could be applied in searching a set of words in the dictionary. Anyways, in my view, a tree is just another object (node) which is made up to be a data structure like a linked list with strict rules. When we know exactly what we are expecting, the algorithm can improve significantly.  If you are looking for more tree examples, I suggest you take a look at my <a href="https://github.com/stalk-calvin/Java-Algorithms/tree/master/src/main/java/org/calvin/Tree">GitHub</a>. I have summarized some common tree problems there.</p>
+<p>The tree problem is often solved using either DFS or BFS traversal. If you are planning to use DFS, the problem can be further reduced by choosing one of pre/in/post -order traversal. If you would like to know the distinct benefits of these 3 variations of DFS traversal, please check out my <a href="/blog/2017/10/07/binary-trees.html">previous post</a>. In this post, we saw some examples that are really fundamentals to the binary trees. There are binary trees which can also be self-balancing, such as AVL or Red-Black tree. It adds a slight complication to the algorithm as it requires the tree to rotate as it is self-balancing. However, the majority of the tree fundamentals stay the same. It prevents the tree being skewed to one side which could cut down worst-case time complexity by letting the tree always stay balanced. Trees are not always binary though. The number of leaves can, in fact, be more than 2. They are sometimes called ternary trees, quaternary trees and so on. However, we just normally call it an <code class="language-plaintext highlighter-rouge">n-ary</code> tree. There can be <a href="https://en.wikipedia.org/wiki/K-ary_tree">as many numbers of children</a> in the tree. There are certainly added complications on operations to this kind of tree. However, more leaves often lead to a slower performance. For instance, you may think ternary search is faster than binary search as \(log_3(n)\) produces smaller value than \(log_2(n)\). However, this is quite misleading because when tree node has more than choices of 2, it no longer can apply one comparison per iteration. So in the end, it becomes slower. There is also a tree structure called a <code class="language-plaintext highlighter-rouge">trie</code> which can have any # of children as well. It is useful to auto-completing something which could be applied in searching a set of words in the dictionary. Anyways, in my view, a tree is just another object (node) which is made up to be a data structure like a linked list with strict rules. When we know exactly what we are expecting, the algorithm can improve significantly.  If you are looking for more tree examples, I suggest you take a look at my <a href="https://github.com/stalk-calvin/Java-Algorithms/tree/master/src/main/java/org/calvin/Tree">GitHub</a>. I have summarized some common tree problems there.</p>
 
 
           
@@ -596,7 +596,7 @@
 
     <div class="container text-center">
       <p>Copyright &copy; Calvin Lee</p>
-      <p>2016 - 2020</p>
+      <p>2016 - 2023</p>
     </div>
     <p><br><br><br></p>
 </footer>
@@ -627,7 +627,7 @@ $('.collapse').collapse('hide');
 </script>
 <script type="text/javascript">
 $(document).ready(function() {
-  for (i = 2016; i <= 2020; i++) {
+  for (i = 2016; i <= 2023; i++) {
      $(document).on("click","#archive_year_"+i,function() {
          $(this).parent().children("li").toggle();
          togglePointer($(this));

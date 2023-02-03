@@ -253,7 +253,7 @@
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="mi">0</span>
     <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span></code></pre></figure>
+    <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="bp">self</span><span class="p">.</span><span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span></code></pre></figure>
 
 <p>This method creates recursion until one of two base condition is met. Well, frankly, this method is probably the worst possible way to solve the Fibonacci problem. Recursion method is usually bad in performance unless the solution cannot be solved using iteratively. Here is an iterative solution that solves above recursion, reason is explained below but let’s take a look at the iterative example first:</p>
 
@@ -274,11 +274,11 @@
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">table</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="k">def</span> <span class="nf">fib3</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">)):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+    <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">table</span><span class="p">)):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">table</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
 
-    <span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fib3</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">fib3</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">));</span>
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">[</span><span class="n">n</span><span class="p">]</span></code></pre></figure>
+    <span class="bp">self</span><span class="p">.</span><span class="n">table</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">fib3</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="p">.</span><span class="n">fib3</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">));</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">table</span><span class="p">[</span><span class="n">n</span><span class="p">]</span></code></pre></figure>
 
 <p>Why is this? Above algorithm runs — 0.000197887420654 seconds — for <code class="language-plaintext highlighter-rouge">fib3(35)</code> and — 0.000597953796387 seconds — for <code class="language-plaintext highlighter-rouge">fib3(40)</code> which pretty much is comparable to the iterative solution (fib2). The fib3 method is essentially a top-down approach for dynamic programming. When you measure the number of times the item is being looked at to calculate the Fibonacci, Iterative and DP is essentially the same. Let me show you with examples what I mean.</p>
 
@@ -434,7 +434,7 @@
 
     <div class="container text-center">
       <p>Copyright &copy; Calvin Lee</p>
-      <p>2016 - 2020</p>
+      <p>2016 - 2023</p>
     </div>
     <p><br><br><br></p>
 </footer>
@@ -465,7 +465,7 @@ $('.collapse').collapse('hide');
 </script>
 <script type="text/javascript">
 $(document).ready(function() {
-  for (i = 2016; i <= 2020; i++) {
+  for (i = 2016; i <= 2023; i++) {
      $(document).on("click","#archive_year_"+i,function() {
          $(this).parent().children("li").toggle();
          togglePointer($(this));

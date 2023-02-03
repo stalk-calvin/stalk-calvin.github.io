@@ -304,7 +304,7 @@ In both mathematical and programming world, the term “Currying” is often men
 
 <p style="margin-bottom: 10px;">We have partially created a function here which can take a lower bound as any inputs but has fixed upper bound of 5. To apply this partially created function,</p>
 
-<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="nf">sumTo5</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="o">+</span> <span class="nf">sumCubesTo5</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span> <span class="o">//</span> <span class="n">will</span> <span class="n">output</span> <span class="mi">231</span> <span class="n">as</span> <span class="n">well</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="nf">sumTo5</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="o">+</span> <span class="nf">sumCubesTo5</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span> <span class="c1">// will output 231 as well</span></code></pre></figure>
 
 <p>At this point, you might wonder, what is the advantage of doing all this? To be honest, I have not come across a time where I was absolutely required to use Currying to make something work. This is probably why a lot of people thinks Currying is just another syntactic sugar for functional programming. I do not disagree. It could well be a syntactic sugar despite a possible grain of performance gains which may not even be noticeable. However, Currying is still an important concept to understand in functional programming.</p>
 
@@ -460,7 +460,7 @@ In both mathematical and programming world, the term “Currying” is often men
 
     <div class="container text-center">
       <p>Copyright &copy; Calvin Lee</p>
-      <p>2016 - 2020</p>
+      <p>2016 - 2023</p>
     </div>
     <p><br><br><br></p>
 </footer>
@@ -491,7 +491,7 @@ $('.collapse').collapse('hide');
 </script>
 <script type="text/javascript">
 $(document).ready(function() {
-  for (i = 2016; i <= 2020; i++) {
+  for (i = 2016; i <= 2023; i++) {
      $(document).on("click","#archive_year_"+i,function() {
          $(this).parent().children("li").toggle();
          togglePointer($(this));

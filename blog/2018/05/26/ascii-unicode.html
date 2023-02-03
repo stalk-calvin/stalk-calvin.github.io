@@ -224,7 +224,7 @@
 
           <h2 id="ascii-origins">ASCII, Origins</h2>
 
-<p>When people created their character representation, they needed a number of unique identifier to represent each characters. That’s when they came up with ASCII which uses 7 bits to represent a character unique. By using 7 bits, there are a maximum of 2<script type="math/tex">^7</script> (= 128) distinct combinations. This means that a <a href="https://www.asciitable.com/">maximum of 128 characters</a> can be represented.</p>
+<p>When people created their character representation, they needed a number of unique identifier to represent each characters. That’s when they came up with ASCII which uses 7 bits to represent a character unique. By using 7 bits, there are a maximum of 2\(^7\) (= 128) distinct combinations. This means that a <a href="https://www.asciitable.com/">maximum of 128 characters</a> can be represented.</p>
 
 <p>One might ask, why 7 bits? Why not just 1 byte (8 bits)? The last bit (8th) is reserved as the <a href="https://en.wikipedia.org/wiki/Parity_bit">parity bit</a> to avoid errors in communication.</p>
 
@@ -248,7 +248,7 @@
 
 <h2 id="ascii-extended">ASCII Extended</h2>
 
-<p>In the need of other latin characters, a group of people started using the last 8th bit (instead of using it as Parity bit) to encode more characters (For example, “á”). Just using one extra bit doubled the size of the original ASCII table to map up to 256 characters (2<script type="math/tex">^8</script> = 256 characters) instead of 2<script type="math/tex">^7</script> (128) as before.</p>
+<p>In the need of other latin characters, a group of people started using the last 8th bit (instead of using it as Parity bit) to encode more characters (For example, “á”). Just using one extra bit doubled the size of the original ASCII table to map up to 256 characters (2\(^8\) = 256 characters) instead of 2\(^7\) (128) as before.</p>
 
 <p>See below binary representation of a new character set which uses the last 8th bit:</p>
 
@@ -535,7 +535,7 @@
 
     <div class="container text-center">
       <p>Copyright &copy; Calvin Lee</p>
-      <p>2016 - 2020</p>
+      <p>2016 - 2023</p>
     </div>
     <p><br><br><br></p>
 </footer>
@@ -566,7 +566,7 @@ $('.collapse').collapse('hide');
 </script>
 <script type="text/javascript">
 $(document).ready(function() {
-  for (i = 2016; i <= 2020; i++) {
+  for (i = 2016; i <= 2023; i++) {
      $(document).on("click","#archive_year_"+i,function() {
          $(this).parent().children("li").toggle();
          togglePointer($(this));

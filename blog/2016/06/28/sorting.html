@@ -277,7 +277,7 @@
   <li><a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/QuickSortArray.java">Code Example</a></li>
 </ul>
 
-<p>The quick sort algorithm is famous for its recursivities and its probably the most famous sorting algorithms of all. There is no doubt a lot of people have misconception that this is the fastest algorithm out there. However, in worst case scenario, the algorithm can produce time complexity of O(<script type="math/tex">n^2</script>) when array is already sorted and pivot chosen at the last element <strong>or</strong> simply all elements in array is identical. Algorithm partitions array so element on left side has less than the element or right side has greater than equal to the element. Then algorithm recursives calls this until all element found the right position where it needs to be.</p>
+<p>The quick sort algorithm is famous for its recursivities and its probably the most famous sorting algorithms of all. There is no doubt a lot of people have misconception that this is the fastest algorithm out there. However, in worst case scenario, the algorithm can produce time complexity of O(\(n^2\)) when array is already sorted and pivot chosen at the last element <strong>or</strong> simply all elements in array is identical. Algorithm partitions array so element on left side has less than the element or right side has greater than equal to the element. Then algorithm recursives calls this until all element found the right position where it needs to be.</p>
 
 <h4 style="clear:left;" id="three-bubble-sort">
 <img class="emoji" title=":three:" alt=":three:" src="https://github.githubassets.com/images/icons/emoji/unicode/0033-20e3.png" height="20" width="20"> Bubble Sort</h4>
@@ -288,7 +288,7 @@
   <li><a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/BubbleSort.java">Code Example</a></li>
 </ul>
 
-<p>The bubble sort is quite old and fundametal algorithm which is discovered in 1960s. This sorting method takes each values adjacent to each other and compares and swap if one is less than the other. Worst and Average time of this sorting method is O(<script type="math/tex">n^2</script>). However, if the list is already sorted, the best time of this sort would be done in one pass which is O(n). Another variation of this sort is <a href="https://en.wikipedia.org/wiki/Odd%E2%80%93even_sort">Odd-Even sort</a> which is just bubble sort in parallel.</p>
+<p>The bubble sort is quite old and fundametal algorithm which is discovered in 1960s. This sorting method takes each values adjacent to each other and compares and swap if one is less than the other. Worst and Average time of this sorting method is O(\(n^2\)). However, if the list is already sorted, the best time of this sort would be done in one pass which is O(n). Another variation of this sort is <a href="https://en.wikipedia.org/wiki/Odd%E2%80%93even_sort">Odd-Even sort</a> which is just bubble sort in parallel.</p>
 
 <h4 style="clear:left;" id="four-selection-sort">
 <img class="emoji" title=":four:" alt=":four:" src="https://github.githubassets.com/images/icons/emoji/unicode/0034-20e3.png" height="20" width="20"> Selection Sort</h4>
@@ -299,7 +299,7 @@
   <li><a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/SelectionSort.java">Code Example</a></li>
 </ul>
 
-<p>Selection sort selects the lowest in the array and places in front. Worst and Average time of this sorting method is kind of obvious, O(<script type="math/tex">n^2</script>). In order to run this sorting method, you need to run one pass, one pass -1, one pass -2, …etc. Also note, regardless of array already sorted, it needs take an effort to ensure the lowest item is in front. There are multiple variation of this method to improve the performance. For variants and further analysis, see: https://en.wikipedia.org/wiki/Selection_sort.</p>
+<p>Selection sort selects the lowest in the array and places in front. Worst and Average time of this sorting method is kind of obvious, O(\(n^2\)). In order to run this sorting method, you need to run one pass, one pass -1, one pass -2, …etc. Also note, regardless of array already sorted, it needs take an effort to ensure the lowest item is in front. There are multiple variation of this method to improve the performance. For variants and further analysis, see: https://en.wikipedia.org/wiki/Selection_sort.</p>
 
 <h4 style="clear:left;" id="five-insertion-sort">
 <img class="emoji" title=":five:" alt=":five:" src="https://github.githubassets.com/images/icons/emoji/unicode/0035-20e3.png" height="20" width="20"> Insertion Sort</h4>
@@ -310,7 +310,7 @@
   <li><a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/InsertionSort.java">Code Example</a></li>
 </ul>
 
-<p>The most popular and simplest sort of all. Insertion sort goes through the array look for the position of an item that is being looked at. For example, let’s say you have 4,2,3,1. Then insertion sort will first compare 4,2 and they need to swap. List becomes 2,4,3,1. Then 4,3 will be looked at and list becomes 2,3,4,1. then it sees 2 is less then 3, leave it be. Then 4,1 will be looked at and 2,3,1,4 but 1 is still less then 3, so it swaps 3,1 -&gt; 2,1,3,4 -&gt; then eventually 1,2,3,4. The worst/average case of this method is O(<script type="math/tex">n^2</script>). However, the best case obviously will be O(n), simply when array is already sorted it has all the items at the position it needs to be. There are variations to this sort as well. Such as shell sort, binary insertion sort, etc. This works great when array is mostly sorted which means # of swaps it does will be significant smaller.</p>
+<p>The most popular and simplest sort of all. Insertion sort goes through the array look for the position of an item that is being looked at. For example, let’s say you have 4,2,3,1. Then insertion sort will first compare 4,2 and they need to swap. List becomes 2,4,3,1. Then 4,3 will be looked at and list becomes 2,3,4,1. then it sees 2 is less then 3, leave it be. Then 4,1 will be looked at and 2,3,1,4 but 1 is still less then 3, so it swaps 3,1 -&gt; 2,1,3,4 -&gt; then eventually 1,2,3,4. The worst/average case of this method is O(\(n^2\)). However, the best case obviously will be O(n), simply when array is already sorted it has all the items at the position it needs to be. There are variations to this sort as well. Such as shell sort, binary insertion sort, etc. This works great when array is mostly sorted which means # of swaps it does will be significant smaller.</p>
 
 <h4 style="clear:left;" id="six-shell-sort">
 <img class="emoji" title=":six:" alt=":six:" src="https://github.githubassets.com/images/icons/emoji/unicode/0036-20e3.png" height="20" width="20"> Shell sort</h4>
@@ -344,7 +344,7 @@
   </tbody>
 </table>
 
-<p>Bucket sort gathers elements inside a bucket like the diagram above. Require the number of buckets. Scatter: Go over the original array, putting each object in its bucket. Sort each non-empty bucket using any existing sorting algorithm (insertion sort used mostly). Gather: Visit the buckets in order and put all elements back into the original array. Bucket sort is unique that it has best and average time complexity of O(n+k) where k is number of buckets. However, its worst case is O(<script type="math/tex">n^2</script>) which is possible when all of elements goes into one bucket. Then this is same thing as any other sorting algorithm.</p>
+<p>Bucket sort gathers elements inside a bucket like the diagram above. Require the number of buckets. Scatter: Go over the original array, putting each object in its bucket. Sort each non-empty bucket using any existing sorting algorithm (insertion sort used mostly). Gather: Visit the buckets in order and put all elements back into the original array. Bucket sort is unique that it has best and average time complexity of O(n+k) where k is number of buckets. However, its worst case is O(\(n^2\)) which is possible when all of elements goes into one bucket. Then this is same thing as any other sorting algorithm.</p>
 
 <ul>
   <li>Total Time
@@ -552,7 +552,7 @@
 
     <div class="container text-center">
       <p>Copyright © Calvin Lee</p>
-      <p>2016 - 2020</p>
+      <p>2016 - 2023</p>
     </div>
     <p><br><br><br></p>
 </footer>
@@ -583,7 +583,7 @@ $('.collapse').collapse('hide');
 </script>
 <script type="text/javascript">
 $(document).ready(function() {
-  for (i = 2016; i <= 2020; i++) {
+  for (i = 2016; i <= 2023; i++) {
      $(document).on("click","#archive_year_"+i,function() {
          $(this).parent().children("li").toggle();
          togglePointer($(this));

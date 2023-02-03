@@ -242,7 +242,7 @@
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__a</span> <span class="o">=</span> <span class="mi">123</span> 
+        <span class="bp">self</span><span class="p">.</span><span class="n">__a</span> <span class="o">=</span> <span class="mi">123</span> 
 
 <span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="p">()</span></code></pre></figure>
 
@@ -251,9 +251,9 @@
 <p style="margin-bottom:1%">However, there may be a case where you might need to read or update this variable from outside of the class. If so, introduce an accessor/mutator(getter/setter) instead, like this:</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">getA</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__a</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">__a</span>
 <span class="k">def</span> <span class="nf">setA</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">newA</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">__a</span> <span class="o">=</span> <span class="n">newA</span></code></pre></figure>
+    <span class="bp">self</span><span class="p">.</span><span class="n">__a</span> <span class="o">=</span> <span class="n">newA</span></code></pre></figure>
 
 <p>Although we will go into details on the Pythonic getters/setters later, as a general programming guideline, you can use the getter/setter to get/set the private variable if you really need to fiddle with the private variable in your application. Some people may argue that using the double underscores, <code class="language-plaintext highlighter-rouge">__</code>, isn’t a true form of handling the private feature. However, regardless of how Python mangles the variable prefixed with a double underscore, that really is an implementation detail that developers don’t really need to worry about. It is important to know and understand why and how it is acting behind the scene, but not so important that you should worry/sweat about whether it will work the way it should.</p>
 
@@ -336,14 +336,14 @@ In order to use these methods, you can first create an instance, for example, <c
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">setA</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">newA</span><span class="p">):</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">newA</span> <span class="o">&gt;</span> <span class="n">CONSTANT</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__a</span> <span class="o">=</span> <span class="n">newA</span></code></pre></figure>
+        <span class="bp">self</span><span class="p">.</span><span class="n">__a</span> <span class="o">=</span> <span class="n">newA</span></code></pre></figure>
 
 <p style="margin-bottom:1%">This ensures our private variable is set only when the new value is greater than the CONSTANT value. We have the control of how the variable will be set depending on the requirement. Being able to control the getting/setting is where the “<strong>data encapsulation</strong>” really kicks in. We are essentially protecting the private <code class="language-plaintext highlighter-rouge">__a</code> variable by allowing the user to update this private variable on the conditions abided by the rules we created. Pythonic way of having the above setter would look something like this though:</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">@</span><span class="n">x</span><span class="o">.</span><span class="n">setter</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">@</span><span class="n">x</span><span class="p">.</span><span class="n">setter</span>
 <span class="k">def</span> <span class="nf">a</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">newA</span><span class="p">):</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">newA</span> <span class="o">&gt;</span> <span class="n">CONSTANT</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__a</span> <span class="o">=</span> <span class="n">newA</span></code></pre></figure>
+        <span class="bp">self</span><span class="p">.</span><span class="n">__a</span> <span class="o">=</span> <span class="n">newA</span></code></pre></figure>
 
 
           
@@ -493,7 +493,7 @@ In order to use these methods, you can first create an instance, for example, <c
 
     <div class="container text-center">
       <p>Copyright &copy; Calvin Lee</p>
-      <p>2016 - 2020</p>
+      <p>2016 - 2023</p>
     </div>
     <p><br><br><br></p>
 </footer>
@@ -524,7 +524,7 @@ $('.collapse').collapse('hide');
 </script>
 <script type="text/javascript">
 $(document).ready(function() {
-  for (i = 2016; i <= 2020; i++) {
+  for (i = 2016; i <= 2023; i++) {
      $(document).on("click","#archive_year_"+i,function() {
          $(this).parent().children("li").toggle();
          togglePointer($(this));

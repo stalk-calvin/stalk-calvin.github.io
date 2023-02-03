@@ -266,9 +266,9 @@
 
 <p>Here you see a loop which is O(n) however, you are running <code class="language-plaintext highlighter-rouge">doSomething</code> which takes O(logn) for O(n) times. So all together, it is O(nlogn).</p>
 
-<h3 style="clear:left;" id="on2---quadratic-time">O(<script type="math/tex">n^2</script>) - Quadratic Time</h3>
+<h3 style="clear:left;" id="on2---quadratic-time">O(\(n^2\)) - Quadratic Time</h3>
 
-<p>Quadratic Time means it took n * n amount of work to finish the job. Simple <a href="/blog/2016/06/28/sorting.html">sorting</a> like <a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/BubbleSort.java">bubble sort</a>, <a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/SelectionSort.java">selection sort</a> or <a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/InsertionSort.java">insertion sort</a> all takes O(<script type="math/tex">n^2</script>) time. It is probably best to show you what is O(<script type="math/tex">n^2</script>) time by providing you with a simple code example like below:</p>
+<p>Quadratic Time means it took n * n amount of work to finish the job. Simple <a href="/blog/2016/06/28/sorting.html">sorting</a> like <a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/BubbleSort.java">bubble sort</a>, <a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/SelectionSort.java">selection sort</a> or <a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/InsertionSort.java">insertion sort</a> all takes O(\(n^2\)) time. It is probably best to show you what is O(\(n^2\)) time by providing you with a simple code example like below:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">containsDuplicates</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">input</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">for</span> <span class="o">(</span><span class="kt">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">input</span><span class="o">.</span><span class="na">size</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
@@ -281,9 +281,9 @@
 
 <p>Above example is just to illustrate what the quadratic time algorithm look like. containsDuplicates function itself can be much more optimized by using a Set or by sorting etc. When you have a double loop without a good reason, it usually is bad. It is best to avoid if you have an alternate solution like the example above.</p>
 
-<h3 id="o2n---exponential-time">O(<script type="math/tex">2^n</script>) - Exponential Time</h3>
+<h3 id="o2n---exponential-time">O(\(2^n\)) - Exponential Time</h3>
 
-<p>Here is even slower algorithm than quadratic time. Exponential algorithm is usually not appropriate for practical use. An example of this algorithm would be <a href="https://www.tutorialspoint.com/javaexamples/method_tower.htm">Towers of the Hanoi</a>. As you see from the code in the link, when input size is 3, a code is called 8 times by recursion. Now with larger input, the # of calls will increase <script type="math/tex">2^n</script>.</p>
+<p>Here is even slower algorithm than quadratic time. Exponential algorithm is usually not appropriate for practical use. An example of this algorithm would be <a href="https://www.tutorialspoint.com/javaexamples/method_tower.htm">Towers of the Hanoi</a>. As you see from the code in the link, when input size is 3, a code is called 8 times by recursion. Now with larger input, the # of calls will increase \(2^n\).</p>
 
 <h3 id="on---factorial-time">O(n!) - Factorial Time</h3>
 
@@ -447,7 +447,7 @@
 
     <div class="container text-center">
       <p>Copyright © Calvin Lee</p>
-      <p>2016 - 2020</p>
+      <p>2016 - 2023</p>
     </div>
     <p><br><br><br></p>
 </footer>
@@ -478,7 +478,7 @@ $('.collapse').collapse('hide');
 </script>
 <script type="text/javascript">
 $(document).ready(function() {
-  for (i = 2016; i <= 2020; i++) {
+  for (i = 2016; i <= 2023; i++) {
      $(document).on("click","#archive_year_"+i,function() {
          $(this).parent().children("li").toggle();
          togglePointer($(this));

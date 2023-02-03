@@ -430,11 +430,11 @@
 
 <figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">val</span> <span class="nv">pdfbook</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">PDFBook</span><span class="o">(</span><span class="s">"wonderful"</span><span class="o">)</span>
 <span class="k">val</span> <span class="nv">kindlebook</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">KindleBook</span><span class="o">(</span><span class="s">"beautiful"</span><span class="o">)</span>
-<span class="nv">pdfbook</span><span class="o">.</span><span class="py">read</span><span class="o">()</span> <span class="c1">// prints reading a PDF book
-</span><span class="nv">kindlebook</span><span class="o">.</span><span class="py">read</span><span class="o">()</span> <span class="c1">// prints reading a Kindle book
-</span>
-<span class="c1">//Also can gather and do operations on abstractions like this.
-</span><span class="k">val</span> <span class="nv">books</span> <span class="k">=</span> <span class="nv">ArrayBuffer</span><span class="o">.</span><span class="py">empty</span><span class="o">[</span><span class="kt">Book</span><span class="o">]</span>
+<span class="nv">pdfbook</span><span class="o">.</span><span class="py">read</span><span class="o">()</span> <span class="c1">// prints reading a PDF book</span>
+<span class="nv">kindlebook</span><span class="o">.</span><span class="py">read</span><span class="o">()</span> <span class="c1">// prints reading a Kindle book</span>
+
+<span class="c1">//Also can gather and do operations on abstractions like this.</span>
+<span class="k">val</span> <span class="nv">books</span> <span class="k">=</span> <span class="nv">ArrayBuffer</span><span class="o">.</span><span class="py">empty</span><span class="o">[</span><span class="kt">Book</span><span class="o">]</span>
 <span class="nv">books</span><span class="o">.</span><span class="py">append</span><span class="o">(</span><span class="n">pdfbook</span><span class="o">)</span>
 <span class="nv">books</span><span class="o">.</span><span class="py">append</span><span class="o">(</span><span class="n">physicalbook</span><span class="o">)</span>
 <span class="nv">books</span><span class="o">.</span><span class="py">foreach</span><span class="o">(</span><span class="n">book</span> <span class="k">=&gt;</span> <span class="nf">println</span><span class="o">(</span><span class="nv">book</span><span class="o">.</span><span class="py">name</span><span class="o">))</span></code></pre></figure>
@@ -588,7 +588,7 @@
 
     <div class="container text-center">
       <p>Copyright &copy; Calvin Lee</p>
-      <p>2016 - 2020</p>
+      <p>2016 - 2023</p>
     </div>
     <p><br><br><br></p>
 </footer>
@@ -619,7 +619,7 @@ $('.collapse').collapse('hide');
 </script>
 <script type="text/javascript">
 $(document).ready(function() {
-  for (i = 2016; i <= 2020; i++) {
+  for (i = 2016; i <= 2023; i++) {
      $(document).on("click","#archive_year_"+i,function() {
          $(this).parent().children("li").toggle();
          togglePointer($(this));

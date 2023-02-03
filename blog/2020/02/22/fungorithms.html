@@ -223,8 +223,6 @@
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2020/05/22/react.html" class="btn" title="React.js">&laquo; React.js</a>
-            
             
               <a href="https://stalk-calvin.github.io/blog/2020/01/25/new-year-resolution.html" class="btn" title="2020, Let's go!">2020, Let's go! &raquo;</a>
             
@@ -238,7 +236,7 @@
 
 <p>For example, here is a potential input array, <code class="language-plaintext highlighter-rouge">[2,0,2,1,0,1,0,2,1]</code>. After we sort these values, we would get <code class="language-plaintext highlighter-rouge">[0,0,0,1,1,1,2,2,2]</code>.</p>
 
-<p>One intuitive approach would be to apply one of the <a href="/blog/2016/06/28/sorting.html" target="_blank" rel="noopener noreferrer">popular sorting algorithms</a> such as merge-sort or quick-sort, which would get us the final answer in a relatively fine way. It works in the time complexity of <script type="math/tex">O(nlogn)</script>, where n is the number of total items in the array. So in the worst case, for each item, we need to do extra <script type="math/tex">logn</script>amount of work to be able to complete the sort. The space complexity for the merge sort, by the way, is <script type="math/tex">O(n)</script>, which might not be something we want either.</p>
+<p>One intuitive approach would be to apply one of the <a href="/blog/2016/06/28/sorting.html" target="_blank" rel="noopener noreferrer">popular sorting algorithms</a> such as merge-sort or quick-sort, which would get us the final answer in a relatively fine way. It works in the time complexity of \(O(nlogn)\), where n is the number of total items in the array. So in the worst case, for each item, we need to do extra \(logn\)amount of work to be able to complete the sort. The space complexity for the merge sort, by the way, is \(O(n)\), which might not be something we want either.</p>
 
 <p>So here is the famous question which comes to mind, “Can we have a more efficient algorithm than using these conventional sorting algorithms?”</p>
 
@@ -259,12 +257,12 @@
 
 <p style="margin: 0px"><strong>Time complexity O(n)</strong></p>
 <ul style="padding-bottom: 1em; list-style: disc;">
-  <li>Since we are doing the sorting in one pass of an ‘n’-item array, the time it takes to execute the algorithm is in <script type="math/tex">O(n)</script></li>
+  <li>Since we are doing the sorting in one pass of an ‘n’-item array, the time it takes to execute the algorithm is in \(O(n)\)</li>
 </ul>
 
 <p style="margin: 0px"><strong>Space complexity O(1)</strong></p>
 <ul style="padding-bottom: 1em; list-style: disc;">
-  <li>We exchange elements as we progress as I described above, meaning we do not use any extra space to store these values. Hence, space complexity is <script type="math/tex">O(1)</script></li>
+  <li>We exchange elements as we progress as I described above, meaning we do not use any extra space to store these values. Hence, space complexity is \(O(1)\)</li>
 </ul>
 
 <h2 id="code">Code</h2>
@@ -307,7 +305,7 @@
 
 <p>This algorithm is repeatedly used in quick-sort because this task eventually is what quick sort does. Watch how <code class="language-plaintext highlighter-rouge">partition</code> function is handled in <a href="https://github.com/stalk-calvin/Java-Algorithms/blob/master/src/main/java/org/calvin/Sort/QuickSortArray.java">quick sort</a>. The code is not identical to above but fundamentality of the algorithm is pretty much the same.</p>
 
-<p>The algorithm quite amusing because we just reduced time complexity down from <script type="math/tex">O(nlogn)</script> to <script type="math/tex">O(n)</script>. Reducing the bits of complexity is always fun and challenging. Please be careful when reducing though, we still want the algorithm to function as expected.</p>
+<p>The algorithm quite amusing because we just reduced time complexity down from \(O(nlogn)\) to \(O(n)\). Reducing the bits of complexity is always fun and challenging. Please be careful when reducing though, we still want the algorithm to function as expected.</p>
 
 
           
@@ -400,8 +398,6 @@
 
           <nav class="pagination" role="navigation">
             
-              <a href="https://stalk-calvin.github.io/blog/2020/05/22/react.html" class="btn" title="React.js">&laquo; React.js</a>
-            
             
               <a href="https://stalk-calvin.github.io/blog/2020/01/25/new-year-resolution.html" class="btn" title="2020, Let's go!">2020, Let's go! &raquo;</a>
             
@@ -457,7 +453,7 @@
 
     <div class="container text-center">
       <p>Copyright &copy; Calvin Lee</p>
-      <p>2016 - 2020</p>
+      <p>2016 - 2023</p>
     </div>
     <p><br><br><br></p>
 </footer>
@@ -488,7 +484,7 @@ $('.collapse').collapse('hide');
 </script>
 <script type="text/javascript">
 $(document).ready(function() {
-  for (i = 2016; i <= 2020; i++) {
+  for (i = 2016; i <= 2023; i++) {
      $(document).on("click","#archive_year_"+i,function() {
          $(this).parent().children("li").toggle();
          togglePointer($(this));

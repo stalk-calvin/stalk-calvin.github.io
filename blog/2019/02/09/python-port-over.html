@@ -251,7 +251,7 @@
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
 <span class="k">print</span><span class="p">(</span><span class="s">"foobar"</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">sys</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"barbaz"</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span></code></pre></figure>
+<span class="k">print</span><span class="p">(</span><span class="s">"barbaz"</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">sys</span><span class="p">.</span><span class="n">stderr</span><span class="p">)</span></code></pre></figure>
 
 <p><code class="language-plaintext highlighter-rouge">file=sys.stderr</code> is the way to pipe the output to standard error. For the comparison, in Python 2, we had to do something like this to pipe to stderr: <code class="language-plaintext highlighter-rouge">print &gt;&gt; sys.stderr, "barbaz"</code></p>
 
@@ -322,18 +322,18 @@
 
 <p>In Python 2, we do something like:</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">iterkeys</span><span class="p">():</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">.</span><span class="n">iterkeys</span><span class="p">():</span>
     <span class="k">print</span> <span class="n">key</span>
 
-<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">d</span><span class="p">.</span><span class="n">iteritems</span><span class="p">():</span>
     <span class="k">print</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span></code></pre></figure>
 
 <p>In Python 3, we no longer have the <code class="language-plaintext highlighter-rouge">iter</code> methods and have a distinct call on each (keys, values, items) like:</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">.</span><span class="n">keys</span><span class="p">():</span>
     <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">d</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
     <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code></pre></figure>
 
 
@@ -484,7 +484,7 @@
 
     <div class="container text-center">
       <p>Copyright &copy; Calvin Lee</p>
-      <p>2016 - 2020</p>
+      <p>2016 - 2023</p>
     </div>
     <p><br><br><br></p>
 </footer>
@@ -515,7 +515,7 @@ $('.collapse').collapse('hide');
 </script>
 <script type="text/javascript">
 $(document).ready(function() {
-  for (i = 2016; i <= 2020; i++) {
+  for (i = 2016; i <= 2023; i++) {
      $(document).on("click","#archive_year_"+i,function() {
          $(this).parent().children("li").toggle();
          togglePointer($(this));

@@ -2,17 +2,6 @@
 
   
     {
-      "title"			: "React.js",
-      "link"			: "https://stalk-calvin.github.io/blog/2020/05/22/react.html",
-      "excerpt"		: "Front-end Development",
-      "tags"        : ["programming","react","javascript","js","front-end"],
-      "date"        : "2020 May 22",
-      "year"        : 2020
-    }
-  
-
-  
-    ,{
       "title"			: "Dutch national flag problem",
       "link"			: "https://stalk-calvin.github.io/blog/2020/02/22/fungorithms.html",
       "excerpt"		: "Fungorithms",

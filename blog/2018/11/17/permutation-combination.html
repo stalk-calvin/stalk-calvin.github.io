@@ -232,17 +232,17 @@
 
 <p>There is an equation you can use for Permutation. First, recognize or identify how many you are choosing/selecting to count # of results. Then we can apply this equation:</p>
 
-<p><script type="math/tex">P{n \choose r}</script> = <script type="math/tex">\frac{n!}{(n-r)!}</script> where r is the # of selection.</p>
+<p>\(P{n \choose r}\) = \(\frac{n!}{(n-r)!}\) where r is the # of selection.</p>
 
 <p>We can start with a very straightforward and easy example. Let’s say you would like to know how many outcomes are possible when you select two people “in order” out of 5 people, the equation becomes:</p>
 
-<p><script type="math/tex">\frac{5!}{(5-2)!}</script>=<script type="math/tex">5\times4</script>=20 possible outcome</p>
+<p>\(\frac{5!}{(5-2)!}\)=\(5\times4\)=20 possible outcome</p>
 
 <p>So # of 2 people chosen distinct (order matters) possibilities out of 5 people is 20. To be sure of the answer, we can calculate these possibilities manually. Let’s say we have 5 people labelled, A-B-C-D-E. When we count the possibilities from A’s point of view, we these possible outcomes: <em>AB</em>, BA, <em>AC</em>, CA, <em>AD</em>, DA, <em>AE</em>, EA. And from B’s point of view, we can deduce, <em>BC</em>, CB, <em>BD</em>, DB, <em>BE</em>, EB. We can then move on to C’s point of view, which are, <em>CD</em>, DC, <em>CE</em>, EC. Finally, we have D left, <em>DE</em> or ED. So any one of these pairs can be first two people out of total five people (A-B-C-D-E). When we count all the possible pairs, we have precisely 20 pairs. Therefore, we can say we have 20 pairs of distinct ways (order matters) to select two people out of five people.</p>
 
 <p>What if we want to know # of possibilities of choosing 5 distinctively out of 100 people?</p>
 
-<p><script type="math/tex">\frac{100!}{(100-5)!}</script> = <script type="math/tex">\frac{100!}{95!}</script> = <script type="math/tex">100\times99\times98\times97\times96</script> = 9034502400 possibilities.</p>
+<p>\(\frac{100!}{(100-5)!}\) = \(\frac{100!}{95!}\) = \(100\times99\times98\times97\times96\) = 9034502400 possibilities.</p>
 
 <p>There are 9034502400 many different ways of selecting 5 people distinctively (where order matters) from 100 people.</p>
 
@@ -250,39 +250,39 @@
 
 <p>Combination logic might be a bit simpler. It treats all of the encountered numbers as one identity. When we apply Combination to the same example described above, there is a subtle difference. Now, the order doesn’t matter (distinct order doesn’t matter) in counting for possibilities. So we do not care whether it is AB or BA. Combination treats them the same. So that means we have to remove all the duplicated cases out of our result. The result becomes: AB, AC, AD, AE, BC, BD, BE, CD, CE, DE = 10 possible pairs out of 5. How do we represent this in the equation though?</p>
 
-<p><script type="math/tex">C{n \choose r}</script> = <script type="math/tex">\frac{n!}{(n-r)!r!}</script> where r is the # of selection</p>
+<p>\(C{n \choose r}\) = \(\frac{n!}{(n-r)!r!}\) where r is the # of selection</p>
 
 <p>By the way, in both of these equations, they are read aloud “n choose r.”</p>
 
 <p>Let’s try applying this equation to the example we saw above.</p>
 
-<p><script type="math/tex">\frac{5!}{(5-2)!2!}</script>=<script type="math/tex">5\times4/2\times1</script>=10 possible outcome.</p>
+<p>\(\frac{5!}{(5-2)!2!}\)=\(5\times4/2\times1\)=10 possible outcome.</p>
 
 <p>That was pretty straightforward. What about choosing 5 people out of 100 people? Simple. Just apply to the above equation.</p>
 
-<p><script type="math/tex">\frac{100!}{(100-5)!5!}</script> = <script type="math/tex">\frac{100!}{95!5!}</script> = <script type="math/tex">100\times99\times98\times97\times96/5\times4\times3\times2\times1</script> = 75287520 ways of placing 5 people out of 100 people.</p>
+<p>\(\frac{100!}{(100-5)!5!}\) = \(\frac{100!}{95!5!}\) = \(100\times99\times98\times97\times96/5\times4\times3\times2\times1\) = 75287520 ways of placing 5 people out of 100 people.</p>
 
 <p>We might want to calculate the “probability” of choosing 5 people (in order) out of 100? Meaning all 5 people has to match (in order) precisely. We know there are 9034502400 ways (as calculated above) of choosing 5 people out of 100 people where order matters. And we are looking for that one specific 5 in a row match of people out of 9034502400. So the answer would be 1/9034502400 which is an absurd and ridiculously small number. It’s like finding a needle in the big desert. However, if these numbers were where order didn’t matter (like Combination case), it would be 1/75287520 which is still a reasonably small number.</p>
 
 <p>Let’s take a look at a more real-life example, lottery ticket odds. Let’s have a look at 6/49. 6/49 is a simple Canadian lottery game where you need to match 6 numbers from 49 numbers. Like most of the other lottery tickets, if your chosen numbers match the numbers that came out, you win. It doesn’t matter what order they came out. So this is an obvious combination problem. We can apply the combination rule like so:</p>
 
-<p><script type="math/tex">\frac{49!}{(49-6)!6!}</script> =  <script type="math/tex">49\times48\times47\times46\times45\times44/6\times5\times4\times3\times2\times1</script> = 13983816 number of possible combinations</p>
+<p>\(\frac{49!}{(49-6)!6!}\) =  \(49\times48\times47\times46\times45\times44/6\times5\times4\times3\times2\times1\) = 13983816 number of possible combinations</p>
 
 <p>And you need 1 out of those number to become that winning number! So obviously odds are 1 to 13983816 which is like 0.00000715%.</p>
 
 <p>Let’s twist the problem a bit further. What if we want to match 5 numbers out of 6 numbers? What are the odds of that happening?</p>
 
-<p>To match 5 of the winning numbers out of 6, we first should calculate possibilities of 5 of 6 winning numbers then we should calculate the number of possibilities of (6 − 5) of the 43 (remaining) non-winning numbers. Together we can deduce this equation for calculating the hit of 5 numbers out of 6 numbers: <script type="math/tex">{6 \choose 5} \times {43 \choose 1}</script></p>
+<p>To match 5 of the winning numbers out of 6, we first should calculate possibilities of 5 of 6 winning numbers then we should calculate the number of possibilities of (6 − 5) of the 43 (remaining) non-winning numbers. Together we can deduce this equation for calculating the hit of 5 numbers out of 6 numbers: \({6 \choose 5} \times {43 \choose 1}\)</p>
 
 <p>We then divide the result with our odds of getting all numbers right: 13983816.</p>
 
-<p><script type="math/tex">\frac{\frac{6!}{5!} \times 43}{13983816}</script> = <script type="math/tex">\frac{6 \times 43}{13983816}</script> = 0.0000184 which is still preposterously low.</p>
+<p>\(\frac{\frac{6!}{5!} \times 43}{13983816}\) = \(\frac{6 \times 43}{13983816}\) = 0.0000184 which is still preposterously low.</p>
 
 <p>If we follow this logic to calculate the odds of hitting all 6 numbers out of 49 numbers, we can probably write the equation like this:</p>
 
-<p><script type="math/tex">\frac{
+<p>\(\frac{
 {6 \choose 6} \times {43 \choose 0}
-}{13983816}</script> which is same as what we got above: 1/13983816</p>
+}{13983816}\) which is same as what we got above: 1/13983816</p>
 
 <p>So whenever, you are asked to calculate possibilities given situation, be sure to ask this back:</p>
 
@@ -436,7 +436,7 @@
 
     <div class="container text-center">
       <p>Copyright &copy; Calvin Lee</p>
-      <p>2016 - 2020</p>
+      <p>2016 - 2023</p>
     </div>
     <p><br><br><br></p>
 </footer>
@@ -467,7 +467,7 @@ $('.collapse').collapse('hide');
 </script>
 <script type="text/javascript">
 $(document).ready(function() {
-  for (i = 2016; i <= 2020; i++) {
+  for (i = 2016; i <= 2023; i++) {
      $(document).on("click","#archive_year_"+i,function() {
          $(this).parent().children("li").toggle();
          togglePointer($(this));
